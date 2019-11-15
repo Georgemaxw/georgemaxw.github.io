@@ -1,0 +1,57 @@
+html { 
+  background-color: gray;
+  font-size: 20px; /* Tamanho da fonte base. */ 
+  font-family: 'Indie Flower', cursive; /* Nome da fonte que você obteve no Google Fonts. */ 
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(218, 218, 218);
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 { margin: 0; }
+
+h2, h6 { width: 125px; text-shadow: 23px 0px 5px red; }
+
+h4 { padding: 20px 0; }
+
+.classe1 { letter-spacing: 7px; }
+
+.classe2 {
+  border: 8px solid #0049FF;
+  width: 70%;
+  background-color: rgba(0, 0, 255, 0.15);
+  text-align: center;
+}
+
+p { color: rgb(0, 150, 32); }
+
+.classe3 { line-height: 5; }
+
+.classe4 { font-size: 34px }
+
+.sombra { text-shadow: 1px 1px 0px rgb(0, 195, 255); }
+
+li:hover { color: rgb(214, 142, 74); }
+
+a { color: blue; 
+
+  display: flex; justify-content: center; /* centralizando algo horizontalmente em navegadores modernos. */ 
+}
+
+.imgReduzida { /* Centralizando imagem (em navegadores antigos): Imagens são elementos em linha, significa
+  que não podem ter margens. Então, para aplicar margens a uma imagem, temos que dar o comportamento de nível 
+  de bloco à imagem usando display: block;. */
+  display: block;
+  margin: 0 auto;
+
+  width: 8.5%;
+}
+
+.img3 { width: 40px; height: 300px; }
+
+#identidade { border: 2px solid rgb(255, 0, 255); }
+
