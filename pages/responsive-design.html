@@ -12,7 +12,9 @@
     </head>
 <body>
 
- <!-- <h2>Propriedade 'max-width'</h2>
+    <h1>CSS</h1>
+
+    <h2>Propriedade 'max-width'</h2>
   
     <div style="background-color: Blue; max-width: 440px;">
         <p style='background-color:cyan;max-width:370px'>p</p>
@@ -24,9 +26,13 @@
     
     <img src="../Images/Gradient.png" style="max-width: 100%">
 
-  <h2>Imagens Responsivas</h2>
+    <h1>Responsive Design</h1>
+    
+    <h2>Imagens Responsivas</h2>
 
-    <p>Exemplo 1</p>
+    <h3>Alternância de Resolução 1: Tamanhos e Resoluções  Diferentes</h3>
+
+    <p>Exemplo 1:</p>
     <img srcset="../Images/Car1-small.png 320w, ../Images/Car1-medium.png 364w, ../Images/Car1-big.png 404w"
     sizes="
     (max-width: 380px) 320px,
@@ -35,7 +41,7 @@
     src="../Images/Car1-medium.png"
     alt="Car">
 
-    <p>Exemplo 2</p>
+    <p>Exemplo 2:</p>
 
         <img srcset="../Images/Car1-small.png 320w, ../Images/Car1-medium.png 364w, ../Images/Car1-big.png 404w"
         sizes="
@@ -51,10 +57,23 @@
 
     <p><a href="responsive-design-ex4.html">Exemplo 4</a></p>
 
-    <br><a href="../index.html">Voltar</a><br>-->
+    <p><a href="responsive-design-ex5-a.html">Exemplo 5 - A</a></p>
 
-    <img src="../Images/Sun-320w.png" alt="Sun">
-    <br>
+    <p>Exemplo 5 - B:</p>
+
+    <img srcset="
+    ../Images/Car2-Small.png 335w, 
+    ../Images/Car2-Medium.png 380w, 
+    ../Images/Car2-Big.png 420w"
+    sizes="(max-width: 420px) 100vw,
+    420px"
+    src="../Images/Car2-Big.png"
+    alt="Car">
+
+    <img src="../Images/Horizontal-Axis-355-380-420.png" alt="Axis">
+
+    <h3>Alternância de Resolução 2: Mesmo Tamanho, Resoluções Diferentes</h3>
+
     <img srcset="
     ../Images/Sun-320w.png,
     ../Images/Sun-480w.png 1.5x,
@@ -63,10 +82,50 @@
 
      <br>
 
-    <img src="../Images/Sun-640w.png" alt="Sun" style="width: 320px">
-    <br><!---->
+    <img src="../Images/Horizontal-Axis-320.png" alt="Axis">
 
-    <img src="../Images/Horizontal-Axis-320.png" alt="Sun">
+    <h3>Direção de Arte</h3>
+
+    <picture>
+    <source media="(max-width: 444px)" srcset="../Images/Car1-Small.png">
+    <source media="(min-width:445px)" srcset="../Images/Car1-Long.png">
+    <img src="../Images/Car1-Long.png" alt="Car">
+    </picture>
+
+    <h4>Direção de Arte Junto com Alternância de Resolução de Mesmo Tamanho, mas Resoluções Diferentes</h4>
+
+    <picture>
+    <source media="(max-width: 444px)" 
+    srcset="../Images/Car1-Small.png 320w, ../Images/Car1-Small-640w.png 640w"
+    sizes="320px">
+
+    <source media="(min-width:445px)" 
+    srcset="../Images/Car1-Long.png 430w, ../Images/Car1-Long-860w.png 860w"
+    sizes="430px">
+
+    <img src="../Images/Car1-Long.png" alt="Car">
+    </picture>
+<br>
+    <img src="../Images/Horizontal-Axis-320-430.png" alt="Axis">
+
+    <h4>Usando Formatos de Imagem Modernos</h4>
+
+    <picture>
+    <source type = "image/svg+xml" srcset = "../Images/Star-and-box.svg">
+    <img src = "../Images/Star-and-box.jpg" alt = "Star and box">
+    </picture>
+
+
+
+
+
+
+
+
+
+    <br><a href="../index.html">Voltar</a>
+
+
 
 </body>
 </html>
