@@ -24,7 +24,7 @@
         <p style='background-color: cyan; max-width: 50%'>!</p>
     </div>
     
-    <img src="../Images/Gradient.png" style="max-width: 100%">
+    <img src="../Images/Gradient.png" alt="Axis" style="max-width: 100%">
 
     <h1>Responsive Design</h1>
     
@@ -110,18 +110,20 @@
 
     <h4>Usando Formatos de Imagem Modernos</h4>
 
+    <p>Exemplo 1:</p>
+
     <picture>
     <source type = "image/svg+xml" srcset = "../Images/Star-and-box.svg">
     <img src = "../Images/Star-and-box.jpg" alt = "Star and box">
     </picture>
 
+    <p>Exemplo 2:</p>
 
-
-
-
-
-
-
+    <picture>
+        <source media="(max-width: 669px)" type = "image/svg+xml" srcset="../Images/Box.svg">
+        <source media="(min-width:670px)" type = "image/svg+xml" srcset="../Images/Box-Long.svg">
+        <img src="../Images/Box.png" alt="Box">
+    </picture>
 
     <br><a href="../index.html">Voltar</a>
 
