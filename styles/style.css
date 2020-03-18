@@ -1,6 +1,6 @@
 html { 
   background-color: rgb(242, 242, 242);
-  font-size: 18px;  /* Tamanho da fonte base. */ 
+  /**/font-size: 20px;  /* Tamanho da fonte base. */ 
   /*font-family: Palatino  Nome da fonte que você obteve no Google Fonts. */ }
 
 /* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
