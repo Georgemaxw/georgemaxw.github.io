@@ -3,11 +3,11 @@
     <head>
     <meta charset="utf-8">
 
-    <link href="styles/style-1.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">-->
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Master Frontend Project</title>
+    <title>Título</title>
 
     <meta name="author" content="George Maxwell">
     <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
@@ -15,214 +15,68 @@
     <meta name="viewport" content="width=device-width">
 
 </head>
-<body> <!--FALTAM DIV E SPAN!-->
+<body>
 
-    <!--
-    <header>
-        <h1></h1>
-    </header>
+<header>
+    <img src="images/header.png" alt="Logo"><h1>Game Site</h1>
+</header>
 
-    <nav>
-        <ul>
-        <li><a href="#">Página Inicial</a></li>
-        <li><a href="#">Nossa Equipe</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-    
-    <aside>
-        <h2>Relacionado</h2>
-            
-        <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 2</a></li>
-        </ul>
-    </aside>
-        
-    <main>
+<div class="body-with-padding">
 
-    </main>
-
-    <footer>
-        <p>©Copyright 2150 by nobody. All rights reversed.</p>
-    </footer>
-    -->
-
-    <h3 class="sombra">Esta página só tem <abbr title="Hypertext Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets - Folha de Estilo em Cascata">CSS</abbr>, clique no botão abaixo para ir para a página com <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets - Folha de Estilo em Cascata">CSS</abbr>, e <abbr title="JavaScript">JS</abbr>:</h3>
-
-    <p>Página criada por <u>George Maxwell</u> em <time datetime = "2019-10">outubro de 2019.</time></p>
-
-    <p>Meu celular é um <b>iPhone SE</b>.</p>
-
-    <a href="pages/responsive-design.html">Responsive Images</a>
-    
-    <p title="Isn't this?">Coloque o mouse em mim (Aspas Simples e Duplas nos Valores dos Atributos)</p>
-
-   
-
-    <hr>
-    <p>Este botão:</p>
-    <a href="pages/page-2.html"><img src="images/Button.png" alt="Imagem de botão"></a>
-    <p>Leva para esta página:</p>
-    <iframe src="pages/page-2.html" width="597" height="200" sandbox></iframe>
-    <hr>
-
-    <h1>Meu título principal</h1>
-    <h2>Meu título de alto nível</h2>
-    <h3>Meu subtítulo</h3>
-    <h4>Meu segundo subtítulo</h4>
-    <h5>Meu terceiro subtítulo</h5>
-    <h6>Meu quarto subtítulo</h6>
-
-    <a href="https://www.mozilla.org/pt-BR/about/manifesto/" title="Dica de contexto">A prop. "color" n deixará este link ficar roxo após clicar nele.</a>
-
-    <p class="classe2">Texto.</p>
-
-    <p class="classe4">Passe o mouse em cima da lista.</p>
-
-    <ol> 
-            <li>Item 1 da lista.</li>
-            <li>Item 2 da lista.</li>
-            <li class="classe1">Item 3 da lista.</li>
-    </ol>
-
-    <ul> 
-        <li>Item 1 da lista.</li>
-        <li class="classe1">Item 2 da lista.</li>
-        <li>Item 3 da lista.</li>
-        <li class="classe3">Item 4 da lista.</li>
-        <li>Item 5 da lista.</li>
-        <li>Item 6 da lista.</li>
+<nav>
+    <ul>
+    <li><a href="#">Página Inicial</a></li>
+    <li><a href="#">Nossa Equipe</a></li>
+    <li><a href="#">Projetos</a></li>
+    <li><a href="#">Contato</a></li>
     </ul>
+</nav>
 
-    <p id="identidade">Texto.</p>
-
-    <p><a href="mailto:destinatario@gmail.com,destinatario2@gmail.com?cc=cc@gmail.com&bcc=bcc@gmail.com&subject=Assunto%20do%20e-mail.&body=Corpo%20do%20e-mail.">Enviar e-mail</a></p>
-
-    <dl>
-    <dt>Termo de descrição 1</dt>
-    <dd>Definição de descrição 1</dd>
-    <dt>Termo de descrição 2</dt>
-    <dd>Definição de descrição 2-1</dd>
-    <dd>Definição de descrição 2-2</dd>
-    <dt>Termo de descrição 3</dt>
-    <dd>Definição de descrição 3</dd>
-    </dl>
-
-    <p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para criar sites.</p>
-
-    <p>Se <var>x</var><sup>2</sup> = 9, então <var>x</var> = 3 ou -3</p>
-
-    <p>Fórmula da água: H<sub>2</sub>O</p>
-
-    <pre>
-  ___________________________
-&lt; Sou o melhor na minha área. >
-  ---------------------------
-         \   ^__^ 
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||—————||
-                 ||     ||
-</pre>
-    <br>    
-    <p>Selecione todo o texto com <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
-
-<pre>    
-[Console JavaScript]
-in: var x = 6; x = x + 2
-out: <samp>x = 8</samp>
-</pre>
-
-    <p>Não use elementos de apresentação como <code>&lt;font&gt;</code> e <code>&lt;center&gt;</code>.</p>
-
-    <p>Olá, como vai você?<br>Vou bem! E você?</p>
-
-    <figure>
-            <img src="images/Square.png" alt="Texto de acessibilidade da imagem.">
-          
-            <figcaption>Imagem de gradiente.</figcaption>
-    </figure>
+<aside>
+    <h2>Relacionado</h2>
+        
+    <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 2</a></li>
+    </ul>
+</aside>
     
+<main>
 
-    <p>Vídeo do <abbr title="Mozilla Developer Network">MDN</abbr> para aprendizado (comentado p/ n por isso online!):</p>
-    <video controls preload="" width="320" height="240" poster="images/poster.png" loop>
-<!--<source src="videos/rabbit.mp4" type="video/mp4">
-    <source src="videos/rabbit.webm" type="video/webm">-->
+</main>
 
-    <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
-    <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">
+<footer>
+    <p>©Copyright 2150 by nobody. All rights reversed.</p>
+</footer>
 
-    <p> Seu navegador não suporta vídeo em HTML5. Aqui está um <a href="videos/rabbit.mp4">link para o vídeo </a>.</p>
-    </video>
+</div>
+<!---->
 
-    <p>Áudio do <abbr title="Mozilla Developer Network">MDN</abbr> para aprendizado (comentado p/ n por isso online!):</p>
-    <audio controls preload="" loop>
-<!--<source src="audios/viper.mp3" type="audio/mp3">
-    <source src="audios/viper.ogg" type="audio/ogg">-->
-    
-    <p> Seu navegador não suporta áudio em HTML5. Aqui está um <a href="audios/viper.mp3">link para o áudio </a>.</p>
-    </audio>
 
-    <br>
+<!--
+<noscript> Para usar este site, ative o JavaScript. </noscript>
 
-    <br>
-    <img src="images/Square.png" alt="Minha imagem de teste">
-    <p>A imagem abaixo foi transformada em um <strong>elemento em bloco</strong> para ser centratralizada.</p>
-    <img src="images/Square.png" alt="Minha imagem de teste reduzida" class="imgReduzida">
-    <img src="images/Square.png" alt="Minha imagem de teste 2" class="img3">
 
-    <p style="color: blue">Incorporando PDF com &lt;embed>:</p>
-    <embed type="application/pdf"
-    src="Arquivo-PDF.pdf"
-    width="600"
-    height="426">
 
-    <p style="color: blue">Incorporando PDF com &lt;object>:</p>
-    <object data="Arquivo-PDF.pdf" type="application/pdf" width="600" height="426">
-    <p>Você não possui um plugin de PDF, mas pode fazer o <a href="Arquivo-PDF.pdf">download do arquivo PDF.</a></p>
-    </object>
+<figure>
+        <img src="images/Square.png" alt="Texto de acessibilidade da imagem.">
+        
+        <figcaption>Imagem de gradiente.</figcaption>
+</figure>
 
-    <h3>Adicionando SVG à Páginas Web</h3>
 
-    <p>1ª Maneira: Através do Elemento &lt;img></p>
 
-    <img src="Images/Speak-Aff.svg" alt="Imagem SVG" width = "300" height = "250">
+<video controls preload="" width="320" height="240" poster="images/poster.png" loop>
+<source src="videos/rabbit.mp4" type="video/mp4">
+<source src="videos/rabbit.webm" type="video/webm">
 
-    <p>2ª Maneira: Incluir o Código SVG no HTML</p>
+<track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
+<track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">
 
-    <svg width="100%" height="100%">
-            <rect width="100%" height="100%" fill="yellow" />
-            <circle cx="100%" cy="50%" r="70" fill="red" stroke="black" />
-            <polygon points="220,0 440,225 0,225" fill="blue"/>
-            <text x="350" y="70" font-family="Verdana" font-size="55"
-                  fill="white" stroke="black" stroke-width="2">
-                    =D
-            </text>
-    </svg>
- 
-    <p>3ª Maneira: Incorporar um SVG com um &lt;iframe></p>
-
-    <iframe src="Images/Star-and-box.svg" width="400" height="200" sandbox></iframe>
-            
-    <hr>
-
-    <img src="Images/Image-Map.png" alt="" usemap="#mapa-1"/>
-
-    <map name="mapa-1">
-  
-      <area shape="circle" coords="190,36,21"
-        href="Images/Image-Map-Moon.png" alt="circle example" /> 
-    
-      <area shape="poly" coords="45,84,116,123,145,208,78,235,4,190"
-        href="Images/Image-Map-Tent.png" alt="polygon example" />
-    
-        <area shape="default"
-        href="Images/Image-Map-back.png" alt="background" />
-  
-    </map>
+<p> Seu navegador não suporta vídeo em HTML5. Aqui está um <a href="videos/rabbit.mp4">link para o vídeo </a>.</p>
+</video>
+-->    
     
 </body>
 </html>
