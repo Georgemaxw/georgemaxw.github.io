@@ -8,7 +8,7 @@ html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
 body {
-  width: 960px;
+  width: 860px; /* Padrão: 960-130 */
   margin: 0 auto;
   background-color: white;
   padding: 0px;
