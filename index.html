@@ -20,13 +20,13 @@ h1 { margin: 26px 0; }
 h2 { margin: 24px 0; }
 p { margin: 19px 0; }
 
-html { background-color: rgb(242, 242, 242); font-size: 21px;}
+html { /*background-color: rgb(242, 242, 242);*/ font-size: 22px;}
 
 /* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
 html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
 
 body {
-  width: 100%; /* Padrão: 960-130 */
+  width: 800px; /* Padrão: 960-130 */
   margin: 0 auto;
   background-color: white;
   padding: 0px;
@@ -34,17 +34,19 @@ body {
 
 header h1 { display: none; }
 
-.body-with-padding { padding: 20px; }
+.body-with-padding { padding: 0 20px; }
 
+.LineBreak { margin-top: 40px; margin-bottom: 40px; }
 
-
-img, video { border: 1px solid; }
+.line { border: 1px solid; }
 
 h2 { margin-left: 60px; }
 
-table { width: 80%; margin: 0 auto 45px; }
+table { width: 80%; margin: 0 auto; }
 td:first-child { color: blue;}
 td, th { padding: 10px 20px; }
+
+.Downloads { text-align: center; }
 
 </style>
 
@@ -52,26 +54,20 @@ td, th { padding: 10px 20px; }
 <body>
 
 <header>
-    <h1>Game Site</h1><img src="images/header.png" alt="Logo">
+    <h1>Game Site</h1><img src="images/header.png" alt="Logo" class="line">
 </header>
 
 <main>
 
     <div class="body-with-padding">
 
-    <p>Texto - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p>
+    <p class="LineBreak">Texto - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p>
 
-    <p style="font-size: 1.26vw;">Texto 1.26vw- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p>
-
-    <p style="font-size: 2.60vh;">Texto 2.60vh- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p>
-
-    <p style="font-size: 2.5vmin;">Texto 2.5vmin- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p>
-
-    <p style="font-size: 1.23vmax;">Texto 1.23vmax- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p>
+    <p class="LineBreak">Texto - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p class="LineBreak">
 
     </div>
 
-    <video controls preload="" width="860" height="400" poster="images/poster.png" loop>
+    <video controls preload="" width="860" height="400" poster="images/poster.png" loop class="line">
         <source src="videos/rabbit.mp4" type="video/mp4">
         <source src="videos/rabbit.webm" type="video/webm">
         
@@ -81,9 +77,11 @@ td, th { padding: 10px 20px; }
         <p> Seu navegador não suporta vídeo em HTML5. Aqui está um <a href="videos/rabbit.mp4">link para o vídeo </a>.</p>
     </video>
 
-    <img src="images/img.png" alt="Logo">
+    <img src="images/img.png" alt="Image" class="line">
 
     <div class="body-with-padding">
+
+    <div class="LineBreak">
 
     <h2>More information</h2>
 
@@ -97,11 +95,22 @@ td, th { padding: 10px 20px; }
         <tr><td>Controls</td><td>Mouse, Keyboard, Touchscreen</td></tr>
     </table>
 
+    </div>
+
     <hr>
+
+    <div class="LineBreak">
 
     <h2>Download</h2>
 
+    <div class="Downloads LineBreak">
+    <a href="#"><img src="images/download-app-store.png"></a>
+    <a href="#"><img src="images/download-google-play.png"></a>
+    <a href="#"><img src="images/download-steam.png"></a>
+    <a href="#"><img src="images/download-amazon.png"></a>
+    </div>
 
+    </div>
 
     </div>
 
