@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<title>Game Name</title>
+
+<meta name="author" content="George Maxwell">
+<meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+
+<meta name="viewport" content="width=375px">
+
+<style>
+    
+/* Redefinição Global do Espaço em Branco: */
+* { margin: 0; padding: 0; }
+h1 { margin: 26px 0; }
+h2 { margin: 24px 0; }
+p { margin: 19px 0; }
+
+html { /*background-color: rgb(242, 242, 242);*/ font-size: 20px; }
+
+/* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
+html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+
+body { margin: 0 auto; padding: 0px; }
+
+body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960-1300px */ }
+
+header h1 { display: none; }
+
+.body-with-lateral-padding { margin-right: 20px; margin-left: 20px; }
+
+.LineBreak { margin-top: 40px; margin-bottom: 40px; }
+
+.Line { border: 1px solid; }
+
+
+
+.Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; max-width: 560px; }
+
+.Column-L p:first-child { margin-top: 0px; } 
+.Column-L p:last-child { margin-bottom: 0px; }
+
+/* .Column-L p::after { content: " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - . .- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ..- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ." } */
+
+video { width: 375px; }
+
+h2 { text-align: center; }
+
+table { margin: 0 auto; }
+td:first-child { color: blue;}
+td, th { padding: 10px 20px; }
+
+.Downloads { text-align: center; }
+.Downloads img { width: 195px; }
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
+</header>
+
+<section class="LineBreak">
+
+    <div class="body-with-lateral-padding Column-L">
+
+        <p>Aqui fica a descrição do jogo.</p>
+        
+        <p>A descrição precisa ser grande o suficiente para camuflar o bug que acontece quando a altura do texto é menor que a do vídeo. (O texto inicia de baixo para cima.)</p>
+
+        <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px ficou o mínimo aceitável pro iPhone 8.</p> 
+        
+        <p>Nota: Disponibilize o trailer em MP4 e WEBM.</p>
+    
+    </div>
+
+    <video controls preload="" poster="images/video-poster.png" loop class="Line">
+        <source src="videos/trailer.mp4" type="video/mp4">
+        <!--<source src="videos/trailer.webm" type="video/webm">
+        
+        <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
+        <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
+    </video>
+
+</section>
+        
+    
+    
+
+    <section>
+        <img src="images/img.png" alt="Image" class="Line Large">
+    </section>
+
+    <div class="body-with-lateral-padding">
+
+        <section class="LineBreak">
+
+        <h2>More information</h2>
+
+        <table>
+            <tr><td>Status</td><td>Released</td></tr>
+            <tr><td>Platforms</td><td>Windows, MacOS, Linux, Android, iOS</td></tr>
+            <tr><td>Author</td><td>George Maxwell</td></tr>
+            <tr><td>Genre</td><td>Role Playing</td></tr>
+            <!--<tr><td>Made with</td><td>RPG Maker, Paint S</td></tr>
+            <tr><td>Tags</td><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
+            <tr><td>Languages</td><td>English, Português</td></tr>
+            <tr><td>Controls</td><td>Mouse, Keyboard, Touchscreen</td></tr>
+        </table>
+
+        </section>
+
+        <hr>
+
+        <section class="LineBreak">
+
+        <h2>Download</h2>
+
+        <div class="Downloads LineBreak">
+        <a href="#"><img src="images/download-app-store.png" alt=""></a>
+        <a href="#"><img src="images/download-google-play.png" alt=""></a>
+        <a href="#"><img src="images/download-steam.png" alt=""></a>
+        <!--<a href="#"><img src="images/download-amazon.png" alt=""></a>-->
+        </div>
+
+        </section>
+
+    </div>
+
+
+<!--
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<footer>
+    <p>©Copyright 2150 by nobody. All rights reversed.</p>
+</footer>
+-->
+
+
+<!--
+<noscript> Para usar este site, ative o JavaScript. </noscript>
+
+
+
+<figure>
+        <img src="images/Square.png" alt="Texto de acessibilidade da imagem.">
+        
+        <figcaption>Imagem de gradiente.</figcaption>
+</figure>
+
+
+
+
+-->    
+    
+</body>
+</html>
