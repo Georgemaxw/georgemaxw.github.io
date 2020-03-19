@@ -66,7 +66,7 @@ li { display: inline; }
 
   .Nav-links a:hover { background-color: DarkBlue; }
 
-/*==================================*/
+/*========= Double Columns =========*/
 
 .Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; max-width: 560px; }
 
@@ -77,8 +77,28 @@ li { display: inline; }
 
 video { width: 375px; }
 
+/*============= Gallery ============*/
 
+.Gallery {
+    margin: 1em auto;
+    width: 100%;
+    min-width: 375px;
+    max-width: 800px;/**/
 
+    overflow-x: auto;
+    font-size: 0;
+    white-space: nowrap;
+}
+.Gallery-img { display: inline-block; width: inherit; }
+
+.Gallery-img > img {
+    display: inline-block;
+    width: inherit;
+    min-width: 375px;
+    max-width: 100%;
+}
+
+/*============== Table =============*/
 
 table { margin: 0 auto; }
 td:first-child { color: blue;}
@@ -136,9 +156,19 @@ td, th { padding: 10px 20px; }
 
         </div>
 
+        <section class="Gallery">
+
+            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-01.jpg" alt=""></a></div>
+            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-02.jpg" alt=""></a></div>
+            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-03.jpg" alt=""></a></div>
+            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-04.jpg" alt=""></a></div>
+          
+        </section>
+
+        <!--<img src="images/img.png" alt="Image" class=" Line Large lbs">
         <img src="images/img.png" alt="Image" class="Line Large lbs">
         <img src="images/img.png" alt="Image" class="Line Large lbs">
-        <img src="images/img.png" alt="Image" class="Line Large">
+        <img src="images/img.png" alt="Image" class="Line Large">-->
         
 
     </section>
