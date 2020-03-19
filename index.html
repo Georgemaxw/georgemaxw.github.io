@@ -53,16 +53,16 @@ li { display: inline; }
 .Nav-links a {
   color: white;
   background-color: blue;
+
+  display: inline-block;
+  width: 31%;
+  padding: 10px 0px;
   border: 1px solid;
   border-radius: 25px;
 
-    width: 31%;
-    text-align: center;
-
+  text-align: center;
   text-decoration: none;
-
-  display: inline-block;
-  padding: 10px 0px; }
+ }
 
   .Nav-links a:hover { background-color: DarkBlue; }
 
@@ -79,32 +79,21 @@ video { width: 375px; }
 
 /*============= Gallery ============*/
 
-.Gallery {
-    margin: 1em auto;
-    width: 100%;
-    min-width: 375px;
-    max-width: 800px;/**/
+.Gallery a { display: inline-block; width: 100%; min-width: 375px; max-width: 497px;  }
 
-    overflow-x: auto;
-    font-size: 0;
-    white-space: nowrap;
-}
-.Gallery-img { display: inline-block; width: inherit; }
-
-.Gallery-img > img {
-    display: inline-block;
-    width: inherit;
-    min-width: 375px;
-    max-width: 100%;
-}
-
+.Gallery img { display: inherit; width: inherit; min-width: inherit; max-width: inherit; }
 /*============== Table =============*/
 
 table { margin: 0 auto; }
+
 td:first-child { color: blue;}
+
 td, th { padding: 10px 20px; }
 
+/*============ Download ============*/
+
 .Downloads { text-align: center; }
+
 .Downloads img { width: 195px; }
 
 </style>
@@ -116,7 +105,7 @@ td, th { padding: 10px 20px; }
     <h1 class="Hidden">Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
 </header>
 
-<nav class="LB">
+<nav class="lbs">
 
     <ul class="Nav-links">
         <li><a href="">Home</a></li>
@@ -132,7 +121,7 @@ td, th { padding: 10px 20px; }
 
         <h2 class="Hidden">Presentation</h2>
 
-        <div class="lbs">
+        <div class="">
 
             <div class="Laterals-margins Column-L LB">
 
@@ -158,18 +147,12 @@ td, th { padding: 10px 20px; }
 
         <section class="Gallery">
 
-            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-01.jpg" alt=""></a></div>
-            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-02.jpg" alt=""></a></div>
-            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-03.jpg" alt=""></a></div>
-            <div class="Gallery-img"> <a href=""><img src="images/gallery-img-04.jpg" alt=""></a></div>
-          
-        </section>
+            <a href=""><img src="images/gallery-img-01.png" alt="Image" class="Line"></a>
+            <a href=""><img src="images/gallery-img-02.png" alt="Image" class="Line"></a>
+            <a href=""><img src="images/img.png" alt="Image" class="Line"></a>
+            <a href=""><img src="images/img.png" alt="Image" class="Line"></a>
 
-        <!--<img src="images/img.png" alt="Image" class=" Line Large lbs">
-        <img src="images/img.png" alt="Image" class="Line Large lbs">
-        <img src="images/img.png" alt="Image" class="Line Large lbs">
-        <img src="images/img.png" alt="Image" class="Line Large">-->
-        
+        </section>
 
     </section>
 
