@@ -35,16 +35,23 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; }
 
 header h1 { display: none; }
 
-.body-with-lateral-padding { padding: 0 20px; }
+.body-with-lateral-padding { margin: 0 20px; }
 
 .LineBreak { margin-top: 40px; margin-bottom: 40px; }
 
 .Line { border: 1px solid; }
 
-.Column-L { width: 58.5%; min-width: 375px; display: inline-block; }
-.Column-R { width: 37.5%; min-width: 375px; }
+/* .Columns { }display: inline-block;display: inline-block;*/
 
-.Column-L p { display: inline-block; }
+
+.Column-L { display: inline-block; width: calc(100% - 420px); min-width: 335px; max-width: 600px; }
+.Column-L::after { content: " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - . .- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ..- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ." }   
+
+/* .Columns-L * { display: inherit;} */
+video { width: 375px; }
+
+
+/*.Column-L p { display: inline-block; }*/
 
 h2 { text-align: center; }
 
@@ -64,29 +71,23 @@ td, th { padding: 10px 20px; }
     <h1>Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
 </header>
 
-<main>
+    <!--<main></main><div class="Columns"></div><section></section>-->
 
-    <div class="body-with-lateral-padding Column-L">
+                <p class="body-with-lateral-padding Column-L LineBreak">Texto apenas ilustrativo para testar o tamanho da fonte de texto do website. Nota: O viewport de 375px e tamanho da fonte de texto de 20px ficou o mínimo aceitável pro iPhone 8.</p>
 
-        <section class="LineBreak">
-
-            <p>Texto apenas ilustrativo para testar o tamanho da fonte de texto do website. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p class="LineBreak">
-
-            <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px ficou o mínimo aceitável pro iPhone 8. - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - .</p class="LineBreak">
-
-        </section>
-
-    </div>
-
-    <video controls preload="" poster="images/poster.png" loop class="Line  Column-R">
-        <source src="videos/rabbit.mp4" type="video/mp4">
-        <source src="videos/rabbit.webm" type="video/webm">
+          
+            <video controls preload="" poster="images/video-poster.png" loop>
+                <source src="videos/rabbit.mp4" type="video/mp4">
+                <source src="videos/rabbit.webm" type="video/webm">
+                
+                <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">
+                
+                <p> Seu navegador não suporta vídeo em HTML5. Aqui está um <a href="videos/rabbit.mp4">link para o vídeo </a>.</p>
+            </video>
         
-        <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
-        <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">
-        
-        <p> Seu navegador não suporta vídeo em HTML5. Aqui está um <a href="videos/rabbit.mp4">link para o vídeo </a>.</p>
-    </video>
+    
+    
 
     <section>
         <img src="images/img.png" alt="Image" class="Line Large">
@@ -118,17 +119,17 @@ td, th { padding: 10px 20px; }
         <h2>Download</h2>
 
         <div class="Downloads LineBreak">
-        <a href="#"><img src="images/download-app-store.png"></a>
-        <a href="#"><img src="images/download-google-play.png"></a>
-        <a href="#"><img src="images/download-steam.png"></a>
-        <!--<a href="#"><img src="images/download-amazon.png"></a>-->
+        <a href="#"><img src="images/download-app-store.png" alt=""></a>
+        <a href="#"><img src="images/download-google-play.png" alt=""></a>
+        <a href="#"><img src="images/download-steam.png" alt=""></a>
+        <!--<a href="#"><img src="images/download-amazon.png" alt=""></a>-->
         </div>
 
         </section>
 
     </div>
 
-</main>
+
 <!--
 
 
