@@ -19,7 +19,7 @@ h1 { margin: 26px 0; }
 h2 { margin: 24px 0; }
 p { margin: 19px 0; }
 
-html { /*background-color: rgb(242, 242, 242);*/ font-size: 20px; }
+html { font-size: 20px; }
 
 /* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
 html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
@@ -28,15 +28,38 @@ body { margin: 0 auto; padding: 0px; }
 
 body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960-1300px */ }
 
-header h1 { display: none; }
+.Hidden { display: none; }
 
-.body-with-lateral-padding { margin-right: 20px; margin-left: 20px; }
+.Laterals-margins { margin-right: 20px; margin-left: 20px; }
 
 .LineBreak { margin-top: 40px; margin-bottom: 40px; }
 
 .Line { border: 1px solid; }
 
+h1, h2, h3, h4, h5, h6 { text-align: center; }
 
+/*========= Navigation Bar =========*/
+
+ul { list-style-type: none; text-align: center; height: 65px; }
+
+li { display: inline; }
+
+.Nav-links a {
+  color: white;
+  background-color: blue;
+  border: 1px solid;
+
+    width: 31%;
+    text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+  padding: 20px; }
+
+  .Nav-links a:hover { background-color: DarkBlue; }
+
+/*==================================*/
 
 .Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; max-width: 560px; }
 
@@ -47,7 +70,8 @@ header h1 { display: none; }
 
 video { width: 375px; }
 
-h2 { text-align: center; }
+
+
 
 table { margin: 0 auto; }
 td:first-child { color: blue;}
@@ -62,14 +86,26 @@ td, th { padding: 10px 20px; }
 <body>
 
 <header>
-    <h1>Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
+    <h1 class="Hidden">Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
 </header>
+
+<nav>
+
+    <ul class="Nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">+Info</a></li>
+        <li><a href="">Down</a></li>
+    </ul>
+
+</nav>
 
 <main>
 
     <section>
 
-        <div class="body-with-lateral-padding Column-L LineBreak">
+        <h2 class="Hidden">Presentation</h2>
+
+        <div class="Laterals-margins Column-L LineBreak">
 
             <p>Aqui fica a descrição do jogo.</p>
             
@@ -89,11 +125,15 @@ td, th { padding: 10px 20px; }
             <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
         </video>
 
-        <img src="images/img.png" alt="Image" class="Line Large">
+        <div class="Line Large" style="height: 562px; overflow-x: scroll;">
+            <img src="images/img.png" alt="Image" class="Line Large">
+            <img src="images/img.png" alt="Image" class="Line Large">
+            <img src="images/img.png" alt="Image" class="Line Large">
+        </div>
 
     </section>
 
-    <div class="body-with-lateral-padding">
+    <div class="Laterals-margins">
 
         <section class="LineBreak">
 
