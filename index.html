@@ -32,13 +32,19 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960
 
 .Laterals-margins { margin-right: 20px; margin-left: 20px; }
 
-.LineBreak { margin-top: 40px; margin-bottom: 40px; }
+.LB /* Line break */ { margin-bottom: 40px; }
+
+.lbs /* Line break small*/ { margin-bottom: 20px; }
+
+.LB-top { margin-top: 40px; }
 
 .Line { border: 1px solid; }
 
 h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 /*========= Navigation Bar =========*/
+
+nav { margin-top: 10px; }
 
 ul { list-style-type: none; text-align: center; height: 65px; }
 
@@ -48,6 +54,7 @@ li { display: inline; }
   color: white;
   background-color: blue;
   border: 1px solid;
+  border-radius: 20px;
 
     width: 31%;
     text-align: center;
@@ -55,7 +62,7 @@ li { display: inline; }
   text-decoration: none;
 
   display: inline-block;
-  padding: 20px; }
+  padding: 20px 0px; }
 
   .Nav-links a:hover { background-color: DarkBlue; }
 
@@ -85,16 +92,16 @@ td, th { padding: 10px 20px; }
 </head>
 <body>
 
-<header>
+<header class="lbs">
     <h1 class="Hidden">Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
 </header>
 
-<nav>
+<nav class="LB">
 
     <ul class="Nav-links">
         <li><a href="">Home</a></li>
         <li><a href="">+Info</a></li>
-        <li><a href="">Down</a></li>
+        <li><a href="">Download</a></li>
     </ul>
 
 </nav>
@@ -105,37 +112,40 @@ td, th { padding: 10px 20px; }
 
         <h2 class="Hidden">Presentation</h2>
 
-        <div class="Laterals-margins Column-L LineBreak">
+        <div class="lbs">
 
-            <p>Aqui fica a descrição do jogo.</p>
-            
-            <p>A descrição precisa ser grande o suficiente para camuflar o bug que acontece quando a altura do texto é menor que a do vídeo. (O texto inicia de baixo para cima.)</p>
+            <div class="Laterals-margins Column-L LB">
 
-            <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
+                <p>Aqui fica a descrição do jogo.</p>
+                
+                <p>A descrição precisa ser grande o suficiente para camuflar o bug que acontece quando a altura do texto é menor que a do vídeo. (O texto inicia de baixo para cima.)</p>
+
+                <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
             
-            <p>Nota: Disponibilize o trailer em MP4 e WEBM.</p>
+                <p>Ok!</p>
+
+            </div>
+
+            <video controls preload="" poster="images/video-poster.png" loop class="Line">
+                <source src="videos/trailer.mp4" type="video/mp4">
+                <!--<source src="videos/trailer.webm" type="video/webm">
+                
+                <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
+            </video>
+
+        </div>
+
+        <img src="images/img.png" alt="Image" class="Line Large lbs">
+        <img src="images/img.png" alt="Image" class="Line Large lbs">
+        <img src="images/img.png" alt="Image" class="Line Large">
         
-        </div>
-
-        <video controls preload="" poster="images/video-poster.png" loop class="Line">
-            <source src="videos/trailer.mp4" type="video/mp4">
-            <!--<source src="videos/trailer.webm" type="video/webm">
-            
-            <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
-            <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
-        </video>
-
-        <div class="Line Large" style="height: 562px; overflow-x: scroll;">
-            <img src="images/img.png" alt="Image" class="Line Large">
-            <img src="images/img.png" alt="Image" class="Line Large">
-            <img src="images/img.png" alt="Image" class="Line Large">
-        </div>
 
     </section>
 
     <div class="Laterals-margins">
 
-        <section class="LineBreak">
+        <section class="LB">
 
         <h2>More information</h2>
 
@@ -154,11 +164,11 @@ td, th { padding: 10px 20px; }
 
         <hr>
 
-        <section class="LineBreak">
+        <section class="LB">
 
         <h2>Download</h2>
 
-        <div class="Downloads LineBreak">
+        <div class="Downloads LB">
         <a href="#"><img src="images/download-app-store.png" alt=""></a>
         <a href="#"><img src="images/download-google-play.png" alt=""></a>
         <a href="#"><img src="images/download-steam.png" alt=""></a>
