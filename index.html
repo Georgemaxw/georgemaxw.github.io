@@ -83,13 +83,33 @@ li { display: inline; }
 
 video { width: 375px; }
 
-/*============= Gallery ============*/
+/*========= Gallery-type-1 =========*/
 
-.Gallery div { width: 100%; max-width: 960px; margin: 0 auto; }
+.Gallery-type-1 div { width: 100%; max-width: 960px; margin: 0 auto; }
 
-.Gallery a { display: inline-block; width: 100%; min-width: 375px; max-width: 477px; }
+.Gallery-type-1 a { display: inline-block; width: 100%; min-width: 375px; max-width: 477px; }
 
-.Gallery img { display: inherit; width: inherit; min-width: inherit; max-width: inherit; }
+.Gallery-type-1 img { display: inherit; width: inherit; min-width: inherit; max-width: inherit; }
+
+/*========= Gallery-type-2 =========*/
+
+.Gallery-type-2 { width: 96%; min-width: 375px;  margin: 0 auto 40px; 
+    border: 1px solid rgb(196, 196, 196); border-bottom-color: rgb(207, 203, 203);  }
+
+.Images-group {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1042px;
+    overflow-x: auto; /* <- Não sei como funciona! */
+    white-space: nowrap; /* <- Não sei como funciona! */
+}
+
+.Gallery-type-2:hover { 
+    width: 10000px; margin-left: -4500px; padding-top: 40px; padding-bottom: 40px; 
+    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
+    background-color: rgb(243, 243, 243); }/**/
+
+.Gallery-type-2 img { display: inline-block; width: 96%;  }
 
 /*============== Table =============*/
 
@@ -160,11 +180,13 @@ footer { text-align: center; background-color: rgb(242, 242, 242);   border: 1px
                 <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
             </video>
 
+
+
         </div>
 
     </section>  
 
-    <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
+    <!--<section class="Gallery-type-1 lb"> <h2 class="Hidden">Gallery</h2>
 
         <div>
         <a href="gallery-imgs.html"><img src="images/gallery-img-01-pc-small.png" alt="Image" class="Line"></a>
@@ -175,9 +197,22 @@ footer { text-align: center; background-color: rgb(242, 242, 242);   border: 1px
         <a href="images/gallery-img-06-pc.png"><img src="images/gallery-img-06-pc-small.png" alt="Image" class="Line"></a>
         </div>
 
-    </section>
+    </section>-->
 
-    
+        <section class="Gallery-type-2 lb"> <h2 class="Hidden">Gallery</h2>
+
+            <div class="Images-group">
+        
+                <img src="images/gallery-img-01-pc.png" alt="">
+                <img src="images/gallery-img-02-pc.png" alt="">
+                <img src="images/gallery-img-03-pc.png" alt="">
+                <img src="images/gallery-img-04-pc.png" alt="">
+                <img src="images/gallery-img-05-pc.png" alt="">
+                <img src="images/gallery-img-06-pc.png" alt="">
+                
+            </div>
+        
+        </section>
 
     <div class="Laterals-margins">
 
@@ -247,6 +282,7 @@ footer { text-align: center; background-color: rgb(242, 242, 242);   border: 1px
 
 <!--<tr><td>Made with</td><td>RPG Maker, Paint S</td></tr>
             <tr><td>Tags</td><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
+
 
 <!--<p>Página escrita por <a href=""> Chris Mills</a>.</p>-->
 
