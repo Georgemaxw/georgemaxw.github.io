@@ -26,8 +26,7 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960
 
 
 
-
-
+body {  }
 
 
 .Gallery {
@@ -39,15 +38,13 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960
     overflow-x: auto;
     font-size: 0;
     white-space: nowrap;
-}
-.Gallery-img { display: inline-block; }
-
-.Gallery-img > img {
-    display: block;
-    max-width: 100%;
+    border: 1px solid black;
+    padding-right: 20px;
 }
 
-.Gallery:hover { width: 100%; }
+.Gallery:hover { width: 100%; padding-right: 0px; }
+
+img { display: inline-block; width: 100%; }
 
 </style>
 
@@ -56,14 +53,15 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960
 
 <section class="Gallery">
 
-    <div class="Gallery-img"><img src="images/gallery-img-01-pc.png" alt=""></div>
-    <div class="Gallery-img"><img src="images/gallery-img-02-pc.png" alt=""></div>
-    <div class="Gallery-img"><img src="images/gallery-img-03-pc.png" alt=""></div>
-    <div class="Gallery-img"><img src="images/gallery-img-04-pc.png" alt=""></div>
-    <div class="Gallery-img"><img src="images/gallery-img-05-pc.png" alt=""></div>
-    <div class="Gallery-img"><img src="images/gallery-img-06-pc.png" alt=""></div>
+    <img src="images/gallery-img-01-pc.png" alt="">
+    <img src="images/gallery-img-02-pc.png" alt="">
+    <img src="images/gallery-img-03-pc.png" alt="">
+    <img src="images/gallery-img-04-pc.png" alt="">
+    <img src="images/gallery-img-05-pc.png" alt="">
+    <img src="images/gallery-img-06-pc.png" alt="">
     
 </section>
-hover
+
+<p>2</p>
 </body>
 </html>
