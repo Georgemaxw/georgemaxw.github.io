@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<title>Javascript Completo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=375px">
+<style>
+
+
+/* Redefinição Global do Espaço em Branco: */
+* { margin: 0; padding: 0; }
+h1 { margin: 26px 0; }
+h2 { margin: 24px 0; }
+p { margin: 19px 0; }
+
+html { font-size: 20px; }
+
+/* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
+html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+
+body { margin: 0 auto; padding: 0px; }
+
+body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960-1300px */ }
+
+
+
+
+
+
+
+
+
+.Gallery {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 375px;
+    max-width: 1000px;
+
+    overflow-x: auto;
+    font-size: 0;
+    white-space: nowrap;
+}
+.Gallery-img { display: inline-block; }
+
+.Gallery-img > img {
+    display: block;
+    max-width: 100%;
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="Gallery">
+
+    <div class="Gallery-img"><img src="images/gallery-img-01-pc.png" alt=""></div>
+    <div class="Gallery-img"><img src="images/gallery-img-02-pc.png" alt=""></div>
+    <div class="Gallery-img"><img src="images/gallery-img-03-pc.png" alt=""></div>
+    <div class="Gallery-img"><img src="images/gallery-img-04-pc.png" alt=""></div>
+    <div class="Gallery-img"><img src="images/gallery-img-05-pc.png" alt=""></div>
+    <div class="Gallery-img"><img src="images/gallery-img-06-pc.png" alt=""></div>
+    
+</section>
+
+</body>
+</html>
