@@ -79,7 +79,9 @@ video { width: 375px; }
 
 /*============= Gallery ============*/
 
-.Gallery a { display: inline-block; width: 100%; min-width: 375px; max-width: 497px; }
+.Gallery div { width: 100%; max-width: 960px; margin: 0 auto; }
+
+.Gallery a { display: inline-block; width: 100%; min-width: 375px; max-width: 477px; }
 
 .Gallery img { display: inherit; width: inherit; min-width: inherit; max-width: inherit; }
 
@@ -96,9 +98,13 @@ td, th { padding: 10px 20px; }
 
 /*============ Download ============*/
 
-.Downloads { text-align: center; }
+.Download { text-align: center; }
 
-.Downloads img { width: 195px; }
+.Download img { width: 195px; }
+
+/*============= footer =============*/
+
+footer { text-align: center; }
 
 </style>
 
@@ -106,7 +112,7 @@ td, th { padding: 10px 20px; }
 <body>
 
 <header class="lbs">
-    <h1 class="Hidden">Game Name</h1><img src="images/header-big.png" alt="Logo" class="Line Large">
+    <h1 class="Hidden">Game Name</h1><img src="images/header-pc.png" alt="Logo" class="Line Large">
 </header>
 
 <nav class="lbs">
@@ -118,6 +124,8 @@ td, th { padding: 10px 20px; }
     </ul>
 
 </nav>
+
+<!-- <p> <noscript> Para usar este site, ative o JavaScript. </noscript> </p> -->  
 
 <main>
 
@@ -151,18 +159,22 @@ td, th { padding: 10px 20px; }
 
     <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
 
-        <a href=""><img src="images/gallery-img-01-big.png" alt="Image" class="Line"></a>
-        <a href=""><img src="images/gallery-img-02-big.png" alt="Image" class="Line"></a>
-        <a href=""><img src="images/gallery-img-03-big.png" alt="Image" class="Line"></a>
-        <a href=""><img src="images/gallery-img-04-big.png" alt="Image" class="Line"></a>
-        <a href=""><img src="images/gallery-img-05-big.png" alt="Image" class="Line"></a>
-        <a href=""><img src="images/gallery-img-06-big.png" alt="Image" class="Line"></a>
+        <div>
+        <a href="images/gallery-img-01-pc.png"><img src="images/gallery-img-01-pc-small.png" alt="Image" class="Line"></a>
+        <a href="images/gallery-img-02-pc.png"><img src="images/gallery-img-02-pc-small.png" alt="Image" class="Line"></a>
+        <a href="images/gallery-img-03-pc.png"><img src="images/gallery-img-03-pc-small.png" alt="Image" class="Line"></a>
+        <a href="images/gallery-img-04-pc.png"><img src="images/gallery-img-04-pc-small.png" alt="Image" class="Line"></a>
+        <a href="images/gallery-img-05-pc.png"><img src="images/gallery-img-05-pc-small.png" alt="Image" class="Line"></a>
+        <a href="images/gallery-img-06-pc.png"><img src="images/gallery-img-06-pc-small.png" alt="Image" class="Line"></a>
+        </div>
 
     </section>
 
-    <hr>
+    
 
     <div class="Laterals-margins">
+
+        <hr>
 
         <section> <h2>More information</h2>
 
@@ -183,7 +195,7 @@ td, th { padding: 10px 20px; }
 
         <section class="lb"> <h2>Download</h2>
 
-        <div class="Downloads lb">
+        <div class="Download lb">
         <a href="#"><img src="images/download-app-store.png" alt=""></a>
         <a href="#"><img src="images/download-google-play.png" alt=""></a>
         <a href="#"><img src="images/download-steam.png" alt=""></a>
@@ -192,9 +204,42 @@ td, th { padding: 10px 20px; }
 
         </section>
 
+        <hr>
+
+        <section class="Laterals-margins lb"> <h2>Comments</h2>
+
+        <p>Log in with itch.io to leave a comment.</p class="Laterals-margins">
+
+        <p>...</p>  
+
+        </section>
+
     </div>
 
 </main>
+
+<hr>
+
+<footer>
+
+
+
+    <address>
+
+        <p>Contact the author of this page:</p>
+        <!--<p>Página escrita por <a href=""> Chris Mills</a>.</p>-->
+    
+        <p>Phone: <a href="tel:+13115552368">(19) 2425-8804</a></p>
+        <p>E-mail: <a href="mailto:jim@rock.com">atendimento@empresa.com.br</a></p>
+
+        If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
+            contact webmaster</a>.<br>
+
+        <p>©Copyright 2750 by nobody. All rights reversed.</p>
+
+    </address>
+
+</footer>
 
 <!--
 
@@ -204,27 +249,11 @@ td, th { padding: 10px 20px; }
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<footer>
-    <p>©Copyright 2150 by nobody. All rights reversed.</p>
-</footer>
+
 -->
 
 
-<!--
-<noscript> Para usar este site, ative o JavaScript. </noscript>
-
-
-
-<figure>
-        <img src="images/Square.png" alt="Texto de acessibilidade da imagem.">
-        
-        <figcaption>Imagem de gradiente.</figcaption>
-</figure>
-
-
-
-
--->    
+  
     
 </body>
 </html>
