@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<title>Game Name</title>
+<title>My Site</title>
 
 <meta name="author" content="George Maxwell">
 <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
 
-<meta name="viewport" content="width=100vmin">
+<meta name="viewport" content="width=375px"> <!-- width=100vmin <- isso é 100x a largura do lado da menor viewport. -->
 
 <style>
     
@@ -32,11 +32,11 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960
 
 .Laterals-margins { margin-right: 20px; margin-left: 20px; }
 
-.LB /* Line break */ { margin-bottom: 40px; }
+.lb /* Line break */ { margin-bottom: 40px; }
 
-.lbs /* Line break small*/ { margin-bottom: 20px; }
+.lbs /* Line break - small*/ { margin-bottom: 20px; }
 
-.LB-top { margin-top: 40px; }
+.lb-top { margin-top: 40px; }
 
 .Line { border: 1px solid; }
 
@@ -79,9 +79,10 @@ video { width: 375px; }
 
 /*============= Gallery ============*/
 
-.Gallery a { display: inline-block; width: 100%; min-width: 375px; max-width: 497px;  }
+.Gallery a { display: inline-block; width: 100%; min-width: 375px; max-width: 497px; }
 
 .Gallery img { display: inherit; width: inherit; min-width: inherit; max-width: inherit; }
+
 /*============== Table =============*/
 
 table { margin: 0 auto; }
@@ -89,6 +90,9 @@ table { margin: 0 auto; }
 td:first-child { color: blue;}
 
 td, th { padding: 10px 20px; }
+
+.table-margin-adjust-top { margin-top: -10px; }
+.table-margin-adjust-bottom { margin-bottom: 23px; }
 
 /*============ Download ============*/
 
@@ -102,7 +106,7 @@ td, th { padding: 10px 20px; }
 <body>
 
 <header class="lbs">
-    <h1 class="Hidden">Game Name</h1><img src="images/header.png" alt="Logo" class="Line Large">
+    <h1 class="Hidden">Game Name</h1><img src="images/header-big.png" alt="Logo" class="Line Large">
 </header>
 
 <nav class="lbs">
@@ -117,13 +121,11 @@ td, th { padding: 10px 20px; }
 
 <main>
 
-    <section>
+    <section> <h2 class="Hidden">Presentation</h2>
 
-        <h2 class="Hidden">Presentation</h2>
+        <div>
 
-        <div class="">
-
-            <div class="Laterals-margins Column-L LB">
+            <div class="Laterals-margins Column-L lb">
 
                 <p>Aqui fica a descrição do jogo.</p>
                 
@@ -145,24 +147,26 @@ td, th { padding: 10px 20px; }
 
         </div>
 
-        <section class="Gallery">
+    </section>  
 
-            <a href=""><img src="images/gallery-img-01.png" alt="Image" class="Line"></a>
-            <a href=""><img src="images/gallery-img-02.png" alt="Image" class="Line"></a>
-            <a href=""><img src="images/gallery-img-03.png" alt="Image" class="Line"></a>
-            <a href=""><img src="images/gallery-img-04.png" alt="Image" class="Line"></a>
+    <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
 
-        </section>
+        <a href=""><img src="images/gallery-img-01-big.png" alt="Image" class="Line"></a>
+        <a href=""><img src="images/gallery-img-02-big.png" alt="Image" class="Line"></a>
+        <a href=""><img src="images/gallery-img-03-big.png" alt="Image" class="Line"></a>
+        <a href=""><img src="images/gallery-img-04-big.png" alt="Image" class="Line"></a>
+        <a href=""><img src="images/gallery-img-05-big.png" alt="Image" class="Line"></a>
+        <a href=""><img src="images/gallery-img-06-big.png" alt="Image" class="Line"></a>
 
     </section>
 
+    <hr>
+
     <div class="Laterals-margins">
 
-        <section class="LB">
+        <section> <h2>More information</h2>
 
-        <h2>More information</h2>
-
-        <table>
+        <table class="table-margin-adjust-top table-margin-adjust-bottom">
             <tr><td>Status</td><td>Released</td></tr>
             <tr><td>Platforms</td><td>Windows, MacOS, Linux, Android, iOS</td></tr>
             <tr><td>Author</td><td>George Maxwell</td></tr>
@@ -177,11 +181,9 @@ td, th { padding: 10px 20px; }
 
         <hr>
 
-        <section class="LB">
+        <section class="lb"> <h2>Download</h2>
 
-        <h2>Download</h2>
-
-        <div class="Downloads LB">
+        <div class="Downloads lb">
         <a href="#"><img src="images/download-app-store.png" alt=""></a>
         <a href="#"><img src="images/download-google-play.png" alt=""></a>
         <a href="#"><img src="images/download-steam.png" alt=""></a>
