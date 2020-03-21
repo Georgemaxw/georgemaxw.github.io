@@ -22,46 +22,48 @@ body { margin: 0 auto; padding: 0px; }
 
 body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960-1300px */ }
 
+.Hidden { display: none; }
 
 
 
+/*========= Gallery-type-2-NoHover =========*/
 
-body {  }
+.Gallery-type-2-NoHover { width: 96%; min-width: 375px;  margin: 0 auto 40px; }
 
-
-.Gallery {
+.Images-group {
     margin: 0 auto;
-    width: 50%;
-    min-width: 375px;
-    max-width: 1000px;
-
-    overflow-x: auto;
-    font-size: 0;
-    white-space: nowrap;
-    border: 1px solid black;
-    /*padding-right: 20px;*/
+    width: 100%;
+    max-width: 1042px;
+    overflow-x: auto; /* <- Não sei como funciona! */
+    white-space: nowrap; /* <- Não sei como funciona! */
 }
 
-.Gallery:hover { width: 100%; padding-right: 0px; }
+/*.Gallery-type-2:hover { 
+    width: 10000px; margin-left: -4500px; padding-top: 40px; padding-bottom: 40px; 
+    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
+    background-color: rgb(243, 243, 243); }*/
 
-img { display: inline-block; width: 98%; }
+.Gallery-type-2-NoHover img { display: inline-block; width: 96%;  }
 
 </style>
 
 </head>
-<body>
+<body><br>
 
-<section class="Gallery">
+    <section class="Gallery-type-2-NoHover lb"> <h2 class="Hidden">Gallery</h2>
 
-    <img src="images/gallery-img-01-pc.png" alt="">
-    <img src="images/gallery-img-02-pc.png" alt="">
-    <img src="images/gallery-img-03-pc.png" alt="">
-    <img src="images/gallery-img-04-pc.png" alt="">
-    <img src="images/gallery-img-05-pc.png" alt="">
-    <img src="images/gallery-img-06-pc.png" alt="">
+        <div class="Images-group">
+
+                <img src="images/gallery-img-01-pc.png" alt="">
+                <img src="images/gallery-img-02-pc.png" alt="">
+                <img src="images/gallery-img-03-pc.png" alt="">
+                <img src="images/gallery-img-04-pc.png" alt="">
+                <img src="images/gallery-img-05-pc.png" alt="">
+                <img src="images/gallery-img-06-pc.png" alt="">
+
+        </div>
     
-</section>
+    </section>
 
-<p>3</p>
 </body>
 </html>
