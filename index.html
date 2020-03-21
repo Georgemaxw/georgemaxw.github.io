@@ -67,7 +67,7 @@ nav li { display: inline; height: 65px; }
   padding: 10px 0px;
   border: 3px double white;
   border-radius: 25px;
-margin-bottom: 5px; 
+  margin-bottom: 5px; 
   text-align: center;
   text-decoration: none;
  }
@@ -103,7 +103,7 @@ margin-bottom: 5px;
 
 /*============= Aside-R ============*/
 
-.Aside-R { height: 0px; }
+.Aside-R { width: 0px; height: 0px; }
 
 .Aside-R .Aside-body { 
     width: 250px; height: calc(40px * 8); margin-left: 1040px; margin-top: 0px;
@@ -210,7 +210,7 @@ footer ul { list-style-type: none; }
 
 <!-- <p> <noscript> Para usar este site, ative o JavaScript. </noscript> </p> --> 
 
-<!--<aside class="Aside-L"> 
+<aside class="Aside-L"> 
     <div class="Aside-body">
         <ul>
             <li><a href=""><span>Link</span></a></li>
@@ -223,10 +223,10 @@ footer ul { list-style-type: none; }
             <li><a href=""><span>Link</span></a></li>
         </ul>
     </div>    
-</aside>-->
+</aside><!---->
 
 <!-- Aside-R buga no mobile. -->
-<!--<aside class="Aside-R"> 
+<aside class="Aside-R"> 
     <div class="Aside-body">
         <ul>
             <a href=""><li>Link</li></a>
@@ -239,7 +239,7 @@ footer ul { list-style-type: none; }
             <a href=""><li>Link</li></a>
         </ul>
     </div>    
-</aside>-->
+</aside><!---->
 
 <main>
 
@@ -247,7 +247,7 @@ footer ul { list-style-type: none; }
 
         <div>
 
-            <div class="Laterals-margins Column-L lb">
+            <div class="Laterals-margins Column-L lb" style="text-align: justify;">
 
                 <p>Aqui fica a descrição do jogo.</p>
                 
@@ -255,7 +255,7 @@ footer ul { list-style-type: none; }
 
                 <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
             
-                <p>Ok!3</p>
+                <p>Ok!5</p>
 
             </div>
 
@@ -373,3 +373,11 @@ footer ul { list-style-type: none; }
 
 </body>
 </html>
+
+<!-- Coisas que usei mas não chequei a estudar: 
+
+    - Valor justify da propriedade text-align;
+    - Propriedade overflow-x;
+    - Propriedade white-space;
+
+-->
