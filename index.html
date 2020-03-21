@@ -42,26 +42,28 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960
 
 h1, h2, h3, h4, h5, h6 { text-align: center; }
 
-/*============= Header =============*/
+/*============= Header =============
 
 header { margin-top: 20px; }
-
-header img { border: 0px solid black; border-radius: 25px; }
+header img { border: 0px solid black; border-radius: 25px; }*/
+header img { border: 0px solid black; 
+    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }
 
 /*========= Navigation Bar =========*/
 
 nav { margin-top: 10px; }
 
-nav ul { list-style-type: none; text-align: center; height: 65px; }
+nav ul { list-style-type: none; text-align: center; }
 
-nav li { display: inline; }
+nav li { display: inline; height: 65px; }
 
 .Nav-links a {
   color: white;
   background-color: blue;
 
   display: inline-block;
-  width: 31%;
+  width: calc(94% / 6);
+  min-width: 116px;
   padding: 10px 0px;
   border: 1px solid;
   border-radius: 25px;
@@ -197,8 +199,11 @@ footer ul { list-style-type: none; }
 
     <ul class="Nav-links">
         <li><a href="">Home</a></li>
+        <li><a href="">Gallery</a></li>
         <li><a href="">+Info</a></li>
         <li><a href="">Download</a></li>
+        <li><a href="">Comments</a></li>
+        <li><a href="">Contact</a></li>
     </ul>
 
 </nav>
