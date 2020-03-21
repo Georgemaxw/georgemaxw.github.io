@@ -9,7 +9,7 @@
 <meta name="author" content="George Maxwell">
 <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
 
-<meta name="viewport" content="width=375px"> <!-- width=100vmin <- isso é 100x a largura do lado da menor viewport. -->
+<meta name="viewport" content="width=100vw"> <!-- width=100vmin. 1vmin é 1/100 da largura do lado do menor viewport. -->
 
 <style>
     
@@ -153,7 +153,7 @@ video { width: 375px; }
 }
 
 .Gallery-type-2:hover { 
-    width: 1122px; margin-left: -61px; /* width: 10000px; margin-left: -4500px; */
+    /*width: 1122px; margin-left: -61px;*/  width: 110vmax; margin-left: calc(-1 * ((110vmax - 1000px)/2)); 
     padding-top: 40px; padding-bottom: 40px; 
     border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
     background-color: rgb(243, 243, 243); }/**/
