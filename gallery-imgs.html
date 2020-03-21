@@ -3,7 +3,7 @@
 <head>
 <title>Javascript Completo</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=375px">
+<meta name="viewport" content="width=100vw">
 <style>
 
 
@@ -20,7 +20,7 @@ html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
 
 body { margin: 0 auto; padding: 0px; }
 
-body, .Large { width: 100%; min-width: 375px; max-width: 100vw; /* Padrão: 960-1300px */ }
+body, .Large { width: 100vw; min-width: 100vw; max-width: 100vw; max-height: 100vh; /* Padrão: 960-1300px */ }
 
 .Hidden { display: none; }
 
@@ -28,11 +28,11 @@ body, .Large { width: 100%; min-width: 375px; max-width: 100vw; /* Padrão: 960-
 
 /*========= Gallery-type-2-NoHover =========*/
 
-.Gallery-type-2-NoHover { width: 100vmax;  margin: 0 auto 40px; }
+.Gallery-type-2-NoHover { width: 100vw;  margin: 0 auto 40px; }
 
 .Images-group {
     margin: 0 auto;
-    width: 100%;
+    width: 100vw;
     max-width: 1042px;
     overflow-x: auto; /* <- Não sei como funciona! */
     white-space: nowrap; /* <- Não sei como funciona! */
