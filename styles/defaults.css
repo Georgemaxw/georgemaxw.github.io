@@ -1,0 +1,30 @@
+/*============ Defaults ============*/
+
+/* Redefinição Global do Espaço em Branco: */
+* { margin: 0; padding: 0; }
+h1 { margin: 26px 0; }
+h2 { margin: 24px 0; }
+p { margin: 19px 0; }
+
+html { font-size: 20px; }
+
+/* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
+html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+
+body { margin: 0 auto; padding: 0px; }
+
+body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960-1300px */ }
+
+.Hidden { display: none; }
+
+.Laterals-margins { margin-right: 20px; margin-left: 20px; }
+
+.lb /* Line break */ { margin-bottom: 40px; }
+
+.lbs /* Line break - small */ { margin-bottom: 20px; }
+
+.lb-top { margin-top: 40px; }
+
+.Line { border: 1px solid black; }
+
+h1, h2, h3, h4, h5, h6 { text-align: center; }

@@ -4,47 +4,19 @@
 <meta charset="utf-8">
 
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link href="styles/defaults.css" rel="stylesheet">
 <title>My Site</title>
 
 <meta name="author" content="George Maxwell">
 <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
 
-<meta name="viewport" content="width=375px"> <!-- width=100vmin. 1vmin é 1/100 da largura do lado do menor viewport. -->
+<meta name="viewport" content="width=375px"> 
 
 <style>
-    
-/* Redefinição Global do Espaço em Branco: */
-* { margin: 0; padding: 0; }
-h1 { margin: 26px 0; }
-h2 { margin: 24px 0; }
-p { margin: 19px 0; }
 
-html { font-size: 20px; }
+/*============= Header =============*/
 
-/* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
-html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
-
-body { margin: 0 auto; padding: 0px; }
-
-body, .Large { width: 100%; min-width: 375px; max-width: 1000px; /* Padrão: 960-1300px */ }
-
-.Hidden { display: none; }
-
-.Laterals-margins { margin-right: 20px; margin-left: 20px; }
-
-.lb /* Line break */ { margin-bottom: 40px; }
-
-.lbs /* Line break - small*/ { margin-bottom: 20px; }
-
-.lb-top { margin-top: 40px; }
-
-.Line { border: 1px solid black; }
-
-h1, h2, h3, h4, h5, h6 { text-align: center; }
-
-/*============= Header =============
-
-header { margin-top: 20px; }
+/*header { margin-top: 20px; }
 header img { border: 0px solid black; border-radius: 25px; }*/
 header img { border: 0px solid black; 
     border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }
@@ -74,52 +46,52 @@ nav li { display: inline; height: 65px; }
 
   .Nav-links a:hover { background-color: DarkBlue; }
 
-/*============= Aside-L ============*/
+/*============= Aside-type-1 ============*/
 
-.Aside-L { height: 0px; }
+.Aside-type-1 { height: 0px; }
 
-.Aside-L .Aside-body { 
-    width: 250px; height: calc(40px * 8); margin-left: -289px; margin-top: 0px;
+.Aside-type-1 .Aside-body { 
+    width: 250px; height: calc(40px * 8); margin-left: -289px;
     background-color: blue; border-radius: 25px; }  
 
-.Aside-L .Aside-body ul { list-style-type: none; }
+.Aside-type-1 .Aside-body ul { list-style-type: none; }
 
-.Aside-L .Aside-body a { 
+.Aside-type-1 .Aside-body a { 
     display: block; text-align: center; 
     color: white; text-decoration: none; }
 
-.Aside-L .Aside-body li:first-child { border-top-right-radius: 25px; border-top-left-radius: 25px; }
+.Aside-type-1 .Aside-body li:first-child { border-top-right-radius: 25px; border-top-left-radius: 25px; }
 
-.Aside-L .Aside-body li:last-child {  
+.Aside-type-1 .Aside-body li:last-child {  
     border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }/**/
 
-.Aside-L .Aside-body li:hover { background-color: darkblue; }
+.Aside-type-1 .Aside-body li:hover { background-color: darkblue; }
 
-.Aside-L span { display: block; width: 210px; padding: 8px 0px; 
+.Aside-type-1 span { display: block; width: 210px; padding: 8px 0px; 
     border-bottom: 1px solid white; 
     margin: 0 auto; }
 
-.Aside-L li:last-child span { border-bottom: 0px solid white; }
+.Aside-type-1 li:last-child span { border-bottom: 0px solid white; }
 
-/*============= Aside-R ============*/
+/*============= Aside-type-2 ============*/
 
-.Aside-R { width: 0px; height: 0px; }
+.Aside-type-2 { width: 0px; height: 0px; }
 
-.Aside-R .Aside-body { 
-    width: 250px; height: calc(40px * 8); margin-left: 1040px; margin-top: 0px;
+.Aside-type-2 .Aside-body { 
+    width: 250px; height: calc(40px * 8); margin-left: 1040px;
     background-color: blue; border-radius: 25px; }  
 
-.Aside-R .Aside-body ul { list-style-type: none; }
+.Aside-type-2 .Aside-body ul { list-style-type: none; }
 
-.Aside-R .Aside-body a { display: block; padding: 8px; text-align: center; border-bottom: 1px solid white; }
+.Aside-type-2 .Aside-body a { display: block; padding: 8px; text-align: center; border-bottom: 1px solid white; }
 
-.Aside-R .Aside-body a:first-child { border-top-right-radius: 25px; border-top-left-radius: 25px; }
+.Aside-type-2 .Aside-body a:first-child { border-top-right-radius: 25px; border-top-left-radius: 25px; }
 
-.Aside-R .Aside-body a:last-child { border-bottom: 0px solid white; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }/**/
+.Aside-type-2 .Aside-body a:last-child { border-bottom: 0px solid white; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }/**/
 
-.Aside-R .Aside-body a:hover { background-color: darkblue; }
+.Aside-type-2 .Aside-body a:hover { background-color: darkblue; }
 
-.Aside-R .Aside-body a { color: white; text-decoration: none; }
+.Aside-type-2 .Aside-body a { color: white; text-decoration: none; }
 
 /*========= Double Columns =========*/
 
@@ -153,7 +125,7 @@ video { width: 375px; }
 }
 
 .Gallery-type-2:hover { 
-    /*width: 1122px; margin-left: -61px;*/  width: 110vmax; margin-left: calc(-1 * ((110vmax - 1000px)/2)); 
+    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
     padding-top: 40px; padding-bottom: 40px; 
     border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
     background-color: rgb(243, 243, 243); }/**/
@@ -210,7 +182,9 @@ footer ul { list-style-type: none; }
 
 <!-- <p> <noscript> Para usar este site, ative o JavaScript. </noscript> </p> --> 
 
-<aside class="Aside-L"> 
+<!-- Aside-type-2 buga no mobile. -->
+
+<!--<aside class="Aside-type-1"> 
     <div class="Aside-body">
         <ul>
             <li><a href=""><span>Link</span></a></li>
@@ -223,10 +197,9 @@ footer ul { list-style-type: none; }
             <li><a href=""><span>Link</span></a></li>
         </ul>
     </div>    
-</aside><!---->
+</aside>-->
 
-<!-- Aside-R buga no mobile. -->
-<!--<aside class="Aside-R"> 
+<!--<aside class="Aside-type-2"> 
     <div class="Aside-body">
         <ul>
             <a href=""><li>Link</li></a>
@@ -288,7 +261,7 @@ footer ul { list-style-type: none; }
 
         <div class="Images-group">
     
-            <a href="gallery-imgs.html">
+            <!--<a href="gallery-imgs.html">-->
 
                 <img src="images/gallery-img-01-pc.png" alt="">
                 <img src="images/gallery-img-02-pc.png" alt="">
@@ -297,7 +270,7 @@ footer ul { list-style-type: none; }
                 <img src="images/gallery-img-05-pc.png" alt="">
                 <img src="images/gallery-img-06-pc.png" alt="">
 
-            </a>
+            <!--</a>-->
 
         </div>
     
@@ -374,10 +347,15 @@ footer ul { list-style-type: none; }
 </body>
 </html>
 
-<!-- Coisas que usei mas não chequei a estudar: 
+<!-- 
+Coisas que usei mas não chequei a estudar: 
 
-    - Valor justify da propriedade text-align;
-    - Propriedade overflow-x;
-    - Propriedade white-space;
+- Valor justify da propriedade text-align;
+- Propriedade overflow-x;
+- Propriedade white-space;
+- Unidade vw;
 
--->
+Obs.: 1vmin é 1/100 da largura do lado do menor viewport. (Idem p/ vmax.)
+
+Obs.: 1vw é 1/100 da largura do viewport. (Idem p/ vh.)
+--> 
