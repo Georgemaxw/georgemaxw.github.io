@@ -105,9 +105,9 @@ video { width: 375px; }
     white-space: nowrap; /* <- Não sei como funciona! */
 }
 
-.Gallery img { display: inline-block; width: 94.3%;  }
+.Gallery picture, .Gallery > img { display: inline-block; width: 94.3%;  }
 
-.Gallery source { display: inline-block; width: 94.3%;  }
+.Gallery picture img { display: inline-block; width: 100%;  }
 
 /*============== Table =============*/
 
@@ -173,7 +173,7 @@ footer ul { list-style-type: none; }
 
                 <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
             
-                <p>Ok!</p>
+                <p>Ok!a</p>
 
             </div>
 
@@ -189,11 +189,7 @@ footer ul { list-style-type: none; }
 
     </section>  
 
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-01-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-01-pc.png">
-                <img src="images/gallery-img-01-pc.png" alt="Car">
-            </picture>
+            
 
     <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
 
@@ -201,7 +197,11 @@ footer ul { list-style-type: none; }
 
             <!--<img src="images/gallery-img-01-pc.png" alt="">-->
 
-
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-01-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-01-pc.png">
+                <img src="images/gallery-img-01-pc.png" alt="Car">
+            </picture>
 
             <img src="images/gallery-img-02-pc.png" alt="">
             <img src="images/gallery-img-03-pc.png" alt="">
