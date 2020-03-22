@@ -49,6 +49,10 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1100px; /* Padrão: 960
 
 h1, h2, h3, h4, h5, h6 { text-align: center; }
 
+a { color: blue; }
+
+.list-inline, .list-inline li { display: inline; }
+
 /*===================== Header =====================*/
 
 /*header { margin-top: 20px; }
@@ -79,7 +83,7 @@ nav li { display: inline; height: 65px; }
   text-decoration: none;
  }
 
-  .Nav-links a:hover { background-color: DarkBlue; }
+  .Nav-links a:hover { background-color: DeepSkyBlue; }
 
 /*================= Double Columns =================*/
 
@@ -155,6 +159,7 @@ footer ul { list-style-type: none; }
 <body>
 
 <header class="lbs">
+
     <h1 class="Hidden">Game Name</h1>
     
     <picture>
@@ -163,20 +168,29 @@ footer ul { list-style-type: none; }
         <img src="images/header-pc.png" alt="Logo" class="Large">
     </picture>
 
+    <!--<a href="">Language</a>-->
+
 </header>
 
 <nav>
 
     <ul class="Nav-links">
-        <li><a href="">Home</a></li>
+        <!--<li><a href="">Home</a></li>-->
+        <li><a href="">Gameplay</a></li>
         <!--<li><a href="">News</a></li>-->
         <li><a href="">Gallery</a></li>
         <li><a href="">+Info</a></li>
         <li><a href="">Download</a></li>
         <li><a href="">Comments</a></li>
+        <!--<li><a href="">Forum</a></li>-->
+        <!--<li><a href="">Community</a></li>-->
+        <!--<li><a href="">Store</a></li>-->
+        <!--<li><a href="">About</a></li>-->
         <!--<li><a href="">Team</a></li>-->
+        <!--<li><a href="">Jobs</a></li>-->
         <li><a href="">Contact</a></li>
-        <!--<li><a href="">More</a></li>-->
+        <!--<li><a href="">Login</a></li>-->
+        <!--<li><a href="">Help</a></li>-->
     </ul>
 
 </nav>
@@ -281,14 +295,19 @@ footer ul { list-style-type: none; }
         <section> <h2>More information</h2>
 
         <table class="table-margin-adjust-top table-margin-adjust-bottom">
-            <tr><td>Status</td><td>Released</td></tr>
+            <!--<tr><td>Status</td><td>Released</td></tr>-->
+            <tr><td>Release date</td><td><time datetime="2057-01-26">26 January 2057</time></td></tr>
             <tr><td>Platforms</td><td>Windows, MacOS, Linux, Android, iOS</td></tr>
-            <tr><td>Author</td><td>George Maxwell</td></tr>
-            <tr><td>Genre</td><td>Role Playing</td></tr>
+            <tr><td>Players</td><td>Up to 4 players</td></tr>
+            <tr><td>Genre</td><td>Adventure, Role-Playing</td></tr>
             <!--<tr><td>Made with</td><td>RPG Maker, Paint S</td></tr>
             <tr><td>Tags</td><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
             <tr><td>Languages</td><td>English, Português</td></tr>
             <tr><td>Controls</td><td>Mouse, Keyboard, Touchscreen</td></tr>
+            <tr><td>Game file size</td><td>280.5 MB</td></tr><!---->
+            <tr><td>Developer<!--Author--></td><td>George Maxwell</td></tr>
+            <!--<tr><td>Publisher</td><td>George Maxwell</td></tr>-->
+            <!--<tr><td>Mature</td><td>12+</td></tr>-->
         </table>
 
         </section>
@@ -329,9 +348,18 @@ footer ul { list-style-type: none; }
         <!--<p>Página escrita por <a href=""> Chris Mills</a>.</p>-->
 
         <ul>
-            <li>Phone: <a href="tel:+13115552368">(19) 2425-8804</a></li>
-            <li>E-mail: <a href="mailto:jim@rock.com">atendimento@empresa.com.br</a></li>
+            <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
+            <li>E-mail: <a href="mailto:atendimento@empresa.com.br">atendimento@empresa.com.br</a></li>
         </ul>
+
+        <p>Follow us on:
+
+            <a href="">Facebook</a> | 
+            <a href="">Youtube</a> | 
+            <a href="">Twitter</a> | 
+            <a href="">Instagram</a>
+    
+        </p>
 
         <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p>-->
 
@@ -340,7 +368,6 @@ footer ul { list-style-type: none; }
     </address> 
 
 </footer>       
-
 
 </body>
 </html>
