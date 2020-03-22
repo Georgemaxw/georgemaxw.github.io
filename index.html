@@ -14,7 +14,7 @@
 
 <style>
 
-/*============ Defaults ============*/
+/*==================== Defaults ====================*/
 
 /* Redefinição Global do Espaço em Branco: */
 * { margin: 0; padding: 0; }
@@ -49,14 +49,14 @@ body, .Large { width: 100%; min-width: 375px; max-width: 1100px; /* Padrão: 960
 
 h1, h2, h3, h4, h5, h6 { text-align: center; }
 
-/*============= Header =============*/
+/*===================== Header =====================*/
 
 /*header { margin-top: 20px; }
 header img { border: 0px solid black; border-radius: 25px; }*/
 header img { border: 0px solid black; 
     border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }
 
-/*========= Navigation Bar =========*/
+/*================= Navigation Bar =================*/
 
 nav { margin-top: 10px; margin-bottom: 20px; }
 
@@ -81,7 +81,7 @@ nav li { display: inline; height: 65px; }
 
   .Nav-links a:hover { background-color: DarkBlue; }
 
-/*========= Double Columns =========*/
+/*================= Double Columns =================*/
 
 .Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; 
             max-width: 660px; text-align: justify;}
@@ -93,11 +93,11 @@ nav li { display: inline; height: 65px; }
 
 video { width: 375px; }
 
-/*========= Gallery =========*/
+/*================= Gallery =================*/
 
 .Gallery { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
 
-.Images-group {
+.Gallery .Images-group {
     margin: 0 auto;
     width: 100%;
     max-width: 1060px;
@@ -105,11 +105,25 @@ video { width: 375px; }
     white-space: nowrap; /* <- Não sei como funciona! */
 }
 
-.Gallery picture, .Gallery > img { display: inline-block; width: 94.3%;  }
+.Gallery picture { display: inline-block; width: 94.3%;  }
 
-.Gallery picture img { display: inline-block; width: 100%;  }
+.Gallery img { display: inline-block; width: 100%;  }
 
-/*============== Table =============*/
+/*======== Gallery - Not Responsible ========*/
+
+.Gallery-not-responsible { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
+
+.Gallery-not-responsible .Images-group {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1060px;
+    overflow-x: auto; /* <- Não sei como funciona! */
+    white-space: nowrap; /* <- Não sei como funciona! */
+}
+
+.Gallery-not-responsible img { display: inline-block; width: 94.3%;  }
+
+/*====================== Table =====================*/
 
 table { margin: 0 auto; }
 
@@ -120,13 +134,13 @@ td, th { padding: 10px 20px; }
 .table-margin-adjust-top { margin-top: -10px; }
 .table-margin-adjust-bottom { margin-bottom: 23px; }
 
-/*============ Download ============*/
+/*==================== Download ====================*/
 
 .Download { text-align: center; }
 
 .Download img { width: 195px; }
 
-/*============= footer =============*/
+/*===================== footer =====================*/
 
 footer { 
     width: 96.4%; border: 1px solid white; border-radius: 25px; margin: 0 auto;
@@ -203,6 +217,45 @@ footer ul { list-style-type: none; }
                 <img src="images/gallery-img-01-pc.png" alt="Car">
             </picture>
 
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-02-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-02-pc.png">
+                <img src="images/gallery-img-02-pc.png" alt="Car">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-03-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-03-pc.png">
+                <img src="images/gallery-img-03-pc.png" alt="Car">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-04-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-04-pc.png">
+                <img src="images/gallery-img-04-pc.png" alt="Car">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-05-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-05-pc.png">
+                <img src="images/gallery-img-05-pc.png" alt="Car">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-06-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-06-pc.png">
+                <img src="images/gallery-img-06-pc.png" alt="Car">
+            </picture>
+
+        </div>
+    
+    </section>
+
+    <section class="Gallery-not-responsible lb"> <h2 class="Hidden">Gallery</h2>
+
+        <div class="Images-group">
+
+            <img src="images/gallery-img-01-pc.png" alt="">
             <img src="images/gallery-img-02-pc.png" alt="">
             <img src="images/gallery-img-03-pc.png" alt="">
             <img src="images/gallery-img-04-pc.png" alt="">
