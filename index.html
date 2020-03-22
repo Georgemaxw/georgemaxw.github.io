@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 /*header { margin-top: 20px; }
 header img { border: 0px solid black; border-radius: 25px; }*/
 header img { border: 0px solid black; 
-    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }
+    /*border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;*/ }
 
 /*================= Navigation Bar =================*/
 
@@ -155,7 +155,14 @@ footer ul { list-style-type: none; }
 <body>
 
 <header class="lbs">
-    <h1 class="Hidden">Game Name</h1><img src="images/header-pc.png" alt="Logo" class="Large">
+    <h1 class="Hidden">Game Name</h1>
+    
+    <picture>
+        <source media="(max-width: 375px)" srcset="images/header-mobile.png">
+        <source media="(min-width: 376px)" srcset="images/header-pc.png">
+        <img src="images/header-pc.png" alt="Logo" class="Large">
+    </picture>
+
 </header>
 
 <nav>
@@ -187,7 +194,7 @@ footer ul { list-style-type: none; }
 
                 <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
             
-                <p>Ok!a</p>
+                <p>Ok!+</p>
 
             </div>
 
@@ -203,8 +210,6 @@ footer ul { list-style-type: none; }
 
     </section>  
 
-            
-
     <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
 
         <div class="Images-group">
@@ -214,44 +219,44 @@ footer ul { list-style-type: none; }
             <picture>
                 <source media="(max-width: 375px)" srcset="images/gallery-img-01-mobile.png">
                 <source media="(min-width: 376px)" srcset="images/gallery-img-01-pc.png">
-                <img src="images/gallery-img-01-pc.png" alt="Car">
+                <img src="images/gallery-img-01-pc.png" alt="">
             </picture>
 
             <picture>
                 <source media="(max-width: 375px)" srcset="images/gallery-img-02-mobile.png">
                 <source media="(min-width: 376px)" srcset="images/gallery-img-02-pc.png">
-                <img src="images/gallery-img-02-pc.png" alt="Car">
+                <img src="images/gallery-img-02-pc.png" alt="">
             </picture>
 
             <picture>
                 <source media="(max-width: 375px)" srcset="images/gallery-img-03-mobile.png">
                 <source media="(min-width: 376px)" srcset="images/gallery-img-03-pc.png">
-                <img src="images/gallery-img-03-pc.png" alt="Car">
+                <img src="images/gallery-img-03-pc.png" alt="">
             </picture>
 
             <picture>
                 <source media="(max-width: 375px)" srcset="images/gallery-img-04-mobile.png">
                 <source media="(min-width: 376px)" srcset="images/gallery-img-04-pc.png">
-                <img src="images/gallery-img-04-pc.png" alt="Car">
+                <img src="images/gallery-img-04-pc.png" alt="">
             </picture>
 
             <picture>
                 <source media="(max-width: 375px)" srcset="images/gallery-img-05-mobile.png">
                 <source media="(min-width: 376px)" srcset="images/gallery-img-05-pc.png">
-                <img src="images/gallery-img-05-pc.png" alt="Car">
+                <img src="images/gallery-img-05-pc.png" alt="">
             </picture>
 
             <picture>
                 <source media="(max-width: 375px)" srcset="images/gallery-img-06-mobile.png">
                 <source media="(min-width: 376px)" srcset="images/gallery-img-06-pc.png">
-                <img src="images/gallery-img-06-pc.png" alt="Car">
+                <img src="images/gallery-img-06-pc.png" alt="">
             </picture>
 
         </div>
     
     </section>
 
-    <section class="Gallery-not-responsible lb"> <h2 class="Hidden">Gallery</h2>
+    <!--<section class="Gallery-not-responsible lb"> <h2 class="Hidden">Gallery</h2>
 
         <div class="Images-group">
 
@@ -264,7 +269,7 @@ footer ul { list-style-type: none; }
 
         </div>
     
-    </section>
+    </section>-->
 
     <div class="Laterals-margins">
 
