@@ -114,23 +114,17 @@ video { width: 375px; }
 
 /*========= Gallery-type-2 =========*/
 
-.Gallery-type-2 { width: 96%; min-width: 375px;  margin: 0 auto 40px; }
+.Gallery-type-2 { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
 
 .Images-group {
     margin: 0 auto;
     width: 100%;
-    max-width: 1042px;
+    max-width: 1000px;
     overflow-x: auto; /* <- Não sei como funciona! */
     white-space: nowrap; /* <- Não sei como funciona! */
 }
 
-.Gallery-type-2:hover { 
-    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
-    padding-top: 40px; padding-bottom: 40px; 
-    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
-    background-color: rgb(243, 243, 243); }/**/
-
-.Gallery-type-2 img { display: inline-block; width: 96%;  }
+.Gallery-type-2 img { display: inline-block; width: 99%;  }
 
 /*============== Table =============*/
 
@@ -228,7 +222,7 @@ footer ul { list-style-type: none; }
 
                 <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
             
-                <p>Ok!2</p>
+                <p>Ok!3</p>
 
             </div>
 
@@ -260,8 +254,6 @@ footer ul { list-style-type: none; }
     <section class="Gallery-type-2 lb"> <h2 class="Hidden">Gallery</h2>
 
         <div class="Images-group">
-    
-            <a href="gallery-imgs.html">
 
                 <img src="images/gallery-img-01-pc.png" alt="">
                 <img src="images/gallery-img-02-pc.png" alt="">
@@ -269,8 +261,6 @@ footer ul { list-style-type: none; }
                 <img src="images/gallery-img-04-pc.png" alt="">
                 <img src="images/gallery-img-05-pc.png" alt="">
                 <img src="images/gallery-img-06-pc.png" alt="">
-
-            </a>
 
         </div>
     
@@ -358,4 +348,13 @@ Coisas que usei mas não chequei a estudar:
 Obs.: 1vmin é 1/100 da largura do lado do menor viewport. (Idem p/ vmax.)
 
 Obs.: 1vw é 1/100 da largura do viewport. (Idem p/ vh.)
+
+[CSS]:
+
+.Gallery-type-2:hover { 
+    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
+    padding-top: 40px; padding-bottom: 40px; 
+    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
+    background-color: rgb(243, 243, 243); }
+
 --> 
