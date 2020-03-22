@@ -18,9 +18,13 @@
 
 /* Redefinição Global do Espaço em Branco: */
 * { margin: 0; padding: 0; }
-h1 { margin: 26px 0; }
-h2 { margin: 24px 0; }
-p { margin: 19px 0; }
+h1 { margin: 1.34rem 0; }
+h2 { margin: 1.245rem 0; }
+h3 { margin: 1.17rem 0; }
+h4 { margin: 1.33rem 0; }
+h5 { margin: 1.386rem 0; }
+h6 { margin: 1.561rem 0; }
+p { margin: 0.95rem 0; }
 
 /* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
 html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
@@ -77,56 +81,10 @@ nav li { display: inline; height: 65px; }
 
   .Nav-links a:hover { background-color: DarkBlue; }
 
-/*============= Aside-type-1 ============*/
-
-.Aside-type-1 { height: 0px; }
-
-.Aside-type-1 .Aside-body { 
-    width: 250px; height: calc(40px * 8); margin-left: -289px;
-    background-color: blue; border-radius: 25px; }  
-
-.Aside-type-1 .Aside-body ul { list-style-type: none; }
-
-.Aside-type-1 .Aside-body a { 
-    display: block; text-align: center; 
-    color: white; text-decoration: none; }
-
-.Aside-type-1 .Aside-body li:first-child { border-top-right-radius: 25px; border-top-left-radius: 25px; }
-
-.Aside-type-1 .Aside-body li:last-child {  
-    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }/**/
-
-.Aside-type-1 .Aside-body li:hover { background-color: darkblue; }
-
-.Aside-type-1 span { display: block; width: 210px; padding: 8px 0px; 
-    border-bottom: 1px solid white; 
-    margin: 0 auto; }
-
-.Aside-type-1 li:last-child span { border-bottom: 0px solid white; }
-
-/*============= Aside-type-2 ============*/
-
-.Aside-type-2 { width: 0px; height: 0px; }
-
-.Aside-type-2 .Aside-body { 
-    width: 250px; height: calc(40px * 8); margin-left: 1040px;
-    background-color: blue; border-radius: 25px; }  
-
-.Aside-type-2 .Aside-body ul { list-style-type: none; }
-
-.Aside-type-2 .Aside-body a { display: block; padding: 8px; text-align: center; border-bottom: 1px solid white; }
-
-.Aside-type-2 .Aside-body a:first-child { border-top-right-radius: 25px; border-top-left-radius: 25px; }
-
-.Aside-type-2 .Aside-body a:last-child { border-bottom: 0px solid white; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }/**/
-
-.Aside-type-2 .Aside-body a:hover { background-color: darkblue; }
-
-.Aside-type-2 .Aside-body a { color: white; text-decoration: none; }
-
 /*========= Double Columns =========*/
 
-.Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; max-width: 660px; }
+.Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; 
+            max-width: 660px; text-align: justify;}
 
 .Column-L p:first-child { margin-top: 0px; } 
 .Column-L p:last-child { margin-bottom: 0px; }
@@ -135,17 +93,9 @@ nav li { display: inline; height: 65px; }
 
 video { width: 375px; }
 
-/*========= Gallery-type-1 =========*/
+/*========= Gallery =========*/
 
-.Gallery-type-1 div { width: 100%; max-width: 960px; margin: 0 auto; }
-
-.Gallery-type-1 a { display: inline-block; width: 100%; min-width: 375px; max-width: 477px; }
-
-.Gallery-type-1 img { display: inherit; width: inherit; min-width: inherit; max-width: inherit; }
-
-/*========= Gallery-type-2 =========*/
-
-.Gallery-type-2 { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
+.Gallery { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
 
 .Images-group {
     margin: 0 auto;
@@ -155,7 +105,9 @@ video { width: 375px; }
     white-space: nowrap; /* <- Não sei como funciona! */
 }
 
-.Gallery-type-2 img { display: inline-block; width: 94.3%;  }
+.Gallery img { display: inline-block; width: 94.3%;  }
+
+.Gallery source { display: inline-block; width: 94.3%;  }
 
 /*============== Table =============*/
 
@@ -207,45 +159,13 @@ footer ul { list-style-type: none; }
 
 <!-- <p> <noscript> Para usar este site, ative o JavaScript. </noscript> </p> --> 
 
-<!-- Aside-type-2 buga no mobile. -->
-
-<!--<aside class="Aside-type-1"> 
-    <div class="Aside-body">
-        <ul>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-            <li><a href=""><span>Link</span></a></li>
-        </ul>
-    </div>    
-</aside>-->
-
-<!--<aside class="Aside-type-2"> 
-    <div class="Aside-body">
-        <ul>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-            <a href=""><li>Link</li></a>
-        </ul>
-    </div>    
-</aside>-->
-
 <main>
 
     <section> <h2 class="Hidden">Presentation</h2>
 
         <div>
 
-            <div class="Laterals-margins Column-L lb" style="text-align: justify;">
+            <div class="Laterals-margins Column-L lb">
 
                 <p>Aqui fica a descrição do jogo.</p>
                 
@@ -253,7 +173,7 @@ footer ul { list-style-type: none; }
 
                 <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
             
-                <p>Ok!8</p>
+                <p>Ok!</p>
 
             </div>
 
@@ -269,29 +189,25 @@ footer ul { list-style-type: none; }
 
     </section>  
 
-    <!--<section class="Gallery-type-1 lb"> <h2 class="Hidden">Gallery</h2>
+            <picture>
+                <source media="(max-width: 375px)" srcset="images/gallery-img-01-mobile.png">
+                <source media="(min-width: 376px)" srcset="images/gallery-img-01-pc.png">
+                <img src="images/gallery-img-01-pc.png" alt="Car">
+            </picture>
 
-        <div>
-        <a href="gallery-imgs.html"><img src="images/gallery-img-01-pc-small.png" alt="Image" class="Line"></a>
-        <a href="images/gallery-img-02-pc.png"><img src="images/gallery-img-02-pc-small.png" alt="Image" class="Line"></a>
-        <a href="images/gallery-img-03-pc.png"><img src="images/gallery-img-03-pc-small.png" alt="Image" class="Line"></a>
-        <a href="images/gallery-img-04-pc.png"><img src="images/gallery-img-04-pc-small.png" alt="Image" class="Line"></a>
-        <a href="images/gallery-img-05-pc.png"><img src="images/gallery-img-05-pc-small.png" alt="Image" class="Line"></a>
-        <a href="images/gallery-img-06-pc.png"><img src="images/gallery-img-06-pc-small.png" alt="Image" class="Line"></a>
-        </div>
-
-    </section>-->
-
-    <section class="Gallery-type-2 lb"> <h2 class="Hidden">Gallery</h2>
+    <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
 
         <div class="Images-group">
 
-                <img src="images/gallery-img-01-pc.png" alt="">
-                <img src="images/gallery-img-02-pc.png" alt="">
-                <img src="images/gallery-img-03-pc.png" alt="">
-                <img src="images/gallery-img-04-pc.png" alt="">
-                <img src="images/gallery-img-05-pc.png" alt="">
-                <img src="images/gallery-img-06-pc.png" alt="">
+            <!--<img src="images/gallery-img-01-pc.png" alt="">-->
+
+
+
+            <img src="images/gallery-img-02-pc.png" alt="">
+            <img src="images/gallery-img-03-pc.png" alt="">
+            <img src="images/gallery-img-04-pc.png" alt="">
+            <img src="images/gallery-img-05-pc.png" alt="">
+            <img src="images/gallery-img-06-pc.png" alt="">
 
         </div>
     
@@ -369,12 +285,13 @@ footer ul { list-style-type: none; }
 </html>
 
 <!-- 
+
 Coisas que usei mas não chequei a estudar: 
 
 - Valor justify da propriedade text-align;
 - Propriedade overflow-x;
 - Propriedade white-space;
-- Unidade vw;
+- Unidades vw e rem;
 
 Obs.: 1vmin é 1/100 da largura do lado do menor viewport. (Idem p/ vmax.)
 
@@ -382,7 +299,7 @@ Obs.: 1vw é 1/100 da largura do viewport. (Idem p/ vh.)
 
 [CSS]:
 
-.Gallery-type-2:hover { 
+.Gallery:hover { 
     /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
     padding-top: 40px; padding-bottom: 40px; 
     border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
