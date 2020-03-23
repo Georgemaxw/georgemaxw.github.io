@@ -55,10 +55,9 @@ a { color: blue; }
 
 /*===================== Header =====================*/
 
-/*header { margin-top: 20px; }
-header img { border: 0px solid black; border-radius: 25px; }*/
-header img { border: 0px solid black; 
-    /*border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;*/ }
+/*header img { 
+    border: 0px solid black; 
+    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;*/ }
 
 /*================= Navigation Bar =================*/
 
@@ -162,17 +161,21 @@ footer ul { list-style-type: none; }
 
     <h1 class="Hidden">Game Name</h1>
     
-    <picture>
-        <source media="(max-width: 375px)" srcset="images/header-mobile.png">
-        <source media="(min-width: 376px)" srcset="images/header-pc.png">
-        <img src="images/header-pc.png" alt="Logo" class="Large">
-    </picture>
+    <a href="index.html">
+
+        <picture>
+            <source media="(max-width: 375px)" srcset="images/header-mobile.png">
+            <source media="(min-width: 376px)" srcset="images/header-pc.png">
+            <img src="images/header-pc.png" alt="Logo" class="Large">
+        </picture>
+
+    </a>
 
     <!--<a href="">Language</a>-->
 
 </header>
 
-<nav>
+<nav class="lbs">
 
     <ul class="Nav-links">
         <!--<li><a href="">Home</a></li>-->
@@ -320,7 +323,7 @@ footer ul { list-style-type: none; }
         <a href="#"><img src="images/download-app-store.png" alt=""></a>
         <a href="#"><img src="images/download-google-play.png" alt=""></a>
         <a href="#"><img src="images/download-steam.png" alt=""></a>
-        <!--<a href="#"><img src="images/download-amazon.png" alt=""></a>-->
+        <a href="#"><img src="images/download-amazon.png" alt=""></a><!---->
         </div>
 
         </section>
