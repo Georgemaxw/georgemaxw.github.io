@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link href="styles/defaults.css" rel="stylesheet">
+<!--<link href="styles/defaults.css" rel="stylesheet">-->
 <title>My Site</title>
 
 <meta name="author" content="George Maxwell">
@@ -25,6 +25,7 @@ h4 { margin: 1.33rem 0; }
 h5 { margin: 1.386rem 0; }
 h6 { margin: 1.561rem 0; }
 p { margin: 0.95rem 0; }
+ul { margin: 1rem 0px; padding-left: 2.5rem; }
 
 /* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
 html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
@@ -51,19 +52,21 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 a { color: blue; }
 
+
+
 .list-inline, .list-inline li { display: inline; }
 
 /*===================== Header =====================*/
 
 /*header img { 
     border: 0px solid black; 
-    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;*/ }
+    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }*/
 
 /*================= Navigation Bar =================*/
 
 nav { max-width: calc(1100px - 40px); margin: 10px auto 20px; }
 
-nav ul { list-style-type: none; text-align: center; }
+nav ul { list-style-type: none; text-align: center; margin: 0px; padding: 0px; }
 
 nav li { display: inline; height: 65px; }
 
@@ -136,6 +139,14 @@ td, th { padding: 10px 20px; }
 
 .table-margin-adjust-top { margin-top: -10px; }
 .table-margin-adjust-bottom { margin-bottom: 23px; }
+
+table ul { padding-left: 0px; margin-top: 0px; margin-bottom: 0px; }
+
+table li { margin-bottom: 5px; }
+table li:last-child { margin-bottom: 0px; }
+
+td:first-child { padding-left: 0px; }
+td:last-child { padding-right: 0px; }
 
 /*==================== Download ====================*/
 
@@ -297,22 +308,49 @@ footer ul { list-style-type: none; }
 
         <section> <h2>More information</h2>
 
-        <table class="table-margin-adjust-top table-margin-adjust-bottom">
-            <!--<tr><td>Status</td><td>Released</td></tr>-->
-            <tr><td>Release date</td><td><time datetime="2057-01-26">26 January 2057</time></td></tr>
-            <tr><td>Platforms</td><td>Windows, MacOS, Linux, Android, iOS</td></tr>
-            <tr><td>Players</td><td>Up to 4 players</td></tr>
-            <tr><td>Genre</td><td>Adventure, Role-Playing</td></tr>
-            <!--<tr><td>Made with</td><td>RPG Maker, Paint S</td></tr>
-            <tr><td>Tags</td><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
-            <tr><td>Languages</td><td>English, Português</td></tr>
-            <tr><td>Controls</td><td>Mouse, Keyboard, Touchscreen</td></tr>
-            <tr><td>Game file size</td><td>280.5 MB</td></tr><!---->
-            <tr><td>Developer<!--Author--></td><td>George Maxwell</td></tr>
-            <!--<tr><td>Publisher</td><td>George Maxwell</td></tr>-->
-            <!--<tr><td>Mature</td><td>12+</td></tr>-->
-        </table>
+            <table class="table-margin-adjust-top table-margin-adjust-bottom">
+                <!--<tr><td>Status</td><td>Released</td></tr>-->
+                <tr><td>Release date</td><td><time datetime="2057-01-26">26 January 2057</time></td></tr>
+                <tr><td>Platforms</td><td>Windows, MacOS, Linux, Android, iOS</td></tr>
+                <tr><td>Players</td><td>Up to 4 players</td></tr>
+                <tr><td>Genre</td><td>Adventure, Role-Playing</td></tr>
+                <!--<tr><td>Made with</td><td>RPG Maker, Paint S</td></tr>
+                <tr><td>Tags</td><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
+                <tr><td>Languages</td><td>English, Português</td></tr>
+                <tr><td>Controls</td><td>Mouse, Keyboard, Touchscreen</td></tr>
+                <tr><td>File size</td><td>280.5 MB</td></tr><!---->
+                <tr><td>Developer<!--Author--></td><td>George Maxwell</td></tr>
+                <!--<tr><td>Publisher</td><td>George Maxwell</td></tr>-->
+                <!--<tr><td>Mature</td><td>12+</td></tr>-->
+            </table>
 
+        </section>
+
+        <hr>
+
+        <section class="lb"> <h2>Gameplay System Requirements</h2>
+
+            <table class="table-margin-adjust-top table-margin-adjust-bottom">
+
+                <tr><td>System Requirements</td><td>
+                    <ul>
+                        <li>Environments which support HTML5 Canvas and Web Audio API;</li>
+                        <li>iOS 8+; <!--iOS 8 or higher--></li>
+                        <li>Android 4.4+. <!--Android 4.4 or higher--></li>
+                    </ul>
+                </td></tr>
+
+                <tr><td>Recommended Environments</td><td>
+                    <ul>
+                        <li>Windows, Android: Google Chrome;</li>
+                        <li>Mac OS X, iOS: Safari.</li>
+                    </ul>
+                </td></tr>
+
+            </table>
+
+            <p>* Please use Wi-Fi when playing using a browser on a smartphone.</p>
+            <p>* A browser that supports WebGL is recommended for gameplay.</p>
         </section>
 
         <hr>
