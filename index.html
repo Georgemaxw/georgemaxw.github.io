@@ -5,7 +5,7 @@
 
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <!--<link href="styles/defaults.css" rel="stylesheet">-->
-<title>My Site</title>
+<title>Game Site</title>
 
 <meta name="author" content="George Maxwell">
 <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
@@ -17,7 +17,8 @@
 /*==================== Defaults ====================*/
 
 /* Redefinição Global do Espaço em Branco: */
-* { margin: 0; padding: 0; }
+* { margin: 0; padding: 0; } /* <- Talvez prejudique a performance. */
+body { margin: 0.5rem; } 
 h1 { margin: 1.34rem 0; }
 h2 { margin: 1.245rem 0; }
 h3 { margin: 1.17rem 0; }
@@ -29,6 +30,12 @@ ul { margin: 1rem 0px; padding-left: 2.5rem; }
 
 /* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
 html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+
+/* Padronizando os Elementos de Formulário */
+button, input, select, textarea { font-family : inherit; font-size : 100%; box-sizing: border-box; } 
+textarea { overflow: auto; }
+
+/*==================================================*/
 
 html { font-size: 20px; }
 
@@ -83,9 +90,21 @@ nav li { display: inline; height: 65px; }
   margin-bottom: 5px; 
   text-align: center;
   text-decoration: none;
- }
 
-  .Nav-links a:hover { background-color: DeepSkyBlue; }
+
+
+
+
+background: linear-gradient(to bottom, #61c0ff 0%,#4fb0ff 10%,#2d96ff 25%,#3396ff 37%,#3999ff 50%,#1188ff 51%,#4dc4ff 83%,#67e8ff 100%);
+background: linear-gradient(to bottom, rgb(97,192,255) 0%,rgb(79,176,255) 10%,rgb(45,150,255) 25%,rgb(51,150,255) 37%,rgb(57,153,255) 50%,rgb(17,136,255) 51%,rgb(77,196,255) 83%,rgb(103,232,255) 100%); 
+background: linear-gradient(to bottom, hsl(204,100%,69%) 0%,hsl(207,100%,65%) 10%,hsl(210,100%,59%) 25%,hsl(211,100%,60%) 37%,hsl(211,100%,61%) 50%,hsl(210,100%,53%) 51%,hsl(200,100%,65%) 83%,hsl(189,100%,70%) 100%);
+}
+
+  .Nav-links a:hover { background-color: DeepSkyBlue;
+    background: linear-gradient(to bottom, #91e0ff 0%,#83d6ff 10%,#6dc7ff 25%,#71c6ff 37%,#75c8ff 50%,#59bfff 51%,#83e4ff 83%,#95fbff 100%);
+    background: linear-gradient(to bottom, rgb(145,224,255) 0%,rgb(131,214,255) 10%,rgb(109,199,255) 25%,rgb(113,198,255) 37%,rgb(117,200,255) 50%,rgb(89,191,255) 51%,rgb(131,228,255) 83%,rgb(149,251,255) 100%);
+    background: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(193,100%,76%) 83%,hsl(182,100%,79%) 100%);
+    }
 
 /*================= Double Columns =================*/
 
@@ -99,7 +118,7 @@ nav li { display: inline; height: 65px; }
 
 video { width: 375px; }
 
-/*================= Gallery =================*/
+/*===================== Gallery ====================*/
 
 .Gallery { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
 
@@ -115,7 +134,7 @@ video { width: 375px; }
 
 .Gallery img { display: inline-block; width: 100%;  }
 
-/*======== Gallery - Not Responsible ========*/
+/*============ Gallery - Not Responsible ===========*/
 
 .Gallery-not-responsible { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
 
@@ -131,7 +150,7 @@ video { width: 375px; }
 
 /*====================== Table =====================*/
 
-table { margin: 0 auto; }
+table { margin: 0 auto; border-collapse: collapse; }
 
 td:first-child { color: blue;}
 
