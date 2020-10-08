@@ -1,472 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8">
-
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<!--<link href="styles/defaults.css" rel="stylesheet">-->
-<title>Game Site</title>
-
-<meta name="author" content="George Maxwell">
-<meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
-
-<meta name="viewport" content="width=375px"> 
-
-<style>
-
-/*==================== Defaults ====================*/
-
-/* Redefinição Global do Espaço em Branco: */
-* { margin: 0; padding: 0; } /* <- Talvez prejudique a performance. */
-body { margin: 0.5rem; } 
-h1 { margin: 1.34rem 0; }
-h2 { margin: 1.245rem 0; }
-h3 { margin: 1.17rem 0; }
-h4 { margin: 1.33rem 0; }
-h5 { margin: 1.386rem 0; }
-h6 { margin: 1.561rem 0; }
-p { margin: 0.95rem 0; }
-ul { margin: 1rem 0px; padding-left: 2.5rem; }
-
-/* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
-html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
-
-/* Padronizando os Elementos de Formulário */
-button, input, select, textarea { font-family : inherit; font-size : 100%; box-sizing: border-box; } 
-textarea { overflow: auto; }
-
-/*==================================================*/
-
-html { font-size: 20px; }
-
-body { margin: 0 auto; padding: 0px; }
-
-body, .Large { width: 100%; min-width: 375px; max-width: 1100px; /* Padrão: 960-1300px */ }
-
-.Hidden { display: none; }
-
-.Laterals-margins { margin-right: 20px; margin-left: 20px; }
-
-.lb /* Line break */ { margin-bottom: 40px; }
-
-.lbs /* Line break - small */ { margin-bottom: 20px; }
-
-.lb-top { margin-top: 40px; }
-
-.Line { border: 1px solid black; }
-
-h1, h2, h3, h4, h5, h6 { text-align: center; }
-
-.Center { text-align: center; }
-
-a { color: blue; }
-
-.list-inline, .list-inline li { display: inline; }
-
-/*===================== Header =====================*/
-
-/*header img { 
-    border: 0px solid black; 
-    border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; }*/
-
-/*================= Navigation Bar =================*/
-
-nav { max-width: calc(1100px - 40px); margin: 10px auto 20px; }
-
-nav ul { list-style-type: none; text-align: center; margin: 0px; padding: 0px; }
-
-nav li { display: inline; height: 65px; }
-
-.Nav-links a {
-  color: white;
-  background-color: blue;
-
-  display: inline-block;
-  width: calc(94% / 6);
-  min-width: 112px;
-  padding: 10px 0px;
-  border: 3px double white;
-  border-radius: 25px;
-  margin-bottom: 5px; 
-  text-align: center;
-  text-decoration: none;
-
-
-
-
-
-background: linear-gradient(to bottom, #61c0ff 0%,#4fb0ff 10%,#2d96ff 25%,#3396ff 37%,#3999ff 50%,#1188ff 51%,#4dc4ff 83%,#67e8ff 100%);
-background: linear-gradient(to bottom, rgb(97,192,255) 0%,rgb(79,176,255) 10%,rgb(45,150,255) 25%,rgb(51,150,255) 37%,rgb(57,153,255) 50%,rgb(17,136,255) 51%,rgb(77,196,255) 83%,rgb(103,232,255) 100%); 
-background: linear-gradient(to bottom, hsl(204,100%,69%) 0%,hsl(207,100%,65%) 10%,hsl(210,100%,59%) 25%,hsl(211,100%,60%) 37%,hsl(211,100%,61%) 50%,hsl(210,100%,53%) 51%,hsl(200,100%,65%) 83%,hsl(189,100%,70%) 100%);
-
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#61bdff+0,55b0ff+10,419dff+25,459cff+37,499eff+50,2f94ff+51,55c3ff+83,65e5ff+100 */
-background: #61bdff; /* Old browsers */
-background: -moz-linear-gradient(top,  hsl(205,100%,69%) 0%, hsl(208,100%,67%) 10%, hsl(211,100%,63%) 25%, hsl(212,100%,64%) 37%, hsl(212,100%,64%) 50%, hsl(211,100%,59%) 51%, hsl(201,100%,67%) 83%, hsl(190,100%,70%) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  hsl(205,100%,69%) 0%,hsl(208,100%,67%) 10%,hsl(211,100%,63%) 25%,hsl(212,100%,64%) 37%,hsl(212,100%,64%) 50%,hsl(211,100%,59%) 51%,hsl(201,100%,67%) 83%,hsl(190,100%,70%) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  hsl(205,100%,69%) 0%,hsl(208,100%,67%) 10%,hsl(211,100%,63%) 25%,hsl(212,100%,64%) 37%,hsl(212,100%,64%) 50%,hsl(211,100%,59%) 51%,hsl(201,100%,67%) 83%,hsl(190,100%,70%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61bdff', endColorstr='#65e5ff',GradientType=0 ); /* IE6-9 */
-
-
-background: linear-gradient(to bottom, hsl(205,100%,62%) 0%,hsl(208,100%,60%) 10%,hsl(211,100%,58%) 25%,hsl(212,100%,58%) 37%,hsl(212,100%,59%) 50%,hsl(211,100%,55%) 51%,hsl(201,100%,60%) 83%,hsl(190,100%,62%) 100%);
-}
-
-.Nav-links a:hover { background-color: DeepSkyBlue;
-    background: linear-gradient(to bottom, #91e0ff 0%,#83d6ff 10%,#6dc7ff 25%,#71c6ff 37%,#75c8ff 50%,#59bfff 51%,#83e4ff 83%,#95fbff 100%);
-    background: linear-gradient(to bottom, rgb(145,224,255) 0%,rgb(131,214,255) 10%,rgb(109,199,255) 25%,rgb(113,198,255) 37%,rgb(117,200,255) 50%,rgb(89,191,255) 51%,rgb(131,228,255) 83%,rgb(149,251,255) 100%);
-    background: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(193,100%,76%) 83%,hsl(182,100%,79%) 100%);
-    
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#91e0ff+0,83d6ff+10,6dc7ff+25,71c6ff+37,75c8ff+50,59bfff+51,83e4ff+83,95fbff+100 */
-background: #91e0ff; /* Old browsers */
-background: -moz-linear-gradient(top,  hsl(197,100%,78%) 0%, hsl(200,100%,76%) 10%, hsl(203,100%,71%) 25%, hsl(204,100%,72%) 37%, hsl(204,100%,73%) 50%, hsl(203,100%,67%) 51%, hsl(193,100%,76%) 83%, hsl(182,100%,79%) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(193,100%,76%) 83%,hsl(182,100%,79%) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(193,100%,76%) 83%,hsl(182,100%,79%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91e0ff', endColorstr='#95fbff',GradientType=0 ); /* IE6-9 */
-
-
-}
-
-/*================= Double Columns =================*/
-
-.Column-L { display: inline-block; width: calc(100% - 375px - 60px); min-width: 335px; 
-            max-width: 660px; text-align: justify;}
-
-.Column-L p:first-child { margin-top: 0px; } 
-.Column-L p:last-child { margin-bottom: 0px; }
-
-/* .Column-L p::after { content: " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - . .- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ..- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ." } */
-
-video { width: 375px; }
-
-/*===================== Gallery ====================*/
-
-.Gallery { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
-
-.Gallery .Images-group {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1060px;
-    overflow-x: auto; /* <- Não sei como funciona! */
-    white-space: nowrap; /* <- Não sei como funciona! */
-}
-
-.Gallery picture { display: inline-block; width: 94.3%;  }
-
-.Gallery img { display: inline-block; width: 100%;  }
-
-/*============ Gallery - Not Responsible ===========*/
-
-.Gallery-not-responsible { width: 100%; min-width: 375px;  margin: 0 auto 40px; }
-
-.Gallery-not-responsible .Images-group {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1060px;
-    overflow-x: auto; /* <- Não sei como funciona! */
-    white-space: nowrap; /* <- Não sei como funciona! */
-}
-
-.Gallery-not-responsible img { display: inline-block; width: 94.3%;  }
-
-/*====================== Table =====================*/
-
-table { margin: 0 auto; border-collapse: collapse; }
-
-td:first-child { color: blue;}
-
-td, th { padding: 10px 20px; }
-
-.table-margin-adjust-top { margin-top: -10px; }
-.table-margin-adjust-bottom { margin-bottom: 23px; }
-
-table ul { padding-left: 0px; margin-top: 0px; margin-bottom: 0px; }
-
-table li { margin-bottom: 5px; }
-table li:last-child { margin-bottom: 0px; }
-
-td:first-child { padding-left: 0px; }
-td:last-child { padding-right: 0px; }
-
-/*==================== Download ====================*/
-
-.Download { text-align: center; }
-
-.Download img { width: 195px; }
-
-/*===================== footer =====================*/
-
-footer { 
-    width: 96.4%; border: 1px solid white; border-radius: 25px; margin: 0 auto;
-    background-color: rgb(240, 240, 240); 
-    text-align: center; font-size: 0.9rem; }
-
-footer ul { list-style-type: none; padding-left: 0px; }
-
-</style>
-
+    <title>Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="George Maxwell">
+    <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href='styles/normalize.css' rel='stylesheet'>
+    <link href='styles/defaults.css' rel='stylesheet'>
+    <!--<link href='styles/identity.css' rel='stylesheet'>-->
 </head>
-<body>
+<body><!---->
 
-<header class="lbs">
-
-    <h1 class="Hidden">Game Name</h1>
+    <h1>Título 1</h1>
     
-    <a href="index.html">
+    <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>.</p>
 
-        <picture>
-            <source media="(max-width: 375px)" srcset="images/header-mobile.png">
-            <source media="(min-width: 376px)" srcset="images/header-pc.png">
-            <img src="images/header-pc.png" alt="Logo" class="Large">
-        </picture>
-
-    </a>
-
-    <!--<a href="">Language</a>-->
-
-</header>
-
-<nav class="lbs">
-
-    <ul class="Nav-links">
-        <!--<li><a href="">Home</a></li>-->
-        <li><a href="">Gameplay</a></li>
-        <!--<li><a href="">News</a></li>-->
-        <li><a href="">Gallery</a></li>
-        <li><a href="">+Info</a></li>
-        <li><a href="">Download</a></li>
-        <li><a href="">Comments</a></li>
-        <!--<li><a href="">Forum</a></li>-->
-        <!--<li><a href="">Community</a></li>-->
-        <!--<li><a href="">Store</a></li>-->
-        <!--<li><a href="">About</a></li>-->
-        <!--<li><a href="">Team</a></li>-->
-        <!--<li><a href="">Jobs</a></li>-->
-        <li><a href="">Contact</a></li>
-        <!--<li><a href="">Login</a></li>-->
-        <!--<li><a href="">Help</a></li>-->
+    <ul>
+        <li>Item da lista</li>
+        <li>Item da lista</li>
+        <li>Item da lista</li>
     </ul>
 
-</nav>
+    <p>Classes:  <span class="underline">underline</span>,  <span class="bold">bold</span>, e  <span class="italic">italic</span>.</p>
 
-<!-- <p> <noscript> Para usar este site, ative o JavaScript. </noscript> </p> --> 
+    <p class="font-monospace">Classe 'font-monospace'. Texto genérico de demonstração.</p>
 
-<main>
+    <h2>Título 2</h2>
 
-    <section> <h2 class="Hidden">Presentation</h2>
+    <ol>
+        <li>Item da lista</li>
+        <li>Item da lista</li>
+        <li>Item da lista</li>
+    </ol>
 
-        <div>
+    <dl>
+        <dt>Termo de descrição 1</dt>
+        <dd>Definição de descrição 1</dd>
 
-            <div class="Laterals-margins Column-L lb">
+        <dt>Termo de descrição 2</dt>
+        <dd>Definição de descrição 2-1</dd>
+        <dd>Definição de descrição 2-2</dd>
+    </dl>
 
-                <p>Aqui fica a descrição do jogo.</p>
-                
-                <p>A descrição precisa ser grande o suficiente para camuflar o bug que acontece quando a altura do texto é menor que a do vídeo. (O texto inicia de baixo para cima.)</p>
+    <p>Elemento &lt;abbr>: Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
 
-                <p>Nota: O viewport de 375px e tamanho da fonte de texto de 20px da fonte '-webkit-standard' ficou o mínimo aceitável pro iPhone 8.</p> 
-            
-                <p>Ok!2</p>
+    <p>Elemento &lt;dfn>: <dfn>Firefox</dfn> é o navegador criado pela Fundação Mozilla.</p>
 
-            </div>
+    <pre>Elemento   &lt;pre>. Texto genérico de demonstração.</pre>
 
-            <video controls preload="" poster="images/video-poster.png" loop class="Line">
-                <source src="videos/trailer.mp4" type="video/mp4">
-                <!--<source src="videos/trailer.webm" type="video/webm">
-                
-                <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
-                <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
-            </video>
-
-        </div>
-
-    </section>  
-
-    <section class="Gallery lb"> <h2 class="Hidden">Gallery</h2>
-
-        <div class="Images-group">
-
-            <!--<img src="images/gallery-img-01-pc.png" alt="">-->
-
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-01-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-01-pc.png">
-                <img src="images/gallery-img-01-pc.png" alt="">
-            </picture>
-
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-02-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-02-pc.png">
-                <img src="images/gallery-img-02-pc.png" alt="">
-            </picture>
-
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-03-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-03-pc.png">
-                <img src="images/gallery-img-03-pc.png" alt="">
-            </picture>
-
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-04-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-04-pc.png">
-                <img src="images/gallery-img-04-pc.png" alt="">
-            </picture>
-
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-05-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-05-pc.png">
-                <img src="images/gallery-img-05-pc.png" alt="">
-            </picture>
-
-            <picture>
-                <source media="(max-width: 375px)" srcset="images/gallery-img-06-mobile.png">
-                <source media="(min-width: 376px)" srcset="images/gallery-img-06-pc.png">
-                <img src="images/gallery-img-06-pc.png" alt="">
-            </picture>
-
-        </div>
+    <p>Códigos de PC: <var>x</var>, <kbd>Ctrl</kbd>, <samp>out</samp>, <code>if(x == 1){ ... }</code></p>
     
-    </section>
+    <address class="lm"><a href="mailto:jim@rock.com">jim@rock.com</a></address>
 
-    <!--<section class="Gallery-not-responsible lb"> <h2 class="Hidden">Gallery</h2>
-
-        <div class="Images-group">
-
-            <img src="images/gallery-img-01-pc.png" alt="">
-            <img src="images/gallery-img-02-pc.png" alt="">
-            <img src="images/gallery-img-03-pc.png" alt="">
-            <img src="images/gallery-img-04-pc.png" alt="">
-            <img src="images/gallery-img-05-pc.png" alt="">
-            <img src="images/gallery-img-06-pc.png" alt="">
-
-        </div>
+    <hr>
     
-    </section>-->
+    <p>
+        Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/"><cite>home da MDN</cite></a> e veja:
+    </p>
 
-    <div class="Laterals-margins">
-
-        <hr>
-
-        <section> <h2>More information</h2>
-
-            <table class="table-margin-adjust-top table-margin-adjust-bottom">
-                <!--<tr><td>Status</td><td>Released</td></tr>-->
-                <tr><td>Release date</td><td><time datetime="2057-01-26">26 January 2057</time></td></tr>
-                <tr><td>Platforms</td><td>Windows, MacOS, Linux, Android, iOS</td></tr>
-                <tr><td>Players</td><td>Up to 4 players</td></tr>
-                <tr><td>Genre</td><td>Adventure, Role-Playing</td></tr>
-                <!--<tr><td>Made with</td><td>RPG Maker, Paint S</td></tr>
-                <tr><td>Tags</td><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
-                <tr><td>Languages</td><td>English, Português</td></tr>
-                <tr><td>Controls</td><td>Mouse, Keyboard, Touchscreen</td></tr>
-                <tr><td>File size</td><td>280.5 MB</td></tr><!---->
-                <tr><td>Developer<!--Author--></td><td>George Maxwell</td></tr>
-                <!--<tr><td>Publisher</td><td>George Maxwell</td></tr>-->
-                <!--<tr><td>Mature</td><td>12+</td></tr>-->
-            </table>
-
-        </section>
-
-        <hr>
-
-        <section class="lb"> <h2>Gameplay System Requirements</h2>
-
-            <table class="table-margin-adjust-top table-margin-adjust-bottom">
-
-                <tr><td>System Requirements</td><td>
-                    <ul>
-                        <li>Environments which support HTML5 Canvas and Web Audio API;</li>
-                        <li>iOS 8+; <!--iOS 8 or higher--></li>
-                        <li>Android 4.4+. <!--Android 4.4 or higher--></li>
-                    </ul>
-                </td></tr>
-
-                <tr><td>Recommended Environments</td><td>
-                    <ul>
-                        <li>Windows, Android: Google Chrome;</li>
-                        <li>Mac OS X, iOS: Safari.</li>
-                    </ul>
-                </td></tr>
-
-            </table>
-
-            <p class="Center">* Please use Wi-Fi when playing using a browser on a smartphone.</p>
-            <p class="Center">* A browser that supports WebGL is recommended for gameplay.</p>
-        </section>
-
-        <hr>
-
-        <section class="lb"> <h2>Download</h2>
-
-        <div class="Download lb">
-        <a href="#"><img src="images/download-app-store.png" alt=""></a>
-        <a href="#"><img src="images/download-google-play.png" alt=""></a>
-        <a href="#"><img src="images/download-steam.png" alt=""></a>
-        <a href="#"><img src="images/download-amazon.png" alt=""></a><!---->
-        </div>
-
-        </section>
-
-        <hr>
-
-        <section class="Laterals-margins lb"> <h2>Comments</h2>
-
-        <p>Log in with itch.io to leave a comment.</p>
-
-        <p>...</p>  
-
-        </section>
-
-    </div>
-
-</main>
-
-<footer>
-
-    <address>
-
-        <p>Contact the author of this page:</p>
-        
-        <!--<p>Página escrita por <a href=""> Chris Mills</a>.</p>-->
-
-        <ul>
-            <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
-            <li>E-mail: <a href="mailto:atendimento@empresa.com.br">atendimento@empresa.com.br</a></li>
-        </ul>
-
-        <p>Follow us on:</p>
-
-            <ul class="list-inline">
-                <li><a href="">Facebook</a></li> | 
-                <li><a href="">Youtube</a></li> | 
-                <li><a href="">Twitter</a></li> | 
-                <li><a href="">Instagram</a></li>
-            </ul>
-
-        <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p>-->
-
-        <p>©Copyright 2750 by nobody. All rights reversed.</p>
-
-    </address> 
-
-</footer>       
+    <blockquote cite="https://developer.mozilla.org/pt-BR/">
+        <p>Receba as novidades da MDN no seu e-mail.</p>
+    </blockquote>
 
 </body>
 </html>
 
 <!-- 
 
-Coisas que usei mas não chequei a estudar: 
+    Emmets: Element#ID_$@I.Class_1.Class_2[Atrib_1=... Atrib_2]{Content $}*N 
+    
+    hsla(0, 100%, 50%, 0.)
+    
+    Referências De Entidade de Caracteres: 
+    Espaço: &nbsp; | <: &lt;
+    
+    Fontes Seguras da Web: 
+    font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
+    
+    ABCDE FGHIJ KLMNO PQRST UVWXYZ  Texto genérico de demonstração.  
+    
+    Configuração Do Aplicativo Textastic:
+    Font: Menlo; Font Size: 11 pt 
 
-- Valor justify da propriedade text-align;
-- Propriedade overflow-x;
-- Propriedade white-space;
-- Unidades vw e rem;
-
-Obs.: 1vmin é 1/100 da largura do lado do menor viewport. (Idem p/ vmax.)
-
-Obs.: 1vw é 1/100 da largura do viewport. (Idem p/ vh.)
-
-[CSS]:
-
-.Gallery:hover { 
+    .Gallery:hover { 
     /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
     padding-top: 40px; padding-bottom: 40px; 
     border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;

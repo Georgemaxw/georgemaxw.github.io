@@ -1,30 +1,140 @@
-/*============ Defaults ============*/
+/* gmes-defaults.css */
+/*  
+──────────────────────────────────────────────────────
+Modelo De Caixa Alternativo Global 
+──────────────────────────────────────────────────────*/
 
-/* Redefinição Global do Espaço em Branco: */
-* { margin: 0; padding: 0; }
-h1 { margin: 26px 0; }
-h2 { margin: 24px 0; }
-p { margin: 19px 0; }
+html {
+    box-sizing: border-box;
+}
 
-/* Definindo o modelo de caixa alternativo p/ todos os elementos: */ 
-html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+      
+/*  
+──────────────────────────────────────────────────────
+Textos
+──────────────────────────────────────────────────────*/
+      
+html {
+    font-size: 1px;
+}
 
-html { font-size: 20px; }
+html, var, kbd, samp, code {
+    font-family: 'Times New Roman', Times, Georgia, serif;
+}
 
-body { margin: 0 auto; padding: 0px; }
+* {
+    font-size: 16rem;
+}
 
-body, .Large { width: 100%; min-width: 375px; max-width: 1100px; /* Padrão: 960-1300px */ }
+a { 
+    color: blue; 
+} 
 
-.Hidden { display: none; }
+h1, h2, h3, h4, h5, h6 { 
+    margin-top: 22rem;
+    margin-bottom: 22rem;
+    font-size: 32rem;
+    text-align: center; 
+    text-transform: capitalize;
+}
+      
+p {
+    margin: 16rem;
+    text-align: justify;
+    text-indent: 6rem; /* Sem justificar, usar: 4px */
+}
 
-.Laterals-margins { margin-right: 20px; margin-left: 20px; }
+ul, ol {
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+    margin-left: 32rem;
+    margin-right: 16rem;
+}
 
-.lb /* Line break */ { margin-bottom: 40px; }
+dl {
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+    margin-left: 16rem;
+    margin-right: 16rem;
+}
 
-.lbs /* Line break - small */ { margin-bottom: 20px; }
+dd {
+    margin-left: 32rem;
+}
 
-.lb-top { margin-top: 40px; }
+strong, b, em, i {
+    font-weight: normal; 
+    font-style: normal;
+    text-decoration: underline;
+}
 
-.Line { border: 1px solid black; }
+abbr {
+    text-decoration: none;
+}
 
-h1, h2, h3, h4, h5, h6 { text-align: center; }
+dfn, var, address {
+    font-style: normal;
+}
+
+pre {
+    margin-left: 16rem;
+    margin-right: 16rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold { 
+    font-weight: bold; 
+}
+
+.italic {
+    font-style: italic;
+}
+
+.font-monospace {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*  
+──────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────*/
+
+body {
+    min-width: 320px;
+    margin: auto;
+}
+
+hr {
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+    margin-left: 16rem;
+    margin-right: 16rem;
+}
+
+.lm { /* Lateral margins */
+    margin-left: 16rem;
+    margin-right: 16rem;
+}
+
+.lb { /* Line break */
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+}
+
+/*
+body {
+    max-width: 1024px; /* Padrão: 960-1300px *//*
+}
+
+.lb { margin-top: 30px; } 
+.lb-bottom { margin-bottom: 30px; }
+
+*/
