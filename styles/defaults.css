@@ -26,7 +26,7 @@ html, var, kbd, samp, code {
 }
 
 * {
-    font-size: 16rem;
+    font-size: 19rem;
 }
 
 a { 
@@ -43,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
       
 p {
     margin: 16rem;
-    text-align: justify;
     text-indent: 6rem; /* Sem justificar, usar: 4px */
 }
 
@@ -75,7 +74,7 @@ abbr {
     text-decoration: none;
 }
 
-dfn, var, address {
+dfn, var, address, cite {
     font-style: normal;
 }
 
@@ -83,6 +82,10 @@ pre {
     margin-left: 16rem;
     margin-right: 16rem;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.font-small {
+    font-size: 16rem;
 }
 
 .underline {
@@ -95,6 +98,10 @@ pre {
 
 .italic {
     font-style: italic;
+}
+
+.justify {
+    text-align: justify;
 }
 
 .font-monospace {
