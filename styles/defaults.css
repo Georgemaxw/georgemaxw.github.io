@@ -1,147 +1,315 @@
+@charset "UTF-8";
 /* gmes-defaults.css */
+/*  
+──────────────────────────────────────────────────────
+TODO: Variáveis
+──────────────────────────────────────────────────────*/
+/* Apple: 16px em 320w, e 22px em 736w. */
 /*  
 ──────────────────────────────────────────────────────
 Modelo De Caixa Alternativo Global 
 ──────────────────────────────────────────────────────*/
-
 html {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
-      
+
 /*  
 ──────────────────────────────────────────────────────
-Textos
+TODO: Textos
 ──────────────────────────────────────────────────────*/
-      
+p, dl, hr {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  margin-left: calc(9px + (2vw));
+  margin-right: calc(9px + (2vw));
+}
+
 html {
-    font-size: 1px;
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 1px;
 }
 
-html, var, kbd, samp, code {
-    font-family: 'Times New Roman', Times, Georgia, serif;
+div, span, p, a, em, i, strong, b, u, ul, ol, li, dl, dt, dd, abbr, dfn,
+sub, sup, pre, var, kbd, samp, code, time, address, blockquote,
+q, cite, figcaption, header, nav, main, article, section, aside,
+footer, form, label, input, textarea, select, button, fieldset,
+legend, table, tr, td, th, caption {
+  font-size: 19rem;
 }
 
-* {
-    font-size: 19rem;
+a {
+  color: blue;
+  text-decoration: none;
 }
 
-a { 
-    color: blue; 
-} 
-
-h1, h2, h3, h4, h5, h6 { 
-    margin-top: 22rem;
-    margin-bottom: 22rem;
-    font-size: 32rem;
-    text-align: center; 
-    text-transform: capitalize;
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  text-transform: capitalize;
 }
-      
+
+h1 {
+  font-size: calc(38rem - (3 * 1rem));
+  margin-top: calc(7rem - 1rem + 16rem);
+  margin-bottom: calc(7rem - 1rem + 16rem);
+}
+
+h2 {
+  font-size: calc(38rem - (3 * 2rem));
+  margin-top: calc(7rem - 2rem + 16rem);
+  margin-bottom: calc(7rem - 2rem + 16rem);
+}
+
+h3 {
+  font-size: calc(38rem - (3 * 3rem));
+  margin-top: calc(7rem - 3rem + 16rem);
+  margin-bottom: calc(7rem - 3rem + 16rem);
+}
+
+h4 {
+  font-size: calc(38rem - (3 * 4rem));
+  margin-top: calc(7rem - 4rem + 16rem);
+  margin-bottom: calc(7rem - 4rem + 16rem);
+}
+
+h5 {
+  font-size: calc(38rem - (3 * 5rem));
+  margin-top: calc(7rem - 5rem + 16rem);
+  margin-bottom: calc(7rem - 5rem + 16rem);
+}
+
+h6 {
+  font-size: calc(38rem - (3 * 6rem));
+  margin-top: calc(7rem - 6rem + 16rem);
+  margin-bottom: calc(7rem - 6rem + 16rem);
+}
+
 p {
-    margin: 16rem;
-    text-indent: 6rem; /* Sem justificar, usar: 4px */
+  text-indent: 6rem;
+  /* Sem justificar, usar: 4px */
 }
 
 ul, ol {
-    margin-top: 16rem;
-    margin-bottom: 16rem;
-    margin-left: 32rem;
-    margin-right: 16rem;
-}
-
-dl {
-    margin-top: 16rem;
-    margin-bottom: 16rem;
-    margin-left: 16rem;
-    margin-right: 16rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  margin-left: calc(2 * calc(9px + (2vw)));
+  margin-right: calc(9px + (2vw));
 }
 
 dd {
-    margin-left: 32rem;
+  margin-left: calc(2 * calc(9px + (2vw)));
 }
 
 strong, b, em, i {
-    font-weight: normal; 
-    font-style: normal;
-    text-decoration: underline;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: underline;
 }
 
 abbr {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 dfn, var, address, cite {
-    font-style: normal;
+  font-style: normal;
+}
+
+var, kbd, samp, code {
+  font-family: "Times New Roman", Times, Georgia, serif;
 }
 
 pre {
-    margin-left: 16rem;
-    margin-right: 16rem;
-    font-family: 'Courier New', Courier, monospace;
+  margin-left: calc(9px + (2vw));
+  margin-right: calc(9px + (2vw));
+  font-family: "Courier New", Courier, monospace;
 }
 
 .font-small {
-    font-size: 16rem;
+  font-size: 16rem;
 }
 
 .underline {
   text-decoration: underline;
 }
 
-.bold { 
-    font-weight: bold; 
+.bold {
+  font-weight: bold;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 .font-monospace {
-    text-align: left;
-    font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /*  
 ──────────────────────────────────────────────────────
 
 ──────────────────────────────────────────────────────*/
-
 body {
-    min-width: 320px;
-    margin: auto;
+  min-width: 320px;
+  margin: auto;
 }
 
-hr {
-    margin-top: 16rem;
-    margin-bottom: 16rem;
-    margin-left: 16rem;
-    margin-right: 16rem;
+figcaption {
+  text-align: center;
+  font-size: 16rem;
 }
 
-.lm { /* Lateral margins */
-    margin-left: 16rem;
-    margin-right: 16rem;
+.lm {
+  /* Lateral margins */
+  margin-left: calc(9px + (2vw));
+  margin-right: calc(9px + (2vw));
 }
 
-.lb { /* Line break */
-    margin-top: 16rem;
-    margin-bottom: 16rem;
+.lb {
+  /* Line break */
+  margin-top: calc(1* 16rem);
+  /* margin-bottom:  calc(1* 16rem); */
+}
+
+.lb10 {
+  /* Line break */
+  margin-top: calc(10* 16rem);
+  /* margin-bottom:  calc(1* 16rem); */
+}
+
+.line {
+  border: 1px solid black;
+}
+
+video {
+  width: 100%;
+}
+
+audio {
+  display: block;
+  margin: auto;
+  width: 90%;
+  height: 45rem;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Seções De Layout
+──────────────────────────────────────────────────────*/
+header {
+  height: 48rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  border-bottom: 1px solid gray;
+}
+
+header a {
+  height: 48rem;
+}
+
+header a:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li {
+  border-top: 1px solid gray;
+  height: 48rem;
+}
+
+nav li:last-of-type {
+  border-bottom: 1px solid gray;
+}
+
+nav a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*
+nav div li:last-child {
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+nav span {
+    display: block;
+    width: 210px;
+    padding: 8px 0px;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+}*/
+/*
 body {
-    max-width: 1024px; /* Padrão: 960-1300px *//*
+    max-width: 1024px; /* Padrão: 960-1300px */
+/*
 }
 
 .lb { margin-top: 30px; } 
 .lb-bottom { margin-bottom: 30px; }
 
 */
+/*# sourceMappingURL=defaults.css.map */

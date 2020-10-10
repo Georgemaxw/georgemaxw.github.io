@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- en -->
 <head>
     <title>Site</title>
     <meta charset="utf-8">
@@ -13,24 +13,51 @@
 </head>
 <body><!---->
 
+    <header>
+        <a href=""><img src="images/buttom-search.png" alt="Buttom"></a>
+        <a href=""><img src="images/logo.png" alt="Logo">&nbsp;<span>Website</span> </a>
+        <a href="#id-nav"><img src="images/buttom-menu.png" alt="Menu Buttom"></a>
+    </header>
+
+    <nav id="id-nav">
+            <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Link 2</a></li>
+                <li><a href="">Link 3</a></li>
+                <li><a href="">Link 4</a></li>
+            </ul>
+    </nav>
+
     <h1>Título 1</h1>
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <h4>Título 4</h4>
+    <h5>Título 5</h5>
+    <h6>Título 6</h6>
     
     <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>.</p>
+
+    <p>&lt;abbr>: Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
+
+    <p>&lt;dfn>: <dfn>Firefox</dfn> é o navegador criado pela Fundação Mozilla.</p>
+
+    <pre>Elemento   &lt;pre>.</pre>
+
+    <p>Tags de PC: <br>
+        <var>x</var>, <kbd>Ctrl</kbd>, <samp>output</samp>, <code>if(x == 1){ ... }</code>
+    </p>
+    
+    <p>&lt;address> e &lt;a>: </p><address class="lm"><a href="mailto:jim@rock.com">jim@rock.com</a></address>
+
+    <p>&lt;cite>: Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/"> 
+            <cite>home da MDN</cite></a> e veja: ...
+    </p>
 
     <ul>
         <li>Item da lista</li>
         <li>Item da lista</li>
         <li>Item da lista</li>
     </ul>
-
-    <p>Classes:  <span class="underline">underline</span>,  <span class="bold">bold</span>, 
-        <span class="italic">italic</span>, e <span class="font-small">font-small</span>.</p>
-
-    <p class="justify">Classe: justify. Texto genérico de demonstração.</p>
-
-    <p class="font-monospace">Classe 'font-monospace'. Texto genérico de demonstração.</p>
-
-    <h2>Título 2</h2>
 
     <ol>
         <li>Item da lista</li>
@@ -47,23 +74,48 @@
         <dd>Definição de descrição 2-2</dd>
     </dl>
 
-    <p>&lt;abbr>: Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
-
-    <p>&lt;dfn>: <dfn>Firefox</dfn> é o navegador criado pela Fundação Mozilla.</p>
-
-    <pre>Elemento   &lt;pre>.</pre>
-
-    <p>Códigos de PC: <var>x</var>, <kbd>Ctrl</kbd>, <samp>out</samp>, <code>if(x == 1){ ... }</code></p>
-    
-    <p>&lt;address>: </p><address class="lm"><a href="mailto:jim@rock.com">jim@rock.com</a></address>
-
     <hr>
-    
-    <p>
-        Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/"> 
-            <cite>home da MDN</cite></a> e veja: ...
-    </p>
 
+    <h1>Título 1</h1>
+
+    <p>Classes:  <span class="underline">underline</span>,  <span class="bold">bold</span>, 
+        <span class="italic">italic</span>, e <span class="font-small">font-small</span>.</p>
+
+    <p class="justify">Classe: justify. Texto genérico de demonstração para treinamento, ou produção.</p>
+
+    <p class="font-monospace">Classe 'font-monospace'. Texto genérico de demonstração.</p>
+
+    <figure>
+        <img src="images/img-pc.png" alt="Descrição da imagem" width="100%">
+        <figcaption>Legenda da figura</figcaption>
+    </figure>
+
+    <img src="images/img-pc.png" alt="Descrição da imagem" width="100%">
+
+    <div class="lb"></div>
+
+    <video controls preload="auto" poster="images/video-poster.png" autoplay loop muted class="line">
+        <source src="videos/trailer.mp4" type="video/mp4">
+        <source src="videos/trailer.webm" type="video/webm">
+        
+        <track src="webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+        <track src="webvtt/subtitle-en.vtt" kind="subtitles" srclang="en"><!---->
+    </video> 
+
+    <div class="lb"></div>
+
+    <audio controls preload="auto" loop><!--
+        <source src="audios/exemplo.mp3" type="audio/mp3">
+        <source src="audios/exemplo.ogg" type="audio/ogg">-->
+            
+            <p> Seu navegador não suporta áudio em HTML5. Aqui está um <a href="audios/exemplo.mp3">link para o áudio </a>.</p>
+    </audio> 
+
+    <div class="lb10"></div>
+
+    <!-- TODO: Fim -->
+    
+    
 </body>
 </html>
 
