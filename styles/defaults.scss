@@ -7,12 +7,16 @@ TODO: Variáveis
 $horizontal_margins: calc(9px + (2vw)); /* Apple: 16px em 320w, e 22px em 736w. */
 $vertical_margins: 16rem;
 $font-small: 16rem;
+$font-smaller: 13rem;
 $font-default: 'Times New Roman', Times, Georgia, serif;
 $font-monospace: 'Courier New', Courier, monospace;
 $button-height: 48rem;
-$color-text: white;
-$color-layout_1: black;
-$color-layout_2: gray;
+$text-color: black;
+$menu-text-color: white;
+$color-layout: black;
+$gradient-layout_1: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(193,100%,76%) 83%,hsl(185, 100%, 79%) 100%); 
+$gradient-layout_2: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$footer-icons-background: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 
 /*  
 ──────────────────────────────────────────────────────
@@ -42,13 +46,20 @@ TODO: Textos
 html {
     font-family: $font-default;
     font-size: 1px;
+    color: $text-color;
 }
 
-div, span, p, a, em, i, strong, b, u, ul, ol, li, dl, dt, dd, abbr, dfn, 
-sub, sup, pre, var, kbd, samp, code, time, address, blockquote, 
-q, cite, figcaption, header, nav, main, article, section, aside, 
-footer, form, label, input, textarea, select, button, fieldset, 
-legend, table, tr, td, th, caption { font-size: 19rem; }
+div, span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, 
+ul, ol, li, dl, dt, dd, abbr, dfn, sub, sup, pre, var, kbd, samp, 
+code, time, address, blockquote, q, cite, figcaption, header, 
+nav, main, article, section, aside, footer, form, label, input, 
+textarea, select, button, fieldset, legend, table, tr, td, th, caption { 
+    font-size: 19rem;
+}
+
+header, main, article, section, aside, footer {
+    font-size: 0;
+}
 
 a { 
     color: blue; 
@@ -116,6 +127,10 @@ pre {
     font-size: $font-small;
 }
 
+.font-smaller {
+    font-size: $font-smaller;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -137,9 +152,13 @@ pre {
     font-family: $font-monospace;
 }
 
+.center-text {
+    text-align: center;
+}
+
 /*  
 ──────────────────────────────────────────────────────
-
+TODO
 ──────────────────────────────────────────────────────*/
 
 body {
@@ -156,6 +175,20 @@ figcaption {
     font-size: $font-small;  
 }
 
+video {
+    width: 100%;
+}
+
+audio {
+    height: 45rem;
+    display: block;
+    margin-left: $horizontal_margins;
+}
+
+.center-block {
+    margin: auto;
+}
+
 .lm { /* Lateral margins */
     margin-left: $horizontal_margins;
     margin-right: $horizontal_margins;
@@ -167,23 +200,12 @@ figcaption {
 }
 
 .lb10 { /* Line break */
-    margin-top: calc(10* #{$vertical_margins}); 
-    /* margin-bottom:  calc(1* #{$vertical_margins}); */
+    /* margin-top: calc(1* #{$vertical_margins});  */
+    margin-bottom:  calc(10* #{$vertical_margins});
 }
 
 .line { 
     border: 1px solid black;
-}
-
-video {
-    width: 100%;
-}
-
-audio {
-    display: block;
-    margin: auto;
-    width: 90%;
-    height: 45rem;
 }
 
 /*  
@@ -191,94 +213,110 @@ audio {
 TODO: Seções De Layout
 ──────────────────────────────────────────────────────*/
 
+.header-content-width, main, footer {
+    max-width: 1024px; /* Padrão: 960-1300px */
+    margin: auto;
+}
+
 header {
-    height: $button-height;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    background-color: $color-layout_1;
-    border-bottom: 1px solid $color-layout_2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: $menu-text-color;
+    background-color: $color-layout;
+    background-image: $gradient-layout_1;
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
 
-    a {
-    height: $button-height;
-    }
-
-    a:nth-of-type(2) {
+    #id-nav {
         display: flex; 
+        justify-content: space-between;
         align-items: center;
-        color: $color-text
+
+        a {
+            height: $button-height;
+            color: inherit;
+            text-decoration: none;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 13px;
+        }
+    }
+
+    .buttom-left {
+        margin-right: -13px;
+    }
+
+    #nav-menu { 
+        display: none;
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+        background-color: black;
+        background-image: $gradient-layout_2;
+
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                border-top: 1px solid $menu-text-color;
+            }
+
+            li:last-of-type {
+                border-bottom: 1px solid $menu-text-color;
+
+                a{
+                    span {
+                        font-size: 33rem;
+                        text-align: center;
+                        color: $menu-text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    #nav-menu:target {
+        display: flex;
+        align-items: center;
     }
 }
 
+footer {
 
+    .footer-icons {
+        border-radius: 50px;
+        background-color: $color-layout;
+        background-image: $footer-icons-background;
+        padding: 8px 0 3px; 
+        @extend %margins;
+        box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
+        list-style-type: none; 
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        img {
+            padding: 6px;
+            border: 2px solid $menu-text-color;
+            border-radius: 50%;
+        }
+    }
 
-nav ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    .copyright {
+        font-size: $font-smaller;
+        text-indent: 0;
+        text-align: center;
+
+        /*padding: 6px 0;
+        margin: 14px 0 0;
+        color: $menu-text-color;
+        background-color: black;*/
+    }
 }
-
-nav li {
-    border-top: 1px solid $color-layout_2;
-    height: $button-height;
-}
-
-nav li:last-of-type {
-    border-bottom: 1px solid $color-layout_2;
-}
-
-nav a {
-    width: 100%;
-    height: 100%;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-nav {
-    display: none;
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-nav:target {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*
-nav div li:last-child {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-
-nav span {
-    display: block;
-    width: 210px;
-    padding: 8px 0px;
-    border-bottom: 1px solid white;
-    margin: 0 auto;
-}*/
-
-
-
-
-
-
-
-
-/*
-body {
-    max-width: 1024px; /* Padrão: 960-1300px *//*
-}
-
-.lb { margin-top: 30px; } 
-.lb-bottom { margin-bottom: 30px; }
-
-*/
