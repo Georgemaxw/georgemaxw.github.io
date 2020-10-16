@@ -16,13 +16,13 @@
     <header>
 
         <div class="header-content-width">
-            <!-- <a href="" class="buttom-left"><img src="images/icons/search.svg" alt="Buttom"></a> -->
+            <!-- <a href="" class="button-left"><img src="images/icons/search.svg" alt="button"></a> -->
 
             <nav id="id-nav">
             
                 <a href="index.html" class="logo"><img src="images/icons/logo.svg" alt="Logo">&nbsp;&nbsp;Website</a>
                 
-                <a href="#nav-menu" class="nav-buttom-right"><img src="images/icons/menu.svg" alt="Menu Buttom"></a>
+                <a href="#nav-menu" class="nav-button-right"><img src="images/icons/menu.svg" alt="Menu button"></a>
             
                 <div id="nav-menu">
                     <ul>
@@ -46,7 +46,7 @@
     </header>
 
     <main>
-
+<!--
         <article>
 
             <h1>Título 1</h1>
@@ -106,10 +106,14 @@
 
             <p class="font-monospace">Classe 'font-monospace'. Texto genérico de demonstração.</p>
 
-            <p class="center-text">Classe 'center-text'. Texto genérico de demonstração.</p>
+            <h2 class="left lm no-capitalize">Classe 'left', 'lm', e 'no-capitalize'</h2>
+
+            <p class="center">Classe 'center'. Texto genérico de demonstração.</p>
+
+            <p class="right">Classe 'right'. Texto genérico de demonstração.</p>
 
             <img src="images/img-pc.png" alt="Descrição da imagem" width="100%">
-<!---->
+
             <div class="lb"></div>
 
             <figure>
@@ -140,6 +144,50 @@
             </audio> 
 
             <div class="lb"></div> 
+
+            <hr>
+-->
+            <form action="/my-handling-form-page" method="post">
+                
+                    <p class="widget-l">
+                        <label for="name">First Name:</label>
+                        <input type="text" value="p's c/ classes ..." id="name" name="user_name" autofocus>
+                    </p>
+                    <p class="widget-r">
+                        <label for="name">Last Name:</label>
+                        <input type="text" value="... widget-l/r. " id="name" name="user_name">
+                    </p>
+                    <!---->
+                    <p>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_mail">
+                    </p>
+                    <p>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message" class="textarea-4l">Textarea com a classe 'textarea-4l'.</textarea>
+                    </p>
+                    
+                <fieldset>
+                    <p>Options:</p>
+                    <ul>        
+                        <li>
+                            <label for="Y"><input type="radio" name="Question" id="Y" value="Yes" checked>Yes</label>
+                        </li>
+                        <li>
+                            <label for="N"><input type="radio" name="Question" id="N" value="No">No</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <p>
+                    <button type="submit">OK!</button>
+                </p>
+            </form>   
+
+            <hr>
+
+            <div class="lb"></div> 
+
         </article>
     
         <aside>
@@ -161,7 +209,7 @@
             <!--<p>Follow us on:</p>-->
     
                 <ul class="footer-icons">
-                    <li><a href=""><img src="images/icons/mail.svg" alt=""></a></li>  
+                    <li><a href="mailto:support@company.com.br"><img src="images/icons/mail.svg" alt=""></a></li>  
                     <li><a href=""><img src="images/icons/facebook.svg" alt=""></a></li>  
                     <li><a href=""><img src="images/icons/youtube.svg" alt=""></a></li> 
                     <li><a href=""><img src="images/icons/twitter.svg" alt=""></a></li> 

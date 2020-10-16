@@ -14,9 +14,11 @@ $button-height: 48rem;
 $text-color: black;
 $menu-text-color: white;
 $color-layout: black; 
-$gradient-layout_1: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(193,100%,76%) 83%,hsl(185, 100%, 79%) 100%); 
-$gradient-layout_2: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$footer-icons-background: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$background-nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$background-buttom: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+
 
 /*  
 ──────────────────────────────────────────────────────
@@ -152,8 +154,20 @@ pre {
     font-family: $font-monospace;
 }
 
-.center-text {
+.center {
     text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.no-capitalize {
+    text-transform: none;
 }
 
 /*  
@@ -167,7 +181,10 @@ body {
 }
 
 hr {
-    @extend %margins;
+    margin-top:  calc(2* #{$vertical_margins});
+    margin-bottom:  calc(2* #{$vertical_margins});
+    margin-left: $horizontal_margins;
+    margin-right: $horizontal_margins;
 }
 
 figcaption {
@@ -199,9 +216,12 @@ audio {
     /* margin-bottom:  calc(1* #{$vertical_margins}); */
 }
 
-.lb10 { /* Line break */
-    /* margin-top: calc(1* #{$vertical_margins});  */
-    margin-bottom:  calc(10* #{$vertical_margins});
+.lb2 { 
+    margin-bottom:  calc(2* #{$vertical_margins});
+}
+
+.lb3 { 
+    margin-bottom:  calc(3* #{$vertical_margins});
 }
 
 .line { 
@@ -225,7 +245,7 @@ header {
     z-index: 1;
     color: $menu-text-color;
     background-color: $color-layout;
-    background-image: $gradient-layout_1;
+    background-image: $background-header;
     box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
 
     #id-nav {
@@ -247,7 +267,7 @@ header {
         }
     }
 
-    .buttom-left {
+    .button-left {
         margin-right: -13px;
     }
 
@@ -256,7 +276,7 @@ header {
         position: fixed;
         top: 0; bottom: 0; left: 0; right: 0;
         background-color: black;
-        background-image: $gradient-layout_2;
+        background-image: $background-nav;
 
         ul {
             width: 100%;
@@ -293,7 +313,7 @@ footer {
     .footer-icons {
         border-radius: 50px;
         background-color: $color-layout;
-        background-image: $footer-icons-background;
+        background-image: $background-footer-icons;
         padding: 8px 0 3px; 
         @extend %margins;
         box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
@@ -301,7 +321,7 @@ footer {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        
+
         img {
             padding: 6px;
             border: 2px solid $menu-text-color;
@@ -318,5 +338,124 @@ footer {
         margin: 14px 0 0;
         color: $menu-text-color;
         background-color: black;*/
+    }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Formulários
+──────────────────────────────────────────────────────*/
+
+form {
+    display: flow-root; 
+    @extend %margins;
+
+    fieldset {
+        border-width: 0;
+        margin-top: calc(1* #{$vertical_margins});
+        margin-bottom:  calc(1* #{$vertical_margins});
+        
+        p {
+            margin-left: 15px;
+            text-indent: 0;
+        }
+
+        ul {
+            margin-left: 15px;
+
+            input[type="radio"] {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    p {	
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    p {
+        filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18)); /* */
+
+        label {
+            display: inline-block;
+            margin-bottom: $vertical_margins;
+            margin-left: 3px;
+        }        
+
+        input, textarea {
+            color: DarkGray;
+            width: 100%;
+            padding: 8rem 13rem;
+            border: 1px solid rgba(0, 0, 0, 0.10); 
+            border-top: 1px solid rgba(0, 0, 0, 0.09);
+            border-radius: 19px;
+            margin: auto;
+        } 
+
+        textarea {
+            vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
+            height: 84rem; 
+        }
+    }
+
+    p:nth-last-of-type(1) {
+        filter: drop-shadow(0px 8px 7px rgba(0, 0, 0, 0.22)); /* */
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li + li { 
+        margin-top: $vertical_margins; 
+    }
+
+    button {
+        min-width: 120px;
+        color: $menu-text-color;
+        display: block;
+        padding: 10rem 16rem;
+        margin: auto;
+        border: 0px solid rgba(0, 0, 0, 0.07);
+        border-radius: 1000px;
+        background-image: $background-buttom;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 
+        inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15),
+        inset 5px 5px 5px 0px rgba(255, 255, 255, 0.40);
+    }    
+
+    .widget-l { 
+        float: left;
+        width: 47%;
+    }
+
+    .widget-r {
+        float: right;
+        width: 47%;
+    }
+
+    @for $i from 2 through 8 { 
+        .textarea-#{$i}l {
+            height: calc(62rem + ( (#{$i} - 2) * 22rem));
+        }
+    }
+
+    input[type="radio"] {
+
+    }
+    
+    
+    input[type="radio"] + label {
+        margin-: 0;
+        width-: 5%;
+    }
+    
+    input:focus, textarea:focus, button {
+       outline: 0 solid black;
+       /*  outline-color: rgba(0, 183, 255, 0.5); Destaque adicional para elementos focados  */
     }
 }

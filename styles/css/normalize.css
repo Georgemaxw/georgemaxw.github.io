@@ -54,7 +54,7 @@ Padronizando Os Elementos De Formulário
 button, input, select, textarea { 
   font-family : inherit; 
   font-size : 100%; 
-  box-sizing: content-box; 
+  box-sizing: border-box; 
 } 
 
 textarea { 

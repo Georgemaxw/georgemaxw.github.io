@@ -21,7 +21,7 @@ html {
 ──────────────────────────────────────────────────────
 TODO: Textos
 ──────────────────────────────────────────────────────*/
-p, dl, hr, footer .footer-icons {
+p, dl, footer .footer-icons, form {
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: calc(9px + (2vw));
@@ -161,8 +161,20 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-.center-text {
+.center {
   text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.no-capitalize {
+  text-transform: none;
 }
 
 /*  
@@ -172,6 +184,13 @@ TODO
 body {
   min-width: 320px;
   margin: auto;
+}
+
+hr {
+  margin-top: calc(2* 16rem);
+  margin-bottom: calc(2* 16rem);
+  margin-left: calc(9px + (2vw));
+  margin-right: calc(9px + (2vw));
 }
 
 figcaption {
@@ -205,10 +224,12 @@ audio {
   /* margin-bottom:  calc(1* 16rem); */
 }
 
-.lb10 {
-  /* Line break */
-  /* margin-top: calc(1* 16rem);  */
-  margin-bottom: calc(10* 16rem);
+.lb2 {
+  margin-bottom: calc(2* 16rem);
+}
+
+.lb3 {
+  margin-bottom: calc(3* 16rem);
 }
 
 .line {
@@ -232,7 +253,7 @@ header {
   z-index: 1;
   color: white;
   background-color: black;
-  background-image: linear-gradient(to bottom, #8fdfff 0%, #85d6ff 10%, #6bc6ff 25%, #70c6ff 37%, #75c8ff 50%, #57beff 51%, #85e4ff 83%, #94f6ff 100%);
+  background-image: linear-gradient(to bottom, #8fdfff 0%, #85d6ff 10%, #6bc6ff 25%, #70c6ff 37%, #75c8ff 50%, #57beff 51%, #85d2ff 83%, #ade7ff 100%);
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
@@ -255,7 +276,7 @@ header #id-nav .logo {
   margin-left: 13px;
 }
 
-header .buttom-left {
+header .button-left {
   margin-right: -13px;
 }
 
@@ -322,4 +343,139 @@ footer .copyright {
         margin: 14px 0 0;
         color: $menu-text-color;
         background-color: black;*/
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Formulários
+──────────────────────────────────────────────────────*/
+form {
+  display: flow-root;
+}
+
+form fieldset {
+  border-width: 0;
+  margin-top: calc(1* 16rem);
+  margin-bottom: calc(1* 16rem);
+}
+
+form fieldset p {
+  margin-left: 15px;
+  text-indent: 0;
+}
+
+form fieldset ul {
+  margin-left: 15px;
+}
+
+form fieldset ul input[type="radio"] {
+  margin-right: 6px;
+}
+
+form p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+form p {
+  filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18));
+  /* */
+}
+
+form p label {
+  display: inline-block;
+  margin-bottom: 16rem;
+  margin-left: 3px;
+}
+
+form p input, form p textarea {
+  color: DarkGray;
+  width: 100%;
+  padding: 8rem 13rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 19px;
+  margin: auto;
+}
+
+form p textarea {
+  vertical-align: top;
+  /* Alinha os <textarea>'s com seus rótulos */
+  height: 84rem;
+}
+
+form p:nth-last-of-type(1) {
+  filter: drop-shadow(0px 8px 7px rgba(0, 0, 0, 0.22));
+  /* */
+}
+
+form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+form li + li {
+  margin-top: 16rem;
+}
+
+form button {
+  min-width: 120px;
+  color: white;
+  display: block;
+  padding: 10rem 16rem;
+  margin: auto;
+  border: 0px solid rgba(0, 0, 0, 0.07);
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #c2eeff 0%, #9edfff 20%, #8ad2ff 50%, #66c2ff 74%, #75c8ff 100%);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+form .widget-l {
+  float: left;
+  width: 47%;
+}
+
+form .widget-r {
+  float: right;
+  width: 47%;
+}
+
+form .textarea-2l {
+  height: calc(62rem + ( (2 - 2) * 22rem));
+}
+
+form .textarea-3l {
+  height: calc(62rem + ( (3 - 2) * 22rem));
+}
+
+form .textarea-4l {
+  height: calc(62rem + ( (4 - 2) * 22rem));
+}
+
+form .textarea-5l {
+  height: calc(62rem + ( (5 - 2) * 22rem));
+}
+
+form .textarea-6l {
+  height: calc(62rem + ( (6 - 2) * 22rem));
+}
+
+form .textarea-7l {
+  height: calc(62rem + ( (7 - 2) * 22rem));
+}
+
+form .textarea-8l {
+  height: calc(62rem + ( (8 - 2) * 22rem));
+}
+
+form input[type="radio"] + label {
+  margin-: 0;
+  width-: 5%;
+}
+
+form input:focus, form textarea:focus, form button {
+  outline: 0 solid black;
+  /*  outline-color: rgba(0, 183, 255, 0.5); Destaque adicional para elementos focados  */
 }
