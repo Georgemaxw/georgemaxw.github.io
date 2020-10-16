@@ -392,8 +392,7 @@ form p input, form p textarea {
   color: DarkGray;
   width: 100%;
   padding: 8rem 13rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  border: 1px solid #ededed;
   border-radius: 19px;
   margin: auto;
 }
