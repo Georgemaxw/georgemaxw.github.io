@@ -1,10 +1,13 @@
 @charset "UTF-8";
 /* gmes-defaults.css */
-/*  
+/* 
 ──────────────────────────────────────────────────────
 TODO: Variáveis
 ──────────────────────────────────────────────────────*/
 /* Apple: 16px em 320w, e 22px em 736w. */
+/* Cores E Planos De Fundos */
+/* Breakpoints */
+/* Viewport to enable 'main_column-max_width'. */
 /*  
 ──────────────────────────────────────────────────────
 Modelo De Caixa Alternativo Global 
@@ -19,15 +22,30 @@ html {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Textos
+TODO: Margens
 ──────────────────────────────────────────────────────*/
-p, dl, footer .footer-icons, form {
-  margin-top: 16rem;
-  margin-bottom: 16rem;
+.lm, p, dl, footer .footer-icons, form label, h1, h2, h3, h4, h5, h6, pre, hr {
+  /* Lateral margins */
   margin-left: calc(9px + (2vw));
   margin-right: calc(9px + (2vw));
 }
 
+@media (min-width: 766px) {
+  .lm, p, dl, footer .footer-icons, form label, h1, h2, h3, h4, h5, h6, pre, hr {
+    margin-left: calc((100% - 700px) / 2);
+    margin-right: calc((100% - 700px) / 2);
+  }
+}
+
+p, dl, footer .footer-icons, form label {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Textos
+──────────────────────────────────────────────────────*/
 html {
   font-family: "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
@@ -57,37 +75,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: calc(38rem - (3 * 1rem));
+  font-size: calc(44rem - (4 * 1rem));
   margin-top: calc(7rem - 1rem + 16rem);
   margin-bottom: calc(7rem - 1rem + 16rem);
 }
 
 h2 {
-  font-size: calc(38rem - (3 * 2rem));
+  font-size: calc(44rem - (4 * 2rem));
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
 }
 
 h3 {
-  font-size: calc(38rem - (3 * 3rem));
+  font-size: calc(44rem - (4 * 3rem));
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
 }
 
 h4 {
-  font-size: calc(38rem - (3 * 4rem));
+  font-size: calc(44rem - (4 * 4rem));
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
 }
 
 h5 {
-  font-size: calc(38rem - (3 * 5rem));
+  font-size: calc(44rem - (4 * 5rem));
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
 }
 
 h6 {
-  font-size: calc(38rem - (3 * 6rem));
+  font-size: calc(44rem - (4 * 6rem));
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
 }
@@ -102,6 +120,13 @@ ul, ol {
   margin-bottom: 16rem;
   margin-left: calc(2 * calc(9px + (2vw)));
   margin-right: calc(9px + (2vw));
+}
+
+@media (min-width: 766px) {
+  ul, ol {
+    margin-left: calc(((100% - 700px) / 2) + 16px);
+    margin-right: calc((100% - 700px) / 2);
+  }
 }
 
 dd {
@@ -127,8 +152,6 @@ var, kbd, samp, code {
 }
 
 pre {
-  margin-left: calc(9px + (2vw));
-  margin-right: calc(9px + (2vw));
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -136,7 +159,7 @@ pre {
   font-size: 16rem;
 }
 
-.font-smaller {
+.font-smaller, table caption {
   font-size: 13rem;
 }
 
@@ -179,18 +202,16 @@ pre {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO
+TODO: Outros
 ──────────────────────────────────────────────────────*/
 body {
-  min-width: 320px;
+  min-width: 300px;
   margin: auto;
 }
 
 hr {
-  margin-top: calc(2* 16rem);
-  margin-bottom: calc(2* 16rem);
-  margin-left: calc(9px + (2vw));
-  margin-right: calc(9px + (2vw));
+  margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
 figcaption {
@@ -198,37 +219,50 @@ figcaption {
   font-size: 16rem;
 }
 
-video {
+img, video {
+  display: block;
   width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+video {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
 audio {
   height: 45rem;
   display: block;
-  margin-left: calc(9px + (2vw));
+  max-width: calc(100vw - 2 * calc(9px + (2vw)));
+  margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
+/* 
+a:focus {
+    outline: 2px dotted $menu-base_color; 
+}
+*/
 .center-block {
   margin: auto;
-}
-
-.lm {
-  /* Lateral margins */
-  margin-left: calc(9px + (2vw));
-  margin-right: calc(9px + (2vw));
 }
 
 .lb {
   /* Line break */
   margin-top: calc(1* 16rem);
-  /* margin-bottom:  calc(1* 16rem); */
+  margin-bottom: calc(1* 16rem);
+  /*  */
 }
 
 .lb2 {
+  margin-top: calc(2* 16rem);
   margin-bottom: calc(2* 16rem);
 }
 
 .lb3 {
+  margin-top: calc(3* 16rem);
   margin-bottom: calc(3* 16rem);
 }
 
@@ -241,7 +275,8 @@ audio {
 TODO: Seções De Layout
 ──────────────────────────────────────────────────────*/
 .header-content-width, main, footer {
-  max-width: 1024px;
+  max-width: 700px;
+  /* */
   /* Padrão: 960-1300px */
   margin: auto;
 }
@@ -252,15 +287,21 @@ header {
   left: 0;
   z-index: 1;
   color: white;
-  background-color: black;
+  background-color: #00c8ff;
   background-image: linear-gradient(to bottom, #8fdfff 0%, #85d6ff 10%, #6bc6ff 25%, #70c6ff 37%, #75c8ff 50%, #57beff 51%, #85d2ff 83%, #ade7ff 100%);
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+  /**/
 }
 
 header #id-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header #id-nav h1 {
+  margin: 0;
+  font-weight: normal;
 }
 
 header #id-nav a {
@@ -276,6 +317,10 @@ header #id-nav .logo {
   margin-left: 13px;
 }
 
+header #id-nav .logo img {
+  margin-right: 8px;
+}
+
 header .button-left {
   margin-right: -13px;
 }
@@ -287,7 +332,7 @@ header #nav-menu {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: black;
+  background-color: #00c8ff;
   background-image: linear-gradient(to bottom right, #75c8ff 0%, #57beff 10%, #a3ebff 33%, #85e4ff 55%, #c2fff5 90%, #c2fff5 100%);
 }
 
@@ -312,16 +357,48 @@ header #nav-menu ul li:last-of-type a span {
   color: white;
 }
 
-header #nav-menu:target {
-  display: flex;
-  align-items: center;
+@media (min-width: 0) and (max-width: 500px) {
+  header #nav-menu:target {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 500px) {
+  header #id-nav .nav-button-right {
+    display: none;
+  }
+  header #nav-menu {
+    position: static;
+    display: inline-block;
+    background: 0;
+  }
+  header #nav-menu ul, header #nav-menu li {
+    display: inline-block;
+  }
+  header #nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  header #nav-menu ul li {
+    border-width: 0;
+  }
+  header #nav-menu ul li + li {
+    margin-left: 20px;
+  }
+  header #nav-menu ul li:nth-last-of-type(2) {
+    margin-right: 13px;
+  }
+  header #nav-menu ul li:last-of-type {
+    display: none;
+  }
 }
 
 footer .footer-icons {
   border-radius: 50px;
-  background-color: black;
+  background-color: #00c8ff;
   background-image: linear-gradient(to bottom right, #75c8ff 0%, #57beff 10%, #85e4ff 55%, #c2fff5 90%, #c2fff5 100%);
-  padding: 8px 0 3px;
+  padding: 6px 0;
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
   list-style-type: none;
   display: flex;
@@ -350,95 +427,75 @@ footer .copyright {
 TODO: Formulários
 ──────────────────────────────────────────────────────*/
 form {
-  display: flow-root;
+  margin: 16rem auto;
 }
 
-form fieldset {
-  border-width: 0;
-  margin-top: calc(1* 16rem);
-  margin-bottom: calc(1* 16rem);
+form label {
+  display: block;
 }
 
-form fieldset p {
-  margin-left: 15px;
-  text-indent: 0;
-}
-
-form fieldset ul {
-  margin-left: 15px;
-}
-
-form fieldset ul input[type="radio"] {
-  margin-right: 6px;
-}
-
-form p {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-form p {
-  filter: drop-shadow(0px 18px 9px rgba(0, 0, 0, 0.18));
-  /* 6 */
-}
-
-form p label {
-  display: inline-block;
-  margin-bottom: 16rem;
-  margin-left: 3px;
-}
-
-form p input, form p textarea {
-  color: DarkGray;
+form label input, form label textarea {
+  color: #999999;
   width: 100%;
   padding: 8rem 13rem;
   border: 1px solid #ededed;
   border-radius: 19px;
-  margin: auto;
+  margin-top: 16rem;
+  filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18));
 }
 
-form p textarea {
+form label input[type="file"] {
+  color: transparent;
+  border-radius: 0;
+  filter: none;
+}
+
+form label input[type="radio"], form label input[type="checkbox"] {
+  width: auto;
+  margin-top: 0;
+  margin-right: 6px;
+}
+
+form label textarea {
   vertical-align: top;
   /* Alinha os <textarea>'s com seus rótulos */
   height: 84rem;
 }
 
-form p:nth-last-of-type(1) {
-  filter: drop-shadow(0px 8px 7px rgba(0, 0, 0, 0.22));
-  /* */
+form input:placeholder-shown {
+  color: red;
 }
 
-form ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+form p {
+  text-indent: 0;
 }
 
-form li + li {
+form fieldset {
+  border-width: 0;
+}
+
+form select {
+  display: block;
   margin-top: 16rem;
+  margin-bottom: 16rem;
+  border-radius: 100px;
 }
 
 form button {
   min-width: 120px;
   color: white;
-  display: block;
-  padding: 10rem 16rem;
-  margin: auto;
-  border: 0px solid rgba(0, 0, 0, 0.07);
+  padding: 10rem 0;
+  border-width: 0;
   border-radius: 1000px;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
   background-image: linear-gradient(to bottom right, #c2eeff 0%, #9edfff 20%, #8ad2ff 50%, #66c2ff 74%, #75c8ff 100%);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-form .widget-l {
-  float: left;
-  width: 47%;
-}
-
-form .widget-r {
-  float: right;
-  width: 47%;
+form button:disabled {
+  opacity: 0.5;
 }
 
 form .textarea-2l {
@@ -469,12 +526,205 @@ form .textarea-8l {
   height: calc(62rem + ( (8 - 2) * 22rem));
 }
 
-form input[type="radio"] + label {
-  margin-: 0;
-  width-: 5%;
+form strong {
+  text-decoration: none;
 }
 
-form input:focus, form textarea:focus, form button {
-  outline: 0 solid black;
-  /*  outline-color: rgba(0, 183, 255, 0.5); Destaque adicional para elementos focados  */
+form input:focus, form textarea:focus {
+  outline: 0px dotted;
+  border: 1px solid #00c8ff;
 }
+
+form input[type="file"]:focus {
+  outline: 1px solid #00c8ff;
+}
+
+form input[type="radio"]:focus, form input[type="checkbox"]:focus {
+  outline: 1px solid #00c8ff;
+}
+
+form select:focus {
+  outline: 0px dotted;
+  border: 1px solid #00c8ff;
+  border-radius: 100px;
+}
+
+form button:focus {
+  outline: 2px dotted #00c8ff;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Tabelas
+──────────────────────────────────────────────────────*/
+table {
+  max-width: calc(100% - 2 * calc(9px + (2vw)));
+  margin: 16rem auto;
+  border: 2px solid #00c8ff;
+  border-collapse: collapse;
+  caption-side: bottom;
+}
+
+table th {
+  color: #00c8ff;
+  border: 2px solid #00c8ff;
+}
+
+table tr + tr {
+  border-top: 1px solid #d9d9d9;
+}
+
+table td + td {
+  border-left: 1px solid #d9d9d9;
+}
+
+table th, table td {
+  padding: 6px;
+}
+
+table td {
+  text-align: center;
+}
+
+table caption {
+  margin-top: 6rem;
+}
+
+@media (min-width: 766px) {
+  table {
+    max-width: 700px;
+  }
+}
+
+/*
+.table-style-1 {
+     Estilo padrão. 
+}
+*/
+.table-style-2 {
+  width: 100%;
+  max-width: none;
+  border-width: 0;
+  border-bottom: 2px solid #00c8ff;
+}
+
+.table-style-2 tr:nth-of-type(1) {
+  border-bottom: 2px solid #00c8ff;
+}
+
+.table-style-2 th {
+  border-width: 0;
+}
+
+.table-style-2 th:nth-child(1) {
+  color: black;
+}
+
+.table-style-2 td + td {
+  border-width: 0;
+}
+
+@media (min-width: 500px) {
+  .table-style-2 {
+    width: auto;
+  }
+}
+
+@media (min-width: 766px) {
+  .table-style-2 {
+    max-width: 700px;
+  }
+}
+
+.table-style-3 {
+  border-width: 0;
+}
+
+.table-style-3 tr + tr {
+  border-width: 0;
+}
+
+.table-style-3 th {
+  border-width: 0;
+  text-align: left;
+}
+
+/*----- .table-style-4 -----*/
+@media (min-width: 0) and (max-width: 500px) {
+  .table-style-4 {
+    border-width: 0;
+  }
+  .table-style-4 tr {
+    border-width: 0;
+  }
+  .table-style-4 tr {
+    margin-bottom: 16rem;
+  }
+  .table-style-4 tr, .table-style-4 th, .table-style-4 td {
+    display: block;
+  }
+  .table-style-4 th {
+    border-width: 0;
+    border-bottom: 1px solid;
+    text-align: center;
+  }
+  .table-style-4 td {
+    text-align: left;
+  }
+}
+
+@media (min-width: 500px) {
+  .table-style-4 {
+    border-width: 0;
+  }
+  .table-style-4 tr {
+    border-width: 0;
+  }
+  .table-style-4 th, .table-style-4 td {
+    border-width: 0;
+  }
+  .table-style-4 td {
+    text-align: left;
+  }
+}
+
+/* ---------------------------- */
+/* .table-style-3-2 {
+    text-align: left;
+
+    th, td {
+        padding: 0;
+    }
+
+    th {
+        margin-right: 3px;
+    }
+
+    td {
+        margin-left: 3px;
+    }
+
+    td {
+        text-align: left;
+    }
+
+    ul {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        list-style: none;
+    }
+}
+*/
+/* 
+
+MEDIA 
+
+Maior que mobile:
+
+    input[type="file"] {
+        color: $form-text-color;
+    }
+
+*/

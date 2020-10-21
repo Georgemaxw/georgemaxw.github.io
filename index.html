@@ -14,13 +14,13 @@
 <body>
 
     <header>
-
+        
         <div class="header-content-width">
             <!-- <a href="" class="button-left"><img src="images/icons/search.svg" alt="button"></a> -->
 
             <nav id="id-nav">
             
-                <a href="index.html" class="logo"><img src="images/icons/logo.svg" alt="Logo">&nbsp;&nbsp;Website</a>
+                <h1><a href="index.html" class="logo"><img src="images/icons/logo.svg" alt="Logo">Website</a></h1>
                 
                 <a href="#nav-menu" class="nav-button-right"><img src="images/icons/menu.svg" alt="Menu button"></a>
             
@@ -38,7 +38,7 @@
                         <li><a href="">Link 2</a></li>
                         <li><a href="">Link 3</a></li>
                         <li><a href="">Link 4</a></li>
-                        <li><a href=""><span>×</span></a></li>
+                        <li><a href="" aria-label="Fechar"><span>×</span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -46,7 +46,7 @@
     </header>
 
     <main>
-<!--
+<!---->
         <article>
 
             <h1>Título 1</h1>
@@ -70,7 +70,7 @@
             
             <p>&lt;address> e &lt;a>: </p><address class="lm"><a href="mailto:jim@rock.com">jim@rock.com</a></address>
 
-            <p>&lt;cite>: Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/"> 
+            <p>&lt;cite>: Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/">
                     <cite>home da MDN</cite></a> e veja: ...
             </p>
 
@@ -95,10 +95,6 @@
                 <dd>Definição de descrição 2-2</dd>
             </dl>
 
-            <hr>
-
-            <h1>Título 1</h1>
-
             <p>Classes:  <span class="underline">underline</span>,  <span class="bold">bold</span>, 
                 <span class="italic">italic</span>, e <span class="font-small">font-small</span>.</p>
 
@@ -106,22 +102,30 @@
 
             <p class="font-monospace">Classe 'font-monospace'. Texto genérico de demonstração.</p>
 
-            <h2 class="left lm no-capitalize">Classe 'left', 'lm', e 'no-capitalize'</h2>
+            <h2 class="left lm no-capitalize">Classes 'left', 'lm', e 'no-capitalize'</h2>
 
             <p class="center">Classe 'center'. Texto genérico de demonstração.</p>
 
             <p class="right">Classe 'right'. Texto genérico de demonstração.</p>
 
-            <img src="images/img-pc.png" alt="Descrição da imagem" width="100%">
+            <hr>
+
+            <h2>Imagem</h2>
+
+            <img src="images/img-pc.png" alt="Descrição da imagem">
 
             <div class="lb"></div>
 
             <figure>
-                <img src="images/img-pc.png" alt="Descrição da imagem" width="100%">
+                <img src="images/img-pc.png" alt="Descrição da imagem">
                 <figcaption>Legenda da figura</figcaption>
             </figure>
 
-            <div class="lb"></div>
+
+
+            <hr>
+
+            <h2>Vídeo e Áudio</h2>
 
             <video controls preload="auto" poster="images/video-poster.png" autoplay loop muted class="line">
                 <source src="videos/trailer.mp4" type="video/mp4">
@@ -146,47 +150,145 @@
             <div class="lb"></div> 
 
             <hr>
--->
+
+            <h2>Formulário</h2>
+
             <form action="/my-handling-form-page" method="post">
+
+                <label for="name">
+                    First Name: <strong><abbr title="required">*</abbr></strong>
+                    <input type="text" value="Valor" id="name" name="user_name" autofocus>
+                </label>
                 
-                    <p class="widget-l">
-                        <label for="name">First Name:</label>
-                        <input type="text" value="p's c/ classes ..." id="name" name="user_name" autofocus>
-                    </p>
-                    <p class="widget-r">
-                        <label for="name">Last Name:</label>
-                        <input type="text" value="... widget-l/r. " id="name" name="user_name">
-                    </p>
-                    <!---->
-                    <p>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" name="user_mail">
-                    </p>
-                    <p>
-                        <label for="msg">Message:</label>
-                        <textarea id="msg" name="user_message" class="textarea-4l">Textarea com a classe 'textarea-4l'.</textarea>
-                    </p>
+                <label for="name2">
+                    Last Name:
+                    <input type="text" value="Valor" id="name2" name="user_name">
+                </label>
+
+                <label for="mail">
+                    E-mail:
+                    <input type="email" id="mail" name="user_mail" placeholder="abc@gmail.com">
+                </label>
+
+                <label for="file">
+                    <input type="file" name="file" id="file" accept="image/*" multiple>
+                </label>
+
+                <label for="msg">
+                    Message:
+                    <textarea id="msg" name="user_message" class="textarea-4l" spellcheck="true">Textarea com a classe 'textarea-4l'.</textarea>
+                </label>
                     
                 <fieldset>
-                    <p>Options:</p>
-                    <ul>        
-                        <li>
-                            <label for="Y"><input type="radio" name="Question" id="Y" value="Yes" checked>Yes</label>
-                        </li>
-                        <li>
-                            <label for="N"><input type="radio" name="Question" id="N" value="No">No</label>
-                        </li>
-                    </ul>
+                    <p>Option buttons: <strong><abbr title="required">*</abbr></strong></p> 
+                    <label for="y"><input type="radio" name="question" id="y" value="yes" checked>Yes</label>
+                    <label for="n"><input type="radio" name="question" id="n" value="no">No</label>
                 </fieldset>
 
-                <p>
+                <fieldset disabled>
+                    <p>Checkboxes:</p> 
+                    <label for="c1"><input type="checkbox" name="question2" id="c1" value="value1" checked>Check 1</label>
+                    <label for="c2"><input type="checkbox" name="question2" id="c2" value="value2">Check 2</label>
+                </fieldset>
+                
+                <label for="choices">Selection:
+                    <select id="choices" name="name">
+                        <option value="op1">Opção 1</option>
+                        <option value="op2">Opção 2</option>
+                        <option value="op3">Opção 3</option>
+                    </select>
+                </label>
+
+                <div class="center">
                     <button type="submit">OK!</button>
-                </p>
+                    <button type="reset">RESET</button>
+                    <button type="button" disabled>BUTTON</button>
+                </div>
             </form>   
 
             <hr>
 
+            <h2>Tabela</h2>
+
+            <table>
+                <caption>&lt;table> padrão</caption>
+                <tr>
+                    <td style="width: 33.33%;"></td>
+                    <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                    <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>1-1</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                    <td>2-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                    <td>3-2</td>
+                </tr>
+            </table>
+
+            <table class="table-style-2">
+                <caption>&lt;table> com a classe 'table-style-2'.</caption>
+                <tr>
+                    <td style="width: 33.33%;"></td>
+                    <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                    <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>1-1</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                    <td>2-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                    <td>3-2</td>
+                </tr>
+            </table>
+
+            <table class="table-style-3">
+                <caption>&lt;table> com a classe 'table-style-3'.</caption>
+                <tr>
+                    <th style="width: 50%;" scope="row">Cab.-L1</th> 
+                    <td style="width: 50%;">1-1</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                </tr>
+            </table>
+
+            <table class="table-style-4">
+                <caption>&lt;table> com a classe 'table-style-4'.</caption>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                </tr>
+            </table>
+
             <div class="lb"></div> 
+
+            <hr>
 
         </article>
     
@@ -258,3 +360,31 @@
     background-color: rgb(243, 243, 243); }
 
 --> 
+
+<!--
+            <h3>Imagens Responsivas Semânticas</h3> 
+
+            <h4>1 - Alternância de Resolução</h4> 
+
+            <h5>1.1 - 1ª Maneira: Tamanhos e Resoluções Diferentes</h5> 
+
+
+
+            <h5>1.2 - 2ª Maneira: Mesmo Tamanho, Resoluções Diferentes</h5>
+
+
+
+            <h4>2 - Direção de Arte</h4>
+
+            <h5>2.1 - Direção de Arte Junto com Alternância de Resolução de Mesmo Tamanho, mas Resoluções Diferentes</h5>
+
+
+
+            <h5>2.2 - Usando Formatos de Imagem Modernos</h5>
+
+
+
+            <h3>Imagens Responsivas Decorativas</h3>
+
+
+-->

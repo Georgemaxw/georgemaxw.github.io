@@ -90,16 +90,13 @@ nav li {
   margin-bottom: 5px;
   text-align: center;
   text-decoration: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3daeff), color-stop(10%, #33a0ff), color-stop(25%, #2990ff), color-stop(37%, #298dff), color-stop(50%, #2e8fff), color-stop(51%, #1a88ff), color-stop(83%, #33b8ff), to(#3ddfff));
   background: linear-gradient(to bottom, #3daeff 0%, #33a0ff 10%, #2990ff 25%, #298dff 37%, #2e8fff 50%, #1a88ff 51%, #33b8ff 83%, #3ddfff 100%);
 }
 
 .Nav-links a:hover {
   background-color: DeepSkyBlue;
-  background: -webkit-gradient(linear, left top, left bottom, from(#91e0ff), color-stop(10%, #83d6ff), color-stop(25%, #6dc7ff), color-stop(37%, #71c6ff), color-stop(50%, #75c8ff), color-stop(51%, #59bfff), color-stop(83%, #83e4ff), to(#95fbff));
   background: linear-gradient(to bottom, #91e0ff 0%, #83d6ff 10%, #6dc7ff 25%, #71c6ff 37%, #75c8ff 50%, #59bfff 51%, #83e4ff 83%, #95fbff 100%);
   background: linear-gradient(to bottom, #91e0ff 0%, #83d6ff 10%, #6dc7ff 25%, #71c6ff 37%, #75c8ff 50%, #59bfff 51%, #83e4ff 83%, #95fbff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#8fdfff), color-stop(10%, #85d6ff), color-stop(25%, #6bc6ff), color-stop(37%, #70c6ff), color-stop(50%, #75c8ff), color-stop(51%, #57beff), color-stop(83%, #85e4ff), to(#94fbff));
   background: linear-gradient(to bottom, #8fdfff 0%, #85d6ff 10%, #6bc6ff 25%, #70c6ff 37%, #75c8ff 50%, #57beff 51%, #85e4ff 83%, #94fbff 100%);
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#91e0ff+0,83d6ff+10,6dc7ff+25,71c6ff+37,75c8ff+50,59bfff+51,83e4ff+83,95fbff+100 */
   background: #91e0ff;
@@ -259,4 +256,3 @@ footer ul {
   list-style-type: none;
   padding-left: 0px;
 }
-/*# sourceMappingURL=identity.css.map */
