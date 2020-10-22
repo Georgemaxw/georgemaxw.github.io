@@ -14,6 +14,13 @@ $font-monospace: 'Courier New', Courier, monospace;
 $button-height: 48rem;
 $main_column-max_width: 700px;
 
+/* Breakpoints */
+
+$tablet-1: 500px;
+$tablet-2: 766px; /* Viewport to enable 'main_column-max_width'. */
+
+$nav-open: 500px;
+
 /* Cores E Planos De Fundos */
 
 $text-color: black;
@@ -33,13 +40,6 @@ $background-nav: url(../../images/backgrounds/background-nav.png)  center /100% 
 $background-footer-icons: url(../../images/backgrounds/background-footer-icons.png)  center /100% 100%;
 $background-buttom: url(../../images/backgrounds/background-buttom.png);
  
-
-/* Breakpoints */
-
-$tablet-1: 500px;
-$tablet-2: 766px; /* Viewport to enable 'main_column-max_width'. */
-
-$nav-open: 500px;
 
 /*  
 ──────────────────────────────────────────────────────
