@@ -14,6 +14,15 @@ $background-nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,1
 $background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 $background-buttom: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
+/*
+@media (min-width: $pc) {
+    $background-header: url(../../images/backgrounds/background-header.png) !global;
+    $background-nav: url(../../images/backgrounds/background-nav.png)  center /100% 100% !global;
+    $background-footer-icons: url(../../images/backgrounds/background-footer-icons.png)  center /100% 100% !global;
+    $background-buttom: url(../../images/backgrounds/background-buttom.png) !global;
+
+    p{color: red;}
+} */
 /*  
 ──────────────────────────────────────────────────────
 Modelo De Caixa Alternativo Global 
@@ -36,10 +45,10 @@ TODO: Margens
   margin-right: calc(9px + (2vw));
 }
 
-@media (min-width: 766px) {
+@media (min-width: calc(800px + 66px)) {
   .lm, p, dl, footer .footer-icons, form label, h1, h2, h3, h4, h5, h6, pre, hr {
-    margin-left: calc((100% - 700px) / 2);
-    margin-right: calc((100% - 700px) / 2);
+    margin-left: calc((100% - 800px) / 2);
+    margin-right: calc((100% - 800px) / 2);
   }
 }
 
@@ -128,10 +137,10 @@ ul, ol {
   margin-right: calc(9px + (2vw));
 }
 
-@media (min-width: 766px) {
+@media (min-width: calc(800px + 66px)) {
   ul, ol {
-    margin-left: calc(((100% - 700px) / 2) + 16px);
-    margin-right: calc((100% - 700px) / 2);
+    margin-left: calc(((100% - 800px) / 2) + 16px);
+    margin-right: calc((100% - 800px) / 2);
   }
 }
 
@@ -228,7 +237,7 @@ figcaption {
 img, video {
   display: block;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -281,7 +290,7 @@ a:focus {
 TODO: Seções De Layout
 ──────────────────────────────────────────────────────*/
 .header-content-width, main, footer {
-  max-width: 700px;
+  max-width: 800px;
   /* */
   /* Padrão: 960-1300px */
   margin: auto;
@@ -294,7 +303,7 @@ header {
   z-index: 1;
   color: white;
   background-color: #00c8ff;
-  background-image: url(../../images/backgrounds/background-header.png);
+  background-image: url(../../images/backgrounds/background-header-mobile.png);
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /**/
 }
@@ -339,7 +348,7 @@ header #nav-menu {
   left: 0;
   right: 0;
   background-color: #00c8ff;
-  background: url(../../images/backgrounds/background-nav.png) center/100% 100%;
+  background: url(../../images/backgrounds/background-nav-mobile.png) center/100% 100%;
 }
 
 header #nav-menu ul {
@@ -363,14 +372,14 @@ header #nav-menu ul li:last-of-type a span {
   color: white;
 }
 
-@media (min-width: 0) and (max-width: 500px) {
+@media (min-width: 0) and (max-width: 501px) {
   header #nav-menu:target {
     display: flex;
     align-items: center;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   header #id-nav .nav-button-right {
     display: none;
   }
@@ -403,7 +412,7 @@ header #nav-menu ul li:last-of-type a span {
 footer .footer-icons {
   border-radius: 50px;
   background-color: #00c8ff;
-  background: url(../../images/backgrounds/background-footer-icons.png) center/100% 100%;
+  background: url(../../images/backgrounds/background-footer-icons-mobile.png) center/100% 100%;
   padding: 6px 0;
   /* */
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
@@ -498,7 +507,7 @@ form button {
   border-radius: 1000px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background-image: url(../../images/backgrounds/background-buttom.png);
+  background-image: url(../../images/backgrounds/background-buttom-mobile.png);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -599,9 +608,9 @@ table caption {
   margin-top: 6rem;
 }
 
-@media (min-width: 766px) {
+@media (min-width: calc(800px + 66px)) {
   table {
-    max-width: 700px;
+    max-width: 800px;
   }
 }
 
@@ -639,9 +648,9 @@ table caption {
   }
 }
 
-@media (min-width: 766px) {
+@media (min-width: calc(800px + 66px)) {
   .table-style-2 {
-    max-width: 700px;
+    max-width: 800px;
   }
 }
 
