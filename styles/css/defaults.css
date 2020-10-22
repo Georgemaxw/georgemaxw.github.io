@@ -288,7 +288,7 @@ header {
   z-index: 1;
   color: white;
   background-color: #00c8ff;
-  background-image: linear-gradient(to bottom, #8fdfff 0%, #85d6ff 10%, #6bc6ff 25%, #70c6ff 37%, #75c8ff 50%, #57beff 51%, #85d2ff 83%, #ade7ff 100%);
+  background-image: url(../../images/backgrounds/background-header.png);
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /**/
 }
@@ -333,7 +333,7 @@ header #nav-menu {
   left: 0;
   right: 0;
   background-color: #00c8ff;
-  background-image: linear-gradient(to bottom right, #75c8ff 0%, #57beff 10%, #a3ebff 33%, #85e4ff 55%, #c2fff5 90%, #c2fff5 100%);
+  background: url(../../images/backgrounds/background-nav.png) center/100% 100%;
 }
 
 header #nav-menu ul {
@@ -397,8 +397,9 @@ header #nav-menu ul li:last-of-type a span {
 footer .footer-icons {
   border-radius: 50px;
   background-color: #00c8ff;
-  background-image: linear-gradient(to bottom right, #75c8ff 0%, #57beff 10%, #85e4ff 55%, #c2fff5 90%, #c2fff5 100%);
+  background: url(../../images/backgrounds/background-footer-icons.png) center/100% 100%;
   padding: 6px 0;
+  /* */
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
   list-style-type: none;
   display: flex;
@@ -438,10 +439,12 @@ form label input, form label textarea {
   color: #999999;
   width: 100%;
   padding: 8rem 13rem;
-  border: 1px solid #ededed;
+  border: 1px solid #cccccc;
   border-radius: 19px;
   margin-top: 16rem;
-  filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18));
+  /* 
+            border: 1px solid hsl(0, 0%, 93%); 
+            filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18)); <- Traz inconsistências entre os navegadores. */
 }
 
 form label input[type="file"] {
@@ -478,7 +481,7 @@ form select {
   display: block;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  border-radius: 100px;
+  /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
 }
 
 form button {
@@ -489,7 +492,7 @@ form button {
   border-radius: 1000px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background-image: linear-gradient(to bottom right, #c2eeff 0%, #9edfff 20%, #8ad2ff 50%, #66c2ff 74%, #75c8ff 100%);
+  background-image: url(../../images/backgrounds/background-buttom.png);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
