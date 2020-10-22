@@ -12,7 +12,7 @@ $font-smaller: 13rem;
 $font-default: 'Times New Roman', Times, Georgia, serif;
 $font-monospace: 'Courier New', Courier, monospace;
 $button-height: 48rem;
-$main_column-max_width: 800px;
+$main_column-max_width: 800px; /* Padrão: 600-700px. */
 
 /* Breakpoints */
 
@@ -30,25 +30,25 @@ $form-text-color: hsl(0, 0%, 60%);
 $menu-base_color: hsl(193,100%,50%);
 
 $background-body: 0;
+
 /*
 $background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
 $background-nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 $background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$background-buttom: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+$background-button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
-
 
     $background-header: url(../../images/backgrounds/background-header-mobile.png);
     $background-nav: url(../../images/backgrounds/background-nav-mobile.png)  center /100% 100%;
     $background-footer-icons: url(../../images/backgrounds/background-footer-icons-mobile.png)  center /100% 100%;
-    $background-buttom: url(../../images/backgrounds/background-buttom-mobile.png);
-
+    $background-button: url(../../images/backgrounds/background-button-mobile.png);
+ 
 /*
 @media (min-width: $pc) {
     $background-header: url(../../images/backgrounds/background-header.png) !global;
     $background-nav: url(../../images/backgrounds/background-nav.png)  center /100% 100% !global;
     $background-footer-icons: url(../../images/backgrounds/background-footer-icons.png)  center /100% 100% !global;
-    $background-buttom: url(../../images/backgrounds/background-buttom.png) !global;
+    $background-button: url(../../images/backgrounds/background-button.png) !global;
 
     p{color: red;}
 } */
@@ -303,16 +303,21 @@ TODO: Seções De Layout
 ──────────────────────────────────────────────────────*/
 
 .header-content-width, main, footer {
-    max-width: $main_column-max_width; /* */ /* Padrão: 960-1300px */
+    max-width: $main_column-max_width; 
     margin: auto;
 }
 
+.block-hack { /* Hack necessário pois o Safari não aceita 'position: sticky'. */
+    height: 48px;
+}
+
 header {
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    color: $menu-text-color;
+    color: $menu-text-color; 
     background-color: $menu-base_color;
     background-image: $background-header;
     box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
@@ -533,7 +538,7 @@ form {
         border-radius: 1000px;
         margin-top: $vertical_margins;
         margin-bottom: $vertical_margins;
-        background-image: $background-buttom;
+        background-image: $background-button;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15),
