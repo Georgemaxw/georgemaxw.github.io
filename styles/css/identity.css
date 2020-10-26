@@ -3,14 +3,13 @@
 /* 
 ──────────────────────────────────────────────────────
 TODO: 
-──────────────────────────────────────────────────────
-   
-.download {
-    display: flex;
-    justify-content: center;
-} */
+────────────────────────────────────────────────────── */
 .download a {
   display: block;
   width: 180px;
   margin: auto;
+}
+
+.download a + a {
+  margin-top: 15rem;
 }

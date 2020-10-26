@@ -18,7 +18,7 @@ $main_column-max_width: 800px; /* Padrão: 600-700px. */
 
 $tablet-1: 501px;
 $tablet-2: calc(#{$main_column-max_width} + 66px); /* Viewport to enable 'main_column-max_width'. */
-$pc: 1000px;
+/* $pc: 1000px; */
 
 $nav-open: 501px;
 
@@ -548,6 +548,11 @@ table {
         margin-top: 6rem;
         @extend .font-smaller;
     }
+
+    ul, ol { /* <- Regra para caso tenha lista na tabela. */
+        padding-left: 27rem;
+        margin: 0;
+    }
 }
 
 @media (min-width: $tablet-2) {
@@ -555,11 +560,13 @@ table {
         max-width: $main_column-max_width;
     }
 }
+
 /*
 .table-style-1 {
      Estilo padrão. 
 }
 */
+
 .table-style-2 {
     width: 100%;
     max-width: none;
@@ -634,6 +641,14 @@ table {
 
         td {
             text-align: left;
+        }
+
+        td:nth-of-type(1) {
+            margin-top: 16rem;
+        }
+
+        li + li {
+            margin-top: 20rem;
         }
     }
 }
