@@ -220,6 +220,10 @@ pre {
     text-transform: none;
 }
 
+.spaced_items li + li {
+    margin-top: 20rem;
+}
+
 /*  
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
@@ -366,7 +370,7 @@ footer {
         border-radius: 50px;
         background-color: $menu-base_color;
         background: $background-footer-icons;
-        padding: 6px 0 1px; 
+        padding: 6px 0 0px; 
         @extend %margins;
         box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
         list-style-type: none;
