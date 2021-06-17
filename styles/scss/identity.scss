@@ -110,6 +110,12 @@ TODO: Types Table
 }
 
 @media (pointer: coarse), (pointer: none) {
+
+    .table-box {
+        height: 100%;
+        margin-bottom: 38px;
+    }
+
     .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
         position: static;  
     }
