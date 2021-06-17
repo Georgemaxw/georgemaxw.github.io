@@ -91,17 +91,22 @@ TODO: Types Table
   width: 48px;
 }
 
-.types-table th {
+.types-table th, .types-table td {
   line-height: 0px;
 }
 
 .types-table .effect-icon {
   width: 36px;
-  padding-top: 4px;
 }
 
 @media (pointer: coarse), (pointer: none) {
   .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
     position: static;
+  }
+  .types-table .type-icon {
+    width: 24px;
+  }
+  .types-table .effect-icon {
+    width: 20px;
   }
 }
