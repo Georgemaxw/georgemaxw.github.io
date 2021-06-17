@@ -13,3 +13,111 @@ TODO:
 .download a + a {
   margin-top: 15rem;
 }
+
+/*
+.types-table, .types-table tr:nth-of-type(1) th {
+    border-top: 0;
+    //border-bottom: 2px solid;
+}
+
+.types-table, .types-table tr th {
+    border-left: 0;
+}
+
+.types-table tr:nth-of-type(1) th {
+    border-left: 2px solid;
+}
+*/
+.table-box {
+  height: calc(100vh - 195px);
+  margin: auto;
+  margin-bottom: 63px;
+  border: 1px solid #00c8ff;
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  overflow: auto;
+}
+
+.types-table {
+  margin: 0;
+}
+
+.types-table tr:nth-of-type(1) {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 200, 255, 0);
+}
+
+.types-table tr th {
+  /**/
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  outline: 1px solid #00c8ff;
+}
+
+.types-table tr:nth-of-type(1) td {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  outline: 1px solid #00c8ff;
+}
+
+.types-table tr td:nth-of-type(1) {
+  border-left: 0;
+}
+
+.types-table tr td {
+  border-left: 1px solid #d9d9d9;
+}
+
+.types-table tr {
+  border: 0;
+}
+
+.types-table tr td {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.types-table tr:nth-of-type(1) td {
+  border-bottom: 0;
+}
+
+.types-table tr:nth-last-of-type(1) td {
+  border-bottom: 1px solid #00c8ff;
+}
+
+/*
+.types-table, .types-table tr th {
+    border: 0;
+}
+
+.types-table tr:nth-of-type(1) th, .types-table tr:nth-of-type(1) td {
+    border-bottom: 1px solid hsl(193,100%,50%);
+}
+
+.types-table tr th {
+    border-right: 1px solid hsl(0, 0%, 85%);
+}
+
+.types-table tr:nth-of-type(1) th {
+    border-right: 0;
+}
+*/
+.types-table .type-icon {
+  width: 48px;
+}
+
+.types-table th {
+  line-height: 0px;
+}
+
+.types-table .effect-icon {
+  width: 36px;
+  padding-top: 4px;
+}

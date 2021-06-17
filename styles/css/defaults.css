@@ -236,7 +236,7 @@ TODO: Seções De Layout
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
   color: white;
   background-color: #00c8ff;
   background-image: url(../../images/background-header.png);
