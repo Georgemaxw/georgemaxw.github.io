@@ -520,13 +520,13 @@ TODO: Tabelas
 table {
     max-width: calc(100% - 2 * #{$horizontal_margins});
     margin: $vertical_margins auto;
-    border: 1px solid $menu-base_color;
+    border: 2px solid $menu-base_color;
     border-collapse: collapse;
     caption-side: bottom;
 
     th {
         color: $menu-base_color;
-        border: 1px solid $menu-base_color;
+        border: 2px solid $menu-base_color;
     }
 
     tr + tr {
@@ -572,10 +572,10 @@ table {
     width: 100%;
     max-width: none;
     border-width: 0;
-    border-bottom: 1px solid $menu-base_color;
+    border-bottom: 2px solid $menu-base_color;
 
     tr:nth-of-type(1) {
-        border-bottom: 1px solid $menu-base_color;
+        border-bottom: 2px solid $menu-base_color;
     }
 
     th {
