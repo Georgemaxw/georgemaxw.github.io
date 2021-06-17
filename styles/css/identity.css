@@ -103,6 +103,7 @@ TODO: Types Table
   .table-box {
     height: 100%;
     margin-bottom: 38px;
+    border-bottom: 0;
   }
   .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
     position: static;
