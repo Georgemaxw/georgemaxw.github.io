@@ -4,6 +4,8 @@
 ──────────────────────────────────────────────────────
 TODO: 
 ────────────────────────────────────────────────────── */
+
+$tablet-1: 501px; /* Breakpoints */
    
 .download a {
     display: block;
@@ -34,6 +36,7 @@ TODO:
     //width: 92.1%;
     height: calc(100vh - 195px);
     //height: 83.2vh;
+    z-index: 2;
     margin: auto;
     margin-bottom: 63px;
     border: 1px solid hsl(193,100%,50%);
@@ -64,10 +67,6 @@ TODO:
    //background-color: hsl(193,100%,97%);
    //border-bottom: 1px solid hsla(193,100%,50%, 0%);
    outline: 1px solid hsl(193,100%,50%);
-}
-
-.types-table tr:nth-of-type(1) th {
-   //outline: 0;
 }
 
 .types-table tr:nth-of-type(1) td {
@@ -104,33 +103,6 @@ TODO:
     border-bottom: 1px solid hsl(193,100%,50%);
 }
 
-.types-table tr:nth-of-type(1) td {
-    //outline: 1px solid hsl(193,100%,50%); <---
-}
-
-.types-table tr th {
-    //border-right: 1px solid hsl(193,100%,50%);
-    //border-bottom: 1px solid hsl(193,100%,50%);
-}
-
-/*
-.types-table, .types-table tr th {
-    border: 0;
-}
-
-.types-table tr:nth-of-type(1) th, .types-table tr:nth-of-type(1) td {
-    border-bottom: 1px solid hsl(193,100%,50%);
-}
-
-.types-table tr th {
-    border-right: 1px solid hsl(0, 0%, 85%);
-}
-
-.types-table tr:nth-of-type(1) th {
-    border-right: 0;
-}
-*/
-
 .types-table .type-icon {
     width: 48px;
 }
@@ -146,4 +118,10 @@ TODO:
 .types-table .effect-icon {
     width: 36px;
     padding-top: 4px;
+}
+
+@media (max-width: $tablet-1) {
+    .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
+        position: static;  
+    }
 }
