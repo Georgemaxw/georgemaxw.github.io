@@ -70,7 +70,7 @@ textarea, select, button, fieldset, legend, table, tr, td, th, caption {
 
 @media (pointer: coarse), (pointer: none) {
   p {
-    font-size: 19rem;
+    font-size: 10rem;
   }
 }
 
