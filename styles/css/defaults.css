@@ -65,7 +65,7 @@ ul, ol, li, dl, dt, dd, abbr, dfn, sub, sup, pre, var, kbd, samp,
 code, time, address, blockquote, q, cite, figcaption, header,
 nav, main, article, section, aside, footer, form, label, input,
 textarea, select, button, fieldset, legend, table, tr, td, th, caption {
-  font-size: 19rem;
+  font-size: 19px;
 }
 
 header, main, article, section, aside, footer {
