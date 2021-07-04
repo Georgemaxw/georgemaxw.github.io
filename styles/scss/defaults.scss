@@ -98,13 +98,6 @@ textarea, select, button, fieldset, legend, table, tr, td, th, caption {
     font-size: 19rem;
 }
 
-@media (pointer: coarse), (pointer: none) {
-
-    p {
-        font-size: 10rem;
-    }
-}
-
 header, main, article, section, aside, footer {
     font-size: 0;
 }
