@@ -95,7 +95,14 @@ ul, ol, li, dl, dt, dd, abbr, dfn, sub, sup, pre, var, kbd, samp,
 code, time, address, blockquote, q, cite, figcaption, header, 
 nav, main, article, section, aside, footer, form, label, input, 
 textarea, select, button, fieldset, legend, table, tr, td, th, caption { 
-    font-size: 19px;
+    font-size: 19rem;
+}
+
+@media (pointer: coarse), (pointer: none) {
+
+    p {
+        font-size: 19rem;
+    }
 }
 
 header, main, article, section, aside, footer {
