@@ -7,6 +7,14 @@ TODO: Variables
 /* Breakpoint */
 /* 
 ──────────────────────────────────────────────────────
+TODO: Seções De Layout
+────────────────────────────────────────────────────── */
+.wide-center-column {
+  max-width: 1099px;
+}
+
+/* 
+──────────────────────────────────────────────────────
 TODO: Download Page
 ────────────────────────────────────────────────────── */
 .download a {
@@ -105,6 +113,9 @@ TODO: Types Table
     margin-bottom: 38px;
     border-bottom: 0;
   }
+}
+
+@media (pointer: coarse), (pointer: none) {
   .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
     position: static;
   }
