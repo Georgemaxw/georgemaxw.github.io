@@ -695,7 +695,7 @@ figcaption {
 }
 
 img, video {
-    
+    width: auto;
 }
 
 @media (min-width: $tablet-1) {
@@ -752,12 +752,12 @@ a:focus {
     display: none;
 }
 
-.img-large {
+.central_img {
     width: 100%;
 }
 
 @media (min-width: $tablet-1) {
-    .img-large {
+    .central_img {
         width: calc(100% - (2 * #{$horizontal_margins}) );
         display: block;
         margin-left: auto;
