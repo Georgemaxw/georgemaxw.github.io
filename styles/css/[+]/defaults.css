@@ -8,7 +8,6 @@ TODO: Variáveis
 /* Padrão: 600-700px. */
 /* Breakpoints */
 /* Viewport to enable 'main_column-max_width'. */
-/* $pc: 1000px; */
 /* Cores E Planos De Fundos */
 /*
 $background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -40,8 +39,9 @@ TODO: Margens
 
 @media (min-width: calc(800px + 66px)) {
   .lm, p, dl, footer .footer-icons, form label, h1, h2, h3, h4, h5, h6, pre, hr {
-    /* margin-left: 30px;
-        margin-right: calc(((100% - 800px) / 2) + 30px) ; */
+    /**/
+    margin-left: calc(((100% - 800px) / 2) + 30px);
+    margin-right: calc(((100% - 800px) / 2) + 30px);
   }
 }
 
@@ -79,7 +79,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-  /* text-transform: capitalize; */
+  text-transform: capitalize;
 }
 
 h1 {
@@ -138,10 +138,6 @@ ul, ol {
   }
 }
 
-p, li, ul, ol, dl, dt, dd {
-  line-height: 1.5;
-}
-
 dd {
   margin-left: 40rem;
 }
@@ -173,7 +169,7 @@ pre {
 }
 
 .font-smaller, table caption {
-  font-size: 14rem;
+  font-size: 13rem;
 }
 
 .underline {
@@ -213,10 +209,6 @@ pre {
   text-transform: none;
 }
 
-.spaced_items li + li {
-  margin-top: 20rem;
-}
-
 /*  
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
@@ -231,31 +223,31 @@ TODO: Seções De Layout
   height: 48px;
 }
 
-.header-nav {
+header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1;
   color: white;
   background-color: #00c8ff;
-  background-image: url(../../images/background-header.png);
+  background-image: url(../../images/backgrounds/background-header.png);
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /**/
 }
 
-.header-nav #id-nav {
+header #id-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-nav #id-nav h1 {
+header #id-nav h1 {
   margin: 0;
   font-weight: normal;
 }
 
-.header-nav #id-nav a {
+header #id-nav a {
   height: 48rem;
   color: inherit;
   text-decoration: none;
@@ -264,20 +256,19 @@ TODO: Seções De Layout
   align-items: center;
 }
 
-.header-nav #id-nav .logo {
+header #id-nav .logo {
   margin-left: 13px;
 }
 
-.header-nav #id-nav .logo img {
-  width: 22px;
+header #id-nav .logo img {
   margin-right: 8px;
 }
 
-.header-nav .button-left {
+header .button-left {
   margin-right: -13px;
 }
 
-.header-nav #nav-menu {
+header #nav-menu {
   display: none;
   position: fixed;
   top: 0;
@@ -285,76 +276,73 @@ TODO: Seções De Layout
   left: 0;
   right: 0;
   background-color: #00c8ff;
-  background: url(../../images/background-nav.png) center/100% 100%;
+  background: url(../../images/backgrounds/background-nav.png) center/100% 100%;
 }
 
-.header-nav #nav-menu ul {
+header #nav-menu ul {
   width: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.header-nav #nav-menu ul li {
+header #nav-menu ul li {
   border-top: 1px solid white;
 }
 
-.header-nav #nav-menu ul li:last-of-type {
+header #nav-menu ul li:last-of-type {
   border-bottom: 1px solid white;
 }
 
-.header-nav #nav-menu ul li:last-of-type a span {
+header #nav-menu ul li:last-of-type a span {
   font-size: 33rem;
   text-align: center;
   color: white;
 }
 
 @media (min-width: 0) and (max-width: 501px) {
-  .header-nav #nav-menu:target {
+  header #nav-menu:target {
     display: flex;
     align-items: center;
   }
 }
 
 @media (min-width: 501px) {
-  .header-nav #id-nav .nav-button-right {
+  header #id-nav .nav-button-right {
     display: none;
   }
-  .header-nav #nav-menu {
+  header #nav-menu {
     position: static;
     display: inline-block;
     background: 0;
   }
-  .header-nav #nav-menu ul, .header-nav #nav-menu li {
+  header #nav-menu ul, header #nav-menu li {
     display: inline-block;
   }
-  .header-nav #nav-menu ul {
+  header #nav-menu ul {
     display: flex;
     justify-content: space-between;
   }
-  .header-nav #nav-menu ul li {
+  header #nav-menu ul li {
     border-width: 0;
   }
-  .header-nav #nav-menu ul li + li {
+  header #nav-menu ul li + li {
     margin-left: 20px;
   }
-  .header-nav #nav-menu ul li:nth-last-of-type(2) {
+  header #nav-menu ul li:nth-last-of-type(2) {
     margin-right: 13px;
   }
-  .header-nav #nav-menu ul li:last-of-type {
+  header #nav-menu ul li:last-of-type {
     display: none;
   }
-}
-
-footer {
-  margin-top: calc(2 * 16rem);
 }
 
 footer .footer-icons {
   border-radius: 50px;
   background-color: #00c8ff;
-  background: url(../../images/background-footer-icons.png) center/100% 100%;
-  padding: 6px 0 0px;
+  background: url(../../images/backgrounds/background-footer-icons.png) center/100% 100%;
+  padding: 6px 0;
+  /* */
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
   list-style-type: none;
   display: flex;
@@ -369,7 +357,7 @@ footer .footer-icons img {
 }
 
 footer .copyright {
-  font-size: 14rem;
+  font-size: 13rem;
   text-indent: 0;
   text-align: center;
   /*padding: 6px 0;
@@ -447,7 +435,7 @@ form button {
   border-radius: 1000px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background-image: url(../../images/background-button.png);
+  background-image: url(../../images/backgrounds/background-button.png);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -504,7 +492,7 @@ form input[type="radio"]:focus, form input[type="checkbox"]:focus {
 form select:focus {
   outline: 0px dotted;
   border: 1px solid #00c8ff;
-  /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+  border-radius: 100px;
 }
 
 form button:focus {
@@ -545,13 +533,7 @@ table td {
 }
 
 table caption {
-  margin-top: calc(16rem/2);
-}
-
-table ul, table ol {
-  /* <- Regra para caso tenha lista na tabela. */
-  padding-left: 27rem;
-  margin: 0;
+  margin-top: 6rem;
 }
 
 @media (min-width: calc(800px + 66px)) {
@@ -588,7 +570,7 @@ table ul, table ol {
   border-width: 0;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 500px) {
   .table-style-2 {
     width: auto;
   }
@@ -614,7 +596,7 @@ table ul, table ol {
 }
 
 /*----- .table-style-4 -----*/
-@media (min-width: 0) and (max-width: 501px) {
+@media (min-width: 0) and (max-width: 500px) {
   .table-style-4 {
     border-width: 0;
   }
@@ -635,15 +617,9 @@ table ul, table ol {
   .table-style-4 td {
     text-align: left;
   }
-  .table-style-4 td:nth-of-type(1) {
-    margin-top: 16rem;
-  }
-  .table-style-4 li + li {
-    margin-top: 20rem;
-  }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 500px) {
   .table-style-4 {
     border-width: 0;
   }
@@ -660,7 +636,7 @@ table ul, table ol {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Others
+TODO: Outros
 ────────────────────────────────────────────────────── */
 body {
   min-width: 300px;
@@ -673,20 +649,21 @@ hr {
 }
 
 figcaption {
-  margin-top: calc(16rem/2);
   text-align: center;
   font-size: 16rem;
 }
 
-@media (min-width: 501px) {
-  img, video {
-    /*
-    max-width: $main_column-max_width;
-        max-width: calc(100% - 2 * calc(((100% - 800px) / 2) + 30px) );
-        margin-left: calc(((100% - 800px) / 2) + 30px) ;
-        margin-right: calc(((100% - 800px) / 2) + 30px) ;
-*/
-  }
+img, video {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+video {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
 audio {
@@ -703,8 +680,7 @@ a:focus {
 }
 */
 .center-block {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .lb {
@@ -728,75 +704,15 @@ a:focus {
   border: 1px solid black;
 }
 
-.hidden {
-  display: none;
-}
-
-.img-large {
-  width: 100%;
-}
-
-@media (min-width: 501px) {
-  .img-large {
-    width: calc(100% - (2 * calc(8px + (2.5vw))));
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /* ---------------------------- */
-/*  
-──────────────────────────────────────────────────────
-TODO: Gallery
-────────────────────────────────────────────────────── */
-.gallery {
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-@media (pointer: fine) {
-  .gallery {
-    overflow-x: hidden;
-  }
-  .gallery:hover {
-    overflow-x: auto;
-  }
-}
-
-.gallery img, .gallery picture {
-  width: 94%;
-}
-
 /* 
-
-.gallery {
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-
-.gallery:hover {
-    overflow-x: auto;
-}
-
-@media (pointer: coarse), (pointer: none) {
-
-    .gallery {
-        overflow-x: auto;
-    }
-}
-
-
-
-
-
 
 MEDIA 
 
 Maior que mobile:
 
-input[type="file"] {
-    color: $form-text-color;
-}
+    input[type="file"] {
+        color: $form-text-color;
+    }
 
 */

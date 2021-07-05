@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- pt-br -->
+<html lang="pt-br"> <!-- en -->
 <head>
-    <title>Game Site</title>
+    <title>Site</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="George Maxwell">
     <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link href='styles/css/normalize.css' rel='stylesheet'>
+    <link href='styles/css/normalize.css' rel='stylesheet'><!---->  
     <link href='styles/css/gmes-normalize.css' rel='stylesheet'>
     <link href='styles/css/defaults.css' rel='stylesheet'>
-    <link href='styles/css/identity.css' rel='stylesheet'><!---->
+    <link href='styles/css/identity.css' rel='stylesheet'>
 </head>
 <body>
 
     <div class="block-hack"></div> <!-- Hack necessário pois o Safari não aceita 'position: sticky'. -->
-
+    
     <header>
         <div class="header-nav">
             <div class="header-content-width">
@@ -24,46 +24,312 @@
                 <nav id="id-nav">
                 
                     <h1><a href="index.html" class="logo"><img src="images/icon-logo.svg" alt="Logo">Website</a></h1>
-
+                    
                     <a href="#nav-menu" class="nav-button-right"><img src="images/icon-menu.svg" alt="Menu button"></a>
                 
                     <div id="nav-menu">
                         <ul>
-                            <li><a href="+info.html">+Info &nbsp;</a></li>
-                            <li><a href="requirements.html">Requirements</a></li>
-                            <li><a href="download.html">Download</a></li>
-                            <li><a href="types.html">Types</a></li>
+                            <li><a href="#ul1">Link 1</a>
+    <!--
+                                <ul id="ul1">
+                                    <li><a href="">Link 1</a></li>
+                                    <li><a href="">Link 2</a></li>
+                                    <li><a href="">Link 3</a></li>
+                                </ul>
+    -->
+                            </li>
+                            <li><a href="">Link 2</a></li>
+                            <li><a href="">Link 3</a></li>
+                            <li><a href="">Link 4</a></li>
                             <li><a href="" aria-label="Fechar"><span>×</span></a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
-        </div>    
+        </div>
     </header>
 
     <main>
-
+<!---->
         <article>
 
-            <section>
-                
-                <h2 class="hidden">Presentation</h2>
-
-                <video controls preload="" poster="images/video-poster.png" loop>
-                    <source src="videos/trailer.mp4" type="video/mp4">
-                    <!--<source src="videos/trailer.webm" type="video/webm">
-                    
-                    <track src="webvtt/Subtitle-pt.vtt" kind="subtitles" srclang="pt">
-                    <track src="webvtt/Subtitle-en.vtt" kind="subtitles" srclang="en">-->
-                </video>
+            <h1>Título 1</h1>
+            <h2>Título 2</h2>
+            <h3>Título 3</h3>
+            <h4>Título 4</h4>
+            <h5>Título 5</h5>
+            <h6>Título 6</h6>
             
-                <p>Aqui fica a descrição do jogo. 6</p>
+            <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo commodi ea corporis dolores voluptatem neque, dolore laboriosam pariatur maxime fuga ullam tempora totam quo voluptatum. Ut aperiam ipsum quod.</p>
+            <p>Sea amet justo at ipsum sit. Sit consetetur et sed eirmod rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor magna accusam. Sed dolor rebum et sanctus labore diam diam, voluptua invidunt duo dolor voluptua voluptua et kasd. Vero et at magna tempor justo eirmod. Ea est sadipscing no kasd ut diam sadipscing.</p>
 
-                <p>Ok!</p>
+            <p>&lt;abbr>: Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
 
-            </section>
+            <p>&lt;dfn>: <dfn>Firefox</dfn> é o navegador criado pela Fundação Mozilla.</p>
+
+            <pre>Elemento   &lt;pre>.</pre>
+
+            <p>Tags de PC: <br>
+                <var>x</var>, <kbd>Ctrl</kbd>, <samp>output</samp>, <code>if(x == 1){ ... }</code>
+            </p>
+            
+            <p>&lt;address> e &lt;a>: </p><address class="lm"><a href="mailto:jim@rock.com">jim@rock.com</a></address>
+
+            <p>&lt;cite>: Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/">
+                    <cite>home da MDN</cite></a> e veja: ...
+            </p>
+
+            <p>Lista com a classe 'spaced_items':</p>
+            <ul class="spaced_items">
+                <li>Item da lista</li>
+                <li>Item da lista</li>
+                <li>Item da lista</li>
+            </ul>
+
+            <ol>
+                <li>Item da lista</li>
+                <li>Item da lista</li>
+                <li>Item da lista</li>
+            </ol>
+
+            <dl>
+                <dt>Termo de descrição 1</dt>
+                <dd>Definição de descrição 1</dd>
+
+                <dt>Termo de descrição 2</dt>
+                <dd>Definição de descrição 2-1</dd>
+                <dd>Definição de descrição 2-2</dd>
+            </dl>
+
+            <p>Classes:  <span class="underline">underline</span>,  <span class="bold">bold</span>, 
+                <span class="italic">italic</span>, e <span class="font-small">font-small</span>.</p>
+
+            <p class="justify">Classe: justify. Texto genérico de demonstração para treinamento, ou produção.</p>
+
+            <p class="font-monospace">Classe 'font-monospace'. Texto genérico de demonstração.</p>
+
+            <h2 class="left lm no-capitalize">Classes 'left', 'lm', e 'no-capitalize'</h2>
+
+            <p class="center">Classe 'center'. Texto genérico de demonstração.</p>
+
+            <p class="right">Classe 'right'. Texto genérico de demonstração.</p>
+
+            <hr>
+
+            <h2>Imagens E Vídeos</h2>
+
+            <p>(Os estilos e classes das imagens devem ser usados nos vídeos da mesma maneira).</p>
+
+            <p>Padrão:</p>
+
+            <img src="images/img-pc.png" alt="Descrição">
+
+            <p>Imagem com 'width: 100%':</p>
+            
+            <img src="images/img-pc.png" alt="Descrição" style="width: 100%">
+
+            <p>Imagem com a classe 'img-large':</p>
+            
+            <img src="images/img-pc.png" alt="Descrição" class="img-large">
+
+            <hr>
+
+            <p>Imagem com 'display: block' e a classe 'center-block':</p>
+            
+            <img src="images/img-pc.png" alt="Descrição" style="display: block" class="center-block">
+        
+            <div class="lb"></div>
+
+            <img src="images/img-pc.png" alt="Descrição" style="width: 33.3%">
+            <img src="images/img-pc.png" alt="Descrição" style="width: 33.3%">
+            <img src="images/img-pc.png" alt="Descrição" style="width: 33.3%">
+
+            <img src="images/img-pc.png" alt="Descrição" style="width: 33.3%">
+            <img src="images/img-pc.png" alt="Descrição" style="width: 33.3%">
+            <img src="images/img-pc.png" alt="Descrição" style="width: 33.3%">
+
+            <div class="lb"></div>
+
+            <img src="images/img-pc.png" alt="Descrição" class="">
+
+            <div class="lm">
+                <img src="images/img-pc.png" alt="Descrição" class="">
+            </div>
+            
+
+            <div class="lb"></div>
+
+            <figure>
+                <img src="images/img-pc.png" alt="Descrição">
+                <figcaption>Legenda da figura</figcaption>
+            </figure>
+
+            <p>Vídeo com 'width: 100%':</p>
+
+            <video controls preload="auto" poster="images/video-poster.png" autoplay loop muted class="line" style="width: 100%">
+                <source src="videos/trailer.mp4" type="video/mp4">
+                <source src="videos/trailer.webm" type="video/webm">
+                
+                <track src="webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                <track src="webvtt/subtitle-en.vtt" kind="subtitles" srclang="en">
+            </video>
+
+            <hr>
+
+            <h2>Áudios</h2>
+
+            <p>Áudio com a classe 'center-block':</p>
+
+            <audio controls preload="auto" loop class="center-block">
+                <source src="audios/exemplo.mp3" type="audio/mp3">
+                <source src="audios/exemplo.ogg" type="audio/ogg">
+                    
+                    <p> Seu navegador não suporta áudio em HTML5. Aqui está um <a href="audios/exemplo.mp3">link para o áudio</a>.</p>
+            </audio> 
+
+            <div class="lb2"></div> 
+
+            <hr>
+
+            <h2>Formulários</h2>
+
+            <form action="/my-handling-form-page" method="post">
+
+                <label for="name">
+                    First Name: <strong><abbr title="required">*</abbr></strong>
+                    <!--<input type="text" value="Valor" id="name" name="user_name" autofocus>-->
+                </label>
+                
+                <label for="name2">
+                    Last Name:
+                    <input type="text" value="Valor" id="name2" name="user_name">
+                </label>
+
+                <label for="mail">
+                    E-mail:
+                    <input type="email" id="mail" name="user_mail" placeholder="abc@gmail.com">
+                </label>
+
+                <label for="file">
+                    <input type="file" name="file" id="file" accept="image/*" multiple>
+                </label>
+
+                <label for="msg">
+                    Message:
+                    <textarea id="msg" name="user_message" class="textarea-4l" spellcheck="true">Textarea com a classe 'textarea-4l'.</textarea>
+                </label>
+                    
+                <fieldset>
+                    <p>Option buttons: <strong><abbr title="required">*</abbr></strong></p> 
+                    <label for="y"><input type="radio" name="question" id="y" value="yes" checked>Yes</label>
+                    <label for="n"><input type="radio" name="question" id="n" value="no">No</label>
+                </fieldset>
+
+                <fieldset disabled>
+                    <p>Checkboxes:</p> 
+                    <label for="c1"><input type="checkbox" name="question2" id="c1" value="value1" checked>Check 1</label>
+                    <label for="c2"><input type="checkbox" name="question2" id="c2" value="value2">Check 2</label>
+                </fieldset>
+                
+                <label for="choices">Selection:
+                    <select id="choices" name="name">
+                        <option value="op1">Opção 1</option>
+                        <option value="op2">Opção 2</option>
+                        <option value="op3">Opção 3</option>
+                    </select>
+                </label>
+
+                <div class="center">
+                    <button type="submit">OK!</button>
+                    <button type="reset">RESET</button>
+                    <button type="button" disabled>BUTTON</button>
+                </div>
+            </form>   
+
+            <hr>
+
+            <h2>Tabela</h2>
+
+            <table>
+                <caption>&lt;table> padrão</caption>
+                <tr>
+                    <td style="width: 33.33%;"></td>
+                    <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                    <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>1-1</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                    <td>2-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                    <td>3-2</td>
+                </tr>
+            </table>
+
+            <table class="table-style-2">
+                <caption>&lt;table> com a classe 'table-style-2'.</caption>
+                <tr>
+                    <td style="width: 33.33%;"></td>
+                    <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                    <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>1-1</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                    <td>2-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                    <td>3-2</td>
+                </tr>
+            </table>
+
+            <table class="table-style-3">
+                <caption>&lt;table> com a classe 'table-style-3'.</caption>
+                <tr>
+                    <th style="width: 50%;" scope="row">Cab.-L1</th> 
+                    <td style="width: 50%;">1-1</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                </tr>
+            </table>
+
+            <table class="table-style-4">
+                <caption>&lt;table> com a classe 'table-style-4'.</caption>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                </tr>
+            </table>
+
+            <div class="lb"></div> 
+
+            <hr>
 
             <section>
 
@@ -116,15 +382,12 @@
                 </div>
 
             </section>
-<!--
-            <figure>
-                <img src="images/img-pc.png" alt="Descrição da imagem">
-                <figcaption>Legenda da figura</figcaption>
-            </figure>
--->
+
         </article>
     
-        <aside></aside>
+        <aside>
+            <p>&lt;aside></p>
+        </aside>
 
     </main>
 
@@ -140,14 +403,14 @@
                     </ul>-->
             <!--<p>Follow us on:</p>-->
     
-            <ul class="footer-icons">
-                <li><a href="mailto:support@company.com.br"><img src="images/icon-mail.svg" alt=""></a></li>  
-                <li><a href=""><img src="images/icon-facebook.svg" alt=""></a></li>  
-                <li><a href=""><img src="images/icon-youtube.svg" alt=""></a></li> 
-                <li><a href=""><img src="images/icon-twitter.svg" alt=""></a></li> 
-                <li><a href=""><img src="images/icon-instagram.svg" alt=""></a></li>
-                <li><a href=""><img src="images/icon-twitch.svg" alt=""></a></li>
-            </ul>
+                <ul class="footer-icons">
+                    <li><a href="mailto:support@company.com.br"><img src="images/icon-mail.svg" alt=""></a></li>  
+                    <li><a href=""><img src="images/icon-facebook.svg" alt=""></a></li>  
+                    <li><a href=""><img src="images/icon-youtube.svg" alt=""></a></li> 
+                    <li><a href=""><img src="images/icon-twitter.svg" alt=""></a></li> 
+                    <li><a href=""><img src="images/icon-instagram.svg" alt=""></a></li>
+                    <li><a href=""><img src="images/icon-twitch.svg" alt=""></a></li>
+                </ul>
     
             <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
     
@@ -158,6 +421,10 @@
     </footer>
 
     <!-- TODO: Fim -->
+
+
+
+
     
 </body>
 </html>
@@ -186,3 +453,31 @@
     background-color: rgb(243, 243, 243); }
 
 --> 
+
+<!--
+            <h3>Imagens Responsivas Semânticas</h3> 
+
+            <h4>1 - Alternância de Resolução</h4> 
+
+            <h5>1.1 - 1ª Maneira: Tamanhos e Resoluções Diferentes</h5> 
+
+
+
+            <h5>1.2 - 2ª Maneira: Mesmo Tamanho, Resoluções Diferentes</h5>
+
+
+
+            <h4>2 - Direção de Arte</h4>
+
+            <h5>2.1 - Direção de Arte Junto com Alternância de Resolução de Mesmo Tamanho, mas Resoluções Diferentes</h5>
+
+
+
+            <h5>2.2 - Usando Formatos de Imagem Modernos</h5>
+
+
+
+            <h3>Imagens Responsivas Decorativas</h3>
+
+
+-->

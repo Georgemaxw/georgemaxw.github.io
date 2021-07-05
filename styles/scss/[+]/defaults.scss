@@ -8,7 +8,7 @@ TODO: Variáveis
 $horizontal_margins: calc(8px + (2.5vw)); /* Apple: 16px em 320w, e 22px em 736w. */
 $vertical_margins: 16rem;
 $font-small: 16rem;
-$font-smaller: 14rem;
+$font-smaller: 13rem;
 $font-default: 'Times New Roman', Times, Georgia, serif;
 $font-monospace: 'Courier New', Courier, monospace;
 $button-height: 48rem;
@@ -16,9 +16,9 @@ $main_column-max_width: 800px; /* Padrão: 600-700px. */
 
 /* Breakpoints */
 
-$tablet-1: 501px;
+$tablet-1: 500px;
 $tablet-2: calc(#{$main_column-max_width} + 66px); /* Viewport to enable 'main_column-max_width'. */
-/* $pc: 1000px; */
+$pc: 1000px;
 
 $nav-open: 501px;
 
@@ -38,10 +38,10 @@ $background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,
 $background-button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
 
-    $background-header: url(../../images/background-header.png);
-    $background-nav: url(../../images/background-nav.png)  center /100% 100%;
-    $background-footer-icons: url(../../images/background-footer-icons.png)  center /100% 100%;
-    $background-button: url(../../images/background-button.png);
+    $background-header: url(../../images/backgrounds/background-header.png);
+    $background-nav: url(../../images/backgrounds/background-nav.png)  center /100% 100%;
+    $background-footer-icons: url(../../images/backgrounds/background-footer-icons.png)  center /100% 100%;
+    $background-button: url(../../images/backgrounds/background-button.png);
 
 /*  
 ──────────────────────────────────────────────────────
@@ -68,8 +68,9 @@ TODO: Margens
 
 @media (min-width: $tablet-2) {
     .lm {
-        /* margin-left: 30px;
-        margin-right: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ; */
+        /**/
+        margin-left: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ;
+        margin-right: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ;
     }
 }
 
@@ -109,7 +110,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 { 
     text-align: center; 
-    /* text-transform: capitalize; */
+    text-transform: capitalize;
     @extend .lm;
 }
 
@@ -138,10 +139,6 @@ ul, ol {
         margin-left: calc(((100% - #{$main_column-max_width}) / 2) + 60px) ;
         margin-right: calc((100% - #{$main_column-max_width}) / 2) ;
     }
-}
-
-p, li, ul, ol, dl, dt, dd {
-    line-height: 1.5;
 }
 
 dl {
@@ -220,10 +217,6 @@ pre {
     text-transform: none;
 }
 
-.spaced_items li + li {
-    margin-top: 20rem;
-}
-
 /*  
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
@@ -243,7 +236,7 @@ TODO: Seções De Layout
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1;
     color: $menu-text-color; 
     background-color: $menu-base_color;
     background-image: $background-header;
@@ -272,7 +265,6 @@ TODO: Seções De Layout
             margin-left: 13px;
 
             img {
-                width: 22px;
                 margin-right: 8px;
             }
         }
@@ -365,14 +357,13 @@ TODO: Seções De Layout
 
 
 footer {
-    margin-top: calc(2 * #{$vertical_margins});
 
     .footer-icons {
         border-radius: 50px;
         background-color: $menu-base_color;
         background: $background-footer-icons;
-        padding: 6px 0 0px; 
-        @extend %margins;
+        padding: 6px 0; 
+        @extend %margins; /* */
         box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
         list-style-type: none;
         display: flex;
@@ -504,7 +495,7 @@ form {
     select:focus {
         outline: 0px dotted;
         border: 1px solid $menu-base_color;
-        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+        border-radius: 100px;
     }
 
     button:focus {
@@ -546,13 +537,8 @@ table {
     }
 
     caption {
-        margin-top: calc(#{$vertical_margins}/2); 
+        margin-top: 6rem;
         @extend .font-smaller;
-    }
-
-    ul, ol { /* <- Regra para caso tenha lista na tabela. */
-        padding-left: 27rem;
-        margin: 0;
     }
 }
 
@@ -561,13 +547,11 @@ table {
         max-width: $main_column-max_width;
     }
 }
-
 /*
 .table-style-1 {
      Estilo padrão. 
 }
 */
-
 .table-style-2 {
     width: 100%;
     max-width: none;
@@ -643,14 +627,6 @@ table {
         td {
             text-align: left;
         }
-
-        td:nth-of-type(1) {
-            margin-top: 16rem;
-        }
-
-        li + li {
-            margin-top: 20rem;
-        }
     }
 }
 
@@ -674,7 +650,7 @@ table {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Others
+TODO: Outros
 ────────────────────────────────────────────────────── */
 
 body {
@@ -689,25 +665,20 @@ hr {
 }
 
 figcaption {
-    margin-top: calc(#{$vertical_margins}/2); 
     text-align: center;
     font-size: $font-small;  
 }
 
 img, video {
-    
+    width: 100%;
+    max-width: $main_column-max_width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (min-width: $tablet-1) {
-
-    img, video {   
-        /*
-    max-width: $main_column-max_width;
-        max-width: calc(100% - 2 * calc(((100% - #{$main_column-max_width}) / 2) + 30px) );
-        margin-left: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ;
-        margin-right: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ;
-*/
-    }
+video {
+    margin-top: $vertical_margins;
+    margin-bottom: $vertical_margins;
 }
 
 audio {
@@ -725,8 +696,7 @@ a:focus {
 */
 
 .center-block {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .lb { /* Line break */
@@ -752,46 +722,7 @@ a:focus {
     display: none;
 }
 
-.img-large {
-    width: 100%;
-}
-
-@media (min-width: $tablet-1) {
-    .img-large {
-        width: calc(100% - (2 * #{$horizontal_margins}) );
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 /* ---------------------------- */
-
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Gallery
-────────────────────────────────────────────────────── */
-
-.gallery {
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-@media (pointer: fine) {
-
-    .gallery {
-        overflow-x: hidden;
-    }
-    
-    .gallery:hover {
-        overflow-x: auto;
-    }
-}
-
-.gallery img, .gallery picture {
-    width: 94%;
-}
 
 
 
@@ -803,33 +734,12 @@ TODO: Gallery
 
 /* 
 
-.gallery {
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-
-.gallery:hover {
-    overflow-x: auto;
-}
-
-@media (pointer: coarse), (pointer: none) {
-
-    .gallery {
-        overflow-x: auto;
-    }
-}
-
-
-
-
-
-
 MEDIA 
 
 Maior que mobile:
 
-input[type="file"] {
-    color: $form-text-color;
-}
+    input[type="file"] {
+        color: $form-text-color;
+    }
 
 */
