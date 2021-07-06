@@ -260,6 +260,11 @@ TODO: Seções De Layout
 
             li {
                 border-top: 1px solid $menu-text-color;
+
+                ul { // ------ Subtópicos ------
+                    display: none;
+                    background-color: hsla(0, 0%, 0%, 0.10);
+                }
             }
 
             li:last-of-type {
@@ -284,6 +289,8 @@ TODO: Seções De Layout
             display: flex;
             align-items: center;
         }
+
+
     }
 
     @media (min-width: $nav-open) { 

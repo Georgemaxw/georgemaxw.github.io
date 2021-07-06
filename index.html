@@ -29,18 +29,145 @@
                 
                     <div id="nav-menu">
                         <ul>
-                            <li><a href="#ul1">Link 1</a>
-    <!--
-                                <ul id="ul1">
-                                    <li><a href="">Link 1</a></li>
-                                    <li><a href="">Link 2</a></li>
-                                    <li><a href="">Link 3</a></li>
+                            <li><a onclick="
+
+                            var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
+
+                            // console.log(categories_anchors)
+
+                            // console.log(this === categories_anchors[0])
+                            
+                            for(var i = 0; i < categories_anchors.length; i++) {
+                                if(this === categories_anchors[i]) {
+                                    var ul_index = i
+                                    // console.log(i + 1 +'º <a>!')
+                                    break
+                                }
+                            }
+                            
+//-------------------------------------------------------------------------------------------------
+
+                            var array = document.querySelectorAll('#nav-menu ul ul')
+                            var el = array[ul_index]
+
+                            //console.log(el === )
+                            
+                            
+                            if(el.style.display !== 'block') { 
+
+                                for(var i = 0; i < array.length; i++) {
+                                    array[i].style = 'display: none'
+                                }
+                                
+                                el.style = 'display: block'
+
+                            }else{
+                                el.style = 'display: none'
+                            }
+                                
+                                ">Link 1</a>
+
+                                <ul>
+                                    <li><a href="">Link 1.1</a></li>
+                                    <li><a href="">Link 1.2</a></li>
+                                    <li><a href="">Link 1.3</a></li>
                                 </ul>
-    -->
+    
                             </li>
-                            <li><a href="">Link 2</a></li>
-                            <li><a href="">Link 3</a></li>
-                            <li><a href="">Link 4</a></li>
+
+                            <li><a onclick="
+
+                            var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
+
+                            // console.log(categories_anchors)
+
+                            // console.log(this === categories_anchors[0])
+                            
+                            for(var i = 0; i < categories_anchors.length; i++) {
+                                if(this === categories_anchors[i]) {
+                                    var ul_index = i
+                                    // console.log(i + 1 +'º <a>!')
+                                    break
+                                }
+                            }
+                            
+//-------------------------------------------------------------------------------------------------
+
+                            var array = document.querySelectorAll('#nav-menu ul ul')
+                            var el = array[ul_index]
+
+                            //console.log(el === )
+                            
+                            
+                            if(el.style.display !== 'block') { 
+
+                                for(var i = 0; i < array.length; i++) {
+                                    array[i].style = 'display: none'
+                                }
+                                
+                                el.style = 'display: block'
+
+                            }else{
+                                el.style = 'display: none'
+                            }
+                                
+                                ">Link 2</a>
+
+                                <ul>
+                                    <li><a href="">Link 2.1</a></li>
+                                    <li><a href="">Link 2.2</a></li>
+                                    <li><a href="">Link 2.3</a></li>
+                                </ul>
+    
+                            </li>
+
+                            <li><a onclick="
+
+                                var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
+    
+                                // console.log(categories_anchors)
+    
+                                // console.log(this === categories_anchors[0])
+                                
+                                for(var i = 0; i < categories_anchors.length; i++) {
+                                    if(this === categories_anchors[i]) {
+                                        var ul_index = i
+                                        // console.log(i + 1 +'º <a>!')
+                                        break
+                                    }
+                                }
+                                
+    //-------------------------------------------------------------------------------------------------
+    
+                                var array = document.querySelectorAll('#nav-menu ul ul')
+                                var el = array[ul_index]
+    
+                                //console.log(el === )
+                                
+                                
+                                if(el.style.display !== 'block') { 
+    
+                                    for(var i = 0; i < array.length; i++) {
+                                        array[i].style = 'display: none'
+                                    }
+                                    
+                                    el.style = 'display: block'
+    
+                                }else{
+                                    el.style = 'display: none'
+                                }
+                                    
+                                    ">Link 3</a>
+    
+                                    <ul>
+                                        <li><a href="">Link 3.1</a></li>
+                                        <li><a href="">Link 3.2</a></li>
+                                        <li><a href="">Link 3.3</a></li>
+                                    </ul>
+        
+                                </li>
+                            
+                            <li><a href="">Link 4 (Sem subcategorias)</a></li>
                             <li><a href="" aria-label="Fechar"><span>×</span></a></li>
                         </ul>
                     </div>
@@ -62,7 +189,7 @@
                 <h5>Título 5</h5>
                 <h6>Título 6</h6>
 
-                <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
+                <p>Elementos <strong onclick="document.querySelector('b').style='display: block' ">strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
 
                 <p>2 Sea amet justo at ipsum sit. Sit consetetur et sed eirmod rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor magna accusam. Sed dolor rebum et sanctus labore diam diam, voluptua invidunt duo dolor voluptua voluptua et kasd. Vero et at magna tempor justo eirmod. Ea est sadipscing no kasd ut diam sadipscing.</p>
 
@@ -177,20 +304,6 @@
                     <img src="images/img-pc.png" alt=" " style="width: 33.3%">
                 </div>
 
-                <p>Galeria:</p>
-                
-                <div class="gallery">
-                    <img src="images/img-pc.png" alt=" ">
-                    <img src="images/img-pc.png" alt=" ">
-                    <img src="images/img-pc.png" alt=" ">
-                    <img src="images/img-pc.png" alt=" ">
-
-                    <img src="images/img-pc.png" alt=" ">
-                    <img src="images/img-pc.png" alt=" ">
-                    <img src="images/img-pc.png" alt=" ">
-                    <img src="images/img-pc.png" alt=" ">
-                </div>
-
                 <hr>
                 
                 <p>&lt;figure> (imagem com legenda) com a classe 'center':</p>
@@ -210,6 +323,78 @@
                         <figcaption>Legenda da figura</figcaption>
                     </div>
                 </figure>
+
+                <hr>
+
+                <p>Galeria:</p>
+                
+                <div class="gallery">
+                    <img src="images/img-pc.png" alt=" ">
+                    <img src="images/img-pc.png" alt=" ">
+                    <img src="images/img-pc.png" alt=" ">
+                    <img src="images/img-pc.png" alt=" ">
+
+                    <img src="images/img-pc.png" alt=" ">
+                    <img src="images/img-pc.png" alt=" ">
+                    <img src="images/img-pc.png" alt=" ">
+                    <img src="images/img-pc.png" alt=" ">
+                </div>
+
+                <hr>
+
+                <section>
+
+                    <h2 class="hidden">Carousel</h2>
+
+                    <p>Carousel:</p>
+
+                    <div class="carousel">
+
+                            <img src="images/carousel-img-01-pc.png" alt="">
+                            <img src="images/carousel-img-02-pc.png" alt="">
+                            <img src="images/carousel-img-03-pc.png" alt="">
+
+    <!--            
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/carousel-img-01-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/carousel-img-01-pc.png">
+                                <img src="images/carousel-img-01-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/carousel-img-02-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/carousel-img-02-pc.png">
+                                <img src="images/carousel-img-02-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/carousel-img-03-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/carousel-img-03-pc.png">
+                                <img src="images/carousel-img-03-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/carousel-img-04-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/carousel-img-04-pc.png">
+                                <img src="images/carousel-img-04-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/carousel-img-05-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/carousel-img-05-pc.png">
+                                <img src="images/carousel-img-05-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/carousel-img-06-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/carousel-img-06-pc.png">
+                                <img src="images/carousel-img-06-pc.png" alt="">
+                            </picture>
+        -->        
+
+                    </div>
+
+                </section>
 
                 <hr>
 
@@ -357,7 +542,7 @@
 
                 <hr>
 
-                <h2>Tabela</h2>
+                <h2>Tabelas</h2>
 
                 <table>
                     <caption>&lt;table> padrão</caption>
@@ -434,62 +619,6 @@
                         <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
                     </tr>
                 </table>
-
-                <div class="lb"></div> 
-
-                <hr>
-
-                <section>
-
-                    <h2 class="hidden">Carousel</h2>
-
-                    <div class="carousel">
-
-                            <img src="images/carousel-img-01-pc.png" alt="">
-                            <img src="images/carousel-img-02-pc.png" alt="">
-                            <img src="images/carousel-img-03-pc.png" alt="">
-
-    <!--            
-                            <picture>
-                                <source media="(max-width: 375px)" srcset="images/carousel-img-01-mobile.png">
-                                <source media="(min-width: 376px)" srcset="images/carousel-img-01-pc.png">
-                                <img src="images/carousel-img-01-pc.png" alt="">
-                            </picture>
-                
-                            <picture>
-                                <source media="(max-width: 375px)" srcset="images/carousel-img-02-mobile.png">
-                                <source media="(min-width: 376px)" srcset="images/carousel-img-02-pc.png">
-                                <img src="images/carousel-img-02-pc.png" alt="">
-                            </picture>
-                
-                            <picture>
-                                <source media="(max-width: 375px)" srcset="images/carousel-img-03-mobile.png">
-                                <source media="(min-width: 376px)" srcset="images/carousel-img-03-pc.png">
-                                <img src="images/carousel-img-03-pc.png" alt="">
-                            </picture>
-                
-                            <picture>
-                                <source media="(max-width: 375px)" srcset="images/carousel-img-04-mobile.png">
-                                <source media="(min-width: 376px)" srcset="images/carousel-img-04-pc.png">
-                                <img src="images/carousel-img-04-pc.png" alt="">
-                            </picture>
-                
-                            <picture>
-                                <source media="(max-width: 375px)" srcset="images/carousel-img-05-mobile.png">
-                                <source media="(min-width: 376px)" srcset="images/carousel-img-05-pc.png">
-                                <img src="images/carousel-img-05-pc.png" alt="">
-                            </picture>
-                
-                            <picture>
-                                <source media="(max-width: 375px)" srcset="images/carousel-img-06-mobile.png">
-                                <source media="(min-width: 376px)" srcset="images/carousel-img-06-pc.png">
-                                <img src="images/carousel-img-06-pc.png" alt="">
-                            </picture>
-        -->        
-
-                    </div>
-
-                </section>
 
             </div>
         
