@@ -10,7 +10,7 @@ TODO: Variáveis
 /* ------ Cores E Planos De Fundos ------ */
 /*
 $background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
-$background-nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$background-nav-1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 $background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 $background-button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
@@ -191,7 +191,7 @@ TODO: Seções De Layout
 
 .block-hack {
   /* Hack necessário pois o Safari não aceita 'position: sticky'. */
-  height: 48px;
+  height: 48rem;
 }
 
 .header-nav {
@@ -248,7 +248,8 @@ TODO: Seções De Layout
   left: 0;
   right: 0;
   background-color: #00c8ff;
-  background: url(../../images/background-nav.png) center/100% 100%;
+  background: url(../../images/background-nav-1.png) center/100% 100%;
+  overflow: auto;
 }
 
 .header-nav #nav-menu ul {
@@ -263,7 +264,6 @@ TODO: Seções De Layout
 }
 
 .header-nav #nav-menu ul li ul {
-  display: none;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -293,24 +293,62 @@ TODO: Seções De Layout
     display: inline-block;
     background: 0;
   }
-  .header-nav #nav-menu ul, .header-nav #nav-menu li {
+  .header-nav #nav-menu > ul, .header-nav #nav-menu > ul > li {
     display: inline-block;
   }
-  .header-nav #nav-menu ul {
+  .header-nav #nav-menu > ul {
     display: flex;
     justify-content: space-between;
   }
-  .header-nav #nav-menu ul li {
+  .header-nav #nav-menu > ul > li {
     border-width: 0;
   }
-  .header-nav #nav-menu ul li + li {
+  .header-nav #nav-menu > ul > li + li {
     margin-left: 20px;
   }
-  .header-nav #nav-menu ul li:nth-last-of-type(2) {
+  .header-nav #nav-menu > ul > li:nth-last-of-type(2) {
     margin-right: 13px;
   }
-  .header-nav #nav-menu ul li:last-of-type {
+  .header-nav #nav-menu > ul > li:last-of-type {
     display: none;
+  }
+  .header-nav #nav-menu ul li div {
+    display: none;
+    position: fixed;
+    top: calc(48rem + 0px);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(../../images/background-nav-2.png) center/100% 100%;
+    text-align: center;
+  }
+  .header-nav #nav-menu ul li div ul {
+    display: inline-block;
+    width: auto;
+    min-width: 240px;
+    max-width: 100%;
+    border-radius: 25px;
+    margin-top: 48rem;
+    background-color: #00c8ff;
+    background: url(../../images/background-nav-1.png) center/100% 100%;
+    box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
+  }
+  .header-nav #nav-menu ul li div ul li:nth-child(1) {
+    border-top: 0;
+  }
+  .header-nav #nav-menu ul li div ul li:nth-last-child(1) {
+    border-bottom: 0;
+  }
+  .header-nav #nav-menu ul li div ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .header-nav #nav-menu ul li div ul li:nth-of-type(1):hover {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .header-nav #nav-menu ul li div ul li:nth-last-child(1):hover {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 }
 
@@ -342,7 +380,7 @@ TODO: Seções De Layout
   text-align: center;
   /*padding: 6px 0;
         margin: 14px 0 0;
-        color: $menu-text-color;
+        color: $color-text-menu;
         background-color: black;*/
 }
 
@@ -645,11 +683,6 @@ figcaption {
   margin-top: calc(16rem/2);
   text-align: center;
   font-size: 16rem;
-}
-
-.bg_video {
-  position: absolute;
-  z-index: -100;
 }
 
 audio {
