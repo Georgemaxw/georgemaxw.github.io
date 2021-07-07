@@ -1,6 +1,9 @@
-function ok(p){
-    alert(p)
-}
+
+function func(arg){ alert(arg) }
+
+{(function(){ console.log(window.innerWidth) })()}  
+
+
 
 function nav_menu(arg) {
 
@@ -12,7 +15,8 @@ function nav_menu(arg) {
     
     for(var i = 0; i < categories_anchors.length; i++) {
         if(arg === categories_anchors[i]) {
-            var ul_index = i
+
+            var index = i
             // console.log(i + 1 +'º <a>!')
             break  
         }
@@ -20,21 +24,26 @@ function nav_menu(arg) {
     
 //-------------------------------------------------------------------------------------------------
 
-    var array = document.querySelectorAll('#nav-menu > ul > li > div')
-    var el = array[ul_index]
+    var divs = document.querySelectorAll('#nav-menu > ul > li > div')
 
-    //console.log(el === )
+    console.log(divs[index].style)
     
     
-    if(el.style.display !== 'block') { 
+    if(divs[index].style.display !== 'block') { 
 
-        for(var i = 0; i < array.length; i++) {
-            array[i].style = 'display: none'
+        for(var i = 0; i < divs.length; i++) {
+            categories_anchors[i].style = ''
+            divs[i].style = 'display: none'
         }
         
-        el.style = 'display: block'
+        if(window.innerWidth > 500) { 
+            categories_anchors[index].style = 
+            'background: hsla(0, 0%, 0%, 0.1); border-radius: 15px; padding: 0 4px; height: 40px; margin-top: 4px' 
+        }
+        divs[index].style = 'display: block'
 
     }else{
-        el.style = 'display: none'
+        categories_anchors[index].style = ''
+        divs[index].style = 'display: none'
     }
 }                                

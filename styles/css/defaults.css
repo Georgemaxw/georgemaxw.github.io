@@ -263,7 +263,11 @@ TODO: Seções De Layout
   border-top: 1px solid white;
 }
 
-.header-nav #nav-menu ul li ul {
+.header-nav #nav-menu ul li div {
+  display: none;
+}
+
+.header-nav #nav-menu ul li div ul {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -321,6 +325,7 @@ TODO: Seções De Layout
     right: 0;
     background: url(../../images/background-nav-2.png) center/100% 100%;
     text-align: center;
+    overflow: auto;
   }
   .header-nav #nav-menu ul li div ul {
     display: inline-block;
@@ -340,7 +345,7 @@ TODO: Seções De Layout
     border-bottom: 0;
   }
   .header-nav #nav-menu ul li div ul li:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
   }
   .header-nav #nav-menu ul li div ul li:nth-of-type(1):hover {
     border-top-left-radius: 25px;

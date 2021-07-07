@@ -33,7 +33,7 @@ $color-text-form: hsl(0, 0%, 60%);
 $background-header: url(../../images/background-header.png);
 $background-nav-1: url(../../images/background-nav-1.png)  center /100% 100%;
 $background-nav-2: url(../../images/background-nav-2.png)  center /100% 100%;
-$background-nav-1-options-hover: hsla(0, 0%, 0%, 0.1);
+$background-nav-1-options-spotlight: hsla(0, 0%, 0%, 0.1);
 $background-footer-icons: url(../../images/background-footer-icons.png)  center /100% 100%;
 $background-button: url(../../images/background-button.png);
 
@@ -265,9 +265,12 @@ TODO: Seções De Layout
             li {
                 border-top: 1px solid $color-text-menu;
 
-                ul { // ------ Subcategorias ------
-                    //display: none;
-                    background-color: $background-nav-1-options-hover; 
+                div { // ------ Subcategorias ------
+                    display: none;
+
+                    ul {
+                        background: $background-nav-1-options-spotlight; 
+                    }
                 }
             }
 
@@ -335,10 +338,10 @@ TODO: Seções De Layout
 
         #nav-menu ul li div { // ------ Subcategorias ------
             display: none;
-            position: fixed; top: calc(#{$button-height} + 0px) ; left: 0; bottom: 0; right: 0;
+            position: fixed; top: $button-height; left: 0; bottom: 0; right: 0;
             background: $background-nav-2;
-            //background: hsla(0, 0%, 100%, 0.85);
             text-align: center;
+            overflow: auto;
         }
 
         #nav-menu ul li div ul {
@@ -362,7 +365,7 @@ TODO: Seções De Layout
             }
 
             li:hover {
-                background-color: $background-nav-1-options-hover;
+                background: $background-nav-1-options-spotlight;
             }
 
             li:nth-of-type(1):hover {
