@@ -349,14 +349,12 @@ TODO:         >> Nav Expandido
     min-width: 240px;
     max-width: 100%;
     max-height: calc(100vh - (2 * 48rem));
+    overflow: auto;
     border-radius: 25px;
     margin-top: 48rem;
     background-color: #00c8ff;
     background: url(../../images/background-nav-1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
-  }
-  .header-nav #nav-menu ul li div ul:hover {
-    overflow: auto;
   }
   .header-nav #nav-menu ul li div ul li:nth-child(1) {
     border-top: 0;
@@ -374,6 +372,15 @@ TODO:         >> Nav Expandido
   .header-nav #nav-menu ul li div ul li:nth-last-child(1):hover {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+  }
+}
+
+@media (min-width: 501px) and (pointer: fine) {
+  .header-nav #nav-menu ul li div ul {
+    overflow: hidden;
+  }
+  .header-nav #nav-menu ul li div ul:hover {
+    overflow: auto;
   }
 }
 

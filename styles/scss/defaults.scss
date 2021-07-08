@@ -376,15 +376,12 @@ TODO:         >> Nav Expandido
             min-width: 240px; 
             max-width: 100%;
             max-height: calc(100vh - (2 * #{$button-height}));
+            overflow: auto;
             border-radius: 25px;
             margin-top: $button-height;
             background-color: $color-theme;
             background: $background-nav-1;
             box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
-
-            &:hover {
-                overflow: auto;
-            }
 
             li:nth-child(1) {
                 border-top: 0;
@@ -408,6 +405,18 @@ TODO:         >> Nav Expandido
                 border-bottom-right-radius: 25px;
             }
         }
+
+        @media (pointer: fine) {
+
+            #nav-menu ul li div ul {
+                overflow: hidden;
+            }
+            
+            #nav-menu ul li div ul:hover {
+                overflow: auto;
+            }
+        }
+
     }
 }
 /*  
