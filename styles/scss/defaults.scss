@@ -304,6 +304,14 @@ TODO:    > Header-nav
         ul li ul a {
             height: auto;
             min-height: $button-height;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        ul li ul a img {
+            padding-top: 16px;
+            padding-right: 8px;
+            padding-bottom: 16px;
         }
     }
 
@@ -374,9 +382,9 @@ TODO:         >> Nav Expandido
             display: inline-block;
             width: auto; 
             min-width: 240px; 
-            max-width: 100%;
-            max-height: calc(100vh - (2 * #{$button-height}));
-            overflow: auto;
+            max-width: calc(100% - (2 * #{$button-height}));
+            max-height: calc(100vh - (3 * #{$button-height}));
+            overflow-y: auto;
             border-radius: 25px;
             margin-top: $button-height;
             background-color: $color-theme;
@@ -413,10 +421,9 @@ TODO:         >> Nav Expandido
             }
             
             #nav-menu ul li div ul:hover {
-                overflow: auto;
+                overflow-y: auto;
             }
         }
-
     }
 }
 /*  
