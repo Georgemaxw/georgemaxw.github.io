@@ -1,15 +1,16 @@
 
 function func(arg){ alert(arg) }
 
-{(function(){ console.log(window.innerWidth) })()}  
+// {(function(){ console.log(window.innerWidth) })()}  
 
 
+
+var tablet = 500
+var bg_nav_selector = 'url(../../images/background-nav-selector.png)  center /100% 100%'
 
 function nav_menu(arg) {
 
     var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
-
-    // console.log(categories_anchors)
 
     // console.log(this === categories_anchors[0])
     
@@ -17,7 +18,6 @@ function nav_menu(arg) {
         if(arg === categories_anchors[i]) {
 
             var index = i
-            // console.log(i + 1 +'º <a>!')
             break  
         }
     }
@@ -25,9 +25,6 @@ function nav_menu(arg) {
 //-------------------------------------------------------------------------------------------------
 
     var divs = document.querySelectorAll('#nav-menu > ul > li > div')
-
-    console.log(divs[index].style)
-    
     
     if(divs[index].style.display !== 'block') { 
 
@@ -36,14 +33,15 @@ function nav_menu(arg) {
             divs[i].style = 'display: none'
         }
         
-        if(window.innerWidth > 500) { 
+        if(window.innerWidth > tablet) { 
             categories_anchors[index].style = 
-            'background: hsla(0, 0%, 0%, 0.1); border-radius: 15px; padding: 0 4px; height: 40px; margin-top: 4px' 
+            'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
         }
+
         divs[index].style = 'display: block'
 
     }else{
         categories_anchors[index].style = ''
         divs[index].style = 'display: none'
     }
-}                                
+} 
