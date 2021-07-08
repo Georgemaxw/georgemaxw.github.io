@@ -354,6 +354,8 @@ TODO:         >> Nav Expandido
     background-color: #00c8ff;
     background: url(../../images/background-nav-1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
+  }
+  .header-nav #nav-menu ul li div ul:hover {
     overflow: auto;
   }
   .header-nav #nav-menu ul li div ul li:nth-child(1) {

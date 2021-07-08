@@ -381,7 +381,10 @@ TODO:         >> Nav Expandido
             background-color: $color-theme;
             background: $background-nav-1;
             box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
-            overflow: auto;
+
+            &:hover {
+                overflow: auto;
+            }
 
             li:nth-child(1) {
                 border-top: 0;

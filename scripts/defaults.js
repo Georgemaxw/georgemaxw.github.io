@@ -40,8 +40,16 @@ function nav_menu(arg) {
 
         divs[index].style = 'display: block'
 
+        if(window.innerWidth > tablet) { 
+            document.querySelector('html').style = 'overflow: hidden'
+        }
+
     }else{
         categories_anchors[index].style = ''
         divs[index].style = 'display: none'
+
+        if(window.innerWidth > tablet) { 
+            document.querySelector('html').style = 'overflow: auto'
+        }
     }
 } 
