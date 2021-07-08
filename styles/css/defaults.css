@@ -183,12 +183,20 @@ pre {
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
-.header-content-width, .central {
+/*  
+────────────────────────────
+TODO:    > Central
+──────────────────────────── */
+.central, .header-content {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/*  
+────────────────────────────
+TODO:    > Header-nav
+──────────────────────────── */
 .block-hack {
   /* Hack necessário pois o Safari não aceita 'position: sticky'. */
   height: 48rem;
@@ -205,6 +213,10 @@ TODO: Seções De Layout
   background-image: url(../../images/background-header.png);
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /**/
+  /*  
+────────────────────────────
+TODO:         >> Nav Expandido
+──────────────────────────── */
 }
 
 .header-nav #id-nav {
@@ -268,7 +280,7 @@ TODO: Seções De Layout
 }
 
 .header-nav #nav-menu ul li div ul {
-  background-color: rgba(0, 0, 0, 0.1);
+  background: url(../../images/background-nav-selector.png) center/100% 100%;
 }
 
 .header-nav #nav-menu ul li:last-of-type {
@@ -279,6 +291,11 @@ TODO: Seções De Layout
   font-size: 33rem;
   text-align: center;
   color: white;
+}
+
+.header-nav #nav-menu ul li ul a {
+  height: auto;
+  min-height: 48rem;
 }
 
 @media (min-width: 0) and (max-width: 501px) {
@@ -319,24 +336,25 @@ TODO: Seções De Layout
   .header-nav #nav-menu ul li div {
     display: none;
     position: fixed;
-    top: calc(48rem + 0px);
+    top: 48rem;
     left: 0;
     bottom: 0;
     right: 0;
     background: url(../../images/background-nav-2.png) center/100% 100%;
     text-align: center;
-    overflow: auto;
   }
   .header-nav #nav-menu ul li div ul {
     display: inline-block;
     width: auto;
     min-width: 240px;
     max-width: 100%;
+    max-height: calc(100vh - (2 * 48rem));
     border-radius: 25px;
     margin-top: 48rem;
     background-color: #00c8ff;
     background: url(../../images/background-nav-1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
+    overflow: auto;
   }
   .header-nav #nav-menu ul li div ul li:nth-child(1) {
     border-top: 0;
@@ -345,7 +363,7 @@ TODO: Seções De Layout
     border-bottom: 0;
   }
   .header-nav #nav-menu ul li div ul li:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: url(../../images/background-nav-selector.png) center/100% 100%;
   }
   .header-nav #nav-menu ul li div ul li:nth-of-type(1):hover {
     border-top-left-radius: 25px;
@@ -357,6 +375,10 @@ TODO: Seções De Layout
   }
 }
 
+/*  
+────────────────────────────
+TODO:    > Footer
+──────────────────────────── */
 .footer-content {
   margin-top: calc(2 * 16rem);
 }

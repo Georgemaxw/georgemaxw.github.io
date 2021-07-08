@@ -193,11 +193,23 @@ pre {
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
+/*  
+────────────────────────────
+TODO:    > Central
+──────────────────────────── */
 
-.header-content-width, .central {
+.central {
     max-width: $central-max_width; 
     margin-left: auto;
     margin-right: auto;
+}
+/*  
+────────────────────────────
+TODO:    > Header-nav
+──────────────────────────── */
+
+.header-content {
+    @extend .central;
 }
 
 .block-hack { /* Hack necessário pois o Safari não aceita 'position: sticky'. */
@@ -248,6 +260,8 @@ TODO: Seções De Layout
         margin-right: -13px;
     }
 
+// Menu Da Navegação:
+
     #nav-menu { 
         display: none;
         position: fixed;
@@ -265,7 +279,7 @@ TODO: Seções De Layout
             li {
                 border-top: 1px solid $color-text-menu;
 
-                div { // ------ Subcategorias ------
+                div { // <- Subcategorias
                     display: none;
 
                     ul {
@@ -286,6 +300,11 @@ TODO: Seções De Layout
                 }
             }
         }
+
+        ul li ul a {
+            height: auto;
+            min-height: $button-height;
+        }
     }
 
     /**/
@@ -297,6 +316,10 @@ TODO: Seções De Layout
             align-items: center;
         }
     }
+/*  
+────────────────────────────
+TODO:         >> Nav Expandido
+──────────────────────────── */
 
     @media (min-width: $nav-open) {
 
@@ -308,11 +331,10 @@ TODO: Seções De Layout
             position: static;
             display: inline-block;
             background: 0;
-
         }
 
         #nav-menu > ul, #nav-menu > ul > li {
-                display: inline-block;
+            display: inline-block;
         }
 
         #nav-menu > ul {
@@ -336,13 +358,16 @@ TODO: Seções De Layout
             display: none;
         }
 
-        #nav-menu ul li div { // ------ Subcategorias ------
+// Subcategorias - Espaço Fora:
+
+        #nav-menu ul li div { 
             display: none;
             position: fixed; top: $button-height; left: 0; bottom: 0; right: 0;
             background: $background-nav-2;
             text-align: center;
-            overflow: auto;
         }
+
+// Subcategorias - Menu:
 
         #nav-menu ul li div ul {
 
@@ -350,11 +375,13 @@ TODO: Seções De Layout
             width: auto; 
             min-width: 240px; 
             max-width: 100%;
+            max-height: calc(100vh - (2 * #{$button-height}));
             border-radius: 25px;
             margin-top: $button-height;
             background-color: $color-theme;
             background: $background-nav-1;
             box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
+            overflow: auto;
 
             li:nth-child(1) {
                 border-top: 0;
@@ -380,8 +407,10 @@ TODO: Seções De Layout
         }
     }
 }
-
-
+/*  
+────────────────────────────
+TODO:    > Footer
+──────────────────────────── */
 
 .footer-content {
     margin-top: calc(2 * #{$margin-vertical});
