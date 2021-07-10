@@ -24,13 +24,13 @@ $hr-stop: calc(#{$central-max_width} + 60px);
 
 /* ------ Cores E Planos De Fundos ------ */
 
-$color-theme: hsl(193,100%,50%);
+$color-theme: hsla(193,100%,50%, 1);
 
 $color-text: black;
 $color-text-menu: white;
 $color-text-form: hsl(0, 0%, 60%);
 
-$background-header: url(../../images/background-header.png);
+$background-header: url(../../images/background-header.png) center /100% 100%;
 $background-nav-1: url(../../images/background-nav-1.png)  center /100% 100%;
 $background-nav-2: url(../../images/background-nav-2.png)  center /100% 100%;
 $background-nav-selector: url(../../images/background-nav-selector.png)  center /100% 100%;
@@ -81,7 +81,7 @@ TODO: Textos
 html {
     font-family: $font-default;
     font-size: 1px;
-    color: $color-text;
+    color: $color-text; 
 }
 
 span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dl, dt, dd, 
@@ -224,7 +224,7 @@ TODO:    > Header-nav
     z-index: 100;
     color: $color-text-menu; 
     background-color: $color-theme;
-    background-image: $background-header;
+    background: $background-header;
     box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
 
     #id-nav {
@@ -400,7 +400,7 @@ TODO:         >> Nav Expandido
             }
 
             li:hover {
-                background: $background-nav-selector;
+                // background: $background-nav-selector;
             }
 
             li:nth-of-type(1):hover {
@@ -903,3 +903,54 @@ TODO: Carousel
 .carousel img, .carousel picture {
     width: 94%;
 }
+
+
+
+
+
+
+
+
+
+#nav-menu ul li div ul {
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: hsla(0, 0%, 0%, 0.14) hsla(0, 0%, 100%, 0.4);   /* scroll thumb and track */ 
+}
+
+#nav-menu ul li div ul::-webkit-scrollbar { // Entire bar
+    width: 8px;
+}
+
+#nav-menu ul li div ul::-webkit-scrollbar-thumb { // Bar scroll
+    background: $background-nav-selector;    
+    border-radius: 10px; 
+}
+
+// #nav-menu ul li div ul::-webkit-scrollbar-track {  } // Bar background
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel::-webkit-scrollbar { // Entire bar
+    height: 12px; /* 15 */ 
+}
+
+.carousel::-webkit-scrollbar-thumb { // Bar scroll
+    background: hsl(0, 0%, 74%);
+    border-radius: 10px;
+    /* border: 3px outset adjust-color($color-theme, $lightness: 25%); */
+}
+   
+.carousel::-webkit-scrollbar-track { // Bar background
+    background: hsl(0, 0%, 98%); 
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 10px; /* */ 
+} 

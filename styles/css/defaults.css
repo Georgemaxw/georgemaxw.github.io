@@ -210,7 +210,7 @@ TODO:    > Header-nav
   z-index: 100;
   color: white;
   background-color: #00c8ff;
-  background-image: url(../../images/background-header.png);
+  background: url(../../images/background-header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /**/
   /*  
@@ -369,9 +369,6 @@ TODO:         >> Nav Expandido
   }
   .header-nav #nav-menu ul li div ul li:nth-last-child(1) {
     border-bottom: 0;
-  }
-  .header-nav #nav-menu ul li div ul li:hover {
-    background: url(../../images/background-nav-selector.png) center/100% 100%;
   }
   .header-nav #nav-menu ul li div ul li:nth-of-type(1):hover {
     border-top-left-radius: 25px;
@@ -864,4 +861,38 @@ TODO: Carousel
 
 .carousel img, .carousel picture {
   width: 94%;
+}
+
+#nav-menu ul li div ul {
+  scrollbar-width: thin;
+  /* "auto" or "thin" */
+  scrollbar-color: rgba(0, 0, 0, 0.14) rgba(255, 255, 255, 0.4);
+  /* scroll thumb and track */
+}
+
+#nav-menu ul li div ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+#nav-menu ul li div ul::-webkit-scrollbar-thumb {
+  background: url(../../images/background-nav-selector.png) center/100% 100%;
+  border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 12px;
+  /* 15 */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 10px;
+  /* border: 3px outset adjust-color($color-theme, $lightness: 25%); */
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  /* */
 }
