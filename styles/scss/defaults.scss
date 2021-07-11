@@ -28,7 +28,10 @@ $color-theme: hsla(193,100%,50%, 1);
 
 $color-text: black;
 $color-text-menu: white;
-$color-text-form: hsl(0, 0%, 60%);
+$color-text-form: hsl(0, 0%, 60%); 
+
+$color-scrollbar-thumb: hsla(0, 0%, 0%, 0.14);
+$color-scrollbar-track: hsla(0, 0%, 100%, 0.4);
 
 $background-header: url(../../images/background-header.png) center /100% 100%;
 $background-nav-1: url(../../images/background-nav-1.png)  center /100% 100%;
@@ -234,6 +237,7 @@ TODO:    > Header-nav
 
         h1 {
             margin: 0;
+            margin-top: -1px;
             font-weight: normal;
         }
 
@@ -293,12 +297,16 @@ TODO:    > Header-nav
 
                 a{
                     span {
-                        font-size: 33rem;
+                        font-size: 32rem;
                         text-align: center;
                         color: $color-text-menu;
                     }
                 }
             }
+        }
+
+        > ul > li:last-of-type {
+            display: none;
         }
 
         ul li ul a {
@@ -314,8 +322,6 @@ TODO:    > Header-nav
             padding-bottom: 16px;
         }
     }
-
-    /**/
 
     @media (min-width: 0) and (max-width: $nav-open) {
 
@@ -358,15 +364,13 @@ TODO:         >> Nav Expandido
             margin-left: 20px;
         }
 
-        #nav-menu > ul > li:nth-last-of-type(2) {
-            margin-right: 13px;
+        #nav-menu > ul > li:nth-last-of-type(1) {
+            border-width: 0;
+            margin-right: 13px; 
+            display: block;
         }
 
-        #nav-menu > ul > li:last-of-type {
-            display: none;
-        }
-
-// Subcategorias - Espaço Fora:
+        // Subcategorias - Espaço Fora:
 
         #nav-menu ul li div { 
             display: none;
@@ -375,7 +379,7 @@ TODO:         >> Nav Expandido
             text-align: center;
         }
 
-// Subcategorias - Menu:
+        // Subcategorias - Menu:
 
         #nav-menu ul li div ul {
 
@@ -414,6 +418,24 @@ TODO:         >> Nav Expandido
             }
         }
 
+        // Subcategorias - Scrollbar:
+
+        #nav-menu ul li div ul::-webkit-scrollbar { // Entire bar
+            width: 8px;
+        }
+        
+        #nav-menu ul li div ul::-webkit-scrollbar-thumb { // Bar pointer
+            background: $color-scrollbar-thumb;    
+            border-radius: 10px;
+        }
+        
+        #nav-menu ul li div ul::-webkit-scrollbar-track {  } // Bar background
+        
+        #nav-menu ul li div ul {
+            scrollbar-width: thin;
+            scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
+        }
+
         @media (pointer: fine) {
 
             #nav-menu ul li div ul {
@@ -426,6 +448,23 @@ TODO:         >> Nav Expandido
         }
     }
 }
+
+// show-header-button:
+
+.show-header-button{
+    display: none; 
+    width: $button-height;
+    height: $button-height;
+    //border-bottom: 1px solid; 
+    //border-left: 1px solid; 
+    border-bottom-left-radius: 6px;
+    //margin-left: auto; 
+    position: fixed; top: 0px; right: 0px;
+    background: $background-header;
+    font-size: 19rem;
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
+
 /*  
 ────────────────────────────
 TODO:    > Footer
@@ -904,46 +943,13 @@ TODO: Carousel
     width: 94%;
 }
 
-
-
-
-
-
-
-
-
-#nav-menu ul li div ul {
-    scrollbar-width: thin;          /* "auto" or "thin" */
-    scrollbar-color: hsla(0, 0%, 0%, 0.14) hsla(0, 0%, 100%, 0.4);   /* scroll thumb and track */ 
-}
-
-#nav-menu ul li div ul::-webkit-scrollbar { // Entire bar
-    width: 8px;
-}
-
-#nav-menu ul li div ul::-webkit-scrollbar-thumb { // Bar scroll
-    background: $background-nav-selector;    
-    border-radius: 10px; 
-}
-
-// #nav-menu ul li div ul::-webkit-scrollbar-track {  } // Bar background
-
-
-
-
-
-
-
-
-
-
-
+// Carousel scrollbar:
 
 .carousel::-webkit-scrollbar { // Entire bar
     height: 12px; /* 15 */ 
 }
 
-.carousel::-webkit-scrollbar-thumb { // Bar scroll
+.carousel::-webkit-scrollbar-thumb { // Bar pointer
     background: hsl(0, 0%, 74%);
     border-radius: 10px;
     /* border: 3px outset adjust-color($color-theme, $lightness: 25%); */
@@ -954,3 +960,36 @@ TODO: Carousel
     border: 1px solid hsl(0, 0%, 86%);
     border-radius: 10px; /* */ 
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+

@@ -1,12 +1,13 @@
-
+/**/
 function func(arg){ alert(arg) }
 
-// {(function(){ console.log(window.innerWidth) })()}  
+// {(function(){    })()}  
 
 
 
 var tablet = 500
-var bg_nav_selector = 'url(../../images/background-nav-selector.png)  center /100% 100%'
+
+var bg_nav_selector = 'url(../../images/background-nav-selector.png)  center/100% 100%'
 
 function nav_menu(arg) {
 
@@ -23,9 +24,8 @@ function nav_menu(arg) {
     }
     
 //-------------------------------------------------------------------------------------------------
+    var divs = document.querySelectorAll('#nav-menu > ul > li > div') 
 
-    var divs = document.querySelectorAll('#nav-menu > ul > li > div')
-    
     if(divs[index].style.display !== 'block') { 
 
         for(var i = 0; i < divs.length; i++) {
@@ -53,3 +53,20 @@ function nav_menu(arg) {
         }
     }
 } 
+
+
+
+
+
+
+document.querySelector('#nav-menu > ul > li:nth-last-of-type(1)').onclick = function() {
+    document.querySelector('header').style.display = 'none'
+    document.querySelector('.block-hack').style.display = 'none'
+    document.querySelector('.show-header-button').style.display = 'block'
+}
+
+document.querySelector('.show-header-button').onclick = function() {
+    document.querySelector('header').style.display = 'block'
+    document.querySelector('.block-hack').style.display = 'block'
+    document.querySelector('.show-header-button').style.display = 'none'
+}
