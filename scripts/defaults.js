@@ -5,7 +5,7 @@ function func(arg){ alert(arg) }
 
 
 
-var tablet = 500
+var tablet = 501
 
 var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
 var divs = document.querySelectorAll('#nav-menu > ul > li > div') 
@@ -66,7 +66,7 @@ document.querySelector('#nav-menu > ul > li:nth-last-of-type(1)').onclick = func
         divs[i].style = 'display: none'
     }
 
-    if(window.innerWidth > tablet) { 
+    if(window.innerWidth >= tablet) { 
         document.querySelector('html').style = 'overflow: auto'
     }
     
