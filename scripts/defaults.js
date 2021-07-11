@@ -7,11 +7,12 @@ function func(arg){ alert(arg) }
 
 var tablet = 500
 
+var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
+var divs = document.querySelectorAll('#nav-menu > ul > li > div') 
 var bg_nav_selector = 'url(../../images/background-nav-selector.png)  center/100% 100%'
 
 function nav_menu(arg) {
 
-    var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
 
     // console.log(this === categories_anchors[0])
     
@@ -24,7 +25,6 @@ function nav_menu(arg) {
     }
     
 //-------------------------------------------------------------------------------------------------
-    var divs = document.querySelectorAll('#nav-menu > ul > li > div') 
 
     if(divs[index].style.display !== 'block') { 
 
@@ -60,6 +60,16 @@ function nav_menu(arg) {
 
 
 document.querySelector('#nav-menu > ul > li:nth-last-of-type(1)').onclick = function() {
+
+    for(var i = 0; i < divs.length; i++) {
+        categories_anchors[i].style = ''
+        divs[i].style = 'display: none'
+    }
+
+    if(window.innerWidth > tablet) { 
+        document.querySelector('html').style = 'overflow: auto'
+    }
+    
     document.querySelector('header').style.display = 'none'
     document.querySelector('.block-hack').style.display = 'none'
     document.querySelector('.show-header-button').style.display = 'block'

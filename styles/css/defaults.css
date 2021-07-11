@@ -407,13 +407,19 @@ TODO:         >> Nav Expandido
   display: none;
   width: 48rem;
   height: 48rem;
-  border-bottom-left-radius: 6px;
+  border-radius: 11px;
   position: fixed;
-  top: 0px;
-  right: 0px;
+  top: 9px;
+  right: 9px;
   background: url(../../images/background-header.png) center/100% 100%;
   font-size: 19rem;
-  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
+  /*
+    border-radius: 0px;
+    border-bottom-left-radius: 6px;
+    top: 0px; right: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    */
 }
 
 /*  

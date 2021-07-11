@@ -455,14 +455,19 @@ TODO:         >> Nav Expandido
     display: none; 
     width: $button-height;
     height: $button-height;
-    //border-bottom: 1px solid; 
-    //border-left: 1px solid; 
-    border-bottom-left-radius: 6px;
-    //margin-left: auto; 
-    position: fixed; top: 0px; right: 0px;
+    border-radius: 11px;
+
+    position: fixed; top: 9px; right: 9px;
     background: $background-header;
     font-size: 19rem;
-    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
+
+    /*
+    border-radius: 0px;
+    border-bottom-left-radius: 6px;
+    top: 0px; right: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    */
 }
 
 /*  
