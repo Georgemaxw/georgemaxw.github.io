@@ -47,6 +47,10 @@ $background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,
 $background-button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
 
+/* ------ z-index's ------ */
+
+$zIndex_nav: 64;
+
 /*  
 ──────────────────────────────────────────────────────
 Modelo De Caixa Alternativo Global 
@@ -224,7 +228,7 @@ TODO:    > Header-nav
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: $zIndex_nav;
     color: $color-text-menu; 
     background-color: $color-theme;
     background: $background-header;
@@ -264,21 +268,29 @@ TODO:    > Header-nav
         margin-right: -13px;
     }
 
-// Menu Da Navegação:
+/*  
+────────────────────────────
+TODO:         >> Nav Menu
+──────────────────────────── */
 
     #nav-menu { 
         display: none;
         position: fixed;
-        top: 0; bottom: 0; left: 0; right: 0;
-        background-color: $color-theme;
-        background: $background-nav-1;
-        overflow: auto;
+        top: $button-height; bottom: 0; left: 0; right: 0;
+        //background-color: $color-theme;
+
 
         ul {
+            /*position: fixed;
+            top: calc(2 * #{$button-height}); */
             width: 100%;
+            //max-height: 100%;
+            max-height: calc(100% - (2 * #{$button-height}));
             margin: 0;
             padding: 0;
             list-style-type: none;
+            background: $background-nav-1;
+            overflow: auto; // <- TESTAR SEPARADO!
 
             li {
                 border-top: 1px solid $color-text-menu;
@@ -292,7 +304,7 @@ TODO:    > Header-nav
                 }
             }
 
-            li:last-of-type {
+            li:nth-last-child(2) {
                 border-bottom: 1px solid $color-text-menu;
 
                 a{
@@ -303,6 +315,17 @@ TODO:    > Header-nav
                     }
                 }
             }
+
+            li:nth-last-child(1) {
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+
+        > ul {
+            margin: $button-height 0 0 0;
+            //box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.5);
         }
 
         > ul > li:last-of-type {
@@ -326,8 +349,9 @@ TODO:    > Header-nav
     @media (min-width: 0) and (max-width: $nav-open) {
 
         #nav-menu:target {
-            display: flex;
-            align-items: center;
+            /* display: flex;
+            align-items: center; */
+            display: block;
         }
     }
 /*  
@@ -352,8 +376,11 @@ TODO:         >> Nav Expandido
         }
 
         #nav-menu > ul {
+            margin: 0;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
             display: flex;
             justify-content: space-between;
+            background: $background-header;
         }
 
         #nav-menu > ul > li {
@@ -362,6 +389,10 @@ TODO:         >> Nav Expandido
 
         #nav-menu > ul > li + li {
             margin-left: 20px;
+        }
+
+        #nav-menu > ul > li:nth-last-of-type(2) {
+            border-width: 0;
         }
 
         #nav-menu > ul > li:nth-last-of-type(1) {
@@ -397,10 +428,6 @@ TODO:         >> Nav Expandido
 
             li:nth-child(1) {
                 border-top: 0;
-            }
-
-            li:nth-last-child(1) {
-                border-bottom: 0;
             }
 
             li:hover {
@@ -458,6 +485,7 @@ TODO:         >> Nav Expandido
     border-radius: 11px;
 
     position: fixed; top: 9px; right: 9px;
+    z-index: $zIndex_nav;
     background: $background-header;
     font-size: 19rem;
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
