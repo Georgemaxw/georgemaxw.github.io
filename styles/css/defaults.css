@@ -277,7 +277,7 @@ TODO:         >> Menu Expandido
 @media (min-width: 501px) {
   .header-nav .nav-menu-close_button {
     position: fixed;
-    top: -48px;
+    top: calc(-1 * 48rem);
   }
 }
 

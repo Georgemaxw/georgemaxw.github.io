@@ -271,10 +271,9 @@ TODO:    > Header-nav
 
     .nav-menu-close_button{
         display: none !important; 
-        //display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
         
         span {
             font-size: 32rem;
@@ -285,7 +284,7 @@ TODO:    > Header-nav
 
     @media (min-width: $nav-open) {
         .nav-menu-close_button{
-            position: fixed; top: -48px;
+            position: fixed; top: calc(-1 * #{$button-height}); 
         }
     }
 
