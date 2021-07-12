@@ -294,7 +294,7 @@ TODO:         >> Menu Expandido
   /*position: fixed;
             top: calc(2 * 48rem); */
   width: 100%;
-  max-height: calc(100% - (2 * 48rem));
+  max-height: calc(100% - (1 * 48rem));
   margin: 0;
   padding: 0;
   list-style-type: none;
