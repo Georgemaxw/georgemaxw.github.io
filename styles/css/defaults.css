@@ -204,10 +204,10 @@ TODO:    > Header-nav
 }
 
 .header-nav {
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 64;
   color: white;
   background-color: #00c8ff;
@@ -294,15 +294,15 @@ TODO:         >> Nav Expandido
   border-bottom: 1px solid white;
 }
 
-.header-nav #nav-menu ul li:nth-last-child(2) a span {
+.header-nav #nav-menu li:nth-last-child(1) {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.header-nav #nav-menu li:nth-last-child(1) a span {
   font-size: 32rem;
   text-align: center;
   color: white;
-}
-
-.header-nav #nav-menu ul li:nth-last-child(1) {
-  border-top: 0;
-  border-bottom: 0;
 }
 
 .header-nav #nav-menu > ul {
@@ -327,7 +327,7 @@ TODO:         >> Nav Expandido
   padding-bottom: 16px;
 }
 
-@media (min-width: 0) and (max-width: 501px) {
+@media (min-width: 0) and (max-width: 521px) {
   .header-nav #nav-menu:target {
     /* display: flex;
             align-items: center; */
@@ -335,7 +335,7 @@ TODO:         >> Nav Expandido
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   .header-nav #id-nav .nav-button-right {
     display: none;
   }
@@ -365,7 +365,7 @@ TODO:         >> Nav Expandido
   }
   .header-nav #nav-menu > ul > li:nth-last-of-type(1) {
     border-width: 0;
-    margin-right: 13px;
+    margin-right: 17px;
     display: block;
   }
   .header-nav #nav-menu ul li div {
@@ -415,12 +415,25 @@ TODO:         >> Nav Expandido
   }
 }
 
-@media (min-width: 501px) and (pointer: fine) {
+@media (min-width: 521px) and (pointer: fine) {
   .header-nav #nav-menu ul li div ul {
     overflow: hidden;
   }
   .header-nav #nav-menu ul li div ul:hover {
     overflow-y: auto;
+  }
+}
+
+@media (min-width: 521px) and (max-height: 521px) {
+  .header-nav {
+    left: 8px;
+    right: 8px;
+  }
+  .header-nav, #nav-menu ul {
+    border-radius: calc(48rem/2);
+  }
+  .header-nav {
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   }
 }
 
@@ -684,7 +697,7 @@ table ul, table ol {
   border-width: 0;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   .table-style-2 {
     width: auto;
     max-width: calc(100% - 2 * 20px);
@@ -705,7 +718,7 @@ table ul, table ol {
 }
 
 /*----- .table-style-4 -----*/
-@media (min-width: 0) and (max-width: 501px) {
+@media (min-width: 0) and (max-width: 521px) {
   .table-style-4 {
     border-width: 0;
   }
@@ -734,7 +747,7 @@ table ul, table ol {
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   .table-style-4 {
     border-width: 0;
   }
@@ -845,7 +858,7 @@ img.outdoor, video.outdoor {
   width: 100%;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   img.outdoor, video.outdoor {
     display: block;
     width: calc(100% - (2 * 20px));
@@ -862,7 +875,7 @@ figure.outdoor div img {
   width: 100%;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   figure.outdoor {
     width: calc(100% - (2 * 20px));
     margin-left: auto;
@@ -879,7 +892,7 @@ TODO: Gallery
   width: 50%;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   .gallery {
     margin-left: 20px;
     margin-right: 20px;
@@ -898,7 +911,7 @@ TODO: Carousel
   white-space: nowrap;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 521px) {
   .carousel {
     margin-left: 20px;
     margin-right: 20px;

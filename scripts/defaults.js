@@ -5,7 +5,7 @@ function func(arg){ alert(arg) }
 
 
 
-var tablet = 501
+var nav_open = 521 
 
 var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
 var divs = document.querySelectorAll('#nav-menu > ul > li > div') 
@@ -33,14 +33,14 @@ function nav_menu(arg) {
             divs[i].style = 'display: none'
         }
         
-        if(window.innerWidth > tablet) { 
+        if(window.innerWidth > nav_open) { 
             categories_anchors[index].style = 
             'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
         }
 
         divs[index].style = 'display: block'
 
-        if(window.innerWidth > tablet) { 
+        if(window.innerWidth > nav_open) { 
             document.querySelector('html').style = 'overflow: hidden'
         }
 
@@ -48,7 +48,7 @@ function nav_menu(arg) {
         categories_anchors[index].style = ''
         divs[index].style = 'display: none'
 
-        if(window.innerWidth > tablet) { 
+        if(window.innerWidth > nav_open) { 
             document.querySelector('html').style = 'overflow: auto'
         }
     }
@@ -66,7 +66,7 @@ document.querySelector('#nav-menu > ul > li:nth-last-of-type(1)').onclick = func
         divs[i].style = 'display: none'
     }
 
-    if(window.innerWidth >= tablet) { 
+    if(window.innerWidth >= nav_open) { 
         document.querySelector('html').style = 'overflow: auto'
     }
     

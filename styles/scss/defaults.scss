@@ -16,10 +16,10 @@ $button-height: 48rem;
  
 /* ------ Breakpoints ------ */
 
-$tablet: 501px;
+$tablet: 521px; 
 $pc: 1000px;
 
-$nav-open: 501px;
+$nav-open: $tablet;
 $hr-stop: calc(#{$central-max_width} + 60px); 
 
 /* ------ Cores E Planos De Fundos ------ */
@@ -224,10 +224,7 @@ TODO:    > Header-nav
 }
 
 .header-nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed; top: 0; left: 0; right: 0;
     z-index: $zIndex_nav;
     color: $color-text-menu; 
     background-color: $color-theme;
@@ -306,6 +303,12 @@ TODO:         >> Nav Menu
 
             li:nth-last-child(2) {
                 border-bottom: 1px solid $color-text-menu;
+                }
+            }
+
+            li:nth-last-child(1) {
+                border-top: 0;
+                border-bottom: 0;
 
                 a{
                     span {
@@ -315,12 +318,6 @@ TODO:         >> Nav Menu
                     }
                 }
             }
-
-            li:nth-last-child(1) {
-                border-top: 0;
-                border-bottom: 0;
-            }
-        }
 
         > ul {
             margin: $button-height 0 0 0;
@@ -397,7 +394,7 @@ TODO:         >> Nav Expandido
 
         #nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
-            margin-right: 13px; 
+            margin-right: 17px; 
             display: block;
         }
 
@@ -473,6 +470,21 @@ TODO:         >> Nav Expandido
                 overflow-y: auto;
             }
         }
+    }
+}
+
+@media (min-width: $nav-open) and (max-height: $tablet) {
+
+    .header-nav {
+        left: 8px; right: 8px;
+    }
+
+    .header-nav, #nav-menu ul {
+        border-radius: calc(#{$button-height}/2);
+    }
+
+    .header-nav {
+        box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
     }
 }
 
