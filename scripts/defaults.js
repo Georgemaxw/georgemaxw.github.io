@@ -19,9 +19,9 @@ document.querySelector('.nav-menu-button').onclick = function() {
             //document.querySelector('#nav-menu').style = 'display: block'
             //document.querySelector('.nav-menu-button').setAttribute('href', '')
             //document.querySelector('#nav-menu').style = 'position: fixed; top: -48px;'
-            document.querySelector('.nav-menu-button').style = 'width: 0;'
-            document.querySelector('.nav-menu-button img').setAttribute('src', '')
-            document.querySelector('.nav-menu-button img').setAttribute('alt', '')
+            document.querySelector('.nav-menu-button').style = 'position: fixed; top: -48px;'
+            //document.querySelector('.nav-menu-button img').setAttribute('src', '')
+            //document.querySelector('.nav-menu-button img').setAttribute('alt', '')
             document.querySelector('.nav-menu-close_button').style = 'display: flex !important'
             document.querySelector('html').style = 'overflow: hidden'
         } else {
