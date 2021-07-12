@@ -16,7 +16,7 @@ $button-height: 48rem;
  
 /* ------ Breakpoints ------ */
 
-$tablet: 521px; 
+$tablet: 501px; 
 $pc: 1000px;
 
 $nav-open: $tablet;
@@ -252,7 +252,7 @@ TODO:    > Header-nav
         }
 
         .logo {
-            margin-left: 13px;
+            margin-left: 14px;
 
             img {
                 width: 22px;
@@ -265,9 +265,33 @@ TODO:    > Header-nav
         margin-right: -13px;
     }
 
+    .nav-menu-button {
+        margin-right: 1px;
+    }
+
+    .nav-menu-close_button{
+        display: none !important; 
+        //display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+        
+        span {
+            font-size: 32rem;
+            text-align: center;
+            color: $color-text-menu;
+        }
+    }
+
+    @media (min-width: $nav-open) {
+        .nav-menu-close_button{
+            position: fixed; top: -48px;
+        }
+    }
+
 /*  
 ────────────────────────────
-TODO:         >> Nav Menu
+TODO:         >> Menu
 ──────────────────────────── */
 
     #nav-menu { 
@@ -275,7 +299,6 @@ TODO:         >> Nav Menu
         position: fixed;
         top: $button-height; bottom: 0; left: 0; right: 0;
         //background-color: $color-theme;
-
 
         ul {
             /*position: fixed;
@@ -343,22 +366,51 @@ TODO:         >> Nav Menu
         }
     }
 
+    // Scrollbars:
+
+    #nav-menu ul::-webkit-scrollbar { // Entire bar
+        width: 8px;
+    }
+    
+    #nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
+        background: $color-scrollbar-thumb;    
+        border-radius: 10px;
+    }
+    
+    #nav-menu ul::-webkit-scrollbar-track {  } // Bar background
+    
+    #nav-menu ul {
+        scrollbar-width: thin;
+        scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
+    }
+
+    @media (pointer: fine) {
+
+        #nav-menu ul {
+            overflow: hidden;
+        }
+        
+        #nav-menu ul:hover {
+            overflow-y: auto;
+        }
+    }
+
     @media (min-width: 0) and (max-width: $nav-open) {
 
         #nav-menu:target {
             /* display: flex;
             align-items: center; */
             display: block;
-        }
+        } 
     }
 /*  
 ────────────────────────────
-TODO:         >> Nav Expandido
+TODO:         >> Menu Expandido
 ──────────────────────────── */
 
     @media (min-width: $nav-open) {
 
-        #id-nav .nav-button-right {
+        #id-nav .nav-menu-button {
             display: none;
         }
 
@@ -394,7 +446,7 @@ TODO:         >> Nav Expandido
 
         #nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
-            margin-right: 17px; 
+            margin-right: 16px; 
             display: block;
         }
 
@@ -416,7 +468,6 @@ TODO:         >> Nav Expandido
             min-width: 240px; 
             max-width: calc(100% - (2 * #{$button-height}));
             max-height: calc(100% - (2 * #{$button-height})); 
-            overflow-y: auto;
             border-radius: 25px;
             margin-top: $button-height;
             background-color: $color-theme;
@@ -441,39 +492,12 @@ TODO:         >> Nav Expandido
                 border-bottom-right-radius: 25px;
             }
         }
-
-        // Subcategorias - Scrollbar:
-
-        #nav-menu ul li div ul::-webkit-scrollbar { // Entire bar
-            width: 8px;
-        }
-        
-        #nav-menu ul li div ul::-webkit-scrollbar-thumb { // Bar pointer
-            background: $color-scrollbar-thumb;    
-            border-radius: 10px;
-        }
-        
-        #nav-menu ul li div ul::-webkit-scrollbar-track {  } // Bar background
-        
-        #nav-menu ul li div ul {
-            scrollbar-width: thin;
-            scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
-        }
-
-        @media (pointer: fine) {
-
-            #nav-menu ul li div ul {
-                overflow: hidden;
-            }
-            
-            #nav-menu ul li div ul:hover {
-                overflow-y: auto;
-            }
-        }
     }
 }
 
-@media (min-width: $nav-open) and (max-height: $tablet) {
+// Menu arredondado:
+
+@media (max-height: $tablet) {
 
     .header-nav {
         left: 8px; right: 8px;
@@ -485,6 +509,14 @@ TODO:         >> Nav Expandido
 
     .header-nav {
         box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
+    }
+
+    .header-nav #id-nav > :nth-child(1) {
+        margin-left: 4px;
+    }
+
+    .header-nav #nav-menu > ul > li:nth-last-of-type(1) {
+        margin-right: 18px; 
     }
 }
 

@@ -5,14 +5,43 @@ function func(arg){ alert(arg) }
 
 
 
-var nav_open = 521 
+var nav_open = 501 
 
 var categories_anchors = document.querySelectorAll('#nav-menu > ul > li > a')
 var divs = document.querySelectorAll('#nav-menu > ul > li > div') 
 var bg_nav_selector = 'url(../../images/background-nav-selector.png)  center/100% 100%'
 
-function nav_menu(arg) {
+document.querySelector('.nav-menu-button').onclick = function() { 
 
+    //if(window.innerWidth < nav_open) { 
+
+        if(document.querySelector('#nav-menu').style.display !== 'block') { 
+            //document.querySelector('#nav-menu').style = 'display: block'
+            //document.querySelector('.nav-menu-button').setAttribute('href', '')
+            //document.querySelector('#nav-menu').style = 'position: fixed; top: -48px;'
+            document.querySelector('.nav-menu-button img').setAttribute('src', '')
+            document.querySelector('.nav-menu-button img').setAttribute('alt', '')
+            document.querySelector('.nav-menu-close_button').style = 'display: flex !important'
+            document.querySelector('html').style = 'overflow: hidden'
+        } else {
+            //document.querySelector('#nav-menu > ul').style = 'display: none'
+            //document.querySelector('.nav-menu-button').setAttribute('href', '#nav-menu')
+            document.querySelector('.nav-menu-close_button').style = 'display: none'
+            //document.querySelector('.nav-menu-button img').setAttribute('src', 'images/icon-menu.svg')
+            //document.querySelector('.nav-menu-button img').setAttribute('alt', 'Menu button')
+
+            //document.querySelector('#nav-menu').style = 'position: static;' 
+            //document.querySelector('html').style = 'overflow: auto'
+
+            for(var i = 0; i < divs.length; i++) {
+                categories_anchors[i].style = ''
+                divs[i].style = 'display: none'
+            }
+        }
+    //}
+}
+
+function nav_menu(arg) {
 
     // console.log(this === categories_anchors[0])
     
@@ -32,7 +61,7 @@ function nav_menu(arg) {
             categories_anchors[i].style = ''
             divs[i].style = 'display: none'
         }
-        
+
         if(window.innerWidth > nav_open) { 
             categories_anchors[index].style = 
             'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
