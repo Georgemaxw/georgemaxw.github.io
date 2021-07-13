@@ -261,24 +261,14 @@ TODO:         >> Menu Expandido
   margin-right: 1px;
 }
 
-.header-nav .nav-menu-close_button {
-  display: none !important;
+.header-nav .nav-menu-button :nth-child(2) {
+  display: none;
   justify-content: center;
   align-items: center;
   width: 48px;
-}
-
-.header-nav .nav-menu-close_button span {
   font-size: 32rem;
   text-align: center;
   color: white;
-}
-
-@media (min-width: 501px) {
-  .header-nav .nav-menu-close_button {
-    position: fixed;
-    top: calc(-1 * 48rem);
-  }
 }
 
 .header-nav #nav-menu {
@@ -371,14 +361,6 @@ TODO:         >> Menu Expandido
   }
   .header-nav #nav-menu ul:hover {
     overflow-y: auto;
-  }
-}
-
-@media (min-width: 0) and (max-width: 501px) {
-  .header-nav #nav-menu:target {
-    /* display: flex;
-            align-items: center; */
-    display: block;
   }
 }
 

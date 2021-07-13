@@ -267,24 +267,15 @@ TODO:    > Header-nav
 
     .nav-menu-button {
         margin-right: 1px;
-    }
 
-    .nav-menu-close_button{
-        display: none !important; 
-        justify-content: center;
-        align-items: center;
-        width: 48px;
-        
-        span {
+        :nth-child(2) {
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            width: 48px;
             font-size: 32rem;
             text-align: center;
             color: $color-text-menu;
-        }
-    }
-
-    @media (min-width: $nav-open) {
-        .nav-menu-close_button{
-            position: fixed; top: calc(-1 * #{$button-height}); 
         }
     }
 
@@ -392,15 +383,6 @@ TODO:         >> Menu
         #nav-menu ul:hover {
             overflow-y: auto;
         }
-    }
-
-    @media (min-width: 0) and (max-width: $nav-open) {
-
-        #nav-menu:target {
-            /* display: flex;
-            align-items: center; */
-            display: block;
-        } 
     }
 /*  
 ────────────────────────────
