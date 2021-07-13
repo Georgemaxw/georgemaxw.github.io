@@ -49,6 +49,8 @@ window.onresize = function() {
     } else {
         if(nav_menu_compact_enabled === true) {
             document.querySelector('#nav-menu').style = 'display: block'
+            document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: none'
+            document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: flex'
         } else {
             document.querySelector('#nav-menu').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
