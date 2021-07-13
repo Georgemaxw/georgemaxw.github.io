@@ -407,6 +407,7 @@ TODO:         >> Menu Expandido
     font-size: 32rem;
   }
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a img {
+    width: 48rem;
     margin-right: 2px;
   }
   .header-nav .nav-menu ul li div {
