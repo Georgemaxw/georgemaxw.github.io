@@ -224,6 +224,7 @@ TODO:    > Header-nav
 }
 
 .header-nav {
+
     position: fixed; top: 0; left: 0; right: 0;
     z-index: $zIndex_nav;
     color: $color-text-menu; 
@@ -231,7 +232,7 @@ TODO:    > Header-nav
     background: $background-header;
     box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
 
-    #id-nav {
+    .nav {
         display: flex; 
         justify-content: space-between;
         align-items: center;
@@ -284,7 +285,7 @@ TODO:    > Header-nav
 TODO:         >> Menu
 ──────────────────────────── */
 
-    #nav-menu { 
+    .nav-menu { 
         display: none;
         position: fixed;
         top: $button-height; bottom: 0; left: 0; right: 0;
@@ -323,13 +324,13 @@ TODO:         >> Menu
                 border-top: 0;
                 border-bottom: 0;
 
-                a{
+                /*a{
                     span {
                         font-size: 32rem;
                         text-align: center;
                         color: $color-text-menu;
                     }
-                }
+                }*/
             }
 
         > ul {
@@ -342,45 +343,57 @@ TODO:         >> Menu
             display: none;
         }
 
+        > ul > li > a img {
+            margin-right: 6px; 
+        }
+
         ul li ul a {
             height: auto;
             min-height: $button-height;
-            padding-left: 16px;
-            padding-right: 16px;
+
+            span {
+                display: flex;
+                margin-left: 16px;
+                margin-right: 16px;
+
+                img {
+                    margin-right: 8px;
+                }
+            }
         }
 
-        ul li ul a img {
-            padding-top: 16px;
-            padding-right: 8px;
-            padding-bottom: 16px;
-        }
+        /**/.c { // <------------------------------------
+            margin-top: 16px;
+            margin-bottom: 16px;
+            margin-left: 16px;;
+        } 
     }
 
     // Scrollbars:
 
-    #nav-menu ul::-webkit-scrollbar { // Entire bar
+    .nav-menu ul::-webkit-scrollbar { // Entire bar
         width: 8px;
     }
     
-    #nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
+    .nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
         background: $color-scrollbar-thumb;    
         border-radius: 10px;
     }
     
-    #nav-menu ul::-webkit-scrollbar-track {  } // Bar background
+    .nav-menu ul::-webkit-scrollbar-track {  } // Bar background
     
-    #nav-menu ul {
+    .nav-menu ul {
         scrollbar-width: thin;
         scrollbar-color: $color-scrollbar-thumb $color-scrollbar-track;
     }
 
     @media (pointer: fine) {
 
-        #nav-menu ul {
+        .nav-menu ul {
             overflow: hidden;
         }
         
-        #nav-menu ul:hover {
+        .nav-menu ul:hover {
             overflow-y: auto;
         }
     }
@@ -391,21 +404,21 @@ TODO:         >> Menu Expandido
 
     @media (min-width: $nav-open) {
 
-        #id-nav .nav-menu-button {
+        .nav .nav-menu-button {
             display: none;
         }
 
-        #nav-menu {
+        .nav-menu {
             position: static;
             display: inline-block;
             background: 0;
         }
 
-        #nav-menu > ul, #nav-menu > ul > li {
+        .nav-menu > ul, .nav-menu > ul > li {
             display: inline-block;
         }
 
-        #nav-menu > ul {
+        .nav-menu > ul {
             margin: 0;
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
             display: flex;
@@ -413,19 +426,19 @@ TODO:         >> Menu Expandido
             background: $background-header;
         }
 
-        #nav-menu > ul > li {
+        .nav-menu > ul > li {
             border-width: 0;
         }
 
-        #nav-menu > ul > li + li {
+        .nav-menu > ul > li + li {
             margin-left: 20px;
         }
 
-        #nav-menu > ul > li:nth-last-of-type(2) {
+        .nav-menu > ul > li:nth-last-of-type(2) {
             border-width: 0;
         }
 
-        #nav-menu > ul > li:nth-last-of-type(1) {
+        .nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
             margin-right: 16px; 
             display: block;
@@ -433,7 +446,7 @@ TODO:         >> Menu Expandido
 
         // Subcategorias - Espaço Fora:
 
-        #nav-menu ul li div { 
+        .nav-menu ul li div { 
             display: none;
             position: fixed; top: $button-height; left: 0; bottom: 0; right: 0;
             background: $background-nav-2;
@@ -442,7 +455,7 @@ TODO:         >> Menu Expandido
 
         // Subcategorias - Menu:
 
-        #nav-menu ul li div ul {
+        .nav-menu ul li div ul {
 
             display: inline-block;
             width: auto; 
@@ -484,7 +497,7 @@ TODO:         >> Menu Expandido
         left: 8px; right: 8px;
     }
 
-    .header-nav, #nav-menu ul {
+    .header-nav, .nav-menu ul {
         border-radius: calc(#{$button-height}/2);
     }
 
@@ -492,18 +505,18 @@ TODO:         >> Menu Expandido
         box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
     }
 
-    .header-nav #id-nav > :nth-child(1) {
+    .header-nav .nav > :nth-child(1) {
         margin-left: 4px;
     }
 
-    .header-nav #nav-menu > ul > li:nth-last-of-type(1) {
+    .header-nav .nav-menu > ul > li:nth-last-of-type(1) {
         margin-right: 18px; 
     }
 }
 
-// Show header button:
+// Show header button: 
 
-.show-header-button{
+.headerNav-button{
     display: none; 
     width: $button-height;
     height: $button-height;
@@ -847,6 +860,20 @@ hr {
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+/*.textImg_evenSize {
+    max-width: 18px; 
+    margin-bottom: -4px;
+}*/
+
+.textImg {
+    max-width: 19px; 
+    margin-bottom: -5px;
+}
+
+.textImg_Size {
+    max-width: 19px;
 }
 
 figure > div {

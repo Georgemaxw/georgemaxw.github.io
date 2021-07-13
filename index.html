@@ -23,15 +23,15 @@
             <div class="header-content">
                 <!-- <a href="" class="button-left"><img src="images/icon-search.svg" alt="button"></a> -->
 
-                <nav id="id-nav">
+                <nav class="nav">
                 
                     <h1><a href="index.html" class="logo"><img src="images/icon-logo.svg" alt="Logo">Site</a></h1>
                     
                     <a class="nav-menu-button"><img src="images/icon-menu.svg" alt="Menu button"><span>×</span></a>
 
-                    <div id="nav-menu">
+                    <div class="nav-menu">
                         <ul>
-                            <li><a onclick="nav_menu(this)">Link 1</a>
+                            <li><a onclick="nav_menu_options(this)">Link 1</a>
 
                                 <div>
                                     <ul>
@@ -43,18 +43,15 @@
     
                             </li> 
 
-                            <li><a onclick="nav_menu(this)">Link 2</a>
+                            <li><a onclick="nav_menu_options(this)">Link 2</a>
 
                                 <div>
                                     <ul>
-                                        <li><a href="">Link 2.1</a></li>
-                                        <li><a href="">Link 2.2</a></li>
-                                        <li><a href="">Link 2.3</a></li>
-                                        <li><a href="">Link 2.4</a></li>
-                                        <li><a href="">Link 2.5</a></li>
-                                        <li><a href="">Link 2.6</a></li>
-                                        <li><a href="">Link 2.7</a></li>
-                                        <li><a href="">Link 2.8</a></li>
+                                        <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.1</span></a></li>
+                                        <!--<li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
+                                        <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.3</span></a></li>
+                                        <!--<li><a href=""><span>Link 2.4</span></a></li>-->
+                                        <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.5</span></a></li>
                                     </ul>
                                 </div>
     
@@ -62,13 +59,15 @@
 
                             <li><a href="">L3-∅</a><div></div></li>
 
-                            <li><a onclick="nav_menu(this)">Link 4</a>
+                            <li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 4</a>
 
                                 <div>
                                     <ul>
-                                        <li><a href=""><img src="images/img-pc.png" alt=" ">Link 4.1</a></li>
-                                        <li><a href="">Link 4.2</a></li>
-                                        <li><a href=""><img src="images/list-symbol.svg" alt=""> Link 4.3</a></li>
+                                        <li><a href=""><img src="images/img-pc.png" alt="" class="c"><span>Link 4.1</span></a></li>
+                                        <li><a href=""><img src="images/img-pc.png" alt="" class="c"><span>Link 4.2</span></a></li>
+                                        <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 4.3</span></a></li>
+                                        <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 4.4</span></a></li>
+                                        <li><a href=""><span>Link 4.5</span></a></li>
                                     </ul>
                                 </div>
     
@@ -84,7 +83,7 @@
         </div>
     </header>
 
-    <div class="show-header-button">
+    <div class="headerNav-button">
         <img src="images/icon-headerNav.svg" alt="Header-nav button">  
     </div>
 
@@ -101,9 +100,14 @@
                 <h5>Título 5</h5>
                 <h6>Título 6</h6>
 
-                <p>Elementos <strong onclick="document.querySelector('b').style='display: block' ">strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
- 
-                <p>6 Sea amet justo at ipsum sit. Sit consetetur et sed eirmod rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor magna accusam. Sed dolor rebum et sanctus labore diam diam, voluptua invidunt duo dolor voluptua voluptua et kasd. Vero et at magna tempor justo eirmod. Ea est sadipscing no kasd ut diam sadipscing.</p>
+                <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
+  
+                <p>7 Sea amet justo at 
+                    ipsum <img src="images/textImg.svg" alt="" class="textImg">. Sit consetetur  
+                    <img src="images/textImg_sample_1.svg" alt="" class="textImg"> et sed eirmod 
+                    rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor magna accusam. 
+                    Sed dolor rebum et sanctus labore diam diam, voluptua invidunt duo dolor voluptua voluptua et kasd. Vero et at 
+                    magna tempor justo eirmod. Ea est sadipscing no kasd ut diam sadipscing.</p>
 
                 <p>&lt;abbr>: Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
 
