@@ -51,10 +51,12 @@ window.onresize = function() {
             document.querySelector('#nav-menu').style = 'display: block'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: flex'
+            document.querySelector('html').style = 'overflow: hidden'
         } else {
             document.querySelector('#nav-menu').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
+            document.querySelector('html').style = 'overflow: auto'
         }
     }
 
