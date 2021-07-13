@@ -361,12 +361,6 @@ TODO:         >> Menu
                 }
             }
         }
-
-        /**/.c { // <------------------------------------
-            margin-top: 16px;
-            margin-bottom: 16px;
-            margin-left: 16px;;
-        } 
     }
 
     // Scrollbars:
@@ -440,8 +434,15 @@ TODO:         >> Menu Expandido
 
         .nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
-            margin-right: 16px; 
             display: block;
+
+            a {
+                font-size: 32rem;
+
+                img {
+                    margin-right: 2px;
+                }
+            }
         }
 
         // Subcategorias - Espaço Fora:
@@ -489,9 +490,9 @@ TODO:         >> Menu Expandido
     }
 }
 
-// Menu arredondado:
+// Header nav arredondado:
 
-@media (max-height: $tablet) {
+@media (min-width: $nav-open) and (max-height: $tablet) {
 
     .header-nav {
         left: 8px; right: 8px;
@@ -510,7 +511,7 @@ TODO:         >> Menu Expandido
     }
 
     .header-nav .nav-menu > ul > li:nth-last-of-type(1) {
-        margin-right: 18px; 
+        margin-right: 6px; 
     }
 }
 
@@ -861,6 +862,12 @@ hr {
         margin-right: 0;
     }
 }
+
+.nav_poster_margins {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;;
+} 
 
 /*.textImg_evenSize {
     max-width: 18px; 
