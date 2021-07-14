@@ -16,10 +16,10 @@ $button-height: 48rem;
  
 /* ------ Breakpoints ------ */
 
-$tablet: 501px; 
-$pc: 1000px;
+$tablet: 501px; // Largura máxima de um celular.
+/* $pc: 1000px; */ // Largura mínima de um PC.
 
-$nav-open: $tablet;
+$nav-open: 565px; // Altura mínima de um celular.
 $hr-stop: calc(#{$central-max_width} + 60px); 
 
 /* ------ Cores E Planos De Fundos ------ */
@@ -491,7 +491,7 @@ TODO:         >> Expandido
     }
 }
 
-// Header nav arredondado:
+// Header-nav em smartphone (arredondado):
 
 @media (min-width: $nav-open) and (max-height: $tablet) {
 
@@ -499,8 +499,13 @@ TODO:         >> Expandido
         left: 8px; right: 8px;
     }
 
-    .header-nav, .nav-menu ul {
+    .header-nav {
         border-radius: calc(#{$button-height}/2);
+    }
+
+    .nav-menu > ul {
+        border-top-right-radius: calc(#{$button-height}/2);
+        border-bottom-right-radius: calc(#{$button-height}/2);
     }
 
     .header-nav {
@@ -529,6 +534,11 @@ TODO:         >> Expandido
     background: $background-header;
     font-size: 19rem;
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
 
     /*
     border-radius: 0px;
@@ -607,12 +617,33 @@ TODO:    > Classes
     }
 }
 
-.nav_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical.
+.nav_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
     li > a {
         display: inline-flex;
         flex-direction: column;
     }
 }
+
+.nav_compact_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+
+    @media (max-width: $nav-open) {
+        li > a {
+            display: inline-flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.nav_expanded_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+
+    @media (min-width: $nav-open) {
+        li > a {
+            display: inline-flex;
+            flex-direction: column;
+        }
+    }
+}
+
 /*  
 ──────────────────────────────────────────────────────
 TODO: Formulários
