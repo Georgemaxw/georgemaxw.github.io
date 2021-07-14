@@ -219,7 +219,7 @@ TODO:         >> Menu
 ──────────────────────────── */
   /*  
 ────────────────────────────
-TODO:         >> Menu Expandido
+TODO:         >> Expandido
 ──────────────────────────── */
 }
 
@@ -367,7 +367,7 @@ TODO:         >> Menu Expandido
     overflow: hidden;
   }
   .header-nav .nav-menu ul:hover {
-    overflow-y: auto;
+    overflow: auto;
   }
 }
 
@@ -521,6 +521,38 @@ TODO:    > Footer
 }
 
 /*  
+────────────────────────────
+TODO:    > Classes
+──────────────────────────── */
+/*
+.nav_poster_margins { // <- Desisti desta ideia.
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+} 
+*/
+@media (min-width: 501px) {
+  .nav_subOptions_horizontal {
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0;
+  }
+  .nav_subOptions_horizontal li {
+    display: inline-block;
+    border-width: 0 !important;
+    /*> a {
+                display: inline-flex;
+                flex-direction: column;
+            }*/
+  }
+}
+
+.nav_subOptions_textBelow li > a {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+/*  
 ──────────────────────────────────────────────────────
 TODO: Formulários
 ────────────────────────────────────────────────────── */
@@ -589,7 +621,7 @@ form button {
   border-radius: 1000px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background-image: url(../../images/background-button.png);
+  background: url(../../images/background-button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -809,12 +841,6 @@ hr {
     margin-left: 0;
     margin-right: 0;
   }
-}
-
-.nav_poster_margins {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: 16px;
 }
 
 /*.textImg_evenSize {

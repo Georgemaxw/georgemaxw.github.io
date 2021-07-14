@@ -38,7 +38,7 @@ $background-nav-1: url(../../images/background-nav-1.png)  center /100% 100%;
 $background-nav-2: url(../../images/background-nav-2.png)  center /100% 100%;
 $background-nav-selector: url(../../images/background-nav-selector.png)  center /100% 100%;
 $background-footer-icons: url(../../images/background-footer-icons.png)  center /100% 100%;
-$background-button: url(../../images/background-button.png);
+$background-button: url(../../images/background-button.png)  center /100% 100%;
 
 /*
 $background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -233,7 +233,7 @@ TODO:    > Header-nav
     box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
 
     .nav {
-        display: flex; 
+        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -301,12 +301,12 @@ TODO:         >> Menu
             padding: 0;
             list-style-type: none;
             background: $background-nav-1;
-            overflow: auto; // <- TESTAR SEPARADO!
+            overflow: auto;
 
             li {
                 border-top: 1px solid $color-text-menu;
 
-                div { // <- Subcategorias
+                div { // <- Sub opções
                     display: none;
 
                     ul {
@@ -388,12 +388,12 @@ TODO:         >> Menu
         }
         
         .nav-menu ul:hover {
-            overflow-y: auto;
+            overflow: auto;
         }
     }
 /*  
 ────────────────────────────
-TODO:         >> Menu Expandido
+TODO:         >> Expandido
 ──────────────────────────── */
 
     @media (min-width: $nav-open) {
@@ -446,7 +446,7 @@ TODO:         >> Menu Expandido
             }
         }
 
-        // Subcategorias - Espaço Fora:
+        // Sub opções - Espaço Fora:
 
         .nav-menu ul li div { 
             display: none;
@@ -455,7 +455,7 @@ TODO:         >> Menu Expandido
             text-align: center;
         }
 
-        // Subcategorias - Menu:
+        // Sub opções - Menu:
 
         .nav-menu ul li div ul {
 
@@ -578,6 +578,42 @@ TODO:    > Footer
 }
 
 /*  
+────────────────────────────
+TODO:    > Classes
+──────────────────────────── */
+/*
+.nav_poster_margins { // <- Desisti desta ideia.
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+} 
+*/
+.nav_subOptions_horizontal {
+    @media (min-width: $nav-open) {
+        
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0;
+
+        li {
+            display: inline-block;
+            border-width: 0 !important;
+
+            /*> a {
+                display: inline-flex;
+                flex-direction: column;
+            }*/
+        }
+    }
+}
+
+.nav_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical.
+    li > a {
+        display: inline-flex;
+        flex-direction: column;
+    }
+}
+/*  
 ──────────────────────────────────────────────────────
 TODO: Formulários
 ────────────────────────────────────────────────────── */
@@ -646,7 +682,7 @@ form {
         border-radius: 1000px;
         margin-top: $margin-vertical;
         margin-bottom: $margin-vertical;
-        background-image: $background-button;
+        background: $background-button;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15),
@@ -863,12 +899,6 @@ hr {
         margin-right: 0;
     }
 }
-
-.nav_poster_margins {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 16px;;
-} 
 
 /*.textImg_evenSize {
     max-width: 18px; 
