@@ -8,11 +8,81 @@ var nav_expand = 565 // VÍNCULO: Váriável JS
 TODO: Header-nav
 ────────────────────────────────────────────────────── */
 
+{
+document.querySelector('.nav-menu').innerHTML = `
+
+<ul>
+<li><a onclick="nav_menu_options(this)">Link 1</a>
+
+    <div>
+        <ul>
+            <li><a href="">Link 1.1</a></li>
+            <li><a href="">Link 1.2</a></li>
+            <li><a href="">Link 1.3</a></li>
+        </ul>
+    </div>
+
+</li> 
+
+<li><a onclick="nav_menu_options(this)">Link 2</a>
+
+    <div>
+        <ul class="nav_compact_subOptions_textBelow">
+            <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.1</span></a></li>
+            <!--<li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
+            <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.3</span></a></li>
+            <!--<li><a href="">Link 2.4</a></li>-->
+            <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.5</span></a></li>
+        </ul>
+    </div>
+
+</li>
+
+<li><a onclick="nav_menu_options(this)">Link 3</a>
+
+    <div>
+        <ul class="nav_subOptions_horizontal  nav_expanded_subOptions_textBelow">
+            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.1</span></a></li>
+            <!--<li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
+            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.3</span></a></li>
+           <!-- <li><a href="">Link 3.4</a></li>-->
+            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.5</span></a></li>
+            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.6</span></a></li>
+        </ul>
+    </div>
+
+</li>
+
+<!--<li><a href="">Link 4 (∅)</a><div></div></li>-->
+
+<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5</a>
+
+    <div>
+        <ul>
+            <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.1</span></a></li>
+            <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>
+            <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.3</span></a></li>
+            <!--<li><a href="">Link 5.4</a></li>
+            <li><a href=""><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.5</span></a></li> 
+            <li><a href=""><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.6</span></a></li>-->
+        </ul>
+    </div>
+
+</li>
+
+<li><a href="page_2.html">Page 2</a><div></div></li>
+<li><a aria-label="Hide bar"><img src="images/icon-headerNav-hide.svg" alt="Header-nav button"></a></li>
+</ul>
+`
+}
+
+// ────────────────────────────────────────────────────
+
 var nav_menu_compact_enabled = false
 var categories_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var divs = document.querySelectorAll('.nav-menu > ul > li > div') 
 var index = 'none'
-var bg_nav_selector = 'url(../../images/background-nav-selector.png)  center/100% 100%' // VÍNCULO: Váriável JS
+var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável JS
 
 document.querySelector('.nav-menu-button').onclick = function() { 
 
@@ -41,6 +111,26 @@ document.querySelector('.nav-menu-button').onclick = function() {
         }
     //}
 }
+
+/* // Colocar o código JavaScrip da navegação que está no HTML neste arquivo JavaScript:
+
+console.log(document.querySelectorAll('.nav-menu > ul > li'))
+
+var nav_options = document.querySelectorAll('.nav-menu > ul > li')
+
+for(var i = 0; i < nav_options.length; i++) { 
+
+    //console.log(nav_options[0].lastElementChild.firstElementChild)
+
+    if(nav_options[i].lastElementChild.firstElementChild !== null) { 
+        console.log(nav_options[i].lastElementChild.firstElementChild)
+    } else { 
+        console.log('Falso!')
+    }
+}
+
+//document.querySelector('#nav-menu > ul > li > a').setAttribute('onclick', 'nav_menu_options(this)')
+*/
 
 window.onresize = function() { 
     if(window.innerWidth >= nav_expand) {

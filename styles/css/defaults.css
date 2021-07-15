@@ -10,10 +10,10 @@ TODO: Variáveis
 /* $pc: 1000px; */
 /* ------ Cores E Planos De Fundos ------ */
 /*
-$background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
-$background-nav-1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$background-button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
 /* ------ z-index's ------ */
 /*  
@@ -212,7 +212,7 @@ TODO:    > Header-nav
   z-index: 64;
   color: white;
   background-color: #00c8ff;
-  background: url(../../images/background-header.png) center/100% 100%;
+  background: url(../../images/bg_header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
 ────────────────────────────
@@ -289,7 +289,7 @@ TODO:         >> Expandido
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background: url(../../images/background-nav-1.png) center/100% 100%;
+  background: url(../../images/bg_nav_1.png) center/100% 100%;
   overflow: auto;
 }
 
@@ -302,7 +302,7 @@ TODO:         >> Expandido
 }
 
 .header-nav .nav-menu ul li div ul {
-  background: url(../../images/background-nav-selector.png) center/100% 100%;
+  background: url(../../images/bg_nav_selector.png) center/100% 100%;
 }
 
 .header-nav .nav-menu ul li:nth-last-child(2) {
@@ -316,7 +316,7 @@ TODO:         >> Expandido
                     span {
                         font-size: 32rem;
                         text-align: center;
-                        color: $color-text-menu;
+                        color: $color_text_menu;
                     }
                 }*/
 }
@@ -350,7 +350,8 @@ TODO:         >> Expandido
 }
 
 .header-nav .nav-menu ul::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  height: 11px;
 }
 
 .header-nav .nav-menu ul::-webkit-scrollbar-thumb {
@@ -389,7 +390,7 @@ TODO:         >> Expandido
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     display: flex;
     justify-content: space-between;
-    background: url(../../images/background-header.png) center/100% 100%;
+    background: url(../../images/bg_header.png) center/100% 100%;
   }
   .header-nav .nav-menu > ul > li {
     border-width: 0;
@@ -418,7 +419,7 @@ TODO:         >> Expandido
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(../../images/background-nav-2.png) center/100% 100%;
+    background: url(../../images/bg_nav_2.png) center/100% 100%;
     text-align: center;
   }
   .header-nav .nav-menu ul li div ul {
@@ -430,7 +431,7 @@ TODO:         >> Expandido
     border-radius: 25px;
     margin-top: 48rem;
     background-color: #00c8ff;
-    background: url(../../images/background-nav-1.png) center/100% 100%;
+    background: url(../../images/bg_nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
   }
   .header-nav .nav-menu ul li div ul li:nth-child(1) {
@@ -478,7 +479,7 @@ TODO:         >> Expandido
   top: 9px;
   right: 9px;
   z-index: 64;
-  background: url(../../images/background-header.png) center/100% 100%;
+  background: url(../../images/bg_header.png) center/100% 100%;
   font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
@@ -505,7 +506,7 @@ TODO:    > Footer
 .footer-content .footer-icons {
   border-radius: 50px;
   background-color: #00c8ff;
-  background: url(../../images/background-footer-icons.png) center/100% 100%;
+  background: url(../../images/bg_footer_icons.png) center/100% 100%;
   padding: 6px 0 0px;
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
   list-style-type: none;
@@ -526,7 +527,7 @@ TODO:    > Footer
   text-align: center;
   /*padding: 6px 0;
         margin: 14px 0 0;
-        color: $color-text-menu;
+        color: $color_text_menu;
         background-color: black;*/
 }
 
@@ -645,7 +646,7 @@ form button {
   border-radius: 1000px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background: url(../../images/background-button.png) center/100% 100%;
+  background: url(../../images/bg_button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -1035,7 +1036,7 @@ TODO: Carousel
 .carousel::-webkit-scrollbar-thumb {
   background: #bdbdbd;
   border-radius: 10px;
-  /* border: 3px outset adjust-color($color-theme, $lightness: 25%); */
+  /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
 }
 
 .carousel::-webkit-scrollbar-track {
