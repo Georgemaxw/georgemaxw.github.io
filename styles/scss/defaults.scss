@@ -150,14 +150,10 @@ ul, ol {
     margin-right: $margin_horizontal;
 }
 
-ul li { list-style-type: "➭ "; }
-ul li ul li { list-style-type: "● "; }
-ul li ul li ul li { list-style-type: "○ "; }
-ul li ul li ul li ul li { list-style-type: "- "; }
-
-.arrow_2 > li { list-style-type: "➢ "; } 
-.star > li { list-style-type: "✰ "; }
-.spell > li { list-style-type: "✡ "; }
+ul { list-style-type: "➭ "; }
+ul ul { list-style-type: "-› "; }
+// ul ul { list-style-type: "• "; }
+ul ul ul { list-style-type: "- "; }
 
 dl {
     @extend %margins;
@@ -214,9 +210,13 @@ pre {
     font-family: $font_monospace;
 }
 
-.spaced_items li + li {
+.spaced_items > li + li {
     margin-top: 20rem;
 }
+
+.arrow_2 > li { list-style-type: "➢ "; } 
+.star > li { list-style-type: "✰ "; }
+.spell > li { list-style-type: "✡ "; }
 
 /*  
 ──────────────────────────────────────────────────────
