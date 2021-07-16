@@ -53,7 +53,7 @@ html {
   color: black;
 }
 
-span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dl, dt, dd,
+span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd,
 abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote,
 q, cite, figcaption, form, label, input, textarea, select, button, fieldset,
 legend, table, tr, td, th, caption {
@@ -138,8 +138,27 @@ ul ul ul {
   list-style-type: "- ";
 }
 
+dt {
+  font-weight: bold;
+  margin-top: 16rem;
+}
+
 dd {
-  margin-left: 40rem;
+  margin-left: 0;
+}
+
+dt + dd {
+  margin-top: 16rem;
+}
+
+dt:nth-of-type(1) {
+  margin-top: 0;
+}
+
+@media (min-width: 501px) {
+  dd {
+    margin-left: 40rem;
+  }
 }
 
 strong, b, em, i {
@@ -189,20 +208,12 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-.spaced_items > li + li {
-  margin-top: 20rem;
-}
-
-.arrow_2 {
-  list-style-type: "➢ ";
+.spaced_items > li + li, .spaced_items > dd + dd {
+  margin-top: 16rem;
 }
 
 .star {
   list-style-type: "✰ ";
-}
-
-.spell {
-  list-style-type: "✡ ";
 }
 
 /*  

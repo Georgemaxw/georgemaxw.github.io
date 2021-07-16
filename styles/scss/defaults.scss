@@ -104,7 +104,7 @@ html {
     color: $color_text; 
 }
 
-span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dl, dt, dd, 
+span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd, 
 abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote, 
 q, cite, figcaption, form, label, input, textarea, select, button, fieldset, 
 legend, table, tr, td, th, caption {
@@ -159,9 +159,29 @@ ul ul ul { list-style-type: "- "; }
 dl {
     @extend %margins;
 }
+
+dt { 
+    font-weight: bold; 
+    margin-top: $margin_vertical;
+}
  
 dd {
-    margin-left: 40rem;
+    margin-left: 0;
+}
+
+dt + dd {
+    margin-top: $margin_vertical;
+}
+
+dt:nth-of-type(1) {
+    margin-top: 0;
+}
+
+@media (min-width: $tablet) {
+
+    dd {
+        margin-left: 40rem;
+    }
 }
 
 strong, b, em, i {
@@ -211,13 +231,13 @@ pre {
     font-family: $font_monospace;
 }
 
-.spaced_items > li + li {
-    margin-top: 20rem;
+.spaced_items > li + li, .spaced_items > dd + dd {
+    margin-top: $margin_vertical;
 }
 
-.arrow_2 { list-style-type: "➢ "; } 
+//.arrow_2 { list-style-type: "➢ "; } 
 .star { list-style-type: "✰ "; }
-.spell { list-style-type: "✡ "; }
+//.spell { list-style-type: "✡ "; }
 
 /*  
 ──────────────────────────────────────────────────────
