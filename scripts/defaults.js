@@ -7,8 +7,11 @@ var nav_expand = 565 // VÍNCULO: Váriável JS
 ──────────────────────────────────────────────────────
 TODO: Header-nav
 ────────────────────────────────────────────────────── */
+/*  
+────────────────────────────
+TODO:    >  NavMenu-HTML
+──────────────────────────── */
 
-{
 document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
@@ -53,9 +56,9 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<!--<li><a href="">Link 4 (∅)</a><div></div></li>-->
+<li><a href="">L4-∅</a><div></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5</a>
+<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">L5</a>
 
     <div>
         <ul>
@@ -70,13 +73,15 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a href="page_2.html">Page 2</a><div></div></li>
+<li><a href="page_2.html">Pg 2</a><div></div></li>
 <li><a aria-label="Hide bar"><img src="images/icon-headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
-}
 
-// ────────────────────────────────────────────────────
+/*  
+────────────────────────────
+TODO:    >  NavMenu-Ações
+──────────────────────────── */
 
 var nav_menu_compact_enabled = false
 var categories_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
@@ -236,3 +241,40 @@ document.querySelector('.headerNav-button').onclick = function() { // <- Show He
     document.querySelector('.block-hack').style.display = 'block'
     document.querySelector('.headerNav-button').style.display = 'none'
 }
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Footer-HTML
+────────────────────────────────────────────────────── */
+
+document.querySelector('footer').innerHTML = `
+
+<div class="central footer-content">
+
+<address>
+
+    <!--<p>Contactthe author of this page:</p>-->
+    <!--<p>Página escrita por <a href=""> Chris Mills</a>.</p>-->
+    <!--  <ul>
+            <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
+            <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
+            </ul>-->
+    <!--<p>Follow us on:</p>-->
+
+        <ul class="footer-icons">
+            <li><a href="mailto:support@company.com.br"><img src="images/icon-mail.svg" alt=""></a></li>  
+            <li><a href=""><img src="images/icon-facebook.svg" alt=""></a></li>  
+            <li><a href=""><img src="images/icon-youtube.svg" alt=""></a></li> 
+            <li><a href=""><img src="images/icon-twitter.svg" alt=""></a></li> 
+            <li><a href=""><img src="images/icon-instagram.svg" alt=""></a></li>
+            <li><a href=""><img src="images/icon-twitch.svg" alt=""></a></li>
+        </ul>
+
+    <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+
+</address> 
+
+<p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
+
+    </div>
+`

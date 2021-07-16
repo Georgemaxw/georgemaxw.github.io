@@ -486,7 +486,7 @@ TODO:         >> Expandido
     border-radius: 0px;
     border-bottom-left-radius: 6px;
     top: 0px; right: 0px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.6);
     */
 }
 
@@ -579,142 +579,62 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Formulários
+TODO: Multimídia
 ────────────────────────────────────────────────────── */
-form {
-  margin: 16rem auto;
+/*.textImg_evenSize {
+    max-width: 18px; 
+    margin-bottom: -4px;
+}*/
+.textImg {
+  max-width: 19px;
+  margin-bottom: -5px;
 }
 
-form label {
+.textImg_Size {
+  max-width: 19px;
+}
+
+figcaption {
+  margin-top: calc(16rem/2);
+  text-align: center;
+  font-size: 16rem;
+}
+
+audio {
+  height: 45rem;
   display: block;
-}
-
-form label input, form label textarea {
-  color: #999999;
-  width: 100%;
-  padding: 8rem 13rem;
-  border: 1px solid #cccccc;
-  border-radius: 19px;
-  margin-top: 16rem;
-  /* 
-            border: 1px solid hsl(0, 0%, 93%); 
-            filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18)); <- Traz inconsistências entre os navegadores. */
-}
-
-form label input[type="file"] {
-  color: transparent;
-  border-radius: 0;
-  filter: none;
-}
-
-form label input[type="radio"], form label input[type="checkbox"] {
-  width: auto;
-  margin-top: 0;
-  margin-right: 6px;
-}
-
-form label textarea {
-  vertical-align: top;
-  /* Alinha os <textarea>'s com seus rótulos */
-  height: 84rem;
-}
-
-form input:placeholder-shown {
-  color: red;
-}
-
-form p {
-  text-indent: 0;
-}
-
-form fieldset {
-  border-width: 0;
-}
-
-form select {
-  /*
-        display: block;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;*/
-  border-radius: 5px;
-  /* <- Traz inconsistências entre os navegadores. */
-  height: 39px;
-  color: #00c8ff;
-  background: rgba(255, 255, 255, 0);
-  border: 1px solid #00c4fa;
-  padding: 0 6px;
-}
-
-form button {
-  min-width: 120px;
-  color: white;
-  padding: 10rem 0;
-  border-width: 0;
-  border-radius: 1000px;
+  max-width: calc(100vw - 2 * 20px);
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background: url(../../images/bg_button.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-form button:disabled {
-  opacity: 0.5;
+figure.center {
+  text-align: center;
 }
 
-form .textarea-2l {
-  height: calc(62rem + ( (2 - 2) * 22rem));
+img.outdoor, video.outdoor {
+  width: 100%;
 }
 
-form .textarea-3l {
-  height: calc(62rem + ( (3 - 2) * 22rem));
+@media (min-width: 501px) {
+  img.outdoor, video.outdoor {
+    display: block;
+    width: calc(100% - (2 * 20px));
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-form .textarea-4l {
-  height: calc(62rem + ( (4 - 2) * 22rem));
+figure.outdoor img {
+  width: 100%;
 }
 
-form .textarea-5l {
-  height: calc(62rem + ( (5 - 2) * 22rem));
-}
-
-form .textarea-6l {
-  height: calc(62rem + ( (6 - 2) * 22rem));
-}
-
-form .textarea-7l {
-  height: calc(62rem + ( (7 - 2) * 22rem));
-}
-
-form .textarea-8l {
-  height: calc(62rem + ( (8 - 2) * 22rem));
-}
-
-form strong {
-  text-decoration: none;
-}
-
-form input:focus, form textarea:focus {
-  outline: 0px dotted;
-  border: 1px solid #00c8ff;
-}
-
-form input[type="file"]:focus {
-  outline: 1px solid #00c8ff;
-}
-
-form input[type="radio"]:focus, form input[type="checkbox"]:focus {
-  outline: 1px solid #00c8ff;
-}
-
-form select:focus {
-  outline: 0px dotted;
-  border: 1px solid #00c8ff;
-  /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
-}
-
-form button:focus {
-  outline: 2px dotted #00c8ff;
+@media (min-width: 501px) {
+  figure.outdoor {
+    width: calc(100% - (2 * 20px));
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*  
@@ -855,7 +775,147 @@ table ul, table ol {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Others
+TODO: Formulários
+────────────────────────────────────────────────────── */
+form {
+  margin: 16rem auto;
+}
+
+form label {
+  display: block;
+}
+
+form label input, form label textarea {
+  color: black;
+  width: 100%;
+  padding: 8rem 13rem;
+  border: 1px solid #cccccc;
+  border-radius: 19px;
+  margin-top: 16rem;
+  /* 
+            border: 1px solid hsl(0, 0%, 93%); 
+            filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
+}
+
+form label input[type="file"] {
+  color: transparent;
+  border-radius: 0;
+  filter: none;
+}
+
+form label input[type="radio"], form label input[type="checkbox"] {
+  width: auto;
+  margin-top: 0;
+  margin-right: 6px;
+}
+
+form label textarea {
+  vertical-align: top;
+  /* Alinha os <textarea>'s com seus rótulos */
+  height: 84rem;
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: #adadad;
+}
+
+form p {
+  text-indent: 0;
+}
+
+form fieldset {
+  border-width: 0;
+}
+
+form select {
+  /*
+        display: block;
+        margin-top: $margin_vertical;
+        margin-bottom: $margin_vertical;*/
+  border-radius: 5px;
+  /* <- Traz inconsistências entre os navegadores. */
+  height: 39px;
+  color: #adadad;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #cccccc;
+  padding: 0 6px;
+}
+
+form button {
+  min-width: 120px;
+  color: white;
+  padding: 10rem 0;
+  border-width: 0;
+  border-radius: 1000px;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  background: url(../../images/bg_button.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+form button:disabled {
+  opacity: 0.5;
+}
+
+form .textarea-2l {
+  height: calc(62rem + ( (2 - 2) * 22rem));
+}
+
+form .textarea-3l {
+  height: calc(62rem + ( (3 - 2) * 22rem));
+}
+
+form .textarea-4l {
+  height: calc(62rem + ( (4 - 2) * 22rem));
+}
+
+form .textarea-5l {
+  height: calc(62rem + ( (5 - 2) * 22rem));
+}
+
+form .textarea-6l {
+  height: calc(62rem + ( (6 - 2) * 22rem));
+}
+
+form .textarea-7l {
+  height: calc(62rem + ( (7 - 2) * 22rem));
+}
+
+form .textarea-8l {
+  height: calc(62rem + ( (8 - 2) * 22rem));
+}
+
+form strong {
+  text-decoration: none;
+}
+
+form input:focus, form textarea:focus {
+  outline: 0px dotted;
+  border: 1px solid #00c8ff;
+}
+
+form input[type="file"]:focus {
+  outline: 1px solid #00c8ff;
+}
+
+form input[type="radio"]:focus, form input[type="checkbox"]:focus {
+  outline: 1px solid #00c8ff;
+}
+
+form select:focus {
+  outline: 0px dotted;
+  border: 1px solid #00c8ff;
+  /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+}
+
+form button:focus {
+  outline: 2px dotted #00c8ff;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Outros
 ────────────────────────────────────────────────────── */
 body {
   min-width: 300px;
@@ -873,33 +933,6 @@ hr {
     margin-left: 0;
     margin-right: 0;
   }
-}
-
-/*.textImg_evenSize {
-    max-width: 18px; 
-    margin-bottom: -4px;
-}*/
-.textImg {
-  max-width: 19px;
-  margin-bottom: -5px;
-}
-
-.textImg_Size {
-  max-width: 19px;
-}
-
-figcaption {
-  margin-top: calc(16rem/2);
-  text-align: center;
-  font-size: 16rem;
-}
-
-audio {
-  height: 45rem;
-  display: block;
-  max-width: calc(100vw - 2 * 20px);
-  margin-top: 16rem;
-  margin-bottom: 16rem;
 }
 
 /*
@@ -923,10 +956,6 @@ audio {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-figure.center {
-  text-align: center;
 }
 
 .lb {
@@ -954,36 +983,14 @@ figure.center {
   display: none;
 }
 
-img.outdoor, video.outdoor {
-  width: 100%;
-}
-
-@media (min-width: 501px) {
-  img.outdoor, video.outdoor {
-    display: block;
-    width: calc(100% - (2 * 20px));
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-figure.outdoor img {
-  width: 100%;
-}
-
-@media (min-width: 501px) {
-  figure.outdoor {
-    width: calc(100% - (2 * 20px));
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* ---------------------------- */
-/*  
+/*
 ──────────────────────────────────────────────────────
-TODO: Gallery
+TODO: Componentes
 ────────────────────────────────────────────────────── */
+/*  
+────────────────────────────
+TODO:    > Gallery
+──────────────────────────── */
 .gallery img {
   width: 50%;
 }
@@ -999,9 +1006,9 @@ TODO: Gallery
 }
 
 /*  
-──────────────────────────────────────────────────────
-TODO: Carousel
-────────────────────────────────────────────────────── */
+────────────────────────────
+TODO:    > Carousel
+──────────────────────────── */
 .carousel {
   overflow-x: auto;
   white-space: nowrap;
@@ -1043,4 +1050,28 @@ TODO: Carousel
   border: 1px solid #dbdbdb;
   border-radius: 10px;
   /* */
+}
+
+/*  
+────────────────────────────
+TODO:    > Choices
+──────────────────────────── */
+.choices {
+  display: inline-block;
+  /*margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;*/
+  border-radius: 5px;
+  /* <- Traz inconsistências entre os navegadores. */
+  color: #00c8ff;
+  border: 1px solid #00c4fa;
+  padding: 0 6px;
+  list-style-type: none;
+}
+
+.choices li:not(:nth-child(1)) {
+  display: none;
+}
+
+.choices li::after {
+  content: " ▼";
 }

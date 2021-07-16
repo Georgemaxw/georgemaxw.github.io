@@ -27,8 +27,21 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 $color_theme: hsla(193,100%,50%, 1);
 
 $color_text: black;
+$color_text_clear: hsl(0, 0%, 68%);
 $color_text_menu: white; 
-$color_text_form: hsl(0, 0%, 60%); 
+$color_text_form: $color_text; 
+$color_text_form_placeholder: $color_text_clear;
+$color_text_form_select: $color_text_clear;
+
+$color_table_border: hsl(0, 0%, 85%);
+$color_form_border: hsl(0, 0%, 80%); 
+
+$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
+$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
+$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
+$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
+$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
+$color_shadow_footer: hsla(0, 0%, 0%, 0.22);
 
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_track: hsla(0, 0%, 100%, 0.4);
@@ -230,7 +243,7 @@ TODO:    > Header-nav
     color: $color_text_menu; 
     background-color: $color_theme;
     background: $bg_header;
-    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0px 10px 0px $color_shadow_headerNav;
 
     .nav {
         display: flex;
@@ -335,8 +348,7 @@ TODO:         >> Menu
 
         > ul {
             margin: $button_height 0 0 0;
-            //box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0px 10px 0px $color_shadow_nav_options;
         }
 
         > ul > li:last-of-type {
@@ -415,7 +427,7 @@ TODO:         >> Expandido
 
         .nav-menu > ul {
             margin: 0;
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0);
             display: flex;
             justify-content: space-between;
             background: $bg_header;
@@ -469,7 +481,7 @@ TODO:         >> Expandido
             margin-top: $button_height;
             background-color: $color_theme;
             background: $bg_nav_1;
-            box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
+            box-shadow: 6px 6px 13px 0px $color_shadow_nav_subOptions;
 
             li:nth-child(1) {
                 border-top: 0;
@@ -510,7 +522,7 @@ TODO:         >> Expandido
     }
 
     .header-nav {
-        box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
+        box-shadow: 3px 3px 6px 0px $color_shadow_headerNav_rounded;
     }
 
     .header-nav .nav > :nth-child(1) {
@@ -534,7 +546,7 @@ TODO:         >> Expandido
     z-index: $zIndex_nav;
     background: $bg_header;
     font-size: 19rem;
-    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 3px 3px 6px 0px $color_shadow_headerNav_button;
 
     img {
         width: inherit;
@@ -545,7 +557,7 @@ TODO:         >> Expandido
     border-radius: 0px;
     border-bottom-left-radius: 6px;
     top: 0px; right: 0px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.6);
     */
 }
 
@@ -563,7 +575,7 @@ TODO:    > Footer
         background: $bg_footer_icons;
         padding: 6px 0 0px; 
         @extend %margins;
-        box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
+        box-shadow: 4px 6px 9px 0px $color_shadow_footer;
         list-style-type: none;
         display: flex;
         justify-content: space-evenly;
@@ -647,120 +659,63 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Formulários
+TODO: Multimídia
 ────────────────────────────────────────────────────── */
 
-form {
-    margin: $margin_vertical auto;
+/*.textImg_evenSize {
+    max-width: 18px; 
+    margin-bottom: -4px;
+}*/
 
-    label {
+.textImg {
+    max-width: 19px; 
+    margin-bottom: -5px;
+}
+
+.textImg_Size {
+    max-width: 19px;
+}
+
+figcaption {
+    margin-top: calc(#{$margin_vertical}/2); 
+    text-align: center;
+    font-size: $font_small;  
+}
+
+audio {
+    height: 45rem;
+    display: block;
+    max-width: calc(100vw - 2 * #{$margin_horizontal});
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+}
+
+figure.center {
+    text-align: center;
+}
+
+img.outdoor, video.outdoor {
+    width: 100%;
+}
+
+@media (min-width: $tablet) {
+    img.outdoor, video.outdoor {
         display: block;
-        @extend %margins;
-
-        input, textarea {
-            color: $color_text_form;
-            width: 100%;
-            padding: 8rem 13rem;
-            border: 1px solid hsl(0, 0%, 80%); 
-            border-radius: 19px;
-            margin-top: $margin_vertical;
-            /* 
-            border: 1px solid hsl(0, 0%, 93%); 
-            filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18)); <- Traz inconsistências entre os navegadores. */
-        }
-
-        input[type="file"] {
-            color: transparent;
-            border-radius: 0;
-            filter: none;
-        }
-
-        input[type="radio"], input[type="checkbox"] {
-            width: auto;
-            margin-top: 0;
-            margin-right: 6px;
-        }
-
-        textarea {
-            vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
-            height: 84rem;
-        }
+        width: calc(100% - (2 * #{$margin_horizontal}) );
+        margin-left: auto;
+        margin-right: auto;
     }
+}
 
-    input:placeholder-shown {
-        color: red;
-    }
+figure.outdoor img {
+        width: 100%;
+}
 
-    p {
-        text-indent: 0;
-    }
-
-    fieldset {
-        border-width: 0;
-    }
-
-    select {/*
-        display: block;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;*/
-        border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
-        height: 39px;
-        color: $color_theme;
-        background: hsla(0, 0%, 100%, 0);
-        border: 1px solid adjust-color($color_theme, $lightness: -1%);
-        padding: 0 6px;
-    }
-
-    button {
-        min-width: 120px;
-        color: $color_text_menu;
-        padding: 10rem 0;
-        border-width: 0;
-        border-radius: 1000px;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;
-        background: $bg_button;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-        box-shadow: 
-        inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15),
-        inset 5px 5px 5px 0px rgba(255, 255, 255, 0.40);
-    }
-
-    button:disabled {
-        opacity: 0.5;
-    }
-
-    @for $i from 2 through 8 { 
-        .textarea-#{$i}l {
-            height: calc(62rem + ( (#{$i} - 2) * 22rem));
-        } 
-    }
-
-    strong {
-        text-decoration: none;
-    }
-
-    input:focus, textarea:focus {
-        outline: 0px dotted;
-        border: 1px solid $color_theme;
-    }
-
-    input[type="file"]:focus {
-        outline: 1px solid $color_theme;
-    }
-
-    input[type="radio"]:focus, input[type="checkbox"]:focus {
-        outline: 1px solid $color_theme;
-    }
-
-    select:focus {
-        outline: 0px dotted;
-        border: 1px solid $color_theme;
-        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
-    }
-
-    button:focus {
-        outline: 2px dotted $color_theme;
+@media (min-width: $tablet) {
+    figure.outdoor {
+        width: calc(100% - (2 * #{$margin_horizontal}) );
+        margin-left: auto;
+        margin-right: auto;
     }
 }
  
@@ -782,11 +737,11 @@ table {
     }
 
     tr + tr {
-        border-top: 1px solid hsl(0, 0%, 85%);
+        border-top: 1px solid $color_table_border;
     }
 
     td + td {
-        border-left: 1px solid hsl(0, 0%, 85%);
+        border-left: 1px solid $color_table_border;
     }
 
     th, td {
@@ -914,7 +869,126 @@ table {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Others
+TODO: Formulários
+────────────────────────────────────────────────────── */
+
+form {
+    margin: $margin_vertical auto;
+
+    label {
+        display: block;
+        @extend %margins;
+
+        input, textarea {
+            color: $color_text_form;
+            width: 100%;
+            padding: 8rem 13rem;
+            border: 1px solid $color_form_border; 
+            border-radius: 19px;
+            margin-top: $margin_vertical;
+            /* 
+            border: 1px solid hsl(0, 0%, 93%); 
+            filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
+        }
+
+        input[type="file"] {
+            color: transparent;
+            border-radius: 0;
+            filter: none;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-top: 0;
+            margin-right: 6px;
+        }
+
+        textarea {
+            vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
+            height: 84rem;
+        }
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: $color_text_form_placeholder;
+    } 
+
+    p {
+        text-indent: 0;
+    }
+
+    fieldset {
+        border-width: 0;
+    }
+
+    select {/*
+        display: block;
+        margin-top: $margin_vertical;
+        margin-bottom: $margin_vertical;*/
+        border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
+        height: 39px;
+        color: $color_text_form_select;
+        background: hsla(0, 0%, 100%, 0);
+        border: 1px solid $color_form_border;
+        padding: 0 6px;
+    }
+
+    button {
+        min-width: 120px;
+        color: $color_text_menu;
+        padding: 10rem 0;
+        border-width: 0;
+        border-radius: 1000px;
+        margin-top: $margin_vertical;
+        margin-bottom: $margin_vertical;
+        background: $bg_button;
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        box-shadow: 
+        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    }
+
+    button:disabled {
+        opacity: 0.5;
+    }
+
+    @for $i from 2 through 8 { 
+        .textarea-#{$i}l {
+            height: calc(62rem + ( (#{$i} - 2) * 22rem));
+        } 
+    }
+
+    strong {
+        text-decoration: none;
+    }
+
+    input:focus, textarea:focus {
+        outline: 0px dotted;
+        border: 1px solid $color_theme;
+    }
+
+    input[type="file"]:focus {
+        outline: 1px solid $color_theme;
+    }
+
+    input[type="radio"]:focus, input[type="checkbox"]:focus {
+        outline: 1px solid $color_theme;
+    }
+
+    select:focus {
+        outline: 0px dotted;
+        border: 1px solid $color_theme;
+        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+    }
+
+    button:focus {
+        outline: 2px dotted $color_theme;
+    }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Outros
 ────────────────────────────────────────────────────── */
 
 body {
@@ -937,33 +1011,6 @@ hr {
     }
 }
 
-/*.textImg_evenSize {
-    max-width: 18px; 
-    margin-bottom: -4px;
-}*/
-
-.textImg {
-    max-width: 19px; 
-    margin-bottom: -5px;
-}
-
-.textImg_Size {
-    max-width: 19px;
-}
-
-figcaption {
-    margin-top: calc(#{$margin_vertical}/2); 
-    text-align: center;
-    font-size: $font_small;  
-}
-
-audio {
-    height: 45rem;
-    display: block;
-    max-width: calc(100vw - 2 * #{$margin_horizontal});
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
-}
 /*
 .content-left {
     text-align: left;
@@ -981,14 +1028,11 @@ audio {
     text-align: justify;
 }
 */
+
 .center:not(figure) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-figure.center {
-    text-align: center;
 }
 
 .lb { /* Line break */
@@ -1014,37 +1058,15 @@ figure.center {
     display: none;
 }
 
-img.outdoor, video.outdoor {
-    width: 100%;
-}
-
-@media (min-width: $tablet) {
-    img.outdoor, video.outdoor {
-        display: block;
-        width: calc(100% - (2 * #{$margin_horizontal}) );
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-figure.outdoor img {
-        width: 100%;
-}
-
-@media (min-width: $tablet) {
-    figure.outdoor {
-        width: calc(100% - (2 * #{$margin_horizontal}) );
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-/* ---------------------------- */
+/*
+──────────────────────────────────────────────────────
+TODO: Componentes
+────────────────────────────────────────────────────── */
 
 /*  
-──────────────────────────────────────────────────────
-TODO: Gallery
-────────────────────────────────────────────────────── */
+────────────────────────────
+TODO:    > Gallery
+──────────────────────────── */
 
 .gallery img {
     width: 50%;
@@ -1063,9 +1085,9 @@ TODO: Gallery
 }
 
 /*  
-──────────────────────────────────────────────────────
-TODO: Carousel
-────────────────────────────────────────────────────── */
+────────────────────────────
+TODO:    > Carousel
+──────────────────────────── */
 
 .carousel {
     overflow-x: auto;
@@ -1111,7 +1133,31 @@ TODO: Carousel
     background: hsl(0, 0%, 98%); 
     border: 1px solid hsl(0, 0%, 86%);
     border-radius: 10px; /* */ 
-} 
+}
+
+/*  
+────────────────────────────
+TODO:    > Choices
+──────────────────────────── */
+
+.choices {
+    display: inline-block;
+    /*margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;*/
+    border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
+    //height: 39px;
+    color: $color_theme;
+    border: 1px solid adjust-color($color_theme, $lightness: -1%);
+    padding: 0 6px;
+    list-style-type: none;
+
+    li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    li::after { content: " ▼" }
+}
+
 
 
 
