@@ -708,6 +708,7 @@ form {
         color: $color_theme;
         background: hsla(0, 0%, 100%, 0);
         border: 1px solid adjust-color($color_theme, $lightness: -1%);
+        padding: 0 6px;
     }
 
     button {
