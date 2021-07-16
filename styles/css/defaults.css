@@ -131,7 +131,7 @@ ul {
 }
 
 ul ul {
-  list-style-type: "-› ";
+  list-style-type: "● ";
 }
 
 ul ul ul {
@@ -193,15 +193,15 @@ pre {
   margin-top: 20rem;
 }
 
-.arrow_2 > li {
+.arrow_2 {
   list-style-type: "➢ ";
 }
 
-.star > li {
+.star {
   list-style-type: "✰ ";
 }
 
-.spell > li {
+.spell {
   list-style-type: "✡ ";
 }
 

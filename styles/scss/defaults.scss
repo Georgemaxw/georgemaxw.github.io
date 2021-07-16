@@ -151,8 +151,9 @@ ul, ol {
 }
 
 ul { list-style-type: "➭ "; }
-ul ul { list-style-type: "-› "; }
+ul ul { list-style-type: "● "; }
 // ul ul { list-style-type: "• "; }
+// ul ul { list-style-type: "-› "; }
 ul ul ul { list-style-type: "- "; }
 
 dl {
@@ -214,9 +215,9 @@ pre {
     margin-top: 20rem;
 }
 
-.arrow_2 > li { list-style-type: "➢ "; } 
-.star > li { list-style-type: "✰ "; }
-.spell > li { list-style-type: "✡ "; }
+.arrow_2 { list-style-type: "➢ "; } 
+.star { list-style-type: "✰ "; }
+.spell { list-style-type: "✡ "; }
 
 /*  
 ──────────────────────────────────────────────────────
