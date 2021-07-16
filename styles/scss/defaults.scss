@@ -133,7 +133,11 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
 	}
 }
-      
+
+p, li, ul, ol, dl, dt, dd {
+    line-height: 1.5;
+}
+
 p {
     @extend %margins;
     text-indent: 6rem; /* Sem justificar, usar: 4px */
@@ -146,9 +150,14 @@ ul, ol {
     margin-right: $margin_horizontal;
 }
 
-p, li, ul, ol, dl, dt, dd {
-    line-height: 1.5;
-}
+ul li { list-style-type: "➭ "; }
+ul li ul li { list-style-type: "● "; }
+ul li ul li ul li { list-style-type: "○ "; }
+ul li ul li ul li ul li { list-style-type: "- "; }
+
+.arrow_2 > li { list-style-type: "➢ "; } 
+.star > li { list-style-type: "✰ "; }
+.spell > li { list-style-type: "✡ "; }
 
 dl {
     @extend %margins;
