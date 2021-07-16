@@ -632,10 +632,16 @@ form fieldset {
 }
 
 form select {
-  display: block;
-  margin-top: 16rem;
-  margin-bottom: 16rem;
-  /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+  /*
+        display: block;
+        margin-top: $margin_vertical;
+        margin-bottom: $margin_vertical;*/
+  border-radius: 5px;
+  /* <- Traz inconsistências entre os navegadores. */
+  height: 39px;
+  color: #00c8ff;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #00c4fa;
 }
 
 form button {
@@ -881,10 +887,6 @@ hr {
   max-width: 19px;
 }
 
-figure > div {
-  display: inline-block;
-}
-
 figcaption {
   margin-top: calc(16rem/2);
   text-align: center;
@@ -964,11 +966,7 @@ img.outdoor, video.outdoor {
   }
 }
 
-figure.outdoor div {
-  width: 100%;
-}
-
-figure.outdoor div img {
+figure.outdoor img {
   width: 100%;
 }
 

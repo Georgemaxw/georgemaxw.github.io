@@ -699,11 +699,15 @@ form {
         border-width: 0;
     }
 
-    select {
+    select {/*
         display: block;
         margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;
-        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+        margin-bottom: $margin_vertical;*/
+        border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
+        height: 39px;
+        color: $color_theme;
+        background: hsla(0, 0%, 100%, 0);
+        border: 1px solid adjust-color($color_theme, $lightness: -1%);
     }
 
     button {
@@ -946,10 +950,6 @@ hr {
     max-width: 19px;
 }
 
-figure > div {
-    display: inline-block;
-}
-
 figcaption {
     margin-top: calc(#{$margin_vertical}/2); 
     text-align: center;
@@ -1026,12 +1026,8 @@ img.outdoor, video.outdoor {
     }
 }
 
-figure.outdoor div {
-    width: 100%;
-
-    img {
+figure.outdoor img {
         width: 100%;
-    }
 }
 
 @media (min-width: $tablet) {
