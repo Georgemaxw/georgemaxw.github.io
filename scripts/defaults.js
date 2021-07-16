@@ -19,9 +19,9 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul>
-            <li><a href="">Link 1.1</a></li>
-            <li><a href="">Link 1.2</a></li>
-            <li><a href="">Link 1.3</a></li>
+            <li><a href="#">Link 1.1</a></li>
+            <li><a href="#">Link 1.2</a></li>
+            <li><a href="#">Link 1.3</a></li>
         </ul>
     </div>
 
@@ -31,11 +31,11 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul class="nav_compact_subOptions_textBelow">
-            <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
-            <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.3</span></a></li>
-            <!--<li><a href="">Link 2.4</a></li>-->
-            <li><a href=""><img src="images/img-pc.png" alt=" "><span>Link 2.5</span></a></li>
+            <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.1</span></a></li>
+            <!--<li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
+            <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.3</span></a></li>
+            <!--<li><a href="#">Link 2.4</a></li>-->
+            <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.5</span></a></li>
         </ul>
     </div>
 
@@ -45,12 +45,12 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul class="nav_subOptions_horizontal  nav_expanded_subOptions_textBelow">
-            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
-            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.3</span></a></li>
-           <!-- <li><a href="">Link 3.4</a></li>-->
-            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.5</span></a></li>
-            <li><a href=""><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.6</span></a></li>
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.1</span></a></li>
+            <!--<li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.3</span></a></li>
+           <!-- <li><a href="#">Link 3.4</a></li>-->
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.5</span></a></li>
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.6</span></a></li>
         </ul>
     </div>
 
@@ -62,12 +62,12 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul>
-            <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.1</span></a></li>
-            <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>
-            <li><a href=""><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.3</span></a></li>
-            <!--<li><a href="">Link 5.4</a></li>
-            <li><a href=""><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.5</span></a></li> 
-            <li><a href=""><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.6</span></a></li>-->
+            <li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.1</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.3</span></a></li>
+            <!--<li><a href="#">Link 5.4</a></li>
+            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.5</span></a></li> 
+            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.6</span></a></li>-->
         </ul>
     </div>
 
@@ -254,7 +254,7 @@ document.querySelector('footer').innerHTML = `
 <address>
 
     <!--<p>Contactthe author of this page:</p>-->
-    <!--<p>Página escrita por <a href=""> Chris Mills</a>.</p>-->
+    <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
     <!--  <ul>
             <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
             <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
@@ -263,11 +263,11 @@ document.querySelector('footer').innerHTML = `
 
         <ul class="footer-icons">
             <li><a href="mailto:support@company.com.br"><img src="images/icon-mail.svg" alt=""></a></li>  
-            <li><a href=""><img src="images/icon-facebook.svg" alt=""></a></li>  
-            <li><a href=""><img src="images/icon-youtube.svg" alt=""></a></li> 
-            <li><a href=""><img src="images/icon-twitter.svg" alt=""></a></li> 
-            <li><a href=""><img src="images/icon-instagram.svg" alt=""></a></li>
-            <li><a href=""><img src="images/icon-twitch.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/icon-facebook.svg" alt=""></a></li>  
+            <li><a href="#"><img src="images/icon-youtube.svg" alt=""></a></li> 
+            <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li> 
+            <li><a href="#"><img src="images/icon-instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/icon-twitch.svg" alt=""></a></li>
         </ul>
 
     <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
