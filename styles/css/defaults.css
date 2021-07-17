@@ -157,7 +157,7 @@ dt:nth-of-type(1) {
 
 @media (min-width: 501px) {
   dd {
-    margin-left: 40rem;
+    margin-left: 30rem;
   }
 }
 
@@ -177,6 +177,14 @@ dfn, var, address, cite {
 
 var, kbd, samp, code {
   font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+kbd {
+  font-size: 15rem;
+  background: #dbdbdb;
+  padding: 2px 6px;
+  border: 4px outset #f2f2f2;
+  border-radius: 5px;
 }
 
 pre {
@@ -679,14 +687,24 @@ TODO: Tabelas
 table {
   max-width: calc(100% - 2 * 20px);
   margin: 16rem auto;
-  border: 2px solid #00c8ff;
+  border: 1px solid #00c8ff;
   border-collapse: collapse;
   caption-side: bottom;
+  font-weight: normal;
 }
 
 table th {
   color: #00c8ff;
-  border: 2px solid #00c8ff;
+  border: 1px solid #00c8ff;
+  font-weight: normal;
+}
+
+table tr:hover {
+  background: #f5fdff;
+}
+
+table tr:nth-of-type(1):hover {
+  background: 0;
 }
 
 table tr + tr {
@@ -724,11 +742,11 @@ table ul, table ol {
   width: 100%;
   max-width: none;
   border-width: 0;
-  border-bottom: 2px solid #00c8ff;
+  border-bottom: 1px solid #00c8ff;
 }
 
 .table-style-2 tr:nth-of-type(1) {
-  border-bottom: 2px solid #00c8ff;
+  border-bottom: 1px solid #00c8ff;
 }
 
 .table-style-2 th {
@@ -754,6 +772,14 @@ table ul, table ol {
   border-width: 0;
 }
 
+.table-style-3 tr:hover {
+  outline: 1px solid #00c8ff;
+}
+
+.table-style-3 tr:nth-of-type(1):hover {
+  background: #f5fdff;
+}
+
 .table-style-3 tr + tr {
   border-width: 0;
 }
@@ -770,16 +796,17 @@ table ul, table ol {
   }
   .table-style-4 tr {
     border-width: 0;
-  }
-  .table-style-4 tr {
     margin-bottom: 16rem;
+  }
+  .table-style-4 tr:hover {
+    background: 0;
   }
   .table-style-4 tr, .table-style-4 th, .table-style-4 td {
     display: block;
   }
   .table-style-4 th {
     border-width: 0;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #00c8ff;
     text-align: center;
   }
   .table-style-4 td {

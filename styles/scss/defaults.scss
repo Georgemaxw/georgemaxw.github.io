@@ -13,6 +13,8 @@ $font_smaller: 14rem;
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_monospace: 'Courier New', Courier, monospace;
 $button_height: 48rem;
+$table_border1_width: 1px;
+$table_border2_width: 1px;
  
 /* ------ Breakpoints ------ */
 
@@ -35,6 +37,7 @@ $color_text_form_select: $color_text_clear;
 
 $color_table_border: hsl(0, 0%, 85%);
 $color_form_border: hsl(0, 0%, 80%); 
+$color_border_kbd: hsl(0, 0%, 95%);
 
 $color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
 $color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
@@ -52,6 +55,8 @@ $bg_nav_2: url(../../images/bg_nav_2.png)  center /100% 100%;
 $bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
 $bg_button: url(../../images/bg_button.png)  center /100% 100%;
+$bg_table_tr_hover: hsla(193,100%,98%, 1); 
+$bg_kbd: hsl(0, 0%, 86%);
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -180,7 +185,7 @@ dt:nth-of-type(1) {
 @media (min-width: $tablet) {
 
     dd {
-        margin-left: 40rem;
+        margin-left: 30rem;
     }
 }
 
@@ -200,6 +205,14 @@ dfn, var, address, cite {
 
 var, kbd, samp, code {
     font-family: $font_default;
+}
+
+kbd {
+    font-size: 15rem;
+    background: $bg_kbd;
+    padding: 2px 6px;
+    border: 4px outset $color_border_kbd;
+    border-radius: 5px;
 }
 
 pre {
@@ -757,21 +770,31 @@ TODO: Tabelas
 table {
     max-width: calc(100% - 2 * #{$margin_horizontal});
     margin: $margin_vertical auto;
-    border: 2px solid $color_theme;
+    border: $table_border1_width solid $color_theme;
     border-collapse: collapse;
     caption-side: bottom;
+    font-weight: normal;
 
     th {
         color: $color_theme;
-        border: 2px solid $color_theme;
+        border: $table_border1_width solid $color_theme;
+        font-weight: normal;
+    }
+
+    tr:hover {
+        background: $bg_table_tr_hover;
+    }
+
+    tr:nth-of-type(1):hover {
+        background: 0;
     }
 
     tr + tr {
-        border-top: 1px solid $color_table_border;
+        border-top: $table_border2_width solid $color_table_border;
     }
 
     td + td {
-        border-left: 1px solid $color_table_border;
+        border-left: $table_border2_width solid $color_table_border;
     }
 
     th, td {
@@ -802,10 +825,10 @@ table {
     width: 100%;
     max-width: none;
     border-width: 0;
-    border-bottom: 2px solid $color_theme;
+    border-bottom: $table_border1_width solid $color_theme;
 
     tr:nth-of-type(1) {
-        border-bottom: 2px solid $color_theme;
+        border-bottom: $table_border1_width solid $color_theme;
     }
 
     th {
@@ -831,6 +854,14 @@ table {
 .table-style-3 {
     border-width: 0;
 
+    tr:hover {
+        outline: 1px solid $color_theme;
+    }
+
+    tr:nth-of-type(1):hover {
+        background: $bg_table_tr_hover;
+    }
+
     tr + tr {
         border-width: 0;
     }
@@ -849,10 +880,11 @@ table {
 
         tr {
             border-width: 0;
+            margin-bottom: $margin_vertical;
         }
 
-        tr {
-            margin-bottom: $margin_vertical;
+        tr:hover {
+            background: 0;
         }
 
         tr, th, td {
@@ -861,7 +893,7 @@ table {
 
         th {
             border-width: 0;
-            border-bottom: 1px solid;
+            border-bottom: $table_border1_width solid $color_theme;
             text-align: center;
         }
 
@@ -895,7 +927,7 @@ table {
             text-align: left;
         }
     }
-}
+} 
 
 /*  
 ──────────────────────────────────────────────────────
