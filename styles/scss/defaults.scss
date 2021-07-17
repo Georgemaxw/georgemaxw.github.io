@@ -210,9 +210,13 @@ var, kbd, samp, code {
 kbd {
     font-size: 15rem;
     background: $bg_kbd;
-    padding: 2px 6px;
+    padding: 1px 5px;
     border: 4px outset $color_border_kbd;
     border-radius: 5px;
+}
+
+li + li {
+    //margin-top: 3px
 }
 
 pre {
