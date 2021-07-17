@@ -187,6 +187,10 @@ kbd {
   border-radius: 5px;
 }
 
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
 pre {
   font-family: "Courier New", Courier, monospace;
 }
