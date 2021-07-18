@@ -5,6 +5,7 @@
 TODO: Variáveis
 ────────────────────────────────────────────────────── */
 
+$font_size: 19rem; 
 $central_maxWidth: 800px; /* Padrão: 600-700px. */
 $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
@@ -13,6 +14,7 @@ $font_smaller: 14rem;
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_monospace: 'Courier New', Courier, monospace;
 $button_height: 48rem;
+$button_small_height: 39rem;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
  
@@ -35,8 +37,8 @@ $color_text_form: $color_text;
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
 
-$color_table_border: hsl(0, 0%, 85%);
-$color_form_border: hsl(0, 0%, 80%); 
+$color_border_table: hsl(0, 0%, 85%);
+$color_border_form: hsl(0, 0%, 80%); 
 $color_border_kbd: hsl(0, 0%, 95%);
 
 $color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
@@ -54,9 +56,11 @@ $bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
 $bg_nav_2: url(../../images/bg_nav_2.png)  center /100% 100%;
 $bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
+
 $bg_button: url(../../images/bg_button.png)  center /100% 100%;
 $bg_table_tr_hover: hsla(193,100%,98%, 1); 
 $bg_kbd: hsl(0, 0%, 86%);
+$bg_choices_label: url(../../images/bg_choices_label.png)  center /100% 100%;
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -113,7 +117,7 @@ span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd,
 abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote, 
 q, cite, figcaption, form, label, input, textarea, select, button, fieldset, 
 legend, table, tr, td, th, caption {
-    font-size: 19rem; 
+    font-size: $font_size; 
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -592,7 +596,7 @@ TODO:         >> Expandido
     position: fixed; top: 9px; right: 9px;
     z-index: $zIndex_nav;
     background: $bg_header;
-    font-size: 19rem;
+    font-size: $font_size;
     box-shadow: 3px 3px 6px 0px $color_shadow_headerNav_button;
 
     img {
@@ -741,31 +745,6 @@ figure.center {
     text-align: center;
 }
 
-img.outdoor, video.outdoor {
-    width: 100%;
-}
-
-@media (min-width: $tablet) {
-    img.outdoor, video.outdoor {
-        display: block;
-        width: calc(100% - (2 * #{$margin_horizontal}) );
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-figure.outdoor img {
-        width: 100%;
-}
-
-@media (min-width: $tablet) {
-    figure.outdoor {
-        width: calc(100% - (2 * #{$margin_horizontal}) );
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
- 
 /*  
 ──────────────────────────────────────────────────────
 TODO: Tabelas
@@ -794,11 +773,11 @@ table {
     }
 
     tr + tr {
-        border-top: $table_border2_width solid $color_table_border;
+        border-top: $table_border2_width solid $color_border_table;
     }
 
     td + td {
-        border-left: $table_border2_width solid $color_table_border;
+        border-left: $table_border2_width solid $color_border_table;
     }
 
     th, td {
@@ -923,6 +902,10 @@ table {
             border-width: 0;
         }
 
+        tr:hover {
+            background: 0;
+        }
+
         th, td {
             border-width: 0;
         }
@@ -949,7 +932,7 @@ form {
             color: $color_text_form;
             width: 100%;
             padding: 8rem 13rem;
-            border: 1px solid $color_form_border; 
+            border: 1px solid $color_border_form; 
             border-radius: 19px;
             margin-top: $margin_vertical;
             /* 
@@ -992,10 +975,10 @@ form {
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;*/
         border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
-        height: 39px;
+        height: $button_small_height;
         color: $color_text_form_select;
         background: hsla(0, 0%, 100%, 0);
-        border: 1px solid $color_form_border;
+        border: 1px solid $color_border_form;
         padding: 0 6px;
     }
 
@@ -1004,7 +987,7 @@ form {
         color: $color_text_menu;
         padding: 10rem 0;
         border-width: 0;
-        border-radius: 1000px;
+        border-radius: 100px;
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;
         background: $bg_button;
@@ -1131,6 +1114,36 @@ TODO: Componentes
 
 /*  
 ────────────────────────────
+TODO:    > Outdoor
+──────────────────────────── */
+
+img.outdoor, video.outdoor {
+    width: 100%;
+}
+
+@media (min-width: $tablet) {
+    img.outdoor, video.outdoor {
+        display: block;
+        width: calc(100% - (2 * #{$margin_horizontal}) );
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+figure.outdoor img {
+        width: 100%;
+}
+
+@media (min-width: $tablet) {
+    figure.outdoor {
+        width: calc(100% - (2 * #{$margin_horizontal}) );
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*  
+────────────────────────────
 TODO:    > Gallery
 ──────────────────────────── */
 
@@ -1152,17 +1165,17 @@ TODO:    > Gallery
 
 /*  
 ────────────────────────────
-TODO:    > Carousel
+TODO:    > Slider
 ──────────────────────────── */
 
-.carousel {
+.slider {
     overflow-x: auto;
     white-space: nowrap;
 }
 
 @media (min-width: $tablet) {  
 
-    .carousel { 
+    .slider { 
         margin-left: $margin_horizontal;
         margin-right: $margin_horizontal;
     }
@@ -1170,32 +1183,32 @@ TODO:    > Carousel
 
 @media (pointer: fine) {
 
-    .carousel {
+    .slider {
         overflow-x: hidden;
     }
     
-    .carousel:hover {
+    .slider:hover {
         overflow-x: auto;
     }
 }
 
-.carousel img, .carousel picture {
+.slider img, .slider picture {
     width: 94%;
 }
 
-// Carousel scrollbar:
+// Slider scrollbar:
 
-.carousel::-webkit-scrollbar { // Entire bar
+.slider::-webkit-scrollbar { // Entire bar
     height: 12px; /* 15 */ 
 }
 
-.carousel::-webkit-scrollbar-thumb { // Bar pointer
+.slider::-webkit-scrollbar-thumb { // Bar pointer
     background: hsl(0, 0%, 74%);
     border-radius: 10px;
     /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
 }
    
-.carousel::-webkit-scrollbar-track { // Bar background
+.slider::-webkit-scrollbar-track { // Bar background
     background: hsl(0, 0%, 98%); 
     border: 1px solid hsl(0, 0%, 86%);
     border-radius: 10px; /* */ 
@@ -1206,22 +1219,250 @@ TODO:    > Carousel
 TODO:    > Choices
 ──────────────────────────── */
 
-.choices {
-    display: inline-block;
-    /*margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;*/
-    border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
-    //height: 39px;
-    color: $color_theme;
-    border: 1px solid adjust-color($color_theme, $lightness: -1%);
-    padding: 0 6px;
-    list-style-type: none;
+.choices_v, .choices_h, .choices {
 
-    li:not(:nth-child(1)) {
+    display: inline-block;
+    font-size: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    // margin-top: calc(1 * #{$margin_vertical});
+    // margin-bottom: calc(1 * #{$margin_vertical});
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+    list-style-type: none;
+    //border: 1px solid adjust-color($color_theme, $lightness: -1%);
+}
+
+.choices_v > li:nth-of-type(1), .choices_h > li:nth-of-type(1), .choices > li:nth-of-type(1) {
+
+    //background: hsla(205, 84%, 0%,1);
+}
+
+.choices_v > li a, .choices_h > li a, .choices > li a {
+
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    // padding: 0 11px;
+    color: $color_text_menu;
+}
+
+.choices_divSample_1, .choices_divSample_2, .choices_divSample_3 {
+    
+    padding: 8px;
+    margin-top: calc(2 * #{$margin_vertical});
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+    border: 1px solid $color_border_form;  
+    border-radius: 100px;
+    min-height: $button_small_height;
+
+    > :not(:nth-child(1)) {
+        display: none;
+    }
+}
+
+.choices_divSample_1 > div, .choices_divSample_2 > div, .choices_divSample_3 > div {
+
+    font-size: $font_size; 
+}
+
+.choices_v {
+
+    border-radius: 20px;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+
+    > li {
+        display: flex;
+        align-items: center;
+
+        a {
+            padding: 0px 19px 0px 17px;
+            height: $button_height;
+        }
+    }
+
+    > li:not(li:nth-of-type(1)):hover {
+        background: hsla(0, 0%, 100%, 0.45);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+    }    
+
+    > li:nth-of-type(1) {
+        // display: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        background: $bg_choices_label;
+        //background: hsla(205, 84%, 0%,1);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        box-shadow: 
+        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    > li:nth-last-of-type(1) {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+   
+    > li + li {
+        border-top: 1px solid $color_text_menu;
+    }
+}
+
+.choices_h {
+
+    border-radius: 100px;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+
+    > li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            height: $button_small_height;
+            padding: 0 10px;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        // display: none;
+        border-right: 1px solid $color_text_menu; 
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+
+        background: $bg_choices_label;
+        //background: hsla(205, 84%, 0%,1);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        /**/box-shadow: 
+        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+        
+        a {
+            padding-left: 15px;
+        }
+    }
+     
+    > li:nth-of-type(2) {
+    
+        border-left-width: 0px;
+    }
+
+    > li:nth-last-of-type(1) a {
+        padding-right: 15px;
+    }
+
+    > li:not(li:nth-of-type(1)):hover {
+        background: hsla(0, 0%, 100%, 0.45);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+    }
+
+    > li + li {
+        border-left: 1px solid $color_text_menu;
+    }
+}
+
+.choices {
+
+    border-radius: 100px;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+
+    > li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            height: $button_small_height;
+            padding: 0 11px 0 15px;
+        }
+    }
+
+    > li:not(:nth-of-type(1)) {
         display: none;
     }
 
-    li::after { content: " ▼" }
+    > li:nth-of-type(1) {
+
+        background: 0;
+
+        a {
+            cursor: pointer;
+        }
+
+        a::after { 
+            content: "▼";
+            margin-left: 5rem;
+        }
+    }
+}
+
+
+
+
+
+
+.choices_noLabel {
+
+    > li:nth-of-type(1) {
+        display: none;
+    }
+}
+
+/* .choices_v.choices_noLabel {
+
+}*/
+
+.choices_h.choices_noLabel {
+
+    > li:nth-of-type(2) a {
+
+        padding-left: 15px;
+    }
+}
+
+.choices.choices_noLabel {
+
+    > li:nth-of-type(2) {
+
+        display: inline-flex;
+    
+        a::after { 
+            content: "▼";
+            margin-left: 5rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.button_small_height {
+    height: $button_small_height;
 }
 
 
@@ -1247,8 +1488,6 @@ TODO:    > Choices
 
 
 
-
- 
 
 
  

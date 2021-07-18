@@ -659,31 +659,6 @@ figure.center {
   text-align: center;
 }
 
-img.outdoor, video.outdoor {
-  width: 100%;
-}
-
-@media (min-width: 501px) {
-  img.outdoor, video.outdoor {
-    display: block;
-    width: calc(100% - (2 * 20px));
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-figure.outdoor img {
-  width: 100%;
-}
-
-@media (min-width: 501px) {
-  figure.outdoor {
-    width: calc(100% - (2 * 20px));
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /*  
 ──────────────────────────────────────────────────────
 TODO: Tabelas
@@ -831,6 +806,9 @@ table ul, table ol {
   .table-style-4 tr {
     border-width: 0;
   }
+  .table-style-4 tr:hover {
+    background: 0;
+  }
   .table-style-4 th, .table-style-4 td {
     border-width: 0;
   }
@@ -900,7 +878,7 @@ form select {
         margin-bottom: $margin_vertical;*/
   border-radius: 5px;
   /* <- Traz inconsistências entre os navegadores. */
-  height: 39px;
+  height: 39rem;
   color: #adadad;
   background: rgba(255, 255, 255, 0);
   border: 1px solid #cccccc;
@@ -912,7 +890,7 @@ form button {
   color: white;
   padding: 10rem 0;
   border-width: 0;
-  border-radius: 1000px;
+  border-radius: 100px;
   margin-top: 16rem;
   margin-bottom: 16rem;
   background: url(../../images/bg_button.png) center/100% 100%;
@@ -1055,6 +1033,35 @@ TODO: Componentes
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
+TODO:    > Outdoor
+──────────────────────────── */
+img.outdoor, video.outdoor {
+  width: 100%;
+}
+
+@media (min-width: 501px) {
+  img.outdoor, video.outdoor {
+    display: block;
+    width: calc(100% - (2 * 20px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+figure.outdoor img {
+  width: 100%;
+}
+
+@media (min-width: 501px) {
+  figure.outdoor {
+    width: calc(100% - (2 * 20px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*  
+────────────────────────────
 TODO:    > Gallery
 ──────────────────────────── */
 .gallery img {
@@ -1073,45 +1080,45 @@ TODO:    > Gallery
 
 /*  
 ────────────────────────────
-TODO:    > Carousel
+TODO:    > Slider
 ──────────────────────────── */
-.carousel {
+.slider {
   overflow-x: auto;
   white-space: nowrap;
 }
 
 @media (min-width: 501px) {
-  .carousel {
+  .slider {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 
 @media (pointer: fine) {
-  .carousel {
+  .slider {
     overflow-x: hidden;
   }
-  .carousel:hover {
+  .slider:hover {
     overflow-x: auto;
   }
 }
 
-.carousel img, .carousel picture {
+.slider img, .slider picture {
   width: 94%;
 }
 
-.carousel::-webkit-scrollbar {
+.slider::-webkit-scrollbar {
   height: 12px;
   /* 15 */
 }
 
-.carousel::-webkit-scrollbar-thumb {
+.slider::-webkit-scrollbar-thumb {
   background: #bdbdbd;
   border-radius: 10px;
   /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
 }
 
-.carousel::-webkit-scrollbar-track {
+.slider::-webkit-scrollbar-track {
   background: #fafafa;
   border: 1px solid #dbdbdb;
   border-radius: 10px;
@@ -1122,22 +1129,190 @@ TODO:    > Carousel
 ────────────────────────────
 TODO:    > Choices
 ──────────────────────────── */
-.choices {
+.choices_v, .choices_h, .choices {
   display: inline-block;
-  /*margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;*/
-  border-radius: 5px;
-  /* <- Traz inconsistências entre os navegadores. */
-  color: #00c8ff;
-  border: 1px solid #00c4fa;
-  padding: 0 6px;
+  font-size: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
   list-style-type: none;
 }
 
-.choices li:not(:nth-child(1)) {
+.choices_v > li a, .choices_h > li a, .choices > li a {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.choices_divSample_1, .choices_divSample_2, .choices_divSample_3 {
+  padding: 8px;
+  margin-top: calc(2 * 16rem);
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 100px;
+  min-height: 39rem;
+}
+
+.choices_divSample_1 > :not(:nth-child(1)), .choices_divSample_2 > :not(:nth-child(1)), .choices_divSample_3 > :not(:nth-child(1)) {
   display: none;
 }
 
-.choices li::after {
-  content: " ▼";
+.choices_divSample_1 > div, .choices_divSample_2 > div, .choices_divSample_3 > div {
+  font-size: 19rem;
+}
+
+.choices_v {
+  border-radius: 20px;
+  background: url(../../images/bg_button.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices_v > li {
+  display: flex;
+  align-items: center;
+}
+
+.choices_v > li a {
+  padding: 0px 19px 0px 17px;
+  height: 48rem;
+}
+
+.choices_v > li:not(li:nth-of-type(1)):hover {
+  background: rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.choices_v > li:nth-of-type(1) {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: url(../../images/bg_choices_label.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices_v > li:nth-of-type(1) a {
+  display: flex;
+  justify-content: center;
+}
+
+.choices_v > li:nth-last-of-type(1) {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.choices_v > li + li {
+  border-top: 1px solid white;
+}
+
+.choices_h {
+  border-radius: 100px;
+  background: url(../../images/bg_button.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices_h > li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices_h > li a {
+  height: 39rem;
+  padding: 0 10px;
+}
+
+.choices_h > li:nth-of-type(1) {
+  border-right: 1px solid white;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: url(../../images/bg_choices_label.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  /**/
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices_h > li:nth-of-type(1) a {
+  padding-left: 15px;
+}
+
+.choices_h > li:nth-of-type(2) {
+  border-left-width: 0px;
+}
+
+.choices_h > li:nth-last-of-type(1) a {
+  padding-right: 15px;
+}
+
+.choices_h > li:not(li:nth-of-type(1)):hover {
+  background: rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.choices_h > li + li {
+  border-left: 1px solid white;
+}
+
+.choices {
+  border-radius: 100px;
+  background: url(../../images/bg_button.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices > li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices > li a {
+  height: 39rem;
+  padding: 0 11px 0 15px;
+}
+
+.choices > li:not(:nth-of-type(1)) {
+  display: none;
+}
+
+.choices > li:nth-of-type(1) {
+  background: 0;
+}
+
+.choices > li:nth-of-type(1) a {
+  cursor: pointer;
+}
+
+.choices > li:nth-of-type(1) a::after {
+  content: "▼";
+  margin-left: 5rem;
+}
+
+.choices_noLabel > li:nth-of-type(1) {
+  display: none;
+}
+
+/* .choices_v.choices_noLabel {
+
+}*/
+.choices_h.choices_noLabel > li:nth-of-type(2) a {
+  padding-left: 15px;
+}
+
+.choices.choices_noLabel > li:nth-of-type(2) {
+  display: inline-flex;
+}
+
+.choices.choices_noLabel > li:nth-of-type(2) a::after {
+  content: "▼";
+  margin-left: 5rem;
+}
+
+.button_small_height {
+  height: 39rem;
 }
