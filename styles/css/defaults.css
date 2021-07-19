@@ -1027,6 +1027,10 @@ hr {
   display: none;
 }
 
+.button_small_height {
+  height: 39rem;
+}
+
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
@@ -1129,7 +1133,7 @@ TODO:    > Slider
 ────────────────────────────
 TODO:    > Choices
 ──────────────────────────── */
-.choices_v, .choices_h, .choices {
+.choices_h, .choices_v, .choices {
   display: inline-block;
   font-size: 0;
   padding: 0;
@@ -1140,73 +1144,11 @@ TODO:    > Choices
   list-style-type: none;
 }
 
-.choices_v > li a, .choices_h > li a, .choices > li a {
+.choices_h > li a, .choices_v > li a, .choices > li a {
   display: inline-flex;
   align-items: center;
   width: 100%;
   color: white;
-}
-
-.choices_divSample_1, .choices_divSample_2, .choices_divSample_3 {
-  padding: 8px;
-  margin-top: calc(2 * 16rem);
-  margin-left: 20px;
-  margin-right: 20px;
-  border: 1px solid #cccccc;
-  border-radius: 100px;
-  min-height: 39rem;
-}
-
-.choices_divSample_1 > :not(:nth-child(1)), .choices_divSample_2 > :not(:nth-child(1)), .choices_divSample_3 > :not(:nth-child(1)) {
-  display: none;
-}
-
-.choices_divSample_1 > div, .choices_divSample_2 > div, .choices_divSample_3 > div {
-  font-size: 19rem;
-}
-
-.choices_v {
-  border-radius: 20px;
-  background: url(../../images/bg_button.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
-}
-
-.choices_v > li {
-  display: flex;
-  align-items: center;
-}
-
-.choices_v > li a {
-  padding: 0px 19px 0px 17px;
-  height: 48rem;
-}
-
-.choices_v > li:not(li:nth-of-type(1)):hover {
-  background: rgba(255, 255, 255, 0.45);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-.choices_v > li:nth-of-type(1) {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background: url(../../images/bg_choices_label.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
-}
-
-.choices_v > li:nth-of-type(1) a {
-  display: flex;
-  justify-content: center;
-}
-
-.choices_v > li:nth-last-of-type(1) {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.choices_v > li + li {
-  border-top: 1px solid white;
 }
 
 .choices_h {
@@ -1233,7 +1175,6 @@ TODO:    > Choices
   border-bottom-left-radius: 100px;
   background: url(../../images/bg_choices_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  /**/
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -1249,13 +1190,67 @@ TODO:    > Choices
   padding-right: 15px;
 }
 
-.choices_h > li:not(li:nth-of-type(1)):hover {
+.choices_h > li a:hover {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+.choices_h > li:nth-of-type(1) a:hover {
+  background: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 .choices_h > li + li {
   border-left: 1px solid white;
+}
+
+.choices_v {
+  border-radius: 20px;
+  background: url(../../images/bg_button.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices_v > li {
+  display: flex;
+  align-items: center;
+}
+
+.choices_v > li a {
+  padding: 0px 19px 0px 17px;
+  height: 48rem;
+}
+
+.choices_v > li a:hover {
+  background: rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.choices_v > li:nth-of-type(1) a:hover {
+  background: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.choices_v > li:nth-of-type(1) {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: url(../../images/bg_choices_label.png) center/100% 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.choices_v > li:nth-of-type(1) a {
+  display: flex;
+  justify-content: center;
+}
+
+.choices_v > li:nth-last-of-type(1) {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.choices_v > li + li {
+  border-top: 1px solid white;
 }
 
 .choices {
@@ -1293,13 +1288,15 @@ TODO:    > Choices
   margin-left: 5rem;
 }
 
+.choices_option_on {
+  background: rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
 .choices_noLabel > li:nth-of-type(1) {
   display: none;
 }
 
-/* .choices_v.choices_noLabel {
-
-}*/
 .choices_h.choices_noLabel > li:nth-of-type(2) a {
   padding-left: 15px;
 }
@@ -1311,8 +1308,4 @@ TODO:    > Choices
 .choices.choices_noLabel > li:nth-of-type(2) a::after {
   content: "▼";
   margin-left: 5rem;
-}
-
-.button_small_height {
-  height: 39rem;
 }

@@ -565,29 +565,50 @@
 
                 <h2>Choices</h2>
 
-                <ul class="choices_v ">
+                <ul class="choices_h " onclick="choices(this)">
                     <li><a>Escolher</a></li>
-                    <li><a href="#">Opção 1 - Window: resize event</a></li>
-                    <li><a href="#">Opção 2</a></li>
-                    <li><a href="#">Opção 3</a></li>
+                    <li><a onclick="choices_option(this); func_1()" class="choices_option_on">Opção 1</a></li>
+                    <li><a onclick="choices_option(this); func_2()">Opção 2</a></li>
+                    <li><a onclick="choices_option(this); func_3()">Opção 3</a></li>
                 </ul>
-
-                <div class="choices_divSample_1">
-                    <div>Div 1</div>
-                    <div>Div 2</div>
-                    <div>Div 3</div>
-                </div>
 
                 <div class="lb3"></div>
 
-                <ul class="choices_h ">
+                <ul class="choices_h choices_noLabel" onclick="choices(this)">
                     <li><a>Escolher</a></li>
-                    <li><a href="#">Opção 1</a></li>
-                    <li><a href="#">Opção 2</a></li>
-                    <li><a href="#">Opção 3</a></li>
+                    <li><a onclick="choices_option(this); func_1()">Opção 1</a></li>
+                    <li><a onclick="choices_option(this); func_2()">Opção 2</a></li>
+                    <li><a onclick="choices_option(this); func_3()">Opção 3</a></li>
                 </ul>
 
-                <div class="choices_divSample_2">
+                <div class="lb3"></div>
+
+                <ul class="choices_v " onclick="choices(this)">
+                    <li><a>Escolher</a></li>
+                    <li><a onclick="choices_option(this); func_1()" class="choices_option_on">Opção 1 - Vertical choices</a></li>
+                    <li><a onclick="choices_option(this); func_2()">Opção 2</a></li>
+                    <li><a onclick="choices_option(this); func_3()">Opção 3</a></li>
+                </ul>
+                
+                <div class="lb3"></div>
+
+                <ul class="choices_v choices_noLabel" onclick="choices(this)">
+                    <li><a>Escolher</a></li>
+                    <li><a onclick="choices_option(this); func_1()">Opção 1 - Vertical choices</a></li>
+                    <li><a onclick="choices_option(this); func_2()">Opção 2</a></li>
+                    <li><a onclick="choices_option(this); func_3()">Opção 3</a></li>
+                </ul>
+                
+                <div class="lb3"></div>
+
+                <ul class="choices " onclick="choices(this)">
+                    <li><a>Escolher</a></li>
+                    <li><a onclick="choices_option(this); func_1()">Opção 1</a></li>
+                    <li><a onclick="choices_option(this); func_2()">Opção 2</a></li>
+                    <li><a onclick="choices_option(this); func_3()">Opção 3</a></li>
+                </ul>
+
+                <div class="choices_sample_2">
                     <div>Div 1</div>
                     <div>Div 2</div>
                     <div>Div 3</div>
@@ -595,38 +616,29 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choices ">
-                    <li><a href="#">Escolher</a></li> <!-- <================ Remover o href via JS! -->
-                    <li><a href="#">Opção 1</a></li>
-                    <li><a href="#">Opção 2</a></li>
-                    <li><a href="#">Opção 3</a></li>
+                <p>Exemplos:</p>
+
+                <ul class="choices_h " onclick="choices(this)">
+                    <li><a>Escolher</a></li>
+                    <li><a onclick="choices_option(this); choices_sample_1_Action_1()" class="choices_option_on">Opção 1</a></li>
+                    <li><a onclick="choices_option(this); choices_sample_1_Action_2()">Opção 2</a></li>
+                    <li><a onclick="choices_option(this); choices_sample_1_Action_3()">Opção 3</a></li>
                 </ul>
 
-                <div class="choices_divSample_3">
-                    <div>Div 1</div>
-                    <div>Div 2</div>
-                    <div>Div 3</div>
-                </div>
-
-                <div class="lb3"></div>
-
-                <!--
-                <div class="lb3"></div>
-
-                <div class="choices_label">
-                    <ul>
-                        <li>Opção 1</li>
-                        <li>Opção 2</li>
-                        <li>Opção 3</li>
-                    </ul>
-
-                    <div>
-                        <div>Div 1</div>
-                        <div>Div 2</div>
-                        <div>Div 3</div>
+                <div class="choices_sample_1">
+                    <div class="choices_divsSample_1_div_1">Div 1</div>
+                    <div class="choices_divsSample_1_div_2">Div 2</div>
+                    <div class="choices_divsSample_1_div_3">
+                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
+                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
+                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
+                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
+                        ABCDE FGHIJ KLMNO PQRST UVWXYZ.
                     </div>
                 </div>
-                -->
+
+                <div class="lb3"></div>
+
             </div>
         
         </article>
@@ -646,7 +658,8 @@
     <!-- TODO: Fim -->
 
 <script src="scripts/defaults.js"></script>
-    
+<script src="scripts/identity.js"></script>
+
 </body> 
 </html>
 

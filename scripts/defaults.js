@@ -84,9 +84,9 @@ TODO:    >  NavMenu-Ações
 ──────────────────────────── */
 
 var nav_menu_compact_enabled = false
-var categories_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
-var divs = document.querySelectorAll('.nav-menu > ul > li > div') 
-var index = 'none'
+var nav_categories_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
+var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
+var nav_index = 'none'
 var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável JS
 
 document.querySelector('.nav-menu-button').onclick = function() { 
@@ -107,12 +107,12 @@ document.querySelector('.nav-menu-button').onclick = function() {
             document.querySelector('html').style = 'overflow: auto'
             nav_menu_compact_enabled = false
 
-            for(var i = 0; i < divs.length; i++) {
-                categories_anchors[i].style = ''
-                divs[i].style = 'display: none'
+            for(var i = 0; i < nav_divs.length; i++) {
+                nav_categories_anchors[i].style = ''
+                nav_divs[i].style = 'display: none'
             }
 
-            index = 'none'
+            nav_index = 'none'
         }
     //}
 }
@@ -154,46 +154,46 @@ window.onresize = function() {
         }
     }
 
-    if(index !== 'none') { 
+    if(nav_index !== 'none') { 
         if(window.innerWidth >= nav_expand) {
-            categories_anchors[index].style = 
+            nav_categories_anchors[nav_index].style = 
             'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
         } else { 
-            categories_anchors[index].style = 'background: 0' 
+            nav_categories_anchors[nav_index].style = 'background: 0' 
         }
      } /*else { 
         if(window.innerWidth < nav_expand) {
-            categories_anchors[index].style = 'background: 0' 
+            nav_categories_anchors[nav_index].style = 'background: 0' 
         }
      }*/
 }
 
 function nav_menu_options(arg) { 
     
-    for(var i = 0; i < categories_anchors.length; i++) { // <- Verifica qual <a> de categoria foi clicado.
-        if(arg === categories_anchors[i]) {
+    for(var i = 0; i < nav_categories_anchors.length; i++) { // <- Verifica qual <a> de categoria foi clicado.
+        if(arg === nav_categories_anchors[i]) {
 
-            index = i
+            nav_index = i
             break  
         }
     }
     
 //-------------------------------------------------------------------------------------------------
 
-    if(divs[index].style.display !== 'block') { // <- Habilita/desabilita o <div> de sub opção 
+    if(nav_divs[nav_index].style.display !== 'block') { // <- Habilita/desabilita o <div> de sub opção 
                                                                            // correspondente ao <a> de categoria clicado.
 
-        for(var i = 0; i < divs.length; i++) { // <- Desabilita todos os <div>'s de sub opção.
-            categories_anchors[i].style = ''
-            divs[i].style = 'display: none'
+        for(var i = 0; i < nav_divs.length; i++) { // <- Desabilita todos os <div>'s de sub opção.
+            nav_categories_anchors[i].style = ''
+            nav_divs[i].style = 'display: none'
         }
 
         if(window.innerWidth >= nav_expand) { 
-            categories_anchors[index].style = 
+            nav_categories_anchors[nav_index].style = 
             'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 5px; padding-right: 5px; margin-top: 4px'
         }
 
-        divs[index].style = 'display: block'
+        nav_divs[nav_index].style = 'display: block'
 
         nav_menu_compact_enabled = true
 
@@ -202,10 +202,10 @@ function nav_menu_options(arg) {
         }
 
     }else{
-        categories_anchors[index].style = ''
-        divs[index].style = 'display: none'
+        nav_categories_anchors[nav_index].style = ''
+        nav_divs[nav_index].style = 'display: none'
 
-        index = 'none'
+        nav_index = 'none'
 
         nav_menu_compact_enabled = false
 
@@ -219,13 +219,13 @@ function nav_menu_options(arg) {
 
 document.querySelector('.nav-menu > ul > li:nth-last-of-type(1)').onclick = function() { // <- Hide Header-nav
 
-    for(var i = 0; i < divs.length; i++) {
-        categories_anchors[i].style = ''
-        divs[i].style = 'display: none'
+    for(var i = 0; i < nav_divs.length; i++) {
+        nav_categories_anchors[i].style = ''
+        nav_divs[i].style = 'display: none'
     }
 
     nav_menu_compact_enabled = false
-    index = 'none'
+    nav_index = 'none'
 
     if(window.innerWidth >= nav_expand) { 
         document.querySelector('html').style = 'overflow: auto'
@@ -278,3 +278,25 @@ document.querySelector('footer').innerHTML = `
 
     </div>
 `
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Choices
+────────────────────────────────────────────────────── */
+
+var choices_anchorClicked
+
+function choices(arg) {
+
+    for(var i = 0; i < arg.children.length; i++) { 
+
+        arg.children[i].children[0].classList.remove('choices_option_on')
+    }
+
+    choices_anchorClicked.classList.add('choices_option_on')
+}
+
+function choices_option(arg) {
+
+    choices_anchorClicked =  arg
+}

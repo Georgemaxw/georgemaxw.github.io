@@ -14,7 +14,7 @@ $font_smaller: 14rem;
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_monospace: 'Courier New', Courier, monospace;
 $button_height: 48rem;
-$button_small_height: 39rem;
+$button_height_small: 39rem;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
  
@@ -975,7 +975,7 @@ form {
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;*/
         border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
-        height: $button_small_height;
+        height: $button_height_small;
         color: $color_text_form_select;
         background: hsla(0, 0%, 100%, 0);
         border: 1px solid $color_border_form;
@@ -1107,6 +1107,10 @@ hr {
     display: none;
 }
 
+.button_small_height {
+    height: $button_height_small;
+}
+
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
@@ -1219,54 +1223,89 @@ TODO:    > Slider
 TODO:    > Choices
 ──────────────────────────── */
 
-.choices_v, .choices_h, .choices {
+.choices_h, .choices_v, .choices {
 
     display: inline-block;
     font-size: 0;
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
-    // margin-top: calc(1 * #{$margin_vertical});
-    // margin-bottom: calc(1 * #{$margin_vertical});
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
     list-style-type: none;
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
 
-.choices_v > li:nth-of-type(1), .choices_h > li:nth-of-type(1), .choices > li:nth-of-type(1) {
-
-    //background: hsla(205, 84%, 0%,1);
-}
-
-.choices_v > li a, .choices_h > li a, .choices > li a {
+.choices_h > li a, .choices_v > li a, .choices > li a {
 
     display: inline-flex;
     align-items: center;
     width: 100%;
-    // padding: 0 11px;
     color: $color_text_menu;
 }
 
-.choices_divSample_1, .choices_divSample_2, .choices_divSample_3 {
-    
-    padding: 8px;
-    margin-top: calc(2 * #{$margin_vertical});
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
-    border: 1px solid $color_border_form;  
-    border-radius: 100px;
-    min-height: $button_small_height;
+// choices_h:
 
-    > :not(:nth-child(1)) {
-        display: none;
+.choices_h {
+
+    border-radius: 100px;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+
+    > li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            height: $button_height_small;
+            padding: 0 10px;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        border-right: 1px solid $color_text_menu; 
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+
+        background: $bg_choices_label;
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        box-shadow: 
+        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+        
+        a {
+            padding-left: 15px;
+        }
+    }
+     
+    > li:nth-of-type(2) {
+        border-left-width: 0px;
+    }
+
+    > li:nth-last-of-type(1) a {
+        padding-right: 15px;
+    }
+
+    > li a:hover {
+        background: hsla(0, 0%, 100%, 0.45);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+    }
+
+    > li:nth-of-type(1) a:hover {
+        background: hsla(0, 0%, 100%, 0);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    }
+
+    > li + li {
+        border-left: 1px solid $color_text_menu;
     }
 }
 
-.choices_divSample_1 > div, .choices_divSample_2 > div, .choices_divSample_3 > div {
-
-    font-size: $font_size; 
-}
+// choices_v:
 
 .choices_v {
 
@@ -1287,18 +1326,21 @@ TODO:    > Choices
         }
     }
 
-    > li:not(li:nth-of-type(1)):hover {
+    > li a:hover {
         background: hsla(0, 0%, 100%, 0.45);
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
-    }    
+    }
+
+    > li:nth-of-type(1) a:hover {
+        background: hsla(0, 0%, 100%, 0);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    }
 
     > li:nth-of-type(1) {
-        // display: none;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
         background: $bg_choices_label;
-        //background: hsla(205, 84%, 0%,1);
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1320,62 +1362,7 @@ TODO:    > Choices
     }
 }
 
-.choices_h {
-
-    border-radius: 100px;
-    background: $bg_button;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
-    box-shadow: 
-    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
-
-    > li {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-        a {
-            height: $button_small_height;
-            padding: 0 10px;
-        }
-    }
-
-    > li:nth-of-type(1) {
-        // display: none;
-        border-right: 1px solid $color_text_menu; 
-        border-top-left-radius: 100px;
-        border-bottom-left-radius: 100px;
-
-        background: $bg_choices_label;
-        //background: hsla(205, 84%, 0%,1);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
-        /**/box-shadow: 
-        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
-        
-        a {
-            padding-left: 15px;
-        }
-    }
-     
-    > li:nth-of-type(2) {
-    
-        border-left-width: 0px;
-    }
-
-    > li:nth-last-of-type(1) a {
-        padding-right: 15px;
-    }
-
-    > li:not(li:nth-of-type(1)):hover {
-        background: hsla(0, 0%, 100%, 0.45);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
-    }
-
-    > li + li {
-        border-left: 1px solid $color_text_menu;
-    }
-}
+// choices:
 
 .choices {
 
@@ -1392,7 +1379,7 @@ TODO:    > Choices
         align-items: center;
 
         a {
-            height: $button_small_height;
+            height: $button_height_small;
             padding: 0 11px 0 15px;
         }
     }
@@ -1416,10 +1403,14 @@ TODO:    > Choices
     }
 }
 
+// choices_option_on
 
+.choices_option_on {
+    background: hsla(0, 0%, 100%, 0.45);
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+}
 
-
-
+// choices_noLabel:
 
 .choices_noLabel {
 
@@ -1427,10 +1418,6 @@ TODO:    > Choices
         display: none;
     }
 }
-
-/* .choices_v.choices_noLabel {
-
-}*/
 
 .choices_h.choices_noLabel {
 
@@ -1452,47 +1439,3 @@ TODO:    > Choices
         }
     }
 }
-
-
-
-
-
-
-
-
-
-.button_small_height {
-    height: $button_small_height;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
