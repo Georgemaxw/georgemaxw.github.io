@@ -1236,19 +1236,39 @@ TODO:    > Choices
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
 
+/*.choices_h > li, .choices_v > li, .choices > li {
+    vertical-align: middle;
+}*/
+
 .choices_h > li a, .choices_v > li a, .choices > li a {
 
     display: inline-flex;
     align-items: center;
     width: 100%;
+}
+
+.choices_h > li span, .choices_v > li span, .choices > li span {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
     color: $color_text_menu;
 }
 
-// choices_h:
+.choices_h > li span > img, .choices_v > li span > img, .choices > li span > img {
+
+    margin-right: 8px;
+}
+
+/*  
+────────────────────────────
+TODO:         >> Horizontal
+──────────────────────────── */
 
 .choices_h {
 
-    border-radius: 100px;
+    display: inline-flex;
+    border-radius: 1000px;
     background: $bg_button;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
@@ -1259,17 +1279,21 @@ TODO:    > Choices
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        min-height: $button_height_small;
 
         a {
-            height: $button_height_small;
+            min-height: $button_height_small;
+        }
+
+        span {
             padding: 0 10px;
         }
     }
 
     > li:nth-of-type(1) {
         border-right: 1px solid $color_text_menu; 
-        border-top-left-radius: 100px;
-        border-bottom-left-radius: 100px;
+        border-top-left-radius: 1000px;
+        border-bottom-left-radius: 1000px;
 
         background: $bg_choices_label;
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
@@ -1277,7 +1301,7 @@ TODO:    > Choices
         inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
         inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
         
-        a {
+        span {
             padding-left: 15px;
         }
     }
@@ -1286,8 +1310,16 @@ TODO:    > Choices
         border-left-width: 0px;
     }
 
-    > li:nth-last-of-type(1) a {
-        padding-right: 15px;
+    > li:nth-last-of-type(1) { 
+
+        > a > img {
+            border-top-right-radius: 1000px;
+            border-bottom-right-radius: 1000px;
+        }
+
+        span {
+            padding-right: 15px;
+        }
     }
 
     > li a:hover {
@@ -1305,7 +1337,10 @@ TODO:    > Choices
     }
 }
 
-// choices_v:
+/*  
+────────────────────────────
+TODO:         >> Vertical
+──────────────────────────── */
 
 .choices_v {
 
@@ -1319,10 +1354,14 @@ TODO:    > Choices
     > li {
         display: flex;
         align-items: center;
+        min-height: $button_height;
 
         a {
+            min-height: $button_height;
+        }
+
+        span {
             padding: 0px 19px 0px 17px;
-            height: $button_height;
         }
     }
 
@@ -1340,6 +1379,7 @@ TODO:    > Choices
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
+        justify-content: center;
         background: $bg_choices_label;
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
         box-shadow: 
@@ -1355,6 +1395,11 @@ TODO:    > Choices
     > li:nth-last-of-type(1) {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+
+        > a > img {
+            border-bottom-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+        }
     }
    
     > li + li {
@@ -1362,11 +1407,14 @@ TODO:    > Choices
     }
 }
 
-// choices:
+/*  
+────────────────────────────
+TODO:         >> Dropdown
+──────────────────────────── */
 
 .choices {
 
-    border-radius: 100px;
+    border-radius: 1000px;
     background: $bg_button;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
@@ -1377,9 +1425,9 @@ TODO:    > Choices
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        min-height: $button_height_small;
 
-        a {
-            height: $button_height_small;
+        span {
             padding: 0 11px 0 15px;
         }
     }
@@ -1396,21 +1444,27 @@ TODO:    > Choices
             cursor: pointer;
         }
 
-        a::after { 
+        span::after { 
             content: "▼";
             margin-left: 5rem;
         }
     }
 }
 
-// choices_option_on
+/*  
+────────────────────────────
+TODO:         >> Option ON
+──────────────────────────── */
 
 .choices_option_on {
     background: hsla(0, 0%, 100%, 0.45);
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
 }
 
-// choices_noLabel:
+/*  
+────────────────────────────
+TODO:         >> No Label
+──────────────────────────── */
 
 .choices_noLabel {
 
@@ -1421,10 +1475,20 @@ TODO:    > Choices
 
 .choices_h.choices_noLabel {
 
-    > li:nth-of-type(2) a {
+    > li:nth-of-type(2) span {
 
         padding-left: 15px;
     }
+
+    > li:nth-of-type(2) > a > img {
+            border-top-left-radius: 1000px;
+            border-bottom-left-radius: 1000px;
+    }
+}
+
+.choices_v.choices_noLabel > li:nth-of-type(2) > a > img {
+            border-top-left-radius: 17px;
+            border-top-right-radius: 17px;
 }
 
 .choices.choices_noLabel {
@@ -1433,7 +1497,7 @@ TODO:    > Choices
 
         display: inline-flex;
     
-        a::after { 
+        span::after { 
             content: "▼";
             margin-left: 5rem;
         }

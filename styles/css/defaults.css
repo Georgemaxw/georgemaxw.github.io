@@ -1144,15 +1144,33 @@ TODO:    > Choices
   list-style-type: none;
 }
 
+/*.choices_h > li, .choices_v > li, .choices > li {
+    vertical-align: middle;
+}*/
 .choices_h > li a, .choices_v > li a, .choices > li a {
   display: inline-flex;
   align-items: center;
   width: 100%;
+}
+
+.choices_h > li span, .choices_v > li span, .choices > li span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
+.choices_h > li span > img, .choices_v > li span > img, .choices > li span > img {
+  margin-right: 8px;
+}
+
+/*  
+────────────────────────────
+TODO:         >> Horizontal
+──────────────────────────── */
 .choices_h {
-  border-radius: 100px;
+  display: inline-flex;
+  border-radius: 1000px;
   background: url(../../images/bg_button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
@@ -1162,23 +1180,27 @@ TODO:    > Choices
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  min-height: 39rem;
 }
 
 .choices_h > li a {
-  height: 39rem;
+  min-height: 39rem;
+}
+
+.choices_h > li span {
   padding: 0 10px;
 }
 
 .choices_h > li:nth-of-type(1) {
   border-right: 1px solid white;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
   background: url(../../images/bg_choices_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-.choices_h > li:nth-of-type(1) a {
+.choices_h > li:nth-of-type(1) span {
   padding-left: 15px;
 }
 
@@ -1186,7 +1208,12 @@ TODO:    > Choices
   border-left-width: 0px;
 }
 
-.choices_h > li:nth-last-of-type(1) a {
+.choices_h > li:nth-last-of-type(1) > a > img {
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+
+.choices_h > li:nth-last-of-type(1) span {
   padding-right: 15px;
 }
 
@@ -1204,6 +1231,10 @@ TODO:    > Choices
   border-left: 1px solid white;
 }
 
+/*  
+────────────────────────────
+TODO:         >> Vertical
+──────────────────────────── */
 .choices_v {
   border-radius: 20px;
   background: url(../../images/bg_button.png) center/100% 100%;
@@ -1214,11 +1245,15 @@ TODO:    > Choices
 .choices_v > li {
   display: flex;
   align-items: center;
+  min-height: 48rem;
 }
 
 .choices_v > li a {
+  min-height: 48rem;
+}
+
+.choices_v > li span {
   padding: 0px 19px 0px 17px;
-  height: 48rem;
 }
 
 .choices_v > li a:hover {
@@ -1234,6 +1269,7 @@ TODO:    > Choices
 .choices_v > li:nth-of-type(1) {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  justify-content: center;
   background: url(../../images/bg_choices_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
@@ -1249,12 +1285,21 @@ TODO:    > Choices
   border-bottom-right-radius: 20px;
 }
 
+.choices_v > li:nth-last-of-type(1) > a > img {
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+
 .choices_v > li + li {
   border-top: 1px solid white;
 }
 
+/*  
+────────────────────────────
+TODO:         >> Dropdown
+──────────────────────────── */
 .choices {
-  border-radius: 100px;
+  border-radius: 1000px;
   background: url(../../images/bg_button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
@@ -1264,10 +1309,10 @@ TODO:    > Choices
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  min-height: 39rem;
 }
 
-.choices > li a {
-  height: 39rem;
+.choices > li span {
   padding: 0 11px 0 15px;
 }
 
@@ -1283,29 +1328,47 @@ TODO:    > Choices
   cursor: pointer;
 }
 
-.choices > li:nth-of-type(1) a::after {
+.choices > li:nth-of-type(1) span::after {
   content: "▼";
   margin-left: 5rem;
 }
 
+/*  
+────────────────────────────
+TODO:         >> Option ON
+──────────────────────────── */
 .choices_option_on {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+/*  
+────────────────────────────
+TODO:         >> No Label
+──────────────────────────── */
 .choices_noLabel > li:nth-of-type(1) {
   display: none;
 }
 
-.choices_h.choices_noLabel > li:nth-of-type(2) a {
+.choices_h.choices_noLabel > li:nth-of-type(2) span {
   padding-left: 15px;
+}
+
+.choices_h.choices_noLabel > li:nth-of-type(2) > a > img {
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+}
+
+.choices_v.choices_noLabel > li:nth-of-type(2) > a > img {
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
 }
 
 .choices.choices_noLabel > li:nth-of-type(2) {
   display: inline-flex;
 }
 
-.choices.choices_noLabel > li:nth-of-type(2) a::after {
+.choices.choices_noLabel > li:nth-of-type(2) span::after {
   content: "▼";
   margin-left: 5rem;
 }
