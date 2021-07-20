@@ -1131,9 +1131,9 @@ TODO:    > Slider
 
 /*  
 ────────────────────────────
-TODO:    > Choices
+TODO:    > Choice 
 ──────────────────────────── */
-.choices_h, .choices_v, .choices {
+.choice_h, .choice_v, .choice_d {
   display: inline-block;
   font-size: 0;
   padding: 0;
@@ -1144,31 +1144,32 @@ TODO:    > Choices
   list-style-type: none;
 }
 
-/*.choices_h > li, .choices_v > li, .choices > li {
+/*.choice_h > li, .choice_v > li, .choice_d > li {
     vertical-align: middle;
 }*/
-.choices_h > li a, .choices_v > li a, .choices > li a {
+.choice_h > li a, .choice_v > li a, .choice_d > li a {
   display: inline-flex;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
-.choices_h > li span, .choices_v > li span, .choices > li span {
+.choice_h > li span, .choice_v > li span, .choice_d > li span {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   color: white;
 }
 
-.choices_h > li span > img, .choices_v > li span > img, .choices > li span > img {
-  margin-right: 8px;
+.choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
+  margin-right: 6px;
 }
 
 /*  
 ────────────────────────────
 TODO:         >> Horizontal
 ──────────────────────────── */
-.choices_h {
+.choice_h {
   display: inline-flex;
   border-radius: 1000px;
   background: url(../../images/bg_button.png) center/100% 100%;
@@ -1176,58 +1177,58 @@ TODO:         >> Horizontal
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-.choices_h > li {
+.choice_h > li {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   min-height: 39rem;
 }
 
-.choices_h > li a {
+.choice_h > li a {
   min-height: 39rem;
 }
 
-.choices_h > li span {
+.choice_h > li span {
   padding: 0 10px;
 }
 
-.choices_h > li:nth-of-type(1) {
+.choice_h > li:nth-of-type(1) {
   border-right: 1px solid white;
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
-  background: url(../../images/bg_choices_label.png) center/100% 100%;
+  background: url(../../images/bg_choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-.choices_h > li:nth-of-type(1) span {
+.choice_h > li:nth-of-type(1) span {
   padding-left: 15px;
 }
 
-.choices_h > li:nth-of-type(2) {
+.choice_h > li:nth-of-type(2) {
   border-left-width: 0px;
 }
 
-.choices_h > li:nth-last-of-type(1) > a > img {
+.choice_h > li:nth-last-of-type(1) > a > img {
   border-top-right-radius: 1000px;
   border-bottom-right-radius: 1000px;
 }
 
-.choices_h > li:nth-last-of-type(1) span {
+.choice_h > li:nth-last-of-type(1) span {
   padding-right: 15px;
 }
 
-.choices_h > li a:hover {
+.choice_h > li a:hover {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.choices_h > li:nth-of-type(1) a:hover {
+.choice_h > li:nth-of-type(1) a:hover {
   background: rgba(255, 255, 255, 0);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.choices_h > li + li {
+.choice_h > li + li {
   border-left: 1px solid white;
 }
 
@@ -1235,62 +1236,62 @@ TODO:         >> Horizontal
 ────────────────────────────
 TODO:         >> Vertical
 ──────────────────────────── */
-.choices_v {
+.choice_v {
   border-radius: 20px;
   background: url(../../images/bg_button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-.choices_v > li {
+.choice_v > li {
   display: flex;
   align-items: center;
   min-height: 48rem;
 }
 
-.choices_v > li a {
+.choice_v > li a {
   min-height: 48rem;
 }
 
-.choices_v > li span {
+.choice_v > li span {
   padding: 0px 19px 0px 17px;
 }
 
-.choices_v > li a:hover {
+.choice_v > li a:hover {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.choices_v > li:nth-of-type(1) a:hover {
+.choice_v > li:nth-of-type(1) a:hover {
   background: rgba(255, 255, 255, 0);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.choices_v > li:nth-of-type(1) {
+.choice_v > li:nth-of-type(1) {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   justify-content: center;
-  background: url(../../images/bg_choices_label.png) center/100% 100%;
+  background: url(../../images/bg_choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-.choices_v > li:nth-of-type(1) a {
+.choice_v > li:nth-of-type(1) a {
   display: flex;
   justify-content: center;
 }
 
-.choices_v > li:nth-last-of-type(1) {
+.choice_v > li:nth-last-of-type(1) {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.choices_v > li:nth-last-of-type(1) > a > img {
-  border-bottom-left-radius: 17px;
-  border-bottom-right-radius: 17px;
+.choice_v > li:nth-last-of-type(1) > a > img {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-.choices_v > li + li {
+.choice_v > li + li {
   border-top: 1px solid white;
 }
 
@@ -1298,46 +1299,92 @@ TODO:         >> Vertical
 ────────────────────────────
 TODO:         >> Dropdown
 ──────────────────────────── */
-.choices {
-  border-radius: 1000px;
+.choice_d {
+  border-radius: 20px;
   background: url(../../images/bg_button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
-.choices > li {
+.choice_d > li {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   min-height: 39rem;
 }
 
-.choices > li span {
+.choice_d > li span {
   padding: 0 11px 0 15px;
 }
 
-.choices > li:not(:nth-of-type(1)) {
+.choice_d > li:not(:nth-of-type(1)) {
   display: none;
 }
 
-.choices > li:nth-of-type(1) {
+.choice_d > li:nth-of-type(1) {
   background: 0;
 }
 
-.choices > li:nth-of-type(1) a {
+.choice_d > li:nth-of-type(1) a {
   cursor: pointer;
 }
 
-.choices > li:nth-of-type(1) span::after {
+.choice_d > li:nth-of-type(1) span::after {
   content: "▼";
   margin-left: 5rem;
+}
+
+.choice_d > li:nth-of-type(1) > img {
+  border-radius: 20px;
+}
+
+.choice_d.choice_d_open {
+  max-width: calc(100% - (2 * 20px));
+}
+
+.choice_d.choice_d_open > li {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.choice_d.choice_d_open > li > a {
+  flex-grow: 1;
+}
+
+.choice_d.choice_d_open > li:nth-of-type(1) {
+  display: none;
+}
+
+.choice_d.choice_d_open > li:nth-of-type(2) > a > img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.choice_d.choice_d_open > li:nth-last-of-type(1) > a > img {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.choice_d.choice_d_open li span {
+  padding: 0 15px 0 15px;
+}
+
+.choice_d.choice_d_open > li a:hover {
+  background: rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.choice_d.choice_d_open > li + li {
+  border-bottom: 1px solid white;
 }
 
 /*  
 ────────────────────────────
 TODO:         >> Option ON
 ──────────────────────────── */
-.choices_option_on {
+.choice_option_on {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
@@ -1346,29 +1393,41 @@ TODO:         >> Option ON
 ────────────────────────────
 TODO:         >> No Label
 ──────────────────────────── */
-.choices_noLabel > li:nth-of-type(1) {
+.choice_noLabel > li:nth-of-type(1) {
   display: none;
 }
 
-.choices_h.choices_noLabel > li:nth-of-type(2) span {
+.choice_h.choice_noLabel > li:nth-of-type(2) span {
   padding-left: 15px;
 }
 
-.choices_h.choices_noLabel > li:nth-of-type(2) > a > img {
+.choice_h.choice_noLabel > li:nth-of-type(2) > a > img {
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
 }
 
-.choices_v.choices_noLabel > li:nth-of-type(2) > a > img {
-  border-top-left-radius: 17px;
-  border-top-right-radius: 17px;
+.choice_v.choice_noLabel > li:nth-of-type(2) > a > img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.choices.choices_noLabel > li:nth-of-type(2) {
+.choice_d.choice_noLabel > li:nth-of-type(2) {
   display: inline-flex;
 }
 
-.choices.choices_noLabel > li:nth-of-type(2) span::after {
+.choice_d.choice_noLabel > li:nth-of-type(2) span::after {
   content: "▼";
-  margin-left: 5rem;
+}
+
+.choice_d.choice_noLabel > li:nth-of-type(2) > a > img {
+  border-radius: 20px;
+}
+
+.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) > a > img {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
+  content: "";
 }

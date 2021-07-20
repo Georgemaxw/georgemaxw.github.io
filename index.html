@@ -461,8 +461,8 @@
                         <label for="c2"><input type="checkbox" name="question2" id="c2" value="value2">Check 2</label>
                     </fieldset>
                     
-                    <label for="choices">Selection:
-                        <select id="choices" name="name">
+                    <label for="choice">Selection:
+                        <select id="choice" name="name">
                             <option value="op1">Opção 1</option>
                             <option value="op2">Opção 2</option>
                             <option value="op3">Opção 3</option>
@@ -563,133 +563,162 @@
 
                 <hr>
 
-                <h2>Choices</h2>
+                <h2>Choice</h2> 
 
                 <!-- Horizontal -->
 
-                <ul class="choices_h " onclick="choices(this)">
+                <ul class="choice_h " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()" class="choices_option_on"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()" class="choice_option_on"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
-                <ul class="choices_h choices_noLabel" onclick="choices(this)">
+                <ul class="choice_h choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
-                <ul class="choices_h choices_noLabel" onclick="choices(this)">
+                <ul class="choice_h choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_4()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_4()"><img src="images/img-pc.png" alt=" " style="width: 70px; height: 70px;"></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
-                <ul class="choices_h " onclick="choices(this)">
+                <ul class="choice_h " onclick="choice(this)">
                     <li><span>Esc.</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"><span>#2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">#3</span></a></li>
-                    <li><a onclick="choices_option(this); func_4()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">#3</span></a></li>
+                    <li><a onclick="choice_option(this); func_4()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
                 <!-- Vertical -->
 
-                <ul class="choices_v " onclick="choices(this)">
+                <ul class="choice_v " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()" class="choices_option_on"><span>Opção 1 - Vertical choices</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()" class="choice_option_on"><span>Opção 1 - Vertical choice</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
                 
                 <div class="lb3"></div>
 
-                <ul class="choices_v choices_noLabel" onclick="choices(this)">
+                <ul class="choice_v choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><span>Opção 1 - Vertical choices</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span>Opção 1 - Vertical choice</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
                 
                 <div class="lb3"></div>
 
-                <ul class="choices_v choices_noLabel" onclick="choices(this)">
+                <ul class="choice_v choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_4()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_4()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
                 </ul>
 
                 <div class="lb3"></div> 
 
                 <p>O &lt;a> da opção 3 tem o estilo inline "justify-content: center":</p>
 
-                <ul class="choices_v " onclick="choices(this)">
+                <ul class="choice_v " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 63px; height: 63px;"><span>#2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()" style="justify-content: center"><img src="images/img-pc.png" alt=" " style="width: 63px; height: 63px;"><span>#3</span></a></li>
-                    <li><a onclick="choices_option(this); func_4()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">#4</span></a></li>
-                    <li><a onclick="choices_option(this); func_5()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 63px; height: 63px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()" style="justify-content: center"><img src="images/img-pc.png" alt=" " style="width: 63px; height: 63px;"><span>#3</span></a></li>
+                    <li><a onclick="choice_option(this); func_4()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">#4</span></a></li>
+                    <li><a onclick="choice_option(this); func_5()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
                 </ul>
 
                 <div class="lb3"></div> 
 
                 <!-- Dropdown -->
 
-                <ul class="choices " onclick="choices(this)">
+                <ul class="choice_d  " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
-                <ul class="choices choices_noLabel" onclick="choices(this)">
+                <ul class="choice_d choice_noLabel  " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
-                <ul class="choices " onclick="choices(this)">
+                <ul class="choice_d " onclick="choice(this)">
                     <li><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Opção 3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
+
+                <ul class="choice_d choice_noLabel " onclick="choice(this)">
+                    <li><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Escolher</span></li>
+                    <li><a onclick="choice_option(this); func_1()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <ul class="choice_d " onclick="choice(this)">
+                    <li><img src="images/choice_img_label.svg" alt=" " style="width: 150px; height: 39px;"></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 150px; height: 39px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 150px; height: 39px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/img-pc.png" alt=" " style="width: 150px; height: 39px;"></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <ul class="choice_d choice_noLabel " onclick="choice(this)">
+                    <li><img src="images/choice_img_label.svg" alt=" " style="width: 150px; height: 39px;"></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 150px; height: 39px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 150px; height: 39px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/img-pc.png" alt=" " style="width: 150px; height: 39px;"></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <!-- Exemplos -->
 
                 <p>Exemplos:</p>
 
-                <ul class="choices_h " onclick="choices(this)">
+                <ul class="choice_h " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); choices_sample_1_Action_1()" class="choices_option_on"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); choices_sample_1_Action_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); choices_sample_1_Action_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_sample_1_Action_1()" class="choice_option_on"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_sample_1_Action_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_sample_1_Action_3()"><span>Opção 3</span></a></li>
                 </ul>
 
-                <div class="choices_sample_1">
-                    <div class="choices_divsSample_1_div_1">Div 1</div>
-                    <div class="choices_divsSample_1_div_2">Div 2</div>
-                    <div class="choices_divsSample_1_div_3">
+                <div class="choice_sample_1">
+                    <div class="choice_divsSample_1_div_1">Div 1</div>
+                    <div class="choice_divsSample_1_div_2">Div 2</div>
+                    <div class="choice_divsSample_1_div_3">
                         ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
                         ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
                         ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
@@ -700,14 +729,14 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choices " onclick="choices(this)">
+                <ul class="choice_d " onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choices_option(this); func_1()"><span>Opção 1</span></a></li>
-                    <li><a onclick="choices_option(this); func_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choices_option(this); func_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
 
-                <div class="choices_sample_2">
+                <div class="choice_sample_2">
                     <div>Div 1</div>
                     <div>Div 2</div>
                     <div>Div 3</div>

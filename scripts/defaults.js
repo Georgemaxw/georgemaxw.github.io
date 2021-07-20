@@ -281,22 +281,36 @@ document.querySelector('footer').innerHTML = `
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Choices
+TODO: Choice 
 ────────────────────────────────────────────────────── */
 
-var choices_anchorClicked
+var choice_anchorClicked = null
 
-function choices(arg) {
+function choice(arg) {
 
-    for(var i = 0; i < arg.children.length; i++) { 
+    if(arg.classList.contains('choice_d')) {
 
-        arg.children[i].children[0].classList.remove('choices_option_on')
+        //alert(1)
+
+        arg.classList.toggle('choice_d_open')
+
+    }else{
+            
+        if(choice_anchorClicked !== null) {
+
+            for(var i = 0; i < arg.children.length; i++) { 
+
+                arg.children[i].children[0].classList.remove('choice_option_on')
+            }
+
+            choice_anchorClicked.classList.add('choice_option_on')
+
+            choice_anchorClicked = null
+        }
     }
-
-    choices_anchorClicked.classList.add('choices_option_on')
 }
 
-function choices_option(arg) {
+function choice_option(arg) {
 
-    choices_anchorClicked =  arg
+    choice_anchorClicked =  arg
 }

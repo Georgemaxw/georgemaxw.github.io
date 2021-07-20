@@ -18,7 +18,7 @@ $button_height_small: 39rem;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
  
-/* ------ Breakpoints ------ */
+/* ------ Breakpoints ------ */  
 
 $tablet: 501px; // Largura máxima de um celular.
 /* $pc: 1000px; */ // Largura mínima de um PC.
@@ -60,7 +60,7 @@ $bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
 $bg_button: url(../../images/bg_button.png)  center /100% 100%;
 $bg_table_tr_hover: hsla(193,100%,98%, 1); 
 $bg_kbd: hsl(0, 0%, 86%);
-$bg_choices_label: url(../../images/bg_choices_label.png)  center /100% 100%;
+$bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -160,6 +160,7 @@ ul, ol {
 }
 
 ul { list-style-type: "➭ "; }
+// ul ul { list-style-type: disc; }
 ul ul { list-style-type: "● "; }
 // ul ul { list-style-type: "• "; }
 // ul ul { list-style-type: "-› "; }
@@ -1220,10 +1221,10 @@ TODO:    > Slider
 
 /*  
 ────────────────────────────
-TODO:    > Choices
+TODO:    > Choice 
 ──────────────────────────── */
 
-.choices_h, .choices_v, .choices {
+.choice_h, .choice_v, .choice_d {
 
     display: inline-block;
     font-size: 0;
@@ -1236,18 +1237,19 @@ TODO:    > Choices
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
 
-/*.choices_h > li, .choices_v > li, .choices > li {
+/*.choice_h > li, .choice_v > li, .choice_d > li {
     vertical-align: middle;
 }*/
 
-.choices_h > li a, .choices_v > li a, .choices > li a {
+.choice_h > li a, .choice_v > li a, .choice_d > li a {
 
     display: inline-flex;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 
-.choices_h > li span, .choices_v > li span, .choices > li span {
+.choice_h > li span, .choice_v > li span, .choice_d > li span {
 
     display: inline-flex;
     justify-content: center;
@@ -1255,9 +1257,9 @@ TODO:    > Choices
     color: $color_text_menu;
 }
 
-.choices_h > li span > img, .choices_v > li span > img, .choices > li span > img {
+.choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
 
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 /*  
@@ -1265,7 +1267,7 @@ TODO:    > Choices
 TODO:         >> Horizontal
 ──────────────────────────── */
 
-.choices_h {
+.choice_h {
 
     display: inline-flex;
     border-radius: 1000px;
@@ -1295,7 +1297,7 @@ TODO:         >> Horizontal
         border-top-left-radius: 1000px;
         border-bottom-left-radius: 1000px;
 
-        background: $bg_choices_label;
+        background: $bg_choice_label;
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1342,7 +1344,7 @@ TODO:         >> Horizontal
 TODO:         >> Vertical
 ──────────────────────────── */
 
-.choices_v {
+.choice_v {
 
     border-radius: 20px;
     background: $bg_button;
@@ -1380,7 +1382,7 @@ TODO:         >> Vertical
         border-top-right-radius: 20px;
 
         justify-content: center;
-        background: $bg_choices_label;
+        background: $bg_choice_label;
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1397,8 +1399,8 @@ TODO:         >> Vertical
         border-bottom-right-radius: 20px;
 
         > a > img {
-            border-bottom-left-radius: 17px;
-            border-bottom-right-radius: 17px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
     }
    
@@ -1412,9 +1414,9 @@ TODO:         >> Vertical
 TODO:         >> Dropdown
 ──────────────────────────── */
 
-.choices {
+.choice_d {
 
-    border-radius: 1000px;
+    border-radius: 20px;
     background: $bg_button;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
@@ -1448,15 +1450,73 @@ TODO:         >> Dropdown
             content: "▼";
             margin-left: 5rem;
         }
+
+        > img {
+            border-radius: 20px;
+        }
     }
 }
+
+
+
+
+.choice_d.choice_d_open {
+    
+    max-width: calc(100% - (2 * #{$margin_horizontal}));
+
+    > li {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // <- Neste caso, alinha verticalmente!
+
+        > a {
+            flex-grow: 1;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        display: none;
+    }
+
+    > li:nth-of-type(2) > a > img {
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    > li:nth-last-of-type(1) > a > img {
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    li span {
+        padding: 0 15px 0 15px;
+    }
+
+    > li a:hover {
+        background: hsla(0, 0%, 100%, 0.45);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+    }
+
+    > li + li {
+        border-bottom: 1px solid $color_text_menu;
+    }
+}
+
+
+
+
+
 
 /*  
 ────────────────────────────
 TODO:         >> Option ON
 ──────────────────────────── */
 
-.choices_option_on {
+.choice_option_on { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+
     background: hsla(0, 0%, 100%, 0.45);
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
 }
@@ -1466,14 +1526,14 @@ TODO:         >> Option ON
 TODO:         >> No Label
 ──────────────────────────── */
 
-.choices_noLabel {
+.choice_noLabel {
 
     > li:nth-of-type(1) {
         display: none;
     }
 }
 
-.choices_h.choices_noLabel {
+.choice_h.choice_noLabel {
 
     > li:nth-of-type(2) span {
 
@@ -1486,12 +1546,12 @@ TODO:         >> No Label
     }
 }
 
-.choices_v.choices_noLabel > li:nth-of-type(2) > a > img {
-            border-top-left-radius: 17px;
-            border-top-right-radius: 17px;
+.choice_v.choice_noLabel > li:nth-of-type(2) > a > img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
 }
 
-.choices.choices_noLabel {
+.choice_d.choice_noLabel {
 
     > li:nth-of-type(2) {
 
@@ -1499,7 +1559,23 @@ TODO:         >> No Label
     
         span::after { 
             content: "▼";
-            margin-left: 5rem;
+            //margin-left: 5rem;
+        }
+
+        > a > img {
+            border-radius: 20px;
         }
     }
+}
+
+.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) > a > img  {
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
+
+    content: "";
 }

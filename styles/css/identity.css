@@ -2,14 +2,14 @@
 /* gmes-identity.css */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Exemplos De Choices
+TODO: Exemplos De Choice 
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
 TODO:    > Exemplo 1
 ──────────────────────────── */
 /* Apple: 16px em 320w, e 22px em 736w. */
-.choices_sample_1, .choices_sample_2, .choices_sample_3 {
+.choice_sample_1, .choice_sample_2, .choice_sample_3 {
   padding: 8px 13px;
   margin-top: calc(2 * 16rem);
   margin-left: 20px;
@@ -19,11 +19,11 @@ TODO:    > Exemplo 1
   min-height: 39rem;
 }
 
-.choices_sample_1 > :not(:nth-child(1)), .choices_sample_2 > :not(:nth-child(1)), .choices_sample_3 > :not(:nth-child(1)) {
+.choice_sample_1 > :not(:nth-child(1)), .choice_sample_2 > :not(:nth-child(1)), .choice_sample_3 > :not(:nth-child(1)) {
   display: none;
 }
 
-.choices_sample_1 > div, .choices_sample_2 > div, .choices_sample_3 > div {
+.choice_sample_1 > div, .choice_sample_2 > div, .choice_sample_3 > div {
   font-size: 19rem;
 }
 
