@@ -314,3 +314,25 @@ function choice_option(arg) {
 
     choice_anchorClicked =  arg
 }
+
+
+
+
+
+
+
+
+
+
+
+
+var allChoicesD = document.querySelectorAll('.choice_d');
+
+for(var i = 0; i < allChoicesD.length; i++) { 
+
+var e = document.createElement("li");
+
+    console.log(allChoicesD[i])
+    
+    allChoicesD[i].appendChild(e)
+}

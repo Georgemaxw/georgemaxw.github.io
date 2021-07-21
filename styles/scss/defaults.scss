@@ -1519,10 +1519,12 @@ TODO:         >> Dropdown
     overflow-y: auto;
 
     > li {
-        display: block;
+        //display: block;
         display: flex;
         flex-direction: column;
         justify-content: center; // <- Neste caso, alinha verticalmente!
+
+        position: relative; top: $button_height_small;
         width: 100%;
 
         > a {
@@ -1535,20 +1537,29 @@ TODO:         >> Dropdown
         display: none;
     }
 
-    > li:nth-of-type(2) > a > img[src] {
-        border-radius: 0;
+    > li:nth-of-type(2) {
+        border-top: 1px solid $color_text_menu;
+    }
+
+    > li:nth-last-of-type(1) { // Esta regra só deve existir caso o último 'li' tiver sido criado via JS.
+        border: 0;
     }
 
     li span {
         padding: 0 15px 0 15px;
     }
 
-    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); }
+    > li:nth-of-type(2) > a > img[src] {
+        border-radius: 0;
+    }
+
+    > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); } // hover
 
     > li + li {
         border-bottom: 1px solid $color_text_menu;
     }
 }
+
 
 
 
