@@ -32,7 +32,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul class="nav_compact_subOptions_textBelow">
             <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
             <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
             <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.5</span></a></li>
@@ -46,7 +46,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul class="nav_subOptions_horizontal  nav_expanded_subOptions_textBelow">
             <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
             <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.3</span></a></li>
            <!-- <li><a href="#">Link 3.4</a></li>-->
             <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.5</span></a></li>
@@ -58,13 +58,13 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="">L4-∅</a><div></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">L5</a>
+<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">L5</a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.1</span></a></li>
-            <li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>
-            <li><a href="#"><span><img src="images/textImg_sample_2.svg" alt="" class="textImg_Size">Link 5.3</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.1</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.3</span></a></li>
             <!--<li><a href="#">Link 5.4</a></li>
             <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.5</span></a></li> 
             <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.6</span></a></li>-->

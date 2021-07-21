@@ -72,6 +72,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 /* ------ z-index's ------ */
 
 $zIndex_nav: 64;
+$zIndex_choice_d: 128;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -137,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @for $i from 1 through 6 { 
 	h#{$i} {
-        font-size: calc(44rem - (4 * #{$i}rem));
+        font-size: calc(44rem - (4 * #{$i}rem)); // Geral
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
 	}
@@ -259,7 +260,6 @@ pre {
 
 //.arrow_2 { list-style-type: "➢ "; } 
 .star { list-style-type: "✰ "; }
-//.spell { list-style-type: "✡ "; }
 
 /*  
 ──────────────────────────────────────────────────────
@@ -339,7 +339,7 @@ TODO:    > Header-nav
             justify-content: center;
             align-items: center;
             width: 48px;
-            font-size: 32rem;
+            font-size: 32px;
             text-align: center;
             color: $color_text_menu;
         }
@@ -1237,9 +1237,12 @@ TODO:    > Choice
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
 
-/*.choice_h > li, .choice_v > li, .choice_d > li {
-    vertical-align: middle;
-}*/
+.choice_h > li, .choice_v > li, .choice_d > li {
+
+    a {
+        cursor: pointer;
+    }
+}/**/
 
 .choice_h > li a, .choice_v > li a, .choice_d > li a {
 
@@ -1442,9 +1445,7 @@ TODO:         >> Dropdown
 
         background: 0;
 
-        a {
-            cursor: pointer;
-        }
+        cursor: pointer;
 
         span::after { 
             content: "▼";
@@ -1460,6 +1461,8 @@ TODO:         >> Dropdown
 
 
 
+
+/*
 .choice_d.choice_d_open {
     
     max-width: calc(100% - (2 * #{$margin_horizontal}));
@@ -1495,18 +1498,57 @@ TODO:         >> Dropdown
         padding: 0 15px 0 15px;
     }
 
-    > li a:hover {
-        background: hsla(0, 0%, 100%, 0.45);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
-    }
+    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); }
 
     > li + li {
         border-bottom: 1px solid $color_text_menu;
     }
 }
+*/
 
 
 
+
+.choice_d.choice_d_open {
+
+    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+    z-index: $zIndex_choice_d;
+    margin: 0;
+    border-radius: 0px;
+    //max-height: 100vh;
+    overflow-y: auto;
+
+    > li {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // <- Neste caso, alinha verticalmente!
+        width: 100%;
+
+        > a {
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        display: none;
+    }
+
+    > li:nth-of-type(2) > a > img[src] {
+        border-radius: 0;
+    }
+
+    li span {
+        padding: 0 15px 0 15px;
+    }
+
+    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); }
+
+    > li + li {
+        border-bottom: 1px solid $color_text_menu;
+    }
+}
 
 
 
@@ -1559,7 +1601,7 @@ TODO:         >> No Label
     
         span::after { 
             content: "▼";
-            //margin-left: 5rem;
+            margin-left: 5rem;
         }
 
         > a > img {
@@ -1578,4 +1620,10 @@ TODO:         >> No Label
 .choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
 
     content: "";
+    margin-left: 0;
 }
+
+
+
+
+
