@@ -72,7 +72,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 /* ------ z-index's ------ */
 
 $zIndex_nav: 64;
-$zIndex_choice_d: 128;
+$zIndex_choice_d_open: 128;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -1435,6 +1435,15 @@ TODO:         >> Dropdown
         span {
             padding: 0 11px 0 15px;
         }
+
+        > a > img {
+            border-radius: 20px;
+        }
+
+        span::after { 
+            content: "▼";
+            margin-left: 5rem;
+        }
     }
 
     > li:not(:nth-of-type(1)) {
@@ -1447,20 +1456,11 @@ TODO:         >> Dropdown
 
         cursor: pointer;
 
-        span::after { 
-            content: "▼";
-            margin-left: 5rem;
-        }
-
         > img {
             border-radius: 20px;
         }
     }
 }
-
-
-
-
 
 /*
 .choice_d.choice_d_open {
@@ -1506,20 +1506,16 @@ TODO:         >> Dropdown
 }
 */
 
-
-
-
 .choice_d.choice_d_open {
 
     position: fixed; top: 0; bottom: 0; left: 0; right: 0;
-    z-index: $zIndex_choice_d;
+    z-index: $zIndex_choice_d_open;
     margin: 0;
     border-radius: 0px;
     //max-height: 100vh;
     overflow-y: auto;
 
     > li {
-        //display: block;
         display: flex;
         flex-direction: column;
         justify-content: center; // <- Neste caso, alinha verticalmente!
@@ -1530,6 +1526,16 @@ TODO:         >> Dropdown
         > a {
             flex-grow: 1;
             justify-content: center;
+
+            img {
+                border-radius: 0px;
+            }
+        }
+
+        a > span::after {
+
+            content: "";
+            margin-left: 0;
         }
     }
 
@@ -1553,22 +1559,27 @@ TODO:         >> Dropdown
         border-radius: 0;
     }
 
-    > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); } // hover
+    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); } // hover
 
     > li + li {
         border-bottom: 1px solid $color_text_menu;
     }
+
+    /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
 }
-
-
-
 
 /*  
 ────────────────────────────
 TODO:         >> Option ON
 ──────────────────────────── */
 
-.choice_option_on { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+.choice_option_on:not(.choice_d > li > .choice_option_on) { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+
+    background: hsla(0, 0%, 100%, 0.45);
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+}
+
+.choice_d.choice_d.choice_d_open > li > .choice_option_on { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
 
     background: hsla(0, 0%, 100%, 0.45);
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
@@ -1627,14 +1638,8 @@ TODO:         >> No Label
     border-bottom-right-radius: 0px;
 }
 
-
 .choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
 
     content: "";
     margin-left: 0;
 }
-
-
-
-
-

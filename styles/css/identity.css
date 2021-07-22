@@ -9,7 +9,7 @@ TODO: Exemplos De Choice
 TODO:    > Exemplo 1
 ──────────────────────────── */
 /* Apple: 16px em 320w, e 22px em 736w. */
-.choice_sample_1, .choice_sample_2, .choice_sample_3 {
+.choice_example_1, .choice_example_2, .choice_example_3 {
   padding: 8px 13px;
   margin-top: calc(2 * 16rem);
   margin-left: 20px;
@@ -19,11 +19,11 @@ TODO:    > Exemplo 1
   min-height: 39rem;
 }
 
-.choice_sample_1 > :not(:nth-child(1)), .choice_sample_2 > :not(:nth-child(1)), .choice_sample_3 > :not(:nth-child(1)) {
+.choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
   display: none;
 }
 
-.choice_sample_1 > div, .choice_sample_2 > div, .choice_sample_3 > div {
+.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
   font-size: 19rem;
 }
 

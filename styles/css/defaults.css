@@ -1319,6 +1319,15 @@ TODO:         >> Dropdown
   padding: 0 11px 0 15px;
 }
 
+.choice_d > li > a > img {
+  border-radius: 20px;
+}
+
+.choice_d > li span::after {
+  content: "▼";
+  margin-left: 5rem;
+}
+
 .choice_d > li:not(:nth-of-type(1)) {
   display: none;
 }
@@ -1326,11 +1335,6 @@ TODO:         >> Dropdown
 .choice_d > li:nth-of-type(1) {
   background: 0;
   cursor: pointer;
-}
-
-.choice_d > li:nth-of-type(1) span::after {
-  content: "▼";
-  margin-left: 5rem;
 }
 
 .choice_d > li:nth-of-type(1) > img {
@@ -1390,6 +1394,7 @@ TODO:         >> Dropdown
   margin: 0;
   border-radius: 0px;
   overflow-y: auto;
+  /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * 39rem); } } */
 }
 
 .choice_d.choice_d_open > li {
@@ -1404,6 +1409,15 @@ TODO:         >> Dropdown
 .choice_d.choice_d_open > li > a {
   flex-grow: 1;
   justify-content: center;
+}
+
+.choice_d.choice_d_open > li > a img {
+  border-radius: 0px;
+}
+
+.choice_d.choice_d_open > li a > span::after {
+  content: "";
+  margin-left: 0;
 }
 
 .choice_d.choice_d_open > li:nth-of-type(1) {
@@ -1426,11 +1440,6 @@ TODO:         >> Dropdown
   border-radius: 0;
 }
 
-.choice_d.choice_d_open > li a:hover {
-  background: rgba(255, 255, 255, 0.45);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-
 .choice_d.choice_d_open > li + li {
   border-bottom: 1px solid white;
 }
@@ -1439,7 +1448,12 @@ TODO:         >> Dropdown
 ────────────────────────────
 TODO:         >> Option ON
 ──────────────────────────── */
-.choice_option_on {
+.choice_option_on:not(.choice_d > li > .choice_option_on) {
+  background: rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.choice_d.choice_d.choice_d_open > li > .choice_option_on {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }

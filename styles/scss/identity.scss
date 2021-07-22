@@ -15,7 +15,7 @@ $margin_vertical: 16rem;
 $button_height_small: 39rem;
 $color_border_form: hsl(0, 0%, 80%); 
 
-.choice_sample_1, .choice_sample_2, .choice_sample_3 {
+.choice_example_1, .choice_example_2, .choice_example_3 {
     
     padding: 8px 13px;
     margin-top: calc(2 * #{$margin_vertical});
@@ -30,7 +30,7 @@ $color_border_form: hsl(0, 0%, 80%);
     }
 }
 
-.choice_sample_1 > div, .choice_sample_2 > div, .choice_sample_3 > div {
+.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
 
     font-size: $font_size; 
 }

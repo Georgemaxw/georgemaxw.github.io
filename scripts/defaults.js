@@ -286,16 +286,61 @@ TODO: Choice
 
 var choice_anchorClicked = null
 
+var choice_d_open = false
+
 function choice(arg) {
+
+    var choice_d_liClicked = null
 
     if(arg.classList.contains('choice_d')) {
 
-        //alert(1)
+        if(arg.classList.contains('choice_d_open')) {
 
+            for(var i = 0; i < arg.children.length; i++) { 
+
+                if(arg.children[i].children[0] === choice_anchorClicked) {
+
+                    choice_d_liClicked = arg.children[i]
+                    break
+                }
+            }
+
+            for(var i = 0; i < arg.children.length; i++) { 
+
+                arg.children[i].style = 'display: none'
+            }
+
+            if(choice_d_liClicked !==  null) {
+
+                choice_d_liClicked.style = 'display: inline-flex' 
+            } else {
+                arg.children[0].style = 'display: inline-flex'
+            }
+            
+        } else {
+
+            arg.children[0].style = 'display: none'
+            
+            for(var i = 1; i < arg.children.length; i++) { 
+
+                arg.children[i].style = 'display: inline-flex'
+            } 
+
+            if(choice_anchorClicked !== null) {
+                
+                for(var i = 1; i < arg.children.length - 1; i++) { 
+
+                    arg.children[i].children[0].classList.remove('choice_option_on')
+                }
+
+                choice_anchorClicked.classList.add('choice_option_on')
+            }
+        }
+            
         arg.classList.toggle('choice_d_open')
 
-    }else{
-            
+    } else {
+                
         if(choice_anchorClicked !== null) {
 
             for(var i = 0; i < arg.children.length; i++) { 
@@ -315,16 +360,7 @@ function choice_option(arg) {
     choice_anchorClicked =  arg
 }
 
-
-
-
-
-
-
-
-
-
-
+// Espaço no final do menu dos dropdowns:
 
 var allChoicesD = document.querySelectorAll('.choice_d');
 
@@ -332,7 +368,5 @@ for(var i = 0; i < allChoicesD.length; i++) {
 
 var e = document.createElement("li");
 
-    console.log(allChoicesD[i])
-    
     allChoicesD[i].appendChild(e)
 }
