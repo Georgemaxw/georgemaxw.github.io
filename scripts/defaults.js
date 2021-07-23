@@ -337,6 +337,8 @@ function choice(arg) {
             }
         }
             
+        document.querySelector('html').classList.toggle('noScrollbar')
+
         arg.classList.toggle('choice_d_open')
 
     } else {
@@ -362,11 +364,11 @@ function choice_option(arg) {
 
 // Espaço no final do menu dos dropdowns:
 
-var allChoicesD = document.querySelectorAll('.choice_d');
+var allChoicesD = document.querySelectorAll('.choice_d')
 
 for(var i = 0; i < allChoicesD.length; i++) { 
 
-var e = document.createElement("li");
+var e = document.createElement("li")
 
     allChoicesD[i].appendChild(e)
 }

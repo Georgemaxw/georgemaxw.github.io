@@ -32,10 +32,14 @@ html {
 ──────────────────────────────────────────────────────
 TODO: Margens
 ────────────────────────────────────────────────────── */
-.offset, p, dl, .footer-content .footer-icons, form label, h1, h2, h3, h4, h5, h6, pre, hr {
+.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, form label, h1, h2, h3, h4, h5, h6, pre, hr {
   /* Lateral margins */
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, form label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, pre.choice_h, hr.choice_h {
+  display: flex;
 }
 
 p, dl, .footer-content .footer-icons, form label {
@@ -1002,6 +1006,10 @@ hr {
   margin-right: auto;
 }
 
+.center.choice_h {
+  display: flex;
+}
+
 .lb {
   /* Line break */
   margin-top: calc(1* 16rem);
@@ -1029,6 +1037,10 @@ hr {
 
 .button_small_height {
   height: 39rem;
+}
+
+.noScrollbar {
+  overflow: hidden;
 }
 
 /*
@@ -1136,11 +1148,10 @@ TODO:    > Choice
 .choice_h, .choice_v, .choice_d {
   display: inline-block;
   font-size: 0;
+  -moz-width: fit-content;
+  width: fit-content;
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0;
   list-style-type: none;
 }
 
@@ -1341,49 +1352,6 @@ TODO:         >> Dropdown
   border-radius: 20px;
 }
 
-/*
-.choice_d.choice_d_open {
-    
-    max-width: calc(100% - (2 * 20px));
-
-    > li {
-        display: block;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; // <- Neste caso, alinha verticalmente!
-
-        > a {
-            flex-grow: 1;
-        }
-    }
-
-    > li:nth-of-type(1) {
-        display: none;
-    }
-
-    > li:nth-of-type(2) > a > img {
-
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    > li:nth-last-of-type(1) > a > img {
-
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-
-    li span {
-        padding: 0 15px 0 15px;
-    }
-
-    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); }
-
-    > li + li {
-        border-bottom: 1px solid $color_text_menu;
-    }
-}
-*/
 .choice_d.choice_d_open {
   position: fixed;
   top: 0;
@@ -1391,8 +1359,10 @@ TODO:         >> Dropdown
   left: 0;
   right: 0;
   z-index: 128;
+  width: auto;
   margin: 0;
   border-radius: 0px;
+  background: url(../../images/bg_choice_d_open.png) center/100% 100%;
   overflow-y: auto;
   /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * 39rem); } } */
 }
@@ -1444,6 +1414,31 @@ TODO:         >> Dropdown
   border-bottom: 1px solid white;
 }
 
+.choice_d.choice_d_open::-webkit-scrollbar {
+  width: 10px;
+  height: 11px;
+}
+
+.choice_d.choice_d_open::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+}
+
+.choice_d.choice_d_open {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.14) rgba(255, 255, 255, 0.4);
+}
+
+/* @media (pointer: fine) {
+
+    .choice_d.choice_d_open {
+        overflow: hidden;
+    }
+    
+    .choice_d.choice_d_open:hover {
+        overflow: auto;
+    }
+}*/
 /*  
 ────────────────────────────
 TODO:         >> Option ON

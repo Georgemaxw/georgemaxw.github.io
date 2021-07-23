@@ -567,7 +567,7 @@
 
                 <p>'choice_h' com a classe 'choice_option_on' no &lt;a> de 'Opção 1':</p>
 
-                <ul class="choice_h " onclick="choice(this)">
+                <ul class="choice_h" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()" class="choice_option_on"><span>Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
@@ -576,9 +576,9 @@
 
                 <div class="lb2"></div>
 
-                <p>'choice_h' com a classe 'choice_noLabel':</p>
+                <p>'choice_h' com as classes 'choice_noLabel' e 'offset'</p>
 
-                <ul class="choice_h choice_noLabel" onclick="choice(this)">
+                <ul class="choice_h choice_noLabel offset" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
@@ -587,7 +587,7 @@
 
                 <div class="lb2"></div>
 
-                <p>'choice_h' com a classe 'choice_noLabel', e com imagens grandes:</p>
+                <p>'choice_h' com a classe 'choice_noLabel' e com imagens grandes:</p>
 
                 <ul class="choice_h choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
@@ -599,9 +599,9 @@
 
                 <div class="lb2"></div>
 
-                <p>'choice_h' com imagens grandes, e imagem de texto pequena:</p>
+                <p>'choice_h' diverso e com a classe 'center':</p>
 
-                <ul class="choice_h " onclick="choice(this)">
+                <ul class="choice_h center" onclick="choice(this)">
                     <li><span>Esc.</span></li>
                     <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"></a></li>
                     <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 65px; height: 65px;"><span>#2</span></a></li>
@@ -616,7 +616,7 @@
 
                 <p>'choice_v' com a classe 'choice_option_on' no &lt;a> de 'Opção 1':</p>
 
-                <ul class="choice_v " onclick="choice(this)">
+                <ul class="choice_v" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()" class="choice_option_on"><span>Opção 1 - Vertical choice</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
@@ -625,9 +625,9 @@
                 
                 <div class="lb2"></div>
 
-                <p>'choice_v' com a classe 'choice_noLabel':</p>
+                <p>'choice_v' com as classes 'choice_noLabel' e 'offset':</p>
 
-                <ul class="choice_v choice_noLabel" onclick="choice(this)">
+                <ul class="choice_v choice_noLabel offset" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()"><span>Opção 1 - Vertical choice</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
@@ -636,7 +636,7 @@
                 
                 <div class="lb2"></div>
 
-                <p>'choice_v'  com a classe 'choice_noLabel', e com imagens grandes:</p>
+                <p>'choice_v'  com a classe 'choice_noLabel' e com imagens grandes:</p>
 
                 <ul class="choice_v choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
@@ -648,9 +648,9 @@
 
                 <div class="lb2"></div> 
 
-                <p>'choice_v' com imagens grandes, e imagem de texto pequena. O &lt;a> da opção 3 tem o estilo inline "justify-content: center":</p>
+                <p>'choice_v' diverso e com a classe 'center'. O &lt;a> da opção 3 tem o estilo inline "justify-content: center":</p>
 
-                <ul class="choice_v " onclick="choice(this)">
+                <ul class="choice_v center" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()"><img src="images/img-pc.png" alt=" " style="width: 200px; height: 70px;"></a></li>
                     <li><a onclick="choice_option(this); func_2()"><img src="images/img-pc.png" alt=" " style="width: 63px; height: 63px;"><span>#2</span></a></li>
@@ -664,7 +664,13 @@
                 <!-- Dropdown -->
                 <h3>Dropdown</h3>
 
-                <ul class="choice_d  " onclick="choice(this)">
+                <p>Obs.: A classe 'choice_option_on' não tem efeito em um 'choice_d'.</p>
+
+                <div class="lb2"></div>
+
+                <p>'choice_d' com a classe 'offset':</p>
+
+                <ul class="choice_d offset " onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
@@ -673,16 +679,20 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d choice_noLabel  " onclick="choice(this)">
+                <p>'choice_d' com a classe 'choice_noLabel':</p>
+
+                <ul class="choice_d choice_noLabel" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choice_option(this); func_1()" class="choice_option_on"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><span>Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 2</span></a></li>
                     <li><a onclick="choice_option(this); func_3()"><span>Opção 3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d " onclick="choice(this)">
+                <p>'choice_d' com imagens de texto pequenas:</p>
+
+                <ul class="choice_d" onclick="choice(this)">
                     <li><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span><img src="images/textImg_sample_2_4.svg" alt="" class="textImg_Size">Opção 2</span></a></li>
@@ -691,7 +701,9 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d choice_noLabel " onclick="choice(this)">
+                <p>'choice_d' com a classe 'choice_noLabel' e com imagens de texto pequenas:</p>
+
+                <ul class="choice_d choice_noLabel" onclick="choice(this)">
                     <li><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Escolher</span></li>
                     <li><a onclick="choice_option(this); func_1()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 2</span></a></li>
@@ -700,7 +712,9 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d " onclick="choice(this)">
+                <p>'choice_d' com imagens grandes:</p>
+
+                <ul class="choice_d" onclick="choice(this)">
                     <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"></li>
                     <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
                     <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
@@ -709,7 +723,9 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d choice_noLabel " onclick="choice(this)">
+                <p>'choice_d' com a classe 'choice_noLabel' e com imagens grandes:</p>
+
+                <ul class="choice_d choice_noLabel" onclick="choice(this)">
                     <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"></li>
                     <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
                     <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
@@ -718,7 +734,9 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d " onclick="choice(this)">
+                <p>'choice_d' com imagens grandes e textos:</p>
+
+                <ul class="choice_d" onclick="choice(this)">
                     <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"><span>#0</span></li>
                     <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"><span>#1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"><span>#2</span></a></li>
@@ -727,7 +745,9 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d choice_noLabel " onclick="choice(this)">
+                <p>'choice_d' diverso com as classes 'choice_noLabel', e 'center':</p>
+
+                <ul class="choice_d choice_noLabel center" onclick="choice(this)">
                     <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"><span>#0</span></li>
                     <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"><span>#1</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"><span>#2</span></a></li>
@@ -735,6 +755,7 @@
                     <li><a onclick="choice_option(this); func_1()"><span>Opção 4</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 5</span></a></li>
                     <li><a onclick="choice_option(this); func_3()"><span>Opção 6</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><span>ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. </span></a></li>
                     <li><a onclick="choice_option(this); func_1()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 7</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 8</span></a></li>
                     <li><a onclick="choice_option(this); func_3()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 9</span></a></li>
@@ -749,7 +770,7 @@
                 <!-- Exemplos -->
                 <h3>Exemplos:</h3>
 
-                <ul class="choice_h " onclick="choice(this)">
+                <ul class="choice_h center" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); choice_example_1_Action_1()" class="choice_option_on"><span>Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); choice_example_1_Action_2()"><span>Opção 2</span></a></li>
@@ -770,7 +791,7 @@
 
                 <div class="lb3"></div>
 
-                <ul class="choice_d " onclick="choice(this)">
+                <ul class="choice_d offset" onclick="choice(this)">
                     <li><span>Escolher</span></li>
                     <li><a onclick="choice_option(this); choice_example_2_Action_1()"><span>Opção 1</span></a></li>
                     <li><a onclick="choice_option(this); choice_example_2_Action_2()"><span>Opção 2</span></a></li>
