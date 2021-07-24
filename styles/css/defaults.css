@@ -1497,3 +1497,11 @@ TODO:         >> No Label
   content: "";
   margin-left: 0;
 }
+
+.overflow_auto {
+  overflow: auto;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}

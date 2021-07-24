@@ -89,6 +89,12 @@ var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div')
 var nav_index = 'none'
 var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável JS
 
+
+
+            var nav_html_scrollbar_allowedEnable = false
+
+
+
 document.querySelector('.nav-menu-button').onclick = function() { 
 
     //if(window.innerWidth < nav_expand) { 
@@ -98,13 +104,14 @@ document.querySelector('.nav-menu-button').onclick = function() {
             document.querySelector('.nav-menu').style = 'display: block'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: flex'
-            document.querySelector('html').style = 'overflow: hidden'
+            document.querySelector('html').classList.add('overflow_hidden')
+            nav_html_scrollbar_allowedEnable = true
             nav_menu_compact_enabled = true
         } else {
             document.querySelector('.nav-menu').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
-            document.querySelector('html').style = 'overflow: auto'
+            document.querySelector('html').classList.remove('overflow_hidden')
             nav_menu_compact_enabled = false
 
             for(var i = 0; i < nav_divs.length; i++) {
@@ -141,33 +148,34 @@ window.onresize = function() {
     if(window.innerWidth >= nav_expand) {
         document.querySelector('.nav-menu').style = 'display: block'
         
-        if(nav_menu_compact_enabled === true){
+        if(nav_index === 'none') {
 
-            document.querySelector('html').style = 'overflow: auto'
+            if(nav_html_scrollbar_allowedEnable === true) {
 
-            for(var i = 0; i < nav_divs.length; i++) {
-                nav_categories_anchors[i].style = ''
-                nav_divs[i].style = 'display: none'
+                document.querySelector('html').classList.remove('overflow_hidden')
+
+                nav_html_scrollbar_allowedEnable = false
             }
 
-            nav_index = 'none'
 
-            nav_menu_compact_enabled = false
+
+            //nav_menu_compact_enabled = false
         }
-        
+
     } else {
 
         if(nav_menu_compact_enabled === true) {
             document.querySelector('.nav-menu').style = 'display: block'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: flex'
-            document.querySelector('html').style = 'overflow: hidden'
+            document.querySelector('html').classList.add('overflow_hidden')
+            nav_html_scrollbar_allowedEnable = true
 
         } else {
             document.querySelector('.nav-menu').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
-            /*document.querySelector('html').style = 'overflow: auto'*/
+            /*document.querySelector('html').classList.remove('overflow_hidden')*/
         }
     }
 
@@ -211,7 +219,8 @@ function nav_menu_options(arg) {
         nav_menu_compact_enabled = true
 
         if(window.innerWidth >= nav_expand) { 
-            document.querySelector('html').style = 'overflow: hidden'
+            document.querySelector('html').classList.add('overflow_hidden')
+            nav_html_scrollbar_allowedEnable = true
         }
 
     }else{
@@ -223,7 +232,7 @@ function nav_menu_options(arg) {
         nav_menu_compact_enabled = false
 
         if(window.innerWidth >= nav_expand) { 
-            document.querySelector('html').style = 'overflow: auto'
+            document.querySelector('html').classList.remove('overflow_hidden')
         }
     }
 }
@@ -241,7 +250,7 @@ document.querySelector('.nav-menu > ul > li:nth-last-of-type(1)').onclick = func
     nav_index = 'none'
 
     if(window.innerWidth >= nav_expand) { 
-        document.querySelector('html').style = 'overflow: auto'
+        document.querySelector('html').classList.remove('overflow_hidden')
     }
     
     document.querySelector('.header-nav').style.display = 'none'
