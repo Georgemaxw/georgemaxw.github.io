@@ -510,6 +510,7 @@ TODO:         >> Expandido
         .nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
             display: block;
+            margin-left: 10px;
 
             a {
                 font-size: 32rem;
@@ -1071,6 +1072,10 @@ hr {
     }
 }
 
+a {
+    cursor: pointer;
+}
+
 /*
 .content-left {
     text-align: left;
@@ -1253,13 +1258,6 @@ TODO:    > Choice
     list-style-type: none;
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
-
-.choice_h > li, .choice_v > li, .choice_d > li {
-
-    a {
-        cursor: pointer;
-    }
-}/**/
 
 .choice_h > li a, .choice_v > li a, .choice_d > li a {
 

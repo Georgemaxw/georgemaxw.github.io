@@ -455,6 +455,7 @@ TODO:         >> Expandido
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) {
     border-width: 0;
     display: block;
+    margin-left: 10px;
   }
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a {
     font-size: 32rem;
@@ -983,6 +984,10 @@ hr {
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 /*
 .content-left {
     text-align: left;
@@ -1151,11 +1156,6 @@ TODO:    > Choice
   list-style-type: none;
 }
 
-.choice_h > li a, .choice_v > li a, .choice_d > li a {
-  cursor: pointer;
-}
-
-/**/
 .choice_h > li a, .choice_v > li a, .choice_d > li a {
   display: inline-flex;
   align-items: center;

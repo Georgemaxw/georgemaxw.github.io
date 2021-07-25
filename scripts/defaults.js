@@ -20,7 +20,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul>
             <li><a href="#">Link 1.1</a></li>
-            <li><a href="#">Link 1.2</a></li>
+            <li><a href="page_2.html">Link 1.2</a></li>
             <li><a href="#">Link 1.3</a></li>
         </ul>
     </div>
@@ -30,7 +30,7 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">Link 2</a>
 
     <div>
-        <ul class="nav_compact_subOptions_textBelow">
+        <ul>
             <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.1</span></a></li>
             <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
             <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 2.3</span></a></li>
@@ -44,36 +44,50 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">Link 3</a>
 
     <div>
-        <ul class="nav_subOptions_horizontal  nav_expanded_subOptions_textBelow">
-            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.1</span></a></li>
+        <ul class="nav_compact_subOptions_textBelow">
+            <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 3.1</span></a></li>
             <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
-            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.3</span></a></li>
-           <!-- <li><a href="#">Link 3.4</a></li>-->
-            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.5</span></a></li>
-            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 3.6</span></a></li>
+            <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 3.3</span></a></li>
+            <!--<li><a href="#">Link 3.4</a></li>-->
+            <li><a href="#"><img src="images/img-pc.png" alt=" "><span>Link 3.5</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a href="">L4-∅</a><div></div></li><!---->
+<li><a onclick="nav_menu_options(this)">L4</a>
 
-<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">L5</a>
+    <div>
+        <ul class="nav_subOptions_horizontal  nav_expanded_subOptions_textBelow">
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 4.1</span></a></li>
+            <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 4.2</span></a></li>-->
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 4.3</span></a></li>
+           <!-- <li><a href="#">Link 4.4</a></li>-->
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 4.5</span></a></li>
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 4.6</span></a></li>
+        </ul>
+    </div>
+
+</li>
+
+<li><a href="">∅</a><div><ul></ul></div></li><!---->
+
+<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">L6</a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.1</span></a></li>
-            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>
-            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.3</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 6.1</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 6.2</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 6.3</span></a></li>
             <!--<li><a href="#">Link 5.4</a></li>
-            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.5</span></a></li> 
-            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 5.6</span></a></li>-->
+            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 6.5</span></a></li> 
+            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 6.6</span></a></li>-->
         </ul>
     </div>
 
 </li>
 
-<li><a href="page_2.html">Pg 2</a><div></div></li>
+<li><a href="page_2.html">P2</a><div><ul></ul></div></li>
 <li><a aria-label="Hide bar"><img src="images/icon-headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
@@ -160,14 +174,6 @@ window.onresize = function() {
             nav_options_anchors[nav_options_anchorClicked_index].style = 'background: 0' 
         }
     }
-    
-    /*console.log(nav_optionsMenu_clicked)
-    
-    nav_optionsMenu_clicked = false
-    nav_subOptionsMenu_clicked = false
-
-    console.log(nav_optionsMenu_clicked)*/
-   
 } 
 
 function nav_menu_options(arg) { 
@@ -216,25 +222,19 @@ function nav_menu_options(arg) {
     }
 }
 
-
-
-
-
-
-
 // Fechar janela do menu ao clicar fora dele:
 {
 
 var nav_optionsMenu_clicked = false
 var nav_subOptionsMenu_clicked = false
 
-//if(window.innerWidth < nav_expand) {
+// Janela do menu quando Header-nav está compacto:
 
-    document.querySelector('.nav-menu > ul').onclick = function() { console.log('optionsMenu')
+    document.querySelector('.nav-menu > ul').onclick = function() { // console.log('optionsMenu')
         nav_optionsMenu_clicked = true
     }
 
-    document.querySelector('.nav-menu').onclick = function() { console.log('.nav-menu')
+    document.querySelector('.nav-menu').onclick = function() { // console.log('.nav-menu')
         if(nav_optionsMenu_clicked === false) {
             document.querySelector('.nav-menu').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
@@ -252,26 +252,18 @@ var nav_subOptionsMenu_clicked = false
         }
     }
 
-//} else {
+// Janela do menu quando Header-nav está expandido:
 
     for(var i = 0; i < nav_divs.length; i++) {
 
-        /*nav_divs[i].firstElementChild.onclick = function() { console.log('subOptionsMenu') 
-            nav_subOptionsMenu_clicked = true 
-        }
-        
-        nav_divs[i].children[0].onclick = function() { console.log('subOptionsMenu') 
+        nav_divs[i].children[0].onclick = function() { // console.log('subOptionsMenu') 
             nav_subOptionsMenu_clicked = true
         }
-
-        nav_divs[i].children[0].addEventListener('click', function() { console.log('subOptionsMenu') 
-            nav_subOptionsMenu_clicked = true
-        })*/
     }
 
     for(var i = 0; i < nav_divs.length; i++) {
 
-        nav_divs[i].onclick = function() { console.log('div')
+        nav_divs[i].onclick = function() { // console.log('div')
             if(nav_subOptionsMenu_clicked === false) {
 
                 document.querySelector('html').classList.remove('overflow_hidden')
@@ -287,27 +279,8 @@ var nav_subOptionsMenu_clicked = false
             }
         }
     }
-//}
-
-/*window.onresize = function() { 
-
-    nav_optionsMenu_clicked = false
-    nav_subOptionsMenu_clicked = false
-
-    if(window.innerWidth < nav_expand) {
-        nav_divClicked = nav_ulClicked
-    } else {
-        nav_ulClicked = nav_divClicked
-    }
-}*/
 
 }
-
-
-
-
-
-
 
 // Header-nav button:
 
