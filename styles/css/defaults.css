@@ -1039,10 +1039,6 @@ hr {
   height: 39rem;
 }
 
-.noScrollbar {
-  overflow: hidden;
-}
-
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
@@ -1498,10 +1494,10 @@ TODO:         >> No Label
   margin-left: 0;
 }
 
-.overflow_auto {
-  overflow: auto;
-}
-
+/*  
+──────────────────────────────────────────────────────
+TODO: Classes Para Serem Aplicadas Somente Via JS
+────────────────────────────────────────────────────── */
 .overflow_hidden {
   overflow: hidden;
 }

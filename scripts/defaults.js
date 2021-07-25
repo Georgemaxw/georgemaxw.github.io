@@ -9,7 +9,7 @@ TODO: Header-nav
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
-TODO:    >  NavMenu-HTML
+TODO:    >  Nav - Menu - HTML
 ──────────────────────────── */
 
 document.querySelector('.nav-menu').innerHTML = `
@@ -80,75 +80,53 @@ document.querySelector('.nav-menu').innerHTML = `
 
 /*  
 ────────────────────────────
-TODO:    >  NavMenu-Ações
+TODO:    >  Nav - JS
 ──────────────────────────── */
 
 var nav_menu_compact_enabled = false
-var nav_categories_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
+var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
-var nav_index = 'none'
+//var nav_subOptionsMenu = document.querySelectorAll('.nav-menu > ul > li > div > ul')
+var nav_options_anchorClicked_index = 'none'
 var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável JS
 
+var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
+                                                                                        do <html> apareça em momentos em que não se deseja 
+                                                                                        quando se redimensiona a janela de visualização. */
 
+document.querySelector('.nav-menu-button').onclick = function() {
 
-            var nav_html_scrollbar_allowedEnable = false
+    if(document.querySelector('.nav-menu').style.display !== 'block') { 
 
+        document.querySelector('.nav-menu').style = 'display: block'
+        document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: none'
+        document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: flex'
+        document.querySelector('html').classList.add('overflow_hidden')
+        nav_html_scrollbar_allowedEnable = true
+        nav_menu_compact_enabled = true
 
+    } else {
 
-document.querySelector('.nav-menu-button').onclick = function() { 
+        document.querySelector('.nav-menu').style = 'display: none'
+        document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
+        document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
+        document.querySelector('html').classList.remove('overflow_hidden')
+        nav_menu_compact_enabled = false
 
-    //if(window.innerWidth < nav_expand) { 
-
-        if(document.querySelector('.nav-menu').style.display !== 'block') { 
-
-            document.querySelector('.nav-menu').style = 'display: block'
-            document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: none'
-            document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: flex'
-            document.querySelector('html').classList.add('overflow_hidden')
-            nav_html_scrollbar_allowedEnable = true
-            nav_menu_compact_enabled = true
-        } else {
-            document.querySelector('.nav-menu').style = 'display: none'
-            document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
-            document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
-            document.querySelector('html').classList.remove('overflow_hidden')
-            nav_menu_compact_enabled = false
-
-            for(var i = 0; i < nav_divs.length; i++) {
-                nav_categories_anchors[i].style = ''
-                nav_divs[i].style = 'display: none'
-            }
-
-            nav_index = 'none'
+        for(var i = 0; i < nav_divs.length; i++) {
+            nav_options_anchors[i].style = ''
+            nav_divs[i].style = 'display: none'
         }
-    //}
-}
 
-/* // Colocar o código JavaScrip da navegação que está no HTML neste arquivo JavaScript:
-
-console.log(document.querySelectorAll('.nav-menu > ul > li'))
-
-var nav_options = document.querySelectorAll('.nav-menu > ul > li')
-
-for(var i = 0; i < nav_options.length; i++) { 
-
-    //console.log(nav_options[0].lastElementChild.firstElementChild)
-
-    if(nav_options[i].lastElementChild.firstElementChild !== null) { 
-        console.log(nav_options[i].lastElementChild.firstElementChild)
-    } else { 
-        console.log('Falso!')
+        nav_options_anchorClicked_index = 'none'
     }
 }
 
-//document.querySelector('#nav-menu > ul > li > a').setAttribute('onclick', 'nav_menu_options(this)')
-*/
-
-window.onresize = function() { 
+window.onresize = function() {
     if(window.innerWidth >= nav_expand) {
         document.querySelector('.nav-menu').style = 'display: block'
         
-        if(nav_index === 'none') {
+        if(nav_options_anchorClicked_index === 'none') {
 
             if(nav_html_scrollbar_allowedEnable === true) {
 
@@ -156,10 +134,6 @@ window.onresize = function() {
 
                 nav_html_scrollbar_allowedEnable = false
             }
-
-
-
-            //nav_menu_compact_enabled = false
         }
 
     } else {
@@ -175,46 +149,51 @@ window.onresize = function() {
             document.querySelector('.nav-menu').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
             document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
-            /*document.querySelector('html').classList.remove('overflow_hidden')*/
         }
     }
 
-    if(nav_index !== 'none') { 
+    if(nav_options_anchorClicked_index !== 'none') { 
         if(window.innerWidth >= nav_expand) {
-            nav_categories_anchors[nav_index].style = 
+            nav_options_anchors[nav_options_anchorClicked_index].style = 
             'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
         } else { 
-            nav_categories_anchors[nav_index].style = 'background: 0' 
+            nav_options_anchors[nav_options_anchorClicked_index].style = 'background: 0' 
         }
     }
-}/**/
+    
+    /*console.log(nav_optionsMenu_clicked)
+    
+    nav_optionsMenu_clicked = false
+    nav_subOptionsMenu_clicked = false
+
+    console.log(nav_optionsMenu_clicked)*/
+   
+} 
 
 function nav_menu_options(arg) { 
     
-    for(var i = 0; i < nav_categories_anchors.length; i++) { // <- Verifica qual <a> de categoria foi clicado.
-        if(arg === nav_categories_anchors[i]) {
+    for(var i = 0; i < nav_options_anchors.length; i++) { // <- Verifica qual <a> de categoria foi clicado.
+        if(arg === nav_options_anchors[i]) {
 
-            nav_index = i
+            nav_options_anchorClicked_index = i
             break  
         }
     }
-    
-//-------------------------------------------------------------------------------------------------
 
-    if(nav_divs[nav_index].style.display !== 'block') { // <- Habilita/desabilita o <div> de sub opção 
+    if(nav_divs[nav_options_anchorClicked_index].style.display !== 'block') { // <- Habilita/desabilita o <div> de sub opção 
                                                                            // correspondente ao <a> de categoria clicado.
 
         for(var i = 0; i < nav_divs.length; i++) { // <- Desabilita todos os <div>'s de sub opção.
-            nav_categories_anchors[i].style = ''
+            nav_options_anchors[i].style = ''
             nav_divs[i].style = 'display: none'
         }
 
         if(window.innerWidth >= nav_expand) { 
-            nav_categories_anchors[nav_index].style = 
+            nav_options_anchors[nav_options_anchorClicked_index].style = 
             'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 5px; padding-right: 5px; margin-top: 4px'
         }
 
-        nav_divs[nav_index].style = 'display: block'
+        nav_divs[nav_options_anchorClicked_index].style = 'display: block'
 
         nav_menu_compact_enabled = true
 
@@ -223,11 +202,11 @@ function nav_menu_options(arg) {
             nav_html_scrollbar_allowedEnable = true
         }
 
-    }else{
-        nav_categories_anchors[nav_index].style = ''
-        nav_divs[nav_index].style = 'display: none'
+    } else {
+        nav_options_anchors[nav_options_anchorClicked_index].style = ''
+        nav_divs[nav_options_anchorClicked_index].style = 'display: none'
 
-        nav_index = 'none'
+        nav_options_anchorClicked_index = 'none'
 
         nav_menu_compact_enabled = false
 
@@ -237,17 +216,110 @@ function nav_menu_options(arg) {
     }
 }
 
+
+
+
+
+
+
+// Fechar janela do menu ao clicar fora dele:
+{
+
+var nav_optionsMenu_clicked = false
+var nav_subOptionsMenu_clicked = false
+
+//if(window.innerWidth < nav_expand) {
+
+    document.querySelector('.nav-menu > ul').onclick = function() { console.log('optionsMenu')
+        nav_optionsMenu_clicked = true
+    }
+
+    document.querySelector('.nav-menu').onclick = function() { console.log('.nav-menu')
+        if(nav_optionsMenu_clicked === false) {
+            document.querySelector('.nav-menu').style = 'display: none'
+            document.querySelector('.nav-menu-button :nth-child(2)').style = 'display: none'
+            document.querySelector('.nav-menu-button :nth-child(1)').style = 'display: block'
+            document.querySelector('html').classList.remove('overflow_hidden')
+            nav_menu_compact_enabled = false
+
+            for(var i = 0; i < nav_divs.length; i++) {
+                nav_options_anchors[i].style = ''
+                nav_divs[i].style = 'display: none'
+            }
+            nav_options_anchorClicked_index = 'none'
+        } else {
+            nav_optionsMenu_clicked = false
+        }
+    }
+
+//} else {
+
+    for(var i = 0; i < nav_divs.length; i++) {
+
+        /*nav_divs[i].firstElementChild.onclick = function() { console.log('subOptionsMenu') 
+            nav_subOptionsMenu_clicked = true 
+        }
+        
+        nav_divs[i].children[0].onclick = function() { console.log('subOptionsMenu') 
+            nav_subOptionsMenu_clicked = true
+        }
+
+        nav_divs[i].children[0].addEventListener('click', function() { console.log('subOptionsMenu') 
+            nav_subOptionsMenu_clicked = true
+        })*/
+    }
+
+    for(var i = 0; i < nav_divs.length; i++) {
+
+        nav_divs[i].onclick = function() { console.log('div')
+            if(nav_subOptionsMenu_clicked === false) {
+
+                document.querySelector('html').classList.remove('overflow_hidden')
+                nav_menu_compact_enabled = false
+
+                for(var i = 0; i < nav_divs.length; i++) {
+                    nav_options_anchors[i].style = ''
+                    nav_divs[i].style = 'display: none'
+                }
+                nav_options_anchorClicked_index = 'none'
+            } else {
+                nav_subOptionsMenu_clicked = false
+            }
+        }
+    }
+//}
+
+/*window.onresize = function() { 
+
+    nav_optionsMenu_clicked = false
+    nav_subOptionsMenu_clicked = false
+
+    if(window.innerWidth < nav_expand) {
+        nav_divClicked = nav_ulClicked
+    } else {
+        nav_ulClicked = nav_divClicked
+    }
+}*/
+
+}
+
+
+
+
+
+
+
 // Header-nav button:
 
 document.querySelector('.nav-menu > ul > li:nth-last-of-type(1)').onclick = function() { // <- Hide Header-nav
 
     for(var i = 0; i < nav_divs.length; i++) {
-        nav_categories_anchors[i].style = ''
+        nav_options_anchors[i].style = ''
         nav_divs[i].style = 'display: none'
     }
 
     nav_menu_compact_enabled = false
-    nav_index = 'none'
+    nav_options_anchorClicked_index = 'none'
 
     if(window.innerWidth >= nav_expand) { 
         document.querySelector('html').classList.remove('overflow_hidden')
@@ -266,7 +338,7 @@ document.querySelector('.headerNav-button').onclick = function() { // <- Show He
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Footer-HTML
+TODO: Footer - HTML
 ────────────────────────────────────────────────────── */
 
 document.querySelector('footer').innerHTML = `
@@ -359,7 +431,7 @@ function choice(arg) {
             }
         }
             
-        document.querySelector('html').classList.toggle('noScrollbar')
+        document.querySelector('html').classList.toggle('overflow_hidden')
 
         arg.classList.toggle('choice_d_open')
 
@@ -384,7 +456,7 @@ function choice_option(arg) {
     choice_anchorClicked =  arg
 }
 
-// Espaço no final do menu dos dropdowns:
+// Espaço no final ('li' invisível) do menu dos dropdowns:
 
 var allChoicesD = document.querySelectorAll('.choice_d')
 
