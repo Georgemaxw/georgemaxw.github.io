@@ -455,7 +455,7 @@ TODO:         >> Expandido
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) {
     border-width: 0;
     display: block;
-    margin-left: 10px;
+    margin-left: 11px;
   }
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a {
     font-size: 32rem;
@@ -595,12 +595,12 @@ TODO:    > Classes
 } 
 */
 @media (min-width: 565px) {
-  .nav_subOptions_horizontal {
+  .nav_expanded_subOptions_h {
     overflow-x: auto;
     white-space: nowrap;
     font-size: 0;
   }
-  .nav_subOptions_horizontal li {
+  .nav_expanded_subOptions_h li {
     display: inline-block;
     border-width: 0 !important;
     /*> a {

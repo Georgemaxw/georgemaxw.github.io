@@ -510,7 +510,7 @@ TODO:         >> Expandido
         .nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
             display: block;
-            margin-left: 10px;
+            margin-left: 11px;
 
             a {
                 font-size: 32rem;
@@ -674,7 +674,7 @@ TODO:    > Classes
     margin-left: 16px;
 } 
 */
-.nav_subOptions_horizontal {
+.nav_expanded_subOptions_h {
     @media (min-width: $nav_expand) {
         
         overflow-x: auto;

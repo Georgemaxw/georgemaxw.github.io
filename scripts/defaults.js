@@ -55,10 +55,10 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L4</a>
+<li><a onclick="nav_menu_options(this)">4</a>
 
     <div>
-        <ul class="nav_subOptions_horizontal  nav_expanded_subOptions_textBelow">
+        <ul class="nav_expanded_subOptions_h nav_expanded_subOptions_textBelow">
             <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 4.1</span></a></li>
             <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 4.2</span></a></li>-->
             <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 4.3</span></a></li>
@@ -70,24 +70,39 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a href="">∅</a><div><ul></ul></div></li><!---->
-
-<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">L6</a>
+<li><a onclick="nav_menu_options(this)">5</a> 
 
     <div>
-        <ul>
-            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 6.1</span></a></li>
-            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 6.2</span></a></li>
-            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 6.3</span></a></li>
-            <!--<li><a href="#">Link 5.4</a></li>
-            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 6.5</span></a></li> 
-            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 6.6</span></a></li>-->
+        <ul class="nav_expanded_subOptions_h nav_subOptions_textBelow">
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 5.1</span></a></li>
+            <!--<li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>-->
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 5.3</span></a></li>
+           <!-- <li><a href="#">Link 5.4</a></li>-->
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 5.5</span></a></li>
+            <li><a href="#"><img src="images/img-pc-vertical.png" alt=" "><span>Link 5.6</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a href="page_2.html">P2</a><div><ul></ul></div></li>
+<li><a href="">∅</a><div><ul></ul></div></li><!---->
+
+<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">7</a>
+
+    <div>
+        <ul>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Link 7.3</span></a></li>
+            <!--<li><a href="#">Link 7.4</a></li>
+            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
+            <li><a href="#"><img src="images/img-pc.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
+        </ul>
+    </div>
+
+</li>
+
+<li><a href="page.html">P</a><div><ul></ul></div></li>
 <li><a aria-label="Hide bar"><img src="images/icon-headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
