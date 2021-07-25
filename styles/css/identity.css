@@ -4,10 +4,6 @@
 ──────────────────────────────────────────────────────
 TODO: Exemplos De Choice 
 ────────────────────────────────────────────────────── */
-/*  
-────────────────────────────
-TODO:    > Exemplo 1
-──────────────────────────── */
 /* Apple: 16px em 320w, e 22px em 736w. */
 .choice_example_1, .choice_example_2, .choice_example_3 {
   padding: 8px 13px;
@@ -26,8 +22,3 @@ TODO:    > Exemplo 1
 .choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
   font-size: 19rem;
 }
-
-/*  
-────────────────────────────
-TODO:    > Exemplo 2
-──────────────────────────── */

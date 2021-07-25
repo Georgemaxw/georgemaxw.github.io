@@ -774,6 +774,7 @@ table {
         color: $color_theme;
         border: $table_border1_width solid $color_theme;
         font-weight: normal;
+        font-weight: 500;
     }
 
     tr:hover {
@@ -1072,7 +1073,7 @@ hr {
     }
 }
 
-a {
+a, button {
     cursor: pointer;
 }
 

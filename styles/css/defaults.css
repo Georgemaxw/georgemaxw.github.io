@@ -681,6 +681,7 @@ table th {
   color: #00c8ff;
   border: 1px solid #00c8ff;
   font-weight: normal;
+  font-weight: 500;
 }
 
 table tr:hover {
@@ -984,7 +985,7 @@ hr {
   }
 }
 
-a {
+a, button {
   cursor: pointer;
 }
 
