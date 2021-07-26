@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @for $i from 1 through 6 { 
 	h#{$i} {
-        font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem.
+        font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
 	}
@@ -1079,7 +1079,7 @@ input[type="radio"], input[type="checkbox"] {
 
 
 
-/**/
+/*
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
@@ -1124,7 +1124,7 @@ input[type="checkbox"]:disabled::before {
     background-color: transparent; 
     border: 3px dashed white; 
 }
-
+*/
 
 
 
