@@ -4,17 +4,6 @@
 ──────────────────────────────────────────────────────
 TODO: Exemplos De Choice 
 ────────────────────────────────────────────────────── */
-/* Apple: 16px em 320w, e 22px em 736w. */
-.choice_example_1, .choice_example_2, .choice_example_3 {
-  padding: 8px 13px;
-  margin-top: calc(2 * 16rem);
-  margin-left: 20px;
-  margin-right: 20px;
-  border: 1px solid #cccccc;
-  border-radius: 20px;
-  min-height: 39rem;
-}
-
 .choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
   display: none;
 }

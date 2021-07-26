@@ -13,8 +13,8 @@ $font_small: 16rem;
 $font_smaller: 14rem;
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_monospace: 'Courier New', Courier, monospace;
-$button_height: 48rem;
-$button_height_small: 39rem;
+$button_height: 48px;
+$button_height_small: 40px;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
  
@@ -47,9 +47,19 @@ $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 $color_shadow_footer: hsla(0, 0%, 0%, 0.22);
-
+ 
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
+$color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_track: hsla(0, 0%, 100%, 0.4);
+$color_scrollbar_track_firefox: transparent;
+$color_menu_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
+$color_menu_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menu_scrollbar_track: transparent;
+$color_menu_scrollbar_track_firefox: transparent;
+$color_menuRounded_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
+$color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menuRounded_scrollbar_track: transparent;
+$color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
 $bg_header: url(../../images/bg_header.png) center /100% 100%;
 $bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
@@ -58,6 +68,7 @@ $bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // V
 $bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
 
 $bg_button: url(../../images/bg_button.png)  center /100% 100%;
+$bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
 $bg_table_tr_hover: hsla(193,100%,98%, 1); 
 $bg_kbd: hsl(0, 0%, 86%);
 $bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
@@ -264,6 +275,18 @@ pre {
     font-family: $font_monospace;
 }
 
+.text_container {
+    font-size: $font_size; 
+    padding: 7px 13px 10px;
+    border: 1px solid $color_border_form;  
+    border-radius: 20px;
+    min-height: $button_height_small;
+}
+
+p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
+    padding: 4px 13px 6px;
+}
+
 .spaced_items > li + li, .spaced_items > dd + dd {
     margin-top: $margin_vertical;
 }
@@ -445,21 +468,23 @@ TODO:         >> Menu
     }
     
     .nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
-        background: $color_scrollbar_thumb;    
-        border-radius: 10px;
+        background: $color_menuRounded_scrollbar_thumb;    
+        border-radius: 10px; 
     }
     
-    .nav-menu ul::-webkit-scrollbar-track {  } // Bar background
-    
+    .nav-menu ul::-webkit-scrollbar-track {   // Bar background
+        background: $color_menuRounded_scrollbar_track;
+    }
+
     .nav-menu ul {
         scrollbar-width: thin;
-        scrollbar-color: $color_scrollbar_thumb $color_scrollbar_track;
+        scrollbar-color: $color_menuRounded_scrollbar_thumb_firefox $color_menuRounded_scrollbar_track_firefox;
     }
 
     @media (pointer: fine) {
 
         .nav-menu ul {
-            overflow: hidden;
+            //overflow: hidden;
         }
         
         .nav-menu ul:hover {
@@ -934,118 +959,259 @@ table {
 TODO: Formulários
 ────────────────────────────────────────────────────── */
 
-form {
+/*  
+────────────────────────────
+TODO:    > fieldset e label
+──────────────────────────── */
+
+/*form {
     margin: $margin_vertical auto;
+}*/
 
-    label {
-        display: block;
-        @extend %margins;
-
-        input, textarea {
-            color: $color_text_form;
-            width: 100%;
-            padding: 8rem 13rem;
-            border: 1px solid $color_border_form; 
-            border-radius: 19px;
-            margin-top: $margin_vertical;
-            /* 
-            border: 1px solid hsl(0, 0%, 93%); 
-            filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
-        }
-
-        input[type="file"] {
-            color: transparent;
-            border-radius: 0;
-            filter: none;
-        }
-
-        input[type="radio"], input[type="checkbox"] {
-            width: auto;
-            margin-top: 0;
-            margin-right: 6px;
-        }
-
-        textarea {
-            vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
-            height: 84rem;
-        }
-    }
-
-    input::placeholder, textarea::placeholder {
-        color: $color_text_form_placeholder;
-    } 
-
-    p {
-        text-indent: 0;
-    }
-
-    fieldset {
-        border-width: 0;
-    }
-
-    select {/*
-        display: block;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;*/
-        border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
-        height: $button_height_small;
-        color: $color_text_form_select;
-        background: hsla(0, 0%, 100%, 0);
-        border: 1px solid $color_border_form;
-        padding: 0 6px;
-    }
-
-    button {
-        min-width: 120px;
-        color: $color_text_menu;
-        padding: 10rem 0;
-        border-width: 0;
-        border-radius: 100px;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;
-        background: $bg_button;
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
-        box-shadow: 
-        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
-    }
-
-    button:disabled {
-        opacity: 0.5;
-    }
-
-    @for $i from 2 through 8 { 
-        .textarea-#{$i}l {
-            height: calc(62rem + ( (#{$i} - 2) * 22rem));
-        } 
-    }
+fieldset {
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    @extend .offset;
 
     strong {
         text-decoration: none;
     }
+}
 
-    input:focus, textarea:focus {
-        outline: 0px dotted;
-        border: 1px solid $color_theme;
-    }
+label {
+    display: block;
+    //-moz-width: fit-content;
+    //width: fit-content;
+    @extend %margins;
 
-    input[type="file"]:focus {
-        outline: 1px solid $color_theme;
+    strong {
+        text-decoration: none;
     }
+}
 
-    input[type="radio"]:focus, input[type="checkbox"]:focus {
-        outline: 1px solid $color_theme;
-    }
+/*  
+────────────────────────────
+TODO:    > Widgets
+──────────────────────────── */
 
-    select:focus {
-        outline: 0px dotted;
-        border: 1px solid $color_theme;
-        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
-    }
+/*  
+────────────────────────────
+TODO:         >> inputs e textarea
+──────────────────────────── */
 
-    button:focus {
-        outline: 2px dotted $color_theme;
-    }
+input[type="text"], input[type="email"], textarea {
+
+    color: $color_text_form;
+    width: calc(100% - 40px); 
+    min-height: $button_height_small;
+    border: 1px solid $color_border_form; 
+    margin-top: $margin_vertical;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    /* border: 1px solid hsl(0, 0%, 93%); 
+    filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
+}
+
+input::placeholder, textarea::placeholder {
+    color: $color_text_form_placeholder;
+} 
+
+input[type="text"], input[type="email"] {
+    padding: 7rem 13rem 9rem;
+}
+
+textarea {
+    height: 40rem;
+    padding: 4rem 13rem 0rem;
+    line-height: 1.5;
+    vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
+}
+
+// Scrollbar:
+
+textarea::-webkit-scrollbar { // Entire bar
+    width: 10px;
+    height: 11px;
+}
+
+textarea::-webkit-scrollbar-thumb { // Bar pointer
+    background: $color_scrollbar_thumb;    
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-track {   // Bar background
+    background: $color_scrollbar_track;
+}
+
+textarea {
+    scrollbar-width: auto;
+    scrollbar-color: $color_scrollbar_thumb_firefox $color_scrollbar_track_firefox;
+} 
+
+input[type="file"] {
+    color: transparent;
+    border-radius: 0;
+    filter: none;
+    width: min-content;
+    margin-top: $margin_vertical;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    /*width: 51px;
+    height: 31px;*/
+    border-radius: 12px;
+    background: hsl(0, 0%, 93%);
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: $color_theme;
+    background-color: hsl(115, 100%, 66%);
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: hsl(0, 0%, 100%); 
+    position: relative;
+    top: 3px;
+    left: 4px;/**/
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:checked::before {
+    left: 23px;
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:disabled {
+    background: hsl(0, 0%, 93%);
+}
+
+input[type="checkbox"]:disabled::before {
+    background-color: transparent; 
+    border: 3px dashed white; 
+}
+
+fieldset:disabled label {
+    color: $color_text_clear;
+    //text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  
+────────────────────────────
+TODO:         >> select
+──────────────────────────── */
+
+select {
+    border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
+    height: $button_height_small;
+    color: $color_text_form_select;
+    background: hsla(0, 0%, 100%, 0);
+    background: $bg_select;
+    border: 1px solid $color_border_form;
+    padding: 0 6px;
+}
+
+/*  
+────────────────────────────
+TODO:         >> button
+──────────────────────────── */
+
+button {
+    min-width: 120px;
+    color: $color_text_menu;
+    padding: 10rem 0;
+    border-width: 0;
+    border-radius: 100px;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+/*  
+────────────────────────────
+TODO:    > Efeito De Focus
+──────────────────────────── */
+
+input:focus:not(input[type="checkbox"]), textarea:focus {
+    outline: 0px dotted;
+    border: 1px solid $color_theme;
+}
+
+input[type="file"]:focus {
+    outline: 1px solid $color_theme;
+}
+
+input[type="radio"]:focus/*, input[type="checkbox"]:focus*/ {
+    outline: 1px solid $color_theme;
+}
+
+select:focus {
+    outline: 0px dotted;
+    border: 1px solid $color_theme;
+    /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+}
+
+button:focus {
+    outline: 2px dotted $color_theme;
+}
+
+/*  
+────────────────────────────
+TODO:    > Classes
+──────────────────────────── */
+
+@for $i from 1 through 30 { 
+    .textarea-#{$i}l {
+        height: calc(40rem + ( (#{$i} - 1) * 28rem));
+    } 
 }
 
 /*  
@@ -1073,7 +1239,11 @@ hr {
     }
 }
 
-a, button {
+a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+    cursor: pointer;
+}
+
+.cursor_pointer {
     cursor: pointer;
 }
 
@@ -1105,9 +1275,9 @@ a, button {
     display: flex;
 }
 
-.center.choice_v, .center.choice_d {
-    //display: inline-block;
-}
+/*.center.choice_v, .center.choice_d {
+    
+}*/
 
 .lb { /* Line break */
     margin-top: calc(1* #{$margin_vertical}); 
@@ -1132,7 +1302,7 @@ a, button {
     display: none;
 }
 
-.button_small_height {
+.button_height_small {
     height: $button_height_small;
 }
 
@@ -1551,15 +1721,17 @@ TODO:         >> Dropdown
 }
 
 .choice_d.choice_d_open::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_scrollbar_thumb;    
+    background: $color_menu_scrollbar_thumb;    
     border-radius: 10px;
 }
 
-.choice_d.choice_d_open::-webkit-scrollbar-track {  } // Bar background
+.choice_d.choice_d_open::-webkit-scrollbar-track {   // Bar background
+    background: $color_menu_scrollbar_track; 
+}
 
 .choice_d.choice_d_open {
-    scrollbar-width: thin;
-    scrollbar-color: $color_scrollbar_thumb $color_scrollbar_track;
+    scrollbar-width: auto;
+    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
 }
 
 /* @media (pointer: fine) {
@@ -1657,3 +1829,20 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
 .overflow_hidden {
     overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,6 +15,11 @@
     
 </head>
 <body>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Header-nav
+    ────────────────────────────────────────────────────── --> 
     
     <header>
 
@@ -53,6 +58,7 @@
         <article>
 
             <div class="central">
+
                 <!--
                 ──────────────────────────────────────────────────────
                 TODO: Textos
@@ -69,7 +75,7 @@
 
                 <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
   
-                <p>6 Sea amet justo at ipsum <img src="images/textImg_sample_1_4.svg" alt="" class="textImg">. 
+                <p>7 Sea amet justo at ipsum <img src="images/textImg_sample_1_4.svg" alt="" class="textImg">. 
                     Sit consetetur  <img src="images/textImg_sample_1_1.svg" alt="" class="textImg"> et sed eirmod 
                     rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor 
                     magna accusam. Sed dolor rebum et <kbd>Shift</kbd> + <kbd>Esc</kbd> sanctus labore diam 
@@ -113,6 +119,8 @@
                 <p class="content-justify">Classe: content-justify. Conteúdo genérico de demonstração <img src="images/img-pc.png" alt=" " style="width: 50px;"> para treinamento, ou produção. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ.</p>
                 -->
 
+                <p class="text_container" style="text-align: justify;">Parágrafo com a classe 'text_container'. Conteúdo de amostra.</p>
+
             </div>
 
             <span>Conteúdo fora da coluna central.</span>
@@ -124,6 +132,7 @@
             </div>
                     
             <div class="central">
+
                 <!--  
                 ────────────────────────────
                 TODO:    > Listas
@@ -347,6 +356,7 @@
                 </section>
 
                 <hr>
+
                 <!--
                 ──────────────────────────────────────────────────────
                 TODO: Vídeos
@@ -418,6 +428,7 @@
             <div class="central">
 
                 <hr>
+
                 <!--
                 ──────────────────────────────────────────────────────
                 TODO: Áudios
@@ -427,7 +438,16 @@
 
                 <p>&lt;audio> com a classe 'center':</p>
 
-                <audio controls preload="auto" loop class="center" style="/*width: 92%*/">
+                <audio controls preload="auto" loop class="center">
+                    <source src="audios/exemplo.mp3" type="audio/mp3">
+                    <source src="audios/exemplo.ogg" type="audio/ogg">
+                        
+                        <p> Seu navegador não suporta áudio em HTML5. Aqui está um <a href="audios/exemplo.mp3">link para o áudio</a>.</p>
+                </audio> 
+
+                <p>&lt;audio> com a classe 'center' e com o estilo inline 'width: 90%':</p>
+
+                <audio controls preload="auto" loop class="center" style="width: 90%">
                     <source src="audios/exemplo.mp3" type="audio/mp3">
                     <source src="audios/exemplo.ogg" type="audio/ogg">
                         
@@ -437,6 +457,7 @@
                 <div class="lb2"></div> 
 
                 <hr>
+
                 <!--
                 ──────────────────────────────────────────────────────
                 TODO: Formulários
@@ -448,7 +469,7 @@
 
                     <label for="name">
                         First Name: <strong><abbr title="required">*</abbr></strong>
-                        <!--<input type="text" value="Valor" id="name" name="user_name" autofocus>-->
+                       <input type="text" value="Valor" id="name" name="user_name" autofocus> <!---->
                     </label>
                     
                     <label for="name2">
@@ -461,25 +482,37 @@
                         <input type="email" id="mail" name="user_mail" placeholder="abc@gmail.com">
                     </label>
 
+                    <label for="msg">
+                        Message:
+                        <textarea id="msg" name="user_message" class="textarea-3l" spellcheck="true" placeholder="Textarea com a classe 'textarea-3l'.">Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. </textarea>
+                    </label>
+                       
                     <label for="file">
                         <input type="file" name="file" id="file" accept="image/*" multiple>
                     </label>
-
-                    <label for="msg">
-                        Message:
-                        <textarea id="msg" name="user_message" class="textarea-4l" spellcheck="true" placeholder="Textarea com a classe 'textarea-4l'."></textarea>
-                    </label>
-                        
+ 
                     <fieldset>
-                        <p>Option buttons: <strong><abbr title="required">*</abbr></strong></p> 
-                        <label for="y"><input type="radio" name="question" id="y" value="yes" checked>Yes</label>
-                        <label for="n"><input type="radio" name="question" id="n" value="no">No</label>
+                        <p>Botões de opção: <strong><abbr title="required">*</abbr></strong></p> 
+                        <label for="r_A1" class="cursor_pointer"><input type="radio" name="question1" id="r_A1" value="yes" checked>Yes</label>
+                        <label for="r_A2" class="cursor_pointer"><input type="radio" name="question1" id="r_A2" value="no">No</label>
+                    </fieldset>
+                        
+                    <fieldset disabled>
+                        <p>Botões de opção desativados:</p> 
+                        <label for="r_B1"><input type="radio" name="question2" id="r_B1" value="yes">Yes</label>
+                        <label for="r_B2"><input type="radio" name="question2" id="r_B2" value="no" checked>No</label>
                     </fieldset>
 
+                    <fieldset>
+                        <p>Checkboxes: <strong><abbr title="required">*</abbr></strong></p> 
+                        <label for="c_A1" class="cursor_pointer"><input type="checkbox" name="question3" id="c_A1" value="value1" checked>Check 1</label>
+                        <label for="c_A2" class="cursor_pointer"><input type="checkbox" name="question3" id="c_A2" value="value2">Check 2</label>
+                    </fieldset>
+                    
                     <fieldset disabled>
-                        <p>Checkboxes:</p> 
-                        <label for="c1"><input type="checkbox" name="question2" id="c1" value="value1" checked>Check 1</label>
-                        <label for="c2"><input type="checkbox" name="question2" id="c2" value="value2">Check 2</label>
+                        <p>Checkboxes desativados:</p> 
+                        <label for="c_B1"><input type="checkbox" name="question4" id="c_B1" value="value1">Check 1</label>
+                        <label for="c_B2"><input type="checkbox" name="question4" id="c_B2" value="value2" checked>Check 2</label>
                     </fieldset>
                     
                     <label for="choice">Selection:
@@ -503,6 +536,7 @@
                 </form>   
 
                 <hr>
+                
                 <!--
                 ──────────────────────────────────────────────────────
                 TODO: Tabelas
@@ -762,10 +796,10 @@
                 <p>'choice_d' com imagens grandes:</p>
 
                 <ul class="choice_d" onclick="choice(this)">
-                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"></li>
-                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
+                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 40px;"></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
                 </ul>
 
                 <div class="lb3"></div>
@@ -773,10 +807,10 @@
                 <p>'choice_d' com a classe 'choice_noLabel' e com imagens grandes:</p>
 
                 <ul class="choice_d choice_noLabel" onclick="choice(this)">
-                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"></li>
-                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
+                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 40px;"></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
                 </ul>
 
                 <div class="lb3"></div>
@@ -784,10 +818,10 @@
                 <p>'choice_d' com imagens grandes e textos:</p>
 
                 <ul class="choice_d" onclick="choice(this)">
-                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"><span>#0</span></li>
-                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"><span>#1</span></a></li>
-                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"><span>#2</span></a></li>
-                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 39px;"><span>#3</span></a></li>
+                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 40px;"><span>#0</span></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 40px;"><span>#1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 40px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 40px;"><span>#3</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
@@ -795,10 +829,10 @@
                 <p>'choice_d' diverso com as classes 'choice_noLabel', e 'center':</p>
 
                 <ul class="choice_d choice_noLabel center" onclick="choice(this)">
-                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 39px;"><span>#0</span></li>
-                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"><span>#1</span></a></li>
-                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"><span>#2</span></a></li>
-                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 39px;"><span>#3</span></a></li>
+                    <li><img src="images/choice_img_sample_label.svg" alt=" " style="width: 150px; height: 40px;"><span>#0</span></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 40px;"><span>#1</span></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 40px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 40px;"><span>#3</span></a></li>
                     <li><a onclick="choice_option(this); func_1()"><span>Opção 4</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span>Opção 5</span></a></li>
                     <li><a onclick="choice_option(this); func_3()"><span>Opção 6</span></a></li>
@@ -806,10 +840,10 @@
                     <li><a onclick="choice_option(this); func_1()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 7</span></a></li>
                     <li><a onclick="choice_option(this); func_2()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 8</span></a></li>
                     <li><a onclick="choice_option(this); func_3()"><span><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">Opção 9</span></a></li>
-                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 39px;"></a></li>
-                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_4.svg" alt=" " style="width: 150px; height: 39px;"><span>Última opção</span></a></li>
+                    <li><a onclick="choice_option(this); func_1()"><img src="images/choice_img_sample_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_2()"><img src="images/choice_img_sample_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); func_3()"><img src="images/choice_img_sample_4.svg" alt=" " style="width: 150px; height: 40px;"><span>Última opção</span></a></li>
                 </ul>
 
                 <div class="lb3"></div>
@@ -828,15 +862,17 @@
                     <li><a onclick="choice_option(this); choice_example_1_Action_3()"><span>Opção 3</span></a></li>
                 </ul>
 
-                <div class="choice_example_1">
+                <div class="lb2"></div>
+
+                <div class="choice_example_1 text_container offset">
                     <div class="choice_divsExample_1_div_1">Div 1</div>
                     <div class="choice_divsExample_1_div_2">Div 2</div>
                     <div class="choice_divsExample_1_div_3">
-                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
-                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
-                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
-                        ABCDE FGHIJ KLMNO PQRST UVWXYZ. 
-                        ABCDE FGHIJ KLMNO PQRST UVWXYZ.
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
                     </div>
                 </div>
 
@@ -849,7 +885,9 @@
                     <li><a onclick="choice_option(this); choice_example_2_Action_3()"><span>Opção 3</span></a></li>
                 </ul>
 
-                <div class="choice_example_2">
+                <div class="lb2"></div>
+
+                <div class="choice_example_2 text_container offset">
                     <div></div>
                     <div class="choice_divsExample_2_div_1">Div 1</div>
                     <div class="choice_divsExample_2_div_2">Div 2</div>
@@ -872,9 +910,12 @@
 
     </main>
 
-    <footer></footer>
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Footer
+    ────────────────────────────────────────────────────── --> 
 
-    <!-- TODO: Fim -->
+    <footer></footer>
 
 <script src="scripts/defaults.js"></script>
 <script src="scripts/identity.js"></script>
@@ -894,7 +935,9 @@
     Fontes Seguras da Web: 
     font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
     
-    ABCDE FGHIJ KLMNO PQRST UVWXYZ  Texto genérico de demonstração.  
+    ABCDE FGHIJ KLMNO PQRST UVWXYZ.  Texto genérico de demonstração.  
+
+    Abcde fghij klmno pqrst uvwxyz.  Texto genérico de demonstração 2. 
     
     Configuração Do Aplicativo Textastic:
     Font: Menlo; Font Size: 11 pt 
