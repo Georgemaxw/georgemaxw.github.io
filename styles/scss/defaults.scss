@@ -990,6 +990,10 @@ label {
     }
 }
 
+fieldset:disabled label {
+    color: $color_text_clear;
+}
+
 /*  
 ────────────────────────────
 TODO:    > Widgets
@@ -1075,7 +1079,7 @@ input[type="radio"], input[type="checkbox"] {
 
 
 
-/*
+/**/
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
@@ -1120,11 +1124,7 @@ input[type="checkbox"]:disabled::before {
     background-color: transparent; 
     border: 3px dashed white; 
 }
-*/
 
-fieldset:disabled label {
-    color: $color_text_clear;
-}
 
 
 
@@ -1846,3 +1846,78 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
 
 
 
+
+
+
+
+
+
+
+
+
+
+.check {
+
+    display: flex;
+    align-items: center;
+    -moz-width: fit-content;
+    width: fit-content;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    @extend .offset; 
+    cursor: pointer;
+
+    > :nth-child(1) {
+        width: 44px;
+        height: 24px;
+        // width: 51px;
+        // height: 31px;
+        border-radius: 12px;
+        margin-right: 8px;
+        background: hsl(0, 0%, 93%);
+        transition: all 0.3s; 
+    }
+
+    > :nth-child(1)::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        background-color: hsl(0, 0%, 100%); 
+        position: relative;
+        top: 3px;
+        left: 4px;
+        transition: all 0.3s; 
+    }
+
+    > :nth-child(2) {
+        font-size: $font_size;
+    }
+} 
+
+.check.checked { 
+
+    > :nth-child(1) {
+        background-color: $color_theme;
+        background-color: hsl(115, 100%, 66%);
+        transition: all 0.3s; 
+    }
+
+    > :nth-child(1)::before {
+        left: 23px;
+        transition: all 0.3s; 
+    }
+}
+
+.check.disabled { 
+
+    > :nth-child(1) {
+        background: hsl(0, 0%, 93%);
+    }
+
+    > :nth-child(1)::before {
+        background-color: transparent; 
+        border: 3px dashed white; 
+    }
+}

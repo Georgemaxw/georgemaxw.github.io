@@ -32,13 +32,13 @@ html {
 ──────────────────────────────────────────────────────
 TODO: Margens
 ────────────────────────────────────────────────────── */
-.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, pre, fieldset, hr {
+.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, pre, fieldset, hr, .check {
   /* Lateral margins */
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h {
+.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h, .choice_h.check {
   display: flex;
 }
 
@@ -865,6 +865,10 @@ label strong {
   text-decoration: none;
 }
 
+fieldset:disabled label {
+  color: #adadad;
+}
+
 /*  
 ────────────────────────────
 TODO:    > Widgets
@@ -936,54 +940,47 @@ input[type="radio"], input[type="checkbox"] {
   margin-right: 8px;
 }
 
-/*
+/**/
 input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 44px;
-    height: 24px;
-    // width: 51px;
-    // height: 31px;
-    border-radius: 12px;
-    background: hsl(0, 0%, 93%);
-    transition: all 0.3s; 
+  appearance: none;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #ededed;
+  transition: all 0.3s;
 }
 
 input[type="checkbox"]:checked {
-    background-color: $color_theme;
-    background-color: hsl(115, 100%, 66%);
-    transition: all 0.3s; 
+  background-color: #00c8ff;
+  background-color: #60ff52;
+  transition: all 0.3s;
 }
 
 input[type="checkbox"]::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border-radius: 9px;
-    background-color: hsl(0, 0%, 100%); 
-    position: relative;
-    top: 3px;
-    left: 4px;
-    transition: all 0.3s; 
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: white;
+  position: relative;
+  top: 3px;
+  left: 4px;
+  transition: all 0.3s;
 }
 
 input[type="checkbox"]:checked::before {
-    left: 23px;
-    transition: all 0.3s; 
+  left: 23px;
+  transition: all 0.3s;
 }
 
 input[type="checkbox"]:disabled {
-    background: hsl(0, 0%, 93%);
+  background: #ededed;
 }
 
 input[type="checkbox"]:disabled::before {
-    background-color: transparent; 
-    border: 3px dashed white; 
-}
-*/
-fieldset:disabled label {
-  color: #adadad;
+  background-color: transparent;
+  border: 3px dashed white;
 }
 
 /*  
@@ -1722,4 +1719,60 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
 ────────────────────────────────────────────────────── */
 .overflow_hidden {
   overflow: hidden;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  -moz-width: fit-content;
+  width: fit-content;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  cursor: pointer;
+}
+
+.check > :nth-child(1) {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  margin-right: 8px;
+  background: #ededed;
+  transition: all 0.3s;
+}
+
+.check > :nth-child(1)::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: white;
+  position: relative;
+  top: 3px;
+  left: 4px;
+  transition: all 0.3s;
+}
+
+.check > :nth-child(2) {
+  font-size: 19rem;
+}
+
+.check.checked > :nth-child(1) {
+  background-color: #00c8ff;
+  background-color: #60ff52;
+  transition: all 0.3s;
+}
+
+.check.checked > :nth-child(1)::before {
+  left: 23px;
+  transition: all 0.3s;
+}
+
+.check.disabled > :nth-child(1) {
+  background: #ededed;
+}
+
+.check.disabled > :nth-child(1)::before {
+  background-color: transparent;
+  border: 3px dashed white;
 }

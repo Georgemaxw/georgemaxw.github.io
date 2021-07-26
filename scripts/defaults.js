@@ -41,7 +41,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">Link 3</a>
+<li><a onclick="nav_menu_options(this)">L3</a>
 
     <div>
         <ul class="nav_compact_subOptions_textBelow">
@@ -55,7 +55,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">4</a>
+<li><a onclick="nav_menu_options(this)">L4</a>
 
     <div>
         <ul class="nav_expanded_subOptions_h nav_expanded_subOptions_textBelow">
@@ -70,7 +70,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">5</a> 
+<li><a onclick="nav_menu_options(this)">L5</a> 
 
     <div>
         <ul class="nav_expanded_subOptions_h nav_subOptions_textBelow">
@@ -87,7 +87,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="">∅</a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">7</a>
+<li><a onclick="nav_menu_options(this)"><img src="images/textImg_sample_2_1.svg" alt="" class="textImg_Size">L7</a>
 
     <div>
         <ul>
@@ -453,4 +453,29 @@ for(var i = 0; i < allChoicesD.length; i++) {
 var e = document.createElement("li")
 
     allChoicesD[i].appendChild(e)
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Check
+────────────────────────────────────────────────────── */
+/*
+var check_all = document.querySelectorAll('.check')
+var check_actual
+
+for(var i = 0; i < check_all.length; i++) {
+
+    check_actual = check_all[i]
+
+    check_all[i].onclick = function() { 
+
+        console.log(check_actual)
+        
+        check_actual.classList.toggle('checked')
+    }
+}
+*/
+
+function check_event(arg) {
+    arg.classList.toggle('checked')
 }
