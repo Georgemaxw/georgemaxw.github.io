@@ -2,19 +2,42 @@
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Exemplos De Choice 
+TODO: Exemplos De Choices
 ────────────────────────────────────────────────────── */
+/*  
+────────────────────────────
+TODO:    > Exemplo 1
+──────────────────────────── */
 
 $font_size: 19rem; 
+$margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
+$margin_vertical: 16rem;
+$button_height_small: 39rem;
+$color_border_form: hsl(0, 0%, 80%); 
 
-.choice_example_1, .choice_example_2, .choice_example_3 {
+.choices_sample_1, .choices_sample_2, .choices_sample_3 {
+    
+    padding: 8px 13px;
+    margin-top: calc(2 * #{$margin_vertical});
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+    border: 1px solid $color_border_form;  
+    border-radius: 20px;
+    min-height: $button_height_small;
 
     > :not(:nth-child(1)) {
         display: none;
     }
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
+.choices_sample_1 > div, .choices_sample_2 > div, .choices_sample_3 > div {
 
     font-size: $font_size; 
 }
+
+/*  
+────────────────────────────
+TODO:    > Exemplo 2
+──────────────────────────── */
+
+
