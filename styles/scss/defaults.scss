@@ -1075,14 +1075,14 @@ input[type="radio"], input[type="checkbox"] {
 
 
 
-
+/*
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     width: 44px;
     height: 24px;
-    /*width: 51px;
-    height: 31px;*/
+    // width: 51px;
+    // height: 31px;
     border-radius: 12px;
     background: hsl(0, 0%, 93%);
     transition: all 0.3s; 
@@ -1103,7 +1103,7 @@ input[type="checkbox"]::before {
     background-color: hsl(0, 0%, 100%); 
     position: relative;
     top: 3px;
-    left: 4px;/**/
+    left: 4px;
     transition: all 0.3s; 
 }
 
@@ -1120,10 +1120,10 @@ input[type="checkbox"]:disabled::before {
     background-color: transparent; 
     border: 3px dashed white; 
 }
+*/
 
 fieldset:disabled label {
     color: $color_text_clear;
-    //text-decoration: line-through;
 }
 
 
