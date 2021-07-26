@@ -13,12 +13,12 @@ $font_small: 16rem;
 $font_smaller: 14rem;
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_monospace: 'Courier New', Courier, monospace;
-$button_height: 48rem;
-$button_height_small: 39rem;
+$button_height: 48px;
+$button_height_small: 40px;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
  
-/* ------ Breakpoints ------ */
+/* ------ Breakpoints ------ */  
 
 $tablet: 501px; // Largura máxima de um celular.
 /* $pc: 1000px; */ // Largura mínima de um PC.
@@ -47,9 +47,19 @@ $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 $color_shadow_footer: hsla(0, 0%, 0%, 0.22);
-
+ 
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
+$color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_track: hsla(0, 0%, 100%, 0.4);
+$color_scrollbar_track_firefox: transparent;
+$color_menu_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
+$color_menu_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menu_scrollbar_track: transparent;
+$color_menu_scrollbar_track_firefox: transparent;
+$color_menuRounded_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
+$color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menuRounded_scrollbar_track: transparent;
+$color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
 $bg_header: url(../../images/bg_header.png) center /100% 100%;
 $bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
@@ -58,9 +68,11 @@ $bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // V
 $bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
 
 $bg_button: url(../../images/bg_button.png)  center /100% 100%;
+$bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
 $bg_table_tr_hover: hsla(193,100%,98%, 1); 
 $bg_kbd: hsl(0, 0%, 86%);
-$bg_choices_label: url(../../images/bg_choices_label.png)  center /100% 100%;
+$bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
+$bg_choice_d_open: url(../../images/bg_choice_d_open.png)  center /100% 100%;
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -72,6 +84,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 /* ------ z-index's ------ */
 
 $zIndex_nav: 64;
+$zIndex_choice_d_open: 128;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -94,6 +107,15 @@ TODO: Margens
 .offset { /* Lateral margins */    
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
+}
+
+.offset.choice_h { 
+    display: flex;
+    @extend .offset;
+}
+
+.offset.choice_v, .offset.choice_d { 
+    @extend .offset;
 }
 
 %margins {
@@ -137,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @for $i from 1 through 6 { 
 	h#{$i} {
-        font-size: calc(44rem - (4 * #{$i}rem));
+        font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
 	}
@@ -160,6 +182,7 @@ ul, ol {
 }
 
 ul { list-style-type: "➭ "; }
+// ul ul { list-style-type: disc; }
 ul ul { list-style-type: "● "; }
 // ul ul { list-style-type: "• "; }
 // ul ul { list-style-type: "-› "; }
@@ -252,13 +275,24 @@ pre {
     font-family: $font_monospace;
 }
 
+.text_container {
+    font-size: $font_size; 
+    padding: 7px 13px 10px;
+    border: 1px solid $color_border_form;  
+    border-radius: 20px;
+    min-height: $button_height_small;
+}
+
+p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
+    padding: 4px 13px 6px;
+}
+
 .spaced_items > li + li, .spaced_items > dd + dd {
     margin-top: $margin_vertical;
 }
 
 //.arrow_2 { list-style-type: "➢ "; } 
 .star { list-style-type: "✰ "; }
-//.spell { list-style-type: "✡ "; }
 
 /*  
 ──────────────────────────────────────────────────────
@@ -338,7 +372,7 @@ TODO:    > Header-nav
             justify-content: center;
             align-items: center;
             width: 48px;
-            font-size: 32rem;
+            font-size: 32px;
             text-align: center;
             color: $color_text_menu;
         }
@@ -434,21 +468,23 @@ TODO:         >> Menu
     }
     
     .nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
-        background: $color_scrollbar_thumb;    
-        border-radius: 10px;
+        background: $color_menuRounded_scrollbar_thumb;    
+        border-radius: 10px; 
     }
     
-    .nav-menu ul::-webkit-scrollbar-track {  } // Bar background
-    
+    .nav-menu ul::-webkit-scrollbar-track {   // Bar background
+        background: $color_menuRounded_scrollbar_track;
+    }
+
     .nav-menu ul {
         scrollbar-width: thin;
-        scrollbar-color: $color_scrollbar_thumb $color_scrollbar_track;
+        scrollbar-color: $color_menuRounded_scrollbar_thumb_firefox $color_menuRounded_scrollbar_track_firefox;
     }
 
     @media (pointer: fine) {
 
         .nav-menu ul {
-            overflow: hidden;
+            //overflow: hidden;
         }
         
         .nav-menu ul:hover {
@@ -499,6 +535,7 @@ TODO:         >> Expandido
         .nav-menu > ul > li:nth-last-of-type(1) {
             border-width: 0;
             display: block;
+            margin-left: 11px;
 
             a {
                 font-size: 32rem;
@@ -662,7 +699,7 @@ TODO:    > Classes
     margin-left: 16px;
 } 
 */
-.nav_subOptions_horizontal {
+.nav_expanded_subOptions_h {
     @media (min-width: $nav_expand) {
         
         overflow-x: auto;
@@ -762,6 +799,7 @@ table {
         color: $color_theme;
         border: $table_border1_width solid $color_theme;
         font-weight: normal;
+        font-weight: 500;
     }
 
     tr:hover {
@@ -921,118 +959,259 @@ table {
 TODO: Formulários
 ────────────────────────────────────────────────────── */
 
-form {
+/*  
+────────────────────────────
+TODO:    > fieldset e label
+──────────────────────────── */
+
+/*form {
     margin: $margin_vertical auto;
+}*/
 
-    label {
-        display: block;
-        @extend %margins;
-
-        input, textarea {
-            color: $color_text_form;
-            width: 100%;
-            padding: 8rem 13rem;
-            border: 1px solid $color_border_form; 
-            border-radius: 19px;
-            margin-top: $margin_vertical;
-            /* 
-            border: 1px solid hsl(0, 0%, 93%); 
-            filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
-        }
-
-        input[type="file"] {
-            color: transparent;
-            border-radius: 0;
-            filter: none;
-        }
-
-        input[type="radio"], input[type="checkbox"] {
-            width: auto;
-            margin-top: 0;
-            margin-right: 6px;
-        }
-
-        textarea {
-            vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
-            height: 84rem;
-        }
-    }
-
-    input::placeholder, textarea::placeholder {
-        color: $color_text_form_placeholder;
-    } 
-
-    p {
-        text-indent: 0;
-    }
-
-    fieldset {
-        border-width: 0;
-    }
-
-    select {/*
-        display: block;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;*/
-        border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
-        height: $button_height_small;
-        color: $color_text_form_select;
-        background: hsla(0, 0%, 100%, 0);
-        border: 1px solid $color_border_form;
-        padding: 0 6px;
-    }
-
-    button {
-        min-width: 120px;
-        color: $color_text_menu;
-        padding: 10rem 0;
-        border-width: 0;
-        border-radius: 100px;
-        margin-top: $margin_vertical;
-        margin-bottom: $margin_vertical;
-        background: $bg_button;
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
-        box-shadow: 
-        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
-    }
-
-    button:disabled {
-        opacity: 0.5;
-    }
-
-    @for $i from 2 through 8 { 
-        .textarea-#{$i}l {
-            height: calc(62rem + ( (#{$i} - 2) * 22rem));
-        } 
-    }
+fieldset {
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    @extend .offset;
 
     strong {
         text-decoration: none;
     }
+}
 
-    input:focus, textarea:focus {
-        outline: 0px dotted;
-        border: 1px solid $color_theme;
-    }
+label {
+    display: block;
+    //-moz-width: fit-content;
+    //width: fit-content;
+    @extend %margins;
 
-    input[type="file"]:focus {
-        outline: 1px solid $color_theme;
+    strong {
+        text-decoration: none;
     }
+}
 
-    input[type="radio"]:focus, input[type="checkbox"]:focus {
-        outline: 1px solid $color_theme;
-    }
+fieldset:disabled label {
+    color: $color_text_clear;
+}
 
-    select:focus {
-        outline: 0px dotted;
-        border: 1px solid $color_theme;
-        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
-    }
+/*  
+────────────────────────────
+TODO:    > Widgets
+──────────────────────────── */
 
-    button:focus {
-        outline: 2px dotted $color_theme;
-    }
+/*  
+────────────────────────────
+TODO:         >> inputs e textarea
+──────────────────────────── */
+
+input[type="text"], input[type="email"], textarea {
+
+    color: $color_text_form;
+    width: calc(100% - 40px); 
+    min-height: $button_height_small;
+    border: 1px solid $color_border_form; 
+    margin-top: $margin_vertical;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    /* border: 1px solid hsl(0, 0%, 93%); 
+    filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
+}
+
+input::placeholder, textarea::placeholder {
+    color: $color_text_form_placeholder;
+} 
+
+input[type="text"], input[type="email"] {
+    padding: 7rem 13rem 9rem;
+}
+
+textarea {
+    height: 40rem;
+    padding: 4rem 13rem 0rem;
+    line-height: 1.5;
+    vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
+}
+
+// Scrollbar:
+
+textarea::-webkit-scrollbar { // Entire bar
+    width: 10px;
+    height: 11px;
+}
+
+textarea::-webkit-scrollbar-thumb { // Bar pointer
+    background: $color_scrollbar_thumb;    
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-track {   // Bar background
+    background: $color_scrollbar_track;
+}
+
+textarea {
+    scrollbar-width: auto;
+    scrollbar-color: $color_scrollbar_thumb_firefox $color_scrollbar_track_firefox;
+} 
+
+input[type="file"] {
+    color: transparent;
+    border-radius: 0;
+    filter: none;
+    max-width: 100%; // <- Se tirar isso buga!
+    margin-top: $margin_vertical;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    // width: 51px;
+    // height: 31px;
+    border-radius: 12px;
+    background: hsl(0, 0%, 93%);
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: $color_theme;
+    background-color: hsl(115, 100%, 66%);
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: hsl(0, 0%, 100%); 
+    position: relative;
+    top: 3px;
+    left: 4px;
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:checked::before {
+    left: 23px;
+    transition: all 0.3s; 
+}
+
+input[type="checkbox"]:disabled {
+    background: hsl(0, 0%, 93%);
+}
+
+input[type="checkbox"]:disabled::before {
+    background-color: transparent; 
+    border: 3px dashed white; 
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*  
+────────────────────────────
+TODO:         >> select
+──────────────────────────── */
+
+select {
+    border-radius: 5px; /* <- Traz inconsistências entre os navegadores. */
+    height: $button_height_small;
+    color: $color_text_form_select;
+    background: hsla(0, 0%, 100%, 0);
+    background: $bg_select;
+    border: 1px solid $color_border_form;
+    padding: 0 6px;
+}
+
+/*  
+────────────────────────────
+TODO:         >> button
+──────────────────────────── */
+
+button {
+    min-width: 120px;
+    color: $color_text_menu;
+    padding: 10rem 0;
+    border-width: 0;
+    border-radius: 100px;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+/*  
+────────────────────────────
+TODO:    > Efeito De Focus
+──────────────────────────── */
+
+input:focus:not(input[type="checkbox"]), textarea:focus {
+    outline: 0px dotted;
+    border: 1px solid $color_theme;
+}
+
+input[type="file"]:focus {
+    outline: 1px solid $color_theme;
+}
+
+input[type="radio"]:focus/*, input[type="checkbox"]:focus*/ {
+    outline: 1px solid $color_theme;
+}
+
+select:focus {
+    outline: 0px dotted;
+    border: 1px solid $color_theme;
+    /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+}
+
+button:focus {
+    outline: 2px dotted $color_theme;
+}
+
+/*  
+────────────────────────────
+TODO:    > Classes
+──────────────────────────── */
+
+@for $i from 1 through 30 { 
+    .textarea-#{$i}l {
+        height: calc(40rem + ( (#{$i} - 1) * 28rem));
+    } 
 }
 
 /*  
@@ -1060,6 +1239,14 @@ hr {
     }
 }
 
+a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+    cursor: pointer;
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
 /*
 .content-left {
     text-align: left;
@@ -1084,6 +1271,14 @@ hr {
     margin-right: auto;
 }
 
+.center.choice_h {
+    display: flex;
+}
+
+/*.center.choice_v, .center.choice_d {
+    
+}*/
+
 .lb { /* Line break */
     margin-top: calc(1* #{$margin_vertical}); 
     margin-bottom:  calc(1* #{$margin_vertical}); /*  */
@@ -1107,7 +1302,7 @@ hr {
     display: none;
 }
 
-.button_small_height {
+.button_height_small {
     height: $button_height_small;
 }
 
@@ -1220,27 +1415,22 @@ TODO:    > Slider
 
 /*  
 ────────────────────────────
-TODO:    > Choices
+TODO:    > Choice 
 ──────────────────────────── */
 
-.choices_h, .choices_v, .choices {
+.choice_h, .choice_v, .choice_d {
 
     display: inline-block;
     font-size: 0;
+    -moz-width: fit-content;
+    width: fit-content;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
+    margin: 0;
     list-style-type: none;
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
 
-/*.choices_h > li, .choices_v > li, .choices > li {
-    vertical-align: middle;
-}*/
-
-.choices_h > li a, .choices_v > li a, .choices > li a {
+.choice_h > li a, .choice_v > li a, .choice_d > li a {
 
     display: inline-flex;
     align-items: center;
@@ -1248,7 +1438,7 @@ TODO:    > Choices
     height: 100%;
 }
 
-.choices_h > li span, .choices_v > li span, .choices > li span {
+.choice_h > li span, .choice_v > li span, .choice_d > li span {
 
     display: inline-flex;
     justify-content: center;
@@ -1256,9 +1446,9 @@ TODO:    > Choices
     color: $color_text_menu;
 }
 
-.choices_h > li span > img, .choices_v > li span > img, .choices > li span > img {
+.choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
 
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 /*  
@@ -1266,7 +1456,7 @@ TODO:    > Choices
 TODO:         >> Horizontal
 ──────────────────────────── */
 
-.choices_h {
+.choice_h {
 
     display: inline-flex;
     border-radius: 1000px;
@@ -1296,7 +1486,7 @@ TODO:         >> Horizontal
         border-top-left-radius: 1000px;
         border-bottom-left-radius: 1000px;
 
-        background: $bg_choices_label;
+        background: $bg_choice_label;
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1343,7 +1533,7 @@ TODO:         >> Horizontal
 TODO:         >> Vertical
 ──────────────────────────── */
 
-.choices_v {
+.choice_v {
 
     border-radius: 20px;
     background: $bg_button;
@@ -1381,7 +1571,7 @@ TODO:         >> Vertical
         border-top-right-radius: 20px;
 
         justify-content: center;
-        background: $bg_choices_label;
+        background: $bg_choice_label;
         text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
         box-shadow: 
         inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1398,8 +1588,8 @@ TODO:         >> Vertical
         border-bottom-right-radius: 20px;
 
         > a > img {
-            border-bottom-left-radius: 17px;
-            border-bottom-right-radius: 17px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
     }
    
@@ -1413,9 +1603,9 @@ TODO:         >> Vertical
 TODO:         >> Dropdown
 ──────────────────────────── */
 
-.choices {
+.choice_d {
 
-    border-radius: 1000px;
+    border-radius: 20px;
     background: $bg_button;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
@@ -1431,6 +1621,15 @@ TODO:         >> Dropdown
         span {
             padding: 0 11px 0 15px;
         }
+
+        > a > img {
+            border-radius: 20px;
+        }
+
+        span::after { 
+            content: "▼";
+            margin-left: 5rem;
+        }
     }
 
     > li:not(:nth-of-type(1)) {
@@ -1441,23 +1640,124 @@ TODO:         >> Dropdown
 
         background: 0;
 
-        a {
-            cursor: pointer;
-        }
+        cursor: pointer;
 
-        span::after { 
-            content: "▼";
-            margin-left: 5rem;
+        > img {
+            border-radius: 20px;
         }
     }
 }
+
+// Dropdown - Open:
+
+.choice_d.choice_d_open {
+
+    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+    z-index: $zIndex_choice_d_open;
+    width: auto;
+    margin: 0;
+    border-radius: 0px;
+    background: $bg_choice_d_open;
+    overflow-y: auto;
+
+    > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // <- Neste caso, alinha verticalmente!
+
+        position: relative; top: $button_height_small;
+        width: 100%;
+
+        > a {
+            flex-grow: 1;
+            justify-content: center;
+
+            img {
+                border-radius: 0px;
+            }
+        }
+
+        a > span::after {
+
+            content: "";
+            margin-left: 0;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        display: none;
+    }
+
+    > li:nth-of-type(2) {
+        border-top: 1px solid $color_text_menu;
+    }
+
+    > li:nth-last-of-type(1) { // Esta regra só deve existir caso o último 'li' tiver sido criado via JS.
+        border: 0;
+    }
+
+    li span {
+        padding: 0 15px 0 15px;
+    }
+
+    > li:nth-of-type(2) > a > img[src] {
+        border-radius: 0;
+    }
+
+    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); } // hover
+
+    > li + li {
+        border-bottom: 1px solid $color_text_menu;
+    }
+
+    /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
+}
+
+// Dropdown - Open - Scrollbars:
+
+.choice_d.choice_d_open::-webkit-scrollbar { // Entire bar
+    width: 10px;
+    height: 11px;
+}
+
+.choice_d.choice_d_open::-webkit-scrollbar-thumb { // Bar pointer
+    background: $color_menu_scrollbar_thumb;    
+    border-radius: 10px;
+}
+
+.choice_d.choice_d_open::-webkit-scrollbar-track {   // Bar background
+    background: $color_menu_scrollbar_track; 
+}
+
+.choice_d.choice_d_open {
+    scrollbar-width: auto;
+    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+}
+
+/* @media (pointer: fine) {
+
+    .choice_d.choice_d_open {
+        overflow: hidden;
+    }
+    
+    .choice_d.choice_d_open:hover {
+        overflow: auto;
+    }
+}*/
 
 /*  
 ────────────────────────────
 TODO:         >> Option ON
 ──────────────────────────── */
 
-.choices_option_on {
+.choice_option_on:not(.choice_d > li > .choice_option_on) { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+
+    background: hsla(0, 0%, 100%, 0.45);
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+}
+
+.choice_d.choice_d.choice_d_open > li > .choice_option_on { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+
     background: hsla(0, 0%, 100%, 0.45);
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
 }
@@ -1467,14 +1767,14 @@ TODO:         >> Option ON
 TODO:         >> No Label
 ──────────────────────────── */
 
-.choices_noLabel {
+.choice_noLabel {
 
     > li:nth-of-type(1) {
         display: none;
     }
 }
 
-.choices_h.choices_noLabel {
+.choice_h.choice_noLabel {
 
     > li:nth-of-type(2) span {
 
@@ -1487,12 +1787,12 @@ TODO:         >> No Label
     }
 }
 
-.choices_v.choices_noLabel > li:nth-of-type(2) > a > img {
-            border-top-left-radius: 17px;
-            border-top-right-radius: 17px;
+.choice_v.choice_noLabel > li:nth-of-type(2) > a > img {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
 }
 
-.choices.choices_noLabel {
+.choice_d.choice_noLabel {
 
     > li:nth-of-type(2) {
 
@@ -1502,5 +1802,122 @@ TODO:         >> No Label
             content: "▼";
             margin-left: 5rem;
         }
+
+        > a > img {
+            border-radius: 20px;
+        }
+    }
+}
+
+.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) > a > img  {
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
+
+    content: "";
+    margin-left: 0;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Classes Para Serem Aplicadas Somente Via JS
+────────────────────────────────────────────────────── */
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.check {
+
+    display: flex;
+    align-items: center;
+    -moz-width: fit-content;
+    width: fit-content;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    @extend .offset; 
+    cursor: pointer;
+
+    > :nth-child(1) {
+        width: 44px;
+        height: 24px;
+        // width: 51px;
+        // height: 31px;
+        border-radius: 12px;
+        margin-right: 8px;
+        background: hsl(0, 0%, 93%);
+        transition: all 0.3s; 
+    }
+
+    > :nth-child(1)::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        background-color: hsl(0, 0%, 100%); 
+        position: relative;
+        top: 3px;
+        left: 4px;
+        transition: all 0.3s; 
+    }
+
+    > :nth-child(2) {
+        font-size: $font_size;
+    }
+} 
+
+.check.checked { 
+
+    > :nth-child(1) {
+        background-color: $color_theme;
+        background-color: hsl(115, 100%, 66%);
+        transition: all 0.3s; 
+    }
+
+    > :nth-child(1)::before {
+        left: 23px;
+        transition: all 0.3s; 
+    }
+}
+
+.check.disabled { 
+
+    > :nth-child(1) {
+        background: hsl(0, 0%, 93%);
+    }
+
+    > :nth-child(1)::before {
+        background-color: transparent; 
+        border: 3px dashed white; 
     }
 }
