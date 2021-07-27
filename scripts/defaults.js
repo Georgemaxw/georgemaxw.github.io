@@ -367,6 +367,12 @@ TODO: Choice
 ────────────────────────────────────────────────────── */
 
 var choice_anchorClicked = null
+var choice_anchorClickedBefore = null /* <- Variável necessária para 
+salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
+desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao seu 
+valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
+opção que aparece em um 'choice_d' quando ele está fechado.
+*/
 
 var choice_d_open = false
 
@@ -378,28 +384,33 @@ function choice(arg) {
 
         if(arg.classList.contains('choice_d_open')) {
 
-            for(var i = 0; i < arg.children.length; i++) { 
+                for(var i = 0; i < arg.children.length; i++) { 
 
-                if(arg.children[i].children[0] === choice_anchorClicked) {
+                    if(arg.children[i].children[0] === choice_anchorClicked) {
 
-                    choice_d_liClicked = arg.children[i]
-                    break
+                        choice_d_liClicked = arg.children[i]
+                        break
+                    }
+                }
+
+            if(choice_anchorClicked !== 'disabled') {
+
+                for(var i = 0; i < arg.children.length; i++) { 
+
+                    arg.children[i].style = 'display: none'
+                }
+
+                if(choice_d_liClicked !==  null) {
+
+                    choice_d_liClicked.style = 'display: inline-flex' 
+                } else {
+                    arg.children[0].style = 'display: inline-flex'
                 }
             }
 
-            for(var i = 0; i < arg.children.length; i++) { 
-
-                arg.children[i].style = 'display: none'
-            }
-
-            if(choice_d_liClicked !==  null) {
-
-                choice_d_liClicked.style = 'display: inline-flex' 
-            } else {
-                arg.children[0].style = 'display: inline-flex'
-            }
-            
         } else {
+
+            if(arg.classList.contains('disabled')) { return }
 
             arg.children[0].style = 'display: none'
             
@@ -419,9 +430,14 @@ function choice(arg) {
             }
         }
             
-        document.querySelector('html').classList.toggle('overflow_hidden')
+        if(choice_anchorClicked !== 'disabled') {
 
-        arg.classList.toggle('choice_d_open')
+            document.querySelector('html').classList.toggle('overflow_hidden')
+            arg.classList.toggle('choice_d_open')
+
+        } else {
+            choice_anchorClicked = choice_anchorClickedBefore
+        }
 
     } else {
                 
@@ -439,9 +455,17 @@ function choice(arg) {
     }
 }
 
-function choice_option(arg) {
+function choice_option(arg) { 
 
-    choice_anchorClicked =  arg
+
+    if(arg.classList.contains('disabled')) { 
+
+        choice_anchorClickedBefore = choice_anchorClicked
+
+        choice_anchorClicked = 'disabled'
+    } else {
+        choice_anchorClicked =  arg
+    }
 }
 
 // Espaço no final ('li' invisível) do menu dos dropdowns:
@@ -454,3 +478,33 @@ var e = document.createElement("li")
 
     allChoicesD[i].appendChild(e)
 }
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Switch
+────────────────────────────────────────────────────── */
+/*
+var switch_all = document.querySelectorAll('.switch')
+var switch_actual
+
+for(var i = 0; i < switch_all.length; i++) {
+
+    switch_actual = switch_all[i]
+
+    switch_all[i].onclick = function() { 
+
+        console.log(switch_actual)
+        
+        switch_actual.classList.toggle('on')
+    }
+}
+*/
+
+function switch_event(arg) {
+
+    if(arg.classList.contains('disabled')) {
+        return
+    }
+
+    arg.classList.toggle('on')
+} 

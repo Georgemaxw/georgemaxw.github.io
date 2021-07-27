@@ -1717,6 +1717,18 @@ TODO:         >> No Label
 }
 
 /*  
+────────────────────────────
+TODO:         >> Desabilitado
+──────────────────────────── */
+.choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
+  opacity: 0.5;
+}
+
+.choice_h > li > a.disabled, .choice_v > li > a.disabled, .choice_d > li > a.disabled {
+  opacity: 0.5;
+}
+
+/*  
 ──────────────────────────────────────────────────────
 TODO: Classes Para Serem Aplicadas Somente Via JS
 ────────────────────────────────────────────────────── */
@@ -1739,25 +1751,15 @@ TODO: Switch
 }
 
 .switch > :nth-child(1) {
-  width: 44px;
-  height: 24px;
-  border-radius: 12px;
   margin-right: 8px;
   background: #ededed;
-  transition: all 0.3s;
 }
 
 .switch > :nth-child(1)::before {
   content: '';
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  border-radius: 9px;
   background-color: white;
   position: relative;
-  top: 3px;
-  left: 4px;
-  transition: all 0.3s;
 }
 
 .switch > :nth-child(2) {
@@ -1770,8 +1772,6 @@ TODO: Switch
 }
 
 .switch.disabled > :nth-child(1)::before {
-  top: 0px;
-  left: 1px;
   border: 3px dotted #ededed;
   background-color: transparent;
 }
@@ -1783,26 +1783,84 @@ TODO: Switch
 .switch.on > :nth-child(1) {
   background-color: #00c8ff;
   background-color: #60ff52;
-  transition: all 0.3s;
+}
+
+.switch > :nth-child(1) {
+  width: 50px;
+  height: 28px;
+  border-radius: 14px;
+  transition: all 0.33s;
+}
+
+.switch > :nth-child(1)::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  top: 4px;
+  left: 5px;
+  transition: all 0.33s;
+}
+
+.switch.disabled > :nth-child(1)::before {
+  top: 1px;
+  left: 2px;
+}
+
+.switch.on > :nth-child(1) {
+  transition: all 0.33s;
 }
 
 .switch.on > :nth-child(1)::before {
-  left: 23px;
-  transition: all 0.3s;
+  left: 26px;
+  transition: all 0.33s;
 }
 
 .switch.on.disabled > :nth-child(1)::before {
-  left: 19px;
+  left: 22px;
 }
 
-.big > :nth-child(1) {
+.switch_small > :nth-child(1) {
+  width: 48px;
+  height: 26px;
+  border-radius: 13px;
+  transition: all 0.31s;
+}
+
+.switch_small > :nth-child(1)::before {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  top: 4px;
+  left: 5px;
+  transition: all 0.31s;
+}
+
+.switch_small.disabled > :nth-child(1)::before {
+  top: 1px;
+  left: 2px;
+}
+
+.switch_small.on > :nth-child(1) {
+  transition: all 0.31s;
+}
+
+.switch_small.on > :nth-child(1)::before {
+  left: 26px;
+  transition: all 0.31s;
+}
+
+.switch_small.on.disabled > :nth-child(1)::before {
+  left: 22px;
+}
+
+.switch_big > :nth-child(1) {
   width: 54px;
   height: 30px;
   border-radius: 15px;
   transition: all 0.35s;
 }
 
-.big > :nth-child(1)::before {
+.switch_big > :nth-child(1)::before {
   width: 22px;
   height: 22px;
   border-radius: 11px;
@@ -1811,20 +1869,20 @@ TODO: Switch
   transition: all 0.35s;
 }
 
-.big.disabled > :nth-child(1)::before {
+.switch_big.disabled > :nth-child(1)::before {
   top: 1px;
   left: 2px;
 }
 
-.big.on > :nth-child(1) {
+.switch_big.on > :nth-child(1) {
   transition: all 0.35s;
 }
 
-.big.on > :nth-child(1)::before {
+.switch_big.on > :nth-child(1)::before {
   left: 28px;
   transition: all 0.35s;
 }
 
-.big.on.disabled > :nth-child(1)::before {
+.switch_big.on.disabled > :nth-child(1)::before {
   left: 24px;
 }

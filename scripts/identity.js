@@ -1,10 +1,11 @@
  
 // Choice - Sample functions:
 
-function func_1(){ console.log(1) }
-function func_2(){ console.log(2) }
-function func_3(){ console.log(3) }
-function func_4(){ console.log(4) }
+function choice_option_1(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(1) }
+function choice_option_2(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(2) }
+function choice_option_3(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(3) }
+function choice_option_4(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(4) }
+function choice_option_5(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(5) }
 
 // Choice - Example 1 functions:
 
@@ -82,3 +83,10 @@ function choice_example_2_Action_3() {
     document.querySelector('.choice_divsExample_2_div_3').style = 'display: block'
 }
 
+// Switch - Sample functions:
+
+function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) }
+function switch_2(arg){ if(arg.classList.contains('disabled')) { return }; console.log(2) }
+function switch_3(arg){ if(arg.classList.contains('disabled')) { return }; console.log(3) }
+function switch_4(arg){ if(arg.classList.contains('disabled')) { return }; console.log(4) }
+function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; console.log(5) }
