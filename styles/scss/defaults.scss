@@ -1882,14 +1882,14 @@ TODO: Switch
 .switch.disabled { 
 
     > :nth-child(1) {
-        border: 3px dashed hsl(0, 0%, 93%); 
+        border: 3px dotted hsl(0, 0%, 93%); 
         background: transparent !important;
     }
 
     > :nth-child(1)::before {
         top: 0px;
         left: 1px;
-        border: 3px dashed hsl(0, 0%, 93%); 
+        border: 3px dotted hsl(0, 0%, 93%); 
         background-color: transparent; 
     }
 

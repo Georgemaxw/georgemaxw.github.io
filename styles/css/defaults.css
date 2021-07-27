@@ -1765,14 +1765,14 @@ TODO: Switch
 }
 
 .switch.disabled > :nth-child(1) {
-  border: 3px dashed #ededed;
+  border: 3px dotted #ededed;
   background: transparent !important;
 }
 
 .switch.disabled > :nth-child(1)::before {
   top: 0px;
   left: 1px;
-  border: 3px dashed #ededed;
+  border: 3px dotted #ededed;
   background-color: transparent;
 }
 
