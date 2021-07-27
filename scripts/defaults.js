@@ -454,28 +454,3 @@ var e = document.createElement("li")
 
     allChoicesD[i].appendChild(e)
 }
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Check
-────────────────────────────────────────────────────── */
-/*
-var check_all = document.querySelectorAll('.check')
-var check_actual
-
-for(var i = 0; i < check_all.length; i++) {
-
-    check_actual = check_all[i]
-
-    check_all[i].onclick = function() { 
-
-        console.log(check_actual)
-        
-        check_actual.classList.toggle('checked')
-    }
-}
-*/
-
-function check_event(arg) {
-    arg.classList.toggle('checked')
-}

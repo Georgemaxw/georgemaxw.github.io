@@ -898,34 +898,56 @@
 
                 <!--
                 ──────────────────────────────────────────────────────
-                TODO: Check
+                TODO: Switch
                 ────────────────────────────────────────────────────── --> 
 
-                <h2>Check</h2> 
+                <h2>Switch</h2> 
 
-                <div class="check checked" onclick="check_event(this); func_1()">
+                <div class="switch on" onclick="this.classList.toggle('on'); func_1()"> 
                     <div></div>
                     <div>Etiqueta</div>
                 </div>
 
-                <div class="check" onclick="check_event(this); func_2()">
+                <div class="switch" onclick="this.classList.toggle('on'); func_2()">
                     <div></div>
                     <div>Etiqueta</div>
                 </div>
 
-                <div class="check checked disabled" onclick="check_event(this); func_3()">
+                <div class="switch on disabled" onclick="this.classList.toggle('on'); func_3()">
                     <div></div>
                     <div>Etiqueta</div>
                 </div>
 
-                <div class="check disabled" onclick="check_event(this); func_4()">
+                <div class="switch disabled" onclick="this.classList.toggle('on'); func_4()">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="lb2"></div> 
+
+                <div class="switch on big" onclick="this.classList.toggle('on'); func_1()"> 
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch big" onclick="this.classList.toggle('on'); func_2()">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch on disabled big" onclick="this.classList.toggle('on'); func_3()">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch disabled big" onclick="this.classList.toggle('on'); func_4()">
                     <div></div>
                     <div>Etiqueta</div>
                 </div>
 
                 <div class="lb3"></div> 
                 
-                <!--<div class="check">
+                <!--<div class="switch">
                     <span></span><span>Etiqueta</span> 
                 </div>
 

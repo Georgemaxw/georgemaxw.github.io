@@ -32,13 +32,13 @@ html {
 ──────────────────────────────────────────────────────
 TODO: Margens
 ────────────────────────────────────────────────────── */
-.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, pre, fieldset, hr, .check {
+.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, pre, fieldset, hr, .switch {
   /* Lateral margins */
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h, .choice_h.check {
+.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h, .choice_h.switch {
   display: flex;
 }
 
@@ -1724,7 +1724,11 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
   overflow: hidden;
 }
 
-.check {
+/*  
+──────────────────────────────────────────────────────
+TODO: Switch
+────────────────────────────────────────────────────── */
+.switch {
   display: flex;
   align-items: center;
   -moz-width: fit-content;
@@ -1734,7 +1738,7 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
   cursor: pointer;
 }
 
-.check > :nth-child(1) {
+.switch > :nth-child(1) {
   width: 44px;
   height: 24px;
   border-radius: 12px;
@@ -1743,7 +1747,7 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
   transition: all 0.3s;
 }
 
-.check > :nth-child(1)::before {
+.switch > :nth-child(1)::before {
   content: '';
   display: inline-block;
   width: 18px;
@@ -1756,26 +1760,71 @@ TODO: Classes Para Serem Aplicadas Somente Via JS
   transition: all 0.3s;
 }
 
-.check > :nth-child(2) {
+.switch > :nth-child(2) {
   font-size: 19rem;
 }
 
-.check.checked > :nth-child(1) {
+.switch.disabled > :nth-child(1) {
+  border: 3px dashed #ededed;
+  background: transparent !important;
+}
+
+.switch.disabled > :nth-child(1)::before {
+  top: 0px;
+  left: 1px;
+  border: 3px dashed #ededed;
+  background-color: transparent;
+}
+
+.switch.disabled > :nth-child(2) {
+  color: #d6d6d6;
+}
+
+.switch.on > :nth-child(1) {
   background-color: #00c8ff;
   background-color: #60ff52;
   transition: all 0.3s;
 }
 
-.check.checked > :nth-child(1)::before {
+.switch.on > :nth-child(1)::before {
   left: 23px;
   transition: all 0.3s;
 }
 
-.check.disabled > :nth-child(1) {
-  background: #ededed;
+.switch.on.disabled > :nth-child(1)::before {
+  left: 19px;
 }
 
-.check.disabled > :nth-child(1)::before {
-  background-color: transparent;
-  border: 3px dashed white;
+.big > :nth-child(1) {
+  width: 54px;
+  height: 30px;
+  border-radius: 15px;
+  transition: all 0.35s;
+}
+
+.big > :nth-child(1)::before {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  top: 4px;
+  left: 5px;
+  transition: all 0.35s;
+}
+
+.big.disabled > :nth-child(1)::before {
+  top: 1px;
+  left: 2px;
+}
+
+.big.on > :nth-child(1) {
+  transition: all 0.35s;
+}
+
+.big.on > :nth-child(1)::before {
+  left: 28px;
+  transition: all 0.35s;
+}
+
+.big.on.disabled > :nth-child(1)::before {
+  left: 24px;
 }
