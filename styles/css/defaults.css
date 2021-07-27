@@ -1233,6 +1233,16 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
 /*.center.choice_v, .center.choice_d {
     
 }*/
+.center.offset, p.center, dl.center, .footer-content .center.footer-icons, label.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, pre.center, fieldset.center, hr.center, .center.switch {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - (2 * 20px));
+}
+
+.center.offset.choice_d_open, p.center.choice_d_open, dl.center.choice_d_open, .footer-content .center.choice_d_open.footer-icons, label.center.choice_d_open, h1.center.choice_d_open, h2.center.choice_d_open, h3.center.choice_d_open, h4.center.choice_d_open, h5.center.choice_d_open, h6.center.choice_d_open, pre.center.choice_d_open, fieldset.center.choice_d_open, hr.center.choice_d_open, .center.choice_d_open.switch {
+  max-width: none;
+}
+
 .lb {
   /* Line break */
   margin-top: calc(1* 16rem);
@@ -1661,12 +1671,12 @@ TODO:         >> Dropdown
 ────────────────────────────
 TODO:         >> Option ON
 ──────────────────────────── */
-.choice_option_on:not(.choice_d > li > .choice_option_on) {
+.choice_h > li > a.on, .choice_v > li > a.on {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.choice_d.choice_d.choice_d_open > li > .choice_option_on {
+.choice_d.choice_d_open > li > .on {
   background: rgba(255, 255, 255, 0.45);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
@@ -1675,43 +1685,43 @@ TODO:         >> Option ON
 ────────────────────────────
 TODO:         >> No Label
 ──────────────────────────── */
-.choice_noLabel > li:nth-of-type(1) {
+.noLabel > li:nth-of-type(1) {
   display: none;
 }
 
-.choice_h.choice_noLabel > li:nth-of-type(2) span {
+.choice_h.noLabel > li:nth-of-type(2) span {
   padding-left: 15px;
 }
 
-.choice_h.choice_noLabel > li:nth-of-type(2) > a > img {
+.choice_h.noLabel > li:nth-of-type(2) > a > img {
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
 }
 
-.choice_v.choice_noLabel > li:nth-of-type(2) > a > img {
+.choice_v.noLabel > li:nth-of-type(2) > a > img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.choice_d.choice_noLabel > li:nth-of-type(2) {
+.choice_d.noLabel > li:nth-of-type(2) {
   display: inline-flex;
 }
 
-.choice_d.choice_noLabel > li:nth-of-type(2) span::after {
+.choice_d.noLabel > li:nth-of-type(2) span::after {
   content: "▼";
   margin-left: 5rem;
 }
 
-.choice_d.choice_noLabel > li:nth-of-type(2) > a > img {
+.choice_d.noLabel > li:nth-of-type(2) > a > img {
   border-radius: 20px;
 }
 
-.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) > a > img {
+.choice_d.noLabel.choice_d_open > li:nth-of-type(2) > a > img {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 
-.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
+.choice_d.noLabel.choice_d_open > li:nth-of-type(2) span::after {
   content: "";
   margin-left: 0;
 }
@@ -1724,8 +1734,23 @@ TODO:         >> Desabilitado
   opacity: 0.5;
 }
 
+.choice_h.disabled *, .choice_v.disabled *, .choice_d.disabled * {
+  cursor: default !important;
+}
+
 .choice_h > li > a.disabled, .choice_v > li > a.disabled, .choice_d > li > a.disabled {
   opacity: 0.5;
+  cursor: default;
+}
+
+.choice_h.disabled > li > a, .choice_v.disabled > li > a {
+  background: 0 !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.choice_h > li > a.disabled, .choice_v > li > a.disabled {
+  background: 0 !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
 }
 
 /*  
@@ -1764,6 +1789,10 @@ TODO: Switch
 
 .switch > :nth-child(2) {
   font-size: 19rem;
+}
+
+.switch.disabled {
+  cursor: default;
 }
 
 .switch.disabled > :nth-child(1) {

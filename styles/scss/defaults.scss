@@ -72,6 +72,7 @@ $bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa se
 $bg_table_tr_hover: hsla(193,100%,98%, 1); 
 $bg_kbd: hsl(0, 0%, 86%);
 $bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
+
 $bg_choice_d_open: url(../../images/bg_choice_d_open.png)  center /100% 100%;
 
 /*
@@ -1259,6 +1260,16 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
     
 }*/
 
+.center.offset {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(100% - (2 * #{$margin_horizontal}));
+}
+
+.center.offset.choice_d_open {
+    max-width: none;
+}
+
 .lb { /* Line break */
     margin-top: calc(1* #{$margin_vertical}); 
     margin-bottom:  calc(1* #{$margin_vertical}); /*  */
@@ -1730,13 +1741,13 @@ TODO:         >> Dropdown
 TODO:         >> Option ON
 ──────────────────────────── */
 
-.choice_option_on:not(.choice_d > li > .choice_option_on) { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+.choice_h > li > a.on, .choice_v > li > a.on { 
 
     background: hsla(0, 0%, 100%, 0.45);
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
 }
 
-.choice_d.choice_d.choice_d_open > li > .choice_option_on { // .choice_h > li > a.choice_option_on, .choice_v > li > a.choice_option_on
+.choice_d.choice_d_open > li > .on { // .choice_h > li > a.on, .choice_v > li > a.on
 
     background: hsla(0, 0%, 100%, 0.45);
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
@@ -1747,14 +1758,14 @@ TODO:         >> Option ON
 TODO:         >> No Label
 ──────────────────────────── */
 
-.choice_noLabel {
+.noLabel {
 
     > li:nth-of-type(1) {
         display: none;
     }
 }
 
-.choice_h.choice_noLabel {
+.choice_h.noLabel {
 
     > li:nth-of-type(2) span {
 
@@ -1767,12 +1778,12 @@ TODO:         >> No Label
     }
 }
 
-.choice_v.choice_noLabel > li:nth-of-type(2) > a > img {
+.choice_v.noLabel > li:nth-of-type(2) > a > img {
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
 }
 
-.choice_d.choice_noLabel {
+.choice_d.noLabel {
 
     > li:nth-of-type(2) {
 
@@ -1789,13 +1800,13 @@ TODO:         >> No Label
     }
 }
 
-.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) > a > img  {
+.choice_d.noLabel.choice_d_open > li:nth-of-type(2) > a > img  {
 
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-.choice_d.choice_noLabel.choice_d_open > li:nth-of-type(2) span::after {
+.choice_d.noLabel.choice_d_open > li:nth-of-type(2) span::after {
 
     content: "";
     margin-left: 0;
@@ -1810,8 +1821,23 @@ TODO:         >> Desabilitado
     opacity: 0.5;
 }
 
+.choice_h.disabled *, .choice_v.disabled *, .choice_d.disabled * {
+    cursor: default !important; 
+}
+
 .choice_h > li > a.disabled, .choice_v > li > a.disabled, .choice_d > li > a.disabled {
     opacity: 0.5;
+    cursor: default; 
+}
+
+.choice_h.disabled > li > a, .choice_v.disabled > li > a {
+    background: 0 !important;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1) !important;
+}
+
+.choice_h > li > a.disabled, .choice_v > li > a.disabled {
+    background: 0 !important;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1) !important;
 }
 
 /*  
@@ -1886,6 +1912,8 @@ TODO: Switch
     }
 } 
 .switch.disabled { 
+
+    cursor: default;
 
     > :nth-child(1) {
         border: 3px dotted hsl(0, 0%, 93%); 

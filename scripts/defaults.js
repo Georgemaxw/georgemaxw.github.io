@@ -423,10 +423,10 @@ function choice(arg) {
                 
                 for(var i = 1; i < arg.children.length - 1; i++) { 
 
-                    arg.children[i].children[0].classList.remove('choice_option_on')
+                    arg.children[i].children[0].classList.remove('on')
                 }
 
-                choice_anchorClicked.classList.add('choice_option_on')
+                choice_anchorClicked.classList.add('on')
             }
         }
             
@@ -440,29 +440,42 @@ function choice(arg) {
         }
 
     } else {
-                
+
+        if(choice_anchorClicked === null || choice_anchorClicked === 'disabled') { return }
+
+        for(var i = 0; i < arg.children.length; i++) { 
+
+            arg.children[i].children[0].classList.remove('on')
+        }
+
+        choice_anchorClicked.classList.add('on')
+
+        choice_anchorClicked = null
+        
+        /*
         if(choice_anchorClicked !== null) {
 
             for(var i = 0; i < arg.children.length; i++) { 
 
-                arg.children[i].children[0].classList.remove('choice_option_on')
+                arg.children[i].children[0].classList.remove('on')
             }
 
-            choice_anchorClicked.classList.add('choice_option_on')
+            choice_anchorClicked.classList.add('on')
 
             choice_anchorClicked = null
         }
+        */
     }
 }
 
 function choice_option(arg) { 
-
 
     if(arg.classList.contains('disabled')) { 
 
         choice_anchorClickedBefore = choice_anchorClicked
 
         choice_anchorClicked = 'disabled'
+
     } else {
         choice_anchorClicked =  arg
     }
