@@ -1997,6 +1997,8 @@ TODO: Switch
     }
     
     .switch.disabled > :nth-child(1)::before {
+        width: 26px;
+        height: 26px;
         top: 1px;
         left: 2px;
     }
