@@ -121,6 +121,7 @@ p, li, ul, ol, dl, dt, dd {
 p {
   text-indent: 6rem;
   /* Sem justificar, usar: 4px */
+  text-align: justify;
 }
 
 ul, ol {
@@ -2179,7 +2180,7 @@ TODO: Switch
 }
 
 .switch > :nth-child(1) {
-  margin-right: 10px;
+  margin-right: 12px;
   background: #ededed;
 }
 
@@ -2191,10 +2192,16 @@ TODO: Switch
 }
 
 .switch > :nth-child(2) {
+  display: inline-flex;
+  align-items: center;
   font-size: 19rem;
   margin: 0;
   padding: 0;
   text-indent: 0;
+}
+
+.switch > :nth-child(2) > img {
+  margin-right: 12px;
 }
 
 .switch.disabled {
@@ -2228,6 +2235,8 @@ TODO: Switch
 
 .switch.inverted > :nth-child(1) {
   order: 1;
+  margin-left: 20px;
+  margin-right: 0;
 }
 
 .switch > :nth-child(1) {

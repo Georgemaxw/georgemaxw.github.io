@@ -173,6 +173,7 @@ p, li, ul, ol, dl, dt, dd {
 p {
     @extend %margins;
     text-indent: 6rem; /* Sem justificar, usar: 4px */
+    text-align: justify;
 }
 
 ul, ol {
@@ -1858,7 +1859,7 @@ TODO: Switch
     cursor: pointer;
 
     > :nth-child(1) {
-        margin-right: 10px;
+        margin-right: 12px;
         background: hsl(0, 0%, 93%);
     }
 
@@ -1870,10 +1871,16 @@ TODO: Switch
     }
 
     > :nth-child(2) {
+        display: inline-flex;
+        align-items: center;
         font-size: $font_size;
         margin: 0;
         padding: 0;
         text-indent: 0;
+
+        > img {
+            margin-right: 12px;
+        }
     }
 }
 
@@ -1908,6 +1915,8 @@ TODO: Switch
 
     > :nth-child(1) {
         order: 1;
+        margin-left: 20px;
+        margin-right: 0;
     }
 }
 
