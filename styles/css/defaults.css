@@ -2201,6 +2201,8 @@ TODO: Switch
 }
 
 .switch > :nth-child(2) > img {
+  width: 32px;
+  height: 32px;
   margin-right: 12px;
 }
 
