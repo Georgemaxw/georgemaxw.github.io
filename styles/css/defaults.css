@@ -2192,6 +2192,9 @@ TODO: Switch
 
 .switch > :nth-child(2) {
   font-size: 19rem;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
 }
 
 .switch.disabled {
@@ -2218,11 +2221,20 @@ TODO: Switch
   background-color: #60ff52;
 }
 
+.switch.inverted {
+  width: auto !important;
+  justify-content: space-between;
+}
+
+.switch.inverted > :nth-child(1) {
+  order: 1;
+}
+
 .switch > :nth-child(1) {
   min-width: 47px;
   height: 28px;
   border-radius: 14px;
-  transition: all 0.33s;
+  transition: all 0.35s;
 }
 
 .switch > :nth-child(1)::before {
@@ -2231,7 +2243,7 @@ TODO: Switch
   border-radius: 12px;
   top: 2px;
   left: 3px;
-  transition: all 0.33s;
+  transition: all 0.35s;
 }
 
 .switch.disabled > :nth-child(1)::before {
@@ -2242,12 +2254,12 @@ TODO: Switch
 }
 
 .switch.on > :nth-child(1) {
-  transition: all 0.33s;
+  transition: all 0.35s;
 }
 
 .switch.on > :nth-child(1)::before {
   left: 21px;
-  transition: all 0.33s;
+  transition: all 0.35s;
 }
 
 .switch.on.disabled > :nth-child(1)::before {
@@ -2259,7 +2271,7 @@ TODO: Switch
     min-width: 53px;
     height: 32px;
     border-radius: 16px;
-    transition: all 0.37s;
+    transition: all 0.35s;
   }
   .switch > :nth-child(1)::before {
     width: 26px;
@@ -2267,7 +2279,7 @@ TODO: Switch
     border-radius: 13px;
     top: 3px;
     left: 4px;
-    transition: all 0.37s;
+    transition: all 0.35s;
   }
   .switch.disabled > :nth-child(1)::before {
     width: 26px;
@@ -2276,185 +2288,235 @@ TODO: Switch
     left: 2px;
   }
   .switch.on > :nth-child(1) {
-    transition: all 0.37s;
+    transition: all 0.35s;
   }
   .switch.on > :nth-child(1)::before {
     left: 24px;
-    transition: all 0.37s;
+    transition: all 0.35s;
   }
   .switch.on.disabled > :nth-child(1)::before {
     left: 21px;
   }
 }
 
-.switch_smaller > :nth-child(1) {
-  min-width: 38px;
-  height: 24px;
-  border-radius: 12px;
-  transition: all 0.29s;
-}
+/*
+// Switch - Smaller Size
 
-.switch_smaller > :nth-child(1)::before {
-  width: 18px;
-  height: 18px;
-  border-radius: 9px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.29s;
-}
+.switch_smaller {
+
+    > :nth-child(1) {
+        min-width: 38px;
+        height: 24px;
+        border-radius: 12px;
+        transition: all 0.29s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.29s; 
+    }
+} 
 
 .switch_smaller.disabled > :nth-child(1)::before {
-  top: 1px;
-  left: 1px;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: 1px;
 }
 
-.switch_smaller.on > :nth-child(1) {
-  transition: all 0.29s;
+.switch_smaller.on { 
+
+    > :nth-child(1) {
+        transition: all 0.29s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 17px;
+        transition: all 0.29s; 
+    }
 }
 
-.switch_smaller.on > :nth-child(1)::before {
-  left: 17px;
-  transition: all 0.29s;
+.switch_smaller.on.disabled > :nth-child(1)::before { 
+    left: 14px;
 }
 
-.switch_smaller.on.disabled > :nth-child(1)::before {
-  left: 14px;
-}
+// Switch - Small Size
 
-.switch_small > :nth-child(1) {
-  min-width: 42px;
-  height: 26px;
-  border-radius: 13px;
-  transition: all 0.31s;
-}
+.switch_small {
 
-.switch_small > :nth-child(1)::before {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.31s;
-}
+    > :nth-child(1) {
+        min-width: 42px;
+        height: 26px;
+        border-radius: 13px;
+        transition: all 0.31s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.31s; 
+    }
+} 
 
 .switch_small.disabled > :nth-child(1)::before {
-  top: 1px;
-  left: 2px;
+    width: 20px;
+    height: 20px;
+    top: 1px;
+    left: 2px;
 }
 
-.switch_small.on > :nth-child(1) {
-  transition: all 0.31s;
+.switch_small.on { 
+
+    > :nth-child(1) {
+        transition: all 0.31s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 19px;
+        transition: all 0.31s; 
+    }
 }
 
-.switch_small.on > :nth-child(1)::before {
-  left: 19px;
-  transition: all 0.31s;
+.switch_small.on.disabled > :nth-child(1)::before { 
+    left: 16px;
 }
 
-.switch_small.on.disabled > :nth-child(1)::before {
-  left: 16px;
-}
+// Switch - Medium Size
 
-.switch_medium > :nth-child(1) {
-  min-width: 47px;
-  height: 28px;
-  border-radius: 14px;
-  transition: all 0.33s;
-}
+.switch_medium {
 
-.switch_medium > :nth-child(1)::before {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  top: 2px;
-  left: 3px;
-  transition: all 0.33s;
+    > :nth-child(1) {
+        min-width: 47px;
+        height: 28px;
+        border-radius: 14px;
+        transition: all 0.33s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        top: 2px;
+        left: 3px;
+        transition: all 0.33s; 
+    }
 }
 
 .switch_medium.disabled > :nth-child(1)::before {
-  width: 22px;
-  height: 22px;
-  top: 1px;
-  left: 2px;
+    width: 22px;
+    height: 22px;
+    top: 1px;
+    left: 2px;
 }
 
-.switch_medium.on > :nth-child(1) {
-  transition: all 0.33s;
+.switch_medium.on { 
+
+    > :nth-child(1) {
+        transition: all 0.33s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 21px;
+        transition: all 0.33s; 
+    }
 }
 
-.switch_medium.on > :nth-child(1)::before {
-  left: 21px;
-  transition: all 0.33s;
+.switch_medium.on.disabled > :nth-child(1)::before { 
+    left: 19px;
 }
 
-.switch_medium.on.disabled > :nth-child(1)::before {
-  left: 19px;
-}
+// Switch - Big Size
 
-.switch_big > :nth-child(1) {
-  min-width: 49px;
-  height: 30px;
-  border-radius: 15px;
-  transition: all 0.35s;
-}
+.switch_big {
 
-.switch_big > :nth-child(1)::before {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.35s;
-}
+    > :nth-child(1) {
+        min-width: 49px;
+        height: 30px;
+        border-radius: 15px;
+        transition: all 0.35s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.35s; 
+    }
+} 
 
 .switch_big.disabled > :nth-child(1)::before {
-  top: 1px;
-  left: 2px;
+    width: 24px;
+    height: 24px;
+    top: 1px;
+    left: 2px;
 }
 
-.switch_big.on > :nth-child(1) {
-  transition: all 0.35s;
+.switch_big.on { 
+
+    > :nth-child(1) {
+        transition: all 0.35s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 22px;
+        transition: all 0.35s; 
+    }
 }
 
-.switch_big.on > :nth-child(1)::before {
-  left: 22px;
-  transition: all 0.35s;
+.switch_big.on.disabled > :nth-child(1)::before { 
+    left: 19px;
 }
 
-.switch_big.on.disabled > :nth-child(1)::before {
-  left: 19px;
-}
+// Switch - Bigger Size
 
-.switch_bigger > :nth-child(1) {
-  min-width: 53px;
-  height: 32px;
-  border-radius: 16px;
-  transition: all 0.37s;
-}
+.switch_bigger {
 
-.switch_bigger > :nth-child(1)::before {
-  width: 26px;
-  height: 26px;
-  border-radius: 13px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.37s;
+    > :nth-child(1) {
+        min-width: 53px;
+        height: 32px;
+        border-radius: 16px;
+        transition: all 0.37s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.37s; 
+    }
 }
 
 .switch_bigger.disabled > :nth-child(1)::before {
-  top: 1px;
-  left: 2px;
+    width: 26px;
+    height: 26px;
+    top: 1px;
+    left: 2px;
 }
 
-.switch_bigger.on > :nth-child(1) {
-  transition: all 0.37s;
+.switch_bigger.on { 
+
+    > :nth-child(1) {
+        transition: all 0.37s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 24px;
+        transition: all 0.37s; 
+    }
 }
 
-.switch_bigger.on > :nth-child(1)::before {
-  left: 24px;
-  transition: all 0.37s;
+.switch_bigger.on.disabled > :nth-child(1)::before { 
+    left: 21px;
 }
-
-.switch_bigger.on.disabled > :nth-child(1)::before {
-  left: 21px;
-}
+*/
