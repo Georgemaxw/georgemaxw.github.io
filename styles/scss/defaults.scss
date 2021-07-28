@@ -1940,25 +1940,25 @@ TODO: Switch
 .switch {
 
     > :nth-child(1) {
-        width: 48px;
+        width: 47px;
         height: 28px;
         border-radius: 14px;
         transition: all 0.33s; 
     }
 
     > :nth-child(1)::before {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        top: 4px;
-        left: 5px;
+        width: 22px;
+        height: 22px;
+        border-radius: 11px;
+        top: 3px;
+        left: 4px;
         transition: all 0.33s; 
     }
 } 
 
 .switch.disabled > :nth-child(1)::before {
-    top: 1px;
-    left: 2px;
+    top: 0px;
+    left: 1px;
 }
 
 .switch.on { 
@@ -1968,13 +1968,13 @@ TODO: Switch
     }
     
     > :nth-child(1)::before {
-        left: 24px;
+        left: 22px;
         transition: all 0.33s; 
     }
 }
 
 .switch.on.disabled > :nth-child(1)::before { 
-    left: 20px;
+    left: 18px;
 }
 
 // Switch - Smaller Size
@@ -1982,7 +1982,7 @@ TODO: Switch
 .switch_smaller {
 
     > :nth-child(1) {
-        width: 42px;
+        width: 40px;
         height: 24px;
         border-radius: 12px;
         transition: all 0.29s; 
@@ -2010,13 +2010,13 @@ TODO: Switch
     }
     
     > :nth-child(1)::before {
-        left: 21px;
+        left: 19px;
         transition: all 0.29s; 
     }
 }
 
 .switch_smaller.on.disabled > :nth-child(1)::before { 
-    left: 17px;
+    left: 15px;
 }
 
 // Switch - Small Size
@@ -2031,18 +2031,18 @@ TODO: Switch
     }
 
     > :nth-child(1)::before {
-        width: 18px;
-        height: 18px;
-        border-radius: 9px;
-        top: 4px;
-        left: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        top: 3px;
+        left: 4px;
         transition: all 0.31s; 
     }
 } 
 
 .switch_small.disabled > :nth-child(1)::before {
-    top: 1px;
-    left: 2px;
+    top: 0px;
+    left: 1px;
 }
 
 .switch_small.on { 
@@ -2052,13 +2052,13 @@ TODO: Switch
     }
     
     > :nth-child(1)::before {
-        left: 22px;
+        left: 21px;
         transition: all 0.31s; 
     }
 }
 
 .switch_small.on.disabled > :nth-child(1)::before { 
-    left: 18px;
+    left: 17px;
 }
 
 // Switch - Big Size
@@ -2066,25 +2066,25 @@ TODO: Switch
 .switch_big {
 
     > :nth-child(1) {
-        width: 52px;
+        width: 50px;
         height: 30px;
         border-radius: 15px;
         transition: all 0.35s; 
     }
 
     > :nth-child(1)::before {
-        width: 22px;
-        height: 22px;
-        border-radius: 11px;
-        top: 4px;
-        left: 5px;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        top: 3px;
+        left: 4px;
         transition: all 0.35s; 
     }
 } 
 
 .switch_big.disabled > :nth-child(1)::before {
-    top: 1px;
-    left: 2px;
+    top: 0px;
+    left: 1px;
 }
 
 .switch_big.on { 
@@ -2094,13 +2094,13 @@ TODO: Switch
     }
     
     > :nth-child(1)::before {
-        left: 26px;
+        left: 23px;
         transition: all 0.35s; 
     }
 }
 
 .switch_big.on.disabled > :nth-child(1)::before { 
-    left: 22px;
+    left: 19px;
 }
 
 // Switch - Bigger Size
@@ -2108,25 +2108,25 @@ TODO: Switch
 .switch_bigger {
 
     > :nth-child(1) {
-        width: 56px;
+        width: 53px;
         height: 32px;
         border-radius: 16px;
         transition: all 0.37s; 
     }
 
     > :nth-child(1)::before {
-        width: 22px;
-        height: 22px;
-        border-radius: 11px;
-        top: 5px;
-        left: 5px;
+        width: 26px;
+        height: 26px;
+        border-radius: 12px;
+        top: 3px;
+        left: 4px;
         transition: all 0.37s; 
     }
 } 
 
 .switch_bigger.disabled > :nth-child(1)::before {
-    top: 2px;
-    left: 2px;
+    top: 0px;
+    left: 1px;
 }
 
 .switch_bigger.on { 
@@ -2136,11 +2136,11 @@ TODO: Switch
     }
     
     > :nth-child(1)::before {
-        left: 29px;
+        left: 24px;
         transition: all 0.37s; 
     }
 }
 
 .switch_bigger.on.disabled > :nth-child(1)::before { 
-    left: 26px;
+    left: 20px;
 }
