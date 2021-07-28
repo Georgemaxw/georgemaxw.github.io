@@ -1409,7 +1409,7 @@ TODO:         >> Horizontal
 .choice_h {
   display: inline-flex;
   border-radius: 1000px;
-  background: url(../../images/bg_button.png) center/100% 100%;
+  background: url(../../images/bg_choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -1475,7 +1475,7 @@ TODO:         >> Vertical
 ──────────────────────────── */
 .choice_v {
   border-radius: 20px;
-  background: url(../../images/bg_button.png) center/100% 100%;
+  background: url(../../images/bg_choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -1538,7 +1538,7 @@ TODO:         >> Dropdown
 ──────────────────────────── */
 .choice_d {
   border-radius: 20px;
-  background: url(../../images/bg_button.png) center/100% 100%;
+  background: url(../../images/bg_choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -1848,8 +1848,42 @@ TODO: Switch
   left: 22px;
 }
 
+.switch_smaller > :nth-child(1) {
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  transition: all 0.29s;
+}
+
+.switch_smaller > :nth-child(1)::before {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  top: 3px;
+  left: 4px;
+  transition: all 0.29s;
+}
+
+.switch_smaller.disabled > :nth-child(1)::before {
+  top: 0px;
+  left: 1px;
+}
+
+.switch_smaller.on > :nth-child(1) {
+  transition: all 0.29s;
+}
+
+.switch_smaller.on > :nth-child(1)::before {
+  left: 21px;
+  transition: all 0.29s;
+}
+
+.switch_smaller.on.disabled > :nth-child(1)::before {
+  left: 17px;
+}
+
 .switch_small > :nth-child(1) {
-  width: 48px;
+  width: 46px;
   height: 26px;
   border-radius: 13px;
   transition: all 0.31s;
@@ -1874,12 +1908,12 @@ TODO: Switch
 }
 
 .switch_small.on > :nth-child(1)::before {
-  left: 26px;
+  left: 24px;
   transition: all 0.31s;
 }
 
 .switch_small.on.disabled > :nth-child(1)::before {
-  left: 22px;
+  left: 20px;
 }
 
 .switch_big > :nth-child(1) {
@@ -1914,4 +1948,38 @@ TODO: Switch
 
 .switch_big.on.disabled > :nth-child(1)::before {
   left: 24px;
+}
+
+.switch_bigger > :nth-child(1) {
+  width: 58px;
+  height: 32px;
+  border-radius: 16px;
+  transition: all 0.37s;
+}
+
+.switch_bigger > :nth-child(1)::before {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  top: 5px;
+  left: 5px;
+  transition: all 0.37s;
+}
+
+.switch_bigger.disabled > :nth-child(1)::before {
+  top: 2px;
+  left: 2px;
+}
+
+.switch_bigger.on > :nth-child(1) {
+  transition: all 0.37s;
+}
+
+.switch_bigger.on > :nth-child(1)::before {
+  left: 31px;
+  transition: all 0.37s;
+}
+
+.switch_bigger.on.disabled > :nth-child(1)::before {
+  left: 28px;
 }

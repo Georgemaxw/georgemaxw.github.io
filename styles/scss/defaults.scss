@@ -72,7 +72,7 @@ $bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa se
 $bg_table_tr_hover: hsla(193,100%,98%, 1); 
 $bg_kbd: hsl(0, 0%, 86%);
 $bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
-
+$bg_choice: url(../../images/bg_choice.png)  center /100% 100%;
 $bg_choice_d_open: url(../../images/bg_choice_d_open.png)  center /100% 100%;
 
 /*
@@ -1451,7 +1451,7 @@ TODO:         >> Horizontal
 
     display: inline-flex;
     border-radius: 1000px;
-    background: $bg_button;
+    background: $bg_choice;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1527,7 +1527,7 @@ TODO:         >> Vertical
 .choice_v {
 
     border-radius: 20px;
-    background: $bg_button;
+    background: $bg_choice;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1597,7 +1597,7 @@ TODO:         >> Dropdown
 .choice_d {
 
     border-radius: 20px;
-    background: $bg_button;
+    background: $bg_choice;
     text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
@@ -1977,12 +1977,54 @@ TODO: Switch
     left: 22px;
 }
 
+// Switch - Smaller Size
+
+.switch_smaller {
+
+    > :nth-child(1) {
+        width: 42px;
+        height: 24px;
+        border-radius: 12px;
+        transition: all 0.29s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.29s; 
+    }
+} 
+
+.switch_smaller.disabled > :nth-child(1)::before {
+    top: 0px;
+    left: 1px;
+}
+
+.switch_smaller.on { 
+
+    > :nth-child(1) {
+        transition: all 0.29s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 21px;
+        transition: all 0.29s; 
+    }
+}
+
+.switch_smaller.on.disabled > :nth-child(1)::before { 
+    left: 17px;
+}
+
 // Switch - Small Size
 
 .switch_small {
 
     > :nth-child(1) {
-        width: 48px;
+        width: 46px;
         height: 26px;
         border-radius: 13px;
         transition: all 0.31s; 
@@ -2010,13 +2052,13 @@ TODO: Switch
     }
     
     > :nth-child(1)::before {
-        left: 26px;
+        left: 24px;
         transition: all 0.31s; 
     }
 }
 
 .switch_small.on.disabled > :nth-child(1)::before { 
-    left: 22px;
+    left: 20px;
 }
 
 // Switch - Big Size
@@ -2059,4 +2101,46 @@ TODO: Switch
 
 .switch_big.on.disabled > :nth-child(1)::before { 
     left: 24px;
+}
+
+// Switch - Bigger Size
+
+.switch_bigger {
+
+    > :nth-child(1) {
+        width: 58px;
+        height: 32px;
+        border-radius: 16px;
+        transition: all 0.37s; 
+    }
+
+    > :nth-child(1)::before {
+        width: 22px;
+        height: 22px;
+        border-radius: 11px;
+        top: 5px;
+        left: 5px;
+        transition: all 0.37s; 
+    }
+} 
+
+.switch_bigger.disabled > :nth-child(1)::before {
+    top: 2px;
+    left: 2px;
+}
+
+.switch_bigger.on { 
+
+    > :nth-child(1) {
+        transition: all 0.37s; 
+    }
+    
+    > :nth-child(1)::before {
+        left: 31px;
+        transition: all 0.37s; 
+    }
+}
+
+.switch_bigger.on.disabled > :nth-child(1)::before { 
+    left: 28px;
 }
