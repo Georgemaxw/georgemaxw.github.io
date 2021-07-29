@@ -1721,6 +1721,12 @@ figure.outdoor img {
   }
 }
 
+@media (max-height: 501px) {
+  img.outdoor, video.outdoor, figure.outdoor img {
+    max-height: 100vh;
+  }
+}
+
 /*  
 ────────────────────────────
 TODO:    > Gallery
@@ -1748,6 +1754,16 @@ TODO:    > Slider
   white-space: nowrap;
 }
 
+.slider img, .slider picture {
+  width: 94%;
+}
+
+@media (max-height: 501px) {
+  .slider img, .slider picture {
+    max-height: 100vh;
+  }
+}
+
 @media (min-width: 501px) {
   .slider {
     margin-left: 20px;
@@ -1762,10 +1778,6 @@ TODO:    > Slider
   .slider:hover {
     overflow-x: auto;
   }
-}
-
-.slider img, .slider picture {
-  width: 94%;
 }
 
 .slider::-webkit-scrollbar {
