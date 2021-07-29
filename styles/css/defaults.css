@@ -1244,6 +1244,12 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
   max-width: none;
 }
 
+.lb {
+  /* Line break */
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+}
+
 .lb1 {
   /* Line break */
   margin-top: calc(1 * 16rem);
@@ -1694,6 +1700,8 @@ img.outdoor, video.outdoor {
     width: calc(100% - (2 * 20px));
     margin-left: auto;
     margin-right: auto;
+    border-radius: 40px;
+    box-shadow: 6px 6px 24px -15px black;
   }
 }
 
@@ -1706,6 +1714,10 @@ figure.outdoor img {
     width: calc(100% - (2 * 20px));
     margin-left: auto;
     margin-right: auto;
+  }
+  figure.outdoor img {
+    border-radius: 40px;
+    box-shadow: 6px 6px 24px -15px black;
   }
 }
 
@@ -2237,7 +2249,7 @@ TODO: Switch
 
 .switch.inverted > :nth-child(1) {
   order: 1;
-  margin-left: 20px;
+  margin-left: 18px;
   margin-right: 0;
 }
 
