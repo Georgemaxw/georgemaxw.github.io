@@ -1340,16 +1340,13 @@ figure.outdoor img {
 @media (min-width: $tablet) {
 
     figure.outdoor {
-        width: calc(100% - (2 * #{$margin_horizontal}) );
-    }
+        max-width: calc(100% - (2 * #{$margin_horizontal}) );
 }
-
-@media (min-width: $tablet) {
-
     figure.outdoor img {
         border-radius: 40px;
         box-shadow: 6px 6px 24px -15px black;
     }
+    
 }
 
 // img, video, figure:

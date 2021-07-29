@@ -1722,11 +1722,8 @@ figure.outdoor img {
 
 @media (min-width: 501px) {
   figure.outdoor {
-    width: calc(100% - (2 * 20px));
+    max-width: calc(100% - (2 * 20px));
   }
-}
-
-@media (min-width: 501px) {
   figure.outdoor img {
     border-radius: 40px;
     box-shadow: 6px 6px 24px -15px black;
