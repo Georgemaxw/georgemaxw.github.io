@@ -1701,9 +1701,6 @@ img.outdoor, video.outdoor {
   img.outdoor, video.outdoor {
     max-width: calc(100% - (2 * 20px));
   }
-}
-
-@media (min-width: 501px) and (min-height: 501px) {
   img.outdoor, video.outdoor {
     border-radius: 40px;
     box-shadow: 6px 6px 24px -15px black;

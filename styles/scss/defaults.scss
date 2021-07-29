@@ -1313,12 +1313,11 @@ img.outdoor, video.outdoor {
 }
 
 @media (min-width: $tablet) {
+    
     img.outdoor, video.outdoor {
         max-width: calc(100% - (2 * #{$margin_horizontal}) );
     }
-}
-
-@media (min-width: $tablet) and (min-height: $tablet) {
+    
     img.outdoor, video.outdoor {
         border-radius: 40px;
         box-shadow: 6px 6px 24px -15px black; 
