@@ -1356,10 +1356,8 @@ figure.outdoor img {
 
 @media (max-height: $tablet) {
 
-    img.outdoor, video.outdoor, figure.outdoor img {
-        //width: auto;
-        //max-width: 100vw;
-        max-height: 50vh;
+    img.outdoor, video.outdoor, figure.outdoor img { 
+        max-height: 100vh;
     }
 }
 
