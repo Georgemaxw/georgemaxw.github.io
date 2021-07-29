@@ -1723,7 +1723,7 @@ figure.outdoor img {
 
 @media (max-height: 501px) {
   img.outdoor, video.outdoor, figure.outdoor img {
-    max-height: 100vh;
+    max-height: 50vh;
   }
 }
 
@@ -1760,7 +1760,7 @@ TODO:    > Slider
 
 @media (max-height: 501px) {
   .slider img, .slider picture {
-    max-height: 100vh;
+    max-height: 50vh;
   }
 }
 

@@ -1340,7 +1340,7 @@ figure.outdoor img {
 @media (max-height: $tablet) {
 
     img.outdoor, video.outdoor, figure.outdoor img {
-        max-height: 100vh;
+        max-height: 50vh;
     }
 }
 
@@ -1382,7 +1382,7 @@ TODO:    > Slider
 @media (max-height: $tablet) {
 
     .slider img, .slider picture {
-        max-height: 100vh;
+        max-height: 50vh;
     }
 }
 
