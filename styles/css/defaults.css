@@ -32,13 +32,13 @@ html {
 ──────────────────────────────────────────────────────
 TODO: Margens
 ────────────────────────────────────────────────────── */
-.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, pre, fieldset, hr, .switch {
+.offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, pre, fieldset, hr, .switch {
   /* Lateral margins */
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h, .choice_h.switch {
+.choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, h7.choice_h, h8.choice_h, h9.choice_h, h10.choice_h, h11.choice_h, h12.choice_h, h13.choice_h, h14.choice_h, h15.choice_h, h16.choice_h, h17.choice_h, h18.choice_h, h19.choice_h, h20.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h, .choice_h.switch {
   display: flex;
 }
 
@@ -73,45 +73,172 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  /* text-transform: capitalize; */
-}
-
 h1 {
   font-size: calc(50rem - (5 * 1rem));
   margin-top: calc(7rem - 1rem + 16rem);
   margin-bottom: calc(7rem - 1rem + 16rem);
+  text-align: center;
 }
 
 h2 {
   font-size: calc(50rem - (5 * 2rem));
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
+  text-align: center;
 }
 
 h3 {
   font-size: calc(50rem - (5 * 3rem));
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
+  text-align: center;
 }
 
 h4 {
   font-size: calc(50rem - (5 * 4rem));
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
+  text-align: center;
 }
 
 h5 {
   font-size: calc(50rem - (5 * 5rem));
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
+  text-align: center;
 }
 
 h6 {
   font-size: calc(50rem - (5 * 6rem));
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
+  text-align: center;
+}
+
+h7 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h8 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h9 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h10 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h11 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h12 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h13 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h14 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h15 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h16 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h17 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h18 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h19 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h20 {
+  display: block;
+  font-size: 20rem;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 p, li, ul, ol, dl, dt, dd {
@@ -280,11 +407,11 @@ TODO:    > Header-nav
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
 ────────────────────────────
-TODO:         >> Menu
+TODO:        >> Menu
 ──────────────────────────── */
   /*  
 ────────────────────────────
-TODO:         >> Expandido
+TODO:        >> Expandido
 ──────────────────────────── */
 }
 
@@ -433,6 +560,11 @@ TODO:         >> Expandido
 }
 
 @media (pointer: fine) {
+  .header-nav {
+    /*.nav-menu ul {
+            overflow: hidden;
+        }*/
+  }
   .header-nav .nav-menu ul:hover {
     overflow: auto;
   }
@@ -499,6 +631,9 @@ TODO:         >> Expandido
     background-color: #00c8ff;
     background: url(../../images/bg_nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
+    /* li:hover {
+                background: $bg_nav_selector;
+            }*/
   }
   .header-nav .nav-menu ul li div ul li:nth-child(1) {
     border-top: 0;
@@ -872,7 +1007,7 @@ TODO:    > Widgets
 ──────────────────────────── */
 /*  
 ────────────────────────────
-TODO:         >> inputs e textarea
+TODO:        >> inputs e textarea
 ──────────────────────────── */
 input[type="text"], input[type="email"], textarea {
   color: black;
@@ -985,7 +1120,7 @@ input[type="checkbox"]:disabled::before {
 */
 /*  
 ────────────────────────────
-TODO:         >> select
+TODO:        >> select
 ──────────────────────────── */
 select {
   border-radius: 5px;
@@ -1000,10 +1135,10 @@ select {
 
 /*  
 ────────────────────────────
-TODO:         >> button
+TODO:        >> button
 ──────────────────────────── */
 button {
-  min-width: 120px;
+  min-width: 116px;
   color: white;
   padding: 10rem 0;
   border-width: 0;
@@ -1234,13 +1369,13 @@ figure.center {
 /*.center.choice_v, .center.choice_d {
     
 }*/
-.center.offset, p.center, dl.center, .footer-content .center.footer-icons, label.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, pre.center, fieldset.center, hr.center, .center.switch {
+.center.offset, p.center, dl.center, .footer-content .center.footer-icons, label.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, h7.center, h8.center, h9.center, h10.center, h11.center, h12.center, h13.center, h14.center, h15.center, h16.center, h17.center, h18.center, h19.center, h20.center, pre.center, fieldset.center, hr.center, .center.switch {
   margin-left: auto;
   margin-right: auto;
   max-width: calc(100% - (2 * 20px));
 }
 
-.center.offset.choice_d_open, p.center.choice_d_open, dl.center.choice_d_open, .footer-content .center.choice_d_open.footer-icons, label.center.choice_d_open, h1.center.choice_d_open, h2.center.choice_d_open, h3.center.choice_d_open, h4.center.choice_d_open, h5.center.choice_d_open, h6.center.choice_d_open, pre.center.choice_d_open, fieldset.center.choice_d_open, hr.center.choice_d_open, .center.choice_d_open.switch {
+.center.offset.choice_d_open, p.center.choice_d_open, dl.center.choice_d_open, .footer-content .center.choice_d_open.footer-icons, label.center.choice_d_open, h1.center.choice_d_open, h2.center.choice_d_open, h3.center.choice_d_open, h4.center.choice_d_open, h5.center.choice_d_open, h6.center.choice_d_open, h7.center.choice_d_open, h8.center.choice_d_open, h9.center.choice_d_open, h10.center.choice_d_open, h11.center.choice_d_open, h12.center.choice_d_open, h13.center.choice_d_open, h14.center.choice_d_open, h15.center.choice_d_open, h16.center.choice_d_open, h17.center.choice_d_open, h18.center.choice_d_open, h19.center.choice_d_open, h20.center.choice_d_open, pre.center.choice_d_open, fieldset.center.choice_d_open, hr.center.choice_d_open, .center.choice_d_open.switch {
   max-width: none;
 }
 
@@ -1682,13 +1817,21 @@ figure.center {
   height: 40px;
 }
 
+/*  
+──────────────────────────────────────────────────────
+TODO: Classes Para Serem Aplicadas Somente Via JS
+────────────────────────────────────────────────────── */
+.overflow_hidden {
+  overflow: hidden;
+}
+
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
-TODO:    > Outdoor
+TODO:    > Outdoors
 ──────────────────────────── */
 img.outdoor, video.outdoor {
   display: block;
@@ -1729,14 +1872,13 @@ figure.outdoor img {
 
 @media (max-height: 501px) {
   img.outdoor, video.outdoor, figure.outdoor img {
-    max-height: 100vh;
     max-height: calc(100vh - 48px);
   }
 }
 
 /*  
 ────────────────────────────
-TODO:    > Gallery
+TODO:    > Galleries
 ──────────────────────────── */
 .gallery img {
   width: 50%;
@@ -1754,7 +1896,7 @@ TODO:    > Gallery
 
 /*  
 ────────────────────────────
-TODO:    > Slider
+TODO:    > Sliders
 ──────────────────────────── */
 .slider {
   overflow-x: auto;
@@ -1807,7 +1949,7 @@ TODO:    > Slider
 
 /*  
 ────────────────────────────
-TODO:    > Choice 
+TODO:    > Choices
 ──────────────────────────── */
 .choice_h, .choice_v, .choice_d {
   display: inline-block;
@@ -1839,7 +1981,7 @@ TODO:    > Choice
 
 /*  
 ────────────────────────────
-TODO:         >> Horizontal
+TODO:        >> Horizontal
 ──────────────────────────── */
 .choice_h {
   display: inline-flex;
@@ -1906,7 +2048,7 @@ TODO:         >> Horizontal
 
 /*  
 ────────────────────────────
-TODO:         >> Vertical
+TODO:        >> Vertical
 ──────────────────────────── */
 .choice_v {
   border-radius: 20px;
@@ -1969,7 +2111,7 @@ TODO:         >> Vertical
 
 /*  
 ────────────────────────────
-TODO:         >> Dropdown
+TODO:        >> Dropdown
 ──────────────────────────── */
 .choice_d {
   border-radius: 20px;
@@ -2104,7 +2246,7 @@ TODO:         >> Dropdown
 }*/
 /*  
 ────────────────────────────
-TODO:         >> Option ON
+TODO:        >> Option ON
 ──────────────────────────── */
 .choice_h > li > a.on, .choice_v > li > a.on {
   background: rgba(255, 255, 255, 0.45);
@@ -2118,7 +2260,7 @@ TODO:         >> Option ON
 
 /*  
 ────────────────────────────
-TODO:         >> No Label
+TODO:        >> No Label
 ──────────────────────────── */
 .noLabel > li:nth-of-type(1) {
   display: none;
@@ -2163,7 +2305,7 @@ TODO:         >> No Label
 
 /*  
 ────────────────────────────
-TODO:         >> Desabilitado
+TODO:        >> Desabilitado
 ──────────────────────────── */
 .choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
   opacity: 0.5;
@@ -2190,15 +2332,7 @@ TODO:         >> Desabilitado
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Classes Para Serem Aplicadas Somente Via JS
-────────────────────────────────────────────────────── */
-.overflow_hidden {
-  overflow: hidden;
-}
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Switch
+TODO: Switchs
 ────────────────────────────────────────────────────── */
 .switch {
   display: flex;
@@ -2562,3 +2696,169 @@ TODO: Switch
     left: 21px;
 }
 */
+/*  
+──────────────────────────────────────────────────────
+TODO: Cards
+────────────────────────────────────────────────────── */
+/*  
+──────────────────────────────────────────────────────
+TODO: Posters
+────────────────────────────────────────────────────── */
+.poster {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.poster_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.poster_header > * {
+  text-align: center;
+}
+
+.poster_body > p {
+  text-indent: 0;
+}
+
+.posters {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+.posters.h_2 {
+
+    @media (min-width: $tablet) {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        > * {
+            width: calc((100% - (4 * 20px))/2); 
+        }
+    }
+}
+*/
+@media (min-width: 501px) {
+  .posters.h_2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_2 > * {
+    width: calc((100% - ((2 * 2) * 20px))/2);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_3 > * {
+    width: calc((100% - ((2 * 3) * 20px))/3);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_4 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_4 > * {
+    width: calc((100% - ((2 * 4) * 20px))/4);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_5 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_5 > * {
+    width: calc((100% - ((2 * 5) * 20px))/5);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_6 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_6 > * {
+    width: calc((100% - ((2 * 6) * 20px))/6);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_7 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_7 > * {
+    width: calc((100% - ((2 * 7) * 20px))/7);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_8 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_8 > * {
+    width: calc((100% - ((2 * 8) * 20px))/8);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_9 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_9 > * {
+    width: calc((100% - ((2 * 9) * 20px))/9);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_10 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_10 > * {
+    width: calc((100% - ((2 * 10) * 20px))/10);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_11 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_11 > * {
+    width: calc((100% - ((2 * 11) * 20px))/11);
+  }
+}
+
+@media (min-width: 501px) {
+  .posters.h_12 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .posters.h_12 > * {
+    width: calc((100% - ((2 * 12) * 20px))/12);
+  }
+}
