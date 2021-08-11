@@ -2696,14 +2696,87 @@ TODO: Switchs
     left: 21px;
 }
 */
-/*  
+/*
 ──────────────────────────────────────────────────────
-TODO: Cards
+TODO: Cards & Posters
 ────────────────────────────────────────────────────── */
 /*  
-──────────────────────────────────────────────────────
-TODO: Posters
-────────────────────────────────────────────────────── */
+────────────────────────────
+TODO:    > Cards
+──────────────────────────── */
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black;
+}
+
+.card_text > :nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.card_img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.card.h1, .card.h2 {
+  flex-direction: row;
+}
+
+.card.h1 .card_img, .card.h2 .card_img {
+  max-width: 40%;
+}
+
+.card.h1 .card_text h2, .card.h1 .card_text h3, .card.h1 .card_text h4, .card.h1 .card_text h5, .card.h1 .card_text h6, .card.h1 .card_text h7, .card.h1 .card_text h8, .card.h1 .card_text h9, .card.h1 .card_text h10, .card.h1 .card_text h11, .card.h1 .card_text h12, .card.h1 .card_text h13, .card.h1 .card_text h14, .card.h1 .card_text h15, .card.h1 .card_text h16, .card.h1 .card_text h17, .card.h1 .card_text h18, .card.h1 .card_text h19, .card.h1 .card_text h20, .card.h2 .card_text h2, .card.h2 .card_text h3, .card.h2 .card_text h4, .card.h2 .card_text h5, .card.h2 .card_text h6, .card.h2 .card_text h7, .card.h2 .card_text h8, .card.h2 .card_text h9, .card.h2 .card_text h10, .card.h2 .card_text h11, .card.h2 .card_text h12, .card.h2 .card_text h13, .card.h2 .card_text h14, .card.h2 .card_text h15, .card.h2 .card_text h16, .card.h2 .card_text h17, .card.h2 .card_text h18, .card.h2 .card_text h19, .card.h2 .card_text h20 {
+  text-align: left;
+}
+
+.card.h1 {
+  display: flow-root;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card.h1 .card_img {
+  float: left;
+  margin-top: 16rem;
+  margin-right: 20px;
+}
+
+.card.h1 .card_text > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card.h1 .card_text > :nth-child(1) {
+  margin-top: calc(2 * 16rem);
+}
+
+.card.h1 .card_text::after {
+  content: "";
+  display: block;
+  height: 16rem;
+  clear: both;
+}
+
+.card.h2 .card_text > * {
+  margin-right: 0;
+}
+
+.card.h2 .card_text > :nth-child(1) {
+  margin-top: 0;
+}
+
+/*  
+────────────────────────────
+TODO:    > Posters
+──────────────────────────── */
 .poster {
   display: inline-flex;
   flex-direction: column;
@@ -2734,13 +2807,17 @@ TODO: Posters
   text-indent: 0;
 }
 
-.posters {
+/*  
+────────────────────────────
+TODO:    > Groups
+──────────────────────────── */
+.group {
   display: flex;
   flex-direction: column;
 }
 
 /*
-.posters.h_2 {
+.group.h_2 {
 
     @media (min-width: $tablet) {
 
@@ -2754,111 +2831,179 @@ TODO: Posters
 }
 */
 @media (min-width: 501px) {
-  .posters.h_2 {
+  .group.c_2 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_2 > * {
+  .group.c_2 > * {
     width: calc((100% - ((2 * 2) * 20px))/2);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_3 {
+  .group.c_3 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_3 > * {
+  .group.c_3 > * {
     width: calc((100% - ((2 * 3) * 20px))/3);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_4 {
+  .group.c_4 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_4 > * {
+  .group.c_4 > * {
     width: calc((100% - ((2 * 4) * 20px))/4);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_5 {
+  .group.c_5 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_5 > * {
+  .group.c_5 > * {
     width: calc((100% - ((2 * 5) * 20px))/5);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_6 {
+  .group.c_6 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_6 > * {
+  .group.c_6 > * {
     width: calc((100% - ((2 * 6) * 20px))/6);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_7 {
+  .group.c_7 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_7 > * {
+  .group.c_7 > * {
     width: calc((100% - ((2 * 7) * 20px))/7);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_8 {
+  .group.c_8 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_8 > * {
+  .group.c_8 > * {
     width: calc((100% - ((2 * 8) * 20px))/8);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_9 {
+  .group.c_9 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_9 > * {
+  .group.c_9 > * {
     width: calc((100% - ((2 * 9) * 20px))/9);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_10 {
+  .group.c_10 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_10 > * {
+  .group.c_10 > * {
     width: calc((100% - ((2 * 10) * 20px))/10);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_11 {
+  .group.c_11 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_11 > * {
+  .group.c_11 > * {
     width: calc((100% - ((2 * 11) * 20px))/11);
   }
 }
 
 @media (min-width: 501px) {
-  .posters.h_12 {
+  .group.c_12 {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .posters.h_12 > * {
+  .group.c_12 > * {
     width: calc((100% - ((2 * 12) * 20px))/12);
   }
+}
+
+/*
+──────────────────────────────────────────────────────
+TODO: Lightbox
+────────────────────────────────────────────────────── */
+/* Unopened lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Opened lightbox */
+.lightbox:target {
+  display: flex;
+}
+
+/* Lightbox content */
+.lightbox figcaption {
+  position: relative;
+  padding: 24px;
+  border-radius: 20px;
+  color: white;
+  background-color: #00c8ff;
+  box-shadow: 6px 6px 24px -15px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+/* Close button */
+.lightbox .close {
+  position: relative;
+  display: block;
+}
+
+.lightbox .close::after {
+  right: -20px;
+  top: -13px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #505050;
+  border-radius: 50%;
+  box-shadow: inset 1px -3px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5);
+  font-size: 31rem;
+  content: "×";
+  cursor: pointer;
+}
+
+/* Lightbox overlay */
+.lightbox .close::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  content: "";
+  cursor: default;
 }

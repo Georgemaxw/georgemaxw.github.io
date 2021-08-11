@@ -87,6 +87,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 
 $zIndex_nav: 64;
 $zIndex_choice_d_open: 128;
+$zIndex_lightbox: 1290;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -2283,18 +2284,105 @@ TODO: Switchs
     left: 21px;
 }
 */
-
-/*  
+      
+/*
 ──────────────────────────────────────────────────────
-TODO: Cards
+TODO: Cards & Posters
 ────────────────────────────────────────────────────── */
 
-
-
 /*  
-──────────────────────────────────────────────────────
-TODO: Posters
-────────────────────────────────────────────────────── */
+────────────────────────────
+TODO:    > Cards
+──────────────────────────── */
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+    color: $color_text;
+}
+
+.card_text > :nth-last-child(1) { 
+
+    margin-bottom: 0;
+}
+
+.card_img {
+    max-width: 100%; 
+    max-height: 100%;
+    border-radius: 20px;
+}
+
+.card.h1, .card.h2 {
+
+    flex-direction: row;
+
+    .card_img {
+        max-width: 40%; 
+    }
+
+    .card_text {
+
+        h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20 {
+
+            //font-size: $font_size;
+            text-align: left;
+        }
+    }
+}
+
+.card.h1 { // Card + Float
+
+    display: flow-root; 
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .card_img {
+        float: left;
+        margin-top: $margin_vertical;
+        margin-right: $margin_horizontal; 
+    }
+
+    .card_text { 
+        
+        > * {
+            margin-left: 0; 
+            margin-right: 0;
+        }
+
+        > :nth-child(1) { 
+            margin-top: calc(2 * #{$margin_vertical});
+        }  
+    }
+
+    .card_text::after {
+
+        content: "";
+        display: block;
+        height: $margin_vertical;
+        clear: both;
+    }
+}
+
+.card.h2 .card_text {
+
+    > * {
+        margin-right: 0;
+    }
+    
+    > :nth-child(1) {
+        margin-top: 0;
+    }
+}
+ 
+/*  
+────────────────────────────
+TODO:    > Posters
+──────────────────────────── */
 
 .poster {
     display: inline-flex;
@@ -2329,14 +2417,18 @@ TODO: Posters
         text-indent: 0;
     }
 }
+/*  
+────────────────────────────
+TODO:    > Groups
+──────────────────────────── */
 
-.posters {
+.group {
     display: flex;
     flex-direction: column;
 }
 
 /*
-.posters.h_2 {
+.group.h_2 {
 
     @media (min-width: $tablet) {
 
@@ -2352,7 +2444,7 @@ TODO: Posters
 
 @for $i from 2 through 12 {
 
-    .posters.h_#{$i} {
+    .group.c_#{$i} {
 
         @media (min-width: $tablet) {
 
@@ -2364,4 +2456,79 @@ TODO: Posters
             }
         }
     }
+}
+
+
+/*
+──────────────────────────────────────────────────────
+TODO: Lightbox
+────────────────────────────────────────────────────── */
+
+/* Unopened lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+  
+  /* Opened lightbox */
+.lightbox:target {
+    display: flex;
+}
+
+  /* Lightbox content */
+.lightbox figcaption {
+    position: relative;
+    padding: 24px;
+    border-radius: 20px;
+    color: $color_text_menu;
+    background-color: $color_theme;
+    box-shadow: 6px 6px 24px -15px black,
+    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
+    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    //box-shadow: ; 
+}
+  
+/* Close button */
+.lightbox .close {
+    position: relative;
+    display: block;
+}
+  
+.lightbox .close::after {
+    right: -20px;
+    top: -13px;
+    width: $button_height_small; 
+    height: $button_height_small;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(80, 80, 80);
+    border-radius: 50%;
+    box-shadow: 
+    inset 1px -3px 5px 3px hsla(0, 0%, 0%, 0.5),
+    inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5);
+    font-size: 31rem;
+    content: "×";
+    cursor: pointer;
+}
+  
+/* Lightbox overlay */
+    .lightbox .close::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: hsla(0, 0%, 100%, 0.7);
+    content: "";
+    cursor: default;
 }
