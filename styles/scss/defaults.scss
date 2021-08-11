@@ -2501,7 +2501,8 @@ TODO: Lightbox
 .lightbox_layout {
     position: relative;
     padding: 24px;
-    overflow: auto; 
+    overflow-x: hidden;
+    overflow-y: auto;
 
     max-width: calc(100vw - (2 * #{$button_height_small}));
     max-height: calc(100vh - (2 * #{$button_height}));
