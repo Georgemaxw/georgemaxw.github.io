@@ -2990,7 +2990,7 @@ TODO: Lightbox
   color: white;
   background-color: #505050;
   border-radius: 50%;
-  box-shadow: inset -1px -4px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: inset -2px -4px 5px 3px rgba(0, 0, 0, 0.5), inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5);
   font-size: 31rem;
   content: "×";
   cursor: pointer;
