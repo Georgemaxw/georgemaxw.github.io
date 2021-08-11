@@ -2984,6 +2984,7 @@ TODO: Lightbox
   border-radius: 20px;
   color: white;
   background: url(../../images/bg_lightbox.png) center/100% 100%, #00c8ff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -3016,4 +3017,23 @@ TODO: Lightbox
   border-radius: 50%;
   background: url(../../images/icon_lightbox_close.svg) center/100% 100%, #555555;
   box-shadow: inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5), inset -3px -4px 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox_layout::-webkit-scrollbar {
+  width: 10px;
+  height: 11px;
+}
+
+.lightbox_layout::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+}
+
+.lightbox_layout::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lightbox_layout {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(0, 0, 0, 0.14) transparent;
 }

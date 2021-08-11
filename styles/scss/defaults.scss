@@ -2509,6 +2509,7 @@ TODO: Lightbox
     border-radius: 20px;
     color: $color_text_menu;
     background: $bg_lightbox;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 6px 6px 24px -14px black,
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
     inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
@@ -2549,4 +2550,25 @@ TODO: Lightbox
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
+}
+
+// Lightbox Layout - Scrollbars:
+
+.lightbox_layout::-webkit-scrollbar { // Entire bar
+    width: 10px;
+    height: 11px;
+}
+
+.lightbox_layout::-webkit-scrollbar-thumb { // Bar pointer
+    background: $color_menu_scrollbar_thumb;    
+    border-radius: 10px;
+}
+
+.lightbox_layout::-webkit-scrollbar-track {   // Bar background
+    background: $color_menu_scrollbar_track; 
+}
+
+.lightbox_layout {
+    scrollbar-width: auto;
+    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
 }
