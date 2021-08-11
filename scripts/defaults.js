@@ -521,3 +521,28 @@ function switch_event(arg) {
 
     arg.classList.toggle('on')
 } 
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Lightbox
+────────────────────────────────────────────────────── */
+
+var lightbox_html = document.createElement("div");
+
+lightbox_html.classList.add("lightbox")
+
+lightbox_html.innerHTML = `
+    <figure>
+        <a class="lightbox_closeArea" onclick="this.parentNode.parentNode.style = 'display: none'"></a> 
+        <figcaption class="lightbox_layout"></figcaption>
+    </figure>
+`
+
+document.body.appendChild(lightbox_html);
+
+function lightbox(arg) {
+
+    document.querySelector('.lightbox_layout').textContent = arg
+
+    document.querySelector('.lightbox').style = 'display: flex'
+}
