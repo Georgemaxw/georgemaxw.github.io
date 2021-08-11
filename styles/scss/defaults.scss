@@ -1373,7 +1373,7 @@ figure.outdoor img {
 
     img.outdoor, video.outdoor, figure.outdoor img { 
         //max-height: 100vh;
-        max-height: calc(100vh - #{$button-height}) ;
+        max-height: calc(100vh - #{$button_height}) ;
     }
 }
 
@@ -2467,13 +2467,14 @@ TODO: Lightbox
 /* Unopened lightbox */
 .lightbox {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    left: 0;
+    z-index: 200;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
 }
   
   /* Opened lightbox */
@@ -2484,14 +2485,20 @@ TODO: Lightbox
   /* Lightbox content */
 .lightbox figcaption {
     position: relative;
+    //top: $button_height;
+    //top: 0;
     padding: 24px;
+    //margin: 0;
+    //margin: 0 $button_height_small;
     border-radius: 20px;
     color: $color_text_menu;
     background-color: $color_theme;
     box-shadow: 6px 6px 24px -15px black,
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
     inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
-    //box-shadow: ; 
+    overflow:auto; 
+    max-width: calc(100vw - (2 * #{$button_height_small}));
+    max-height: calc(100vh - (2 * #{$button_height}));
 }
   
 /* Close button */
@@ -2501,8 +2508,10 @@ TODO: Lightbox
 }
   
 .lightbox .close::after {
-    right: -20px;
-    top: -13px;
+    right: calc(#{$button_height_small} - 20px) ;
+    top: calc(#{$button_height_small} - 13px);
+    right: calc(-19px) ;
+    top: calc(-12px);
     width: $button_height_small; 
     height: $button_height_small;
     position: absolute;
@@ -2514,7 +2523,7 @@ TODO: Lightbox
     background-color: rgb(80, 80, 80);
     border-radius: 50%;
     box-shadow: 
-    inset -2px -4px 5px 3px hsla(0, 0%, 0%, 0.5),
+    inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.5),
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5);
     font-size: 31rem;
     content: "×";
@@ -2523,12 +2532,12 @@ TODO: Lightbox
   
 /* Lightbox overlay */
     .lightbox .close::before {
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: hsla(0, 0%, 100%, 0.7);
+    //background-color: hsla(0, 0%, 100%, 0.7);
     content: "";
     cursor: default;
 }
