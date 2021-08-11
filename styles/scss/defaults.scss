@@ -75,7 +75,7 @@ $bg_kbd: hsl(0, 0%, 86%);
 $bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
 $bg_choice: url(../../images/bg_choice.png)  center /100% 100%;
 $bg_choice_d_open: url(../../images/bg_choice_d_open.png)  center /100% 100%;
-$bg_lightbox: $color_theme;
+$bg_lightbox: url(../../images/bg_lightbox.png)  center /100% 100%, $color_theme;
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -2488,6 +2488,7 @@ TODO: Lightbox
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
     //background-color: hsla(0, 0%, 100%, 0.7);
@@ -2511,14 +2512,31 @@ TODO: Lightbox
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
     inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
 }
+
+.lightbox_img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.lightbox_img_marginBottom {
+    margin-bottom: $margin_vertical;
+}
+
+.lightbox_text {
+    //display: block; 
+    font-size: $font_size; 
+}
   
 /* Close Button */
 
 .lightbox_closeArea::after {
     content: "";
     position: absolute;
+    top: -19px;
     right: -19px;
-    top: -12px;
     z-index: 1;
     cursor: pointer;
 

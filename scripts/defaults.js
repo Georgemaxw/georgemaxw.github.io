@@ -532,17 +532,43 @@ var lightbox_html = document.createElement("div");
 lightbox_html.classList.add("lightbox")
 
 lightbox_html.innerHTML = `
-    <figure>
-        <a class="lightbox_closeArea" onclick="this.parentNode.parentNode.style = 'display: none'"></a> 
-        <figcaption class="lightbox_layout"></figcaption>
-    </figure>
+<div>
+        <a class="lightbox_closeArea" onclick="lightbox_close(this)"></a> 
+        <div class="lightbox_layout">
+            <img src="" alt="" class="lightbox_img">
+            <div class="lightbox_text"></div>
+        </div>
+</div>    
 `
 
 document.body.appendChild(lightbox_html);
 
-function lightbox(arg) {
+function lightbox(txt, img, width) { 
 
-    document.querySelector('.lightbox_layout').textContent = arg
+    document.querySelector('.lightbox_text').textContent = txt
+
+    if(img === undefined) {
+        document.querySelector('.lightbox_img').setAttribute('src', '') 
+        document.querySelector('.lightbox_img').classList.remove('lightbox_img_marginBottom')
+    } else {
+        document.querySelector('.lightbox_img').setAttribute('src', img) 
+        document.querySelector('.lightbox_img').classList.add('lightbox_img_marginBottom')
+    } 
+ 
+    if(width === undefined) {
+        document.querySelector('.lightbox_img').style = 'width: auto' 
+    } else {
+        document.querySelector('.lightbox_img').style = 'width: '+ width +'px' 
+    }
 
     document.querySelector('.lightbox').style = 'display: flex'
+
+    document.querySelector('html').classList.add('overflow_hidden') 
+}
+
+function lightbox_close(arg) {
+
+    arg.parentNode.parentNode.style = 'display: none';  
+    
+    document.querySelector('html').classList.remove('overflow_hidden')
 }
