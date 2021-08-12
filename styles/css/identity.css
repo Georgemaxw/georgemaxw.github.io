@@ -22,6 +22,21 @@ sc4 {
 
 /*  
 ──────────────────────────────────────────────────────
+TODO: Display
+────────────────────────────────────────────────────── */
+.display {
+  display: inline-block;
+  border: 6px ridge #d4d4d4;
+  min-width: 34px;
+  min-height: 40px;
+  border-radius: 10px;
+  padding-right: 7px;
+  color: white;
+  background: #5e5e5e;
+}
+
+/*  
+──────────────────────────────────────────────────────
 TODO: Exemplos De Choice 
 ────────────────────────────────────────────────────── */
 .choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {

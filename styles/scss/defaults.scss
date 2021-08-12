@@ -314,13 +314,13 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 
 
 
-$color_text_success: hsl(120, 100%, 39%);
-$color_text_attention: hsl(45, 74%, 49%);
+$color_text_success: hsl(120, 100%, 35%);
+$color_text_attention: hsl(45, 74%, 45%);
 $color_text_fail: red;
 $color_text_danger: white;
 
-$color_border_success: hsl(120, 100%, 48%);
-$color_border_attention: hsl(43, 74%, 76%);
+$color_border_success: hsl(120, 100%, 44%);
+$color_border_attention: hsl(43, 74%, 72%);
 $color_border_fail: hsl(0, 100%, 55%);
 $color_border_danger_clear: hsl(0, 100%, 76%);
 $color_border_danger_dark: hsl(0, 100%, 31%);
@@ -356,17 +356,19 @@ $bg_danger: red;
 }
 
 .danger {
-    padding: 4px;
+    padding: 6px;
     color: $color_text_danger;
     background: $bg_danger;
     border-top: 4px solid $color_border_danger_clear;
     border-left: 4px solid $color_border_danger_clear;
     border-bottom: 4px solid $color_border_danger_dark;
     border-right: 4px solid $color_border_danger_dark;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .danger.long {
-    padding: 8px;
+    padding: 10px;
 }
 
 .success.long, .attention.long, .fail.long, .danger.long {

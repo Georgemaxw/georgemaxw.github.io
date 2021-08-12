@@ -379,15 +379,15 @@ p.text_container {
 }
 
 .success {
-  color: #00c700;
+  color: #00b300;
   background: #d1ffd1;
-  border: 2px solid #00f500;
+  border: 2px solid #00e000;
 }
 
 .attention {
-  color: #d9ab20;
+  color: #c89d1e;
   background: #fffbdb;
-  border: 2px solid #efd595;
+  border: 2px solid #ecce83;
 }
 
 .fail {
@@ -397,17 +397,19 @@ p.text_container {
 }
 
 .danger {
-  padding: 4px;
+  padding: 6px;
   color: white;
   background: red;
   border-top: 4px solid #ff8585;
   border-left: 4px solid #ff8585;
   border-bottom: 4px solid #9e0000;
   border-right: 4px solid #9e0000;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .danger.long {
-  padding: 8px;
+  padding: 10px;
 }
 
 .success.long, .attention.long, .fail.long, .danger.long {

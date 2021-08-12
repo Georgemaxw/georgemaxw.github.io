@@ -12,6 +12,22 @@ sc4 { color: purple; }
 
 /*  
 ──────────────────────────────────────────────────────
+TODO: Display
+────────────────────────────────────────────────────── */
+
+.display {
+    display: inline-block; 
+    border: 6px ridge hsl(0, 0%, 83%); 
+    min-width: 34px; 
+    min-height: 40px;
+    border-radius: 10px; 
+    padding-right: 7px; 
+    color: white; 
+    background: hsl(0, 0%, 37%);
+}
+
+/*  
+──────────────────────────────────────────────────────
 TODO: Exemplos De Choice 
 ────────────────────────────────────────────────────── */
 
