@@ -2509,7 +2509,6 @@ TODO: Lightbox
     border-radius: 20px;
     color: $color_text_menu;
     background: $bg_lightbox;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
     box-shadow: 6px 6px 24px -14px black,
     inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
     inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
@@ -2530,6 +2529,7 @@ TODO: Lightbox
 .lightbox_text {
     //display: block; 
     font-size: $font_size; 
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.15);
 }
   
 /* Close Button */

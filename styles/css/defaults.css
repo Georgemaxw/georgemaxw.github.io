@@ -2984,7 +2984,6 @@ TODO: Lightbox
   border-radius: 20px;
   color: white;
   background: url(../../images/bg_lightbox.png) center/100% 100%, #00c8ff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -3002,6 +3001,7 @@ TODO: Lightbox
 
 .lightbox_text {
   font-size: 19rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 /* Close Button */
