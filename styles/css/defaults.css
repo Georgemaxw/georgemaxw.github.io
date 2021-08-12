@@ -377,6 +377,7 @@ p.text_container {
   margin: 16rem 20px;
   font-size: 19rem;
   border-radius: 10px;
+  text-indent: 0;
 }
 
 .success {
@@ -394,7 +395,7 @@ p.text_container {
 .fail {
   color: red;
   background: #ffe0e0;
-  border: 2px solid #ff1a1a;
+  border: 2px solid #ff6666;
 }
 
 .danger {
@@ -450,7 +451,7 @@ TODO:    > Header-nav
   right: 0;
   z-index: 1000;
   color: white;
-  background-color: #00c8ff;
+  background-color: #00c0f5;
   background: url(../../images/bg_header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
@@ -676,7 +677,7 @@ TODO:        >> Expandido
     max-height: calc(100% - (2 * 48px));
     border-radius: 25px;
     margin-top: 48px;
-    background-color: #00c8ff;
+    background-color: #00c0f5;
     background: url(../../images/bg_nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
     /* li:hover {
@@ -754,7 +755,7 @@ TODO:    > Footer
 
 .footer-content .footer-icons {
   border-radius: 50px;
-  background-color: #00c8ff;
+  background-color: #00c0f5;
   background: url(../../images/bg_footer_icons.png) center/100% 100%;
   padding: 6px 0 0px;
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
@@ -864,15 +865,15 @@ TODO: Tabelas
 table {
   max-width: calc(100% - 2 * 20px);
   margin: 16rem auto;
-  border: 1px solid #00c8ff;
+  border: 1px solid #00c0f5;
   border-collapse: collapse;
   caption-side: bottom;
   font-weight: normal;
 }
 
 table th {
-  color: #00c8ff;
-  border: 1px solid #00c8ff;
+  color: #00c0f5;
+  border: 1px solid #00c0f5;
   font-weight: normal;
   font-weight: 500;
 }
@@ -920,11 +921,11 @@ table ul, table ol {
   width: 100%;
   max-width: none;
   border-width: 0;
-  border-bottom: 1px solid #00c8ff;
+  border-bottom: 1px solid #00c0f5;
 }
 
 .table-style-2 tr:nth-of-type(1) {
-  border-bottom: 1px solid #00c8ff;
+  border-bottom: 1px solid #00c0f5;
 }
 
 .table-style-2 th {
@@ -951,7 +952,7 @@ table ul, table ol {
 }
 
 .table-style-3 tr:hover {
-  outline: 1px solid #00c8ff;
+  outline: 1px solid #00c0f5;
 }
 
 .table-style-3 tr:nth-of-type(1):hover {
@@ -984,7 +985,7 @@ table ul, table ol {
   }
   .table-style-4 th {
     border-width: 0;
-    border-bottom: 1px solid #00c8ff;
+    border-bottom: 1px solid #00c0f5;
     text-align: center;
   }
   .table-style-4 td {
@@ -1208,25 +1209,25 @@ TODO:    > Efeito De Focus
 ──────────────────────────── */
 input:focus:not(input[type="checkbox"]), textarea:focus {
   outline: 0px dotted;
-  border: 1px solid #00c8ff;
+  border: 1px solid #00c0f5;
 }
 
 input[type="file"]:focus {
-  outline: 1px solid #00c8ff;
+  outline: 1px solid #00c0f5;
 }
 
 input[type="radio"]:focus {
-  outline: 1px solid #00c8ff;
+  outline: 1px solid #00c0f5;
 }
 
 select:focus {
   outline: 0px dotted;
-  border: 1px solid #00c8ff;
+  border: 1px solid #00c0f5;
   /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
 }
 
 button:focus {
-  outline: 2px dotted #00c8ff;
+  outline: 2px dotted #00c0f5;
 }
 
 /*  
@@ -1898,7 +1899,6 @@ img.outdoor, video.outdoor {
   }
   img.outdoor, video.outdoor {
     border-radius: 40px;
-    box-shadow: 6px 6px 24px -15px black;
   }
 }
 
@@ -2443,7 +2443,7 @@ TODO: Switchs
 }
 
 .switch.on > :nth-child(1) {
-  background-color: #00c8ff;
+  background-color: #00c0f5;
   background-color: #60ff52;
 }
 
@@ -3035,7 +3035,7 @@ TODO: Lightbox
   max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
-  background: url(../../images/bg_lightbox.png) center/100% 100%, #00c8ff;
+  background: url(../../images/bg_lightbox.png) center/100% 100%, #00c0f5;
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
