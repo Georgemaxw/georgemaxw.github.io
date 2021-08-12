@@ -558,7 +558,7 @@ function lightbox(txt, img, width) {
     if(width === undefined) {
         document.querySelector('.lightbox_img').style = 'width: auto' 
     } else {
-        document.querySelector('.lightbox_img').style = 'width: '+ width +'px' 
+        document.querySelector('.lightbox_img').style = 'width: '+ width
     }
 
     document.querySelector('.lightbox').style = 'display: flex'
