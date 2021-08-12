@@ -28,8 +28,8 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 
 /* ------ Cores E Planos De Fundos ------ */
 
-$color_theme: hsla(193,100%,50%, 1);
-$color_theme_clear: hsla(193,100%,98%, 1); 
+$color_theme: hsla(193, 100%, 46%, 1); // Best: $color_theme: hsla(193, 100%, 50%, 1);
+$color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%);
@@ -332,6 +332,7 @@ $bg_danger: red;
 
 .success, .attention, .fail, .danger  {
 
+    padding: 2px 8px;
     margin: $margin_vertical $margin_horizontal;
     font-size: $font_size;
     border-radius: 10px;
@@ -356,7 +357,7 @@ $bg_danger: red;
 }
 
 .danger {
-    padding: 6px;
+    padding: 6px 10px;
     color: $color_text_danger;
     background: $bg_danger;
     border-top: 4px solid $color_border_danger_clear;
@@ -367,14 +368,10 @@ $bg_danger: red;
     font-weight: bold;
 }
 
-.danger.long {
-    padding: 10px;
-}
-
 .success.long, .attention.long, .fail.long, .danger.long {
     text-align: center;
-    padding-left: $margin_horizontal;
-    padding-right: $margin_horizontal;
+    padding-left: calc(1 * #{$margin_horizontal});
+    padding-right: calc(1 * #{$margin_horizontal});
     border-left-width: 0;
     border-right-width: 0;
     border-radius: 0;
