@@ -381,7 +381,7 @@ p.text_container {
 .success {
   color: #00c700;
   background: #d1ffd1;
-  border: 6px ridge #00f500;
+  border: 2px solid #00f500;
 }
 
 .attention {

@@ -340,7 +340,7 @@ $bg_danger: red;
 .success {
     color: $color_text_success;
     background: $bg_success;
-    border: 6px ridge $color_border_success;
+    border: 2px solid $color_border_success;
 }
 
 .attention {
