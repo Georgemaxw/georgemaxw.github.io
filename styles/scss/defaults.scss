@@ -2505,7 +2505,7 @@ TODO: Lightbox
     overflow-y: auto;
 
     max-width: calc(100vw - (2 * #{$button_height_small}));
-    max-height: calc(100vh - (2 * #{$button_height}));
+    max-height: calc(100vh - (3 * #{$button_height}));
     border-radius: 20px;
     color: $color_text_menu;
     background: $bg_lightbox;

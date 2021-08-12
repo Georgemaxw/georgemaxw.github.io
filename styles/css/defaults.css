@@ -2980,7 +2980,7 @@ TODO: Lightbox
   overflow-x: hidden;
   overflow-y: auto;
   max-width: calc(100vw - (2 * 40px));
-  max-height: calc(100vh - (2 * 48px));
+  max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
   background: url(../../images/bg_lightbox.png) center/100% 100%, #00c8ff;
