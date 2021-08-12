@@ -372,6 +372,55 @@ p.text_container {
   list-style-type: "✰ ";
 }
 
+.success, .attention, .fail, .danger {
+  margin: 16rem 20px;
+  font-size: 19rem;
+  border-radius: 10px;
+}
+
+.success {
+  color: #00c700;
+  background: #d1ffd1;
+  border: 6px ridge #00f500;
+}
+
+.attention {
+  color: #d9ab20;
+  background: #fffbdb;
+  border: 2px solid #efd595;
+}
+
+.fail {
+  color: red;
+  background: #ffe0e0;
+  border: 2px solid #ff1a1a;
+}
+
+.danger {
+  padding: 4px;
+  color: white;
+  background: red;
+  border-top: 4px solid #ff8585;
+  border-left: 4px solid #ff8585;
+  border-bottom: 4px solid #9e0000;
+  border-right: 4px solid #9e0000;
+}
+
+.danger.long {
+  padding: 8px;
+}
+
+.success.long, .attention.long, .fail.long, .danger.long {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /*  
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
@@ -1309,6 +1358,10 @@ TODO:    > Classes
 ──────────────────────────────────────────────────────
 TODO: Outros
 ────────────────────────────────────────────────────── */
+html {
+  background: white;
+}
+
 body {
   min-width: 300px;
   margin-left: auto;
@@ -3016,7 +3069,7 @@ TODO: Lightbox
   height: 40px;
   border-radius: 50%;
   background: url(../../images/icon_lightbox_close.svg) center/100% 100%, #555555;
-  box-shadow: inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5), inset -3px -4px 5px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 6px 8px -7px black, inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5), inset -3px -4px 5px 3px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox_layout::-webkit-scrollbar {

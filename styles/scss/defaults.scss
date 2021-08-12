@@ -62,6 +62,8 @@ $color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
 $color_menuRounded_scrollbar_track: transparent;
 $color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
+//$bg_html: url(../../images/bg_lightbox.png)  center /100% 100%, white;
+$bg_html: white;
 $bg_header: url(../../images/bg_header.png) center /100% 100%;
 $bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
 $bg_nav_2: url(../../images/bg_nav_2.png)  center /100% 100%;
@@ -306,6 +308,77 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 
 //.arrow_2 { list-style-type: "➢ "; } 
 .star { list-style-type: "✰ "; }
+
+
+
+
+
+
+$color_text_success: hsl(120, 100%, 39%);
+$color_text_attention: hsl(45, 74%, 49%);
+$color_text_fail: red;
+$color_text_danger: white;
+
+$color_border_success: hsl(120, 100%, 48%);
+$color_border_attention: hsl(43, 74%, 76%);
+$color_border_fail: hsl(0, 100%, 55%);
+$color_border_danger_clear: hsl(0, 100%, 76%);
+$color_border_danger_dark: hsl(0, 100%, 31%);
+
+$bg_success: hsl(120, 100%, 91%);
+$bg_attention: hsl(54, 100%, 93%);
+$bg_fail: hsl(0, 100%, 94%);
+$bg_danger: red;
+
+.success, .attention, .fail, .danger  {
+
+    margin: $margin_vertical $margin_horizontal;
+    font-size: $font_size;
+    border-radius: 10px;
+}
+
+.success {
+    color: $color_text_success;
+    background: $bg_success;
+    border: 6px ridge $color_border_success;
+}
+
+.attention {
+    color: $color_text_attention;
+    background: $bg_attention;
+    border: 2px solid $color_border_attention;
+}
+
+.fail {
+    color: $color_text_fail;
+    background: $bg_fail;
+    border: 2px solid $color_border_fail;
+}
+
+.danger {
+    padding: 4px;
+    color: $color_text_danger;
+    background: $bg_danger;
+    border-top: 4px solid $color_border_danger_clear;
+    border-left: 4px solid $color_border_danger_clear;
+    border-bottom: 4px solid $color_border_danger_dark;
+    border-right: 4px solid $color_border_danger_dark;
+}
+
+.danger.long {
+    padding: 8px;
+}
+
+.success.long, .attention.long, .fail.long, .danger.long {
+    text-align: center;
+    padding-left: $margin_horizontal;
+    padding-right: $margin_horizontal;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /*  
 ──────────────────────────────────────────────────────
@@ -1207,6 +1280,10 @@ TODO:    > Classes
 ──────────────────────────────────────────────────────
 TODO: Outros
 ────────────────────────────────────────────────────── */
+
+html {
+    background: $bg_html;
+}
 
 body {
     min-width: 300px;
@@ -2546,7 +2623,7 @@ TODO: Lightbox
     height: $button_height_small;
     border-radius: 50%;
     background: url(../../images/icon_lightbox_close.svg)  center /100% 100%, rgb(85, 85, 85); 
-    box-shadow: 
+    box-shadow: 6px 6px 8px -7px rgb(0, 0, 0),
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
