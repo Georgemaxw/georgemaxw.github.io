@@ -2,6 +2,26 @@
 /* gmes-identity.css */
 /*  
 ──────────────────────────────────────────────────────
+TODO: Sintaxes
+────────────────────────────────────────────────────── */
+sc1 {
+  color: red;
+}
+
+sc2 {
+  color: blue;
+}
+
+sc3 {
+  color: green;
+}
+
+sc4 {
+  color: purple;
+}
+
+/*  
+──────────────────────────────────────────────────────
 TODO: Exemplos De Choice 
 ────────────────────────────────────────────────────── */
 .choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
@@ -10,20 +30,4 @@ TODO: Exemplos De Choice
 
 .choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
   font-size: 19rem;
-}
-
-.sc1 {
-  color: red;
-}
-
-.sc2 {
-  color: blue;
-}
-
-.sc3 {
-  color: green;
-}
-
-.sc4 {
-  color: purple;
 }

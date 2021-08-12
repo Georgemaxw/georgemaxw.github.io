@@ -545,6 +545,8 @@ document.body.appendChild(lightbox_html);
 
 function lightbox(txt, img, width) { 
 
+    document.querySelector('html').classList.add('overflow_hidden') 
+
     document.querySelector('.lightbox_text').textContent = txt
 
     if(img === undefined) {
@@ -562,13 +564,11 @@ function lightbox(txt, img, width) {
     }
 
     document.querySelector('.lightbox').style = 'display: flex'
-
-    document.querySelector('html').classList.add('overflow_hidden') 
 }
 
 function lightbox_close(arg) {
-
-    arg.parentNode.parentNode.style = 'display: none';  
     
     document.querySelector('html').classList.remove('overflow_hidden')
+
+    arg.parentNode.parentNode.style = 'display: none';  
 }
