@@ -538,7 +538,7 @@ lightbox_html.innerHTML = `
             <img src="" alt="" class="lightbox_img">
             <div class="lightbox_text"></div>
         </div>
-</div>    
+</div>
 `
 
 document.body.appendChild(lightbox_html);

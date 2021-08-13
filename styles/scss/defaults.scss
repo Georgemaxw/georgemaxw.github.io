@@ -38,6 +38,17 @@ $color_text_form: $color_text;
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
 
+$color_text_success: hsl(120, 100%, 35%);
+$color_text_attention: hsl(45, 74%, 45%);
+$color_text_fail: hsl(0, 100%, 50%);
+$color_text_danger: white;
+
+$color_border_success: hsl(120, 100%, 44%);
+$color_border_attention: hsl(43, 74%, 72%);
+$color_border_fail: hsl(0, 100%, 70%);
+$color_border_danger_clear: hsl(0, 100%, 76%);
+$color_border_danger_dark: hsl(0, 100%, 31%);
+
 $color_border_table: hsl(0, 0%, 85%);
 $color_border_form: hsl(0, 0%, 80%); 
 $color_border_kbd: hsl(0, 0%, 95%);
@@ -62,13 +73,19 @@ $color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
 $color_menuRounded_scrollbar_track: transparent;
 $color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
-//$bg_html: url(../../images/bg_lightbox.png)  center /100% 100%, white;
 $bg_html: white;
+//$bg_html: rgb(92, 92, 92);
+//$bg_html: url(../../images/bg_lightbox.png)  center /100% 100%, white;
 $bg_header: url(../../images/bg_header.png) center /100% 100%;
 $bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
 $bg_nav_2: url(../../images/bg_nav_2.png)  center /100% 100%;
 $bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
+
+$bg_success: hsl(120, 100%, 91%);
+$bg_attention: hsl(54, 100%, 93%);
+$bg_fail: hsl(0, 100%, 94%);
+$bg_danger: red;
 
 $bg_button: url(../../images/bg_button.png)  center /100% 100%;
 $bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
@@ -164,6 +181,7 @@ a {
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         @extend .offset;
         text-align: center; 
+        color: $color_theme;
 	}
 }
 
@@ -176,6 +194,7 @@ a {
         @extend .offset;
         text-align: center; 
         font-weight: bold;
+        color: $color_theme;
 	}
 }
 
@@ -292,14 +311,15 @@ pre {
 
 .text_container {
     font-size: $font_size; 
-    padding: 7px 13px 10px;
+    padding: 8px 13px 9px;
     border: 1px solid $color_border_form;  
     border-radius: 20px;
     min-height: $button_height_small;
+    text-align: justify;
 }
 
 p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
-    padding: 4px 13px 6px;
+    padding: 5px 13px 5px;
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -309,32 +329,25 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 //.arrow_2 { list-style-type: "➢ "; } 
 .star { list-style-type: "✰ "; }
 
+.list_index {
+    -moz-width: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 
+    ul {
+        margin: 0 0 0 17px;
+    }
 
-
-
-
-$color_text_success: hsl(120, 100%, 35%);
-$color_text_attention: hsl(45, 74%, 45%);
-$color_text_fail: hsl(0, 100%, 50%);
-$color_text_danger: white;
-
-$color_border_success: hsl(120, 100%, 44%);
-$color_border_attention: hsl(43, 74%, 72%);
-$color_border_fail: hsl(0, 100%, 70%);
-$color_border_danger_clear: hsl(0, 100%, 76%);
-$color_border_danger_dark: hsl(0, 100%, 31%);
-
-$bg_success: hsl(120, 100%, 91%);
-$bg_attention: hsl(54, 100%, 93%);
-$bg_fail: hsl(0, 100%, 94%);
-$bg_danger: red;
+    a {
+        color: $color_text;
+    }
+}
 
 .success, .attention, .fail, .danger  {
 
     padding: 2px 8px;
     margin: $margin_vertical $margin_horizontal;
-    font-size: $font_size;
     border-radius: 10px;
     text-indent: 0;
 }
@@ -1292,6 +1305,9 @@ body {
 }
 
 hr {
+    border-top: 1px solid $color_theme;
+    border-bottom: 0; 
+    background: $color_theme;
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
     @extend .offset;
@@ -1624,6 +1640,11 @@ TODO:        >> Horizontal
 
     > li:nth-last-of-type(1) { 
 
+        a { 
+            border-top-right-radius: 1000px;
+            border-bottom-right-radius: 1000px;
+        }
+
         > a > img {
             border-top-right-radius: 1000px;
             border-bottom-right-radius: 1000px;
@@ -1707,6 +1728,11 @@ TODO:        >> Vertical
     > li:nth-last-of-type(1) {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+
+        a {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px; 
+        }
 
         > a > img {
             border-bottom-left-radius: 20px;
@@ -1897,6 +1923,11 @@ TODO:        >> No Label
 
 .choice_h.noLabel {
 
+    > li:nth-of-type(2) a { 
+        border-top-left-radius: 1000px;
+        border-bottom-left-radius: 1000px;
+    }
+
     > li:nth-of-type(2) span {
 
         padding-left: 15px;
@@ -1908,9 +1939,19 @@ TODO:        >> No Label
     }
 }
 
-.choice_v.noLabel > li:nth-of-type(2) > a > img {
+.choice_v.noLabel > li:nth-of-type(2) { 
+
+        border-top-width: 0; 
+
+        a {
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+        }
+
+    > a > img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
 }
 
 .choice_d.noLabel {

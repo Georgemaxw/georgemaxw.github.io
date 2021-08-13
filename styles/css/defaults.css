@@ -78,6 +78,7 @@ h1 {
   margin-top: calc(7rem - 1rem + 16rem);
   margin-bottom: calc(7rem - 1rem + 16rem);
   text-align: center;
+  color: #00c0f5;
 }
 
 h2 {
@@ -85,6 +86,7 @@ h2 {
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
   text-align: center;
+  color: #00c0f5;
 }
 
 h3 {
@@ -92,6 +94,7 @@ h3 {
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
   text-align: center;
+  color: #00c0f5;
 }
 
 h4 {
@@ -99,6 +102,7 @@ h4 {
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
   text-align: center;
+  color: #00c0f5;
 }
 
 h5 {
@@ -106,6 +110,7 @@ h5 {
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
   text-align: center;
+  color: #00c0f5;
 }
 
 h6 {
@@ -113,6 +118,7 @@ h6 {
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
   text-align: center;
+  color: #00c0f5;
 }
 
 h7 {
@@ -122,6 +128,7 @@ h7 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h8 {
@@ -131,6 +138,7 @@ h8 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h9 {
@@ -140,6 +148,7 @@ h9 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h10 {
@@ -149,6 +158,7 @@ h10 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h11 {
@@ -158,6 +168,7 @@ h11 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h12 {
@@ -167,6 +178,7 @@ h12 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h13 {
@@ -176,6 +188,7 @@ h13 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h14 {
@@ -185,6 +198,7 @@ h14 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h15 {
@@ -194,6 +208,7 @@ h15 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h16 {
@@ -203,6 +218,7 @@ h16 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h17 {
@@ -212,6 +228,7 @@ h17 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h18 {
@@ -221,6 +238,7 @@ h18 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h19 {
@@ -230,6 +248,7 @@ h19 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 h20 {
@@ -239,6 +258,7 @@ h20 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
+  color: #00c0f5;
 }
 
 p, li, ul, ol, dl, dt, dd {
@@ -354,14 +374,15 @@ pre {
 
 .text_container {
   font-size: 19rem;
-  padding: 7px 13px 10px;
+  padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
   min-height: 40px;
+  text-align: justify;
 }
 
 p.text_container {
-  padding: 4px 13px 6px;
+  padding: 5px 13px 5px;
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -372,10 +393,24 @@ p.text_container {
   list-style-type: "✰ ";
 }
 
+.list_index {
+  -moz-width: fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list_index ul {
+  margin: 0 0 0 17px;
+}
+
+.list_index a {
+  color: black;
+}
+
 .success, .attention, .fail, .danger {
   padding: 2px 8px;
   margin: 16rem 20px;
-  font-size: 19rem;
   border-radius: 10px;
   text-indent: 0;
 }
@@ -1369,6 +1404,9 @@ body {
 }
 
 hr {
+  border-top: 1px solid #00c0f5;
+  border-bottom: 0;
+  background: #00c0f5;
   margin-top: 16rem;
   margin-bottom: 16rem;
 }
@@ -2075,6 +2113,11 @@ TODO:        >> Horizontal
   border-left-width: 0px;
 }
 
+.choice_h > li:nth-last-of-type(1) a {
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+
 .choice_h > li:nth-last-of-type(1) > a > img {
   border-top-right-radius: 1000px;
   border-bottom-right-radius: 1000px;
@@ -2148,6 +2191,11 @@ TODO:        >> Vertical
 }
 
 .choice_v > li:nth-last-of-type(1) {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.choice_v > li:nth-last-of-type(1) a {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -2318,6 +2366,11 @@ TODO:        >> No Label
   display: none;
 }
 
+.choice_h.noLabel > li:nth-of-type(2) a {
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+}
+
 .choice_h.noLabel > li:nth-of-type(2) span {
   padding-left: 15px;
 }
@@ -2325,6 +2378,15 @@ TODO:        >> No Label
 .choice_h.noLabel > li:nth-of-type(2) > a > img {
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
+}
+
+.choice_v.noLabel > li:nth-of-type(2) {
+  border-top-width: 0;
+}
+
+.choice_v.noLabel > li:nth-of-type(2) a {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .choice_v.noLabel > li:nth-of-type(2) > a > img {
