@@ -28,7 +28,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 
 /* ------ Cores E Planos De Fundos ------ */
 
-$color_theme: hsla(193, 100%, 48%, 1); 
+$color_theme: hsla(193, 100%, 50%, 1); 
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -945,7 +945,11 @@ table {
         color: $color_theme;
         border: $table_border1_width solid $color_theme;
         font-weight: normal;
-        font-weight: 500;
+
+        @media (max-width: $tablet), (max-height: $tablet) {
+            
+            font-weight: bold; 
+        }
     }
 
     tr:hover {
@@ -1044,6 +1048,8 @@ table {
 @media (min-width: 0) and (max-width:  $tablet) {
     .table-style-4 {
         border-width: 0;
+        margin-left: calc(2 * #{$margin_horizontal});
+        margin-right: calc(2 * #{$margin_horizontal});
 
         tr {
             border-width: 0;
