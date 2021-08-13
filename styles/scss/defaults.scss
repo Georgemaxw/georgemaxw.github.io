@@ -343,6 +343,10 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
         > li {
             font-weight: bold;
 
+            > a {
+                font-size: 21rem;
+            }
+
             li {
                 font-weight: normal;
             }

@@ -409,6 +409,10 @@ p.text_container {
   font-weight: bold;
 }
 
+.list_index > ul > li > a, .list_index > ol > li > a {
+  font-size: 21rem;
+}
+
 .list_index > ul > li li, .list_index > ol > li li {
   font-weight: normal;
 }
