@@ -394,18 +394,61 @@ p.text_container {
 }
 
 .list_index {
-  -moz-width: fit-content;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-.list_index ul {
-  margin: 0 0 0 17px;
+.list_index > ul, .list_index > ol {
+  -moz-width: fit-content;
+  width: fit-content;
 }
 
-.list_index a {
+.list_index > ul > li, .list_index > ol > li {
+  font-weight: bold;
+}
+
+.list_index > ul > li li, .list_index > ol > li li {
+  font-weight: normal;
+}
+
+.list_index > ul > li + li, .list_index > ol > li + li {
+  margin-top: 8px;
+}
+
+.list_index > ul ul, .list_index > ul ol, .list_index > ol ul, .list_index > ol ol {
+  margin: 0 0 0 20px;
+}
+
+.list_index > ul ul, .list_index > ol ul {
+  list-style-type: "└ ";
+}
+
+.list_index > ul a, .list_index > ol a {
   color: black;
+}
+
+.list_index > ul {
+  list-style-type: "";
+  margin-left: calc(2 * 20px);
+  margin-right: calc(2 * 20px);
+}
+
+.list_index > ol {
+  margin-left: calc(2 * 20px + 21px);
+  margin-right: calc(2 * 20px);
+}
+
+@media (min-width: calc(800px + 60px)) {
+  .list_index > ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .list_index > ol {
+    margin-left: calc(1 * 20px + 21px);
+    margin-right: 20px;
+  }
 }
 
 .success, .attention, .fail, .danger {

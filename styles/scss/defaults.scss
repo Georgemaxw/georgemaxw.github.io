@@ -330,17 +330,63 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 .star { list-style-type: "✰ "; }
 
 .list_index {
-    -moz-width: fit-content;
-    width: fit-content;
+
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
 
-    ul {
-        margin: 0 0 0 17px;
+    > ul, > ol {
+    -moz-width: fit-content;
+    width: fit-content;
+
+        > li {
+            font-weight: bold;
+
+            li {
+                font-weight: normal;
+            }
+        }
+
+        > li + li {
+            margin-top: 8px;
+        }
+
+        ul, ol {
+            margin: 0 0 0 20px;
+        }
+
+        ul {
+            list-style-type: "└ ";
+        }
+
+        a {
+            color: $color_text;
+        }
+    }  
+
+    > ul { 
+        list-style-type: "";
+        margin-left: calc(2 * #{$margin_horizontal});
+        margin-right: calc(2 * #{$margin_horizontal});
     }
 
-    a {
-        color: $color_text;
+    > ol {
+        margin-left: calc(2 * #{$margin_horizontal} + 21px);
+        margin-right: calc(2 * #{$margin_horizontal});
+    }
+
+    @media (min-width: $hr_stop) {
+
+        > ul { 
+            margin-left: $margin_horizontal;
+            margin-right: $margin_horizontal;
+        }
+
+        > ol {
+            margin-left: calc(1 * #{$margin_horizontal} + 21px);
+            margin-right: $margin_horizontal;
+        }
     }
 }
 
