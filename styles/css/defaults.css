@@ -422,11 +422,12 @@ p.text_container {
 }
 
 .list_index > ul ul, .list_index > ul ol, .list_index > ol ul, .list_index > ol ol {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 30px;
 }
 
 .list_index > ul ul, .list_index > ol ul {
   list-style-type: "└ ";
+  list-style-type: "↳ ";
 }
 
 .list_index > ul a, .list_index > ol a {

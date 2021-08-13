@@ -357,11 +357,12 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
         }
 
         ul, ol {
-            margin: 0 0 0 20px;
+            margin: 0 0 0 30px;
         }
 
         ul {
             list-style-type: "└ ";
+            list-style-type: "↳ ";
         }
 
         a {
