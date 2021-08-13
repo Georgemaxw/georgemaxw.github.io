@@ -110,6 +110,10 @@
                 <h5>Título 5</h5>
                 <h6>Título 6</h6>
 
+                <p>A classe <span class="highlight">highlight</span> é usada para destacar o texto.</p>
+
+                <p>A classe <span class="highlight">highlight_menu</span> é usada para destacar o texto em um menu. (Foi usada em <span class="highlight">Lightbox</span>.)</p>
+
                 <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
   
                 <p>9 Sea amet justo at ipsum <img src="images/textImg_sample_1_4.svg" alt="" class="textImg">. 
@@ -1934,25 +1938,35 @@
                 <h2 id="Lightbox">Lightbox</h2> <!-- Lightbox Pop-Ups -->
 
                 <p>Sntx.: 
-                    <sc1>lightbox(</sc1><sc2>text</sc2><sc3>,</sc3> <sc4>image</sc4><sc3>,</sc3> <sc4>size</sc4><sc1>)</sc1>
+                    <sc1>lightbox<sc3>2</sc3>(</sc1><sc2>text</sc2><sc3>,</sc3> <sc4>image</sc4><sc3>,</sc3> <sc4>width</sc4><sc1>)</sc1>
                 </p>
 
-                <p>Ex.: lightbox('Hi!', 'images/hi.png', '50vw')</p>  
+                <p style="text-align: left;">Ex.: lightbox(`&lt;b class='highlight'>OUT!&lt;/b>`)</p> 
+
+                <p style="text-align: left;">Ex.: lightbox2('Hi!', 'images/hi.png', '50vw')</p>  
 
                 <p>
-                    <a onclick="lightbox('This is a very beautiful lightbox!')">Lightbox 1</a>
+                    <a onclick="lightbox('Lightbox com apenas o texto como parâmetro.')">Lightbox 1</a>
+                </p>
+ 
+                <p>
+                    <a onclick="lightbox('Lightbox com apenas o texto e a imagem como parâmetros.', 'images/ex_alert.png')">Lightbox 2</a>
                 </p>
 
                 <p>
-                    <a onclick="lightbox('This is a very beautiful lightbox!', 'images/ex_alert.png')">Lightbox 2</a>
-                </p>
-
-                <p>
-                    <a onclick="lightbox('This is a very beautiful lightbox!', 'images/ex_alert.png', '75px')">Lightbox 3</a>  
+                    <a onclick="lightbox('Lightbox com o texto, a imagem, e a largura da imagem como parâmetros.', 'images/ex_alert.png', '75px')">Lightbox 3</a>  
                 </p>   
 
                 <p>
-                    <a onclick="lightbox(` ----------------------------------------------------------------------------------------------------------------------
+                    <a onclick="lightbox(`Lightbox com a função <span class='highlight_menu'>lightbox()</span>.`, 'images/ex_1920×1080.png', '200px')">Lightbox 4</a>  
+                </p>  
+
+                <p>
+                    <a onclick="lightbox2(`Lightbox com a função <span class='highlight_menu'>lightbox2()</span>.`, 'images/ex_1920×1080.png', '200px')">Lightbox 5</a>  
+                </p>    
+
+                <p>
+                    <a onclick="lightbox(` --------This is a very beautiful lightbox!--------------------------------------------------------------------------------------------------------------
                     ---------------------------------------------------------------------- -------------------------------------------------------------------------------------
                     ----------- ------------------------------------------------------------------------------------------------ -----------------------------------------------
                     ------------------------------------------------------------------------------------------------------------------------------------------------- ----------
@@ -1970,9 +1984,9 @@
                     -------------------------------------------------------------------------------------------------------------------- ----------------------------------------------
                     -------------------------------------------------- -----------------------------------------------------------------------------------------------------------------
                     --------------------------------------------------------------------------- -----------------------------------------------------------------------------------------
-                    ------- ------------------------------------------------------------------------------------------------------------- `)">Lightbox 4</a>
+                    ------- ------------------------------------------------------------------------------------------------------------- `)">Lightbox 6</a>
                 </p>
-  
+
                 <div class="lb16"></div><!-- -->
 
             </div>

@@ -547,7 +547,7 @@ function lightbox(txt, img, width) {
 
     document.querySelector('html').classList.add('overflow_hidden') 
 
-    document.querySelector('.lightbox_text').textContent = txt
+    document.querySelector('.lightbox_text').innerHTML = txt
 
     if(img === undefined) {
         document.querySelector('.lightbox_img').setAttribute('src', '') 
@@ -566,9 +566,18 @@ function lightbox(txt, img, width) {
     document.querySelector('.lightbox').style = 'display: flex'
 }
 
+function lightbox2(txt, img, width) { 
+
+    document.querySelector('.lightbox_img').classList.add('lightbox_img_rounded')
+
+    lightbox(txt, img, width)
+}
+
 function lightbox_close(arg) {
     
     document.querySelector('html').classList.remove('overflow_hidden')
+
+    document.querySelector('.lightbox_img').classList.remove('lightbox_img_rounded')
 
     arg.parentNode.parentNode.style = 'display: none';  
 }

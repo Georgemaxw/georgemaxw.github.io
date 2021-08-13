@@ -347,6 +347,14 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
+.highlight {
+  color: #00c8ff;
+}
+
+.highlight_menu {
+  color: yellow;
+}
+
 .font-small {
   font-size: 16rem;
 }
@@ -488,8 +496,9 @@ p.text_container {
   border-left: 4px solid #ff8585;
   border-bottom: 4px solid #9e0000;
   border-right: 4px solid #9e0000;
-  text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .success.long, .attention.long, .fail.long, .danger.long {
@@ -3166,6 +3175,10 @@ TODO: Lightbox
 
 .lightbox_img_marginBottom {
   margin-bottom: 16rem;
+}
+
+.lightbox_img_rounded {
+  border-radius: 20px;
 }
 
 .lightbox_text {

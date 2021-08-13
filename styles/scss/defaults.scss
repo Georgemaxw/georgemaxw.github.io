@@ -34,6 +34,8 @@ $color_theme_clear: hsla(193, 100%, 98%, 1);
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%);
 $color_text_menu: white; 
+$color_text_highlight: $color_theme;
+$color_text_highlight_menu: yellow;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
@@ -285,6 +287,15 @@ pre {
     font-family: $font_monospace;
 }
 
+.highlight {
+    color: $color_text_highlight;
+}
+
+.highlight_menu {
+    color: $color_text_highlight_menu;
+}
+
+
 .font-small {
     font-size: $font_small;
 }
@@ -428,8 +439,9 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     border-left: 4px solid $color_border_danger_clear;
     border-bottom: 4px solid $color_border_danger_dark;
     border-right: 4px solid $color_border_danger_dark;
-    text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .success.long, .attention.long, .fail.long, .danger.long {
@@ -2699,6 +2711,10 @@ TODO: Lightbox
 
 .lightbox_img_marginBottom {
     margin-bottom: $margin_vertical;
+}
+
+.lightbox_img_rounded {
+    border-radius: 20px;
 }
 
 .lightbox_text {
