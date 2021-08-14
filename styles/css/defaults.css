@@ -702,13 +702,13 @@ TODO:        >> Expandido
 }
 
 @media (min-width: 565px) {
+  .header-nav .nav-menu {
+    display: inline-block !important;
+    position: static;
+    background: 0;
+  }
   .header-nav .nav .nav-menu-button {
     display: none;
-  }
-  .header-nav .nav-menu {
-    position: static;
-    display: inline-block !important;
-    background: 0;
   }
   .header-nav .nav-menu > ul, .header-nav .nav-menu > ul > li {
     display: inline-block;

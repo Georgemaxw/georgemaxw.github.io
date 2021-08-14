@@ -665,16 +665,16 @@ TODO:        >> Expandido
 
     @media (min-width: $nav_expand) {
 
-        .nav .nav-menu-button {
-            display: none;
-        }
-
         .nav-menu {
-            position: static;
             display: inline-block !important;
+            position: static;
             background: 0;
         }
 
+        .nav .nav-menu-button {
+            display: none;
+        }
+        
         .nav-menu > ul, .nav-menu > ul > li {
             display: inline-block;
         }
