@@ -1,7 +1,7 @@
 
 // {(function(){    })()}  
 
-var nav_expand = 565 // VÍNCULO: Váriável JS
+var nav_expand = 565 // VÍNCULO: Váriável CSS
 
 /*  
 ──────────────────────────────────────────────────────
@@ -115,9 +115,8 @@ TODO:    >  Nav - JS
 var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
-//var nav_subOptionsMenu = document.querySelectorAll('.nav-menu > ul > li > div > ul')
 var nav_options_anchorClicked_index = 'none'
-var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável JS
+var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
 
 var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
                                                                                         do <html> apareça em momentos em que não se deseja 
@@ -153,7 +152,7 @@ document.querySelector('.nav-menu-button').onclick = function() {
 
 window.onresize = function() {
     if(window.innerWidth >= nav_expand) {
-        document.querySelector('.nav-menu').style = 'display: block'
+        document.querySelector('.nav-menu').style = 'display: inline-block'
         
         if(nav_options_anchorClicked_index === 'none') {
 
