@@ -183,7 +183,7 @@ window.onresize = function() {
     if(nav_options_anchorClicked_index !== 'none') { 
         if(window.innerWidth >= nav_expand) {
             nav_options_anchors[nav_options_anchorClicked_index].style = 
-            'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
+            'background: '+ bg_nav_selector +' !important; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
         } else { 
             nav_options_anchors[nav_options_anchorClicked_index].style = 'background: 0' 
         }
@@ -210,7 +210,7 @@ function nav_menu_options(arg) {
 
         if(window.innerWidth >= nav_expand) { 
             nav_options_anchors[nav_options_anchorClicked_index].style = 
-            'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 5px; padding-right: 5px; margin-top: 4px'
+            'background: '+ bg_nav_selector +' !important; height: 40px; border-radius: 15px; padding-left: 5px; padding-right: 5px; margin-top: 4px'
         }
 
         nav_divs[nav_options_anchorClicked_index].style = 'display: block'
