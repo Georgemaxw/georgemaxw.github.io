@@ -341,6 +341,7 @@ kbd {
 
 code {
   font-family: "Courier New", Courier, monospace;
+  text-align: left;
 }
 
 pre {
@@ -2020,7 +2021,6 @@ figure.outdoor img {
   }
   figure.outdoor img {
     border-radius: 40px;
-    box-shadow: 6px 6px 24px -15px black;
   }
 }
 

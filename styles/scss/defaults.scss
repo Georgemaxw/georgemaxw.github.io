@@ -280,6 +280,7 @@ kbd {
 
 code {
     font-family: $font_monospace;
+    text-align: left;
 }
 
 pre {
@@ -1525,7 +1526,7 @@ figure.outdoor img {
 }
     figure.outdoor img {
         border-radius: 40px;
-        box-shadow: 6px 6px 24px -15px black;
+        // box-shadow: 6px 6px 24px -15px black;
     }
     
 }
