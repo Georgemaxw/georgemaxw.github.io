@@ -152,7 +152,7 @@ document.querySelector('.nav-menu-button').onclick = function() {
 
 window.onresize = function() {
     if(window.innerWidth >= nav_expand) {
-        document.querySelector('.nav-menu').style = 'display: inline-block'
+        //document.querySelector('.nav-menu').style = 'display: inline-block'
         
         if(nav_options_anchorClicked_index === 'none') {
 

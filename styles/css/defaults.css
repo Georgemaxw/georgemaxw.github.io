@@ -278,18 +278,6 @@ ul, ol {
   margin-right: 20px;
 }
 
-ul {
-  list-style-type: "➭ ";
-}
-
-ul ul {
-  list-style-type: "● ";
-}
-
-ul ul ul {
-  list-style-type: "- ";
-}
-
 dt {
   font-weight: bold;
   margin-top: 16rem;
@@ -348,12 +336,8 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-.highlight {
-  color: #00c8ff;
-}
-
-.highlight_menu {
-  color: yellow;
+.font-monospace {
+  font-family: "Courier New", Courier, monospace;
 }
 
 .font-small {
@@ -377,10 +361,6 @@ pre {
     font-style: italic;
 }
 */
-.font-monospace {
-  font-family: "Courier New", Courier, monospace;
-}
-
 .text_container {
   font-size: 19rem;
   padding: 8px 13px 9px;
@@ -394,12 +374,16 @@ p.text_container {
   padding: 5px 13px 5px;
 }
 
-.spaced_items > li + li, .spaced_items > dd + dd {
-  margin-top: 16rem;
+.highlight {
+  color: #00c8ff;
 }
 
-.star {
-  list-style-type: "✰ ";
+.highlight_menu {
+  color: yellow;
+}
+
+.spaced_items > li + li, .spaced_items > dd + dd {
+  margin-top: 16rem;
 }
 
 .list_index {
@@ -435,7 +419,11 @@ p.text_container {
 }
 
 .list_index > ul ul, .list_index > ol ul {
-  list-style-type: "└ ";
+  list-style-type: none;
+}
+
+.list_index > ul ul li:before, .list_index > ol ul li:before {
+  content: "└ ";
 }
 
 .list_index > ul a, .list_index > ol a {
@@ -443,7 +431,7 @@ p.text_container {
 }
 
 .list_index > ul {
-  list-style-type: "";
+  list-style-type: none;
   margin-left: calc(2 * 20px);
   margin-right: calc(2 * 20px);
 }
@@ -502,17 +490,18 @@ p.text_container {
   text-transform: uppercase;
 }
 
+/*
 .success.long, .attention.long, .fail.long, .danger.long {
-  text-align: center;
-  padding-left: calc(1 * 20px);
-  padding-right: calc(1 * 20px);
-  border-left-width: 0;
-  border-right-width: 0;
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 0;
+    text-align: center;
+    padding-left: calc(1 * 20px);
+    padding-right: calc(1 * 20px);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
-
+*/
 /*  
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
@@ -718,7 +707,7 @@ TODO:        >> Expandido
   }
   .header-nav .nav-menu {
     position: static;
-    display: inline-block;
+    display: inline-block !important;
     background: 0;
   }
   .header-nav .nav-menu > ul, .header-nav .nav-menu > ul > li {
@@ -1066,7 +1055,7 @@ table ul, table ol {
   text-align: left;
 }
 
-/*----- .table-style-4 -----*/
+/*----- table-style-4 -----*/
 @media (min-width: 0) and (max-width: 501px) {
   .table-style-4 {
     border-width: 0;
@@ -1485,54 +1474,6 @@ hr {
 
 a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
   cursor: pointer;
-}
-
-.cursor_pointer {
-  cursor: pointer;
-}
-
-/*
-.content-left {
-    text-align: left;
-}
-
-.content-center {
-    text-align: center;
-}
-
-.content-right {
-    text-align: right;
-}
-
-.content-justify {
-    text-align: justify;
-}
-*/
-.center:not(figure) {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-figure.center {
-  text-align: center;
-}
-
-.center.choice_h {
-  display: flex;
-}
-
-/*.center.choice_v, .center.choice_d {
-    
-}*/
-.center.offset, p.center, dl.center, .footer-content .center.footer-icons, label.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, h7.center, h8.center, h9.center, h10.center, h11.center, h12.center, h13.center, h14.center, h15.center, h16.center, h17.center, h18.center, h19.center, h20.center, pre.center, fieldset.center, hr.center, .center.switch {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: calc(100% - (2 * 20px));
-}
-
-.center.offset.choice_d_open, p.center.choice_d_open, dl.center.choice_d_open, .footer-content .center.choice_d_open.footer-icons, label.center.choice_d_open, h1.center.choice_d_open, h2.center.choice_d_open, h3.center.choice_d_open, h4.center.choice_d_open, h5.center.choice_d_open, h6.center.choice_d_open, h7.center.choice_d_open, h8.center.choice_d_open, h9.center.choice_d_open, h10.center.choice_d_open, h11.center.choice_d_open, h12.center.choice_d_open, h13.center.choice_d_open, h14.center.choice_d_open, h15.center.choice_d_open, h16.center.choice_d_open, h17.center.choice_d_open, h18.center.choice_d_open, h19.center.choice_d_open, h20.center.choice_d_open, pre.center.choice_d_open, fieldset.center.choice_d_open, hr.center.choice_d_open, .center.choice_d_open.switch {
-  max-width: none;
 }
 
 .lb {
@@ -1961,6 +1902,50 @@ figure.center {
   margin-bottom: calc(70 * 16rem);
 }
 
+/*
+.content-left {
+    text-align: left;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.content-right {
+    text-align: right;
+}
+
+.content-justify {
+    text-align: justify;
+}
+*/
+.center:not(figure) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure.center {
+  text-align: center;
+}
+
+.center.choice_h {
+  display: flex;
+}
+
+/*.center.choice_v, .center.choice_d {
+    
+}*/
+.center.offset, p.center, dl.center, .footer-content .center.footer-icons, label.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, h7.center, h8.center, h9.center, h10.center, h11.center, h12.center, h13.center, h14.center, h15.center, h16.center, h17.center, h18.center, h19.center, h20.center, pre.center, fieldset.center, hr.center, .center.switch {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - (2 * 20px));
+}
+
+.center.offset.choice_d_open, p.center.choice_d_open, dl.center.choice_d_open, .footer-content .center.choice_d_open.footer-icons, label.center.choice_d_open, h1.center.choice_d_open, h2.center.choice_d_open, h3.center.choice_d_open, h4.center.choice_d_open, h5.center.choice_d_open, h6.center.choice_d_open, h7.center.choice_d_open, h8.center.choice_d_open, h9.center.choice_d_open, h10.center.choice_d_open, h11.center.choice_d_open, h12.center.choice_d_open, h13.center.choice_d_open, h14.center.choice_d_open, h15.center.choice_d_open, h16.center.choice_d_open, h17.center.choice_d_open, h18.center.choice_d_open, h19.center.choice_d_open, h20.center.choice_d_open, pre.center.choice_d_open, fieldset.center.choice_d_open, hr.center.choice_d_open, .center.choice_d_open.switch {
+  max-width: none;
+}
+
 .line {
   border: 1px solid black;
 }
@@ -1971,6 +1956,10 @@ figure.center {
 
 .button_height_small {
   height: 40px;
+}
+
+.cursor_pointer {
+  cursor: pointer;
 }
 
 /*  
@@ -2054,6 +2043,7 @@ TODO:    > Sliders
 ──────────────────────────── */
 .slider {
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
 }
 

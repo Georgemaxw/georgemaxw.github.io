@@ -217,12 +217,10 @@ ul, ol {
     margin-right: $margin_horizontal;
 }
 
-ul { list-style-type: "➭ "; }
-// ul ul { list-style-type: disc; }
-ul ul { list-style-type: "● "; }
-// ul ul { list-style-type: "• "; }
-// ul ul { list-style-type: "-› "; }
-ul ul ul { list-style-type: "- "; }
+// ul { list-style-type: "➭ "; } // <- Não funciona no safari.
+// ul ul { list-style-type: "● "; } // <- Não funciona no safari.
+// ul ul { list-style-type: "-› "; } // <- Não funciona no safari.
+// ul ul ul { list-style-type: "- "; } // <- Não funciona no safari.
 
 dl {
     @extend %margins;
@@ -288,14 +286,9 @@ pre {
     font-family: $font_monospace;
 }
 
-.highlight {
-    color: $color_text_highlight;
+.font-monospace {
+    font-family: $font_monospace;
 }
-
-.highlight_menu {
-    color: $color_text_highlight_menu;
-}
-
 
 .font-small {
     font-size: $font_small;
@@ -304,6 +297,7 @@ pre {
 .font-smaller {
     font-size: $font_smaller;
 }
+
 /*
 .underline {
   text-decoration: underline;
@@ -317,9 +311,6 @@ pre {
     font-style: italic;
 }
 */
-.font-monospace {
-    font-family: $font_monospace;
-}
 
 .text_container {
     font-size: $font_size; 
@@ -334,12 +325,20 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     padding: 5px 13px 5px;
 }
 
+.highlight {
+    color: $color_text_highlight;
+}
+
+.highlight_menu {
+    color: $color_text_highlight_menu;
+}
+
 .spaced_items > li + li, .spaced_items > dd + dd {
     margin-top: $margin_vertical;
 }
 
-//.arrow_2 { list-style-type: "➢ "; } 
-.star { list-style-type: "✰ "; }
+//.arrow_2 { list-style-type: "➢ "; }  // <- Não funciona no safari.
+// .star { list-style-type: "✰ "; }  // <- Não funciona no safari.
 
 .list_index {
 
@@ -373,7 +372,12 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
         }
 
         ul {
-            list-style-type: "└ ";
+            list-style-type: none;
+            // list-style-type: "└ "; // <- Não funciona no safari.
+        }
+
+        ul li:before {
+            content: "└ "
         }
 
         a {
@@ -382,7 +386,7 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     }  
 
     > ul { 
-        list-style-type: "";
+        list-style-type: none;
         margin-left: calc(2 * #{$margin_horizontal});
         margin-right: calc(2 * #{$margin_horizontal});
     }
@@ -444,7 +448,7 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-align: center;
     text-transform: uppercase;
 }
-
+/*
 .success.long, .attention.long, .fail.long, .danger.long {
     text-align: center;
     padding-left: calc(1 * #{$margin_horizontal});
@@ -455,7 +459,7 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     margin-left: 0;
     margin-right: 0;
 }
-
+*/
 /*  
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
@@ -667,7 +671,7 @@ TODO:        >> Expandido
 
         .nav-menu {
             position: static;
-            display: inline-block;
+            display: inline-block !important;
             background: 0;
         }
 
@@ -1056,7 +1060,7 @@ table {
     }
 }
 
-/*----- .table-style-4 -----*/
+/*----- table-style-4 -----*/
 
 @media (min-width: 0) and (max-width:  $tablet) {
     .table-style-4 {
@@ -1395,8 +1399,16 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
     cursor: pointer;
 }
 
-.cursor_pointer {
-    cursor: pointer;
+.lb { /* Line break */
+    margin-top: $margin_vertical; 
+    margin-bottom:  $margin_vertical;
+} 
+
+@for $i from 1 through 70 { 
+    .lb#{$i} { /* Line break */
+        margin-top: calc(#{$i} * #{$margin_vertical}); 
+        margin-bottom:  calc(#{$i} * #{$margin_vertical});
+    } 
 }
 
 /*
@@ -1445,18 +1457,6 @@ figure.center {
     max-width: none;
 }
 
-.lb { /* Line break */
-    margin-top: $margin_vertical; 
-    margin-bottom:  $margin_vertical;
-} 
-
-@for $i from 1 through 70 { 
-    .lb#{$i} { /* Line break */
-        margin-top: calc(#{$i} * #{$margin_vertical}); 
-        margin-bottom:  calc(#{$i} * #{$margin_vertical});
-    } 
-}
-
 .line {
     border: 1px solid black;
 }
@@ -1467,6 +1467,10 @@ figure.center {
 
 .button_height_small {
     height: $button_height_small;
+}
+
+.cursor_pointer {
+    cursor: pointer;
 }
 
 /*  
@@ -1569,6 +1573,7 @@ TODO:    > Sliders
 
 .slider {
     overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
 }
 
