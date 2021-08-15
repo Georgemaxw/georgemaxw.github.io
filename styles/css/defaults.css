@@ -336,15 +336,15 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
-.font-monospace {
+.font_monospace {
   font-family: "Courier New", Courier, monospace;
 }
 
-.font-small {
+.font_small {
   font-size: 16rem;
 }
 
-.font-smaller, table caption {
+.font_smaller, table caption {
   font-size: 14rem;
 }
 
@@ -414,12 +414,17 @@ p.text_container {
   margin-top: 8px;
 }
 
-.list_index > ul ul, .list_index > ul ol, .list_index > ol ul, .list_index > ol ol {
-  margin: 0 0 0 20px;
+.list_index > ul > li > ul, .list_index > ol > li > ul {
+  margin: 0 0 0 0px;
 }
 
 .list_index > ul ul, .list_index > ol ul {
+  margin: 0 0 0 18px;
   list-style-type: none;
+}
+
+.list_index > ul ol, .list_index > ol ol {
+  margin: 0 0 0 21px;
 }
 
 .list_index > ul ul li:before, .list_index > ol ul li:before {
@@ -663,6 +668,7 @@ TODO:        >> Expandido
 
 .header-nav .nav-menu ul li ul a span {
   display: flex;
+  align-items: center;
   margin-left: 16px;
   margin-right: 16px;
 }
@@ -699,6 +705,15 @@ TODO:        >> Expandido
   .header-nav .nav-menu ul:hover {
     overflow: auto;
   }
+}
+
+.header-nav .nav_selector {
+  background: url(../../images/bg_nav_selector.png) center/100% 100%;
+  max-height: 40px;
+  border-radius: 15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
 }
 
 @media (min-width: 565px) {
@@ -1000,108 +1015,108 @@ table ul, table ol {
 }
 
 /*
-.table-style-1 {
+.table_style_1 {
      Estilo padrão. 
 }
 */
-.table-style-2 {
+.table_style_2 {
   width: 100%;
   max-width: none;
   border-width: 0;
   border-bottom: 1px solid #00c8ff;
 }
 
-.table-style-2 tr:nth-of-type(1) {
+.table_style_2 tr:nth-of-type(1) {
   border-bottom: 1px solid #00c8ff;
 }
 
-.table-style-2 th {
+.table_style_2 th {
   border-width: 0;
 }
 
-.table-style-2 th:nth-child(1) {
+.table_style_2 th:nth-child(1) {
   color: black;
 }
 
-.table-style-2 td + td {
+.table_style_2 td + td {
   border-width: 0;
 }
 
 @media (min-width: 501px) {
-  .table-style-2 {
+  .table_style_2 {
     width: auto;
     max-width: calc(100% - 2 * 20px);
   }
 }
 
-.table-style-3 {
+.table_style_3 {
   border-width: 0;
 }
 
-.table-style-3 tr:hover {
+.table_style_3 tr:hover {
   outline: 1px solid #00c8ff;
 }
 
-.table-style-3 tr:nth-of-type(1):hover {
+.table_style_3 tr:nth-of-type(1):hover {
   background: #f5fdff;
 }
 
-.table-style-3 tr + tr {
+.table_style_3 tr + tr {
   border-width: 0;
 }
 
-.table-style-3 th {
+.table_style_3 th {
   border-width: 0;
   text-align: left;
 }
 
-/*----- table-style-4 -----*/
+/*----- table_style_4 -----*/
 @media (min-width: 0) and (max-width: 501px) {
-  .table-style-4 {
+  .table_style_4 {
     border-width: 0;
     margin-left: calc(2 * 20px);
     margin-right: calc(2 * 20px);
   }
-  .table-style-4 tr {
+  .table_style_4 tr {
     border-width: 0;
     margin-bottom: 16rem;
   }
-  .table-style-4 tr:hover {
+  .table_style_4 tr:hover {
     background: 0;
   }
-  .table-style-4 tr, .table-style-4 th, .table-style-4 td {
+  .table_style_4 tr, .table_style_4 th, .table_style_4 td {
     display: block;
   }
-  .table-style-4 th {
+  .table_style_4 th {
     border-width: 0;
     border-bottom: 1px solid #00c8ff;
     text-align: center;
   }
-  .table-style-4 td {
+  .table_style_4 td {
     text-align: left;
   }
-  .table-style-4 td:nth-of-type(1) {
+  .table_style_4 td:nth-of-type(1) {
     margin-top: 16rem;
   }
-  .table-style-4 li + li {
+  .table_style_4 li + li {
     margin-top: 20rem;
   }
 }
 
 @media (min-width: 501px) {
-  .table-style-4 {
+  .table_style_4 {
     border-width: 0;
   }
-  .table-style-4 tr {
+  .table_style_4 tr {
     border-width: 0;
   }
-  .table-style-4 tr:hover {
+  .table_style_4 tr:hover {
     background: 0;
   }
-  .table-style-4 th, .table-style-4 td {
+  .table_style_4 th, .table_style_4 td {
     border-width: 0;
   }
-  .table-style-4 td {
+  .table_style_4 td {
     text-align: left;
   }
 }
@@ -1323,123 +1338,123 @@ button:focus {
 ────────────────────────────
 TODO:    > Classes
 ──────────────────────────── */
-.textarea-1l {
+.textarea_1l {
   height: calc(40rem + ( (1 - 1) * 28rem));
 }
 
-.textarea-2l {
+.textarea_2l {
   height: calc(40rem + ( (2 - 1) * 28rem));
 }
 
-.textarea-3l {
+.textarea_3l {
   height: calc(40rem + ( (3 - 1) * 28rem));
 }
 
-.textarea-4l {
+.textarea_4l {
   height: calc(40rem + ( (4 - 1) * 28rem));
 }
 
-.textarea-5l {
+.textarea_5l {
   height: calc(40rem + ( (5 - 1) * 28rem));
 }
 
-.textarea-6l {
+.textarea_6l {
   height: calc(40rem + ( (6 - 1) * 28rem));
 }
 
-.textarea-7l {
+.textarea_7l {
   height: calc(40rem + ( (7 - 1) * 28rem));
 }
 
-.textarea-8l {
+.textarea_8l {
   height: calc(40rem + ( (8 - 1) * 28rem));
 }
 
-.textarea-9l {
+.textarea_9l {
   height: calc(40rem + ( (9 - 1) * 28rem));
 }
 
-.textarea-10l {
+.textarea_10l {
   height: calc(40rem + ( (10 - 1) * 28rem));
 }
 
-.textarea-11l {
+.textarea_11l {
   height: calc(40rem + ( (11 - 1) * 28rem));
 }
 
-.textarea-12l {
+.textarea_12l {
   height: calc(40rem + ( (12 - 1) * 28rem));
 }
 
-.textarea-13l {
+.textarea_13l {
   height: calc(40rem + ( (13 - 1) * 28rem));
 }
 
-.textarea-14l {
+.textarea_14l {
   height: calc(40rem + ( (14 - 1) * 28rem));
 }
 
-.textarea-15l {
+.textarea_15l {
   height: calc(40rem + ( (15 - 1) * 28rem));
 }
 
-.textarea-16l {
+.textarea_16l {
   height: calc(40rem + ( (16 - 1) * 28rem));
 }
 
-.textarea-17l {
+.textarea_17l {
   height: calc(40rem + ( (17 - 1) * 28rem));
 }
 
-.textarea-18l {
+.textarea_18l {
   height: calc(40rem + ( (18 - 1) * 28rem));
 }
 
-.textarea-19l {
+.textarea_19l {
   height: calc(40rem + ( (19 - 1) * 28rem));
 }
 
-.textarea-20l {
+.textarea_20l {
   height: calc(40rem + ( (20 - 1) * 28rem));
 }
 
-.textarea-21l {
+.textarea_21l {
   height: calc(40rem + ( (21 - 1) * 28rem));
 }
 
-.textarea-22l {
+.textarea_22l {
   height: calc(40rem + ( (22 - 1) * 28rem));
 }
 
-.textarea-23l {
+.textarea_23l {
   height: calc(40rem + ( (23 - 1) * 28rem));
 }
 
-.textarea-24l {
+.textarea_24l {
   height: calc(40rem + ( (24 - 1) * 28rem));
 }
 
-.textarea-25l {
+.textarea_25l {
   height: calc(40rem + ( (25 - 1) * 28rem));
 }
 
-.textarea-26l {
+.textarea_26l {
   height: calc(40rem + ( (26 - 1) * 28rem));
 }
 
-.textarea-27l {
+.textarea_27l {
   height: calc(40rem + ( (27 - 1) * 28rem));
 }
 
-.textarea-28l {
+.textarea_28l {
   height: calc(40rem + ( (28 - 1) * 28rem));
 }
 
-.textarea-29l {
+.textarea_29l {
   height: calc(40rem + ( (29 - 1) * 28rem));
 }
 
-.textarea-30l {
+.textarea_30l {
   height: calc(40rem + ( (30 - 1) * 28rem));
 }
 
@@ -2906,6 +2921,7 @@ TODO:    > Cards
 }
 
 .card.h1 {
+  display: inline-block;
   display: flow-root;
   margin-top: 0;
   margin-bottom: 0;

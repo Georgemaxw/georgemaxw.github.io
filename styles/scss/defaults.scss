@@ -286,15 +286,15 @@ pre {
     font-family: $font_monospace;
 }
 
-.font-monospace {
+.font_monospace {
     font-family: $font_monospace;
 }
 
-.font-small {
+.font_small {
     font-size: $font_small;
 }
 
-.font-smaller {
+.font_smaller {
     font-size: $font_smaller;
 }
 
@@ -367,13 +367,18 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
             margin-top: 8px;
         }
 
-        ul, ol {
-            margin: 0 0 0 20px;
+        > li > ul { 
+            margin: 0 0 0 0px; 
         }
 
         ul {
+            margin: 0 0 0 18px; 
             list-style-type: none;
             // list-style-type: "└ "; // <- Não funciona no safari.
+        }
+
+        ol {
+            margin: 0 0 0 21px;
         }
 
         ul li:before {
@@ -383,7 +388,7 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
         a {
             color: $color_text;
         }
-    }  
+    }
 
     > ul { 
         list-style-type: none;
@@ -617,6 +622,7 @@ TODO:        >> Menu
 
             span {
                 display: flex;
+                align-items: center; 
                 margin-left: 16px;
                 margin-right: 16px;
 
@@ -658,6 +664,16 @@ TODO:        >> Menu
             overflow: auto;
         }
     }
+
+    .nav_selector { // Classe aplicada somente via JS
+        background: $bg_nav_selector; 
+        max-height: 40px; 
+        border-radius: 15px; 
+        padding-left: 4px; 
+        padding-right: 4px; 
+        margin-top: 4px
+    }
+
 /*  
 ────────────────────────────
 TODO:        >> Expandido
@@ -666,7 +682,7 @@ TODO:        >> Expandido
     @media (min-width: $nav_expand) {
 
         .nav-menu {
-            display: inline-block !important;
+            display: inline-block !important; // Esta declaração deve ser a 1ª para evitar que o 'Header-nav' bug no smartphone. '!important' evita um bug que ocorre ao redimensionar a viewport.
             position: static;
             background: 0;
         }
@@ -674,7 +690,7 @@ TODO:        >> Expandido
         .nav .nav-menu-button {
             display: none;
         }
-        
+
         .nav-menu > ul, .nav-menu > ul > li {
             display: inline-block;
         }
@@ -995,7 +1011,7 @@ table {
 
     caption {
         margin-top: calc(#{$margin_vertical}/2); 
-        @extend .font-smaller;
+        @extend .font_smaller;
     }
 
     ul, ol { /* <- Regra para caso tenha lista na tabela. */
@@ -1004,12 +1020,12 @@ table {
     }
 }
 /*
-.table-style-1 {
+.table_style_1 {
      Estilo padrão. 
 }
 */
 
-.table-style-2 {
+.table_style_2 {
     width: 100%;
     max-width: none;
     border-width: 0;
@@ -1033,13 +1049,13 @@ table {
 }
 
 @media (min-width: $tablet) {
-    .table-style-2 {
+    .table_style_2 {
         width: auto;
         max-width: calc(100% - 2 * #{$margin_horizontal});
     }
 }
 
-.table-style-3 {
+.table_style_3 {
     border-width: 0;
 
     tr:hover {
@@ -1060,10 +1076,10 @@ table {
     }
 }
 
-/*----- table-style-4 -----*/
+/*----- table_style_4 -----*/
 
 @media (min-width: 0) and (max-width:  $tablet) {
-    .table-style-4 {
+    .table_style_4 {
         border-width: 0;
         margin-left: calc(2 * #{$margin_horizontal});
         margin-right: calc(2 * #{$margin_horizontal});
@@ -1102,7 +1118,7 @@ table {
 }
 
 @media (min-width: $tablet) {
-    .table-style-4 {
+    .table_style_4 {
         border-width: 0;
 
         tr {
@@ -1358,7 +1374,7 @@ TODO:    > Classes
 ──────────────────────────── */
 
 @for $i from 1 through 30 { 
-    .textarea-#{$i}l {
+    .textarea_#{$i}l {
         height: calc(40rem + ( (#{$i} - 1) * 28rem));
     } 
 }
@@ -2531,8 +2547,9 @@ TODO:    > Cards
 
 .card.h1 { // Card + Float
 
-    display: flow-root; 
-    margin-top: 0;
+    display: inline-block; // <- Hack necessário para o card não bugar no Safari do desktop.
+    display: flow-root;
+    margin-top: 0; 
     margin-bottom: 0;
 
     .card_img {
@@ -2769,3 +2786,18 @@ TODO: Lightbox
     scrollbar-width: auto;
     scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

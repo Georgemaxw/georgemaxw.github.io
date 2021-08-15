@@ -148,10 +148,10 @@
 
                 <p>
                     Classe(s):  <!--<span class="underline">underline</span>,  <span class="bold">bold</span>, 
-                    <span class="italic">italic</span>, e --><span class="font-small">font-small</span>.
+                    <span class="italic">italic</span>, --><span class="font_small">font_small</span>, e <span class="font_smaller">font_smaller</span>.
                 </p>
                 
-                <p class="font-monospace">Classe 'font-monospace'.</p>
+                <p class="font_monospace">Classe 'font_monospace'.</p>
                 <!--
                 <p class="content-center">Classe 'content-center'.</p>
 
@@ -572,7 +572,7 @@
 
                     <label for="msg">
                         Message:
-                        <textarea id="msg" name="user_message" class="textarea-3l" spellcheck="true" placeholder="Textarea com a classe 'textarea-3l'.">Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. </textarea>
+                        <textarea id="msg" name="user_message" class="textarea_3l" spellcheck="true" placeholder="Textarea com a classe 'textarea_3l'.">Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. </textarea>
                     </label>
                        
                     <label for="file">
@@ -681,8 +681,8 @@
                     </tr>
                 </table>
 
-                <table class="table-style-2">
-                    <caption>&lt;table> com a classe 'table-style-2'.</caption>
+                <table class="table_style_2">
+                    <caption>&lt;table> com a classe 'table_style_2'.</caption>
                     <tr>
                         <td style="width: 33.33%;"></td>
                         <th style="width: 33.33%;" scope="col">Cab.-C1</th>
@@ -705,8 +705,8 @@
                     </tr>
                 </table>
 
-                <table class="table-style-3">
-                    <caption>&lt;table> com a classe 'table-style-3'.</caption>
+                <table class="table_style_3">
+                    <caption>&lt;table> com a classe 'table_style_3'.</caption>
                     <tr>
                         <th style="width: 50%;" scope="row">Cab.-L1</th> 
                         <td style="width: 50%;">1-1</td>
@@ -721,8 +721,8 @@
                     </tr>
                 </table>
 
-                <table class="table-style-4">
-                    <caption>&lt;table> com a classe 'table-style-4'.</caption>
+                <table class="table_style_4">
+                    <caption>&lt;table> com a classe 'table_style_4'.</caption>
                     <tr>
                         <th scope="row">Cab.-L1</th> 
                         <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
@@ -1402,11 +1402,11 @@
 
                     <div class="card_text">
                             <h5>Card Title</h5>
-                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
                     </div>
                 </a>
 
-                <p>Cards com a classe 'h1' enfileirados:</p>
+                <p>Cards com a classe 'h1' enfileirados <span style="color: red;">(importante: Para evitar este bug que acontece no Safari do desktop mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, use os cards agrupados com a classe 'group' mostrado mais abaixo)</span>:</p>
              
                 <a href="" class="card h1">
                     <img src="images/ex_192×108.png" alt="" class="card_img">  
@@ -1446,7 +1446,7 @@
                     </div>
                 </a>
 
-                <p>Cards com a classe 'h2' enfileirados (importante: Para evitar este bug mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, considere usar os cards agrupados):</p>
+                <p>Cards com a classe 'h2' enfileirados <span style="color: red;">(importante: Para evitar este bug que acontece no Chrome do desktop mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, use os cards agrupados com a classe 'group' mostrado mais abaixo)</span>:</p>
 
                 <a href="" class="card h2">
                     <img src="images/ex_192×108.png" alt="" class="card_img">
@@ -1715,6 +1715,15 @@
                         <div class="card_text">
                                 <h5>Card Title</h5>
                                 <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h2">
+                        <img src="images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <!--<p>Abcde fghij klmno pqrst uvwxyz.</p>-->
                         </div>
                     </a>
 
@@ -2086,9 +2095,9 @@
     >> Text
     ────────────────────────────
 
-    - font-monospace
-    - font-small
-    - font-smaller
+    - font_monospace
+    - font_small
+    - font_smaller
     - text_container
     - highlight
     - highlight_menu
@@ -2120,17 +2129,17 @@
     >> Tables
     ────────────────────────────
 
-    - table-style-2
-    - table-style-3
-    - table-style-4
+    - table_style_2
+    - table_style_3
+    - table_style_4
 
     ────────────────────────────
     >> Forms
     ────────────────────────────
 
-    - textarea-1l
+    - textarea_1l
     ...
-    - textarea-30l
+    - textarea_30l
 
     ────────────────────────────
     >> Others
@@ -2195,12 +2204,17 @@
     > Browsers Tests
     ────────────────────────────
 
-    Data date: 07/2021
+    ────────────────────────────
+    >> Test 1
+    ────────────────────────────
+
+    Test date: 15/August/2021
+    Data date: July/2021
 
     Desktop (42%):
     
     - Chrome (70%) <- OK!
-    - Safari (10%)
+    - Safari (10%) <- OK!
     - Edge (8%)
     - Firefox (8%)
 

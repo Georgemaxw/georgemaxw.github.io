@@ -1,7 +1,7 @@
 
 // {(function(){    })()}  
 
-var nav_expand = 565 // VÍNCULO: Váriável CSS
+var nav_expand = 565 // VÍNCULO: Váriável SCSS
 
 /*  
 ──────────────────────────────────────────────────────
@@ -20,7 +20,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul>
             <li><a href="#">Link 1.1</a></li>
-            <li><a href="page_2.html">Link 1.2</a></li>
+            <li><a href="#">Link 1.2</a></li>
             <li><a href="#">Link 1.3</a></li>
         </ul>
     </div>
@@ -116,7 +116,7 @@ var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
 var nav_options_anchorClicked_index = 'none'
-var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
+// var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
 
 var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
                                                                                         do <html> apareça em momentos em que não se deseja 
@@ -142,7 +142,8 @@ document.querySelector('.nav-menu-button').onclick = function() {
         nav_menu_compact_enabled = false
 
         for(var i = 0; i < nav_divs.length; i++) {
-            nav_options_anchors[i].style = ''
+            //nav_options_anchors[i].style = ''
+            nav_options_anchors[i].classList.remove('nav_selector')
             nav_divs[i].style = 'display: none'
         }
 
@@ -153,7 +154,7 @@ document.querySelector('.nav-menu-button').onclick = function() {
 window.onresize = function() {
     if(window.innerWidth >= nav_expand) {
         //document.querySelector('.nav-menu').style = 'display: inline-block'
-        
+         
         if(nav_options_anchorClicked_index === 'none') {
 
             if(nav_html_scrollbar_allowedEnable === true) {
@@ -182,10 +183,13 @@ window.onresize = function() {
 
     if(nav_options_anchorClicked_index !== 'none') { 
         if(window.innerWidth >= nav_expand) {
-            nav_options_anchors[nav_options_anchorClicked_index].style = 
-            'background: '+ bg_nav_selector +' !important; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
+            //nav_options_anchors[nav_options_anchorClicked_index].style = 
+            //'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 4px; padding-right: 4px; margin-top: 4px'
+            nav_options_anchors[nav_options_anchorClicked_index].classList.add('nav_selector')
+
         } else { 
-            nav_options_anchors[nav_options_anchorClicked_index].style = 'background: 0' 
+            //nav_options_anchors[nav_options_anchorClicked_index].style = 'background: 0' 
+            nav_options_anchors[nav_options_anchorClicked_index].classList.remove('nav_selector')
         }
     }
 } 
@@ -204,13 +208,15 @@ function nav_menu_options(arg) {
                                                                            // correspondente ao <a> de categoria clicado.
 
         for(var i = 0; i < nav_divs.length; i++) { // <- Desabilita todos os <div>'s de sub opção.
-            nav_options_anchors[i].style = ''
+            // nav_options_anchors[i].style = ''
+            nav_options_anchors[i].classList.remove('nav_selector')
             nav_divs[i].style = 'display: none'
         }
 
         if(window.innerWidth >= nav_expand) { 
-            nav_options_anchors[nav_options_anchorClicked_index].style = 
-            'background: '+ bg_nav_selector +' !important; height: 40px; border-radius: 15px; padding-left: 5px; padding-right: 5px; margin-top: 4px'
+            //nav_options_anchors[nav_options_anchorClicked_index].style = 
+            //'background: '+ bg_nav_selector +'; height: 40px; border-radius: 15px; padding-left: 5px; padding-right: 5px; margin-top: 4px'
+            nav_options_anchors[nav_options_anchorClicked_index].classList.add('nav_selector')
         }
 
         nav_divs[nav_options_anchorClicked_index].style = 'display: block'
@@ -223,7 +229,8 @@ function nav_menu_options(arg) {
         }
 
     } else {
-        nav_options_anchors[nav_options_anchorClicked_index].style = ''
+        //nav_options_anchors[nav_options_anchorClicked_index].style = ''
+        nav_options_anchors[nav_options_anchorClicked_index].classList.remove('nav_selector')
         nav_divs[nav_options_anchorClicked_index].style = 'display: none'
 
         nav_options_anchorClicked_index = 'none'
@@ -257,7 +264,8 @@ var nav_subOptionsMenu_clicked = false
             nav_menu_compact_enabled = false
 
             for(var i = 0; i < nav_divs.length; i++) {
-                nav_options_anchors[i].style = ''
+                // nav_options_anchors[i].style = ''
+                nav_options_anchors[i].classList.remove('nav_selector')
                 nav_divs[i].style = 'display: none'
             }
             nav_options_anchorClicked_index = 'none'
@@ -284,7 +292,8 @@ var nav_subOptionsMenu_clicked = false
                 nav_menu_compact_enabled = false
 
                 for(var i = 0; i < nav_divs.length; i++) {
-                    nav_options_anchors[i].style = ''
+                    // nav_options_anchors[i].style = ''
+                    nav_options_anchors[i].classList.remove('nav_selector')
                     nav_divs[i].style = 'display: none'
                 }
                 nav_options_anchorClicked_index = 'none'
@@ -301,7 +310,8 @@ var nav_subOptionsMenu_clicked = false
 document.querySelector('.nav-menu > ul > li:nth-last-of-type(1)').onclick = function() { // <- Hide Header-nav
 
     for(var i = 0; i < nav_divs.length; i++) {
-        nav_options_anchors[i].style = ''
+        //nav_options_anchors[i].style = ''
+        nav_options_anchors[i].classList.remove('nav_selector')
         nav_divs[i].style = 'display: none'
     }
 
