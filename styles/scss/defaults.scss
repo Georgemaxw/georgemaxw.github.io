@@ -326,7 +326,10 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 }
 
 .highlight {
-    color: $color_text_highlight;
+    //color: $color_text_highlight;
+    background: url(../../images/bg_lightbox.png)  center /100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .highlight_menu {

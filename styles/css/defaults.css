@@ -375,7 +375,9 @@ p.text_container {
 }
 
 .highlight {
-  color: #00c8ff;
+  background: url(../../images/bg_lightbox.png) center/100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .highlight_menu {
