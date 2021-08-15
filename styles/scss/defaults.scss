@@ -34,8 +34,9 @@ $color_theme_clear: hsla(193, 100%, 98%, 1);
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%);
 $color_text_menu: white; 
+$color_text_hx: url(../../images/color_text_hx.png)  center /100% 100%;
 $color_text_highlight: url(../../images/color_text_highlight.png)  center /100% 100%;
-$color_text_highlight_menu: yellow;
+$color_text_highlight_menu: url(../../images/color_text_highlight_menu.png)  center /100% 100%;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
@@ -183,7 +184,12 @@ a {
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         @extend .offset;
         text-align: center; 
-        color: $color_theme;
+        // color: $color_theme;
+        background: $color_text_hx;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent; 
 	}
 }
 
@@ -196,7 +202,12 @@ a {
         @extend .offset;
         text-align: center; 
         font-weight: bold;
-        color: $color_theme;
+        // color: $color_theme;
+        background: $color_text_hx;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent; 
 	}
 }
 
@@ -330,10 +341,17 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent; 
 }
 
 .highlight_menu {
-    color: $color_text_highlight_menu;
+    //color: $color_text_highlight_menu;
+    background: $color_text_highlight_menu;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent; 
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -514,6 +532,14 @@ TODO:    > Header-nav
             margin-top: -1px;
             font-weight: normal;
             color: $color_text_menu;
+
+             // As declarações abaixo desfazem o bg como cor do texto:
+             
+            background: 0;
+            -webkit-background-clip: border-box;
+            -webkit-text-fill-color: currentcolor;
+            background-clip: border-box;
+            text-fill-color: currentcolor; 
         }
 
         a {
@@ -2608,6 +2634,15 @@ TODO:    > Posters
     margin-bottom: $margin_vertical;
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
+
+    h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20 { // <- Desfaz o bg como cor do texto.
+            
+        background: 0;
+        -webkit-background-clip: border-box;
+        -webkit-text-fill-color: currentcolor;
+        background-clip: border-box;
+        text-fill-color: currentcolor; 
+    }
 }
 
 .poster_img {
