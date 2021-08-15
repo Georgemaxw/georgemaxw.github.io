@@ -34,7 +34,7 @@ $color_theme_clear: hsla(193, 100%, 98%, 1);
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%);
 $color_text_menu: white; 
-$color_text_highlight: $color_theme;
+$color_text_highlight: url(../../images/color_text_highlight.png)  center /100% 100%;
 $color_text_highlight_menu: yellow;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
@@ -327,7 +327,7 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 
 .highlight {
     //color: $color_text_highlight;
-    background: url(../../images/bg_lightbox.png)  center /100% 100%;
+    background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

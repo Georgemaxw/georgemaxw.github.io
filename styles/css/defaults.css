@@ -375,7 +375,7 @@ p.text_container {
 }
 
 .highlight {
-  background: url(../../images/bg_lightbox.png) center/100% 100%;
+  background: url(../../images/color_text_highlight.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
