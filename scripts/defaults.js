@@ -32,7 +32,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul>
             <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 2.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 2.2</span></a></li>-->
             <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
             <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 2.5</span></a></li>
@@ -46,7 +46,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul class="nav_compact_subOptions_textBelow">
             <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 3.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 3.2</span></a></li>-->
             <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 3.3</span></a></li>
             <!--<li><a href="#">Link 3.4</a></li>-->
             <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 3.5</span></a></li>
@@ -60,7 +60,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul class="nav_expanded_subOptions_h nav_expanded_subOptions_textBelow">
             <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 4.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 4.2</span></a></li>-->
             <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.3</span></a></li>
            <!-- <li><a href="#">Link 4.4</a></li>-->
             <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.5</span></a></li>
@@ -75,7 +75,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul class="nav_expanded_subOptions_h nav_subOptions_textBelow">
             <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 5.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 5.2</span></a></li>-->
             <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.3</span></a></li>
            <!-- <li><a href="#">Link 5.4</a></li>-->
             <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.5</span></a></li>
@@ -87,13 +87,13 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="">∅</a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">L7</a>
+<li><a onclick="nav_menu_options(this)"><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">L7</a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 7.2</span></a></li>
-            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_Size">Link 7.3</span></a></li>
+            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
             <li><a href="#"><img src="images/ex_landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
             <li><a href="#"><img src="images/ex_landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->

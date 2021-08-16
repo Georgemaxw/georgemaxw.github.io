@@ -5,18 +5,19 @@
 TODO: Variáveis
 ────────────────────────────────────────────────────── */
 
+$font_default: 'Times New Roman', Times, Georgia, serif;
+$font_monospace: 'Courier New', Courier, monospace;
 $font_size: 19rem; 
 $font_small: 16rem;
 $font_smaller: 14rem;
 $central_maxWidth: 800px; /* Padrão: 600-700px. */
 $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
-$font_default: 'Times New Roman', Times, Georgia, serif;
-$font_monospace: 'Courier New', Courier, monospace;
 $button_height: 48px;
 $button_height_small: 40px;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
+$border_radius_default: 20px;
  
 /* ------ Breakpoints ------ */  
 
@@ -56,12 +57,16 @@ $color_border_table: hsl(0, 0%, 85%);
 $color_border_form: hsl(0, 0%, 80%); 
 $color_border_kbd: hsl(0, 0%, 95%);
 
+$color_shadow_text: hsla(0, 0%, 0%, 0.15);
+$color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
 $color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
 $color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
 $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 $color_shadow_footer: hsla(0, 0%, 0%, 0.22);
+$color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
+$color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
  
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
@@ -331,7 +336,7 @@ pre {
     font-size: $font_size; 
     padding: 8px 13px 9px;
     border: 1px solid $color_border_form;  
-    border-radius: 20px;
+    border-radius: $border_radius_default;
     min-height: $button_height_small;
     text-align: justify;
 }
@@ -553,6 +558,7 @@ TODO:    > Header-nav
             height: $button_height;
             color: inherit;
             text-decoration: none;
+            text-shadow: 1px 1px 1px $color_shadow_text;
             display: flex; 
             justify-content: center;
             align-items: center;
@@ -564,7 +570,12 @@ TODO:    > Header-nav
             img {
                 width: 22px;
                 margin-right: 8px;
+                filter: drop-shadow(1px 1px 1px $color_shadow_text);
             }
+        }
+
+        .textImg, .textImg_size {
+            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
         }
     }
 
@@ -583,6 +594,10 @@ TODO:    > Header-nav
             font-size: 32px;
             text-align: center;
             color: $color_text_menu;
+        }
+
+        img {
+            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
         }
     }
 
@@ -762,6 +777,7 @@ TODO:        >> Expandido
                 img {
                     width: $button_height;
                     margin-right: 2px;
+                    filter: drop-shadow(1px 1px 1px $color_shadow_text); 
                 }
             }
         }
@@ -858,6 +874,7 @@ TODO:        >> Expandido
     img {
         width: inherit;
         height: inherit;
+        filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 
     /*
@@ -975,11 +992,11 @@ TODO: Multimídia
 }*/
 
 .textImg {
-    max-width: 19px; 
-    margin-bottom: -5px;
+    max-width: 19px !important;
+    margin-bottom: -3px;
 }
 
-.textImg_Size {
+.textImg_size {
     max-width: 19px;
 }
 
@@ -1236,7 +1253,7 @@ input[type="text"], input[type="email"], textarea {
     margin-top: $margin_vertical;
     margin-left: 20px;
     margin-right: 20px;
-    border-radius: 20px;
+    border-radius: $border_radius_default;
     /* border: 1px solid hsl(0, 0%, 93%); 
     filter: drop-shadow(0px 6px 9px hsla(0, 0%, 0%, 0.18)); <- Traz inconsistências entre os navegadores. */
 }
@@ -1368,10 +1385,10 @@ button {
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
     background: $bg_button;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    text-shadow: 1px 1px 1px $color_shadow_text; 
     box-shadow: 
-    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 }
 
 button:disabled {
@@ -1718,6 +1735,10 @@ TODO:    > Choices
     justify-content: center;
     align-items: center; 
     color: $color_text_menu;
+
+    .textImg, .textImg_size {
+        filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+    }
 }
 
 .choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
@@ -1735,10 +1756,10 @@ TODO:        >> Horizontal
     display: inline-flex;
     border-radius: 1000px;
     background: $bg_choice;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    text-shadow: 1px 1px 1px $color_shadow_text;
     box-shadow: 
-    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
     > li {
         display: inline-flex;
@@ -1761,10 +1782,10 @@ TODO:        >> Horizontal
         border-bottom-left-radius: 1000px;
 
         background: $bg_choice_label;
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        text-shadow: 1px 1px 1px $color_shadow_text;
         box-shadow: 
-        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+        inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+        inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
         
         span {
             padding-left: 15px;
@@ -1794,12 +1815,12 @@ TODO:        >> Horizontal
 
     > li a:hover {
         background: hsla(0, 0%, 100%, 0.45);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+        text-shadow: 1px 1px 1px $color_shadow_text_strong;
     }
 
     > li:nth-of-type(1) a:hover {
         background: hsla(0, 0%, 100%, 0);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        text-shadow: 1px 1px 1px $color_shadow_text;
     }
 
     > li + li {
@@ -1814,12 +1835,12 @@ TODO:        >> Vertical
 
 .choice_v {
 
-    border-radius: 20px;
+    border-radius: $border_radius_default;
     background: $bg_choice;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    text-shadow: 1px 1px 1px $color_shadow_text;
     box-shadow: 
-    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
     > li {
         display: flex;
@@ -1837,12 +1858,12 @@ TODO:        >> Vertical
 
     > li a:hover {
         background: hsla(0, 0%, 100%, 0.45);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+        text-shadow: 1px 1px 1px $color_shadow_text_strong;
     }
 
     > li:nth-of-type(1) a:hover {
         background: hsla(0, 0%, 100%, 0);
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        text-shadow: 1px 1px 1px $color_shadow_text;
     }
 
     > li:nth-of-type(1) {
@@ -1851,10 +1872,10 @@ TODO:        >> Vertical
 
         justify-content: center;
         background: $bg_choice_label;
-        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+        text-shadow: 1px 1px 1px $color_shadow_text;
         box-shadow: 
-        inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-        inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+        inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+        inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
         a {
             display: flex;
@@ -1889,12 +1910,12 @@ TODO:        >> Dropdown
 
 .choice_d {
 
-    border-radius: 20px;
+    border-radius: $border_radius_default;
     background: $bg_choice;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1);
+    text-shadow: 1px 1px 1px $color_shadow_text;
     box-shadow: 
-    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
     > li {
         display: inline-flex;
@@ -1907,7 +1928,7 @@ TODO:        >> Dropdown
         }
 
         > a > img {
-            border-radius: 20px;
+            border-radius: $border_radius_default;
         }
 
         span::after { 
@@ -1927,7 +1948,7 @@ TODO:        >> Dropdown
         cursor: pointer;
 
         > img {
-            border-radius: 20px;
+            border-radius: $border_radius_default;
         }
     }
 }
@@ -1988,8 +2009,6 @@ TODO:        >> Dropdown
         border-radius: 0;
     }
 
-    // > li a:hover { background: hsla(0, 0%, 100%, 0.45); text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3); } // hover
-
     > li + li {
         border-bottom: 1px solid $color_text_menu;
     }
@@ -2037,13 +2056,13 @@ TODO:        >> Option ON
 .choice_h > li > a.on, .choice_v > li > a.on { 
 
     background: hsla(0, 0%, 100%, 0.45);
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+    text-shadow: 1px 1px 1px $color_shadow_text_strong;
 }
 
 .choice_d.choice_d_open > li > .on { // .choice_h > li > a.on, .choice_v > li > a.on
 
     background: hsla(0, 0%, 100%, 0.45);
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+    text-shadow: 1px 1px 1px $color_shadow_text_strong;
 }
 
 /*  
@@ -2103,7 +2122,7 @@ TODO:        >> No Label
         }
 
         > a > img {
-            border-radius: 20px;
+            border-radius: $border_radius_default;
         }
     }
 }
@@ -2140,12 +2159,12 @@ TODO:        >> Desabilitado
 
 .choice_h.disabled > li > a, .choice_v.disabled > li > a {
     background: 0 !important;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1) !important;
+    text-shadow: 1px 1px 1px $color_shadow_text !important;
 }
 
 .choice_h > li > a.disabled, .choice_v > li > a.disabled {
     background: 0 !important;
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.1) !important;
+    text-shadow: 1px 1px 1px $color_shadow_text !important;
 }
 
 /*  
@@ -2586,7 +2605,7 @@ TODO:    > Cards
 .card_img {
     max-width: 100%; 
     max-height: 100%;
-    border-radius: 20px;
+    border-radius: $border_radius_default;
 }
 
 .card.h1, .card.h2 {
@@ -2667,6 +2686,7 @@ TODO:    > Posters
     margin-bottom: $margin_vertical;
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
+    text-shadow: 1px 1px 1px $color_shadow_text;
 
     h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20 { // <- Desfaz o bg como cor do texto.
             
@@ -2676,6 +2696,10 @@ TODO:    > Posters
         background-clip: border-box;
         text-fill-color: currentcolor; 
     }
+
+    .textImg, .textImg_size {
+        filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+    }
 }
 
 .poster_img {
@@ -2683,7 +2707,7 @@ TODO:    > Posters
     z-index: -1;
     width: 100%; 
     height: 100%; 
-    border-radius: 20px;
+    border-radius: $border_radius_default;
 }
 
 .poster_header {
@@ -2787,12 +2811,12 @@ TODO: Lightbox
 
     max-width: calc(100vw - (2 * #{$button_height_small}));
     max-height: calc(100vh - (3 * #{$button_height}));
-    border-radius: 20px;
+    border-radius: $border_radius_default;
     color: $color_text_menu;
     background: $bg_lightbox;
     box-shadow: 6px 6px 24px -14px black,
-    inset 0px -4px 5px 3px hsla(0, 0%, 0%, 0.15),
-    inset 5px 5px 5px 0px hsla(0, 0%, 100%, 0.4);
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 }
 
 .lightbox_img {
@@ -2808,13 +2832,17 @@ TODO: Lightbox
 }
 
 .lightbox_img_rounded {
-    border-radius: 20px;
+    border-radius: $border_radius_default;
 }
 
 .lightbox_text {
     //display: block; 
     font-size: $font_size; 
-    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.15);
+    text-shadow: 1px 1px 1px $color_shadow_text;
+
+    .textImg, .textImg_size {
+        filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+    }
 }
   
 /* Close Button */
@@ -2830,7 +2858,7 @@ TODO: Lightbox
     width: $button_height_small; 
     height: $button_height_small;
     border-radius: 50%;
-    background: url(../../images/icon_lightbox_close.svg)  center /100% 100%, rgb(85, 85, 85); 
+    background: url(../../images/icon_lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%); 
     box-shadow: 6px 6px 8px -7px rgb(0, 0, 0),
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);

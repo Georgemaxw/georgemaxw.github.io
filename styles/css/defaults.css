@@ -667,6 +667,7 @@ TODO:        >> Expandido
   height: 48px;
   color: inherit;
   text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -679,6 +680,11 @@ TODO:        >> Expandido
 .header-nav .nav .logo img {
   width: 22px;
   margin-right: 8px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+.header-nav .nav .textImg, .header-nav .nav .textImg_size {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 .header-nav .button-left {
@@ -697,6 +703,10 @@ TODO:        >> Expandido
   font-size: 32px;
   text-align: center;
   color: white;
+}
+
+.header-nav .nav-menu-button img {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 .header-nav .nav-menu {
@@ -855,6 +865,7 @@ TODO:        >> Expandido
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a img {
     width: 48px;
     margin-right: 2px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
   }
   .header-nav .nav-menu ul li div {
     display: none;
@@ -940,6 +951,7 @@ TODO:        >> Expandido
 .headerNav-button img {
   width: inherit;
   height: inherit;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 /*  
@@ -1033,11 +1045,11 @@ TODO: Multimídia
     margin-bottom: -4px;
 }*/
 .textImg {
-  max-width: 19px;
-  margin-bottom: -5px;
+  max-width: 19px !important;
+  margin-bottom: -3px;
 }
 
-.textImg_Size {
+.textImg_size {
   max-width: 19px;
 }
 
@@ -1403,7 +1415,7 @@ button {
   margin-top: 16rem;
   margin-bottom: 16rem;
   background: url(../../images/bg_button.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2242,6 +2254,10 @@ TODO:    > Choices
   color: white;
 }
 
+.choice_h > li span .textImg, .choice_h > li span .textImg_size, .choice_v > li span .textImg, .choice_v > li span .textImg_size, .choice_d > li span .textImg, .choice_d > li span .textImg_size {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
 .choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
   margin-right: 6px;
 }
@@ -2254,7 +2270,7 @@ TODO:        >> Horizontal
   display: inline-flex;
   border-radius: 1000px;
   background: url(../../images/bg_choice.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2278,7 +2294,7 @@ TODO:        >> Horizontal
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   background: url(../../images/bg_choice_label.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2311,7 +2327,7 @@ TODO:        >> Horizontal
 
 .choice_h > li:nth-of-type(1) a:hover {
   background: rgba(255, 255, 255, 0);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .choice_h > li + li {
@@ -2325,7 +2341,7 @@ TODO:        >> Vertical
 .choice_v {
   border-radius: 20px;
   background: url(../../images/bg_choice.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2350,7 +2366,7 @@ TODO:        >> Vertical
 
 .choice_v > li:nth-of-type(1) a:hover {
   background: rgba(255, 255, 255, 0);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .choice_v > li:nth-of-type(1) {
@@ -2358,7 +2374,7 @@ TODO:        >> Vertical
   border-top-right-radius: 20px;
   justify-content: center;
   background: url(../../images/bg_choice_label.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2393,7 +2409,7 @@ TODO:        >> Dropdown
 .choice_d {
   border-radius: 20px;
   background: url(../../images/bg_choice.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2613,12 +2629,12 @@ TODO:        >> Desabilitado
 
 .choice_h.disabled > li > a, .choice_v.disabled > li > a {
   background: 0 !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
 .choice_h > li > a.disabled, .choice_v > li > a.disabled {
   background: 0 !important;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
 /*  
@@ -3090,6 +3106,7 @@ TODO:    > Posters
   margin-bottom: 16rem;
   margin-left: 20px;
   margin-right: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .poster h1, .poster h2, .poster h3, .poster h4, .poster h5, .poster h6, .poster h7, .poster h8, .poster h9, .poster h10, .poster h11, .poster h12, .poster h13, .poster h14, .poster h15, .poster h16, .poster h17, .poster h18, .poster h19, .poster h20 {
@@ -3098,6 +3115,10 @@ TODO:    > Posters
   -webkit-text-fill-color: currentcolor;
   background-clip: border-box;
   text-fill-color: currentcolor;
+}
+
+.poster .textImg, .poster .textImg_size {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 .poster_img {
@@ -3319,6 +3340,10 @@ TODO: Lightbox
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
+.lightbox_text .textImg, .lightbox_text .textImg_size {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
 /* Close Button */
 .lightbox_closeArea::after {
   content: "";
@@ -3330,7 +3355,7 @@ TODO: Lightbox
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: url(../../images/icon_lightbox_close.svg) center/100% 100%, #555555;
+  background: url(../../images/icon_lightbox_close.svg) center/100% 100%, #545454;
   box-shadow: 6px 6px 8px -7px black, inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5), inset -3px -4px 5px 3px rgba(0, 0, 0, 0.4);
 }
 
