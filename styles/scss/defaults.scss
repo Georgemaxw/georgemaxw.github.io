@@ -28,7 +28,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 
 /* ------ Cores E Planos De Fundos ------ */
 
-$color_theme: hsla(193, 100%, 50%, 1); 
+$color_theme: rgb(0, 200, 255); 
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -267,8 +267,8 @@ strong, b, em, i {
     text-decoration: underline;
 }
 
-abbr {
-    text-decoration: none;
+abbr[title] { 
+    text-decoration: underline dotted;
 }
 
 dfn, var, address, cite {
@@ -1060,6 +1060,10 @@ table {
     border-width: 0;
     border-bottom: $table_border1_width solid $color_theme;
 
+    tr :nth-child(1) {
+        font-weight: bold;
+    }
+
     tr:nth-of-type(1) {
         border-bottom: $table_border1_width solid $color_theme;
     }
@@ -1597,6 +1601,10 @@ TODO:    > Galleries
 
 .gallery img {
     width: 50%;
+}
+
+.gallery a {
+    font-size: 0;
 }
 
 @media (min-width: $tablet) { 
@@ -2824,6 +2832,16 @@ TODO: Lightbox
     scrollbar-width: auto;
     scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

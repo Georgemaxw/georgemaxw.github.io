@@ -387,8 +387,8 @@ strong, b, em, i {
   text-decoration: underline;
 }
 
-abbr {
-  text-decoration: none;
+abbr[title] {
+  text-decoration: underline dotted;
 }
 
 dfn, var, address, cite {
@@ -1117,6 +1117,10 @@ table ul, table ol {
   max-width: none;
   border-width: 0;
   border-bottom: 1px solid #00c8ff;
+}
+
+.table_style_2 tr :nth-child(1) {
+  font-weight: bold;
 }
 
 .table_style_2 tr:nth-of-type(1) {
@@ -2133,6 +2137,10 @@ TODO:    > Galleries
 ──────────────────────────── */
 .gallery img {
   width: 50%;
+}
+
+.gallery a {
+  font-size: 0;
 }
 
 @media (min-width: 501px) {
