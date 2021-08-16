@@ -1,0 +1,745 @@
+/* gmes-defaults.css */
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Variáveis
+────────────────────────────────────────────────────── */
+
+$horizontal_margins: calc(8px + (2.5vw)); /* Apple: 16px em 320w, e 22px em 736w. */
+$vertical_margins: 16rem;
+$font-small: 16rem;
+$font-smaller: 13rem;
+$font-default: 'Times New Roman', Times, Georgia, serif;
+$font-monospace: 'Courier New', Courier, monospace;
+$button-height: 48rem;
+$main_column-max_width: 800px; /* Padrão: 600-700px. */
+
+/* Breakpoints */
+
+$tablet-1: 500px;
+$tablet-2: calc(#{$main_column-max_width} + 66px); /* Viewport to enable 'main_column-max_width'. */
+$pc: 1000px;
+
+$nav-open: 501px;
+
+/* Cores E Planos De Fundos */
+
+$text-color: black;
+$menu-text-color: white;
+$form-text-color: hsl(0, 0%, 60%);
+$menu-base_color: hsl(193,100%,50%);
+
+$background-body: 0;
+
+/*
+$background-header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$background-nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$background-footer-icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$background-button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+*/
+
+    $background-header: url(../../images/backgrounds/background-header.png);
+    $background-nav: url(../../images/backgrounds/background-nav.png)  center /100% 100%;
+    $background-footer-icons: url(../../images/backgrounds/background-footer-icons.png)  center /100% 100%;
+    $background-button: url(../../images/backgrounds/background-button.png);
+
+/*  
+──────────────────────────────────────────────────────
+Modelo De Caixa Alternativo Global 
+────────────────────────────────────────────────────── */
+
+html {
+    box-sizing: border-box;
+} 
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+       
+/*  
+──────────────────────────────────────────────────────
+TODO: Margens
+────────────────────────────────────────────────────── */
+
+.lm { /* Lateral margins */    
+    margin-left: $horizontal_margins;
+    margin-right: $horizontal_margins;
+}
+
+@media (min-width: $tablet-2) {
+    .lm {
+        /**/
+        margin-left: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ;
+        margin-right: calc(((100% - #{$main_column-max_width}) / 2) + 30px) ;
+    }
+}
+
+%margins {
+    margin-top: $vertical_margins;
+    margin-bottom: $vertical_margins;
+    @extend .lm;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Textos
+────────────────────────────────────────────────────── */
+
+html {
+    font-family: $font-default;
+    font-size: 1px;
+    color: $text-color;
+}
+
+div, span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, 
+ul, ol, li, dl, dt, dd, abbr, dfn, sub, sup, pre, var, kbd, samp, 
+code, time, address, blockquote, q, cite, figcaption, header, 
+nav, main, article, section, aside, footer, form, label, input, 
+textarea, select, button, fieldset, legend, table, tr, td, th, caption { 
+    font-size: 19rem;
+}
+
+header, main, article, section, aside, footer {
+    font-size: 0;
+}
+
+a { 
+    color: blue; 
+    text-decoration: none;
+} 
+
+h1, h2, h3, h4, h5, h6 { 
+    text-align: center; 
+    text-transform: capitalize;
+    @extend .lm;
+}
+
+@for $i from 1 through 6 { 
+	h#{$i} {
+        font-size: calc(44rem - (4 * #{$i}rem));
+        margin-top: calc(7rem - #{$i}rem + #{$vertical_margins});
+        margin-bottom: calc(7rem - #{$i}rem + #{$vertical_margins});
+	}
+}
+      
+p {
+    @extend %margins;
+    text-indent: 6rem; /* Sem justificar, usar: 4px */
+}
+
+ul, ol {
+    margin-top: $vertical_margins;
+    margin-bottom: $vertical_margins;
+    margin-left: calc(2 * #{$horizontal_margins});
+    margin-right: $horizontal_margins;
+}
+/**/
+@media (min-width: $tablet-2) {
+    ul, ol {
+        margin-left: calc(((100% - #{$main_column-max_width}) / 2) + 60px) ;
+        margin-right: calc((100% - #{$main_column-max_width}) / 2) ;
+    }
+}
+
+dl {
+    @extend %margins;
+}
+ 
+dd {
+    margin-left: 40rem;
+}
+
+strong, b, em, i {
+    font-weight: normal; 
+    font-style: normal;
+    text-decoration: underline;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+dfn, var, address, cite {
+    font-style: normal;
+}
+
+var, kbd, samp, code {
+    font-family: $font-default;
+}
+
+pre {
+    @extend .lm;
+    font-family: $font-monospace;
+}
+
+.font-small {
+    font-size: $font-small;
+}
+
+.font-smaller {
+    font-size: $font-smaller;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold { 
+    font-weight: bold; 
+}
+
+.italic {
+    font-style: italic;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.font-monospace {
+    text-align: left;
+    font-family: $font-monospace;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.no-capitalize {
+    text-transform: none;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Seções De Layout
+────────────────────────────────────────────────────── */
+
+.header-content-width, main, footer {
+    max-width: $main_column-max_width; 
+    margin: auto;
+}
+
+.block-hack { /* Hack necessário pois o Safari não aceita 'position: sticky'. */
+    height: 48px;
+}
+
+.header-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: $menu-text-color; 
+    background-color: $menu-base_color;
+    background-image: $background-header;
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+
+    #id-nav {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        a {
+            height: $button-height;
+            color: inherit;
+            text-decoration: none;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 13px;
+
+            img {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .button-left {
+        margin-right: -13px;
+    }
+
+    #nav-menu { 
+        display: none;
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+        background-color: $menu-base_color;
+        background: $background-nav;
+
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                border-top: 1px solid $menu-text-color;
+            }
+
+            li:last-of-type {
+                border-bottom: 1px solid $menu-text-color;
+
+                a{
+                    span {
+                        font-size: 33rem;
+                        text-align: center;
+                        color: $menu-text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    /**/
+
+    @media (min-width: 0) and (max-width: $nav-open) {
+
+        #nav-menu:target {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: $nav-open) { 
+
+        #id-nav .nav-button-right {
+            display: none;
+        }
+
+        #nav-menu { 
+            position: static;
+            display: inline-block;
+            background: 0;
+
+            ul, li {
+                display: inline-block;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    border-width: 0;
+                }
+
+                li + li {
+                    margin-left: 20px;
+                }
+
+                li:nth-last-of-type(2) {
+                    margin-right: 13px;
+                }
+
+                li:last-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+footer {
+
+    .footer-icons {
+        border-radius: 50px;
+        background-color: $menu-base_color;
+        background: $background-footer-icons;
+        padding: 6px 0; 
+        @extend %margins; /* */
+        box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        img {
+            padding: 6px;
+            border: 2px solid $menu-text-color;
+            border-radius: 50%;
+        }
+    }
+
+    .copyright {
+        font-size: $font-smaller;
+        text-indent: 0;
+        text-align: center;
+
+        /*padding: 6px 0;
+        margin: 14px 0 0;
+        color: $menu-text-color;
+        background-color: black;*/
+    }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Formulários
+────────────────────────────────────────────────────── */
+
+form {
+    margin: $vertical_margins auto;
+
+    label {
+        display: block;
+        @extend %margins;
+
+        input, textarea {
+            color: $form-text-color;
+            width: 100%;
+            padding: 8rem 13rem;
+            border: 1px solid hsl(0, 0%, 80%); 
+            border-radius: 19px;
+            margin-top: $vertical_margins;
+            /* 
+            border: 1px solid hsl(0, 0%, 93%); 
+            filter: drop-shadow(0px 6px 9px rgba(0, 0, 0, 0.18)); <- Traz inconsistências entre os navegadores. */
+        }
+
+        input[type="file"] {
+            color: transparent;
+            border-radius: 0;
+            filter: none;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-top: 0;
+            margin-right: 6px;
+        }
+
+        textarea {
+            vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
+            height: 84rem;
+        }
+    }
+
+    input:placeholder-shown {
+        color: red;
+    }
+
+    p {
+        text-indent: 0;
+    }
+
+    fieldset {
+        border-width: 0;
+    }
+
+    select {
+        display: block;
+        margin-top: $vertical_margins;
+        margin-bottom: $vertical_margins;
+        /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
+    }
+
+    button {
+        min-width: 120px;
+        color: $menu-text-color;
+        padding: 10rem 0;
+        border-width: 0;
+        border-radius: 1000px;
+        margin-top: $vertical_margins;
+        margin-bottom: $vertical_margins;
+        background-image: $background-button;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 
+        inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15),
+        inset 5px 5px 5px 0px rgba(255, 255, 255, 0.40);
+    }
+
+    button:disabled {
+        opacity: 0.5;
+    }
+
+    @for $i from 2 through 8 { 
+        .textarea-#{$i}l {
+            height: calc(62rem + ( (#{$i} - 2) * 22rem));
+        } 
+    }
+
+    strong {
+        text-decoration: none;
+    }
+
+    input:focus, textarea:focus {
+        outline: 0px dotted;
+        border: 1px solid $menu-base_color;
+    }
+
+    input[type="file"]:focus {
+        outline: 1px solid $menu-base_color;
+    }
+
+    input[type="radio"]:focus, input[type="checkbox"]:focus {
+        outline: 1px solid $menu-base_color;
+    }
+
+    select:focus {
+        outline: 0px dotted;
+        border: 1px solid $menu-base_color;
+        border-radius: 100px;
+    }
+
+    button:focus {
+        outline: 2px dotted $menu-base_color;
+    }
+}
+ 
+/*  
+──────────────────────────────────────────────────────
+TODO: Tabelas
+────────────────────────────────────────────────────── */
+
+table {
+    max-width: calc(100% - 2 * #{$horizontal_margins});
+    margin: $vertical_margins auto;
+    border: 2px solid $menu-base_color;
+    border-collapse: collapse;
+    caption-side: bottom;
+
+    th {
+        color: $menu-base_color;
+        border: 2px solid $menu-base_color;
+    }
+
+    tr + tr {
+        border-top: 1px solid hsl(0, 0%, 85%);
+    }
+
+    td + td {
+        border-left: 1px solid hsl(0, 0%, 85%);
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    caption {
+        margin-top: 6rem;
+        @extend .font-smaller;
+    }
+}
+
+@media (min-width: $tablet-2) {
+    table {
+        max-width: $main_column-max_width;
+    }
+}
+/*
+.table-style-1 {
+     Estilo padrão. 
+}
+*/
+.table-style-2 {
+    width: 100%;
+    max-width: none;
+    border-width: 0;
+    border-bottom: 2px solid $menu-base_color;
+
+    tr:nth-of-type(1) {
+        border-bottom: 2px solid $menu-base_color;
+    }
+
+    th {
+        border-width: 0;
+    }
+
+    th:nth-child(1) {
+        color: $text-color;
+    }
+
+    td + td {
+        border-width: 0;
+    }
+}
+
+@media (min-width: $tablet-1) {
+    .table-style-2 {
+        width: auto;
+    }
+}
+
+@media (min-width: $tablet-2) {
+    .table-style-2 {
+        max-width: $main_column-max_width;
+    }
+}
+
+.table-style-3 {
+    border-width: 0;
+
+    tr + tr {
+        border-width: 0;
+    }
+
+    th {
+        border-width: 0;
+        text-align: left;
+    }
+}
+
+/*----- .table-style-4 -----*/
+
+@media (min-width: 0) and (max-width:  $tablet-1) {
+    .table-style-4 {
+        border-width: 0;
+
+        tr {
+            border-width: 0;
+        }
+
+        tr {
+            margin-bottom: $vertical_margins;
+        }
+
+        tr, th, td {
+            display: block;
+        }
+
+        th {
+            border-width: 0;
+            border-bottom: 1px solid;
+            text-align: center;
+        }
+
+        td {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: $tablet-1) {
+    .table-style-4 {
+        border-width: 0;
+
+        tr {
+            border-width: 0;
+        }
+
+        th, td {
+            border-width: 0;
+        }
+
+        td {
+            text-align: left;
+        }
+    }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Outros
+────────────────────────────────────────────────────── */
+
+body {
+    min-width: 300px;
+    margin: auto;
+}
+
+hr {
+    margin-top: $vertical_margins;
+    margin-bottom: $vertical_margins;
+    @extend .lm;
+}
+
+figcaption {
+    text-align: center;
+    font-size: $font-small;  
+}
+
+img, video {
+    width: 100%;
+    max-width: $main_column-max_width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video {
+    margin-top: $vertical_margins;
+    margin-bottom: $vertical_margins;
+}
+
+audio {
+    height: 45rem;
+    display: block;
+    max-width: calc(100vw - 2 * #{$horizontal_margins});
+    margin-top: $vertical_margins;
+    margin-bottom: $vertical_margins;
+}
+
+/* 
+a:focus {
+    outline: 2px dotted $menu-base_color; 
+}
+*/
+
+.center-block {
+    margin: auto;
+}
+
+.lb { /* Line break */
+    margin-top: calc(1* #{$vertical_margins}); 
+    margin-bottom:  calc(1* #{$vertical_margins}); /*  */
+}
+
+.lb2 { 
+    margin-top:  calc(2* #{$vertical_margins});
+    margin-bottom:  calc(2* #{$vertical_margins});
+}
+
+.lb3 {
+    margin-top:  calc(3* #{$vertical_margins});
+    margin-bottom:  calc(3* #{$vertical_margins});
+}
+
+.line {
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------------------------- */
+
+
+
+
+
+
+
+
+
+/* 
+
+MEDIA 
+
+Maior que mobile:
+
+    input[type="file"] {
+        color: $form-text-color;
+    }
+
+*/
