@@ -416,6 +416,10 @@ pre {
   font-family: "Courier New", Courier, monospace;
 }
 
+.font_size {
+  font-size: 19rem;
+}
+
 .font_monospace {
   font-family: "Courier New", Courier, monospace;
 }
