@@ -86,8 +86,20 @@
                         
                         </li>
                         <li><a href="#Switch">Switch</a></li>
-                        <li><a href="#Cards">Cards</a></li>
-                        <li><a href="#Posters">Posters</a></li>
+                        <li><a href="#Cards">Cards</a>
+                        
+                            <ul>
+                                <li><a href="#CardsGrouped">Grouped</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="#Posters">Posters</a>
+                        
+                            <ul>
+                                <li><a href="#PostersGrouped">Grouped</a></li>
+                            </ul>
+
+                        </li>
                         <li><a href="#Lightbox">Lightbox</a></li>
                     </ul>
                 </div>
@@ -116,7 +128,7 @@
 
                 <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
   
-                <p>9 Sea amet justo at ipsum <img src="images/ex_textImg_1_4.svg" alt="" class="textImg">. 
+                <p>0 Sea amet justo at ipsum <img src="images/ex_textImg_1_4.svg" alt="" class="textImg">. 
                     Sit consetetur  <img src="images/ex_textImg_1_1.svg" alt="" class="textImg"> Et sed eirmod 
                     rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor 
                     magna accusam. Sed dolor rebum et <kbd>Shift</kbd> + <kbd>Esc</kbd> sanctus labore diam 
@@ -1321,6 +1333,10 @@
             
                 <h2 id="Cards">Cards</h2>
 
+                <p>Nota 1: Os cards já vem com margens.</p>
+
+                <p>Nota 2: Os cards não são compatíveis com a classe 'center'.</p>
+
                 <p>Card:</p>
 
                 <a href="" class="card">
@@ -1342,7 +1358,6 @@
                             <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. </p>
                     </div>
                 </a>
-
 
                 <p>Card com o estilo 'width: 250px' inline:</p>
                 
@@ -1446,7 +1461,7 @@
                     </div>
                 </a>
 
-                <p>Cards com a classe 'h2' enfileirados <span style="color: red;">(importante: Para evitar este bug que acontece no Chrome e Edge do desktop mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, use os cards agrupados com a classe 'group' mostrado mais abaixo)</span>:</p>
+                <p>Cards com a classe 'h2' enfileirados <span style="color: red;">(importante: Para evitar este bug que acontece no Chrome, Edge, e Firefox do desktop mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, use os cards agrupados com a classe 'group' mostrado mais abaixo)</span>:</p>
 
                 <a href="" class="card h2">
                     <img src="images/ex_192×108.png" alt="" class="card_img">
@@ -1475,7 +1490,7 @@
                     </div>
                 </a>
 
-                <h3>Cards Agrupados</h3>
+                <h3 id="CardsGrouped">Cards Agrupados</h3>
 
                 <p>Cards agrupados com uma &lt;div> com a classe 'group':</p>
 
@@ -1738,6 +1753,10 @@
                 
                 <h2 id="Posters">Posters</h2>
 
+                <p>Nota 1: Os posters já vem com margens.</p>
+
+                <p>Nota 2: Os posters não são compatíveis com a classe 'center'.</p>
+
                 <p>Poster:</p>
 
                 <a href="" class="poster">
@@ -1770,51 +1789,75 @@
                     </div>     
                 </a>
                 
-                <p>Posters enfileirados:</p>
-                
-                <a href="" class="poster">
+                <p>Poster dentro de uma div com o estilo inline 'text-align: center':</p>
 
-                    <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+                <div style="text-align: center;"> 
 
-                    <div class="poster_header">
-                        <p>Poster Header</p>
-                    </div><!---->
+                    <a href="" class="poster">
 
-                    <div class="poster_body">
-                        <p>Here is the poster body!</p>
-                        <p>Last updated ...</p>
-                    </div>     
-                </a>
-                
-                <a href="" class="poster">
+                        <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
 
-                    <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+                        <div class="poster_header"> 
+                            <p>Poster Header</p>
+                        </div><!---->
 
-                    <div class="poster_header">
-                        <p>Poster Header</p>
-                    </div><!---->
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
 
-                    <div class="poster_body">
-                        <p>Here is the poster body!</p>
-                        <p>Last updated ...</p>
-                    </div>     
-                </a>
-                
-                <a href="" class="poster">
+                </div>
 
-                    <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+                <h3 id="PostersGrouped">Posters Agrupados</h3>
 
-                    <div class="poster_header">
-                        <p>Poster Header</p>
-                    </div><!---->
+                <p>Posters enfileirados dentro de uma div com o estilo inline 'text-align: center':</p>
 
-                    <div class="poster_body">
-                        <p>Here is the poster body!</p>
-                        <p>Last updated ...</p>
-                    </div>     
-                </a>
+                <div style="text-align: center;">
 
-                <h3>Posters Agrupados</h3>
+                    <a href="" class="poster">
+
+                        <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated ...</p>
+                        </div>     
+                    </a>
+                    
+                    <a href="" class="poster">
+
+                        <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated ...</p>
+                        </div>     
+                    </a>
+                    
+                    <a href="" class="poster">
+
+                        <img src="images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated ...</p>
+                        </div>     
+                    </a>
+
+                </div>
 
                 <p>Posters agrupados com uma &lt;div> com a classe 'group':</p>
 
@@ -2226,7 +2269,7 @@
 
     Smartphone (56%):
     
-    - Chrome (64%)
+    - Chrome (64%) <- OK!
     - Safari (24%) <- OK!
     - Samsung Internet (6%)
 

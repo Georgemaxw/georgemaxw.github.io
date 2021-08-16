@@ -482,7 +482,10 @@ p.text_container {
 }
 
 .list_index > ul, .list_index > ol {
+  width: max-content;
   -moz-width: fit-content;
+  /* <- Declarações necessárias para 
+        garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   width: fit-content;
 }
 
@@ -2031,7 +2034,7 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
     text-align: justify;
 }
 */
-.center:not(figure) {
+.center:not(figure):not(.card.center):not(.poster.center) {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -2045,9 +2048,6 @@ figure.center {
   display: flex;
 }
 
-/*.center.choice_v, .center.choice_d {
-    
-}*/
 .center.offset, p.center, dl.center, .footer-content .center.footer-icons, label.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, h7.center, h8.center, h9.center, h10.center, h11.center, h12.center, h13.center, h14.center, h15.center, h16.center, h17.center, h18.center, h19.center, h20.center, pre.center, fieldset.center, hr.center, .center.switch {
   margin-left: auto;
   margin-right: auto;
@@ -2214,7 +2214,10 @@ TODO:    > Choices
 .choice_h, .choice_v, .choice_d {
   display: inline-block;
   font-size: 0;
+  width: max-content;
   -moz-width: fit-content;
+  /* <- Declarações necessárias para 
+    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   width: fit-content;
   padding: 0;
   margin: 0;
@@ -2621,7 +2624,10 @@ TODO: Switchs
 .switch {
   display: flex;
   align-items: center;
+  width: max-content;
   -moz-width: fit-content;
+  /* <- Declarações necessárias para 
+    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   width: fit-content;
   margin-top: 16rem;
   margin-bottom: 16rem;
@@ -2997,6 +3003,14 @@ TODO:    > Cards
   margin-left: 20px;
   margin-right: 20px;
   color: black;
+}
+
+.card_text h1, .card_text h2, .card_text h3, .card_text h4, .card_text h5, .card_text h6, .card_text h7, .card_text h8, .card_text h9, .card_text h10, .card_text h11, .card_text h12, .card_text h13, .card_text h14, .card_text h15, .card_text h16, .card_text h17, .card_text h18, .card_text h19, .card_text h20 {
+  background: 0;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: currentcolor;
+  background-clip: border-box;
+  text-fill-color: currentcolor;
 }
 
 .card_text > :nth-last-child(1) {

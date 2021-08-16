@@ -369,8 +369,11 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     margin-right: auto;
 
     > ul, > ol {
-    -moz-width: fit-content;
-    width: fit-content;
+    
+        width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
+        garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+        
+        width: fit-content;
 
         > li {
             font-weight: bold;
@@ -1199,8 +1202,6 @@ fieldset {
 
 label {
     display: block;
-    //-moz-width: fit-content;
-    //width: fit-content;
     @extend %margins;
 
     strong {
@@ -1478,7 +1479,9 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
 }
 */
 
-.center:not(figure) {
+// ------ center ------
+
+.center:not(figure, .card.center, .poster.center) {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1492,10 +1495,6 @@ figure.center {
     display: flex;
 }
 
-/*.center.choice_v, .center.choice_d {
-    
-}*/
-
 .center.offset {
     margin-left: auto;
     margin-right: auto;
@@ -1505,6 +1504,8 @@ figure.center {
 .center.offset.choice_d_open {
     max-width: none;
 }
+
+// ----------------------
 
 .line {
     border: 1px solid black;
@@ -1687,8 +1688,12 @@ TODO:    > Choices
 
     display: inline-block;
     font-size: 0;
-    -moz-width: fit-content;
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
+    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+    
     width: fit-content;
+
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -2148,8 +2153,12 @@ TODO: Switchs
 
     display: flex;
     align-items: center;
-    -moz-width: fit-content;
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
+    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+    
     width: fit-content;
+
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
     @extend .offset; 
@@ -2553,9 +2562,21 @@ TODO:    > Cards
     color: $color_text;
 }
 
-.card_text > :nth-last-child(1) { 
+.card_text { 
 
-    margin-bottom: 0;
+    h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20 { // <- Desfaz o bg como cor do texto.
+            
+        background: 0;
+        -webkit-background-clip: border-box;
+        -webkit-text-fill-color: currentcolor;
+        background-clip: border-box;
+        text-fill-color: currentcolor; 
+    }
+    
+    > :nth-last-child(1) { 
+
+        margin-bottom: 0;
+    }
 }
 
 .card_img {
