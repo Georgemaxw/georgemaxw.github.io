@@ -173,6 +173,8 @@
                 -->
 
                 <p class="text_container">Parágrafo com a classe 'text_container'. Conteúdo de amostra.</p>
+ 
+                <p class="text_container center" style="width: 500px;">Parágrafo com estilo inline 'width: 500px' e com as classes 'text_container' e 'center'.</p>
 
             </div>
 
@@ -396,6 +398,20 @@
                     <a href=""><img src="images/ex_landscape.png" alt=" "></a>
                 </div>
 
+                <p>Galeria com estilo inline 'width: 240px' e com a classe 'center':</p>
+                
+                <div class="gallery center" style="width: 240px;"> 
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="images/ex_landscape.png" alt=" "></a>
+                </div>
+
                 <hr>
 
                 <section>
@@ -405,6 +421,54 @@
                     <p>Slider:</p>
 
                     <div class="slider"> 
+
+                            <img src="images/ex_1920×1080.png" alt="">
+                            <img src="images/ex_1920×1080.png" alt="">
+                            <img src="images/ex_1920×1080.png" alt="">
+
+    <!--            
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/slider-img-01-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/ex_1920×1080.png">
+                                <img src="images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/slider-img-02-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/ex_1920×1080.png">
+                                <img src="images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/slider-img-03-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/ex_1920×1080.png">
+                                <img src="images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/slider-img-04-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/slider-img-04-pc.png">
+                                <img src="images/slider-img-04-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/slider-img-05-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/slider-img-05-pc.png">
+                                <img src="images/slider-img-05-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="images/slider-img-06-mobile.png">
+                                <source media="(min-width: 376px)" srcset="images/slider-img-06-pc.png">
+                                <img src="images/slider-img-06-pc.png" alt="">
+                            </picture>
+        -->        
+
+                    </div>
+
+                    <p>Slider com estilo inline 'width: 240px' e com a classe 'center':</p>
+
+                    <div class="slider center" style="width: 240px;"> 
 
                             <img src="images/ex_1920×1080.png" alt="">
                             <img src="images/ex_1920×1080.png" alt="">
@@ -2141,7 +2205,7 @@
     - font_monospace
     - font_small
     - font_smaller
-    - text_container
+    - text_container <-
     - highlight
     - highlight_menu
     - spaced_items
@@ -2192,7 +2256,7 @@
     ...
     - lb70
     - offset
-    - center
+    - center (não funciona em cards e posters)
     - line
     - hidden
     - button_height_small
@@ -2203,8 +2267,8 @@
     ────────────────────────────
 
     - outdoor
-    - gallery
-    - slider
+    - gallery <-
+    - slider <-
 
     - choice_h
       └ noLabel
@@ -2259,7 +2323,7 @@
     - Chrome (70%) <- OK!
     - Safari (10%) <- OK!
     - Edge (8%) <- OK!
-    - Firefox (8%)
+    - Firefox (8%) <- OK!
 
     Tablet (3%):
     

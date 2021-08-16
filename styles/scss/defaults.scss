@@ -1481,7 +1481,7 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
 
 // ------ center ------
 
-.center:not(figure, .card.center, .poster.center) {
+.center:not(figure) {
     display: block;
     margin-left: auto;
     margin-right: auto;

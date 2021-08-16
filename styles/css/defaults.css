@@ -2034,7 +2034,7 @@ a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] inpu
     text-align: justify;
 }
 */
-.center:not(figure):not(.card.center):not(.poster.center) {
+.center:not(figure) {
   display: block;
   margin-left: auto;
   margin-right: auto;
