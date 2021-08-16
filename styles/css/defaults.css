@@ -39,7 +39,7 @@ TODO: Margens
 }
 
 .choice_h.offset, p.choice_h, dl.choice_h, .footer-content .choice_h.footer-icons, label.choice_h, h1.choice_h, h2.choice_h, h3.choice_h, h4.choice_h, h5.choice_h, h6.choice_h, h7.choice_h, h8.choice_h, h9.choice_h, h10.choice_h, h11.choice_h, h12.choice_h, h13.choice_h, h14.choice_h, h15.choice_h, h16.choice_h, h17.choice_h, h18.choice_h, h19.choice_h, h20.choice_h, pre.choice_h, fieldset.choice_h, hr.choice_h, .choice_h.switch {
-  display: flex;
+  display: inline-flex;
 }
 
 p, dl, .footer-content .footer-icons, label {
