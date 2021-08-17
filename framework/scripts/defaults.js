@@ -354,11 +354,11 @@ document.querySelector('footer').innerHTML = `
 
         <ul class="footer-icons">
             <li><a href="mailto:support@company.com.br"><img src="../images/icon_mail.svg" alt=""></a></li>  
-            <li><a href="#"><img src="../images/icon_facebook.svg" alt=""></a></li>  
             <li><a href="#"><img src="../images/icon_youtube.svg" alt=""></a></li> 
-            <li><a href="#"><img src="../images/icon_twitter.svg" alt=""></a></li> 
-            <li><a href="#"><img src="../images/icon_instagram.svg" alt=""></a></li>
             <li><a href="#"><img src="../images/icon_twitch.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/icon_instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/icon_facebook.svg" alt=""></a></li>  
+            <li><a href="#"><img src="../images/icon_twitter.svg" alt=""></a></li> 
         </ul>
 
     <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
