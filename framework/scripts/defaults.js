@@ -31,11 +31,11 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul>
-            <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 2.2</span></a></li>-->
-            <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 2.3</span></a></li>
+            <li><a href="#"><img src="../images/ex_landscape.png" alt=" "><span>Link 2.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 2.2</span></a></li>-->
+            <li><a href="#"><img src="../images/ex_landscape.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
-            <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 2.5</span></a></li>
+            <li><a href="#"><img src="../images/ex_landscape.png" alt=" "><span>Link 2.5</span></a></li>
         </ul>
     </div>
 
@@ -45,11 +45,11 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul class="nav_compact_subOptions_textBelow">
-            <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 3.2</span></a></li>-->
-            <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 3.3</span></a></li>
+            <li><a href="#"><img src="../images/ex_landscape.png" alt=" "><span>Link 3.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 3.2</span></a></li>-->
+            <li><a href="#"><img src="../images/ex_landscape.png" alt=" "><span>Link 3.3</span></a></li>
             <!--<li><a href="#">Link 3.4</a></li>-->
-            <li><a href="#"><img src="images/ex_landscape.png" alt=" "><span>Link 3.5</span></a></li>
+            <li><a href="#"><img src="../images/ex_landscape.png" alt=" "><span>Link 3.5</span></a></li>
         </ul>
     </div>
 
@@ -59,12 +59,12 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul class="nav_expanded_subOptions_h nav_expanded_subOptions_textBelow">
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 4.2</span></a></li>-->
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.3</span></a></li>
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 4.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 4.2</span></a></li>-->
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 4.3</span></a></li>
            <!-- <li><a href="#">Link 4.4</a></li>-->
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.5</span></a></li>
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 4.6</span></a></li>
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 4.5</span></a></li>
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 4.6</span></a></li>
         </ul>
     </div>
 
@@ -74,12 +74,12 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul class="nav_expanded_subOptions_h nav_subOptions_textBelow">
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.1</span></a></li>
-            <!--<li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 5.2</span></a></li>-->
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.3</span></a></li>
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 5.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 5.2</span></a></li>-->
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 5.3</span></a></li>
            <!-- <li><a href="#">Link 5.4</a></li>-->
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.5</span></a></li>
-            <li><a href="#"><img src="images/ex_portrait.png" alt=" "><span>Link 5.6</span></a></li>
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 5.5</span></a></li>
+            <li><a href="#"><img src="../images/ex_portrait.png" alt=" "><span>Link 5.6</span></a></li>
         </ul>
     </div>
 
@@ -87,23 +87,23 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="">∅</a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">L7</a>
+<li><a onclick="nav_menu_options(this)"><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">L7</a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.2</span></a></li>
-            <li><a href="#"><span><img src="images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.3</span></a></li>
+            <li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="../images/ex_textImg_2_1.svg" alt="" class="textImg_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
-            <li><a href="#"><img src="images/ex_landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
-            <li><a href="#"><img src="images/ex_landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
+            <li><a href="#"><img src="../images/ex_landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
+            <li><a href="#"><img src="../images/ex_landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
         </ul>
     </div>
 
 </li>
 
 <li><a href="page.html">P</a><div><ul></ul></div></li>
-<li><a aria-label="Hide bar"><img src="images/icon_headerNav-hide.svg" alt="Header-nav button"></a></li>
+<li><a aria-label="Hide bar"><img src="../images/icon_headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
 
@@ -116,7 +116,7 @@ var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
 var nav_options_anchorClicked_index = 'none'
-// var bg_nav_selector = 'url(../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
+// var bg_nav_selector = 'url(../../../images/bg_nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
 
 var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
                                                                                         do <html> apareça em momentos em que não se deseja 
@@ -353,12 +353,12 @@ document.querySelector('footer').innerHTML = `
     <!--<p>Follow us on:</p>-->
 
         <ul class="footer-icons">
-            <li><a href="mailto:support@company.com.br"><img src="images/icon_mail.svg" alt=""></a></li>  
-            <li><a href="#"><img src="images/icon_facebook.svg" alt=""></a></li>  
-            <li><a href="#"><img src="images/icon_youtube.svg" alt=""></a></li> 
-            <li><a href="#"><img src="images/icon_twitter.svg" alt=""></a></li> 
-            <li><a href="#"><img src="images/icon_instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="images/icon_twitch.svg" alt=""></a></li>
+            <li><a href="mailto:support@company.com.br"><img src="../images/icon_mail.svg" alt=""></a></li>  
+            <li><a href="#"><img src="../images/icon_facebook.svg" alt=""></a></li>  
+            <li><a href="#"><img src="../images/icon_youtube.svg" alt=""></a></li> 
+            <li><a href="#"><img src="../images/icon_twitter.svg" alt=""></a></li> 
+            <li><a href="#"><img src="../images/icon_instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/icon_twitch.svg" alt=""></a></li>
         </ul>
 
     <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
