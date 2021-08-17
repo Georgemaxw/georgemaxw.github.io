@@ -1,8 +1,11 @@
-/* gmes-defaults.css */
+/* 
+──────────────────────────────────────────────────────
+gmes-defaults.css
+────────────────────────────────────────────────────── */
 
 /* 
 ──────────────────────────────────────────────────────
-TODO: Variáveis
+TODO: Framework - Variables
 ────────────────────────────────────────────────────── */
 
 $font_default: 'Times New Roman', Times, Georgia, serif;
@@ -19,15 +22,15 @@ $table_border1_width: 1px;
 $table_border2_width: 1px;
 $border_radius_default: 20px;
  
-/* ------ Breakpoints ------ */  
+/* ------ Breakpoints ------ */ 
 
-$tablet: 501px; // Largura máxima de um celular.
-/* $pc: 1000px; */ // Largura mínima de um PC.
+$screen_small_widthLimit: 501px; // Largura máxima de um celular.
+/* $screen_medium_widthLimit: 1000px; */ // Largura mínima de um PC.
 
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
 
-/* ------ Cores E Planos De Fundos ------ */
+/* ------ Colors And Backgrounds ------ */
 
 $color_theme: rgb(0, 200, 255); 
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
@@ -120,7 +123,18 @@ $zIndex_lightbox: 1200;
 
 /*  
 ──────────────────────────────────────────────────────
-Modelo De Caixa Alternativo Global 
+TODO: Framework - Classes JS
+────────────────────────────────────────────────────── */
+
+// Classes Genéricas Pra Serem Aplicadas Somente Via JS:
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+/*  
+──────────────────────────────────────────────────────
+Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 
 html {
@@ -133,7 +147,7 @@ html {
        
 /*  
 ──────────────────────────────────────────────────────
-TODO: Margens
+TODO: Margins
 ────────────────────────────────────────────────────── */
 
 .offset { /* Lateral margins */    
@@ -158,7 +172,7 @@ TODO: Margens
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Textos
+TODO: Texts
 ────────────────────────────────────────────────────── */
 
 html {
@@ -260,7 +274,7 @@ dt:nth-of-type(1) {
     margin-top: 0;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
 
     dd {
         margin-left: 30rem;
@@ -501,7 +515,7 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Seções De Layout
+TODO: Layout Sections
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
@@ -610,7 +624,8 @@ TODO:        >> Menu
     .nav-menu { 
         display: none;
         position: fixed;
-        top: $button_height; bottom: 0; left: 0; right: 0;
+        //top: $button_height; bottom: 0; left: 0; right: 0;
+        top: 0px; bottom: 0; left: 0; right: 0;
         //background-color: $color_theme;
 
         ul {
@@ -657,7 +672,8 @@ TODO:        >> Menu
 
         > ul {
             margin: $button_height 0 0 0;
-            box-shadow: 0 0px 10px 0px $color_shadow_nav_options;
+            // box-shadow: 0 0px 10px 0px $color_shadow_nav_options; // <- Sombra melhor se for deixar o 'header-nav' separado do 'menu aberto'.
+            box-shadow: 0 5px 10px -4px $color_shadow_nav_options;
         }
 
         > ul > li:last-of-type {
@@ -728,7 +744,7 @@ TODO:        >> Menu
 
 /*  
 ────────────────────────────
-TODO:        >> Expandido
+TODO:        >> Expanded
 ──────────────────────────── */
 
     @media (min-width: $nav_expand) {
@@ -830,7 +846,7 @@ TODO:        >> Expandido
 
 // Header-nav em smartphone (arredondado):
 
-@media (min-width: $nav_expand) and (max-height: $tablet) {
+@media (min-width: $nav_expand) and (max-height: $screen_small_widthLimit) {
 
     .header-nav {
         left: 8px; right: 8px;
@@ -1034,7 +1050,7 @@ table {
         border: $table_border1_width solid $color_theme;
         font-weight: normal;
 
-        @media (max-width: $tablet), (max-height: $tablet) {
+        @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
             font-weight: bold; 
         }
@@ -1107,7 +1123,7 @@ table {
     }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
     .table_style_2 {
         width: auto;
         max-width: calc(100% - 2 * #{$margin_horizontal});
@@ -1137,7 +1153,7 @@ table {
 
 /*----- table_style_4 -----*/
 
-@media (min-width: 0) and (max-width:  $tablet) {
+@media (min-width: 0) and (max-width:  $screen_small_widthLimit) {
     .table_style_4 {
         border-width: 0;
         margin-left: calc(2 * #{$margin_horizontal});
@@ -1176,7 +1192,7 @@ table {
     }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
     .table_style_4 {
         border-width: 0;
 
@@ -1546,15 +1562,6 @@ figure.center {
     cursor: pointer;
 }
 
-/*  
-──────────────────────────────────────────────────────
-TODO: Classes Para Serem Aplicadas Somente Via JS
-────────────────────────────────────────────────────── */
-
-.overflow_hidden {
-    overflow: hidden;
-}
-
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
@@ -1572,7 +1579,7 @@ img.outdoor, video.outdoor {
     margin-right: auto;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor {
         max-width: calc(100% - (2 * #{$margin_horizontal}) );
@@ -1596,7 +1603,7 @@ figure.outdoor img {
         max-width: 100%;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
 
     figure.outdoor {
         max-width: calc(100% - (2 * #{$margin_horizontal}) );
@@ -1610,7 +1617,7 @@ figure.outdoor img {
 
 // img, video, figure:
 
-@media (max-height: $tablet) {
+@media (max-height: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor, figure.outdoor img { 
         //max-height: 100vh;
@@ -1631,7 +1638,7 @@ TODO:    > Galleries
     font-size: 0;
 }
 
-@media (min-width: $tablet) { 
+@media (min-width: $screen_small_widthLimit) { 
 
     .gallery {
         margin-left: $margin_horizontal;
@@ -1658,14 +1665,14 @@ TODO:    > Sliders
     max-width: 94%;
 }
 
-@media (max-height: $tablet) {
+@media (max-height: $screen_small_widthLimit) {
 
     .slider img, .slider picture {
         max-height: 100vh;
     }
 }
 
-@media (min-width: $tablet) {  
+@media (min-width: $screen_small_widthLimit) {  
 
     .slider { 
         margin-left: $margin_horizontal;
@@ -2015,7 +2022,7 @@ TODO:        >> Dropdown
         border-bottom: 1px solid $color_text_menu;
     }
 
-    /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
+    /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
 }
 
 // Dropdown - Open - Scrollbars:
@@ -2297,7 +2304,7 @@ TODO: Switchs
     left: 19px;
 }
 
-@media (max-width: $tablet), (max-height: $tablet) {
+@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
 
     // Switch - Tamanho escolhido: Bigger Size
 
@@ -2738,7 +2745,7 @@ TODO:    > Groups
 /*
 .group.h_2 {
 
-    @media (min-width: $tablet) {
+    @media (min-width: $screen_small_widthLimit) {
 
         flex-direction: row;
         flex-wrap: wrap;
@@ -2754,7 +2761,7 @@ TODO:    > Groups
 
     .group.c_#{$i} {
 
-        @media (min-width: $tablet) {
+        @media (min-width: $screen_small_widthLimit) {
 
             flex-direction: row;
             flex-wrap: wrap;
