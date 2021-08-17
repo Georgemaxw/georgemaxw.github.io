@@ -771,7 +771,7 @@ TODO:        >> Expanded
 
 .header-nav .nav-menu > ul {
   margin: 48px 0 0 0;
-  box-shadow: 0 5px 10px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
 .header-nav .nav-menu > ul > li:last-of-type {
@@ -2325,12 +2325,12 @@ TODO:        >> Horizontal
 }
 
 .choice_h > li a:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bg_choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_h > li:nth-of-type(1) a:hover {
-  background: rgba(255, 255, 255, 0);
+  background: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -2364,12 +2364,12 @@ TODO:        >> Vertical
 }
 
 .choice_v > li a:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bg_choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_v > li:nth-of-type(1) a:hover {
-  background: rgba(255, 255, 255, 0);
+  background: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -2546,12 +2546,12 @@ TODO:        >> Dropdown
 TODO:        >> Option ON
 ──────────────────────────── */
 .choice_h > li > a.on, .choice_v > li > a.on {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bg_choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_d.choice_d_open > li > .on {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bg_choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -2666,7 +2666,7 @@ TODO: Switchs
 .switch > :nth-child(1)::before {
   content: '';
   display: inline-block;
-  background-color: white;
+  background: white;
   position: relative;
 }
 
@@ -2705,8 +2705,8 @@ TODO: Switchs
 }
 
 .switch.on > :nth-child(1) {
-  background-color: #00c8ff;
-  background-color: #60ff52;
+  background: #00c8ff;
+  background: #60ff52;
 }
 
 .switch.inverted {
@@ -3305,6 +3305,7 @@ TODO: Lightbox
   z-index: -1;
   width: 100%;
   height: 100%;
+  background: 0;
   content: "";
   cursor: default;
 }
