@@ -978,7 +978,7 @@ TODO:    > Footer
   padding: 6px;
   border: 2px solid white;
   border-radius: 50%;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.07));
 }
 
 .footer-content .copyright {

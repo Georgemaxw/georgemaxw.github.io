@@ -65,6 +65,7 @@ $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 $color_shadow_footer: hsla(0, 0%, 0%, 0.22);
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.07);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
  
@@ -909,7 +910,7 @@ TODO:    > Footer
             padding: 6px;
             border: 2px solid $color_text_menu;
             border-radius: 50%;
-            filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.05)); 
+            filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
         }
     }
 
