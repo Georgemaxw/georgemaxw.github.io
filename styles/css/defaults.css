@@ -1,14 +1,17 @@
 @charset "UTF-8";
-/* gmes-defaults.css */
 /* 
 ──────────────────────────────────────────────────────
-TODO: Variáveis
+gmes-defaults.css
+────────────────────────────────────────────────────── */
+/* 
+──────────────────────────────────────────────────────
+TODO: Variables
 ────────────────────────────────────────────────────── */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /* ------ Breakpoints ------ */
-/* $pc: 1000px; */
-/* ------ Cores E Planos De Fundos ------ */
+/* $screen_medium_widthLimit: 1000px; */
+/* ------ Colors And Backgrounds ------ */
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
 $bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
@@ -18,7 +21,15 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 /* ------ z-index's ------ */
 /*  
 ──────────────────────────────────────────────────────
-Modelo De Caixa Alternativo Global 
+TODO: Classes JS
+────────────────────────────────────────────────────── */
+.overflow_hidden {
+  overflow: hidden;
+}
+
+/*  
+──────────────────────────────────────────────────────
+Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 html {
   box-sizing: border-box;
@@ -30,7 +41,7 @@ html {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Margens
+TODO: Margins
 ────────────────────────────────────────────────────── */
 .offset, .offset.choice_h, .offset.choice_v, .offset.choice_d, p, dl, .footer-content .footer-icons, label, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, pre, fieldset, hr, .switch {
   /* Lateral margins */
@@ -49,7 +60,7 @@ p, dl, .footer-content .footer-icons, label {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Textos
+TODO: Texts
 ────────────────────────────────────────────────────── */
 html {
   font-family: "Times New Roman", Times, Georgia, serif;
@@ -78,7 +89,7 @@ h1 {
   margin-top: calc(7rem - 1rem + 16rem);
   margin-bottom: calc(7rem - 1rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -90,7 +101,7 @@ h2 {
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,7 +113,7 @@ h3 {
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -114,7 +125,7 @@ h4 {
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -126,7 +137,7 @@ h5 {
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -138,7 +149,7 @@ h6 {
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -152,7 +163,7 @@ h7 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -166,7 +177,7 @@ h8 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -180,7 +191,7 @@ h9 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,7 +205,7 @@ h10 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -208,7 +219,7 @@ h11 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -222,7 +233,7 @@ h12 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -236,7 +247,7 @@ h13 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -250,7 +261,7 @@ h14 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -264,7 +275,7 @@ h15 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -278,7 +289,7 @@ h16 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -292,7 +303,7 @@ h17 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -306,7 +317,7 @@ h18 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -320,7 +331,7 @@ h19 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -334,7 +345,7 @@ h20 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -459,7 +470,7 @@ p.text_container {
 }
 
 .highlight {
-  background: url(../../images/color_text_highlight.png) center/100% 100%;
+  background: url(../../images/colors/text_highlight.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -467,7 +478,7 @@ p.text_container {
 }
 
 .highlight_menu {
-  background: url(../../images/color_text_highlight_menu.png) center/100% 100%;
+  background: url(../../images/colors/text_highlight_menu.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -604,7 +615,7 @@ p.text_container {
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Seções De Layout
+TODO: Layout Sections
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
@@ -633,7 +644,7 @@ TODO:    > Header-nav
   z-index: 1000;
   color: white;
   background-color: #00c8ff;
-  background: url(../../images/bg_header.png) center/100% 100%;
+  background: url(../../images/bgs/header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
 ────────────────────────────
@@ -641,7 +652,7 @@ TODO:        >> Menu
 ──────────────────────────── */
   /*  
 ────────────────────────────
-TODO:        >> Expandido
+TODO:        >> Expanded
 ──────────────────────────── */
 }
 
@@ -712,7 +723,7 @@ TODO:        >> Expandido
 .header-nav .nav-menu {
   display: none;
   position: fixed;
-  top: 48px;
+  top: 0px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -726,7 +737,7 @@ TODO:        >> Expandido
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background: url(../../images/bg_nav_1.png) center/100% 100%;
+  background: url(../../images/bgs/nav_1.png) center/100% 100%;
   overflow: auto;
 }
 
@@ -739,7 +750,7 @@ TODO:        >> Expandido
 }
 
 .header-nav .nav-menu ul li div ul {
-  background: url(../../images/bg_nav_selector.png) center/100% 100%;
+  background: url(../../images/bgs/nav_selector.png) center/100% 100%;
 }
 
 .header-nav .nav-menu ul li:nth-last-child(2) {
@@ -760,7 +771,7 @@ TODO:        >> Expandido
 
 .header-nav .nav-menu > ul {
   margin: 48px 0 0 0;
-  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px -4px rgba(0, 0, 0, 0.4);
 }
 
 .header-nav .nav-menu > ul > li:last-of-type {
@@ -818,7 +829,7 @@ TODO:        >> Expandido
 }
 
 .header-nav .nav_selector {
-  background: url(../../images/bg_nav_selector.png) center/100% 100%;
+  background: url(../../images/bgs/nav_selector.png) center/100% 100%;
   max-height: 40px;
   border-radius: 15px;
   padding-left: 4px;
@@ -843,7 +854,7 @@ TODO:        >> Expandido
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     display: flex;
     justify-content: space-between;
-    background: url(../../images/bg_header.png) center/100% 100%;
+    background: url(../../images/bgs/header.png) center/100% 100%;
   }
   .header-nav .nav-menu > ul > li {
     border-width: 0;
@@ -874,7 +885,7 @@ TODO:        >> Expandido
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(../../images/bg_nav_2.png) center/100% 100%;
+    background: url(../../images/bgs/nav_2.png) center/100% 100%;
     text-align: center;
   }
   .header-nav .nav-menu ul li div ul {
@@ -886,7 +897,7 @@ TODO:        >> Expandido
     border-radius: 25px;
     margin-top: 48px;
     background-color: #00c8ff;
-    background: url(../../images/bg_nav_1.png) center/100% 100%;
+    background: url(../../images/bgs/nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
     /* li:hover {
                 background: $bg_nav_selector;
@@ -937,7 +948,7 @@ TODO:        >> Expandido
   top: 9px;
   right: 9px;
   z-index: 1000;
-  background: url(../../images/bg_header.png) center/100% 100%;
+  background: url(../../images/bgs/header.png) center/100% 100%;
   font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
@@ -965,7 +976,7 @@ TODO:    > Footer
 .footer-content .footer-icons {
   border-radius: 50px;
   background-color: #00c8ff;
-  background: url(../../images/bg_footer_icons.png) center/100% 100%;
+  background: url(../../images/bgs/footer_icons.png) center/100% 100%;
   padding: 6px 0 0px;
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
   list-style-type: none;
@@ -978,6 +989,7 @@ TODO:    > Footer
   padding: 6px;
   border: 2px solid white;
   border-radius: 50%;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.07));
 }
 
 .footer-content .copyright {
@@ -1397,7 +1409,7 @@ select {
   height: 40px;
   color: #adadad;
   background: rgba(255, 255, 255, 0);
-  background: url(../../images/bg_select.png) center/100% 100%;
+  background: url(../../images/bgs/select.png) center/100% 100%;
   border: 1px solid #cccccc;
   padding: 0 6px;
 }
@@ -1414,7 +1426,7 @@ button {
   border-radius: 100px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background: url(../../images/bg_button.png) center/100% 100%;
+  background: url(../../images/bgs/button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2090,14 +2102,6 @@ figure.center {
   cursor: pointer;
 }
 
-/*  
-──────────────────────────────────────────────────────
-TODO: Classes Para Serem Aplicadas Somente Via JS
-────────────────────────────────────────────────────── */
-.overflow_hidden {
-  overflow: hidden;
-}
-
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
@@ -2269,7 +2273,7 @@ TODO:        >> Horizontal
 .choice_h {
   display: inline-flex;
   border-radius: 1000px;
-  background: url(../../images/bg_choice.png) center/100% 100%;
+  background: url(../../images/bgs/choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2293,7 +2297,7 @@ TODO:        >> Horizontal
   border-right: 1px solid white;
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
-  background: url(../../images/bg_choice_label.png) center/100% 100%;
+  background: url(../../images/bgs/choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2321,12 +2325,12 @@ TODO:        >> Horizontal
 }
 
 .choice_h > li a:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_h > li:nth-of-type(1) a:hover {
-  background: rgba(255, 255, 255, 0);
+  background: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -2340,7 +2344,7 @@ TODO:        >> Vertical
 ──────────────────────────── */
 .choice_v {
   border-radius: 20px;
-  background: url(../../images/bg_choice.png) center/100% 100%;
+  background: url(../../images/bgs/choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2360,12 +2364,12 @@ TODO:        >> Vertical
 }
 
 .choice_v > li a:hover {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_v > li:nth-of-type(1) a:hover {
-  background: rgba(255, 255, 255, 0);
+  background: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -2373,7 +2377,7 @@ TODO:        >> Vertical
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   justify-content: center;
-  background: url(../../images/bg_choice_label.png) center/100% 100%;
+  background: url(../../images/bgs/choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2408,7 +2412,7 @@ TODO:        >> Dropdown
 ──────────────────────────── */
 .choice_d {
   border-radius: 20px;
-  background: url(../../images/bg_choice.png) center/100% 100%;
+  background: url(../../images/bgs/choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2456,9 +2460,9 @@ TODO:        >> Dropdown
   width: auto;
   margin: 0;
   border-radius: 0px;
-  background: url(../../images/bg_choice_d_open.png) center/100% 100%;
+  background: url(../../images/bgs/choice_d_open.png) center/100% 100%;
   overflow-y: auto;
-  /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * 40px); } } */
+  /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * 40px); } } */
 }
 
 .choice_d.choice_d_open > li {
@@ -2542,12 +2546,12 @@ TODO:        >> Dropdown
 TODO:        >> Option ON
 ──────────────────────────── */
 .choice_h > li > a.on, .choice_v > li > a.on {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_d.choice_d_open > li > .on {
-  background: rgba(255, 255, 255, 0.45);
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -2662,7 +2666,7 @@ TODO: Switchs
 .switch > :nth-child(1)::before {
   content: '';
   display: inline-block;
-  background-color: white;
+  background: white;
   position: relative;
 }
 
@@ -2701,8 +2705,8 @@ TODO: Switchs
 }
 
 .switch.on > :nth-child(1) {
-  background-color: #00c8ff;
-  background-color: #60ff52;
+  background: #00c8ff;
+  background: #60ff52;
 }
 
 .switch.inverted {
@@ -3151,7 +3155,7 @@ TODO:    > Groups
 /*
 .group.h_2 {
 
-    @media (min-width: $tablet) {
+    @media (min-width: $screen_small_widthLimit) {
 
         flex-direction: row;
         flex-wrap: wrap;
@@ -3301,6 +3305,7 @@ TODO: Lightbox
   z-index: -1;
   width: 100%;
   height: 100%;
+  background: 0;
   content: "";
   cursor: default;
 }
@@ -3315,7 +3320,7 @@ TODO: Lightbox
   max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
-  background: url(../../images/bg_lightbox.png) center/100% 100%, #00c8ff;
+  background: url(../../images/bgs/lightbox.png) center/100% 100%, #00c8ff;
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -3355,7 +3360,7 @@ TODO: Lightbox
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: url(../../images/icon_lightbox_close.svg) center/100% 100%, #545454;
+  background: url(../../images/icons/lightbox_close.svg) center/100% 100%, #545454;
   box-shadow: 6px 6px 8px -7px black, inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5), inset -3px -4px 5px 3px rgba(0, 0, 0, 0.4);
 }
 

@@ -89,7 +89,7 @@ h1 {
   margin-top: calc(7rem - 1rem + 16rem);
   margin-bottom: calc(7rem - 1rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -101,7 +101,7 @@ h2 {
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -113,7 +113,7 @@ h3 {
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -125,7 +125,7 @@ h4 {
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,7 +137,7 @@ h5 {
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -149,7 +149,7 @@ h6 {
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
   text-align: center;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -163,7 +163,7 @@ h7 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -177,7 +177,7 @@ h8 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -191,7 +191,7 @@ h9 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -205,7 +205,7 @@ h10 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -219,7 +219,7 @@ h11 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -233,7 +233,7 @@ h12 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -247,7 +247,7 @@ h13 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -261,7 +261,7 @@ h14 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -275,7 +275,7 @@ h15 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -289,7 +289,7 @@ h16 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -303,7 +303,7 @@ h17 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -317,7 +317,7 @@ h18 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -331,7 +331,7 @@ h19 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -345,7 +345,7 @@ h20 {
   margin-bottom: 16rem;
   text-align: center;
   font-weight: bold;
-  background: url(../../images/color_text_hx.png) center/100% 100%;
+  background: url(../../images/colors/text_hx.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -470,7 +470,7 @@ p.text_container {
 }
 
 .highlight {
-  background: url(../../images/color_text_highlight.png) center/100% 100%;
+  background: url(../../images/colors/text_highlight.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -478,7 +478,7 @@ p.text_container {
 }
 
 .highlight_menu {
-  background: url(../../images/color_text_highlight_menu.png) center/100% 100%;
+  background: url(../../images/colors/text_highlight_menu.png) center/100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -644,7 +644,7 @@ TODO:    > Header-nav
   z-index: 1000;
   color: white;
   background-color: #00c8ff;
-  background: url(../../images/bg_header.png) center/100% 100%;
+  background: url(../../images/bgs/header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
 ────────────────────────────
@@ -737,7 +737,7 @@ TODO:        >> Expanded
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background: url(../../images/bg_nav_1.png) center/100% 100%;
+  background: url(../../images/bgs/nav_1.png) center/100% 100%;
   overflow: auto;
 }
 
@@ -750,7 +750,7 @@ TODO:        >> Expanded
 }
 
 .header-nav .nav-menu ul li div ul {
-  background: url(../../images/bg_nav_selector.png) center/100% 100%;
+  background: url(../../images/bgs/nav_selector.png) center/100% 100%;
 }
 
 .header-nav .nav-menu ul li:nth-last-child(2) {
@@ -829,7 +829,7 @@ TODO:        >> Expanded
 }
 
 .header-nav .nav_selector {
-  background: url(../../images/bg_nav_selector.png) center/100% 100%;
+  background: url(../../images/bgs/nav_selector.png) center/100% 100%;
   max-height: 40px;
   border-radius: 15px;
   padding-left: 4px;
@@ -854,7 +854,7 @@ TODO:        >> Expanded
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     display: flex;
     justify-content: space-between;
-    background: url(../../images/bg_header.png) center/100% 100%;
+    background: url(../../images/bgs/header.png) center/100% 100%;
   }
   .header-nav .nav-menu > ul > li {
     border-width: 0;
@@ -885,7 +885,7 @@ TODO:        >> Expanded
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(../../images/bg_nav_2.png) center/100% 100%;
+    background: url(../../images/bgs/nav_2.png) center/100% 100%;
     text-align: center;
   }
   .header-nav .nav-menu ul li div ul {
@@ -897,7 +897,7 @@ TODO:        >> Expanded
     border-radius: 25px;
     margin-top: 48px;
     background-color: #00c8ff;
-    background: url(../../images/bg_nav_1.png) center/100% 100%;
+    background: url(../../images/bgs/nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
     /* li:hover {
                 background: $bg_nav_selector;
@@ -948,7 +948,7 @@ TODO:        >> Expanded
   top: 9px;
   right: 9px;
   z-index: 1000;
-  background: url(../../images/bg_header.png) center/100% 100%;
+  background: url(../../images/bgs/header.png) center/100% 100%;
   font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
@@ -976,7 +976,7 @@ TODO:    > Footer
 .footer-content .footer-icons {
   border-radius: 50px;
   background-color: #00c8ff;
-  background: url(../../images/bg_footer_icons.png) center/100% 100%;
+  background: url(../../images/bgs/footer_icons.png) center/100% 100%;
   padding: 6px 0 0px;
   box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.22);
   list-style-type: none;
@@ -1409,7 +1409,7 @@ select {
   height: 40px;
   color: #adadad;
   background: rgba(255, 255, 255, 0);
-  background: url(../../images/bg_select.png) center/100% 100%;
+  background: url(../../images/bgs/select.png) center/100% 100%;
   border: 1px solid #cccccc;
   padding: 0 6px;
 }
@@ -1426,7 +1426,7 @@ button {
   border-radius: 100px;
   margin-top: 16rem;
   margin-bottom: 16rem;
-  background: url(../../images/bg_button.png) center/100% 100%;
+  background: url(../../images/bgs/button.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2273,7 +2273,7 @@ TODO:        >> Horizontal
 .choice_h {
   display: inline-flex;
   border-radius: 1000px;
-  background: url(../../images/bg_choice.png) center/100% 100%;
+  background: url(../../images/bgs/choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2297,7 +2297,7 @@ TODO:        >> Horizontal
   border-right: 1px solid white;
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
-  background: url(../../images/bg_choice_label.png) center/100% 100%;
+  background: url(../../images/bgs/choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2325,7 +2325,7 @@ TODO:        >> Horizontal
 }
 
 .choice_h > li a:hover {
-  background: url(../../images/bg_choice_selector.png) center/100% 100%;
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -2344,7 +2344,7 @@ TODO:        >> Vertical
 ──────────────────────────── */
 .choice_v {
   border-radius: 20px;
-  background: url(../../images/bg_choice.png) center/100% 100%;
+  background: url(../../images/bgs/choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2364,7 +2364,7 @@ TODO:        >> Vertical
 }
 
 .choice_v > li a:hover {
-  background: url(../../images/bg_choice_selector.png) center/100% 100%;
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -2377,7 +2377,7 @@ TODO:        >> Vertical
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   justify-content: center;
-  background: url(../../images/bg_choice_label.png) center/100% 100%;
+  background: url(../../images/bgs/choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2412,7 +2412,7 @@ TODO:        >> Dropdown
 ──────────────────────────── */
 .choice_d {
   border-radius: 20px;
-  background: url(../../images/bg_choice.png) center/100% 100%;
+  background: url(../../images/bgs/choice.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
@@ -2460,7 +2460,7 @@ TODO:        >> Dropdown
   width: auto;
   margin: 0;
   border-radius: 0px;
-  background: url(../../images/bg_choice_d_open.png) center/100% 100%;
+  background: url(../../images/bgs/choice_d_open.png) center/100% 100%;
   overflow-y: auto;
   /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * 40px); } } */
 }
@@ -2546,12 +2546,12 @@ TODO:        >> Dropdown
 TODO:        >> Option ON
 ──────────────────────────── */
 .choice_h > li > a.on, .choice_v > li > a.on {
-  background: url(../../images/bg_choice_selector.png) center/100% 100%;
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice_d.choice_d_open > li > .on {
-  background: url(../../images/bg_choice_selector.png) center/100% 100%;
+  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -3320,7 +3320,7 @@ TODO: Lightbox
   max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
-  background: url(../../images/bg_lightbox.png) center/100% 100%, #00c8ff;
+  background: url(../../images/bgs/lightbox.png) center/100% 100%, #00c8ff;
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -3360,7 +3360,7 @@ TODO: Lightbox
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: url(../../images/icon_lightbox_close.svg) center/100% 100%, #545454;
+  background: url(../../images/icons/lightbox_close.svg) center/100% 100%, #545454;
   box-shadow: 6px 6px 8px -7px black, inset 4px 4px 5px 0px rgba(255, 255, 255, 0.5), inset -3px -4px 5px 3px rgba(0, 0, 0, 0.4);
 }
 

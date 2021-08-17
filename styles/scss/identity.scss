@@ -36,11 +36,11 @@ $color_theme: hsl(193, 100%, 50%);
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
-$color_text_clear: hsl(0, 0%, 68%);
+$color_text_clear: hsl(0, 0%, 68%); 
 $color_text_menu: white; 
-$color_text_hx: url(../../images/color_text_hx.png)  center /100% 100%;
-$color_text_highlight: url(../../images/color_text_highlight.png)  center /100% 100%;
-$color_text_highlight_menu: url(../../images/color_text_highlight_menu.png)  center /100% 100%;
+$color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
+$color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
+$color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
@@ -89,31 +89,31 @@ $color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
 $bg_html: white;
 //$bg_html: hsl(0, 0%, 36%);
-//$bg_html: url(../../images/bg_lightbox.png)  center /100% 100%, white;
-$bg_header: url(../../images/bg_header.png) center /100% 100%;
-$bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bg_nav_2.png)  center /100% 100%;
-$bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
-$bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
+//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
+$bg_header: url(../../images/bgs/header.png) center /100% 100%;
+$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
 
 $bg_success: hsl(120, 100%, 91%);
 $bg_attention: hsl(54, 100%, 93%);
 $bg_fail: hsl(0, 100%, 94%);
 $bg_danger: red;
 
-$bg_button: url(../../images/bg_button.png)  center /100% 100%;
-$bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
+$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
 $bg_table_tr_hover: $color_theme_clear; 
 $bg_kbd: hsl(0, 0%, 86%);
-$bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
-$bg_choice: url(../../images/bg_choice.png)  center /100% 100%;
-$bg_choice_d_open: url(../../images/bg_choice_d_open.png)  center /100% 100%;
-$bg_choice_selector: url(../../images/bg_choice_selector.png)  center /100% 100%;
+$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
+$bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
+$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
 $bg_switch_off: hsl(0, 0%, 93%);
 $bg_switch_on: hsl(115, 100%, 66%);
 $bg_switch_check: hsl(0, 0%, 100%); 
-$bg_lightbox: url(../../images/bg_lightbox.png)  center /100% 100%, $color_theme;
-$bg_lightbox_button: url(../../images/icon_lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%, $color_theme;
+$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7); 
 
 /*
