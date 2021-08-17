@@ -8,6 +8,8 @@ gmes-defaults.js
 TODO: Choice 
 ────────────────────────────────────────────────────── */
 
+{
+
 var choice_anchorClicked = null
 var choice_anchorClickedBefore = null /* <- Variável necessária para 
 salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
@@ -134,26 +136,12 @@ var e = document.createElement("li")
     allChoicesD[i].appendChild(e)
 }
 
+}
+
 /*  
 ──────────────────────────────────────────────────────
 TODO: Switch
 ────────────────────────────────────────────────────── */
-/*
-var switch_all = document.querySelectorAll('.switch')
-var switch_actual
-
-for(var i = 0; i < switch_all.length; i++) {
-
-    switch_actual = switch_all[i]
-
-    switch_all[i].onclick = function() { 
-
-        console.log(switch_actual)
-        
-        switch_actual.classList.toggle('on')
-    }
-}
-*/
 
 function switch_event(arg) {
 
@@ -168,6 +156,7 @@ function switch_event(arg) {
 ──────────────────────────────────────────────────────
 TODO: Lightbox
 ────────────────────────────────────────────────────── */
+{
 
 var lightbox_html = document.createElement("div");
 
@@ -223,3 +212,5 @@ function lightbox_close(arg) {
 
     arg.parentNode.parentNode.style = 'display: none';  
 }
+
+} 

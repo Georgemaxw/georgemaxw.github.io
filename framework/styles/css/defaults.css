@@ -5,7 +5,7 @@ gmes-defaults.css
 ────────────────────────────────────────────────────── */
 /* 
 ──────────────────────────────────────────────────────
-TODO: Framework - Variables
+TODO: Variables
 ────────────────────────────────────────────────────── */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
@@ -21,7 +21,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 /* ------ z-index's ------ */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Framework - Classes JS
+TODO: Classes JS
 ────────────────────────────────────────────────────── */
 .overflow_hidden {
   overflow: hidden;

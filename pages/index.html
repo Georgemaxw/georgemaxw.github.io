@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- en -->
+<head>
+    <meta charset="utf-8">
+    <title>Site Title</title>
+    <meta name = "apple-mobile-web-app-title" content = "App Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="George Maxwell">
+    <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+    <link rel="shortcut icon" href="../framework/images/favicon.ico" type="image/x-icon">
+    <link href='../framework/styles/css/normalize.css' rel='stylesheet'>  
+    <link href='../framework/styles/css/gmes-normalize.css' rel='stylesheet'>
+    <link href='../framework/styles/css/defaults.css' rel='stylesheet'><!---->
+    <link href='../styles/css/identity.css' rel='stylesheet'>
+    
+</head>
+<body>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Header-nav
+    ────────────────────────────────────────────────────── --> 
+    
+    <header>
+
+        <div class="block-hack"></div> <!-- Hack necessário pois o Safari não aceita 'position: sticky'. -->
+
+        <div class="header-nav">
+            <div class="header-content">
+                <!-- <a href="" class="button-left"><img src="../framework/images/icon_search.svg" alt="button"></a> -->
+
+                <nav class="nav">
+                
+                    <h1><a href="index.html" class="logo"><img src="../framework/images/icon_logo.svg" alt="Logo">Site</a></h1>
+                    
+                    <a class="nav-menu-button">
+                        <img src="../framework/images/icon_menu.svg" alt="Menu button">
+                        <img src="../framework/images/icon_menu_close.svg" alt="Menu button">
+                        <!-- <span>×</span> -->
+                    </a>
+
+                    <div class="nav-menu">
+                        <!-- Conteúdo no JS! -->
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+
+        <a class="headerNav-button">
+            <img src="../framework/images/icon_headerNav.svg" alt="Header-nav button">  
+        </a>
+
+    </header>
+
+    <main>
+<!---->
+        <article>
+
+            <div class="central">
+
+                <h2>Índice</h2>
+
+                <div class="list_index">
+                    <ul>
+                        <li><a href="#Texts">Texts</a>
+                        
+                            <ul>
+                                <li><a href="#Lists">Lists</a></li>
+                                <li><a href="#Signs">Signs</a></li>
+                            </ul>
+                        
+                        </li>
+                        <li><a href="#Images">Images</a></li>
+                        <li><a href="#Videos">Videos</a></li>
+                        <li><a href="#Audios">Audios</a></li>
+                        <li><a href="#Forms">Forms</a></li>
+                        <li><a href="#Tables">Tables</a></li>
+                        <li><a href="#Choices">Choices</a>
+                        
+                            <ul>
+                                <li><a href="#Horizontal">Horizontal</a></li>
+                                <li><a href="#Vertical">Vertical</a></li>
+                                <li><a href="#Dropdown">Dropdown</a></li>
+                            </ul>
+                        
+                        </li>
+                        <li><a href="#Switch">Switch</a></li>
+                        <li><a href="#Cards">Cards</a>
+                        
+                            <ul>
+                                <li><a href="#CardsGrouped">Grouped</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="#Posters">Posters</a>
+                        
+                            <ul>
+                                <li><a href="#PostersGrouped">Grouped</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="#Lightbox">Lightbox</a></li>
+                    </ul>
+                </div>
+
+                <div class="lb"></div>
+
+                <hr> 
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Texts
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Texts">Texts</h2>
+
+                <h1>Título 1</h1>
+                <h2>Título 2</h2>
+                <h3>Título 3</h3>
+                <h4>Título 4</h4>
+                <h5>Título 5</h5>
+                <h6>Título 6</h6>
+
+                <p>A classe <span class="highlight">highlight</span> é usada para destacar o texto.</p>
+
+                <p>A classe <span class="highlight">highlight_menu</span> é usada para destacar o texto em um menu. (Foi usada em <span class="highlight">Lightbox</span>.)</p>
+
+                <p>Elementos <strong>strong</strong>, <b>b</b>, <em>em</em>, e <i>i</i>. </p>
+  
+                <p>9 Sea amet justo at ipsum <img src="../framework/images/ex_textImg_1_4.svg" alt="" class="textImg">. 
+                    Sit consetetur  <img src="../framework/images/ex_textImg_1_1.svg" alt="" class="textImg"> Et sed eirmod 
+                    rebum aliquyam accusam lorem, lorem vero ut diam stet sit et erat accusam, dolor tempor dolor 
+                    magna accusam. Sed dolor rebum et <kbd>Shift</kbd> + <kbd>Esc</kbd> sanctus labore diam 
+                    diam, voluptua invidunt <kbd>Enter</kbd> duo dolor voluptua voluptua et kasd. Vero et at 
+                    magna tempor justo eirmod. Ea est sadipscing no kasd ut diam sadipscing.</p>
+
+                <p>&lt;abbr>: Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
+
+                <p>&lt;dfn>: <dfn>Firefox</dfn> é o navegador criado pela Fundação Mozilla.</p>
+
+                <pre>Elemento   &lt;pre>.</pre>
+
+                <p>Tags de PC:</p>
+                
+                <ul>
+                    <li><span>&lt;var>: </span><var>x</var></li>
+                    <li><span>&lt;kbd>: </span><kbd>Ctrl</kbd> + <kbd>C</kbd></li>
+                    <li><span>&lt;kbd>: </span><kbd>Caps</kbd></li>
+                    <li><span>&lt;kbd>: </span><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd></li>
+                    <li><span>&lt;samp>: </span><samp>Saída de um programa.</samp></li>
+                    <li><span>&lt;code>: </span><code>if(x == 1){ ... }</code></li>
+                </ul>
+
+                <p>&lt;address> e &lt;a>: </p><address class="offset"><a href="mailto:jim@rock.com">jim@rock.com</a></address>
+
+                <p>&lt;cite>: Para manter-se atualizado, vá para a <a href="https://developer.mozilla.org/pt-BR/">
+                        <cite>home da MDN</cite></a> e veja: ...
+                </p>
+
+                <p>
+                    Classe(s):  <!--<span class="underline">underline</span>,  <span class="bold">bold</span>, 
+                    <span class="italic">italic</span>, --><span class="font_small">font_small</span>, e <span class="font_smaller">font_smaller</span>.
+                </p>
+                
+                <p class="font_monospace">Classe 'font_monospace'.</p>
+                <!--
+                <p class="content-center">Classe 'content-center'.</p>
+
+                <p class="content-right">Classe 'content-right'.</p>
+
+                <p class="content-justify">Classe: content-justify. Conteúdo genérico de demonstração <img src="../framework/images/ex_landscape.png" alt=" " style="width: 50px;"> para treinamento, ou produção. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ.</p>
+                -->
+
+                <p class="text_container">Parágrafo com a classe 'text_container'. Conteúdo de amostra.</p>
+ 
+                <p class="text_container center" style="width: 500px;">Parágrafo com estilo inline 'width: 500px' e com as classes 'text_container' e 'center'.</p>
+
+            </div>
+
+            <span>Conteúdo fora da coluna central.</span>
+
+            <div style="background-color: lightgray">
+                <div class="central">
+                    <p>Conteúdo com background largo.</p>
+                </div> 
+            </div>
+                    
+            <div class="central">
+
+                <!--  
+                ────────────────────────────
+                TODO:    > Lists
+                ──────────────────────────── --> 
+                
+                <h3 id="Lists">Lists</h3>
+
+                <p>Listas aninhadas, a 2ª está com a classe 'spaced_items':</p>
+
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2 - Lista:
+                        <ul class="spaced_items">
+                            <li>Item 2.1</li>
+                            <li>Item 2.2</li>
+                            <li>Item 2.3 - Lista:
+                                <ul>
+                                    <li>Item 2.3.1</li>
+                                    <li>Item 2.3.2</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Item 3</li>
+                </ul>
+
+                <!-- Não funciona no safari.
+                <p>Lista(s) personalizada(s):</p>
+
+                <ul class="arrow_2">
+                    <li>Item de uma lista com a classe 'arrow_2'.</li>
+                    <li>Item 2</li>
+                </ul>
+
+                <ul class="star">
+                    <li>Item de uma lista com a classe 'star'.</li>
+                    <li>Item 2</li>
+                </ul>
+                -->
+
+                <div class="lb3"></div>
+
+                <ol>
+                    <li>Item da lista</li>
+                    <li>Item da lista</li>
+                    <li>Item da lista</li>
+                </ol>
+
+                <!--<h4>Listas De Definição</h4>-->
+
+                <div class="lb3"></div>
+
+                <dl>
+                    <dt>Termo de descrição 1</dt>
+                    <dd>Definição de descrição 1-1</dd>
+
+                    <dt>Termo de descrição 2</dt>
+                    <dd>Definição de descrição 2-1</dd>
+                    <dd>Definição de descrição 2-2</dd>
+                    <dd>Definição de descrição 2-3</dd>
+
+                    <dt>Termo de descrição 3</dt>
+                    <dd>Definição de descrição 3-1</dd>
+                    <dd>Definição de descrição 3-2</dd>
+                </dl>
+
+                <div class="lb3"></div>
+
+                <p>Lista de definição com a classe 'spaced_items':</p>
+
+                <dl class="spaced_items">
+                    <dt>Termo de descrição 1</dt>
+                    <dd>Definição de descrição 1-1</dd>
+
+                    <dt>Termo de descrição 2</dt>
+                    <dd>Definição de descrição 2-1</dd>
+                    <dd>Definição de descrição 2-2</dd>
+                    <dd>Definição de descrição 2-3</dd>
+
+                    <dt>Termo de descrição 3</dt>
+                    <dd>Definição de descrição 3-1</dd>
+                    <dd>Definição de descrição 3-2</dd>
+                </dl>
+                
+                <!--  
+                ────────────────────────────
+                TODO:    > Signs
+                ──────────────────────────── --> 
+                
+                <h3 id="Signs">Signs</h3>
+
+                <p class="success">Parágrafo com a classe 'success'.</p>
+
+                <p class="attention">Parágrafo com a classe 'attention'.</p>
+
+                <p class="fail">Parágrafo com a classe 'fail'.</p>
+
+                <p class="danger">Parágrafo com a classe 'danger'.</p>
+
+            </div>
+
+            <!--
+            <p class="success long">Parágrafo com as classes 'success' e 'long' fora da coluna central.</p>
+
+            <p class="attention long">Parágrafo com as classes 'attention' e 'long' fora da coluna central.</p> 
+
+            <p class="fail long">Parágrafo com as classes 'fail' e 'long' fora da coluna central.</p>
+
+            <p class="danger long">Parágrafo com as classes 'danger' e 'long' fora da coluna central.</p>
+            -->
+
+            <div class="central">
+
+                <hr> 
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Images 
+                ────────────────────────────────────────────────────── --> 
+
+                <h2 id="Images">Images</h2>
+
+                <p>Imagem sem estilo:</p>
+
+                <img src="../framework/images/ex_landscape.png" alt=" ">  
+
+                <p>Imagem com a classe 'offset':</p>
+                
+                <img src="../framework/images/ex_landscape.png" alt=" " class="offset">
+            
+                <p>&lt;img> com a classe 'center':</p>
+                
+                <img src="../framework/images/ex_landscape.png" alt=" " class="center">
+            
+                <p>Imagem pequena (192 × 108) com a classe 'outdoor':</p>
+                
+                <img src="../framework/images/ex_192×108.png" alt=" " class="outdoor">
+
+                <p>Imagem grande (1920 × 1080) com a classe 'outdoor':</p>
+                
+                <img src="../framework/images/ex_1920×1080.png" alt=" " class="outdoor">
+
+                <div class="lb2"></div>
+
+                <hr>
+
+                <p>Imagem com 'width: 100%':</p>
+                
+                <img src="../framework/images/ex_landscape.png" alt=" " style="width: 100%; height: 80px">
+
+            </div>
+                
+            <div> <!-- Esta Div existe apenas para deixar o código mais organizado. -->
+                <p>Imagem com 'width: 100%' fora da coluna central:</p>
+                
+                <img src="../framework/images/ex_landscape.png" alt=" " style="width: 100%; height: 80px">
+            </div>
+
+            <div class="central">
+                <p>Imagens lado a lado (seus widths somados dão 100%) dentro de uma &lt;div> com a classe 'offset':</p>
+
+                <div class="offset"> 
+                    <img src="../framework/images/ex_landscape.png" alt=" " style="width: 33.3%">
+                    <img src="../framework/images/ex_landscape.png" alt=" " style="width: 33.3%">
+                    <img src="../framework/images/ex_landscape.png" alt=" " style="width: 33.3%">
+
+                    <img src="../framework/images/ex_landscape.png" alt=" " style="width: 33.3%">
+                    <img src="../framework/images/ex_landscape.png" alt=" " style="width: 33.3%">
+                    <img src="../framework/images/ex_landscape.png" alt=" " style="width: 33.3%">
+                </div>
+
+                <hr>
+                
+                <p>&lt;figure> (imagem com legenda) com a classe 'center':</p>
+
+                <figure class="center">
+                        <img src="../framework/images/ex_landscape.png" alt=" ">
+                        <figcaption>Legenda da figura</figcaption>
+                </figure>
+
+                <p>&lt;figure> com imagem pequena com a classe 'outdoor':</p>
+
+                <figure class="outdoor">
+                        <img src="../framework/images/ex_192×108.png" alt=" ">
+                        <figcaption>Legenda da figura</figcaption>
+                </figure>
+                
+                <p>&lt;figure> com imagem grande com a classe 'outdoor':</p>
+
+                <figure class="outdoor">
+                        <img src="../framework/images/ex_1920×1080.png" alt=" ">
+                        <figcaption>Legenda da figura: ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. </figcaption>
+                </figure>
+
+                <hr>
+
+                <p>Galeria:</p>
+                
+                <div class="gallery">
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                </div>
+
+                <p>Galeria com estilo inline 'max-width: 500px' e com a classe 'center':</p>
+                
+                <div class="gallery center" style="max-width: 500px;"> 
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                    <a href=""><img src="../framework/images/ex_landscape.png" alt=" "></a>
+                </div>
+
+                <hr>
+
+                <section>
+
+                    <h2 class="hidden">Slider</h2>
+
+                    <p>Slider:</p>
+
+                    <div class="slider"> 
+
+                            <img src="../framework/images/ex_1920×1080.png" alt="">
+                            <img src="../framework/images/ex_1920×1080.png" alt="">
+                            <img src="../framework/images/ex_1920×1080.png" alt="">
+
+    <!--            
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-01-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/ex_1920×1080.png">
+                                <img src="../framework/images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-02-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/ex_1920×1080.png">
+                                <img src="../framework/images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-03-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/ex_1920×1080.png">
+                                <img src="../framework/images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-04-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/slider-img-04-pc.png">
+                                <img src="../framework/images/slider-img-04-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-05-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/slider-img-05-pc.png">
+                                <img src="../framework/images/slider-img-05-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-06-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/slider-img-06-pc.png">
+                                <img src="../framework/images/slider-img-06-pc.png" alt="">
+                            </picture>
+        -->        
+
+                    </div>
+
+                    <p>Slider com estilo inline 'max-width: 500px' e com a classe 'center':</p>
+
+                    <div class="slider center" style="max-width: 500px;"> 
+
+                            <img src="../framework/images/ex_1920×1080.png" alt="">
+                            <img src="../framework/images/ex_1920×1080.png" alt="">
+                            <img src="../framework/images/ex_1920×1080.png" alt="">
+
+    <!--            
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-01-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/ex_1920×1080.png">
+                                <img src="../framework/images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-02-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/ex_1920×1080.png">
+                                <img src="../framework/images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-03-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/ex_1920×1080.png">
+                                <img src="../framework/images/ex_1920×1080.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-04-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/slider-img-04-pc.png">
+                                <img src="../framework/images/slider-img-04-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-05-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/slider-img-05-pc.png">
+                                <img src="../framework/images/slider-img-05-pc.png" alt="">
+                            </picture>
+                
+                            <picture>
+                                <source media="(max-width: 375px)" srcset="../framework/images/slider-img-06-mobile.png">
+                                <source media="(min-width: 376px)" srcset="../framework/images/slider-img-06-pc.png">
+                                <img src="../framework/images/slider-img-06-pc.png" alt="">
+                            </picture>
+        -->        
+
+                    </div>
+
+                </section>
+
+                <hr>
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Videos
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Videos">Videos</h2>
+
+                <p>Os estilos e classes das imagens devem ser usados nos vídeos da mesma maneira.</p>
+
+                <p>Vídeo sem estilo:</p>
+
+                <video controls preload="auto" poster="../framework/images/ex_video_poster.png" autoplay loop muted class="line" style="width: 200px">
+                    <source src="../videos/trailer.mp4" type="video/mp4">
+                    <source src="../videos/trailer.webm" type="video/webm">
+                    
+                    <track src="../webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                    <track src="../webvtt/subtitle-en.vtt" kind="subtitles" srclang="en">
+                </video>
+
+                <p>Vídeo com a classe 'offset':</p>
+
+                <video controls preload="auto" poster="../framework/images/ex_video_poster.png" autoplay loop muted style="width: 200px" class="line offset">
+                    <source src="../videos/trailer.mp4" type="video/mp4">
+                    <source src="../videos/trailer.webm" type="video/webm">
+                    
+                    <track src="../webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                    <track src="../webvtt/subtitle-en.vtt" kind="subtitles" srclang="en">
+                </video>
+
+                <p>&lt;video> com a classe 'center':</p>
+
+                <video controls preload="auto" poster="../framework/images/ex_video_poster.png" autoplay loop muted style="width: 200px" class="line center">
+                    <source src="../videos/trailer.mp4" type="video/mp4">
+                    <source src="../videos/trailer.webm" type="video/webm">
+                    
+                    <track src="../webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                    <track src="../webvtt/subtitle-en.vtt" kind="subtitles" srclang="en">
+                </video>
+
+
+                <p>Vídeo com a classe 'outdoor':</p>
+                
+                <video controls preload="auto" poster="../framework/images/ex_video_poster.png" autoplay loop muted class="line outdoor">
+                    <source src="../videos/trailer.mp4" type="video/mp4">
+                    <source src="../videos/trailer.webm" type="video/webm">
+                    
+                    <track src="../webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                    <track src="../webvtt/subtitle-en.vtt" kind="subtitles" srclang="en">
+                </video>
+
+                <div class="lb2"></div>
+
+                <hr>
+            
+            </div>
+
+            <div> <!-- Esta Div existe apenas para deixar o código mais organizado. -->
+
+                <p>Vídeo com 'width: 100%' fora da coluna central:</p>  
+
+                <video controls preload="auto" poster="../framework/images/ex_video_poster.png" autoplay loop muted style="width: 100%">
+                    <source src="../videos/trailer.mp4" type="video/mp4">
+                    <source src="../videos/trailer.webm" type="video/webm">
+                    
+                    <track src="../webvtt/subtitle-pt.vtt" kind="subtitles" srclang="pt">
+                    <track src="../webvtt/subtitle-en.vtt" kind="subtitles" srclang="en">
+                </video>
+            
+            </div>
+
+            <div class="central">
+
+                <hr>
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Audios
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Audios">Audios</h2>
+
+                <p>&lt;audio> com a classe 'center':</p>
+
+                <audio controls preload="auto" loop class="center">
+                    <source src="../audios/exemplo.mp3" type="audio/mp3">
+                    <source src="../audios/exemplo.ogg" type="audio/ogg">
+                        
+                        <p> Seu navegador não suporta áudio em HTML5. Aqui está um <a href="../audios/exemplo.mp3">link para o áudio</a>.</p>
+                </audio> 
+
+                <p>&lt;audio> com a classe 'center' e com o estilo inline 'width: 90%':</p>
+
+                <audio controls preload="auto" loop class="center" style="width: 90%">
+                    <source src="../audios/exemplo.mp3" type="audio/mp3">
+                    <source src="../audios/exemplo.ogg" type="audio/ogg">
+                        
+                        <p> Seu navegador não suporta áudio em HTML5. Aqui está um <a href="../audios/exemplo.mp3">link para o áudio</a>.</p>
+                </audio> 
+
+                <div class="lb2"></div> 
+
+                <hr>
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Forms
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Forms">Forms</h2>
+
+                <form action="/my-handling-form-page" method="post">
+
+                    <label for="name">
+                        First Name: <strong><abbr title="required">*</abbr></strong>
+                       <!--<input type="text" value="Valor" id="name" name="user_name" autofocus> -->
+                       <input type="text" value="Valor" id="name" name="user_name">
+                    </label>
+                    
+                    <label for="name2">
+                        Last Name:
+                        <input type="text" value="Valor" id="name2" name="user_name">
+                    </label>
+
+                    <label for="mail">
+                        E-mail:
+                        <input type="email" id="mail" name="user_mail" placeholder="abc@gmail.com">
+                    </label>
+
+                    <label for="msg">
+                        Message:
+                        <textarea id="msg" name="user_message" class="textarea_3l" spellcheck="true" placeholder="Textarea com a classe 'textarea_3l'.">Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. </textarea>
+                    </label>
+                       
+                    <label for="file">
+                        <input type="file" name="file" id="file" accept="image/*" multiple>
+                    </label>
+ 
+                    <fieldset>
+                        <p>Botões de opção: <strong><abbr title="required">*</abbr></strong></p> 
+                        <label for="r_A1" class="cursor_pointer"><input type="radio" name="question1" id="r_A1" value="yes" checked>Yes</label>
+                        <label for="r_A2" class="cursor_pointer"><input type="radio" name="question1" id="r_A2" value="no">No</label>
+                    </fieldset>
+                        
+                    <fieldset disabled>
+                        <p>Botões de opção desativados:</p> 
+                        <label for="r_B1"><input type="radio" name="question2" id="r_B1" value="yes">Yes</label>
+                        <label for="r_B2"><input type="radio" name="question2" id="r_B2" value="no" checked>No</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <p>Checkboxes: <strong><abbr title="required">*</abbr></strong></p> 
+                        <label for="c_A1" class="cursor_pointer"><input type="checkbox" name="question3" id="c_A1" value="value1" checked>Check 1</label>
+                        <label for="c_A2" class="cursor_pointer"><input type="checkbox" name="question3" id="c_A2" value="value2">Check 2</label>
+                    </fieldset>
+                    
+                    <fieldset disabled>
+                        <p>Checkboxes desativados:</p> 
+                        <label for="c_B1"><input type="checkbox" name="question4" id="c_B1" value="value1">Check 1</label>
+                        <label for="c_B2"><input type="checkbox" name="question4" id="c_B2" value="value2" checked>Check 2</label>
+                    </fieldset>
+                    
+                    <label for="choice">Selection:
+                        <select id="choice" name="name">
+                            <option value="op1">Opção 1</option>
+                            <option value="op2">Opção 2</option>
+                            <option value="op3">Opção 3</option>
+                        </select>
+                    </label>
+
+                    <p>&lt;button> com a classe 'center':</p>
+
+                    <button type="submit" class="center">OK</button>
+
+                    <p>Botões em uma &lt;div> com 'text-align: center':</p>
+
+                    <div style="text-align: center;">  
+                        <button type="reset">RESET</button>
+                        <button type="button" disabled>BUTTON</button>
+                    </div>
+                </form>  
+
+                <p>Exemplo:</p>
+
+                <div class="ex_input">
+                    
+                    <p>In: <input type="text"></p> 
+                    
+                    <p style="display: flex; align-items: center;">Out: &nbsp;
+                        <span class="display"></span> 
+                    </p>  
+
+                    <script>
+
+                        const input = document.querySelector('.ex_input input');
+                        const span = document.querySelector('.ex_input span');
+                    
+                        input.onchange = function() {
+                            span.textContent = input.value
+                        } 
+                
+                    </script>
+                
+                </div> 
+
+                <div class="lb2"></div>
+
+                <hr>
+                
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Tables
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Tables">Tables</h2>
+
+                <table>
+                    <caption>&lt;table> padrão</caption>
+                    <tr>
+                        <td style="width: 33.33%;"></td>
+                        <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                        <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L1</th> 
+                        <td>1-1</td>
+                        <td>1-2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L2</th> 
+                        <td>2-1</td>
+                        <td>2-2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L3</th> 
+                        <td>3-1</td>
+                        <td>3-2</td>
+                    </tr>
+                </table>
+
+                <table class="table_style_2">
+                    <caption>&lt;table> com a classe 'table_style_2'.</caption>
+                    <tr>
+                        <td style="width: 33.33%;"></td>
+                        <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                        <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L1</th> 
+                        <td>1-1</td>
+                        <td>1-2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L2</th> 
+                        <td>2-1</td>
+                        <td>2-2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L3</th> 
+                        <td>3-1</td>
+                        <td>3-2</td>
+                    </tr>
+                </table>
+
+                <table class="table_style_3">
+                    <caption>&lt;table> com a classe 'table_style_3'.</caption>
+                    <tr>
+                        <th style="width: 50%;" scope="row">Cab.-L1</th> 
+                        <td style="width: 50%;">1-1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L2</th> 
+                        <td>2-1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L3</th> 
+                        <td>3-1</td>
+                    </tr>
+                </table>
+
+                <table class="table_style_4">
+                    <caption>&lt;table> com a classe 'table_style_4'.</caption>
+                    <tr>
+                        <th scope="row">Cab.-L1</th> 
+                        <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cab.-L2</th> 
+                        <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Choices
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Choices">Choices</h2> 
+
+                <p>Todas as amostras de uso possuem a mesma estrutura semântica.</p>
+
+                <p>Obs.: A classe 'on' não tem efeito em um &lt;a> da opção de um choice se o choice tiver a classe 'disabled', ou se 'disabled' estiver no próprio &lt;a>.</p>
+
+                <!--  
+                ────────────────────────────
+                TODO:    > Horizontal
+                ──────────────────────────── --> 
+
+                <h3 id="Horizontal">Horizontal</h3>
+
+                <p>'choice_h' com a classe 'on' no &lt;a> de 'Opção 1':</p>
+
+                <ul class="choice_h" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_h' com as classes 'noLabel' e 'offset'</p>
+
+                <ul class="choice_h noLabel offset" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_h' com a classe 'noLabel' e com imagens grandes:</p>
+
+                <ul class="choice_h noLabel" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 70px; height: 70px;"></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_h' diverso e com a classe 'center':</p>
+
+                <ul class="choice_h center" onclick="choice(this)">
+                    <li><span>Esc.</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 65px; height: 65px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 65px; height: 65px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">#3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 65px; height: 65px;"></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_h' com a classe 'disabled':</p>
+
+                <ul class="choice_h disabled" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_h' com a classe 'noLabel', e com os &lt;a>'s das opções 1 e 3 com a classe 'disabled':</p>
+
+                <ul class="choice_h  noLabel" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on disabled"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)" class="disabled"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)" class=""><span>Opção 4</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_h' com as classes 'center' e 'offset':</p>
+
+                <ul class="choice_h center offset" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opç. de nº 001</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)" class="on"><span>Opç. de nº 002</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opç. de nº 003</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <!--
+                ────────────────────────────
+                TODO:    > Vertical
+                ──────────────────────────── -->
+                
+                <h3 id="Vertical">Vertical</h3>
+
+                <p>'choice_v' com a classe 'on' no &lt;a> de 'Opção 1':</p>
+
+                <ul class="choice_v" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1 - Vertical choice</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+                
+                <div class="lb2"></div>
+
+                <p>'choice_v' com as classes 'noLabel' e 'offset':</p>
+
+                <ul class="choice_v noLabel offset" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1 - Vertical choice</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+                
+                <div class="lb2"></div>
+
+                <p>'choice_v'  com a classe 'noLabel' e com imagens grandes:</p>
+
+                <ul class="choice_v noLabel" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                </ul>
+
+                <div class="lb2"></div> 
+
+                <p>'choice_v' diverso e com a classe 'center'. O &lt;a> da opção 3 tem o estilo inline "justify-content: center":</p>
+
+                <ul class="choice_v center" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 63px; height: 63px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)" style="justify-content: center"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 63px; height: 63px;"><span>#3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">#4</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_5(this)"><img src="../framework/images/ex_landscape.png" alt=" " style="width: 200px; height: 70px;"></a></li>
+                </ul>
+
+                <div class="lb2"></div> 
+
+                <p>'choice_v' com a classe 'disabled':</p>
+
+                <ul class="choice_v disabled" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1 - Vertical choice</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_v' com a classe 'noLabel', e com os &lt;a>'s das opções 1 e 3 com a classe 'disabled':</p>
+
+                <ul class="choice_v  noLabel" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on disabled"><span>Opção 1 - Vertical choice</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)" class="disabled"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)" class=""><span>Opção 4</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <p>'choice_v' com as classes 'center' e 'offset':</p>
+
+                <ul class="choice_v center offset" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opç. de nº 001</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opç. de nº 002</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)" class="on"><span>Opç. de nº 003 - Vertical choice com as classes 'center' e 'offset'</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <!--  
+                ────────────────────────────
+                TODO:    > Dropdown
+                ──────────────────────────── --> 
+
+                <h3 id="Dropdown">Dropdown</h3>
+
+                <p>Obs.: A classe 'on' não tem efeito em um 'choice_d'.</p>
+
+                <div class="lb2"></div>
+
+                <p>'choice_d' com a classe 'offset':</p>
+
+                <ul class="choice_d offset " onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com a classe 'noLabel':</p>
+
+                <ul class="choice_d noLabel" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com imagens de texto pequenas:</p>
+
+                <ul class="choice_d" onclick="choice(this)">
+                    <li><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span><img src="../framework/images/ex_textImg_2_4.svg" alt="" class="textImg_size">Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span><img src="../framework/images/ex_textImg_2_2.svg" alt="" class="textImg_size">Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com a classe 'noLabel' e com imagens de texto pequenas:</p>
+
+                <ul class="choice_d noLabel" onclick="choice(this)">
+                    <li><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com imagens grandes:</p>
+
+                <ul class="choice_d" onclick="choice(this)">
+                    <li><img src="../framework/images/ex_choice_label.svg" alt=" " style="width: 150px; height: 40px;"></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_choice_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_choice_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com a classe 'noLabel' e com imagens grandes:</p>
+
+                <ul class="choice_d noLabel" onclick="choice(this)">
+                    <li><img src="../framework/images/ex_choice_label.svg" alt=" " style="width: 150px; height: 40px;"></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_choice_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_choice_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com a classe 'center', e com imagens grandes com textos:</p>
+
+                <ul class="choice_d center" onclick="choice(this)">
+                    <li><img src="../framework/images/ex_choice_label.svg" alt=" " style="width: 150px; height: 40px;"><span>#0</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_choice_1.svg" alt=" " style="width: 150px; height: 40px;"><span>#1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_2.svg" alt=" " style="width: 150px; height: 40px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_choice_3.svg" alt=" " style="width: 150px; height: 40px;"><span>#3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com a classe 'noLabel', e com imagens grandes com textos:</p>
+
+                <ul class="choice_d noLabel" onclick="choice(this)">
+                    <li><img src="../framework/images/ex_choice_label.svg" alt=" " style="width: 150px; height: 40px;"><span>#0</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_choice_1.svg" alt=" " style="width: 150px; height: 40px;"><span>#1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_2.svg" alt=" " style="width: 150px; height: 40px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_choice_3.svg" alt=" " style="width: 150px; height: 40px;"><span>#3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com a classe 'disabled':</p>
+
+                <ul class="choice_d disabled" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com as classes 'noLabel' e 'disabled':</p>
+
+                <ul class="choice_d noLabel disabled" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' com 2 &lt;a>'s com a classe 'disabled':</p>
+
+                <ul class="choice_d" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)" class="disabled"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_4(this)" class="disabled"><span>Opção 4</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <p>'choice_d' diverso com as classes 'center' e 'offset':</p>
+
+                <ul class="choice_d center offset" onclick="choice(this)">
+                    <li><img src="../framework/images/ex_choice_label.svg" alt=" " style="width: 150px; height: 40px;"><span>#0</span></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. </span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 5</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 6</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 7</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_choice_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../framework/images/ex_choice_1.svg" alt=" " style="width: 150px; height: 40px;"><span>#11</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../framework/images/ex_choice_2.svg" alt=" " style="width: 150px; height: 40px;"><span>#12</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../framework/images/ex_choice_3.svg" alt=" " style="width: 150px; height: 40px;"><span>#13</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="disabled"><span>Opção 14</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="disabled"><span><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg_size">Opção 15</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="disabled"><img src="../framework/images/ex_choice_4.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)" class="disabled"><img src="../framework/images/ex_choice_4.svg" alt=" " style="width: 150px; height: 40px;"><span>#17</span></a></li>
+                </ul>
+
+                <div class="lb3"></div>
+
+                <!--  
+                ────────────────────────────
+                TODO:    > Exemplos
+                ──────────────────────────── --> 
+
+                <h3>Exemplos:</h3>
+
+                <ul class="choice_h center" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_example_1_Action_1()" class="on"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_1_Action_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_1_Action_3()"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <div class="choice_example_1 text_container offset">
+                    <div class="choice_divsExample_1_div_1">Div 1</div>
+                    <div class="choice_divsExample_1_div_2">Div 2</div>
+                    <div class="choice_divsExample_1_div_3">
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                        Abcde fghij klmno pqrst uvwxyz. 
+                    </div>
+                </div>
+
+                <div class="lb3"></div>
+
+                <ul class="choice_d offset" onclick="choice(this)">
+                    <li><span>Escolher</span></li>
+                    <li><a onclick="choice_option(this); choice_example_2_Action_1()"><span>Opção 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_2_Action_2()"><span>Opção 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_2_Action_3()"><span>Opção 3</span></a></li>
+                </ul>
+
+                <div class="lb2"></div>
+
+                <div class="choice_example_2 text_container offset">
+                    <div></div>
+                    <div class="choice_divsExample_2_div_1">Div 1</div>
+                    <div class="choice_divsExample_2_div_2">Div 2</div>
+                    <div class="choice_divsExample_2_div_3">Div 3</div> 
+                </div>
+
+                <div class="lb3"></div> 
+
+                <hr>
+
+                <div class="lb2"></div>
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Switch
+                ────────────────────────────────────────────────────── --> 
+
+                <h2 id="Switch">Switch</h2> 
+
+                <div class="lb2"></div> 
+
+                <p>Switch:</p>
+
+                <div class="switch" onclick="switch_event(this); switch_1(this)">
+                    <div></div>
+                    <p>Etiqueta</p>
+                </div>
+
+                <p>Switch com a classe 'on':</p>
+
+                <div class="switch on" onclick="switch_event(this); switch_2(this)"> 
+                    <div></div>
+                    <p>Etiqueta</p>
+                </div>
+
+                <p>Switch com a classe 'disabled':</p>
+
+                <div class="switch disabled" onclick="switch_event(this); switch_3(this)">
+                    <div></div>
+                    <p>Etiqueta</p>
+                </div>
+
+                <p>Switch com as classes 'on' e 'disabled':</p>
+
+                <div class="switch on disabled" onclick="switch_event(this); switch_4(this)">
+                    <div></div>
+                    <p>Etiqueta</p>
+                </div>
+
+                <div class="lb3"></div> 
+
+                <p>Switch com a classe 'inverted':</p>
+
+                <div class="switch inverted" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <p>Etiqueta</p>
+                </div>
+
+                <p>Switch com as classes 'on' e 'inverted', e com a etiqueta com um ícone:</p>
+
+                <div class="switch on inverted" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <p><img src="../framework/images/ex_icon_switch_label_x3.png" alt="">Etiqueta</p>
+                </div>
+
+                <p>Switch com as classes 'disabled' e 'inverted', e com etiqueta longa':</p>
+
+                <div class="switch inverted disabled" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <p>JavaScript é a linguagem de programação usada para adicionar interatividade aos sites. A linguagem JavaScript é uma linguagem dinâmica orientada a objetos; tem tipos e operadores, objetos e métodos.</p>
+                </div>
+
+                <p>Switch com as classes 'on', 'disabled', e 'inverted', e com etiqueta longa com um ícone:</p>
+
+                <div class="switch on inverted disabled" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <p><img src="../framework/images/ex_icon_switch_label_x3.png" alt="">CSS (Cascading Style Sheets - Folhas de Estilo em Cascata) é uma linguagem de folha de estilos usada para aplicar estilo a um documento escrito em HTML ou XML.</p>
+                </div>
+
+                <div class="lb2"></div> 
+
+                <!--
+                <div class="switch on switch_smaller" onclick="switch_event(this); switch_1(this)">  
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch switch_smaller" onclick="switch_event(this); switch_2(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch on disabled switch_smaller" onclick="switch_event(this); switch_3(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch disabled switch_smaller" onclick="switch_event(this); switch_4(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="lb3"></div> 
+
+                <div class="switch on switch_small" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch switch_small" onclick="switch_event(this); switch_2(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch on disabled switch_small" onclick="switch_event(this); switch_3(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch disabled switch_small" onclick="switch_event(this); switch_4(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="lb3"></div> 
+
+                <div class="switch on switch_medium" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch switch_medium" onclick="switch_event(this); switch_2(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch on disabled switch_medium" onclick="switch_event(this); switch_3(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch disabled switch_medium" onclick="switch_event(this); switch_4(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="lb3"></div> 
+
+                <div class="switch on switch_big" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch switch_big" onclick="switch_event(this); switch_2(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch on disabled switch_big" onclick="switch_event(this); switch_3(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch disabled switch_big" onclick="switch_event(this); switch_4(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="lb3"></div> 
+                
+                <div class="switch on switch_bigger" onclick="switch_event(this); switch_1(this)"> 
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch switch_bigger" onclick="switch_event(this); switch_2(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch on disabled switch_bigger" onclick="switch_event(this); switch_3(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="switch disabled switch_bigger" onclick="switch_event(this); switch_4(this)">
+                    <div></div>
+                    <div>Etiqueta</div>
+                </div>
+
+                <div class="lb3"></div> 
+                -->
+
+                <hr>
+                  
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Cards
+                ────────────────────────────────────────────────────── --> 
+            
+                <h2 id="Cards">Cards</h2>
+
+                <p>Nota 1: Os cards já vem com margens.</p>
+
+                <p>Nota 2: Os cards não são compatíveis com a classe 'center'.</p>
+
+                <p>Card:</p>
+
+                <a href="" class="card">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <p>Card com imagem grande:</p>
+
+                <a href="" class="card">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. </p>
+                    </div>
+                </a>
+
+                <p>Card com o estilo 'width: 250px' inline:</p>
+                
+                <a href="" class="card" style="width: 250px">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <p>Card com a imagem com os estilos 'width: 150px' e 'height: 150px' inline:</p>
+                
+                <a href="" class="card">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img" style="width: 150px; height: 150px/**/">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. </p>
+                    </div>
+                </a>
+
+                <p>Cards enfileirados:</p>
+                
+                <a href="" class="card">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij ... uvwxyz. </p>
+                    </div>
+                </a>
+                
+                <a href="" class="card">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij ... uvwxyz. </p>
+                    </div>
+                </a>
+                
+                <a href="" class="card">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij ... uvwxyz. </p>
+                    </div>
+                </a>
+
+                <p>Card com a classe 'h1':</p>
+             
+                <a href="" class="card h1">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <p>Cards com a classe 'h1' enfileirados <span style="color: red;">(importante: Para evitar este bug que acontece no Safari do desktop mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, use os cards agrupados com a classe 'group' mostrado mais abaixo)</span>:</p>
+             
+                <a href="" class="card h1">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5><!---->
+                            <p>Abcde ...</p>
+                    </div>
+                </a>
+
+                <a href="" class="card h1">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <a href="" class="card h1">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <p>Card com a classe 'h2':</p>
+             
+                <a href="" class="card h2">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <p>Cards com a classe 'h2' enfileirados <span style="color: red;">(importante: Para evitar este bug que acontece no Chrome, Edge, e Firefox do desktop mostrado no 1º card logo abaixo, que deixa o tamanho da imagem menor do que o que deveria quando 'card_text' é pequeno, use os cards agrupados com a classe 'group' mostrado mais abaixo)</span>:</p>
+
+                <a href="" class="card h2">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <!--<p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>-->
+                    </div>
+                </a>
+
+                <a href="" class="card h2">
+                    <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <a href="" class="card h2">
+                    <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <h3 id="CardsGrouped">Cards Agrupados</h3>
+
+                <p>Cards agrupados com uma &lt;div> com a classe 'group':</p>
+
+                <div class="group">
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <p>Cards agrupados com uma &lt;div> com as classes 'group' e 'c_3' (c_x, 2 &lt; x &lt; 12):</p>
+
+                <div class="group c_3">
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz..</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <p>Cards com a classe 'h1' agrupados com uma &lt;div> com a classe 'group':</p>
+
+                <div class="group">
+
+                    <a href="" class="card h1">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde ...</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h1">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h1">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <p>Cards com a classe 'h1' agrupados com uma &lt;div> com as classes 'group' e 'c_2' (c_x, 2 &lt; x &lt; 12):</p>
+
+                <div class="group c_2">
+
+                    <a href="" class="card h1">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde ...</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h1">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h1">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <p>Cards com a classe 'h2' agrupados com uma &lt;div> com a classe 'group':</p>
+
+                <div class="group">
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <!--<p>Abcde fghij klmno pqrst uvwxyz.</p>-->
+                        </div>
+                    </a>
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <p>Cards com a classe 'h2' agrupados com uma &lt;div> com as classes 'group' e 'c_2' (c_x, 2 &lt; x &lt; 12):</p>
+
+                <div class="group c_2">
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <!--<p>Abcde fghij klmno pqrst uvwxyz.</p>-->
+                        </div>
+                    </a>
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_1920×1080.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="card h2">
+                        <img src="../framework/images/ex_192×108.png" alt="" class="card_img">  
+
+                        <div class="card_text">
+                                <h5>Card Title</h5>
+                                <!--<p>Abcde fghij klmno pqrst uvwxyz.</p>-->
+                        </div>
+                    </a>
+
+                </div>
+
+                <hr>
+                 
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Posters
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Posters">Posters</h2>
+
+                <p>Nota 1: Os posters já vem com margens.</p>
+
+                <p>Nota 2: Os posters não são compatíveis com a classe 'center'.</p>
+
+                <p>Poster:</p>
+
+                <a href="" class="poster">
+
+                    <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                    <div class="poster_header"> 
+                        <p>Poster Header</p>
+                    </div><!---->
+
+                    <div class="poster_body">
+                        <p>Here is the poster body!</p>
+                        <p>Last updated X mins ago</p>
+                    </div>     
+                </a>
+                
+                <p>Poster com os estilos 'width: 260px' e 'height: 220px' inline:</p>
+                
+                <a href="" class="poster" style="width: 260px; height: 220px/**/">
+
+                    <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                    <div class="poster_header">
+                        <p><img src="../framework/images/ex_textImg_2_1.svg" alt="" class="textImg"> Poster Header</p>
+                    </div><!---->
+
+                    <div class="poster_body">
+                        <p>Here is the poster body!</p>
+                        <p>Last updated X mins ago</p>
+                    </div>     
+                </a>
+                
+                <p>Poster dentro de uma div com o estilo inline 'text-align: center':</p>
+
+                <div style="text-align: center;"> 
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header"> 
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                </div>
+
+                <h3 id="PostersGrouped">Posters Agrupados</h3>
+
+                <p>Posters enfileirados dentro de uma div com o estilo inline 'text-align: center':</p>
+
+                <div style="text-align: center;">
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated ...</p>
+                        </div>     
+                    </a>
+                    
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated ...</p>
+                        </div>     
+                    </a>
+                    
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated ...</p>
+                        </div>     
+                    </a>
+
+                </div>
+
+                <p>Posters agrupados com uma &lt;div> com a classe 'group':</p>
+
+                <div class="group">
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                </div>
+
+                <p>Posters agrupados com uma &lt;div> com as classes 'group' e 'c_3' (c_x, 2 &lt; x &lt; 12):</p>
+
+                <div class="group c_3">
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                    <a href="" class="poster">
+
+                        <img src="../framework/images/ex_dark_1000×1000.png" alt="" class="poster_img"> 
+    
+                        <div class="poster_header">
+                            <p>Poster Header</p>
+                        </div><!---->
+    
+                        <div class="poster_body">
+                            <p>Here is the poster body!</p>
+                            <p>Last updated X mins ago</p>
+                        </div>     
+                    </a>
+
+                </div>
+
+                <hr>
+
+                <!--
+                ──────────────────────────────────────────────────────
+                TODO: Lightbox
+                ────────────────────────────────────────────────────── --> 
+                
+                <h2 id="Lightbox">Lightbox</h2> <!-- Lightbox Pop-Ups -->
+
+                <p>Sntx.: 
+                    <sc1>lightbox<sc3>2</sc3>(</sc1><sc2>text</sc2><sc3>,</sc3> <sc4>image</sc4><sc3>,</sc3> <sc4>width</sc4><sc1>)</sc1>
+                </p>
+
+                <p style="text-align: left;">Ex.: lightbox(`&lt;b class='highlight'>OUT!&lt;/b>`)</p> 
+
+                <p style="text-align: left;">Ex.: lightbox2('Hi!', '../framework/images/hi.png', '50vw')</p>  
+
+                <p>
+                    <a onclick="lightbox(`<img src='../framework/images/ex_textImg_2_1.svg' alt='' class='textImg'> Lightbox com apenas o texto como parâmetro.`)">Lightbox 1</a>
+                </p> 
+  
+                <p>
+                    <a onclick="lightbox('Lightbox com apenas o texto e a imagem como parâmetros.', '../framework/images/ex_alert.png')">Lightbox 2</a>
+                </p>
+
+                <p>
+                    <a onclick="lightbox('Lightbox com o texto, a imagem, e a largura da imagem como parâmetros.', '../framework/images/ex_alert.png', '75px')">Lightbox 3</a>  
+                </p>   
+
+                <p>
+                    <a onclick="lightbox(`Lightbox com a função <span class='highlight_menu'>lightbox()</span>.`, '../framework/images/ex_1920×1080.png', '200px')">Lightbox 4</a>  
+                </p>  
+
+                <p>
+                    <a onclick="lightbox2(`Lightbox com a função <span class='highlight_menu'>lightbox2()</span>.`, '../framework/images/ex_1920×1080.png', '200px')">Lightbox 5</a>  
+                </p>    
+
+                <p>
+                    <a onclick="lightbox(` ----------------------------------------------------------------------------------------------------------------------
+                    ---------------------------------------------------------------------- -------------------------------------------------------------------------------------
+                    ----------- ------------------------------------------------------------------------------------------------ -----------------------------------------------
+                    ------------------------------------------------------------------------------------------------------------------------------------------------- ----------
+                    -------------------------------------------------------------------------------------- ----------------------------------------------------------------------
+                    ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                    ------------------------ ------------------------------------------------------------------------------------------------ ---------------------------------------
+                    --------------------------------------------------------- -------------------------------------------------------------------------------------------------------
+                    ----------------------------------------------------------------------------------------- -----------------------------------------------------------------------
+                    ------------------------- ------------------------------------------------------------------------------------------------ ---------------------------------------
+                    --------------------------------------------------------------------------------------------------------------------------------------------------------- --------
+                    ---------------------------------------------------------------------------------------- --------------------------------------------------------------------------
+                    ---------------------- -----------------------------------------------------------------------------------------------------------------------------------------
+                    ------------------------------------------------------- ------------------------------------------------------------------------------------------------ ----------
+                    -------------------------------------------------------------------------------------- ----------------------------------------------------------------------------
+                    -------------------------------------------------------------------------------------------------------------------- ----------------------------------------------
+                    -------------------------------------------------- -----------------------------------------------------------------------------------------------------------------
+                    --------------------------------------------------------------------------- -----------------------------------------------------------------------------------------
+                    ------- ------------------------------------------------------------------------------------------------------------- `)">Lightbox 6</a>
+                </p>
+
+                <div class="lb7"></div><!-- -->
+
+            </div>
+        <div></div>
+        </article>
+
+        <hr>
+
+        <aside>
+            <div class="central">
+                <p>&lt;aside></p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Footer
+    ────────────────────────────────────────────────────── --> 
+
+    <footer></footer>
+
+    <script src="../framework/scripts/defaults.js"></script>
+    <script src="../scripts/identity.js"></script>
+
+</body> 
+</html>
+
+<!-- 
+
+    Emmets: Element#ID_$@I.Class_1.Class_2[Atrib_1=... Atrib_2]{Content $}*N 
+    
+    hsla(0, 100%, 50%, 0.)
+    
+    Referências De Entidade de Caracteres: 
+    Espaço: &nbsp; | <: &lt;
+    
+    Fontes Seguras da Web: 
+    font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
+    
+    ABCDE FGHIJ KLMNO PQRST UVWXYZ.  Texto genérico de demonstração.  
+
+    Abcde fghij klmno pqrst uvwxyz.  Texto genérico de demonstração 2. 
+    
+    Configuração Do Aplicativo Textastic:
+    Font: Menlo; Font Size: 11 pt 
+
+    .slider:hover { 
+    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
+    padding-top: 40px; padding-bottom: 40px; 
+    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
+    background-color: rgb(243, 243, 243); }
+
+--> 
+
+<!--
+            <h3>Imagens Responsivas Semânticas</h3> 
+
+            <h4>1 - Alternância de Resolução</h4> 
+
+            <h5>1.1 - 1ª Maneira: Tamanhos e Resoluções Diferentes</h5> 
+
+
+
+            <h5>1.2 - 2ª Maneira: Mesmo Tamanho, Resoluções Diferentes</h5>
+
+
+
+            <h4>2 - Direção de Arte</h4>
+
+            <h5>2.1 - Direção de Arte Junto com Alternância de Resolução de Mesmo Tamanho, mas Resoluções Diferentes</h5>
+
+
+
+            <h5>2.2 - Usando Formatos de Imagem Modernos</h5>
+
+
+
+            <h3>Imagens Responsivas Decorativas</h3>
+
+-->
+
+<!--
+    ──────────────────────────────────────────────────────
+    TODO: My Framework
+    ────────────────────────────────────────────────────── 
+
+    ────────────────────────────
+    > Classes
+    ────────────────────────────
+
+    ────────────────────────────
+    >> Text
+    ────────────────────────────
+
+    - font_size
+    - font_monospace
+    - font_small
+    - font_smaller
+    - text_container
+    - highlight
+    - highlight_menu
+    - spaced_items
+    - list_index
+    - success
+    - attention
+    - fail
+    - danger
+
+    ────────────────────────────
+    >> Layout Sections
+    ────────────────────────────
+
+    - central
+    - nav_expanded_subOptions_h
+    - nav_subOptions_textBelow
+    - nav_compact_subOptions_textBelow
+    - nav_expanded_subOptions_textBelow
+
+    ────────────────────────────
+    >> Multimedia
+    ────────────────────────────
+
+    - textImg
+    - textImg_size (Esta classe deve ser usada no lugar de 'textImg' quando a img já estiver sendo 
+                                alinhada verticalmente por algum outro fator, como p. ex., o flexbox.)
+
+    ────────────────────────────
+    >> Tables
+    ────────────────────────────
+
+    - table_style_2
+    - table_style_3
+    - table_style_4
+
+    ────────────────────────────
+    >> Forms
+    ────────────────────────────
+
+    - textarea_1l
+    ...
+    - textarea_30l
+
+    ────────────────────────────
+    >> Others
+    ────────────────────────────
+
+    - lb
+    ...
+    - lb70
+    - offset
+    - center (não funciona em cards e posters)
+    - line
+    - hidden
+    - button_height_small
+    - cursor_pointer
+
+    ────────────────────────────
+    >> Components
+    ────────────────────────────
+
+    - outdoor
+    - gallery
+    - slider
+
+    - choice_h
+      └ noLabel
+      └ on
+      └ disabled
+
+    - choice_v
+      └ noLabel
+      └ on
+      └ disabled
+
+    - choice_d
+      └ noLabel
+      └ disabled
+
+    - switch
+      └ on
+      └ inverted
+      └ disabled
+
+    - card
+      └ h1
+      └ h2
+
+    - poster
+
+    - group (to cards and posters)
+      └ c_2
+       ...
+      └ c_12
+    
+    ────────────────────────────
+    > Functions
+    ────────────────────────────
+
+    - lightbox(text, image, width)
+    - lightbox2(text, image, width) (round the corners of the image)
+    
+    ────────────────────────────
+    > Browsers Tests
+    ────────────────────────────
+
+    ────────────────────────────
+    >> Test 1
+    ────────────────────────────
+
+    Test date: 15/August/2021
+    Data date: July/2021
+
+    Desktop (42%):
+    
+    - Chrome (70%) <- OK!
+    - Safari (10%) <- OK!
+    - Edge (8%) <- OK!
+    - Firefox (8%) <- OK!
+
+    Tablet (3%):
+    
+    - Chrome (45%)
+    - Safari (40%)
+    - Android (12%)
+
+    Smartphone (56%):
+    
+    - Chrome (64%) <- OK!
+    - Safari (24%) <- OK!
+    - Samsung Internet (6%)
+
+-->
