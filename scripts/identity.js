@@ -130,6 +130,26 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
+<li><a href="#">Link 2</a><div><ul></ul></div></li>
+
+<li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
+</ul>
+`
+
+/*
+<ul>
+<li><a onclick="nav_menu_options(this)">Link 1</a>
+
+    <div>
+        <ul>
+            <li><a href="#">Link 1.1</a></li>
+            <li><a href="#">Link 1.2</a></li>
+            <li><a href="#">Link 1.3</a></li>
+        </ul>
+    </div>
+
+</li> 
+
 <li><a onclick="nav_menu_options(this)">Link 2</a>
 
     <div>
@@ -208,7 +228,7 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a href="page.html">P</a><div><ul></ul></div></li>
 <li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
-`
+*/
 
 /*  
 ────────────────────────────
