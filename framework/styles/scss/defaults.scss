@@ -37,7 +37,7 @@ $color_theme: hsl(193, 100%, 50%);
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
-$color_text_clear: hsl(0, 0%, 68%);
+$color_text_clear: hsl(0, 0%, 68%); 
 $color_text_menu: white; 
 $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
@@ -865,6 +865,10 @@ TODO:        >> Expanded
 
 @media (min-width: $nav_expand) and (max-height: $screen_small_widthLimit) {
 
+    .header-content {
+        max-width: none;
+    }
+
     .header-nav {
         left: 8px; right: 8px;
     }
@@ -1642,8 +1646,7 @@ img.outdoor, video.outdoor {
 @media (min-width: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor {
-        //max-width: calc(100% - (2 * #{$margin_horizontal}) );
-        max-height: 100vh;
+        max-width: calc(100% - (2 * #{$margin_horizontal}) );
         border-radius: $border_radius_big; 
     }
 }
@@ -1677,8 +1680,8 @@ figure.outdoor img {
 @media (max-height: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor, figure.outdoor img { 
-        //max-height: 100vh;
-        max-height: calc(100vh - #{$button_height}) ;
+        max-height: 100vh;
+        //max-height: calc(100vh - #{$button_height}) ;
     }
 }
 

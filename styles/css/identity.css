@@ -43,8 +43,6 @@ TODO: Seções De Layout
 @media (min-width: 501px) {
   .presentation {
     display: flow-root;
-    margin-left: 20px;
-    margin-right: 20px;
   }
   .presentation video {
     max-width: 40%;

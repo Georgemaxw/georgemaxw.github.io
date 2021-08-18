@@ -159,8 +159,6 @@ TODO: Seções De Layout
     @media (min-width: $screen_small_widthLimit) {
 
         display: flow-root;
-        margin-left: $margin_horizontal;
-        margin-right: $margin_horizontal;
 
         video {
             max-width: 40%;
@@ -175,10 +173,10 @@ TODO: Seções De Layout
             clear: both;
         }
 
-        p:nth-last-of-Type(1) {
+        p:nth-last-of-Type(1) {  
             margin-bottom: 0;
-        }
-    }
+        } 
+    } 
 }
 
 
