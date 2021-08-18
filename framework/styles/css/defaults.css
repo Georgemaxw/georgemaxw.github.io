@@ -2098,6 +2098,12 @@ figure.center {
   height: 40px;
 }
 
+@media (min-width: 501px) {
+  .border_radius_big {
+    border-radius: 40px;
+  }
+}
+
 .cursor_pointer {
   cursor: pointer;
 }
