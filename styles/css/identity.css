@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*  
 ──────────────────────────────────────────────────────
-gmes-identity.css
+gmes-identity.css  
 ────────────────────────────────────────────────────── */
 /* 
 ──────────────────────────────────────────────────────
@@ -27,49 +27,151 @@ TODO: Framework - Classes JS
   overflow: hidden;
 }
 
-/*  
+/* 
 ──────────────────────────────────────────────────────
-TODO: Syntaxes
+TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
-sc1 {
-  color: red;
+.wide-center-column {
+  max-width: 100%;
+  /* 1099px */
 }
 
-sc2 {
-  color: blue;
+.presentation video {
+  width: 100%;
 }
 
-sc3 {
-  color: green;
+@media (min-width: 501px) {
+  .presentation {
+    display: flow-root;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .presentation video {
+    max-width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 16rem;
+    float: left;
+    border-radius: 20px;
+  }
+  .presentation p:nth-of-Type(2) {
+    clear: both;
+  }
 }
 
-sc4 {
-  color: purple;
-}
-
-/*  
+/* 
 ──────────────────────────────────────────────────────
-TODO: Display
+TODO: Download Page
 ────────────────────────────────────────────────────── */
-.display {
-  display: inline-block;
-  border: 6px ridge #d4d4d4;
-  min-width: 34px;
-  min-height: 40px;
-  border-radius: 10px;
-  padding-right: 7px;
-  color: white;
-  background: #5e5e5e;
+.download a {
+  display: block;
+  width: 180px;
+  margin: auto;
 }
 
-/*  
+.download a + a {
+  margin-top: 15rem;
+}
+
+/* 
 ──────────────────────────────────────────────────────
-TODO: Choice Examples
+TODO: Types Table
 ────────────────────────────────────────────────────── */
-.choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
+.table-box {
+  height: calc(100vh - 195px);
+  margin: auto;
+  margin-bottom: 63px;
+  border: 2px solid #00c8ff;
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  overflow: auto;
+}
+
+.types-table {
+  margin: 0;
+}
+
+.types-table tr:nth-of-type(1) {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 200, 255, 0);
+}
+
+.types-table tr th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  outline: 1px solid #00c8ff;
+}
+
+.types-table tr:nth-of-type(1) td {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  outline: 1px solid #00c8ff;
+}
+
+.types-table tr td:nth-of-type(1) {
+  border-left: 0;
+}
+
+.types-table tr td {
+  border-left: 1px solid #d9d9d9;
+}
+
+.types-table tr {
+  border: 0;
+}
+
+.types-table tr td {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.types-table tr:nth-of-type(1) td {
+  border-bottom: 0;
+}
+
+.types-table tr:nth-last-of-type(1) td {
+  border-bottom: 1px solid #00c8ff;
+}
+
+.types-table .type-icon {
+  width: 45px;
+}
+
+.types-table th, .types-table td {
+  line-height: 0px;
+}
+
+.show-or-hide-plasma {
   display: none;
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
-  font-size: 19rem;
+.types-table .effect-icon {
+  width: 36px;
+}
+
+@media (pointer: coarse), (pointer: none) {
+  .table-box {
+    height: 100%;
+    margin-bottom: 38px;
+    border-bottom: 0;
+  }
+}
+
+@media (pointer: coarse), (pointer: none) {
+  .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
+    position: static;
+  }
+  .types-table .type-icon {
+    width: 24px;
+  }
+  .types-table .effect-icon {
+    width: 20px;
+  }
 }

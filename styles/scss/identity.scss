@@ -1,6 +1,6 @@
 /*  
 ──────────────────────────────────────────────────────
-gmes-identity.css
+gmes-identity.css  
 ────────────────────────────────────────────────────── */
 
 /* 
@@ -140,47 +140,165 @@ TODO: Framework - Classes JS
     overflow: hidden;
 }
 
-/*  
+/* 
 ──────────────────────────────────────────────────────
-TODO: Syntaxes
+TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
 
-sc1 { color: red; }
-sc2 { color: blue; }
-sc3 { color: green; }
-sc4 { color: purple; }
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Display
-────────────────────────────────────────────────────── */
-
-.display {
-    display: inline-block; 
-    border: 6px ridge hsl(0, 0%, 83%); 
-    min-width: 34px; 
-    min-height: 40px;
-    border-radius: 10px; 
-    padding-right: 7px; 
-    color: white; 
-    background: hsl(0, 0%, 37%);
+.wide-center-column {
+    max-width: 100%; /* 1099px */
 }
 
-/*  
-──────────────────────────────────────────────────────
-TODO: Choice Examples
-────────────────────────────────────────────────────── */
+.presentation {
 
-$font_size: 19rem; 
+    video {
+        width: 100%;
+    }
 
-.choice_example_1, .choice_example_2, .choice_example_3 {
+    @media (min-width: $screen_small_widthLimit) {
 
-    > :not(:nth-child(1)) {
-        display: none;
+        display: flow-root;
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
+
+        video {
+            max-width: 40%;
+            margin-left: $margin_horizontal;
+            margin-right: $margin_horizontal;
+            margin-bottom: $margin_vertical;
+            float: left;
+            border-radius: $border_radius_default;
+        }
+
+        p:nth-of-Type(2) {
+            clear: both;
+        }
     }
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
 
-    font-size: $font_size; 
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Download Page
+────────────────────────────────────────────────────── */
+
+.download a {
+    display: block;
+    width: 180px;
+    margin: auto;
+}
+
+.download a + a {
+    margin-top: 15rem;
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Types Table
+────────────────────────────────────────────────────── */
+ 
+.table-box {
+    height: calc(100vh - 195px);
+    margin: auto;
+    margin-bottom: 63px;
+    border: 2px solid $color_theme;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    overflow: auto;
+}
+
+.types-table {
+    margin: 0;
+}
+
+.types-table tr:nth-of-type(1) {
+    position: sticky;
+    top: 0;
+    left: 0;
+   z-index: 1;
+   border-bottom: 1px solid hsla(193,100%,50%, 0%);
+}
+
+.types-table tr th {
+    position: sticky;
+    top: 0;
+    left: 0;
+   background-color: white; 
+   //background-color: hsl(193,100%,97%);
+   outline: 1px solid $color_theme;
+}
+
+.types-table tr:nth-of-type(1) td {
+    position: sticky;
+    top: 0;
+    left: 0;
+   z-index: 1;
+   background-color: white;
+   //background-color: hsl(193,100%,97%);
+   outline: 1px solid $color_theme;
+}
+
+.types-table tr td:nth-of-type(1) {
+    border-left: 0;
+}
+
+.types-table tr td {
+    border-left: 1px solid hsl(0, 0%, 85%);
+}
+
+.types-table tr {
+    border: 0;
+}
+
+.types-table tr td {
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.types-table tr:nth-of-type(1) td {
+    border-bottom: 0;
+}
+
+.types-table tr:nth-last-of-type(1) td {
+    border-bottom: 1px solid $color_theme;
+}
+
+.types-table .type-icon {
+    width: 45px; // 48px 
+}
+
+.types-table th, .types-table td {
+    line-height: 0px;
+}
+
+.show-or-hide-plasma {
+    display: none;
+}
+
+.types-table .effect-icon {
+    width: 36px;
+}
+
+@media (pointer: coarse), (pointer: none) {
+
+    .table-box {
+        height: 100%; // Esta linha remove a barra vertical em dispositivos touch screen.
+        margin-bottom: 38px;
+        border-bottom: 0;
+    }
+}
+
+@media (pointer: coarse), (pointer: none) { // Ganbiarra necessária, pois os navegadores mobile n dão suporte à 'position: sticky'.
+
+    .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
+        position: static;  
+    }
+
+    .types-table .type-icon {
+        width: 24px;
+    }
+
+    .types-table .effect-icon {
+        width: 20px;
+    }
 }
