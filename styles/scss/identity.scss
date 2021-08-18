@@ -202,14 +202,32 @@ TODO: Slider
 TODO: Download Page
 ────────────────────────────────────────────────────── */
 
-.download a {
-    display: block;
-    width: 180px;
-    margin: auto;
-}
+.download {
 
-.download a + a {
-    margin-top: 15rem;
+    .demo {
+
+        p {
+            margin-bottom: 0;
+        }
+
+        div {
+            text-align: center;
+
+            button {
+                margin: 0;
+                font-size: 21px;
+            }
+        }
+    }
+
+    .stores_aligh {
+
+        text-align: center; 
+        
+        img {
+            width: 180px;
+        }
+    }
 }
 
 /* 

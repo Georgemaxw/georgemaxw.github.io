@@ -121,6 +121,8 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="index.html">Home</a><div><ul></ul></div></li>
 
+<li><a href="news.html">News</a><div><ul></ul></div></li>
+
 <li><a onclick="nav_menu_options(this)">Gameplay</a>
 
     <div>
