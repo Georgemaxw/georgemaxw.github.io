@@ -36,15 +36,15 @@ TODO: Seções De Layout
   /* 1099px */
 }
 
-.presentation video {
+.presentation_float video {
   width: 100%;
 }
 
 @media (min-width: 501px) {
-  .presentation {
+  .presentation_float {
     display: flow-root;
   }
-  .presentation video {
+  .presentation_float video {
     max-width: 40%;
     margin-left: 20px;
     margin-right: 20px;
@@ -52,11 +52,26 @@ TODO: Seções De Layout
     float: left;
     border-radius: 20px;
   }
-  .presentation p:nth-of-Type(2) {
+  .presentation_float p:nth-of-Type(2) {
     clear: both;
   }
-  .presentation p:nth-last-of-Type(1) {
+  .presentation_float p:nth-last-of-Type(1) {
     margin-bottom: 0;
+  }
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Slider
+────────────────────────────────────────────────────── */
+.slider {
+  border-top: 1px solid #00c8ff;
+  border-bottom: 1px solid #00c8ff;
+}
+
+@media (min-width: 501px) {
+  .slider {
+    border: 1px solid #00c8ff;
   }
 }
 

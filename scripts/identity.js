@@ -118,7 +118,10 @@ TODO:    >  Nav - Menu - HTML
 document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
-<li><a onclick="nav_menu_options(this)">Link 1</a>
+
+<li><a href="index.html">Home</a><div><ul></ul></div></li>
+
+<li><a onclick="nav_menu_options(this)">Gameplay</a>
 
     <div>
         <ul>
@@ -130,7 +133,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<li><a href="#">Link 2</a><div><ul></ul></div></li>
+<li><a href="download.html">Download</a><div><ul></ul></div></li>
 
 <li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>

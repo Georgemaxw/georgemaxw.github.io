@@ -152,7 +152,7 @@ TODO: Seções De Layout
     max-width: 100%; /* 1099px */
 }
 
-.presentation {
+.presentation_float {
 
     video {
         width: 100%;
@@ -181,7 +181,21 @@ TODO: Seções De Layout
     } 
 }
 
+/* 
+──────────────────────────────────────────────────────
+TODO: Slider
+────────────────────────────────────────────────────── */
 
+.slider {
+
+    border-top: 1px solid $color_theme;
+    border-bottom: 1px solid $color_theme;
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        border: 1px solid $color_theme;
+    }
+}
 
 /* 
 ──────────────────────────────────────────────────────
