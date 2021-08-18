@@ -57,6 +57,9 @@ TODO: Seções De Layout
   .presentation p:nth-of-Type(2) {
     clear: both;
   }
+  .presentation p:nth-last-of-Type(1) {
+    margin-bottom: 0;
+  }
 }
 
 /* 

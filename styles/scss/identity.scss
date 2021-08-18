@@ -173,6 +173,10 @@ TODO: Seções De Layout
         p:nth-of-Type(2) {
             clear: both;
         }
+
+        p:nth-last-of-Type(1) {
+            margin-bottom: 0;
+        }
     }
 }
 
