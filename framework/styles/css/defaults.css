@@ -2193,6 +2193,34 @@ figure.center {
     }
 }
 */
+.button_hide_container {
+  display: none;
+  position: relative;
+  margin-top: calc((calc(2 * 16rem))/2);
+  margin-bottom: 16rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.button_hide_container .button_hide {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: calc((-1 * calc(2 * 16rem))/2);
+  right: 4px;
+  cursor: pointer;
+  width: calc(2 * 16rem);
+  height: calc(2 * 16rem);
+  border-radius: 50%;
+  background: url(../../images/icons/button_hide.png) center/100% 100%;
+}
+
+.button_hide_container > :nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: calc((calc(2 * 16rem))/2);
+}
+
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes

@@ -214,3 +214,33 @@ function lightbox_close(arg) {
 }
 
 } 
+
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Button Hide
+────────────────────────────────────────────────────── */
+
+var all_button_hide = document.querySelectorAll('.button_hide')
+
+for(var i = 0; i < all_button_hide.length; i++) {
+
+    all_button_hide[i].setAttribute('onclick', 'button_hide(this)')
+}
+
+function button_hide(arg) {
+
+    localStorage.setItem(arg.parentNode.id, arg.parentNode.id)
+    
+    arg.parentNode.style = 'display: none'
+} 
+
+//Show alll no clicked:
+
+for(var i = 0; i < all_button_hide.length; i++) {
+
+    if(all_button_hide[i].parentNode.id !== localStorage.getItem(all_button_hide[i].parentNode.id)) {
+
+        all_button_hide[i].parentNode.style = 'display: block' 
+    }
+} 

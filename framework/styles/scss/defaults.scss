@@ -18,6 +18,7 @@ $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
+$button_height_smaller: calc(2 * #{$margin_vertical});
 $table_border1_width: 1px;
 $table_border2_width: 1px;
 $border_radius_default: 20px;
@@ -115,7 +116,8 @@ $bg_switch_on: hsl(115, 100%, 66%);
 $bg_switch_check: hsl(0, 0%, 100%); 
 $bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%, $color_theme;
 $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
-$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7); 
+$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
+$bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -1625,6 +1627,41 @@ figure.center {
     }
 }
 */
+
+
+.button_hide_container {
+    
+    display: none;
+    position: relative;
+    margin-top: calc((#{$button_height_smaller})/2); 
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+
+    .button_hide {
+
+        display: inline-block;
+        content: "";
+        position: absolute; 
+        top: calc((-1 * #{$button_height_smaller})/2);
+        right: 4px;
+        cursor: pointer;
+
+        width: $button_height_smaller;  
+        height: $button_height_smaller;
+        border-radius: 50%;
+        background: $bg_button_hide; 
+        //box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button, inset 3px 3px 5px 0px hsla(0, 0%, 100%, 0.5), inset -2px -3px 5px 3px hsla(0, 0%, 0%, 0.4);
+        //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
+    }
+ 
+    > :nth-child(2) { 
+        
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
+        padding-right: calc((#{$button_height_smaller})/2);
+    }
+}
 
 /*
 ──────────────────────────────────────────────────────
