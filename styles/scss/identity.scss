@@ -20,7 +20,7 @@ $button_height: 48px;
 $button_height_small: 40px;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
-$border_radius_default: 20px;
+$border_radius_default: 20px;  
 $border_radius_big: 40px;
  
 /* ------ Breakpoints ------ */ 
@@ -31,10 +31,10 @@ $screen_small_widthLimit: 501px; // Largura máxima de um celular.
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
 
-/* ------ Colors And Backgrounds ------ */
+/* ------ Colors And Backgrounds ------ */ 
 
 $color_theme: hsl(193, 100%, 50%); 
-$color_theme_clear: hsla(193, 100%, 98%, 1); 
+$color_theme_clear: hsla(193, 100%, 98%, 1);
 
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%); 

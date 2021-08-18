@@ -26,7 +26,7 @@ $border_radius_big: 40px;
 /* ------ Breakpoints ------ */ 
 
 $screen_small_widthLimit: 501px; // Largura máxima de um celular.
-/* $screen_medium_widthLimit: 1000px; */ // Largura mínima de um PC.
+/*$screen_medium_widthLimit: 1000px;  */ // Largura mínima de um PC.
 
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
@@ -166,17 +166,21 @@ TODO: Margins
 
 .offset.choice_h { 
     display: inline-flex;
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 }
 
 .offset.choice_v, .offset.choice_d { 
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 }
 
 %margins {
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
-    @extend .offset; 
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
+    // @extend .offset; 
 }
 
 /*  
@@ -211,7 +215,8 @@ a {
         font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
-        @extend .offset;
+        margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
         text-align: center; 
         // color: $color_theme;
         background: $color_text_hx;
@@ -228,7 +233,8 @@ a {
         font-size: 20rem;
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;
-        @extend .offset;
+        margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
         text-align: center; 
         font-weight: bold;
         // color: $color_theme;
@@ -322,7 +328,8 @@ code {
 }
 
 pre {
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
     font-family: $font_monospace;
 }
 
@@ -1242,7 +1249,8 @@ fieldset {
     border-width: 0;
     padding: 0;
     margin: 0;
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 
     strong {
         text-decoration: none;
@@ -1483,7 +1491,8 @@ hr {
     background: $color_theme;
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 }
 
 @media (min-width: $hr_stop) {
@@ -1579,6 +1588,40 @@ figure.center {
     cursor: pointer;
 }
 
+.screen_small {
+    
+    @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_small_portrait {
+    
+    @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_small_landscape  {
+    
+    @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+/*
+.screen_medium {
+
+    @media (min-width: $screen_medium_widthLimit) and (min-height: $screen_medium_widthLimit)  {
+
+        display: none !important;
+    }
+}
+*/
+
 /*
 ──────────────────────────────────────────────────────
 TODO: Componentes
@@ -1599,12 +1642,9 @@ img.outdoor, video.outdoor {
 @media (min-width: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor {
-        max-width: calc(100% - (2 * #{$margin_horizontal}) );
-    }
-    
-    img.outdoor, video.outdoor {
-        border-radius: $border_radius_big;
-        // box-shadow: 6px 6px 24px -15px black; 
+        //max-width: calc(100% - (2 * #{$margin_horizontal}) );
+        max-height: 100vh;
+        border-radius: $border_radius_big; 
     }
 }
 
@@ -2195,7 +2235,7 @@ TODO:        >> Desabilitado
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Switchs
+TODO:    > Switchs
 ────────────────────────────────────────────────────── */
 
 .switch {
@@ -2210,7 +2250,8 @@ TODO: Switchs
 
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
-    @extend .offset; 
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
     cursor: pointer;
 
     > :nth-child(1) {
@@ -2592,12 +2633,12 @@ TODO: Switchs
       
 /*
 ──────────────────────────────────────────────────────
-TODO: Cards & Posters
+TODO:    > Cards & Posters
 ────────────────────────────────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:    > Cards
+TODO:        >> Cards
 ──────────────────────────── */
 
 .card {
@@ -2699,7 +2740,7 @@ TODO:    > Cards
  
 /*  
 ────────────────────────────
-TODO:    > Posters
+TODO:        >> Posters
 ──────────────────────────── */
 
 .poster {
@@ -2751,7 +2792,7 @@ TODO:    > Posters
 }
 /*  
 ────────────────────────────
-TODO:    > Groups
+TODO:        >> Groups
 ──────────────────────────── */
 
 .group {
@@ -2793,7 +2834,7 @@ TODO:    > Groups
 
 /*
 ──────────────────────────────────────────────────────
-TODO: Lightbox
+TODO:    > Lightbox
 ────────────────────────────────────────────────────── */
 
 .lightbox {
