@@ -62,6 +62,37 @@ TODO: Seções De Layout
 
 /* 
 ──────────────────────────────────────────────────────
+TODO: Others
+────────────────────────────────────────────────────── */
+.signs_organized {
+  width: max-content;
+  -moz-width: fit-content;
+  width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list_featured {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.list_featured li > div {
+  font-size: 19rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.list_featured li + li {
+  border-top: 1px solid #00c8ff;
+  margin-top: calc(0.5 * 16rem);
+  padding-top: calc(0.5 * 16rem);
+}
+
+/* 
+──────────────────────────────────────────────────────
 TODO: Slider
 ────────────────────────────────────────────────────── */
 .slider {
