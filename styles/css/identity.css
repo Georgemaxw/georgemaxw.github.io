@@ -70,6 +70,7 @@ TODO: Others
   width: fit-content;
   /* <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  max-width: calc(100% - (2 * 20px));
   margin-left: auto;
   margin-right: auto;
 }
