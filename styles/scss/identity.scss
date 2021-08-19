@@ -235,21 +235,26 @@ TODO: Download Page
 TODO: Types Table
 ────────────────────────────────────────────────────── */
  
-.table-box {
-    height: calc(100vh - 195px);
+.table_box {
+    max-height: calc(100vh - #{$button_height} - (2 * #{$margin_vertical}));
     margin: auto;
-    margin-bottom: 63px;
+    //margin-bottom: 63px;
     border: 2px solid $color_theme;
     border-radius: 0;
     border-top-left-radius: 20px;
     overflow: auto;
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        max-width: calc(100% - (2 * #{$margin_horizontal}));
+    }
 }
 
-.types-table {
+.types_table {
     margin: 0;
 }
 
-.types-table tr:nth-of-type(1) {
+.types_table tr:nth-of-type(1) {
     position: sticky;
     top: 0;
     left: 0;
@@ -257,54 +262,54 @@ TODO: Types Table
    border-bottom: 1px solid hsla(193,100%,50%, 0%);
 }
 
-.types-table tr th {
+.types_table tr th {
     position: sticky;
     top: 0;
     left: 0;
-   background-color: white; 
-   //background-color: hsl(193,100%,97%);
+   background: white; 
+   background: hsl(193,100%,98%);
    outline: 1px solid $color_theme;
 }
 
-.types-table tr:nth-of-type(1) td {
+.types_table tr:nth-of-type(1) td {
     position: sticky;
     top: 0;
     left: 0;
    z-index: 1;
-   background-color: white;
-   //background-color: hsl(193,100%,97%);
+   background: white;
+   background: hsl(193,100%,98%);
    outline: 1px solid $color_theme;
 }
 
-.types-table tr td:nth-of-type(1) {
+.types_table tr td:nth-of-type(1) {
     border-left: 0;
 }
 
-.types-table tr td {
+.types_table tr td {
     border-left: 1px solid hsl(0, 0%, 85%);
 }
 
-.types-table tr {
+.types_table tr {
     border: 0;
 }
 
-.types-table tr td {
+.types_table tr td {
     border-bottom: 1px solid hsl(0, 0%, 85%);
 }
 
-.types-table tr:nth-of-type(1) td {
+.types_table tr:nth-of-type(1) td {
     border-bottom: 0;
 }
 
-.types-table tr:nth-last-of-type(1) td {
+.types_table tr:nth-last-of-type(1) td {
     border-bottom: 1px solid $color_theme;
 }
 
-.types-table .type-icon {
-    width: 45px; // 48px 
+.types_table .type_icon {
+    width: 37px; // 48px 
 }
 
-.types-table th, .types-table td {
+.types_table th, .types_table td {
     line-height: 0px;
 }
 
@@ -312,30 +317,32 @@ TODO: Types Table
     display: none;
 }
 
-.types-table .effect-icon {
-    width: 36px;
+.types_table .effect_icon {
+    width: 28px;
 }
 
 @media (pointer: coarse), (pointer: none) {
 
-    .table-box {
+    .table_box {
         height: 100%; // Esta linha remove a barra vertical em dispositivos touch screen.
         margin-bottom: 38px;
         border-bottom: 0;
     }
 }
 
+/*
 @media (pointer: coarse), (pointer: none) { // Ganbiarra necessária, pois os navegadores mobile n dão suporte à 'position: sticky'.
 
-    .types-table tr:nth-of-type(1), .types-table tr th, .types-table tr:nth-of-type(1) td {
+    .types_table tr:nth-of-type(1), .types_table tr th, .types_table tr:nth-of-type(1) td {
         position: static;  
     }
 
-    .types-table .type-icon {
+    .types_table .type_icon {
         width: 24px;
     }
 
-    .types-table .effect-icon {
+    .types_table .effect_icon {
         width: 20px;
     }
 }
+*/

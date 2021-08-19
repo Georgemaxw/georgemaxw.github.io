@@ -127,9 +127,9 @@ document.querySelector('.nav-menu').innerHTML = `
 
     <div>
         <ul>
-            <li><a href="#">Link 1.1</a></li>
-            <li><a href="#">Link 1.2</a></li>
-            <li><a href="#">Link 1.3</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Characters</a></li>
+            <li><a href="types.html">Types</a></li>
         </ul>
     </div>
 
