@@ -110,13 +110,13 @@ TODO: Others
 TODO: Slider
 ────────────────────────────────────────────────────── */
 .slider {
-  border-top: 1px solid #00c8ff;
-  border-bottom: 1px solid #00c8ff;
+  border-top: 2px solid #00c8ff;
+  border-bottom: 2px solid #00c8ff;
 }
 
 @media (min-width: 501px) {
   .slider {
-    border: 1px solid #00c8ff;
+    border: 2px solid #00c8ff;
   }
 }
 

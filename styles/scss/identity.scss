@@ -237,12 +237,12 @@ TODO: Slider
 
 .slider {
 
-    border-top: 1px solid $color_theme;
-    border-bottom: 1px solid $color_theme;
+    border-top: 2px solid $color_theme;
+    border-bottom: 2px solid $color_theme;
 
     @media (min-width: $screen_small_widthLimit) {
 
-        border: 1px solid $color_theme;
+        border: 2px solid $color_theme;
     }
 }
 
