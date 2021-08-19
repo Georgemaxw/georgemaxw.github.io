@@ -200,10 +200,17 @@ TODO: Others
     list-style-type: none;
     margin-left: $margin_horizontal;
 
-    li > div {
-        font-size: $font_size;
+    li {
         padding-left: $margin_horizontal;
         padding-right: $margin_horizontal;
+
+        a {
+            color: $color_text;
+        }
+
+        div {
+            font-size: $font_size;
+        }
     }
     
     li + li {
@@ -233,6 +240,16 @@ TODO: Slider
 ──────────────────────────────────────────────────────
 TODO: Download Page
 ────────────────────────────────────────────────────── */
+
+.download_buttons {
+
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+        //margin-bottom: 0;
+    }
+}
 
 .download {
 
@@ -299,7 +316,7 @@ TODO: Types Table
     top: 0;
     left: 0;
    background: white; 
-   background: hsl(193,100%,98%);
+   background: hsl(193,100%,97%);
    outline: 1px solid $color_theme;
 }
 
@@ -309,7 +326,7 @@ TODO: Types Table
     left: 0;
    z-index: 1;
    background: white;
-   background: hsl(193,100%,98%);
+   background: hsl(193,100%,97%);
    outline: 1px solid $color_theme;
 }
 

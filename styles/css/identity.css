@@ -79,10 +79,17 @@ TODO: Others
   margin-left: 20px;
 }
 
-.list_featured li > div {
-  font-size: 19rem;
+.list_featured li {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.list_featured li a {
+  color: black;
+}
+
+.list_featured li div {
+  font-size: 19rem;
 }
 
 .list_featured li + li {
@@ -110,6 +117,11 @@ TODO: Slider
 ──────────────────────────────────────────────────────
 TODO: Download Page
 ────────────────────────────────────────────────────── */
+.download_buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .download .demo div {
   text-align: center;
 }
@@ -163,7 +175,7 @@ TODO: Types Table
   top: 0;
   left: 0;
   background: white;
-  background: #f5fdff;
+  background: #f0fcff;
   outline: 1px solid #00c8ff;
 }
 
@@ -173,7 +185,7 @@ TODO: Types Table
   left: 0;
   z-index: 1;
   background: white;
-  background: #f5fdff;
+  background: #f0fcff;
   outline: 1px solid #00c8ff;
 }
 
