@@ -99,6 +99,12 @@ TODO: Others
   padding-top: calc(0.5 * 16rem);
 }
 
+@media (max-width: 501px), (max-height: 501px) {
+  .screen_not_small {
+    display: none !important;
+  }
+}
+
 /* 
 ──────────────────────────────────────────────────────
 TODO: Slider

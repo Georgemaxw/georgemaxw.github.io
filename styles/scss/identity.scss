@@ -222,6 +222,14 @@ TODO: Others
     }
 }
 
+.screen_not_small {
+
+    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
 /* 
 ──────────────────────────────────────────────────────
 TODO: Slider
