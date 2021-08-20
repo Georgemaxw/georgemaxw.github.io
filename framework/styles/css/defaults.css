@@ -507,7 +507,7 @@ pre {
     font-style: italic;
 }
 */
-.text_container {
+.container_text {
   font-size: 19rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
@@ -516,7 +516,7 @@ pre {
   text-align: justify;
 }
 
-p.text_container {
+p.container_text {
   padding: 5px 13px 5px;
 }
 
@@ -550,9 +550,9 @@ p.text_container {
 .list_index > ul, .list_index > ol {
   width: max-content;
   -moz-width: fit-content;
-  /* <- Declarações necessárias para 
-        garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   width: fit-content;
+  /* <- Declarações necessárias 
+        para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 }
 
 .list_index > ul > li, .list_index > ol > li {
@@ -614,6 +614,30 @@ p.text_container {
   }
 }
 
+.list_featured {
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.list_featured li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.list_featured li a {
+  color: black;
+}
+
+.list_featured li div {
+  font-size: 19rem;
+}
+
+.list_featured li + li {
+  border-top: 1px solid #00c8ff;
+  margin-top: calc(0.5 * 16rem);
+  padding-top: calc(0.5 * 16rem);
+}
+
 .success, .attention, .fail, .danger {
   padding: 2px 8px;
   margin: 16rem 20px;
@@ -664,6 +688,17 @@ p.text_container {
     margin-right: 0;
 }
 */
+.container_organize {
+  width: max-content;
+  -moz-width: fit-content;
+  width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  max-width: calc(100% - (2 * 20px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*  
 ──────────────────────────────────────────────────────
 TODO: Layout Sections
@@ -1104,7 +1139,7 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Multimídia
+TODO: Multimedia
 ────────────────────────────────────────────────────── */
 /*.textImg_evenSize {
     max-width: 18px; 
@@ -1135,7 +1170,7 @@ audio {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Tabelas
+TODO: Tables
 ────────────────────────────────────────────────────── */
 table {
   max-width: calc(100% - 2 * 20px);
@@ -1307,7 +1342,7 @@ table ul, table ol {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Formulários
+TODO: Forms
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
@@ -1495,7 +1530,7 @@ button:disabled {
 
 /*  
 ────────────────────────────
-TODO:    > Efeito De Focus
+TODO:    > Focus Effect
 ──────────────────────────── */
 input:focus:not(input[type="checkbox"]), textarea:focus {
   outline: 0px dotted;
@@ -1522,7 +1557,7 @@ button:focus {
 
 /*  
 ────────────────────────────
-TODO:    > Classes
+TODO:    > Class
 ──────────────────────────── */
 .textarea_1l {
   height: calc(40rem + ( (1 - 1) * 28rem));
@@ -1646,7 +1681,7 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Outros
+TODO: Others
 ────────────────────────────────────────────────────── */
 html {
   background: white;
@@ -2169,19 +2204,19 @@ figure.center {
 }
 
 @media (min-width: 501px) and (min-height: 501px) {
-  .screen_small {
+  .screen_small, .ss {
     display: none !important;
   }
 }
 
 @media (orientation: landscape), (orientation: portrait) and (min-width: 501px) {
-  .screen_small_portrait {
+  .screen_small_portrait, .ssp {
     display: none !important;
   }
 }
 
 @media (orientation: portrait), (orientation: landscape) and (min-height: 501px) {
-  .screen_small_landscape {
+  .screen_small_landscape, .ssl {
     display: none !important;
   }
 }
@@ -2195,6 +2230,24 @@ figure.center {
     }
 }
 */
+@media (max-width: 501px), (max-height: 501px) {
+  .screen_not_small, .sns {
+    display: none !important;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 501px) {
+  .screen_not_small_portrait, .snsp {
+    display: none !important;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 501px) {
+  .screen_not_small_landscape, .snsl {
+    display: none !important;
+  }
+}
+
 .button_hide_container {
   display: none;
   position: relative;
@@ -2225,7 +2278,7 @@ figure.center {
 
 /*
 ──────────────────────────────────────────────────────
-TODO: Componentes
+TODO: Components
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
@@ -2355,9 +2408,9 @@ TODO:    > Choices
   font-size: 0;
   width: max-content;
   -moz-width: fit-content;
-  /* <- Declarações necessárias para 
-    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -2735,7 +2788,7 @@ TODO:        >> No Label
 
 /*  
 ────────────────────────────
-TODO:        >> Desabilitado
+TODO:        >> Disabled
 ──────────────────────────── */
 .choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
   opacity: 0.5;
@@ -2769,9 +2822,9 @@ TODO:    > Switchs
   align-items: center;
   width: max-content;
   -moz-width: fit-content;
-  /* <- Declarações necessárias para 
-    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: 20px;

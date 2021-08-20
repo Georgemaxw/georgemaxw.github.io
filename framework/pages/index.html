@@ -173,12 +173,14 @@
                 <p class="content-justify">Classe: content-justify. Conteúdo genérico de demonstração <img src="../images/exs/landscape.png" alt=" " style="width: 50px;"> para treinamento, ou produção. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ. ABCDE FGHIJ KLMNO PQRST UVWXYZ.</p>
                 -->
 
-                <p class="text_container">Parágrafo com a classe 'text_container'. Conteúdo de amostra.</p>
+                <p class="container_text">Parágrafo com a classe 'container_text'. Conteúdo de amostra.</p>
  
-                <p class="text_container center" style="width: 500px;">Parágrafo com estilo inline 'width: 500px' e com as classes 'text_container' e 'center'.</p>
+                <p class="container_text center" style="width: 250px;">Parágrafo com estilo inline 'width: 250px' e com as classes 'container_text' e 'center'.</p>
+
+                <p class="container_text container_organize">&lt;p> c/ as classes 'container_text' e 'container_organize'.</p>
 
             </div>
-
+ 
             <span>Conteúdo fora da coluna central.</span>
 
             <div style="background-color: lightgray">
@@ -228,6 +230,16 @@
                     <li>Item 2</li>
                 </ul>
                 -->
+
+                <div class="lb3"></div>
+
+                <p>Lista com a classe 'list_featured':</p>
+
+                <ul class="list_featured">
+                    <li>Item da lista</li>
+                    <li><a href=""> Item com &lt;a></a></li>
+                    <li><div>Item com &lt;div></div></li>
+                </ul>
 
                 <div class="lb3"></div>
 
@@ -287,6 +299,8 @@
                 <p class="fail">Parágrafo com a classe 'fail'.</p>
 
                 <p class="danger">Parágrafo com a classe 'danger'.</p>
+
+                <p class="success container_organize">&lt;p> c/ as classes 'success' e 'container_organize'.</p>
 
             </div>
 
@@ -1220,7 +1234,7 @@
 
                 <div class="lb2"></div>
 
-                <div class="choice_example_1 text_container offset">
+                <div class="choice_example_1 container_text offset">
                     <div class="choice_divsExample_1_div_1">Div 1</div>
                     <div class="choice_divsExample_1_div_2">Div 2</div>
                     <div class="choice_divsExample_1_div_3">
@@ -1243,7 +1257,7 @@
 
                 <div class="lb2"></div>
 
-                <div class="choice_example_2 text_container offset">
+                <div class="choice_example_2 container_text offset">
                     <div></div>
                     <div class="choice_divsExample_2_div_1">Div 1</div>
                     <div class="choice_divsExample_2_div_2">Div 2</div>
@@ -2162,23 +2176,7 @@
                 
                 <h2 id="Others">Others</h2> <!-- Lightbox Pop-Ups -->
 
-                <p>O quadrado abaixo possui a classe 'screen_small', logo, ele aparecerá apenas em telas pequenas:</p>
-
-                <div class="screen_small center" style="width: 60px; height: 60px; background: blue;"></div>
-
-                <p>O retângulo abaixo possui a classe 'screen_small_portrait', logo, ele aparecerá apenas em telas pequenas em modo retrato:</p>
-
-                <div class="screen_small_portrait center" style="width: 60px; height: 100px; background: blue;"></div>
-
-                <p>O retângulo abaixo possui a classe 'screen_small_landscape ', logo, ele aparecerá apenas em telas pequenas em modo paisagem:</p>
-
-                <div class="screen_small_landscape  center" style="width: 100px; height: 60px; background: blue;"></div>
-
-                <!-- <p>O quadrado abaixo possui a classe 'screen_medium', logo, ele aparecerá apenas em telas pequenas e médias:</p>
-
-                <div class="screen_medium center" style="width: 70px; height: 70px; background: red;"></div>-->
-
-
+                <p>O botão esconde o elemento com tal 'id', ele não volta nem mesmo se a página for recarregada:</p>
 
                 <div id="d9" class="button_hide_container"> 
                     <div class="button_hide"></div>
@@ -2201,9 +2199,59 @@
 
                 <div class="lb2"></div>
   
+                <h3>Screen</h3>
+
+                <p>O quadrado abaixo possui a classe 'screen_small', logo, ele aparecerá apenas em telas pequenas:</p>
+
+                <div class="screen_small center" style="width: 60px; height: 60px; background: hsl(193, 100%, 50%);"></div>  
+
+                <p>O retângulo abaixo possui a classe 'screen_small_portrait', logo, ele aparecerá apenas em telas pequenas em modo retrato:</p>
+
+                <div class="screen_small_portrait center" style="width: 60px; height: 100px; background: hsl(193, 100%, 50%);"></div>
+
+                <p>O retângulo abaixo possui a classe 'screen_small_landscape ', logo, ele aparecerá apenas em telas pequenas em modo paisagem:</p>
+
+                <div class="screen_small_landscape  center" style="width: 100px; height: 60px; background: hsl(193, 100%, 50%);"></div>
+
+                <p>O quadrado abaixo possui a classe 'screen_pointer', logo, ele aparecerá apenas quando houver ponteiro disponível:</p>
+
+                <!-- <div class="screen_pointer center" style="width: 60px; height: 60px; background: red;"></div>
+
+                <p>O quadrado abaixo possui a classe 'screen_coarse', logo, ele aparecerá apenas em telas sensíveis ao toque:</p>
+
+                <div class="screen_coarse center" style="width: 60px; height: 60px; background: lime;"></div>
+
+                <p>O quadrado abaixo possui a classe 'screen_medium', logo, ele aparecerá apenas em telas pequenas e médias:</p>
+
+                <div class="screen_medium center" style="width: 70px; height: 70px; background: red;"></div>-->
+
+                <h4>not</h4>
+
+                <p>O quadrado abaixo possui a classe 'screen_not_small', logo, ele não aparecerá apenas em telas pequenas:</p>
+
+                <div class="screen_not_small center" style="width: 60px; height: 60px; background: blue;"></div>
+
+                <p>O retângulo abaixo possui a classe 'screen_not_small_portrait', logo, ele não aparecerá apenas em telas pequenas em modo retrato:</p>
+
+                <div class="screen_not_small_portrait center" style="width: 60px; height: 100px; background: blue;"></div>
+
+                <p>O retângulo abaixo possui a classe 'screen_not_small_landscape ', logo, ele não aparecerá apenas em telas pequenas em modo paisagem:</p>
+
+                <div class="screen_not_small_landscape  center" style="width: 100px; height: 60px; background: blue;"></div>
+
+                <!-- <p>O quadrado abaixo possui a classe 'screen_not_pointer', logo, ele aparecerá apenas quando houver ponteiro disponível:</p>
+
+                <div class="screen_not_pointer center" style="width: 60px; height: 60px; background: FireBrick;"></div>
+
+                <p>O quadrado abaixo possui a classe 'screen_not_coarse', logo, ele aparecerá apenas em telas sensíveis ao toque:</p>
+ 
+                <div class="screen_not_coarse center" style="width: 60px; height: 60px; background: green;"></div>-->
+
             </div>
         <div></div>
         </article>
+
+        <div class="lb2"></div>
 
         <hr>
 
@@ -2284,7 +2332,7 @@
 
 <!--
     ──────────────────────────────────────────────────────
-    TODO: My Framework
+    TODO: Framework Codes
     ────────────────────────────────────────────────────── 
 
     ────────────────────────────
@@ -2299,7 +2347,7 @@
     - font_monospace
     - font_small
     - font_smaller
-    - text_container
+    - container_text
     - highlight
     - highlight_menu
     - spaced_items
@@ -2356,11 +2404,14 @@
     - hidden
     - button_height_small
     - border_radius_big
-    - screen_small
-    - screen_small_portrait
-    - screen_small_landscape
-    - button_hide_container and button_hide
+    - button_hide_container (precisa de 'id') and button_hide
     - cursor_pointer
+    - screen_small / ss
+    - screen_small_portrait / ssp
+    - screen_small_landscape / ssl
+    - screen_not_small / sns
+    - screen_not_small_portrait / snsp
+    - screen_not_small_landscape / snsl
 
     ────────────────────────────
     >> Components

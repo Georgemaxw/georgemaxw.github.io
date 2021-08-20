@@ -365,7 +365,7 @@ pre {
 }
 */
 
-.text_container {
+.container_text {
     font-size: $font_size; 
     padding: 8px 13px 9px;
     border: 1px solid $color_border_form;  
@@ -374,7 +374,7 @@ pre {
     text-align: justify;
 }
 
-p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
+p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
     padding: 5px 13px 5px;
 }
 
@@ -412,10 +412,8 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 
     > ul, > ol {
     
-        width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
-        garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-        
-        width: fit-content;
+        width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+        para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
         > li {
             font-weight: bold;
@@ -481,6 +479,31 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     }
 }
 
+.list_featured {
+
+    list-style-type: none;
+    margin-left: $margin_horizontal;
+
+    li {
+        padding-left: $margin_horizontal;
+        padding-right: $margin_horizontal;
+
+        a {
+            color: $color_text;
+        }
+
+        div {
+            font-size: $font_size;
+        }
+    }
+    
+    li + li {
+        border-top: 1px solid $color_theme;
+        margin-top: calc(0.5 * #{$margin_vertical});
+        padding-top: calc(0.5 * #{$margin_vertical});
+    }
+}
+
 .success, .attention, .fail, .danger  {
 
     padding: 2px 8px;
@@ -531,6 +554,18 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     margin-right: 0;
 }
 */
+
+.container_organize {
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    max-width: calc(100% - (2 * #{$margin_horizontal}));
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*  
 ──────────────────────────────────────────────────────
 TODO: Layout Sections
@@ -1024,7 +1059,7 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Multimídia
+TODO: Multimedia
 ────────────────────────────────────────────────────── */
 
 /*.textImg_evenSize {
@@ -1057,7 +1092,7 @@ audio {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Tabelas
+TODO: Tables
 ────────────────────────────────────────────────────── */
 
 table {
@@ -1243,7 +1278,7 @@ table {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Formulários
+TODO: Forms
 ────────────────────────────────────────────────────── */
 
 /*  
@@ -1443,7 +1478,7 @@ button:disabled {
 
 /*  
 ────────────────────────────
-TODO:    > Efeito De Focus
+TODO:    > Focus Effect
 ──────────────────────────── */
 
 input:focus:not(input[type="checkbox"]), textarea:focus {
@@ -1471,7 +1506,7 @@ button:focus {
 
 /*  
 ────────────────────────────
-TODO:    > Classes
+TODO:    > Class
 ──────────────────────────── */
 
 @for $i from 1 through 30 { 
@@ -1482,7 +1517,7 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Outros
+TODO: Others
 ────────────────────────────────────────────────────── */
 
 html {
@@ -1598,7 +1633,9 @@ figure.center {
     cursor: pointer;
 }
 
-.screen_small {
+// ------ Screen ------
+
+.screen_small, .ss {
     
     @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
 
@@ -1606,7 +1643,7 @@ figure.center {
     }
 }
 
-.screen_small_portrait {
+.screen_small_portrait, .ssp {
     
     @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
 
@@ -1614,7 +1651,7 @@ figure.center {
     }
 }
 
-.screen_small_landscape  {
+.screen_small_landscape, .ssl  {
     
     @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
 
@@ -1632,6 +1669,31 @@ figure.center {
 }
 */
 
+.screen_not_small, .sns {
+    
+    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_portrait, .snsp {
+    
+    @media (orientation: portrait) and (max-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_landscape, .snsl  {
+    
+    @media (orientation: landscape) and (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+// ----------------------
 
 .button_hide_container {
     
@@ -1669,7 +1731,7 @@ figure.center {
 
 /*
 ──────────────────────────────────────────────────────
-TODO: Componentes
+TODO: Components
 ────────────────────────────────────────────────────── */
 
 /*  
@@ -1820,10 +1882,8 @@ TODO:    > Choices
     display: inline-block;
     font-size: 0;
 
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
-    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-    
-    width: fit-content;
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     padding: 0;
     margin: 0;
@@ -2251,7 +2311,7 @@ TODO:        >> No Label
 
 /*  
 ────────────────────────────
-TODO:        >> Desabilitado
+TODO:        >> Disabled
 ──────────────────────────── */
 
 .choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
@@ -2287,10 +2347,8 @@ TODO:    > Switchs
     display: flex;
     align-items: center;
 
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
-    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-    
-    width: fit-content;
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
