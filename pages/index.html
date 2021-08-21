@@ -67,9 +67,11 @@
 
                     <h3 class="hidden">Presentation</h3>
 
-                    <img src="../images/game/title_s_s.png" alt=" " class="outdoor screen_small">
+                    <img src="../images/game/title_ss.png" alt=" " class="outdoor screen_small">
 
-                    <img src="../images/game/title_s_n_s.png" alt=" " class="outdoor screen_not_small">
+                    <!--<img src="../images/game/title_sns2.png" alt=" " class="outdoor screen_not_small">-->
+
+                    <img src="../images/game/title_sns.png" alt=" " class="screen_not_small" style="width: 100%;">
 
                     <div class="lb2"></div>
 
@@ -96,12 +98,12 @@
 
                     <h3>Screenshots</h3>
 
-                    <div id="msg_seeBigImages_3" class="button_hide_container screen_small_portrait signs_organized">   
+                    <div id="msg_seeBigImages_3" class="button_hide_container screen_small_portrait container_organize">   
                         <div class="button_hide"></div> 
                         <p class="attention">To see the big images, put the cell phone in landscape mode.</p>
                     </div>
                     
-                    <div id="msg_hideNav_3" class="button_hide_container screen_small_landscape signs_organized">   
+                    <div id="msg_hideNav_3" class="button_hide_container screen_small_landscape container_organize">   
                         <div class="button_hide"></div> 
                         <p class="attention">You can press the last button on the right side of the navigation bar above to hide it.</p>
                     </div>
@@ -132,9 +134,9 @@
                         <tr><th scope="row">Release date</th><td><time datetime="2057-01-26">26 January 2057</time></td></tr>
                         <tr><th scope="row">Platforms</th><td>Windows, MacOS, Linux, Android, iOS</td></tr>
                         <tr><th scope="row">Players</th><td>Up to 4 players</td></tr>
-                        <tr><th scope="row">Genre</th><td>Adventure, Role-Playing</td></tr>
+                        <tr><th scope="row">Genre</th><td>Adventure, <abbr title="Role-Playing Game" onclick="lightbox('Role-Playing Game')">RPG</abbr>, <abbr title="Turn Base Strategy" onclick="lightbox('Turn Base Strategy')">TBS</abbr></td></tr>
                         <!--<tr><th scope="row">Made with</th><td>RPG Maker, Paint S</td></tr>
-                        <tr><th scope="row">Tags</th><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>-->
+                        <tr><th scope="row">Tags</th><td>Comedy, Fantasy, RPG Maker, Retro, Singleplayer, Story Rich, 2D, Pixel Art, JRPG , Cyberpunk</td></tr>--> 
                         <tr><th scope="row">Languages</th><td>English, Português</td></tr>
                         <tr><th scope="row">Controls</th><td>Mouse, Keyboard, Touchscreen</td></tr>
                         <!--<tr><th scope="row">File size</th><td>280.5 MB</td></tr>-->
@@ -147,15 +149,33 @@
 
                 <div class="lb2"></div>
 
-                <!--
-                <p>Free Trial</p>
+                
+                <section>
 
-                <p>Buy Now</p>
+                    <h3>Download</h3>
 
-                <p>Price: $14.99 USD</p>
+                    <div class="download_buttons">
+                        <button>&nbsp;&nbsp;&nbsp;&nbsp;Free Demo&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <!--<button>Download the Free Demo</button>-->
+                        <button>Buy it on Steam</button> 
+                        <!--<button>Buy for $14.99</button>-->
+                    </div>
 
-                <p>Updates</p>
-                -->
+                </section>
+
+                <!--<section>
+
+                    <h3>Updates</h3> 
+
+                    <ul class="list_featured">
+                        <li><div>Item 1 on the list.</div></li>
+                        <li><div>Item 2 on the list.</div></li>
+                        <li><div>Item 3 on the list.</div></li>
+                        <li><div>Item 4 on the list.</div></li>
+                        <li><div>Item 5 on the list.</div></li>
+                    </ul>    
+
+                </section>-->
 
             </div>
             
@@ -172,7 +192,7 @@
         -->
 
     </main>
-
+ 
     <!--
     ──────────────────────────────────────────────────────
     TODO: Footer
@@ -205,170 +225,4 @@
     Configuração Do Aplicativo Textastic:
     Font: Menlo; Font Size: 11 pt 
 
-    .slider:hover { 
-    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
-    padding-top: 40px; padding-bottom: 40px; 
-    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
-    background-color: rgb(243, 243, 243); }
-
 --> 
-
-<!--
-
-    $border_radius_big: 0px;
-
-    ──────────────────────────────────────────────────────
-    TODO: Framework Codes
-    ────────────────────────────────────────────────────── 
-
-    ────────────────────────────
-    > Classes
-    ────────────────────────────
-
-    ────────────────────────────
-    >> Text
-    ────────────────────────────
-
-    - font_size
-    - font_monospace
-    - font_small
-    - font_smaller
-    - text_container
-    - highlight
-    - highlight_menu
-    - spaced_items
-    - list_index
-    - success
-    - attention
-    - fail
-    - danger
-
-    ────────────────────────────
-    >> Layout Sections
-    ────────────────────────────
-
-    - central
-    - nav_expanded_subOptions_h
-    - nav_subOptions_textBelow
-    - nav_compact_subOptions_textBelow
-    - nav_expanded_subOptions_textBelow
-
-    ────────────────────────────
-    >> Multimedia
-    ────────────────────────────
-
-    - textImg
-    - textImg_size (Esta classe deve ser usada no lugar de 'textImg' quando a img já estiver sendo 
-                                alinhada verticalmente por algum outro fator, como p. ex., o flexbox.)
-
-    ────────────────────────────
-    >> Tables
-    ────────────────────────────
-
-    - table_style_2
-    - table_style_3
-    - table_style_4
-
-    ────────────────────────────
-    >> Forms
-    ────────────────────────────
-
-    - textarea_1l
-    ...
-    - textarea_30l
-
-    ────────────────────────────
-    >> Others
-    ────────────────────────────
-
-    - lb
-    ...
-    - lb70
-    - offset
-    - center (não funciona em cards e posters)
-    - line
-    - hidden
-    - button_height_small
-    - border_radius_big
-    - screen_small
-    - screen_small_portrait
-    - screen_small_landscape
-    - button_hide_container (precisa de 'id') and button_hide
-    - cursor_pointer
-
-    ────────────────────────────
-    >> Components
-    ────────────────────────────
-
-    - outdoor
-    - gallery
-    - slider
-
-    - choice_h
-      └ noLabel
-      └ on
-      └ disabled
-
-    - choice_v
-      └ noLabel
-      └ on
-      └ disabled
-
-    - choice_d
-      └ noLabel
-      └ disabled
-
-    - switch
-      └ on
-      └ inverted
-      └ disabled
-
-    - card
-      └ h1
-      └ h2
-
-    - poster
-
-    - group (to cards and posters)
-      └ c_2
-       ...
-      └ c_12
-    
-    ────────────────────────────
-    > Functions
-    ────────────────────────────
-
-    - lightbox(text, image, width)
-    - lightbox2(text, image, width) (round the corners of the image)
-    
-    ────────────────────────────
-    > Browsers Tests
-    ────────────────────────────
-
-    ────────────────────────────
-    >> Test 1
-    ────────────────────────────
-
-    Test date: 15/August/2021
-    Data date: July/2021
-
-    Desktop (42%):
-    
-    - Chrome (70%) <- OK!
-    - Safari (10%) <- OK!
-    - Edge (8%) <- OK!
-    - Firefox (8%) <- OK!
-
-    Tablet (3%):
-    
-    - Chrome (45%)
-    - Safari (40%)
-    - Android (12%)
-
-    Smartphone (56%):
-    
-    - Chrome (64%) <- OK!
-    - Safari (24%) <- OK!
-    - Samsung Internet (6%)
-
--->

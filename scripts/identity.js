@@ -135,7 +135,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<li><a href="download.html">Download</a><div><ul></ul></div></li>
+<!--<li><a href="download.html">Download</a><div><ul></ul></div></li>-->
 
 <li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
@@ -495,7 +495,7 @@ document.querySelector('footer').innerHTML = `
 
 </address> 
 
-<p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
+<p class="copyright">© Copyright 2024 <!--by nobody./-->Tec OP Inc. All rights reversed.</p>
 
     </div>
 `

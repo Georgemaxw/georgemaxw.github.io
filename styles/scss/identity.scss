@@ -34,7 +34,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 
 /* ------ Colors And Backgrounds ------ */ 
 
-$color_theme: hsl(193, 100%, 50%);  
+$color_theme: hsl(193, 100%, 50%); 
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -69,8 +69,8 @@ $color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
 $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
-$color_shadow_footer: hsla(0, 0%, 0%, 0.22);
-$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.07);
+$color_shadow_footer: $color_shadow_headerNav_rounded;
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
 $color_shadow_lightbox: black; 
@@ -190,49 +190,7 @@ html {
 TODO: Others
 ────────────────────────────────────────────────────── */
 
-.signs_organized {
 
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-
-    max-width: calc(100% - (2 * #{$margin_horizontal}));
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.list_featured {
-
-    list-style-type: none;
-    margin-left: $margin_horizontal;
-
-    li {
-        padding-left: $margin_horizontal;
-        padding-right: $margin_horizontal;
-
-        a {
-            color: $color_text;
-        }
-
-        div {
-            font-size: $font_size;
-        }
-    }
-    
-    li + li {
-        border-top: 1px solid $color_theme;
-        margin-top: calc(0.5 * #{$margin_vertical});
-        padding-top: calc(0.5 * #{$margin_vertical});
-    }
-}
-
-.screen_not_small {
-
-    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
-
-        display: none !important;
-    }
-}
 
 /* 
 ──────────────────────────────────────────────────────
@@ -297,8 +255,20 @@ TODO: Download Page
 ──────────────────────────────────────────────────────
 TODO: Types Table
 ────────────────────────────────────────────────────── */
+
+.types_table_msg {
+    @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
+        display: none !important;
+    }
+}
  
 .table_box {
+    display: none;
+
+    @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
+        display: block;
+    }
+ 
     max-height: calc(100vh - #{$button_height} - (2 * #{$margin_vertical}));
     margin: auto;
     //margin-bottom: 63px;

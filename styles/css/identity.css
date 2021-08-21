@@ -64,47 +64,6 @@ TODO: Seções De Layout
 ──────────────────────────────────────────────────────
 TODO: Others
 ────────────────────────────────────────────────────── */
-.signs_organized {
-  width: max-content;
-  -moz-width: fit-content;
-  width: fit-content;
-  /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-  max-width: calc(100% - (2 * 20px));
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.list_featured {
-  list-style-type: none;
-  margin-left: 20px;
-}
-
-.list_featured li {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.list_featured li a {
-  color: black;
-}
-
-.list_featured li div {
-  font-size: 19rem;
-}
-
-.list_featured li + li {
-  border-top: 1px solid #00c8ff;
-  margin-top: calc(0.5 * 16rem);
-  padding-top: calc(0.5 * 16rem);
-}
-
-@media (max-width: 501px), (max-height: 501px) {
-  .screen_not_small {
-    display: none !important;
-  }
-}
-
 /* 
 ──────────────────────────────────────────────────────
 TODO: Slider
@@ -150,13 +109,26 @@ TODO: Download Page
 ──────────────────────────────────────────────────────
 TODO: Types Table
 ────────────────────────────────────────────────────── */
+@media (pointer: fine) and (min-width: 501px) and (min-height: 501px) {
+  .types_table_msg {
+    display: none !important;
+  }
+}
+
 .table_box {
+  display: none;
   max-height: calc(100vh - 48px - (2 * 16rem));
   margin: auto;
   border: 2px solid #00c8ff;
   border-radius: 0;
   border-top-left-radius: 20px;
   overflow: auto;
+}
+
+@media (pointer: fine) and (min-width: 501px) and (min-height: 501px) {
+  .table_box {
+    display: block;
+  }
 }
 
 @media (min-width: 501px) {
