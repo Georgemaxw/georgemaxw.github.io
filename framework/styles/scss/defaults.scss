@@ -35,7 +35,8 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 /* ------ Colors And Backgrounds ------ */ 
 
 // $color_theme: hsl(193, 100%, 50%);
-$color_theme: hsl(201, 100%, 54%);
+$color_theme: hsl(201, 100%, 50%);
+//$color_theme: hsl(240, 100%, 50%);
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
