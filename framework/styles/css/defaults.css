@@ -1091,7 +1091,7 @@ TODO:    > Footer
   padding: 5px;
   border: 2px solid white;
   border-radius: 50%;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.07));
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.12));
 }
 
 @media (max-width: calc(800px + (2 * 20px))) {
