@@ -1,3 +1,5 @@
+//@import '../../framework/styles/scss/defaults.scss';
+
 /*  
 ──────────────────────────────────────────────────────
 gmes-identity.css  
@@ -149,12 +151,8 @@ TODO: Framework - Classes JS
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
 
-html {
+html { 
     //background: url("../../images/bgs/html.png");
-}
-
-.wide-center-column {
-    max-width: 100%; /* 1099px */
 }
 
 .presentation_float {
@@ -280,7 +278,7 @@ TODO: Types Table
 
     @media (min-width: $screen_small_widthLimit) {
 
-        max-width: calc(100% - (2 * #{$margin_horizontal}));
+        max-width: calc(100% - (2 * #{$margin_horizontal}) - 3px);
     }
 }
 
@@ -340,7 +338,7 @@ TODO: Types Table
 }
 
 .types_table .type_icon {
-    width: 37px; // 48px 
+    width: 36.8px; // 48px 
 }
 
 .types_table th, .types_table td {
@@ -379,26 +377,4 @@ TODO: Types Table
         width: 20px;
     }
 }
-*/
-
-
-
-
-
-
-
-
-
-
-
-th {
-    //color: hsl(193, 100%, 50%) !important;
-}
-
-th {
-    //color: hsl(198, 100%, 68%) !important;
-}
-
-th {
-    color: hsl(200, 100%, 62%) !important;
-}
+*/ 

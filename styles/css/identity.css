@@ -31,11 +31,6 @@ TODO: Framework - Classes JS
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
-.wide-center-column {
-  max-width: 100%;
-  /* 1099px */
-}
-
 .presentation_float video {
   width: 100%;
 }
@@ -133,7 +128,7 @@ TODO: Types Table
 
 @media (min-width: 501px) {
   .table_box {
-    max-width: calc(100% - (2 * 20px));
+    max-width: calc(100% - (2 * 20px) - 3px);
   }
 }
 
@@ -193,7 +188,7 @@ TODO: Types Table
 }
 
 .types_table .type_icon {
-  width: 37px;
+  width: 36.8px;
 }
 
 .types_table th, .types_table td {
@@ -232,6 +227,3 @@ TODO: Types Table
     }
 }
 */
-th {
-  color: #3dbeff !important;
-}
