@@ -633,7 +633,7 @@ p.container_text {
 }
 
 .list_featured li + li {
-  border-top: 1px solid #00c8ff;
+  border-top: 1px solid #3dbeff;
   margin-top: calc(0.5 * 16rem);
   padding-top: calc(0.5 * 16rem);
 }
@@ -729,7 +729,7 @@ TODO:    > Header-nav
   right: 0;
   z-index: 1000;
   color: white;
-  background-color: #00c8ff;
+  background-color: #3dbeff;
   background: url(../../images/bgs/header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
@@ -982,7 +982,7 @@ TODO:        >> Expanded
     max-height: calc(100% - (2 * 48px));
     border-radius: 25px;
     margin-top: 48px;
-    background-color: #00c8ff;
+    background-color: #3dbeff;
     background: url(../../images/bgs/nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
     /* li:hover {
@@ -1080,7 +1080,7 @@ TODO:    > Footer
   width: 100%;
   height: 48px;
   border-radius: 50px;
-  background-color: #00c8ff;
+  background-color: #3dbeff;
   background: url(../../images/bgs/footer_icons.png) center/100% 100%;
   padding-top: 2px;
   margin-left: auto;
@@ -1215,22 +1215,20 @@ TODO: Tables
 table {
   max-width: calc(100% - 2 * 20px);
   margin: 16rem auto;
-  border: 1px solid #00c8ff;
+  border: 1px solid #3dbeff;
   border-collapse: collapse;
   caption-side: bottom;
   font-weight: normal;
 }
 
 table th {
-  color: #00c8ff;
-  border: 1px solid #00c8ff;
+  color: #3dbeff;
+  border: 1px solid #3dbeff;
   font-weight: normal;
-}
-
-@media (max-width: 501px), (max-height: 501px) {
-  table th {
-    font-weight: bold;
-  }
+  /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+            
+            font-weight: bold; 
+        }*/
 }
 
 @media (pointer: fine) {
@@ -1278,7 +1276,7 @@ table ul, table ol {
   width: 100%;
   max-width: none;
   border-width: 0;
-  border-bottom: 1px solid #00c8ff;
+  border-bottom: 1px solid #3dbeff;
 }
 
 .table_style_2 tr :nth-child(1) {
@@ -1286,7 +1284,7 @@ table ul, table ol {
 }
 
 .table_style_2 tr:nth-of-type(1) {
-  border-bottom: 1px solid #00c8ff;
+  border-bottom: 1px solid #3dbeff;
 }
 
 .table_style_2 th {
@@ -1351,7 +1349,7 @@ table ul, table ol {
   }
   .table_style_4 th {
     border-width: 0;
-    border-bottom: 1px solid #00c8ff;
+    border-bottom: 1px solid #3dbeff;
     text-align: center;
   }
   .table_style_4 td {
@@ -1577,25 +1575,25 @@ TODO:    > Focus Effect
 ──────────────────────────── */
 input:focus:not(input[type="checkbox"]), textarea:focus {
   outline: 0px dotted;
-  border: 1px solid #00c8ff;
+  border: 1px solid #3dbeff;
 }
 
 input[type="file"]:focus {
-  outline: 1px solid #00c8ff;
+  outline: 1px solid #3dbeff;
 }
 
 input[type="radio"]:focus {
-  outline: 1px solid #00c8ff;
+  outline: 1px solid #3dbeff;
 }
 
 select:focus {
   outline: 0px dotted;
-  border: 1px solid #00c8ff;
+  border: 1px solid #3dbeff;
   /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
 }
 
 button:focus {
-  outline: 2px dotted #00c8ff;
+  outline: 2px dotted #3dbeff;
 }
 
 /*  
@@ -1737,9 +1735,9 @@ body {
 }
 
 hr {
-  border-top: 1px solid #00c8ff;
+  border-top: 1px solid #3dbeff;
   border-bottom: 0;
-  background: #00c8ff;
+  background: #3dbeff;
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: 20px;
@@ -2922,7 +2920,7 @@ TODO:    > Switchs
 }
 
 .switch.on > :nth-child(1) {
-  background: #00c8ff;
+  background: #3dbeff;
   background: #60ff52;
 }
 
@@ -3537,7 +3535,7 @@ TODO:    > Lightbox
   max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
-  background: url(../../images/bgs/lightbox.png) center/100% 100%, #00c8ff;
+  background: url(../../images/bgs/lightbox.png) center/100% 100%, #3dbeff;
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
