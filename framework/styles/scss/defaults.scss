@@ -556,14 +556,14 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 */
 
 .container_organize {
-
+ 
     width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     max-width: calc(100% - (2 * #{$margin_horizontal}));
 
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /*  
@@ -1157,7 +1157,7 @@ table {
         }
     }
 
-    tr:hover {
+    tr:hover {  
 
         @media (pointer: fine) {
             
@@ -1238,12 +1238,16 @@ table {
 .table_style_3 {
     border-width: 0;
 
-    tr:hover {
+    /*tr:hover {
         outline: 1px solid $color_theme;
     }
 
     tr:nth-of-type(1):hover {
         background: $bg_table_tr_hover;
+    }*/
+
+    tr:hover {
+        background: 0; 
     }
 
     tr + tr {

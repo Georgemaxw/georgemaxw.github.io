@@ -1310,14 +1310,17 @@ table ul, table ol {
 
 .table_style_3 {
   border-width: 0;
+  /*tr:hover {
+        outline: 1px solid $color_theme;
+    }
+
+    tr:nth-of-type(1):hover {
+        background: $bg_table_tr_hover;
+    }*/
 }
 
 .table_style_3 tr:hover {
-  outline: 1px solid #00c8ff;
-}
-
-.table_style_3 tr:nth-of-type(1):hover {
-  background: #f5fdff;
+  background: 0;
 }
 
 .table_style_3 tr + tr {
