@@ -1,3 +1,4 @@
+
 /* 
 ──────────────────────────────────────────────────────
 gmes-defaults.css
@@ -38,7 +39,6 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 //$color_theme: hsl(201, 100%, 48%);
 //$color_theme: DodgerBlue;
 $color_theme: DeepSkyBlue;
-//$color_theme: hsl(240, 100%, 50%);
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -98,7 +98,7 @@ $bg_html: white;
 //$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
 $bg_header: url(../../images/bgs/header.png) center /100% 100%;
 $bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%; 
 $bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
 
@@ -935,12 +935,14 @@ TODO:        >> Expanded
         margin-right: 6px; 
     }
 }
+ 
+// Header-nav button invisible:
 
-@media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
-
+@media (min-width: $nav_expand) and (min-height: $screen_small_widthLimit) {
+ 
     .header-nav .nav-menu > ul > li:last-of-type {
         display: none;
-    }
+    } 
 
     .nav-menu > ul > li:nth-last-of-type(2) {
         margin-right: 20px;

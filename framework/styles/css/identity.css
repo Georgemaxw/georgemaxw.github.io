@@ -1,67 +1,234 @@
 @charset "UTF-8";
 /*  
 ──────────────────────────────────────────────────────
-gmes-identity.css
+gmes-identity.css  
 ────────────────────────────────────────────────────── */
 /* 
 ──────────────────────────────────────────────────────
 TODO: Framework - Variables
 ────────────────────────────────────────────────────── */
+/* Padrão: 600-700px. */
+/* Apple: 16px em 320w, e 22px em 736w. */
+/* ------ Breakpoints ------ */
+/*$screen_medium_widthLimit: 1000px;  */
+/* ------ Colors And Backgrounds ------ */
 /*
-(Colocar as variáveis de 'default.scss' do framework 
-aqui quando for usar este arquivo em um projeto.)
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 */
+/* ------ z-index's ------ */
 /*  
 ──────────────────────────────────────────────────────
 TODO: Framework - Classes JS
 ────────────────────────────────────────────────────── */
+.overflow_hidden {
+  overflow: hidden;
+}
+
 /* 
-(Colocar as classes genéricas aplicadas somente via JS de 'default.scss' 
-do framework aqui quando for usar este arquivo em um projeto.)
-*/
-/*  
 ──────────────────────────────────────────────────────
-TODO: Syntaxes
+TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
-sc1 {
-  color: red;
+.wide-center-column {
+  max-width: 100%;
+  /* 1099px */
 }
 
-sc2 {
-  color: blue;
+.presentation_float video {
+  width: 100%;
 }
 
-sc3 {
-  color: green;
+@media (min-width: 501px) {
+  .presentation_float {
+    display: flow-root;
+  }
+  .presentation_float video {
+    max-width: 40%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 16rem;
+    float: left;
+    border-radius: 20px;
+  }
+  .presentation_float p:nth-of-Type(2) {
+    clear: both;
+  }
+  .presentation_float p:nth-last-of-Type(1) {
+    margin-bottom: 0;
+  }
 }
 
-sc4 {
-  color: purple;
-}
-
-/*  
+/* 
 ──────────────────────────────────────────────────────
-TODO: Display
+TODO: Others
 ────────────────────────────────────────────────────── */
-.display {
-  display: inline-block;
-  border: 6px ridge #d4d4d4;
-  min-width: 34px;
-  min-height: 40px;
-  border-radius: 10px;
-  padding-right: 7px;
-  color: white;
-  background: #5e5e5e;
+/* 
+──────────────────────────────────────────────────────
+TODO: Slider
+────────────────────────────────────────────────────── */
+.slider {
+  border-top: 2px solid #00c8ff;
+  border-bottom: 2px solid #00c8ff;
 }
 
-/*  
+@media (min-width: 501px) {
+  .slider {
+    border: 2px solid #00c8ff;
+  }
+}
+
+/* 
 ──────────────────────────────────────────────────────
-TODO: Choice Examples
+TODO: Download Page
 ────────────────────────────────────────────────────── */
-.choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
+.download_buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.download .demo div {
+  text-align: center;
+}
+
+.download .demo div button {
+  margin: 0;
+  font-size: 21px;
+}
+
+.download .stores_aligh {
+  text-align: center;
+}
+
+.download .stores_aligh img {
+  width: 180px;
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Types Table
+────────────────────────────────────────────────────── */
+@media (pointer: fine) and (min-width: 501px) and (min-height: 501px) {
+  .types_table_msg {
+    display: none !important;
+  }
+}
+
+.table_box {
+  display: none;
+  max-height: calc(100vh - 48px - (2 * 16rem));
+  margin: auto;
+  border: 2px solid #00c8ff;
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  overflow: auto;
+}
+
+@media (pointer: fine) and (min-width: 501px) and (min-height: 501px) {
+  .table_box {
+    display: block;
+  }
+}
+
+@media (min-width: 501px) {
+  .table_box {
+    max-width: calc(100% - (2 * 20px));
+  }
+}
+
+.types_table {
+  margin: 0;
+}
+
+.types_table tr:nth-of-type(1) {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 200, 255, 0);
+}
+
+.types_table tr th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  background: #f0fcff;
+  outline: 1px solid #00c8ff;
+}
+
+.types_table tr:nth-of-type(1) td {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+  background: #f0fcff;
+  outline: 1px solid #00c8ff;
+}
+
+.types_table tr td:nth-of-type(1) {
+  border-left: 0;
+}
+
+.types_table tr td {
+  border-left: 1px solid #d9d9d9;
+}
+
+.types_table tr {
+  border: 0;
+}
+
+.types_table tr td {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.types_table tr:nth-of-type(1) td {
+  border-bottom: 0;
+}
+
+.types_table tr:nth-last-of-type(1) td {
+  border-bottom: 1px solid #00c8ff;
+}
+
+.types_table .type_icon {
+  width: 37px;
+}
+
+.types_table th, .types_table td {
+  line-height: 0px;
+}
+
+.show-or-hide-plasma {
   display: none;
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
-  font-size: 19rem;
+.types_table .effect_icon {
+  width: 28px;
 }
+
+@media (pointer: coarse), (pointer: none) {
+  .table_box {
+    height: 100%;
+    margin-bottom: 38px;
+    border-bottom: 0;
+  }
+}
+
+/*
+@media (pointer: coarse), (pointer: none) { // Ganbiarra necessária, pois os navegadores mobile n dão suporte à 'position: sticky'.
+
+    .types_table tr:nth-of-type(1), .types_table tr th, .types_table tr:nth-of-type(1) td {
+        position: static;  
+    }
+
+    .types_table .type_icon {
+        width: 24px;
+    }
+
+    .types_table .effect_icon {
+        width: 20px;
+    }
+}
+*/
