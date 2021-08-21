@@ -35,7 +35,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 /* ------ Colors And Backgrounds ------ */ 
 
 // $color_theme: hsl(193, 100%, 50%);
-$color_theme: hsl(200, 100%, 62%);
+$color_theme: hsl(201, 100%, 54%);
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -1152,10 +1152,10 @@ table {
         border: $table_border1_width solid $color_theme;
         font-weight: normal;
 
-        /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+        /**/@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
             font-weight: bold; 
-        }*/
+        }
     }
 
     tr:hover {  
