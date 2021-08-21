@@ -35,6 +35,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 /* ------ Colors And Backgrounds ------ */ 
 
 $color_theme: hsl(193, 100%, 50%); 
+//$color_theme: blue;
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -70,7 +71,7 @@ $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 $color_shadow_footer: $color_shadow_headerNav_rounded;
-$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.15);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
 $color_shadow_lightbox: black; 
@@ -379,3 +380,25 @@ TODO: Types Table
     }
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+th {
+    //color: hsl(193, 100%, 50%) !important;
+}
+
+th {
+    //color: hsl(198, 100%, 68%) !important;
+}
+
+th {
+    color: hsl(200, 100%, 62%) !important;
+}
