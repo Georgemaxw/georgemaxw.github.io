@@ -633,7 +633,7 @@ p.container_text {
 }
 
 .list_featured li + li {
-  border-top: 1px solid #00a6ff;
+  border-top: 1px solid DeepSkyBlue;
   margin-top: calc(0.5 * 16rem);
   padding-top: calc(0.5 * 16rem);
 }
@@ -729,7 +729,7 @@ TODO:    > Header-nav
   right: 0;
   z-index: 1000;
   color: white;
-  background-color: #00a6ff;
+  background-color: DeepSkyBlue;
   background: url(../../images/bgs/header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*  
@@ -982,7 +982,7 @@ TODO:        >> Expanded
     max-height: calc(100% - (2 * 48px));
     border-radius: 25px;
     margin-top: 48px;
-    background-color: #00a6ff;
+    background-color: DeepSkyBlue;
     background: url(../../images/bgs/nav_1.png) center/100% 100%;
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
     /* li:hover {
@@ -1080,7 +1080,7 @@ TODO:    > Footer
   width: 100%;
   height: 48px;
   border-radius: 50px;
-  background-color: #00a6ff;
+  background-color: DeepSkyBlue;
   background: url(../../images/bgs/footer_icons.png) center/100% 100%;
   padding-top: 2px;
   margin-left: auto;
@@ -1215,15 +1215,15 @@ TODO: Tables
 table {
   max-width: calc(100% - 2 * 20px);
   margin: 16rem auto;
-  border: 1px solid #00a6ff;
+  border: 1px solid DeepSkyBlue;
   border-collapse: collapse;
   caption-side: bottom;
   font-weight: normal;
 }
 
 table th {
-  color: #00a6ff;
-  border: 1px solid #00a6ff;
+  color: DeepSkyBlue;
+  border: 1px solid DeepSkyBlue;
   font-weight: normal;
   /**/
 }
@@ -1279,7 +1279,7 @@ table ul, table ol {
   width: 100%;
   max-width: none;
   border-width: 0;
-  border-bottom: 1px solid #00a6ff;
+  border-bottom: 1px solid DeepSkyBlue;
 }
 
 .table_style_2 tr :nth-child(1) {
@@ -1287,7 +1287,7 @@ table ul, table ol {
 }
 
 .table_style_2 tr:nth-of-type(1) {
-  border-bottom: 1px solid #00a6ff;
+  border-bottom: 1px solid DeepSkyBlue;
 }
 
 .table_style_2 th {
@@ -1352,7 +1352,7 @@ table ul, table ol {
   }
   .table_style_4 th {
     border-width: 0;
-    border-bottom: 1px solid #00a6ff;
+    border-bottom: 1px solid DeepSkyBlue;
     text-align: center;
   }
   .table_style_4 td {
@@ -1578,25 +1578,25 @@ TODO:    > Focus Effect
 ──────────────────────────── */
 input:focus:not(input[type="checkbox"]), textarea:focus {
   outline: 0px dotted;
-  border: 1px solid #00a6ff;
+  border: 1px solid DeepSkyBlue;
 }
 
 input[type="file"]:focus {
-  outline: 1px solid #00a6ff;
+  outline: 1px solid DeepSkyBlue;
 }
 
 input[type="radio"]:focus {
-  outline: 1px solid #00a6ff;
+  outline: 1px solid DeepSkyBlue;
 }
 
 select:focus {
   outline: 0px dotted;
-  border: 1px solid #00a6ff;
+  border: 1px solid DeepSkyBlue;
   /* border-radius: 100px; <- Traz inconsistências entre os navegadores. */
 }
 
 button:focus {
-  outline: 2px dotted #00a6ff;
+  outline: 2px dotted DeepSkyBlue;
 }
 
 /*  
@@ -1738,9 +1738,9 @@ body {
 }
 
 hr {
-  border-top: 1px solid #00a6ff;
+  border-top: 1px solid DeepSkyBlue;
   border-bottom: 0;
-  background: #00a6ff;
+  background: DeepSkyBlue;
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: 20px;
@@ -2923,7 +2923,7 @@ TODO:    > Switchs
 }
 
 .switch.on > :nth-child(1) {
-  background: #00a6ff;
+  background: DeepSkyBlue;
   background: #60ff52;
 }
 
@@ -3538,7 +3538,7 @@ TODO:    > Lightbox
   max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
-  background: url(../../images/bgs/lightbox.png) center/100% 100%, #00a6ff;
+  background: url(../../images/bgs/lightbox.png) center/100% 100%, DeepSkyBlue;
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
