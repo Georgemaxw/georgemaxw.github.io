@@ -980,7 +980,7 @@ TODO:    > Footer
         background-color: $color_theme;
         background: $bg_footer_icons;
         //padding: 6px 0 0px;
-        padding-top: 1px;
+        //padding-top: 1px;
         margin-left: auto;
         margin-right: auto; 
         //@extend %margins;
@@ -997,7 +997,7 @@ TODO:    > Footer
         }
 
         img {
-            padding: 5px;
+            padding: 6px;
             border: 2px solid $color_text_menu;
             border-radius: 50%;
             filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
