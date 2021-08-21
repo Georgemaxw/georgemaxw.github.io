@@ -119,7 +119,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
 
-<li><a href="index.html">Home</a><div><ul></ul></div></li>
+<li><a href="../framework/pages/index.html">Home</a><div><ul></ul></div></li>
 
 <!--<li><a href="news.html">News</a><div><ul></ul></div></li>-->
 
