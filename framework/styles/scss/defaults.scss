@@ -69,7 +69,7 @@ $color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
 $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
-$color_shadow_footer: hsla(0, 0%, 0%, 0.22);
+$color_shadow_footer: $color_shadow_headerNav_rounded;
 $color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
@@ -932,6 +932,17 @@ TODO:        >> Expanded
     }
 }
 
+@media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
+
+    .header-nav .nav-menu > ul > li:last-of-type {
+        display: none;
+    }
+
+    .nav-menu > ul > li:nth-last-of-type(2) {
+        margin-right: 20px;
+    }
+}
+
 // Show header button: 
 
 .headerNav-button{
@@ -983,9 +994,8 @@ TODO:    > Footer
         padding-top: 2px;
         margin-left: auto;
         margin-right: auto; 
-        //@extend %margins;
-        //box-shadow: 4px 6px 9px 0px $color_shadow_footer;
-        box-shadow: 3px 3px 6px 0px $color_shadow_headerNav_rounded;
+        //box-shadow: 4px 6px 9px 0px hsla(0, 0%, 0%, 0.22);
+        box-shadow: 3px 3px 6px 0px $color_shadow_footer;
 
         list-style-type: none;
         display: flex;
