@@ -90,8 +90,13 @@ abbr {
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 5px;
-  background: #ededed;
+  background: #f7f7f7;
   text-decoration: none !important;
+  border-top: 3px solid #dbdbdb !important;
+  border-left: 3px solid #dbdbdb !important;
+  border-bottom: 3px solid #b3b3b3 !important;
+  border-right: 3px solid #b3b3b3 !important;
+  border: 1px solid #ebebeb !important;
   cursor: pointer;
 }
 
