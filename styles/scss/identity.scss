@@ -210,7 +210,40 @@ html {
 TODO: Others
 ────────────────────────────────────────────────────── */
 
+//$color_text_table_th: 
 
+table { 
+
+    //border-collapse: separate;
+
+    tr {
+        //margin: 8px; 
+    }
+
+    th {
+        /*color: $color_text_menu;
+        margin: 18px;
+        border-radius: 1000px;
+        background: url(../../framework/images/colors/text_highlight.png)  center /100% 100%;
+        text-align: center !important;*/
+
+
+    background: url(../../framework/images/colors/text_highlight.png)  center /100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent; 
+    }
+}
+
+abbr {
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px;
+    background: hsl(0, 0%, 93%);
+    text-decoration: none !important;
+    cursor: pointer;
+}
 
 /* 
 ──────────────────────────────────────────────────────
