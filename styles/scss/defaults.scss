@@ -1,8 +1,12 @@
-/* gmes-defaults.css */
 
 /* 
 ──────────────────────────────────────────────────────
-TODO: Variáveis
+gmes-defaults.css
+────────────────────────────────────────────────────── */
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Variables
 ────────────────────────────────────────────────────── */
 
 $font_default: 'Times New Roman', Times, Georgia, serif;
@@ -15,29 +19,34 @@ $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
+$button_height_smaller: calc(2 * #{$margin_vertical});
 $table_border1_width: 1px;
 $table_border2_width: 1px;
 $border_radius_default: 20px;
+$border_radius_big: 40px;
  
-/* ------ Breakpoints ------ */  
+/* ------ Breakpoints ------ */ 
 
-$tablet: 501px; // Largura máxima de um celular.
-/* $pc: 1000px; */ // Largura mínima de um PC.
+$screen_small_widthLimit: 501px; // Largura máxima de um celular.
+/*$screen_medium_widthLimit: 1000px;  */ // Largura mínima de um PC.
 
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
 
-/* ------ Cores E Planos De Fundos ------ */
+/* ------ Colors And Backgrounds ------ */ 
 
-$color_theme: rgb(0, 200, 255); 
+// $color_theme: hsl(193, 100%, 50%);
+//$color_theme: hsl(201, 100%, 48%);
+//$color_theme: DodgerBlue;
+$color_theme: DeepSkyBlue;
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
-$color_text_clear: hsl(0, 0%, 68%);
+$color_text_clear: hsl(0, 0%, 68%); 
 $color_text_menu: white; 
-$color_text_hx: url(../../images/color_text_hx.png)  center /100% 100%;
-$color_text_highlight: url(../../images/color_text_highlight.png)  center /100% 100%;
-$color_text_highlight_menu: url(../../images/color_text_highlight_menu.png)  center /100% 100%;
+$color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
+$color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
+$color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
@@ -64,9 +73,12 @@ $color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
 $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
-$color_shadow_footer: hsla(0, 0%, 0%, 0.22);
+$color_shadow_footer: $color_shadow_headerNav_rounded;
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
+$color_shadow_lightbox: black; 
+$color_shadow_lightbox_button: black; 
  
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
@@ -82,27 +94,34 @@ $color_menuRounded_scrollbar_track: transparent;
 $color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
 $bg_html: white;
-//$bg_html: rgb(92, 92, 92);
-//$bg_html: url(../../images/bg_lightbox.png)  center /100% 100%, white;
-$bg_header: url(../../images/bg_header.png) center /100% 100%;
-$bg_nav_1: url(../../images/bg_nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bg_nav_2.png)  center /100% 100%;
-$bg_nav_selector: url(../../images/bg_nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
-$bg_footer_icons: url(../../images/bg_footer_icons.png)  center /100% 100%;
+//$bg_html: hsl(0, 0%, 36%);
+//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
+$bg_header: url(../../images/bgs/header.png) center /100% 100%;
+$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%; 
+$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
 
 $bg_success: hsl(120, 100%, 91%);
 $bg_attention: hsl(54, 100%, 93%);
 $bg_fail: hsl(0, 100%, 94%);
 $bg_danger: red;
 
-$bg_button: url(../../images/bg_button.png)  center /100% 100%;
-$bg_select: url(../../images/bg_select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
+$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
 $bg_table_tr_hover: $color_theme_clear; 
 $bg_kbd: hsl(0, 0%, 86%);
-$bg_choice_label: url(../../images/bg_choice_label.png)  center /100% 100%;
-$bg_choice: url(../../images/bg_choice.png)  center /100% 100%;
-$bg_choice_d_open: url(../../images/bg_choice_d_open.png)  center /100% 100%;
-$bg_lightbox: url(../../images/bg_lightbox.png)  center /100% 100%, $color_theme;
+$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
+$bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
+$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
+$bg_switch_off: hsl(0, 0%, 93%);
+$bg_switch_on: hsl(115, 100%, 66%);
+$bg_switch_check: hsl(0, 0%, 100%); 
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%, $color_theme;
+$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
+$bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
@@ -119,7 +138,18 @@ $zIndex_lightbox: 1200;
 
 /*  
 ──────────────────────────────────────────────────────
-Modelo De Caixa Alternativo Global 
+TODO: Classes JS
+────────────────────────────────────────────────────── */
+
+// Classes Genéricas Pra Serem Aplicadas Somente Via JS:
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+/*  
+──────────────────────────────────────────────────────
+Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 
 html {
@@ -132,7 +162,7 @@ html {
        
 /*  
 ──────────────────────────────────────────────────────
-TODO: Margens
+TODO: Margins
 ────────────────────────────────────────────────────── */
 
 .offset { /* Lateral margins */    
@@ -142,22 +172,26 @@ TODO: Margens
 
 .offset.choice_h { 
     display: inline-flex;
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 }
 
 .offset.choice_v, .offset.choice_d { 
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 }
 
 %margins {
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
-    @extend .offset; 
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
+    // @extend .offset; 
 }
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Textos
+TODO: Texts
 ────────────────────────────────────────────────────── */
 
 html {
@@ -187,7 +221,8 @@ a {
         font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
-        @extend .offset;
+        margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
         text-align: center; 
         // color: $color_theme;
         background: $color_text_hx;
@@ -204,7 +239,8 @@ a {
         font-size: 20rem;
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;
-        @extend .offset;
+        margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
         text-align: center; 
         font-weight: bold;
         // color: $color_theme;
@@ -259,7 +295,7 @@ dt:nth-of-type(1) {
     margin-top: 0;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
 
     dd {
         margin-left: 30rem;
@@ -298,7 +334,8 @@ code {
 }
 
 pre {
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
     font-family: $font_monospace;
 }
 
@@ -332,7 +369,7 @@ pre {
 }
 */
 
-.text_container {
+.container_text {
     font-size: $font_size; 
     padding: 8px 13px 9px;
     border: 1px solid $color_border_form;  
@@ -341,7 +378,7 @@ pre {
     text-align: justify;
 }
 
-p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
+p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é diferente dos outros elementos (como do <div>).
     padding: 5px 13px 5px;
 }
 
@@ -363,6 +400,21 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-fill-color: transparent; 
 }
 
+.click {
+    padding-left: 4px;
+    padding-right: 4px;
+    /*border-top: 3px solid hsl(0, 0%, 86%) !important;
+    border-left: 3px solid hsl(0, 0%, 86%) !important;
+    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
+    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
+    border: 1px solid hsl(0, 0%, 76%) !important; 
+    border-radius: 5px;
+    color: hsl(0, 0%, 53%);
+    background: hsl(0, 0%, 95%);
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
 .spaced_items > li + li, .spaced_items > dd + dd {
     margin-top: $margin_vertical;
 }
@@ -379,10 +431,8 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 
     > ul, > ol {
     
-        width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
-        garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-        
-        width: fit-content;
+        width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+        para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
         > li {
             font-weight: bold;
@@ -448,6 +498,31 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     }
 }
 
+.list_featured {
+
+    list-style-type: none;
+    margin-left: $margin_horizontal;
+
+    li {
+        padding-left: $margin_horizontal;
+        padding-right: $margin_horizontal;
+
+        a {
+            color: $color_text;
+        }
+
+        div {
+            font-size: $font_size;
+        }
+    }
+    
+    li + li {
+        border-top: 1px solid $color_theme;
+        margin-top: calc(0.5 * #{$margin_vertical});
+        padding-top: calc(0.5 * #{$margin_vertical});
+    }
+}
+
 .success, .attention, .fail, .danger  {
 
     padding: 2px 8px;
@@ -498,9 +573,21 @@ p.text_container { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     margin-right: 0;
 }
 */
+
+.container_organize {
+ 
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    max-width: calc(100% - (2 * #{$margin_horizontal}));
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 /*  
 ──────────────────────────────────────────────────────
-TODO: Seções De Layout
+TODO: Layout Sections
 ────────────────────────────────────────────────────── */
 /*  
 ────────────────────────────
@@ -609,7 +696,8 @@ TODO:        >> Menu
     .nav-menu { 
         display: none;
         position: fixed;
-        top: $button_height; bottom: 0; left: 0; right: 0;
+        //top: $button_height; bottom: 0; left: 0; right: 0;
+        top: 0px; bottom: 0; left: 0; right: 0;
         //background-color: $color_theme;
 
         ul {
@@ -656,7 +744,9 @@ TODO:        >> Menu
 
         > ul {
             margin: $button_height 0 0 0;
-            box-shadow: 0 0px 10px 0px $color_shadow_nav_options;
+            //box-shadow: 0 0px 10px 0px $color_shadow_nav_options; // <- Sombra melhor se for deixar o 'header-nav' separado do 'menu aberto'.
+            
+            box-shadow: 0 5px 10px -4px adjust-color($color_shadow_nav_options, $alpha: -0.1);
         }
 
         > ul > li:last-of-type {
@@ -720,14 +810,14 @@ TODO:        >> Menu
         background: $bg_nav_selector; 
         max-height: 40px; 
         border-radius: 15px; 
-        padding-left: 4px; 
-        padding-right: 4px; 
+        padding-left: 7px; 
+        padding-right: 7px; 
         margin-top: 4px
     }
 
 /*  
 ────────────────────────────
-TODO:        >> Expandido
+TODO:        >> Expanded
 ──────────────────────────── */
 
     @media (min-width: $nav_expand) {
@@ -829,7 +919,11 @@ TODO:        >> Expandido
 
 // Header-nav em smartphone (arredondado):
 
-@media (min-width: $nav_expand) and (max-height: $tablet) {
+@media (min-width: $nav_expand) and (max-height: $screen_small_widthLimit) {
+
+    .header-content {
+        max-width: none;
+    }
 
     .header-nav {
         left: 8px; right: 8px;
@@ -854,6 +948,19 @@ TODO:        >> Expandido
 
     .header-nav .nav-menu > ul > li:nth-last-of-type(1) {
         margin-right: 6px; 
+    }
+}
+ 
+// Header-nav button invisible:
+
+@media (min-width: $nav_expand) and (min-height: $screen_small_widthLimit) {
+ 
+    .header-nav .nav-menu > ul > li:last-of-type {
+        display: none;
+    } 
+
+    .nav-menu > ul > li:nth-last-of-type(2) {
+        margin-right: 20px;
     }
 }
 
@@ -891,25 +998,58 @@ TODO:    > Footer
 ──────────────────────────── */
 
 .footer-content {
+    width: 100%;
     margin-top: calc(2 * #{$margin_vertical});
 
+    address {
+        width: 100%;
+    }
+
     .footer-icons {
+        width: 100%;
+        height: 48px;
         border-radius: 50px;
         background-color: $color_theme;
         background: $bg_footer_icons;
-        padding: 6px 0 0px; 
-        @extend %margins;
-        box-shadow: 4px 6px 9px 0px $color_shadow_footer;
+        //padding: 6px 0 0px;
+        padding-top: 2px;
+        margin-left: auto;
+        margin-right: auto; 
+        //box-shadow: 4px 6px 9px 0px hsla(0, 0%, 0%, 0.22);
+        box-shadow: 3px 3px 6px 0px $color_shadow_footer;
+
         list-style-type: none;
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: center; 
+ 
+        li, a {
+            height: 40px !important;
+        }
 
         img {
-            padding: 6px;
+            padding: 5px;
             border: 2px solid $color_text_menu;
             border-radius: 50%;
+            filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
         }
+
+        @media (max-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) {
+
+            width: calc(100% - (2 * #{$margin_horizontal}));
+        } 
+
+        // Footer-icons em smartphone - paisagem:
+
+        @media (max-height: $screen_small_widthLimit) {
+
+            width: calc(100% - 16px);
+        }
+    }
+
+    @media (max-height: $screen_small_widthLimit) {
+
+        max-width: none;
     }
 
     .copyright {
@@ -983,7 +1123,7 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Multimídia
+TODO: Multimedia
 ────────────────────────────────────────────────────── */
 
 /*.textImg_evenSize {
@@ -1016,7 +1156,7 @@ audio {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Tabelas
+TODO: Tables
 ────────────────────────────────────────────────────── */
 
 table {
@@ -1032,14 +1172,18 @@ table {
         border: $table_border1_width solid $color_theme;
         font-weight: normal;
 
-        @media (max-width: $tablet), (max-height: $tablet) {
+        /**/@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
             font-weight: bold; 
         }
     }
 
-    tr:hover {
-        background: $bg_table_tr_hover;
+    tr:hover {  
+
+        @media (pointer: fine) {
+            
+            background: $bg_table_tr_hover;
+        }
     }
 
     tr:nth-of-type(1):hover {
@@ -1105,7 +1249,7 @@ table {
     }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
     .table_style_2 {
         width: auto;
         max-width: calc(100% - 2 * #{$margin_horizontal});
@@ -1115,12 +1259,16 @@ table {
 .table_style_3 {
     border-width: 0;
 
-    tr:hover {
+    /*tr:hover {
         outline: 1px solid $color_theme;
     }
 
     tr:nth-of-type(1):hover {
         background: $bg_table_tr_hover;
+    }*/
+
+    tr:hover {
+        background: 0; 
     }
 
     tr + tr {
@@ -1135,7 +1283,7 @@ table {
 
 /*----- table_style_4 -----*/
 
-@media (min-width: 0) and (max-width:  $tablet) {
+@media (min-width: 0) and (max-width:  $screen_small_widthLimit) {
     .table_style_4 {
         border-width: 0;
         margin-left: calc(2 * #{$margin_horizontal});
@@ -1174,7 +1322,7 @@ table {
     }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
     .table_style_4 {
         border-width: 0;
 
@@ -1198,7 +1346,7 @@ table {
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Formulários
+TODO: Forms
 ────────────────────────────────────────────────────── */
 
 /*  
@@ -1214,7 +1362,8 @@ fieldset {
     border-width: 0;
     padding: 0;
     margin: 0;
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 
     strong {
         text-decoration: none;
@@ -1397,7 +1546,7 @@ button:disabled {
 
 /*  
 ────────────────────────────
-TODO:    > Efeito De Focus
+TODO:    > Focus Effect
 ──────────────────────────── */
 
 input:focus:not(input[type="checkbox"]), textarea:focus {
@@ -1425,7 +1574,7 @@ button:focus {
 
 /*  
 ────────────────────────────
-TODO:    > Classes
+TODO:    > Class
 ──────────────────────────── */
 
 @for $i from 1 through 30 { 
@@ -1436,7 +1585,7 @@ TODO:    > Classes
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Outros
+TODO: Others
 ────────────────────────────────────────────────────── */
 
 html {
@@ -1455,7 +1604,8 @@ hr {
     background: $color_theme;
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
-    @extend .offset;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
 }
 
 @media (min-width: $hr_stop) {
@@ -1540,22 +1690,116 @@ figure.center {
     height: $button_height_small;
 }
 
+.border_radius_big {
+    @media (min-width: $screen_small_widthLimit) {
+
+        border-radius: $border_radius_big;
+    }
+}
+
 .cursor_pointer {
     cursor: pointer;
 }
 
-/*  
-──────────────────────────────────────────────────────
-TODO: Classes Para Serem Aplicadas Somente Via JS
-────────────────────────────────────────────────────── */
+// ------ Screen ------
 
-.overflow_hidden {
-    overflow: hidden;
+.screen_small, .ss {
+    
+    @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_small_portrait, .ssp {
+    
+    @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_small_landscape, .ssl  {
+    
+    @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+/*
+.screen_medium {
+
+    @media (min-width: $screen_medium_widthLimit) and (min-height: $screen_medium_widthLimit)  {
+
+        display: none !important;
+    }
+}
+*/
+
+.screen_not_small, .sns {
+    
+    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_portrait, .snsp {
+    
+    @media (orientation: portrait) and (max-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_landscape, .snsl  {
+    
+    @media (orientation: landscape) and (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+// ----------------------
+
+.button_hide_container {
+    
+    display: none;
+    position: relative;
+    margin-top: calc((#{$button_height_smaller})/2); 
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+
+    .button_hide {
+
+        display: inline-block;
+        content: "";
+        position: absolute; 
+        top: calc((-1 * #{$button_height_smaller})/2);
+        right: 4px;
+        cursor: pointer;
+
+        width: $button_height_smaller;  
+        height: $button_height_smaller;
+        border-radius: 50%;
+        background: $bg_button_hide; 
+        //box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button, inset 3px 3px 5px 0px hsla(0, 0%, 100%, 0.5), inset -2px -3px 5px 3px hsla(0, 0%, 0%, 0.4);
+        //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
+    }
+ 
+    > :nth-child(2) { 
+        
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
+        padding-right: calc((#{$button_height_smaller})/2);
+    }
 }
 
 /*
 ──────────────────────────────────────────────────────
-TODO: Componentes
+TODO: Components
 ────────────────────────────────────────────────────── */
 
 /*  
@@ -1570,15 +1814,11 @@ img.outdoor, video.outdoor {
     margin-right: auto;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor {
         max-width: calc(100% - (2 * #{$margin_horizontal}) );
-    }
-    
-    img.outdoor, video.outdoor {
-        border-radius: 40px;
-        // box-shadow: 6px 6px 24px -15px black; 
+        border-radius: $border_radius_big; 
     }
 }
 
@@ -1594,7 +1834,7 @@ figure.outdoor img {
         max-width: 100%;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $screen_small_widthLimit) {
 
     figure.outdoor {
         max-width: calc(100% - (2 * #{$margin_horizontal}) );
@@ -1608,11 +1848,11 @@ figure.outdoor img {
 
 // img, video, figure:
 
-@media (max-height: $tablet) {
+@media (max-height: $screen_small_widthLimit) {
 
     img.outdoor, video.outdoor, figure.outdoor img { 
-        //max-height: 100vh;
-        max-height: calc(100vh - #{$button_height}) ;
+        max-height: 100vh;
+        //max-height: calc(100vh - #{$button_height}) ;
     }
 }
 
@@ -1629,7 +1869,7 @@ TODO:    > Galleries
     font-size: 0;
 }
 
-@media (min-width: $tablet) { 
+@media (min-width: $screen_small_widthLimit) { 
 
     .gallery {
         margin-left: $margin_horizontal;
@@ -1656,14 +1896,14 @@ TODO:    > Sliders
     max-width: 94%;
 }
 
-@media (max-height: $tablet) {
+@media (max-height: $screen_small_widthLimit) {
 
     .slider img, .slider picture {
         max-height: 100vh;
     }
 }
 
-@media (min-width: $tablet) {  
+@media (min-width: $screen_small_widthLimit) {  
 
     .slider { 
         margin-left: $margin_horizontal;
@@ -1710,10 +1950,8 @@ TODO:    > Choices
     display: inline-block;
     font-size: 0;
 
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
-    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-    
-    width: fit-content;
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     padding: 0;
     margin: 0;
@@ -1814,12 +2052,12 @@ TODO:        >> Horizontal
     }
 
     > li a:hover {
-        background: hsla(0, 0%, 100%, 0.45);
+        background: $bg_choice_selector;
         text-shadow: 1px 1px 1px $color_shadow_text_strong;
     }
 
     > li:nth-of-type(1) a:hover {
-        background: hsla(0, 0%, 100%, 0);
+        background: 0;
         text-shadow: 1px 1px 1px $color_shadow_text;
     }
 
@@ -1857,12 +2095,12 @@ TODO:        >> Vertical
     }
 
     > li a:hover {
-        background: hsla(0, 0%, 100%, 0.45);
+        background: $bg_choice_selector;
         text-shadow: 1px 1px 1px $color_shadow_text_strong;
     }
 
     > li:nth-of-type(1) a:hover {
-        background: hsla(0, 0%, 100%, 0);
+        background: 0;
         text-shadow: 1px 1px 1px $color_shadow_text;
     }
 
@@ -2013,7 +2251,7 @@ TODO:        >> Dropdown
         border-bottom: 1px solid $color_text_menu;
     }
 
-    /* @media (min-width: $tablet) and (min-height: $tablet) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
+    /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
 }
 
 // Dropdown - Open - Scrollbars:
@@ -2055,13 +2293,13 @@ TODO:        >> Option ON
 
 .choice_h > li > a.on, .choice_v > li > a.on { 
 
-    background: hsla(0, 0%, 100%, 0.45);
+    background: $bg_choice_selector;
     text-shadow: 1px 1px 1px $color_shadow_text_strong;
 }
 
 .choice_d.choice_d_open > li > .on { // .choice_h > li > a.on, .choice_v > li > a.on
 
-    background: hsla(0, 0%, 100%, 0.45);
+    background: $bg_choice_selector;
     text-shadow: 1px 1px 1px $color_shadow_text_strong;
 }
 
@@ -2141,7 +2379,7 @@ TODO:        >> No Label
 
 /*  
 ────────────────────────────
-TODO:        >> Desabilitado
+TODO:        >> Disabled
 ──────────────────────────── */
 
 .choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
@@ -2169,7 +2407,7 @@ TODO:        >> Desabilitado
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Switchs
+TODO:    > Switchs
 ────────────────────────────────────────────────────── */
 
 .switch {
@@ -2177,25 +2415,24 @@ TODO: Switchs
     display: flex;
     align-items: center;
 
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; /* <- Declarações necessárias para 
-    garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-    
-    width: fit-content;
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
-    @extend .offset; 
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
     cursor: pointer;
 
     > :nth-child(1) {
         margin-right: 12px;
-        background: hsl(0, 0%, 93%);
+        background: $bg_switch_off;
     }
 
     > :nth-child(1)::before {
         content: '';
         display: inline-block;
-        background-color: hsl(0, 0%, 100%); 
+        background: $bg_switch_check; 
         position: relative;
     }
 
@@ -2236,8 +2473,8 @@ TODO: Switchs
 }
 
 .switch.on > :nth-child(1) {
-    background-color: $color_theme;
-    background-color: hsl(115, 100%, 66%);
+    background: $color_theme;
+    background: $bg_switch_on;
 }
 
 .switch.inverted {
@@ -2295,7 +2532,7 @@ TODO: Switchs
     left: 19px;
 }
 
-@media (max-width: $tablet), (max-height: $tablet) {
+@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
 
     // Switch - Tamanho escolhido: Bigger Size
 
@@ -2566,12 +2803,12 @@ TODO: Switchs
       
 /*
 ──────────────────────────────────────────────────────
-TODO: Cards & Posters
+TODO:    > Cards & Posters
 ────────────────────────────────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:    > Cards
+TODO:        >> Cards
 ──────────────────────────── */
 
 .card {
@@ -2673,7 +2910,7 @@ TODO:    > Cards
  
 /*  
 ────────────────────────────
-TODO:    > Posters
+TODO:        >> Posters
 ──────────────────────────── */
 
 .poster {
@@ -2725,7 +2962,7 @@ TODO:    > Posters
 }
 /*  
 ────────────────────────────
-TODO:    > Groups
+TODO:        >> Groups
 ──────────────────────────── */
 
 .group {
@@ -2736,7 +2973,7 @@ TODO:    > Groups
 /*
 .group.h_2 {
 
-    @media (min-width: $tablet) {
+    @media (min-width: $screen_small_widthLimit) {
 
         flex-direction: row;
         flex-wrap: wrap;
@@ -2752,7 +2989,7 @@ TODO:    > Groups
 
     .group.c_#{$i} {
 
-        @media (min-width: $tablet) {
+        @media (min-width: $screen_small_widthLimit) {
 
             flex-direction: row;
             flex-wrap: wrap;
@@ -2767,7 +3004,7 @@ TODO:    > Groups
 
 /*
 ──────────────────────────────────────────────────────
-TODO: Lightbox
+TODO:    > Lightbox
 ────────────────────────────────────────────────────── */
 
 .lightbox {
@@ -2796,7 +3033,7 @@ TODO: Lightbox
     z-index: -1;
     width: 100%;
     height: 100%;
-    //background-color: hsla(0, 0%, 100%, 0.7);
+    background: $bg_lightbox_overlay; 
     content: "";
     cursor: default;
 }
@@ -2814,7 +3051,7 @@ TODO: Lightbox
     border-radius: $border_radius_default;
     color: $color_text_menu;
     background: $bg_lightbox;
-    box-shadow: 6px 6px 24px -14px black,
+    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,
     inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 }
@@ -2858,8 +3095,8 @@ TODO: Lightbox
     width: $button_height_small; 
     height: $button_height_small;
     border-radius: 50%;
-    background: url(../../images/icon_lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%); 
-    box-shadow: 6px 6px 8px -7px rgb(0, 0, 0),
+    background: $bg_lightbox_button; 
+    box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button,
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
@@ -2885,28 +3122,3 @@ TODO: Lightbox
     scrollbar-width: auto;
     scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

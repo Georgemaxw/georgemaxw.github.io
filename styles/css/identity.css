@@ -31,38 +31,29 @@ TODO: Framework - Classes JS
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
-.presentation_float video {
-  width: 100%;
-  border-top: 2px solid #00c8ff;
-  border-bottom: 2px solid #00c8ff;
-  margin-top: 16rem;
-  margin-bottom: 16rem;
+.wide-center-column {
+  max-width: 100%;
+  /* 1099px */
 }
 
-@media (max-width: 501px) {
-  .presentation_float {
-    display: flex;
-    flex-direction: column;
-  }
-  .presentation_float video {
-    order: 1;
-  }
+.presentation_float video {
+  width: 100%;
 }
 
 @media (min-width: 501px) {
   .presentation_float {
     display: flow-root;
   }
-  .presentation_float > div {
-    max-width: calc(100% - 40% - (1 * 20px));
-  }
   .presentation_float video {
-    float: right;
     max-width: 40%;
-    border: 2px solid #00c8ff;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 16rem;
+    float: left;
     border-radius: 20px;
+  }
+  .presentation_float p:nth-of-Type(2) {
+    clear: both;
   }
   .presentation_float p:nth-last-of-Type(1) {
     margin-bottom: 0;
@@ -73,15 +64,6 @@ TODO: Seções De Layout
 ──────────────────────────────────────────────────────
 TODO: Others
 ────────────────────────────────────────────────────── */
-table th {
-  /*
-        background: url(../../framework/images/colors/text_table_th.png)  center /100% 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent; */
-}
-
 /* 
 ──────────────────────────────────────────────────────
 TODO: Slider
@@ -151,7 +133,7 @@ TODO: Types Table
 
 @media (min-width: 501px) {
   .table_box {
-    max-width: calc(100% - (2 * 20px) - 3px);
+    max-width: calc(100% - (2 * 20px));
   }
 }
 
@@ -211,7 +193,7 @@ TODO: Types Table
 }
 
 .types_table .type_icon {
-  width: 36.8px;
+  width: 37px;
 }
 
 .types_table th, .types_table td {
