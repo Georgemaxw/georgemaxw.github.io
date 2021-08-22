@@ -1028,7 +1028,7 @@ TODO:        >> Expanded
   }
 }
 
-@media (min-width: 501px) and (min-height: 501px) {
+@media (min-width: 565px) and (min-height: 501px) {
   .header-nav .nav-menu > ul > li:last-of-type {
     display: none;
   }

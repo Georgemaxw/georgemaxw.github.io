@@ -159,23 +159,44 @@ html {
 
     video {
         width: 100%;
+        border-top: 2px solid $color_theme;
+        border-bottom: 2px solid $color_theme;
+        margin-top: $margin_vertical;
+        margin-bottom: $margin_vertical;    
+    }
+
+    @media (max-width: $screen_small_widthLimit) {
+
+        display: flex;
+        flex-direction: column;
+
+        video {
+            order: 1;
+        }
     }
 
     @media (min-width: $screen_small_widthLimit) {
 
+        $video_width: 40%;
+
         display: flow-root;
 
+        > div {
+            //float: left;
+            max-width: calc(100% - #{$video_width} - (1 * #{$margin_horizontal}));
+        }
+
         video {
-            max-width: 40%;
+            float: right;
+            max-width: $video_width;
+            border: 2px solid $color_theme;
             margin-left: $margin_horizontal;
             margin-right: $margin_horizontal;
-            margin-bottom: $margin_vertical;
-            float: left;
             border-radius: $border_radius_default;
         }
 
         p:nth-of-Type(2) {
-            clear: both;
+            //clear: both;
         }
 
         p:nth-last-of-Type(1) {  
