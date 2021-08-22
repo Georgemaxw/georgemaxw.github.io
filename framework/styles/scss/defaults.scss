@@ -47,6 +47,7 @@ $color_text_menu: white;
 $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
 $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+$color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
@@ -382,35 +383,39 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     padding: 5px 13px 5px;
 }
 
-.highlight {
-    //color: $color_text_highlight;
-    background: $color_text_highlight;
+.highlight, .hl {
+    /*background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent; 
+    text-fill-color: transparent;*/
+
+    color: $color_theme;
 }
 
-.highlight_menu {
-    //color: $color_text_highlight_menu;
-    background: $color_text_highlight_menu;
+.highlight_menu, .hlm {
+    /*background: $color_text_highlight_menu;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent; 
+    text-fill-color: transparent;*/ 
+
+    color: yellow;
 }
 
 .click {
-    padding-left: 4px;
+    /*padding-left: 4px;
     padding-right: 4px;
-    /*border-top: 3px solid hsl(0, 0%, 86%) !important;
-    border-left: 3px solid hsl(0, 0%, 86%) !important;
-    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
-    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
+    
     border: 1px solid hsl(0, 0%, 76%) !important; 
     border-radius: 5px;
     color: hsl(0, 0%, 53%);
-    background: hsl(0, 0%, 95%);
+    background: hsl(0, 0%, 95%);*/
+    background: $color_text_click;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     text-decoration: none !important;
     cursor: pointer;
 }

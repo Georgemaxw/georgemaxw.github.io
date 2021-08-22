@@ -33,8 +33,8 @@ TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
 .presentation_float video {
   width: 100%;
-  border-top: 2px solid #00c8ff;
-  border-bottom: 2px solid #00c8ff;
+  border-top: 2px solid DeepSkyBlue;
+  border-bottom: 2px solid DeepSkyBlue;
   margin-top: 16rem;
   margin-bottom: 16rem;
 }
@@ -59,7 +59,7 @@ TODO: Seções De Layout
   .presentation_float video {
     float: right;
     max-width: 40%;
-    border: 2px solid #00c8ff;
+    border: 2px solid DeepSkyBlue;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 20px;
@@ -87,13 +87,13 @@ table th {
 TODO: Slider
 ────────────────────────────────────────────────────── */
 .slider {
-  border-top: 2px solid #00c8ff;
-  border-bottom: 2px solid #00c8ff;
+  border-top: 2px solid DeepSkyBlue;
+  border-bottom: 2px solid DeepSkyBlue;
 }
 
 @media (min-width: 501px) {
   .slider {
-    border: 2px solid #00c8ff;
+    border: 2px solid DeepSkyBlue;
   }
 }
 
@@ -137,7 +137,7 @@ TODO: Types Table
   display: none;
   max-height: calc(100vh - 48px - (2 * 16rem));
   margin: auto;
-  border: 2px solid #00c8ff;
+  border: 2px solid DeepSkyBlue;
   border-radius: 0;
   border-top-left-radius: 20px;
   overflow: auto;
@@ -173,7 +173,7 @@ TODO: Types Table
   left: 0;
   background: white;
   background: #f0fcff;
-  outline: 1px solid #00c8ff;
+  outline: 1px solid DeepSkyBlue;
 }
 
 .types_table tr:nth-of-type(1) td {
@@ -183,7 +183,7 @@ TODO: Types Table
   z-index: 1;
   background: white;
   background: #f0fcff;
-  outline: 1px solid #00c8ff;
+  outline: 1px solid DeepSkyBlue;
 }
 
 .types_table tr td:nth-of-type(1) {
@@ -207,7 +207,7 @@ TODO: Types Table
 }
 
 .types_table tr:nth-last-of-type(1) td {
-  border-bottom: 1px solid #00c8ff;
+  border-bottom: 1px solid DeepSkyBlue;
 }
 
 .types_table .type_icon {

@@ -520,33 +520,37 @@ p.container_text {
   padding: 5px 13px 5px;
 }
 
-.highlight {
-  background: url(../../images/colors/text_highlight.png) center/100% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+.highlight, .hl {
+  /*background: $color_text_highlight;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;*/
+  color: DeepSkyBlue;
 }
 
-.highlight_menu {
-  background: url(../../images/colors/text_highlight_menu.png) center/100% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+.highlight_menu, .hlm {
+  /*background: $color_text_highlight_menu;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;*/
+  color: yellow;
 }
 
 .click {
-  padding-left: 4px;
-  padding-right: 4px;
-  /*border-top: 3px solid hsl(0, 0%, 86%) !important;
-    border-left: 3px solid hsl(0, 0%, 86%) !important;
-    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
-    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
-  border: 1px solid #c2c2c2 !important;
-  border-radius: 5px;
-  color: #878787;
-  background: #f2f2f2;
+  /*padding-left: 4px;
+    padding-right: 4px;
+    
+    border: 1px solid hsl(0, 0%, 76%) !important; 
+    border-radius: 5px;
+    color: hsl(0, 0%, 53%);
+    background: hsl(0, 0%, 95%);*/
+  background: url(../../images/colors/text_click.png) center/100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
   text-decoration: none !important;
   cursor: pointer;
 }

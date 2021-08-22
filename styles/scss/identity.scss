@@ -36,8 +36,10 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 
 /* ------ Colors And Backgrounds ------ */ 
 
-$color_theme: hsl(193, 100%, 50%); 
-//$color_theme: blue;
+// $color_theme: hsl(193, 100%, 50%);
+//$color_theme: hsl(201, 100%, 48%);
+//$color_theme: DodgerBlue;
+$color_theme: DeepSkyBlue;
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
@@ -46,6 +48,7 @@ $color_text_menu: white;
 $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
 $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+$color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
 $color_text_form_select: $color_text_clear;
@@ -73,7 +76,7 @@ $color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
 $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 $color_shadow_footer: $color_shadow_headerNav_rounded;
-$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.15);
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
 $color_shadow_lightbox: black; 
@@ -97,7 +100,7 @@ $bg_html: white;
 //$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
 $bg_header: url(../../images/bgs/header.png) center /100% 100%;
 $bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%; 
 $bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
 
@@ -133,7 +136,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 
 $zIndex_nav: 1000;
 $zIndex_choice_d_open: 1100;
-$zIndex_lightbox: 1200;
+$zIndex_lightbox: 1200; 
 
 /*  
 ──────────────────────────────────────────────────────
