@@ -210,45 +210,16 @@ html {
 TODO: Others
 ────────────────────────────────────────────────────── */
 
-//$color_text_table_th: 
-
 table { 
 
-    //border-collapse: separate;
-
-    tr {
-        //margin: 8px; 
+    th {/*
+        background: url(../../framework/images/colors/text_table_th.png)  center /100% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent; */
     }
-
-    th {
-        /*color: $color_text_menu;
-        margin: 18px;
-        border-radius: 1000px;
-        background: url(../../framework/images/colors/text_highlight.png)  center /100% 100%;
-        text-align: center !important;*/
-
-
-    background: url(../../framework/images/colors/text_table_th.png)  center /100% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent; 
-    }
-}
-
-abbr {color: hsl(0, 0%, 53%);
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 5px;
-    background: hsl(0, 0%, 95%);
-    text-decoration: none !important;
-    /*border-top: 3px solid hsl(0, 0%, 86%) !important;
-    border-left: 3px solid hsl(0, 0%, 86%) !important;
-    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
-    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
-    border: 1px solid hsl(0, 0%, 76%) !important; 
-    cursor: pointer;
-}
+} 
 
 /* 
 ──────────────────────────────────────────────────────

@@ -536,6 +536,21 @@ p.container_text {
   text-fill-color: transparent;
 }
 
+.click {
+  padding-left: 4px;
+  padding-right: 4px;
+  /*border-top: 3px solid hsl(0, 0%, 86%) !important;
+    border-left: 3px solid hsl(0, 0%, 86%) !important;
+    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
+    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
+  border: 1px solid #c2c2c2 !important;
+  border-radius: 5px;
+  color: #878787;
+  background: #f2f2f2;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
 .spaced_items > li + li, .spaced_items > dd + dd {
   margin-top: 16rem;
 }

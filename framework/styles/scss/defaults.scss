@@ -400,6 +400,21 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-fill-color: transparent; 
 }
 
+.click {
+    padding-left: 4px;
+    padding-right: 4px;
+    /*border-top: 3px solid hsl(0, 0%, 86%) !important;
+    border-left: 3px solid hsl(0, 0%, 86%) !important;
+    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
+    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
+    border: 1px solid hsl(0, 0%, 76%) !important; 
+    border-radius: 5px;
+    color: hsl(0, 0%, 53%);
+    background: hsl(0, 0%, 95%);
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
 .spaced_items > li + li, .spaced_items > dd + dd {
     margin-top: $margin_vertical;
 }
