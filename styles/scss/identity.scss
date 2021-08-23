@@ -234,14 +234,29 @@ TODO: Slider
     border-top: 2px solid $color_theme;
     border-bottom: 2px solid $color_theme;
 
+    img +  img {
+        border-left: 2px solid $color_theme; 
+    }
+
     @media (min-width: $screen_small_widthLimit) {
 
         border: 2px solid $color_theme;
+        max-width: calc(100% - (2 * #{$margin_horizontal}));  
+
+        .slider img, .slider picture {
+            max-width: 938px;   
+        }
+    }
+
+    @media (min-width: calc(938px + (2 * #{$margin_horizontal})) ) {
+    
+        max-width: 1000px;
+
     }
 }
 
 /* 
-──────────────────────────────────────────────────────
+────────────────────────────────────────────────────── 
 TODO: Download Page
 ────────────────────────────────────────────────────── */
 
@@ -410,4 +425,10 @@ TODO: Types Table
         width: 20px;
     }
 }
-*/ 
+
+*/
+.central, .header-content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
