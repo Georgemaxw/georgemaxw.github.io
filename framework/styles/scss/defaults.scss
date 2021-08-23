@@ -1176,12 +1176,12 @@ table {
     th {
         color: $color_theme;
         border: $table_border1_width solid $color_theme;
-        font-weight: normal;
+        font-weight: bold;
 
-        /**/@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+        /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
             font-weight: bold; 
-        }
+        }*/
     }
 
     tr:hover {  
@@ -1900,7 +1900,7 @@ TODO:    > Sliders
 }
  
 .slider img, .slider picture {
-    max-width: 94.2%;    
+    max-width: 94%;   
 }
 
 @media (max-height: $screen_small_widthLimit) {

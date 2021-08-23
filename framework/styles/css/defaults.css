@@ -1241,14 +1241,11 @@ table {
 table th {
   color: DeepSkyBlue;
   border: 1px solid DeepSkyBlue;
-  font-weight: normal;
-  /**/
-}
-
-@media (max-width: 501px), (max-height: 501px) {
-  table th {
-    font-weight: bold;
-  }
+  font-weight: bold;
+  /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+            
+            font-weight: bold; 
+        }*/
 }
 
 @media (pointer: fine) {
@@ -2417,7 +2414,7 @@ TODO:    > Sliders
 }
 
 .slider img, .slider picture {
-  max-width: 94.2%;
+  max-width: 94%;
 }
 
 @media (max-height: 501px) {
