@@ -2419,7 +2419,7 @@ TODO:    > Sliders
 }
 
 .slider img, .slider picture {
-  max-width: 94%;
+  max-width: 94.2%;
 }
 
 @media (max-height: 501px) {

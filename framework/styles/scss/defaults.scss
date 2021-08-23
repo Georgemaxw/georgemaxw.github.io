@@ -1896,9 +1896,9 @@ TODO:    > Sliders
     overflow-y: hidden;
     white-space: nowrap;
 }
-
+ 
 .slider img, .slider picture {
-    max-width: 94%;
+    max-width: 94.2%;    
 }
 
 @media (max-height: $screen_small_widthLimit) {
