@@ -1011,7 +1011,7 @@ TODO:    > Footer
     }
 
     .footer-icons {
-        width: 100%;
+        width: calc(100% - (2 * #{$margin_horizontal}));
         height: 48px;
         border-radius: 50px;
         background-color: $color_theme;
@@ -1039,10 +1039,11 @@ TODO:    > Footer
             filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
         }
 
-        @media (max-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) {
+        // Não apage esta regra comentada:
+        /*@media (min-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) { 
 
-            width: calc(100% - (2 * #{$margin_horizontal}));
-        } 
+            width: 100%;
+        }*/
 
         // Footer-icons em smartphone - paisagem:
 
@@ -1054,7 +1055,7 @@ TODO:    > Footer
 
     @media (max-height: $screen_small_widthLimit) {
 
-        max-width: none;
+        max-width: none !important; 
     }
 
     .copyright {
@@ -1613,13 +1614,14 @@ hr {
     margin-right: $margin_horizontal;
 }
 
-@media (min-width: $hr_stop) {
+// Não apage esta regra comentada:
+/*@media (min-width: $hr_stop) {
 
     hr {
         margin-left: 0;
         margin-right: 0;
     }
-}
+}*/
 
 a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
     cursor: pointer;

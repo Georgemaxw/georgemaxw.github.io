@@ -1096,7 +1096,7 @@ TODO:    > Footer
 }
 
 .footer-content .footer-icons {
-  width: 100%;
+  width: calc(100% - (2 * 20px));
   height: 48px;
   border-radius: 50px;
   background-color: DeepSkyBlue;
@@ -1109,6 +1109,10 @@ TODO:    > Footer
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /*@media (min-width: calc(800px + (2 * 20px))) { 
+
+            width: 100%;
+        }*/
 }
 
 .footer-content .footer-icons li, .footer-content .footer-icons a {
@@ -1122,12 +1126,6 @@ TODO:    > Footer
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.12));
 }
 
-@media (max-width: calc(800px + (2 * 20px))) {
-  .footer-content .footer-icons {
-    width: calc(100% - (2 * 20px));
-  }
-}
-
 @media (max-height: 501px) {
   .footer-content .footer-icons {
     width: calc(100% - 16px);
@@ -1136,7 +1134,7 @@ TODO:    > Footer
 
 @media (max-height: 501px) {
   .footer-content {
-    max-width: none;
+    max-width: none !important;
   }
 }
 
@@ -1766,13 +1764,13 @@ hr {
   margin-right: 20px;
 }
 
-@media (min-width: calc(800px + 60px)) {
-  hr {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+/*@media (min-width: $hr_stop) {
 
+    hr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}*/
 a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
   cursor: pointer;
 }

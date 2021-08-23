@@ -31,6 +31,14 @@ TODO: Framework - Classes JS
 ──────────────────────────────────────────────────────
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
+.header-content {
+  max-width: 850px;
+}
+
+.central {
+  max-width: 1000px;
+}
+
 .presentation_float video {
   width: 100%;
   border-top: 2px solid DeepSkyBlue;
@@ -89,6 +97,10 @@ TODO: Slider
 .slider {
   border-top: 2px solid DeepSkyBlue;
   border-bottom: 2px solid DeepSkyBlue;
+}
+
+.slider img, .slider picture {
+  max-width: 94.4%;
 }
 
 .slider img + img {
@@ -265,8 +277,3 @@ TODO: Types Table
 }
 
 */
-.central, .header-content {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
