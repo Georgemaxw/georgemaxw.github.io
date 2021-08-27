@@ -1,15 +1,226 @@
 <!DOCTYPE html>
-<html lang="pt-br"> <!-- en -->
+<html lang="pt-br">
 <head>
-    <!--<meta name = "apple-mobile-web-app-title" content = "App Name">
-    <meta name="author" content="George Maxwell">-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Configuração Do Textastic Para O Pages: v1: width=482px; v2: width=554px -->
+<title>Development</title>
+<!-- <link href='styles/normalize-gmes.css' rel='stylesheet'> -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<script src="file.js"></script>
+<style> 
+/*
+html, body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: -4px;
+  right: 5px;
+
+  color: transparent;
+  text-shadow: 0 0 4px white;
+}
+*/
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+}
+
+</style>
 </head>
 <body>
 
-    <script>
-        //window.location.href = 'framework/pages/index.html' 
-        window.location.href = 'pages/index.html'
-    </script>
+<canvas></canvas>
 
-</body> 
+<script>
+
+// Função que recebe 2 nºs como argumentos e retorna um nº aleatório entre os 2:    
+
+function random(min, max) { 
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+
+/*
+──────────────────────────────────────────────────────
+Configurando O Canvas
+────────────────────────────────────────────────────── */
+
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d'); // 'getContext()' nos dar um contexto no qual podemos começar a desenhar, neste caso, formas 2D. 'ctx' é o objeto que representa a área de desenho.
+
+const width = canvas.width = window.innerWidth;     // <─┬─ Definindo a largura e altura do elemento canvas (canvas.width e canvas.height)
+const height = canvas.height = window.innerHeight;  // <─┘
+
+/*  
+──────────────────────────────────────────────────────
+Criando A Bola
+────────────────────────────────────────────────────── */
+
+function Ball(x, y, velX, velY, color, radius) { // Construtor das bolas
+    this.x = x; // x inicial
+    this.y = y; // y inicial
+    this.velX = velX;
+    this.velY = velY;  
+    this.color = color;
+    this.radius = radius; // Raio da bola
+}
+
+Ball.prototype.draw = function() { // Função que desenha a bola
+
+    ctx.beginPath(); // 'beginPath()' declara o inicio do desenho
+    ctx.fillStyle = this.color; // 'fillStyle' define a cor
+    ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI); // 'arc()' traça uma forma de arco.  Seus parâmetros são respectivamente: x e y do centro do arco, raio, e os nºs inicial e final de graus em radianos.
+    ctx.fill(); // 'fill()' Declara o fim do desenho, e preenche a área do desenho com a cor especificada em 'fillStyle'.
+}
+
+let testBall = new Ball(50, 100, 4, 4, 'blue', 10); 
+
+testBall.draw()
+
+/*  
+──────────────────────────────────────────────────────
+Método Que Atualiza A Posição Da Bola
+────────────────────────────────────────────────────── */
+
+Ball.prototype.update = function() {
+
+    if ((this.x + this.radius) >= width) {
+        this.velX = -(this.velX);
+    }
+
+    if ((this.x - this.radius) <= 0) {
+        this.velX = -(this.velX);
+    }
+
+    if ((this.y + this.radius) >= height) {
+        this.velY = -(this.velY);
+    }
+
+    if ((this.y - this.radius) <= 0) {
+        this.velY = -(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+}
+
+  /*  
+──────────────────────────────────────────────────────
+Criando Várias Bolas E Armazenando-as Em Uma Matriz
+────────────────────────────────────────────────────── */
+
+let balls = [];
+
+while (balls.length < 25) {
+
+    let radius = random(10, 20);
+    let ball = new Ball(
+
+        random(0 + radius, width - radius),  // <─┬─ Posição da bola sempre desenhada a pelo menos uma largura da bola de distância da borda da tela.
+        random(0 + radius, height - radius), // <─┘
+        random(-7, 7),
+        random(-7, 7),
+        'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')',
+        radius
+    );
+
+    balls.push(ball);
+}
+
+/*  
+──────────────────────────────────────────────────────
+Loop De Animação
+────────────────────────────────────────────────────── */
+
+/* Os jogos/programas que animam coisas geralmente envolvem um loop de 
+animação, que serve para atualizar as informações no programa e então 
+renderizar a visualização resultante em cada quadro da animação: */
+
+function loop() {
+
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)'; // 'fillStyle' define a cor do desenho
+    ctx.fillRect(0, 0, width, height); // 'fillRect()' desenha um retângulo. Parâmetros: Coordenadas x e y iniciais, e a largura e altura respectivamente. Isso serve para encobrir o desenho do quadro anterior antes que o próximo seja desenhado.
+
+    for (let i = 0; i < balls.length; i++) {
+        balls[i].draw();
+        balls[i].update();
+    }
+
+    requestAnimationFrame(loop); /* Executa a função novamente - quando este método é executado repetidamente e passa o mesmo nome de função, ele executa essa função um nº definido de vezes por segundo para criar uma animação suave. */
+}
+
+loop();
+
+</script>
+  
+</body>
 </html>
+
+<!-- 
+  /*  
+──────────────────────────────────────────────────────
+TODO: 
+────────────────────────────────────────────────────── */
+/*  
+────────────────────────────
+TODO:    > 
+──────────────────────────── */
+
+  Emmets: Element#ID_$@I.Class_1.Class_2[Atrib_1=... Atrib_2]{Content $}*N 
+
+  hsla(0, 100%, 50%, 0.)
+
+  Referências De Entidade de Caracteres: 
+  Espaço: &nbsp; | <: &lt;
+
+  Fontes Seguras da Web: 
+  font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
+
+  ABCDE FGHIJ KLMNO PQRST UVWXYZ.  Texto de exemplo para treinamento.
+
+  Configuração Do Aplicativo Textastic: 
+  Font: Menlo; Font Size: 11 pt
+-->
+
+<!--
+/*  
+──────────────────────────────────────────────────────
+TODO: JS Framework
+────────────────────────────────────────────────────── */
+
+[HTML]: 
+
+<p>P</p>
+
+<span>span 1</span> - <span>span 2</span>
+
+[JS]: 
+
+var d = document
+e = document.querySelector
+es = document.querySelectorAll
+
+// Testes:
+
+document.querySelector('p').textContent = 'Alterado!'
+e('p').style = 'color: white; background-color: red'
+
+console.log(es('span'))
+
+-->
