@@ -208,10 +208,10 @@ function lightbox2(txt, img, width) {
 
 //------ Lightbox - Show Animation ------//
 
-{
+{ 
     var lightbox_ = document.querySelector('.lightbox')
-    var space = 150
-    var time = 0.3 
+    var space = 130 // Última alteração: -20
+    var time = 0.25 // Última alteração: -0.05
 
     function lightbox_animation_show() {
 
