@@ -195,6 +195,8 @@ function lightbox(txt, img, width) {
     }
 
     document.querySelector('.lightbox').style = 'display: flex'
+
+    lightbox_animation_show()
 }
 
 function lightbox2(txt, img, width) { 
@@ -204,13 +206,86 @@ function lightbox2(txt, img, width) {
     lightbox(txt, img, width)
 }
 
-function lightbox_close(arg) {
+//------ Lightbox - Show Animation ------//
+
+{
+    var lightbox_ = document.querySelector('.lightbox')
+    var space = 150
+    var time = 0.3 
+
+    function lightbox_animation_show() {
+
+        animation(time) // Unidade: s
+
+        function animation(duration) {
+
+            var  timestamp_firstRepetition
+                
+            function step(timestamp) {
+                
+                if (timestamp_firstRepetition === undefined) { timestamp_firstRepetition = timestamp  }
+                
+                var elapsed = timestamp - timestamp_firstRepetition
+
+                var elapsed_seconds = elapsed/1000 
+
+                if (isNaN(duration)) { var t = elapsed_seconds } else { var t = Math.min(elapsed_seconds, duration) }
+                
+        //---------------------------------------------------------------------------------------
+            
+            lightbox_.style.opacity = (t/time)
+            lightbox_.style.transform = 'translateY(' + ((space * ((1/time) * t)) - space) + 'px)'
     
-    document.querySelector('html').classList.remove('overflow_hidden')
+        //---------------------------------------------------------------------------------------
 
-    document.querySelector('.lightbox_img').classList.remove('lightbox_img_rounded')
+                if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if (t < duration) { window.requestAnimationFrame(step) } }
+            }
 
-    arg.parentNode.parentNode.style = 'display: none';  
+            window.requestAnimationFrame(step)
+        }
+    }
+}
+
+function lightbox_close(arg) {
+
+    // As variáveis desta animação de fechar o lightbox estão na animação de abrir.
+
+    animation(time) // Unidade: s
+
+    function animation(duration) {
+
+        var  timestamp_firstRepetition
+            
+        function step(timestamp) {
+            
+            if (timestamp_firstRepetition === undefined) { timestamp_firstRepetition = timestamp  }
+            
+            var elapsed = timestamp - timestamp_firstRepetition
+
+            var elapsed_seconds = elapsed/1000 
+
+            if (isNaN(duration)) { var t = elapsed_seconds } else { var t = Math.min(elapsed_seconds, duration) }
+            
+    //---------------------------------------------------------------------------------------
+        
+        lightbox_.style.opacity = (1 - (t/time)) 
+        lightbox_.style.transform = 'translateY(' + ((t/time) * space) + 'px)'
+ 
+    //---------------------------------------------------------------------------------------
+
+            if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if (t < duration) { window.requestAnimationFrame(step) } }
+        
+            if (t === duration) {
+
+                document.querySelector('html').classList.remove('overflow_hidden')
+                document.querySelector('.lightbox_img').classList.remove('lightbox_img_rounded')
+                arg.parentNode.parentNode.style = 'display: none';  
+            }
+        }
+
+        window.requestAnimationFrame(step)
+    }
+    
 }
 
 } 
