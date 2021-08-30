@@ -210,12 +210,12 @@ function lightbox2(txt, img, width) {
 
 { 
     var lightbox_ = document.querySelector('.lightbox')
-    var space = 130 // Última alteração: -20
-    var time = 0.25 // Última alteração: -0.05
+    var dy = 130 // Última alteração: -20
+    var t = 0.25 // Última alteração: -0.05
 
     function lightbox_animation_show() {
 
-        animation(time) // Unidade: s
+        animation(t) // Unidade: s
 
         function animation(duration) {
 
@@ -229,17 +229,17 @@ function lightbox2(txt, img, width) {
 
                 var elapsed_seconds = elapsed/1000 
 
-                if (isNaN(duration)) { var t = elapsed_seconds } else { var t = Math.min(elapsed_seconds, duration) }
+                if (isNaN(duration)) { var $t = elapsed_seconds } else { var $t = Math.min(elapsed_seconds, duration) }
                 
         //---------------------------------------------------------------------------------------
             
-            lightbox_.style.opacity = (t/time)
-            lightbox_.style.transform = 'translateY(' + ((space * ((1/time) * t)) - space) + 'px)'
+            lightbox_.style.opacity = ($t/t)
+            lightbox_.style.transform = 'translateY(' + ((dy * ((1/t) * $t)) - dy) + 'px)'
     
         //---------------------------------------------------------------------------------------
 
-                if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if (t < duration) { window.requestAnimationFrame(step) } }
-            }
+                if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if ($t < duration) { window.requestAnimationFrame(step) } }
+            } 
 
             window.requestAnimationFrame(step)
         }
@@ -250,7 +250,7 @@ function lightbox_close(arg) {
 
     // As variáveis desta animação de fechar o lightbox estão na animação de abrir.
 
-    animation(time) // Unidade: s
+    animation(t) // Unidade: s
 
     function animation(duration) {
 
@@ -264,18 +264,19 @@ function lightbox_close(arg) {
 
             var elapsed_seconds = elapsed/1000 
 
-            if (isNaN(duration)) { var t = elapsed_seconds } else { var t = Math.min(elapsed_seconds, duration) }
+            if (isNaN(duration)) { var $t = elapsed_seconds } else { var $t = Math.min(elapsed_seconds, duration) }
             
     //---------------------------------------------------------------------------------------
         
-        lightbox_.style.opacity = (1 - (t/time)) 
-        lightbox_.style.transform = 'translateY(' + ((t/time) * space) + 'px)'
+        lightbox_.style.opacity = (1 - ($t/t)) 
+        lightbox_.style.transform = 'translateY(' + (($t/t) * dy) + 'px)'
  
     //---------------------------------------------------------------------------------------
 
-            if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if (t < duration) { window.requestAnimationFrame(step) } }
+            if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if ($t < duration) { window.requestAnimationFrame(step) } }
         
-            if (t === duration) {
+            // Nota: Tive que colocar este 'if' dentro da lógica da animação, pois o JS não espera a animação terminar para executar os códigos posteriores à animação.
+            if ($t === duration) { 
 
                 document.querySelector('html').classList.remove('overflow_hidden')
                 document.querySelector('.lightbox_img').classList.remove('lightbox_img_rounded')
