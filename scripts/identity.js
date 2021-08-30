@@ -483,12 +483,12 @@ document.querySelector('footer').innerHTML = `
     <!--<p>Follow us on:</p>-->
 
         <ul class="footer-icons">
-            <li><a href="mailto:support@company.com.br"><img src="../framework/images/icons/mail.svg" alt=""></a></li>  
-            <li><a href="#"><img src="../framework/images/icons/youtube.svg" alt=""></a></li> 
-            <li><a href="#"><img src="../framework/images/icons/twitch.svg" alt=""></a></li>
-            <li><a href="#"><img src="../framework/images/icons/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../framework/images/icons/facebook.svg" alt=""></a></li>  
-            <li><a href="#"><img src="../framework/images/icons/twitter.svg" alt=""></a></li> 
+            <li><a href="mailto:support@company.com.br"><img src="../framework/images/icons/mail.svg" alt="" width="38px" height="38px"></a></li>  
+            <li><a href="#"><img src="../framework/images/icons/youtube.svg" alt="" width="38px" height="38px"></a></li> 
+            <li><a href="#"><img src="../framework/images/icons/twitch.svg" alt="" width="38px" height="38px"></a></li>
+            <li><a href="#"><img src="../framework/images/icons/instagram.svg" alt="" width="38px" height="38px"></a></li>
+            <li><a href="#"><img src="../framework/images/icons/facebook.svg" alt="" width="38px" height="38px"></a></li>  
+            <li><a href="#"><img src="../framework/images/icons/twitter.svg" alt="" width="38px" height="38px"></a></li> 
         </ul>
 
     <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
