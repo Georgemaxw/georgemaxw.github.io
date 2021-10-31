@@ -217,13 +217,21 @@ a {
     text-decoration: none;
 } 
 
+a[href^="http"] {
+    color: $color_text;
+    text-decoration: underline;
+    background: url('../../images/icons/link_external.png') no-repeat 100% 0;   
+    background-size: 17px 17px; 
+    padding-right: 20px; 
+}
+
 @for $i from 1 through 6 { 
 	h#{$i} {
         font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
+        margin-right: $margin_horizontal;
         text-align: center; 
         // color: $color_theme;
         background: $color_text_hx;
@@ -309,8 +317,12 @@ strong, b, em, i {
     text-decoration: underline;
 }
 
-abbr[title] { 
-    text-decoration: underline dotted;
+abbr[title] {
+    /* text-decoration: underline dotted; */
+    text-decoration: underline;
+    background: url('../../images/icons/interrogation.svg') no-repeat 100% 0;    
+    background-size: 21px 21px;  
+    padding-right: 21px;
 }
 
 dfn, var, address, cite {
@@ -404,6 +416,17 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
 }
 
 .click {
+
+    color: $color_text;
+    text-decoration: underline;
+    background: url('../../images/icons/button.svg') no-repeat 100% 0;    
+    background-size: 21px 21px;  
+    padding-right: 23px; 
+    cursor: pointer;
+
+
+
+
     /*padding-left: 4px;
     padding-right: 4px;
     
@@ -411,6 +434,9 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     border-radius: 5px;
     color: hsl(0, 0%, 53%);
     background: hsl(0, 0%, 95%);*/
+
+    
+    /*
     background: $color_text_click;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -418,6 +444,7 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-fill-color: transparent;
     text-decoration: none !important;
     cursor: pointer;
+    */
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {

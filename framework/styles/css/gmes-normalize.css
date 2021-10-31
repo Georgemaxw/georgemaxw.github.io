@@ -1,7 +1,7 @@
 /* gmes-normalize.css */
 /*  
 ──────────────────────────────────────────────────────
-Redefinição Global Do Espaço Em Branco
+Spaces
 ────────────────────────────────────────────────────── */
 
 * { /* <- Talvez prejudique a performance. */
@@ -48,7 +48,7 @@ ul, ol {
 
 /*  
 ──────────────────────────────────────────────────────
-Padronizando Mídias
+Medias
 ────────────────────────────────────────────────────── */
 
 img, video {
@@ -57,7 +57,7 @@ img, video {
 
 /*
 ──────────────────────────────────────────────────────
-Padronizando Os Elementos De Formulário
+Forms
 ────────────────────────────────────────────────────── */
 
 button, input, select, textarea { 

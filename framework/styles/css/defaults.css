@@ -93,6 +93,14 @@ a {
   text-decoration: none;
 }
 
+a[href^="http"] {
+  color: black;
+  text-decoration: underline;
+  background: url("../../images/icons/link_external.png") no-repeat 100% 0;
+  background-size: 17px 17px;
+  padding-right: 20px;
+}
+
 h1 {
   font-size: calc(50rem - (5 * 1rem));
   margin-top: calc(7rem - 1rem + 16rem);
@@ -448,7 +456,11 @@ strong, b, em, i {
 }
 
 abbr[title] {
-  text-decoration: underline dotted;
+  /* text-decoration: underline dotted; */
+  text-decoration: underline;
+  background: url("../../images/icons/interrogation.svg") no-repeat 100% 0;
+  background-size: 21px 21px;
+  padding-right: 21px;
 }
 
 dfn, var, address, cite {
@@ -539,6 +551,12 @@ p.container_text {
 }
 
 .click {
+  color: black;
+  text-decoration: underline;
+  background: url("../../images/icons/button.svg") no-repeat 100% 0;
+  background-size: 21px 21px;
+  padding-right: 23px;
+  cursor: pointer;
   /*padding-left: 4px;
     padding-right: 4px;
     
@@ -546,13 +564,15 @@ p.container_text {
     border-radius: 5px;
     color: hsl(0, 0%, 53%);
     background: hsl(0, 0%, 95%);*/
-  background: url(../../images/colors/text_click.png) center/100% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  text-decoration: none !important;
-  cursor: pointer;
+  /*
+    background: $color_text_click;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-decoration: none !important;
+    cursor: pointer;
+    */
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {

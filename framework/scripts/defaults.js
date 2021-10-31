@@ -231,12 +231,12 @@ function lightbox2(txt, img, width) {
 
                 if (isNaN(duration)) { var $t = elapsed_seconds } else { var $t = Math.min(elapsed_seconds, duration) }
                 
-        //---------------------------------------------------------------------------------------
+                //---------------------------------------------------------------------------------------
+                    
+                    lightbox_.style.opacity = ($t/t)
+                    lightbox_.style.transform = 'translateY(' + ((dy * ((1/t) * $t)) - dy) + 'px)'
             
-            lightbox_.style.opacity = ($t/t)
-            lightbox_.style.transform = 'translateY(' + ((dy * ((1/t) * $t)) - dy) + 'px)'
-    
-        //---------------------------------------------------------------------------------------
+                //---------------------------------------------------------------------------------------
 
                 if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if ($t < duration) { window.requestAnimationFrame(step) } }
             } 
@@ -266,12 +266,12 @@ function lightbox_close(arg) {
 
             if (isNaN(duration)) { var $t = elapsed_seconds } else { var $t = Math.min(elapsed_seconds, duration) }
             
-    //---------------------------------------------------------------------------------------
-        
-        lightbox_.style.opacity = (1 - ($t/t)) 
-        lightbox_.style.transform = 'translateY(' + (($t/t) * dy) + 'px)'
- 
-    //---------------------------------------------------------------------------------------
+            //---------------------------------------------------------------------------------------
+            
+            lightbox_.style.opacity = (1 - ($t/t)) 
+            lightbox_.style.transform = 'translateY(' + (($t/t) * dy) + 'px)'
+    
+            //---------------------------------------------------------------------------------------
 
             if (isNaN(duration)) { window.requestAnimationFrame(step) } else { if ($t < duration) { window.requestAnimationFrame(step) } }
         
