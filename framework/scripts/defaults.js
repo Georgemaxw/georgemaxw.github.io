@@ -8,7 +8,7 @@ gmes-defaults.js
 TODO: Choice 
 ────────────────────────────────────────────────────── */
 
-{
+{ 
 
 var choice_anchorClicked = null
 var choice_anchorClickedBefore = null /* <- Variável necessária para 
@@ -146,11 +146,29 @@ TODO: Switch
 function switch_event(arg) {
 
     if(arg.classList.contains('disabled')) {
-        return
+        
+    } else {
+        arg.classList.toggle('on')
     }
+}
 
-    arg.classList.toggle('on')
-} 
+/*
+// Usando e.target fica bugado:
+
+var switchs = document.querySelectorAll('.switch')
+
+for (i = 0; i < switchs.length; i++) {
+    
+    switchs[i].onclick = function(e) {
+
+        if(e.target.parentNode.classList.contains('disabled')) {
+            return
+        }
+    
+        e.target.parentNode.classList.toggle('on')
+    }
+}
+*/
 
 /*  
 ──────────────────────────────────────────────────────
@@ -320,3 +338,89 @@ for(var i = 0; i < all_button_hide.length; i++) {
         all_button_hide[i].parentNode.style = 'display: block' 
     }
 } 
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Is-A-Number Function
+────────────────────────────────────────────────────── */
+
+function isAN(x) {
+
+    if(typeof x === 'bigint') {
+
+        return true
+    }
+
+    if(typeof x === 'string') {
+
+        while(x[0] === ' ') {
+
+            x = x.slice(1)
+        }
+
+        if(x === '') {
+            
+            return false
+        }
+    }
+
+    if(typeof x === 'boolean' || x instanceof Array || x === null) {
+
+        return false
+    }
+
+    return !isNaN(x)
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Image Filename as ALT Attribute Value
+────────────────────────────────────────────────────── */
+
+function imgsNamesAsAlts(imgs) {
+
+    for (i = 0; i < imgs.length; i++) {
+        
+        var img_src = imgs[i].src
+
+        var index_bar = img_src.indexOf("/")
+
+        while(index_bar !== -1) {
+
+            img_src = img_src.slice(index_bar + 1)
+
+            index_bar = img_src.indexOf("/")
+        }
+
+        var index_dot = img_src.indexOf(".")
+
+        img_src = img_src.slice(0, index_dot)
+
+        imgs[i].alt = img_src
+    }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Get Image Filename
+────────────────────────────────────────────────────── */
+
+function getImgName(img) {
+
+    var img_src = img.src
+
+    var index_bar = img_src.indexOf("/")
+
+    while(index_bar !== -1) {
+
+        img_src = img_src.slice(index_bar + 1)
+
+        index_bar = img_src.indexOf("/")
+    }
+
+    var index_dot = img_src.indexOf(".")
+
+    img_src = img_src.slice(0, index_dot)
+
+    return img_src   
+}
