@@ -456,11 +456,11 @@ strong, b, em, i {
 }
 
 abbr[title] {
-  /* text-decoration: underline dotted; */
-  text-decoration: underline;
+  /* text-decoration: underline dotted;*/
+  text-decoration: none;
   background: url("../../images/icons/interrogation.svg") no-repeat 100% 0;
   background-size: 21px 21px;
-  padding-right: 20px;
+  padding-right: 21px;
   cursor: pointer;
 }
 

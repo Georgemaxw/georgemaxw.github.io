@@ -16,7 +16,7 @@ $font_size: 19rem;
 $font_small: 16rem;
 $font_smaller: 14rem;
 $central_maxWidth: 800px; /* Padrão: 600-700px. */
-$margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
+$margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */  
 $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
@@ -163,7 +163,8 @@ html {
 }
  
 .central {
-    max-width: 1000px;
+    $central_maxWidth: 1000px; 
+    max-width: $central_maxWidth;
 }
 
 .presentation_float {
@@ -444,3 +445,224 @@ TODO: Types Table
 }
 
 */
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Table - Skills
+────────────────────────────────────────────────────── */
+
+.skills_types_switchs_box {
+
+    //display: flex;
+    //flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
+    $STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
+    grid-gap: 10px; 
+    gap: 10px;
+    //margin-left: calc(0.5 * #{$margin_horizontal});
+    //margin-right: calc(0.5 * #{$margin_horizontal});
+
+
+    .switch {
+
+        //width: calc(100% - 2 * #{$STSB_switchs_margins}) !important; 
+        padding: 10px;
+        margin: 0;
+        //margin: $STSB_switchs_margins;
+        background-color: hsl(193, 0%,99%);
+        border: 1px solid hsl(193, 0%,92%);
+        border-radius: 14px;
+        text-align: center;
+        //justify-content: center;
+    }
+
+    .switch > :nth-child(1) {
+        display: none;
+    }
+
+    .switch > :nth-child(2) {
+         
+        justify-content: center;
+        width: 100%;
+    }
+
+    .on {
+        background-color: hsl(193,100%,99%);
+        border: 1px solid hsl(193,100%,86%);
+    }
+
+    @media (min-width: 419px) {
+
+        .switch > :nth-child(2) {
+            
+            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+        }
+    }
+
+    @media (min-width: 400px) {
+
+        .switch {
+            //justify-content: flex-start;
+            //width: calc(50% - 2 * #{$STSB_switchs_margins}) !important; 
+        }
+    }
+/*  
+    @media (min-width: 560px) { .switch { width: calc(33% - 2 * #{$STSB_switchs_margins}) !important; } }
+    
+    @media (min-width: 720px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
+    
+    @media (min-width: 900px) { .switch { width: calc(20% - 2 * #{$STSB_switchs_margins}) !important; } }
+    */
+    //@media (min-width: 1040px) { .switch { width: calc(16.6% - 2 * #{$STSB_switchs_margins}) !important; } }
+}
+
+.skills_data_switchs_box {
+
+    margin-left: calc(0.5 * #{$margin_horizontal});
+    margin-right: calc(0.5 * #{$margin_horizontal});
+
+    $SDSB_switchs_margin_horizontal: 10px;
+
+    .switch {
+        width: calc(100% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; 
+        margin-left: $SDSB_switchs_margin_horizontal;
+        margin-right: $SDSB_switchs_margin_horizontal;
+    }
+
+    @media (min-width: 400px) {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .switch { width: calc(50% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+
+    @media (min-width: 550px) { .switch { width: calc(33% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+    
+    @media (min-width: 700px) { .switch { width: calc(25% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+    
+    @media (min-width: 850px) { .switch { width: calc(20% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+    
+    @media (min-width: 1000px) { .switch { width: calc(16.6% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+}
+
+.skills_table_box {
+
+    display: none;
+    
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+    
+    max-width: 100%;
+    //max-height: calc(100vh - #{$button_height} - (2 * #{$margin_vertical}));
+    max-height: calc(100vh - (2 * #{$button_height}));
+
+    //position: relative;
+    //bottom: 0;
+    margin: auto;
+    border: 1px solid $color_theme;
+    overflow-x: auto;
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        max-width: calc(100% - (2 * #{$margin_horizontal}));
+    }
+}
+
+.table_skills  {
+
+    //display: none;
+    margin: auto; 
+
+    tr {
+        display: none;
+    } 
+
+    tr:hover {
+        background-color: transparent;
+    }
+
+    tr:nth-of-type(1) {
+        display: table-row;
+        background-color: hsl(193,100%,98%);
+        outline: 1px solid $color_theme;
+
+        @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) { // <-- Isso evita bug em dispositivos móveis.
+            
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    tr:nth-of-type(1):hover { // Bug fix!
+        background-color: hsl(193,100%,98%);
+    }
+
+    tr td:nth-of-type(1) {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: $bg_html; 
+        //background: hsl(193,100%,98%);
+        outline: 1px solid $color_theme;
+    }
+    
+    /* 
+    // Isso evita um bug escroto de que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha!!! 
+    td > span { 
+        display: inline-flex; 
+    } 
+    */
+
+    // Além de deixar todas as células em uma única linha, isso evita um bug escroto de que quando tem mais de um 
+    // ícone de tipo, eles quebram em mais de uma linha!!! 
+    td > span { 
+        display: inline-block;
+        min-width: max-content; 
+    } 
+
+    .type_icon {
+        width: 32px;
+        height: 32px;
+        margin-top: 4px;
+    }
+
+    .cost {
+    }
+
+    .cost + .cost {
+        margin-left: 6px;
+    }
+
+    .cost.hp {
+        color: lime;
+    }
+
+    .cost.mp {
+        /* color: yellow;
+        text-shadow: 0 0 1px rgb(0, 0, 0); */
+
+        color: gold;
+    }
+
+    .cost.tp {
+        color: red;
+    }
+}
+    .skills_table_full {
+
+        position: fixed;
+        //top: 48px; bottom: 0; left: 0; right: 0;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: calc(#{$zIndex_nav} + 1);
+        max-width: 100%;
+        max-height: calc(100vh - (0 * #{$button_height}));
+        background-color: $bg_html;
+    }
+/* 
+──────────────────────────────────────────────────────
+TODO: ...
+────────────────────────────────────────────────────── */

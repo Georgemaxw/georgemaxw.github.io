@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- en -->
+<head>
+    <meta charset="utf-8">
+    <title>Tec OP</title>
+    <meta name = "apple-mobile-web-app-title" content = "Tec OP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="George Maxwell">
+    <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+    <link href='../framework/styles/css/normalize.css' rel='stylesheet'>  
+    <link href='../framework/styles/css/gmes-normalize.css' rel='stylesheet'>
+    <link href='../framework/styles/css/defaults.css' rel='stylesheet'><!---->
+    <link href='../styles/css/identity.css' rel='stylesheet'>
+<style>
+
+    .Name, .Types, .Physical, .Intensity, .Critical, .Effect, .Scope, .ACC, .plusTP, .SPD, .Costs, .Equips, 
+    .Extra1, .Extra2, .Extra3, .Extra4, .Extra5, .Extra6, .Description, .Notes {
+        display: none; 
+    }
+
+</style>
+</head>
+<body>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Header-nav
+    ────────────────────────────────────────────────────── --> 
+    
+    <header>
+
+        <div class="block-hack"></div> <!-- Hack necessário pois o Safari não aceita 'position: sticky'. -->
+
+        <div class="header-nav">
+            <div class="header-content">
+                <!-- <a href="" class="button-left"><img src="../images/icons/search.svg" alt="button"></a> -->
+
+                <nav class="nav">
+                
+                    <h1><a href="index.html" class="logo"><img src="../images/icons/logo.png" alt="Logo" width="22px" height="22px">Tec OP</a></h1>
+                     
+                    <a class="nav-menu-button">
+                        <img src="../framework/images/icons/menu.svg" alt="Menu button" width="48px" height="48px">
+                        <img src="../framework/images/icons/menu_close.svg" alt="Menu button" width="48px" height="48px">
+                        <!-- <span>×</span> -->
+                    </a>
+
+                    <div class="nav-menu">
+                        <!-- Conteúdo no JS! -->
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+ 
+        <a class="headerNav-button">
+            <img src="../framework/images/icons/headerNav.svg" alt="Header-nav button">  
+        </a>
+
+    </header>
+
+    <main>
+        
+        <article>
+
+            <div class="central">
+
+                <h2>Skills</h2>
+
+                <div class="skills_types_switchs_box offset">
+
+                    <div class="switch inverted" onclick="F_skills_types_all_switch(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/All.png" alt="">All</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Cybernetic.png" alt="">Cybernetic</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Digital.png" alt="">Digital</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Electric.png" alt="">Electric</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Fire.png" alt="">Fire</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Gravity.png" alt="">Gravity</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Laser.png" alt="">Laser</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Liquid Metal.png" alt="">Liquid Metal</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Machine.png" alt="">Machine</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Neutral Magic.png" alt="">Neutral Magic</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Plasma.png" alt="">Plasma</p>
+                    </div>
+
+                    <div class="switch inverted" onclick="F_skills_types_switchs(this); switch_event(this)"> 
+                        <div></div> 
+                        <p><img src="../images/game/icons/types/Vital Energy.png" alt="">Vital Energy</p>
+                    </div>
+
+                </div>
+
+                <div class="lb2"></div>
+
+                <div class="skills_data_switchs_box">
+
+                    <div class="switch" onclick="F_skills_data_all_switch(this); switch_event(this)">
+                        <div></div>
+                        <p>All</p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                    <div class="switch" onclick="F_skills_data_switchs(this); switch_event(this)">
+                        <div></div>
+                        <p><!-- Etiqueta --></p>
+                    </div>
+
+                </div>
+
+                <div class="lb2"></div>
+
+                <div id="go_to_table_01" class="button_hide_container container_organize"> 
+                    <div class="button_hide"></div>
+                    <p class="attention container_organize" style="text-align: center;">Click on the table to view it in full screen.</p>
+                </div> 
+
+                <div class="lb2"></div>
+
+                <div class="skills_table_box"> <!-- -->
+                    
+                    <table class="table_style_1 table_skills">
+    <!--  
+                        <colgroup>
+                            <col><col style="width: 123px;"><col><col><col>
+                            <col><col><col><col><col>
+                            <col><col><col><col><col> 
+                            <col><col><col><col>
+                        </colgroup>
+    -->
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Types</th>
+
+                            <th scope="col">Physical</th> <!-- Category -->
+                            <th scope="col">Intensity</th>
+                            <th scope="col">Critical</th>
+                            <th scope="col">Effect</th>
+                            <th scope="col">Scope</th>
+
+                            <th scope="col">ACC</th>
+                            <th scope="col">plusTP</th>
+                            <th scope="col">SPD</th>
+                            <th scope="col">Costs</th>
+                            <th scope="col">Equips</th>
+
+                            <th scope="col">Extra1</th>
+                            <th scope="col">Extra2</th>
+                            <th scope="col">Extra3</th>
+                            <th scope="col">Extra4</th>
+                            <th scope="col">Extra5</th>
+                            <th scope="col">Extra6</th>
+
+                            <th scope="col">Description</th>
+                            <th scope="col">Notes</th>
+                        </tr>
+
+                        <tr>
+                            <td><span>Backup</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span></span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span></span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>Bio Generator</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span></span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <span class="cost hp">20</span><span class="cost mp">10</span><span class="cost tp">10</span></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span></span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>Blocking Filter</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span>Activates a filter on the visor that blocks the opponent's appearance and sounds.</span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>Mainframe</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span>+TEC</span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span></span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>Update</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span>+TEC</span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <span class="cost hp">55</span><!-- <span class="cost mp"></span><span class="cost tp"></span> --></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span></span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span>Shortware</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt="">
+                                                <img class="type_icon" src="../images/game/icons/types/Electric.png" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span></span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">20</span><span class="cost tp">20</span></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span></span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+
+                    </table>
+                
+                </div> <!-- -->
+
+                <div class="lb2"></div>
+
+            </div>
+            
+        </article>
+
+        <!--
+        <hr>
+
+        <aside>
+            <div class="central">
+                <p>&lt;aside></p>
+            </div>
+        </aside>
+        -->
+
+    </main>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Footer
+    ────────────────────────────────────────────────────── --> 
+
+    <footer></footer>
+
+    <script src="../framework/scripts/defaults.js"></script>
+    <script src="../scripts/identity.js"></script>
+</body> 
+</html>
+
+<!-- 
+
+    Emmets: Element#ID_$@I.Class_1.Class_2[Atrib_1=... Atrib_2]{Content $}*N 
+    
+    hsla(0, 100%, 50%, 0.)
+    
+    Referências De Entidade de Caracteres: 
+    Espaço: &nbsp; | <: &lt;
+    
+    Fontes Seguras da Web: 
+    font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
+    
+    ABCDE FGHIJ KLMNO PQRST UVWXYZ.  Texto genérico de demonstração.  
+
+    Abcde fghij klmno pqrst uvwxyz.  Texto genérico de demonstração 2. 
+    
+    Configuração Do Aplicativo Textastic:
+    Font: Menlo; Font Size: 11 pt 
+
+--> 

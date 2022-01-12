@@ -282,3 +282,209 @@ TODO: Types Table
 }
 
 */
+/* 
+──────────────────────────────────────────────────────
+TODO: Table - Skills
+────────────────────────────────────────────────────── */
+.skills_types_switchs_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
+  grid-gap: 10px;
+  gap: 10px;
+  /*  
+    @media (min-width: 560px) { .switch { width: calc(33% - 2 * calc(0.5 * 20px)) !important; } }
+    
+    @media (min-width: 720px) { .switch { width: calc(25% - 2 * calc(0.5 * 20px)) !important; } }
+    
+    @media (min-width: 900px) { .switch { width: calc(20% - 2 * calc(0.5 * 20px)) !important; } }
+    */
+}
+
+.skills_types_switchs_box .switch {
+  padding: 10px;
+  margin: 0;
+  background-color: #fcfcfc;
+  border: 1px solid #ebebeb;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.skills_types_switchs_box .switch > :nth-child(1) {
+  display: none;
+}
+
+.skills_types_switchs_box .switch > :nth-child(2) {
+  justify-content: center;
+  width: 100%;
+}
+
+.skills_types_switchs_box .on {
+  background-color: #fafeff;
+  border: 1px solid #b8f0ff;
+}
+
+@media (min-width: 419px) {
+  .skills_types_switchs_box .switch > :nth-child(2) {
+    width: max-content;
+    -moz-width: fit-content;
+    width: fit-content;
+    /* <- Declarações necessárias 
+            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  }
+}
+
+.skills_data_switchs_box {
+  margin-left: calc(0.5 * 20px);
+  margin-right: calc(0.5 * 20px);
+}
+
+.skills_data_switchs_box .switch {
+  width: calc(100% - 2 * 10px) !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (min-width: 400px) {
+  .skills_data_switchs_box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skills_data_switchs_box .switch {
+    width: calc(50% - 2 * 10px) !important;
+  }
+}
+
+@media (min-width: 550px) {
+  .skills_data_switchs_box .switch {
+    width: calc(33% - 2 * 10px) !important;
+  }
+}
+
+@media (min-width: 700px) {
+  .skills_data_switchs_box .switch {
+    width: calc(25% - 2 * 10px) !important;
+  }
+}
+
+@media (min-width: 850px) {
+  .skills_data_switchs_box .switch {
+    width: calc(20% - 2 * 10px) !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .skills_data_switchs_box .switch {
+    width: calc(16.6% - 2 * 10px) !important;
+  }
+}
+
+.skills_table_box {
+  display: none;
+  width: max-content;
+  -moz-width: fit-content;
+  width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  max-width: 100%;
+  max-height: calc(100vh - (2 * 48px));
+  margin: auto;
+  border: 1px solid DeepSkyBlue;
+  overflow-x: auto;
+}
+
+@media (min-width: 501px) {
+  .skills_table_box {
+    max-width: calc(100% - (2 * 20px));
+  }
+}
+
+.table_skills {
+  margin: auto;
+  /* 
+    // Isso evita um bug escroto de que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha!!! 
+    td > span { 
+        display: inline-flex; 
+    } 
+    */
+}
+
+.table_skills tr {
+  display: none;
+}
+
+.table_skills tr:hover {
+  background-color: transparent;
+}
+
+.table_skills tr:nth-of-type(1) {
+  display: table-row;
+  background-color: #f5fdff;
+  outline: 1px solid DeepSkyBlue;
+}
+
+@media (pointer: fine) and (min-width: 501px) and (min-height: 501px) {
+  .table_skills tr:nth-of-type(1) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.table_skills tr:nth-of-type(1):hover {
+  background-color: #f5fdff;
+}
+
+.table_skills tr td:nth-of-type(1) {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  outline: 1px solid DeepSkyBlue;
+}
+
+.table_skills td > span {
+  display: inline-block;
+  min-width: max-content;
+}
+
+.table_skills .type_icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+}
+
+.table_skills .cost + .cost {
+  margin-left: 6px;
+}
+
+.table_skills .cost.hp {
+  color: lime;
+}
+
+.table_skills .cost.mp {
+  /* color: yellow;
+        text-shadow: 0 0 1px rgb(0, 0, 0); */
+  color: gold;
+}
+
+.table_skills .cost.tp {
+  color: red;
+}
+
+.skills_table_full {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: calc(1000 + 1);
+  max-width: 100%;
+  max-height: calc(100vh - (0 * 48px));
+  background-color: white;
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: ...
+────────────────────────────────────────────────────── */

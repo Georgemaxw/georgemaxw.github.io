@@ -502,5 +502,348 @@ document.querySelector('footer').innerHTML = `
 
 /* 
 ──────────────────────────────────────────────────────
+TODO: Table - Skills
+────────────────────────────────────────────────────── */
+
+var type_icon_imgs = document.querySelectorAll('img.type_icon')
+
+imgsNamesAsAlts(type_icon_imgs)
+
+/*  
+────────────────────────────
+TODO:    > Variables Used In 2+ Topics
+──────────────────────────── */
+
+var skills_table_box = document.querySelector('.skills_table_box')
+
+var table_skills_lines = document.querySelectorAll('.table_skills tr')
+
+var table_skills_ths = document.querySelectorAll('.table_skills th')
+
+var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch')
+
+var SDSB_switchs = document.querySelectorAll('.skills_data_switchs_box .switch')
+
+/*  
+────────────────────────────
+TODO:    > Add Classes Of <th> names
+                    In Table Cells
+──────────────────────────── */
+
+for (i = 0; i < table_skills_ths.length; i++) {
+
+    var table_skills_th_content = table_skills_ths[i].textContent
+    
+    table_skills_ths[i].classList.add(table_skills_th_content)
+
+    for (i2 = 1; i2 < table_skills_lines.length; i2++) {
+
+        if(table_skills_lines[i2]) {
+
+            var tds = table_skills_lines[i2].querySelectorAll(':scope td')
+
+            tds[i].classList.add(table_skills_th_content)
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:    > Skills Switchs
+──────────────────────────── */
+
+/*  
+────────────────────────────
+TODO:        >> Initial Settings
+──────────────────────────── */
+
+var quantity_of_types_activated = 0
+
+for (i = 0; i < table_skills_lines.length; i++) {
+
+    table_skills_lines[i].activated_skill_counter = 0
+}
+
+imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
+
+/*  
+────────────────────────────
+TODO:        >> Skills Types Switchs
+──────────────────────────── */
+
+function F_skills_types_switchs(el) {
+
+    for (i = 1; i < table_skills_lines.length; i++) {
+        
+        var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
+
+        var this_type = getImgName(el.querySelector('img'))
+
+        for (i2 = 0; i2 < imgs_type.length; i2++) {
+
+            if(getImgName(imgs_type[i2]) === this_type) {
+
+                if(el.classList.contains('on')) {
+
+                    quantity_of_types_activated--
+                    table_skills_lines[i].activated_skill_counter--
+                } else {
+                    quantity_of_types_activated++
+                    table_skills_lines[i].activated_skill_counter++
+                }
+
+                if(table_skills_lines[i].activated_skill_counter >= 1) {
+
+                    table_skills_lines[i].style.display = 'table-row'
+                } else {
+                    table_skills_lines[i].style.display = 'none'
+                }
+
+                if(quantity_of_types_activated >= 1) {
+
+                    document.querySelector('.skills_table_box').style.display = 'block'
+                } else {
+                    document.querySelector('.skills_table_box').style.display = 'none'
+                }/**/
+            }
+        }            
+    }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> 'All' Switch
+──────────────────────────── */
+
+function F_skills_types_all_switch(el) {
+
+    if (el.classList.contains('on')) {
+        
+        for (ix = 1; ix < STSB_switchs.length; ix++) {
+
+            if (STSB_switchs[ix].classList.contains('on')) {
+                
+                F_skills_types_switchs(STSB_switchs[ix])
+                switch_event(STSB_switchs[ix]) 
+            }
+        }
+    } else {
+        
+        for (ix = 1; ix < STSB_switchs.length; ix++) {
+
+            if (!STSB_switchs[ix].classList.contains('on')) {
+                
+                F_skills_types_switchs(STSB_switchs[ix])
+                switch_event(STSB_switchs[ix]) 
+            }
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Skills Data Switchs
+──────────────────────────── */
+
+/*  
+────────────────────────────
+TODO:            >>> Labels
+──────────────────────────── */
+
+for (i = 1; i < SDSB_switchs.length; i++) {
+
+    SDSB_switchs[i].querySelector(':scope > p').textContent = table_skills_ths[i - 1].textContent
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Logic
+──────────────────────────── */
+
+function F_skills_data_switchs(el) {
+
+    if(!el.classList.contains('disabled')) {
+
+                for (i = 0; i < SDSB_switchs.length; i++) {
+
+            if (el === SDSB_switchs[i]) {
+
+                var SDSB_switchs_labelSwitch = SDSB_switchs[i].querySelector(':scope > p').textContent
+                    
+                var SDSB_switchs_indexSwitch = i - 1
+            }
+        }
+
+        if (el.classList.contains('on')) {
+            
+            table_skills_ths[SDSB_switchs_indexSwitch].style.display = 'none'
+
+            for (i = 1; i < table_skills_lines.length; i++) {
+            
+                table_skills_lines[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'none'
+            }
+        } else {
+            table_skills_ths[SDSB_switchs_indexSwitch].style.display = 'table-cell'
+
+            for (i = 1; i < table_skills_lines.length; i++) {
+            
+                table_skills_lines[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'table-cell'
+            }
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:                >>>> 'All' Switch
+──────────────────────────── */
+
+function F_skills_data_all_switch(el) {
+
+    if (el.classList.contains('on')) {
+        
+        for (ix = 1; ix < SDSB_switchs.length; ix++) {
+
+            if (SDSB_switchs[ix].classList.contains('on')) {
+                
+                if (!hidden_data_indexes.some(function(item) { return item === ix })) {
+                    
+                    F_skills_data_switchs(SDSB_switchs[ix])
+                    switch_event(SDSB_switchs[ix]) 
+                }
+            }
+        }
+    } else {
+        
+        for (ix = 1; ix < SDSB_switchs.length; ix++) {
+
+            if (!SDSB_switchs[ix].classList.contains('on')) {
+                
+                if (!hidden_data_indexes.some(function(item) { return item === ix })) {
+                    
+                    F_skills_data_switchs(SDSB_switchs[ix])
+                    switch_event(SDSB_switchs[ix]) 
+                }
+            }
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Initial Setting
+──────────────────────────── */
+
+/*  
+────────────────────────────
+TODO:                >>>> Enableds Data
+──────────────────────────── */
+
+var enabled_data = ['Name', 'Types', 'Effect', 'Notes']
+
+var enabled_data_indexes = [ ]
+
+for (i = 0; i < enabled_data.length; i++) {
+
+    for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
+
+        if (enabled_data[i] === SDSB_switchs[i2].querySelector(':scope > p').textContent) {
+
+            enabled_data_indexes.push(i2)
+        }
+    }
+}
+
+for (ix = 0; ix < enabled_data_indexes.length; ix++) {
+
+    F_skills_data_switchs(SDSB_switchs[enabled_data_indexes[ix]])
+    switch_event(SDSB_switchs[enabled_data_indexes[ix]])
+}
+
+/*  
+────────────────────────────
+TODO:                >>>> Name Data disabled
+──────────────────────────── */
+
+for (i = 0; i < SDSB_switchs.length; i++) {
+
+    if (SDSB_switchs[i].querySelector(':scope > p').textContent === 'Name') {
+
+        SDSB_switchs[i].classList.add('disabled')
+    }
+}
+
+/*  
+────────────────────────────
+TODO:                >>>> Hidden Data Switchs
+──────────────────────────── */
+
+var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
+
+var hidden_data_indexes = [ ]
+
+for (i = 0; i < hidden_data_switchs.length; i++) {
+
+    for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
+
+        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope > p').textContent) {
+
+            SDSB_switchs[i2].style.display = 'none'
+
+            hidden_data_indexes.push(i2)
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:    > Replace Table Header 
+                'plusTP' With '+TP'
+──────────────────────────── */
+
+// Replace In Table Header:
+
+for (i = 0; i < table_skills_ths.length; i++) {
+
+    if(table_skills_ths[i].textContent.slice(0, 4) === 'plus') {
+
+        table_skills_ths[i].textContent = table_skills_ths[i].textContent.replace('plus', '+')
+    }
+}
+
+// Replace In Data Switchs Labels:
+
+for (i = 0; i < SDSB_switchs.length; i++) {
+
+    if(SDSB_switchs[i].querySelector(':scope > p').textContent.slice(0, 4) === 'plus') {
+
+        SDSB_switchs[i].querySelector(':scope > p').textContent = SDSB_switchs[i].querySelector(':scope > p').textContent.replace('plus', '+')
+    }
+}
+
+/*  
+────────────────────────────
+TODO:    > Go To Table
+──────────────────────────── */
+
+// console.log(skills_table_box.getBoundingClientRect())
+
+skills_table_box.addEventListener('click', function() { 
+    
+    //scroll({ top: skills_table_box.getBoundingClientRect().y  - 72, left: 0, behavior: 'smooth' })
+
+    skills_table_box.classList.toggle('skills_table_full')
+    document.body.classList.toggle('overflow_hidden')
+})
+
+/*  
+────────────────────────────
+TODO:    > ...
+──────────────────────────── */
+
+
+
+/* 
+──────────────────────────────────────────────────────
 TODO: ...
 ────────────────────────────────────────────────────── */
