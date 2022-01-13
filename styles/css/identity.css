@@ -496,10 +496,6 @@ TODO: Table - Skills
   outline: 1px solid DeepSkyBlue;
 }
 
-.table_skills th, .table_skills td {
-  min-width: max-content;
-}
-
 .table_skills td > span {
   display: inline-block;
   min-width: max-content;
