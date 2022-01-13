@@ -652,7 +652,7 @@ TODO:            >>> Labels
 
 for (i = 1; i < SDSB_switchs.length; i++) {
 
-    SDSB_switchs[i].querySelector(':scope > p').textContent = table_skills_ths[i - 1].textContent
+    SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent = table_skills_ths[i - 1].textContent
 }
 
 /*  
@@ -668,7 +668,7 @@ function F_skills_data_switchs(el) {
 
             if (el === SDSB_switchs[i]) {
 
-                var SDSB_switchs_labelSwitch = SDSB_switchs[i].querySelector(':scope > p').textContent
+                var SDSB_switchs_labelSwitch = SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent
                     
                 var SDSB_switchs_indexSwitch = i - 1
             }
@@ -736,28 +736,64 @@ TODO:            >>> Initial Setting
 
 /*  
 ────────────────────────────
-TODO:                >>>> Enableds Data
+TODO:                >>>> Activate 'All'
+                                        Type switch
+──────────────────────────── 
+
+for (ii = 0; ii < STSB_switchs.length; ii++) {
+
+    if (STSB_switchs[ii].querySelector(':scope > :nth-child(2)').textContent === 'All') {
+
+        F_skills_types_all_switch(STSB_switchs[ii])
+        switch_event(STSB_switchs[ii])
+    }
+}*/
+
+
+
+STSB_switchs.forEach(function (item) {
+
+    if (item.querySelector(':scope > :nth-child(2)').textContent === 'All') {
+
+        F_skills_types_all_switch(item)
+        switch_event(item)
+    }
+    
+})
+
+
+
+/*
+collection.forEach(function (item) {
+
+    item
+})
+*/
+
+/*  
+────────────────────────────
+TODO:                >>>> Activateds Data
 ──────────────────────────── */
 
-var enabled_data = ['Name', 'Types', 'Effect', 'Notes']
+var activated_data = ['Name', 'Types', 'Effect', 'Notes']
 
-var enabled_data_indexes = [ ]
+var activated_data_indexes = [ ]
 
-for (i = 0; i < enabled_data.length; i++) {
+for (i = 0; i < activated_data.length; i++) {
 
-    for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
+    for (i2 = 0; i2 < SDSB_switchs.length; i2++) { 
 
-        if (enabled_data[i] === SDSB_switchs[i2].querySelector(':scope > p').textContent) {
+        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope > :nth-child(2)').textContent) {
 
-            enabled_data_indexes.push(i2)
+            activated_data_indexes.push(i2)
         }
     }
 }
 
-for (ix = 0; ix < enabled_data_indexes.length; ix++) {
+for (ix = 0; ix < activated_data_indexes.length; ix++) {
 
-    F_skills_data_switchs(SDSB_switchs[enabled_data_indexes[ix]])
-    switch_event(SDSB_switchs[enabled_data_indexes[ix]])
+    F_skills_data_switchs(SDSB_switchs[activated_data_indexes[ix]])
+    switch_event(SDSB_switchs[activated_data_indexes[ix]])
 }
 
 /*  
@@ -767,7 +803,7 @@ TODO:                >>>> Name Data disabled
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if (SDSB_switchs[i].querySelector(':scope > p').textContent === 'Name') {
+    if (SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent === 'Name') {
 
         SDSB_switchs[i].classList.add('disabled')
     }
@@ -786,7 +822,7 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
 
-        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope > p').textContent) {
+        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope > :nth-child(2)').textContent) {
 
             SDSB_switchs[i2].style.display = 'none'
 
@@ -815,9 +851,9 @@ for (i = 0; i < table_skills_ths.length; i++) {
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if(SDSB_switchs[i].querySelector(':scope > p').textContent.slice(0, 4) === 'plus') {
+    if(SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent.slice(0, 4) === 'plus') {
 
-        SDSB_switchs[i].querySelector(':scope > p').textContent = SDSB_switchs[i].querySelector(':scope > p').textContent.replace('plus', '+')
+        SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent = SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent.replace('plus', '+')
     }
 }
 
