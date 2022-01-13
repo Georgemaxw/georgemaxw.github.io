@@ -598,8 +598,12 @@ TODO: Table - Skills
 
 .table_skills  {
 
-    //display: none;
-        min-width: max-content; 
+    min-width: max-content;  /*   Esta única declaração possui 3 utilidades:
+    - Deixa todas as células em uma única linha.
+    - Corrige um bug que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha.
+    - Corrige um bug que deixa a largura da caixa da tabela maior do que a tabela se a tabela não tiver 
+    largura suficiente para cobrir toda a largura da coluna da página em que está. */
+
     margin: auto; 
 
     tr {
@@ -652,7 +656,7 @@ TODO: Table - Skills
     // ícone de tipo, eles quebram em mais de uma linha!!! Isso buga no mobile.
     /*td > span { 
         display: inline-block;
-        min-width: max-content;
+        min-width: max-content; 
     }  */
 
     .type_icon {
@@ -689,7 +693,8 @@ TODO: Table - Skills
         //top: 48px; bottom: 0; left: 0; right: 0;
         top: 0; bottom: 0; left: 0; right: 0;
         z-index: calc(#{$zIndex_nav} + 1);
-        max-width: 100%;
+        width: 100vw;
+        max-width: 100vw;
         max-height: calc(100vh - (0 * #{$button_height}));
         background-color: $bg_html;
     }
