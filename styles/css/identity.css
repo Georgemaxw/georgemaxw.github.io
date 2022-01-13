@@ -286,36 +286,72 @@ TODO: Types Table
 ──────────────────────────────────────────────────────
 TODO: Table - Skills
 ────────────────────────────────────────────────────── */
+/*  
+.skills_types_switchs_box { // Feito com Grid (Buga no celular!)
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
+    grid-gap: 10px; 
+    gap: 10px;
+
+    .switch {
+
+        padding: 10px;
+        margin: 0;
+        background-color: hsl(193, 0%,99%);
+        border: 1px solid hsl(193, 0%,92%);
+        border-radius: 14px;
+    }
+
+    .switch > :nth-child(1) {
+        display: none;
+    }
+
+    .switch > :nth-child(2) {
+         
+        justify-content: center;
+        width: 100%;
+    }
+
+    .on {
+        background-color: hsl(193,100%,99%);
+        border: 1px solid hsl(193,100%,86%);
+    }
+
+    @media (min-width: 419px) {
+
+        .switch > :nth-child(2) {
+            
+            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content;*/
+/* <- Declarações necessárias 
+            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+/*  
+        }
+    }
+}*/
 .skills_types_switchs_box {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
-  grid-gap: 10px;
-  gap: 10px;
-  /*  
-    @media (min-width: 560px) { .switch { width: calc(33% - 2 * calc(0.5 * 20px)) !important; } }
-    
-    @media (min-width: 720px) { .switch { width: calc(25% - 2 * calc(0.5 * 20px)) !important; } }
-    
-    @media (min-width: 900px) { .switch { width: calc(20% - 2 * calc(0.5 * 20px)) !important; } }
-    */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(0.5 * 20px);
+  margin-right: calc(0.5 * 20px);
 }
 
 .skills_types_switchs_box .switch {
+  width: calc(100% - 2 * calc(0.5 * 20px)) !important;
   padding: 10px;
-  margin: 0;
+  margin: calc(0.5 * 20px);
   background-color: #fcfcfc;
   border: 1px solid #ebebeb;
   border-radius: 14px;
-  text-align: center;
+  justify-content: center;
+}
+
+.skills_types_switchs_box .switch > :nth-child(2) img {
+  margin-right: 11px;
 }
 
 .skills_types_switchs_box .switch > :nth-child(1) {
   display: none;
-}
-
-.skills_types_switchs_box .switch > :nth-child(2) {
-  justify-content: center;
-  width: 100%;
 }
 
 .skills_types_switchs_box .on {
@@ -323,13 +359,28 @@ TODO: Table - Skills
   border: 1px solid #b8f0ff;
 }
 
-@media (min-width: 419px) {
-  .skills_types_switchs_box .switch > :nth-child(2) {
-    width: max-content;
-    -moz-width: fit-content;
-    width: fit-content;
-    /* <- Declarações necessárias 
-            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+@media (min-width: 428px) {
+  .skills_types_switchs_box .switch {
+    justify-content: flex-start;
+    width: calc(50% - 2 * calc(0.5 * 20px)) !important;
+  }
+}
+
+@media (min-width: 615px) {
+  .skills_types_switchs_box .switch {
+    width: calc(33% - 2 * calc(0.5 * 20px)) !important;
+  }
+}
+
+@media (min-width: 805px) {
+  .skills_types_switchs_box .switch {
+    width: calc(25% - 2 * calc(0.5 * 20px)) !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .skills_types_switchs_box .switch {
+    width: calc(20% - 2 * calc(0.5 * 20px)) !important;
   }
 }
 

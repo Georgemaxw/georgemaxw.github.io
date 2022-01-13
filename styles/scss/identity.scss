@@ -451,30 +451,21 @@ TODO: Types Table
 TODO: Table - Skills
 ────────────────────────────────────────────────────── */
 
-.skills_types_switchs_box {
+/*  
+.skills_types_switchs_box { // Feito com Grid (Buga no celular!)
 
-    //display: flex;
-    //flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
-    $STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
     grid-gap: 10px; 
     gap: 10px;
-    //margin-left: calc(0.5 * #{$margin_horizontal});
-    //margin-right: calc(0.5 * #{$margin_horizontal});
-
 
     .switch {
 
-        //width: calc(100% - 2 * #{$STSB_switchs_margins}) !important; 
         padding: 10px;
         margin: 0;
-        //margin: $STSB_switchs_margins;
         background-color: hsl(193, 0%,99%);
         border: 1px solid hsl(193, 0%,92%);
         border-radius: 14px;
-        text-align: center;
-        //justify-content: center;
     }
 
     .switch > :nth-child(1) {
@@ -496,25 +487,60 @@ TODO: Table - Skills
 
         .switch > :nth-child(2) {
             
-            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content;*/ /* <- Declarações necessárias 
+            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */ /*  
+        }
+    }
+}*/
+
+.skills_types_switchs_box { // Feito com Flexbox
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(0.5 * #{$margin_horizontal});
+    margin-right: calc(0.5 * #{$margin_horizontal});
+
+    $STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
+
+    .switch {
+
+        width: calc(100% - 2 * #{$STSB_switchs_margins}) !important; 
+        padding: 10px;
+        margin: $STSB_switchs_margins;
+        background-color: hsl(193, 0%,99%);
+        border: 1px solid hsl(193, 0%,92%);
+        border-radius: 14px;
+        justify-content: center;
+
+        > :nth-child(2) img { // Isso evita bug leve.
+
+            margin-right: 11px;
         }
     }
 
-    @media (min-width: 400px) {
+    .switch > :nth-child(1) {
+        display: none;
+    }
+
+    .on {
+        background-color: hsl(193,100%,99%);
+        border: 1px solid hsl(193,100%,86%);
+    }
+
+    @media (min-width: 428px) {
 
         .switch {
-            //justify-content: flex-start;
-            //width: calc(50% - 2 * #{$STSB_switchs_margins}) !important; 
+            justify-content: flex-start;
+            width: calc(50% - 2 * #{$STSB_switchs_margins}) !important; 
         }
     }
-/*  
-    @media (min-width: 560px) { .switch { width: calc(33% - 2 * #{$STSB_switchs_margins}) !important; } }
+
+    @media (min-width: 615px) { .switch { width: calc(33% - 2 * #{$STSB_switchs_margins}) !important; } }
     
-    @media (min-width: 720px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
+    @media (min-width: 805px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
     
     @media (min-width: 900px) { .switch { width: calc(20% - 2 * #{$STSB_switchs_margins}) !important; } }
-    */
+    
     //@media (min-width: 1040px) { .switch { width: calc(16.6% - 2 * #{$STSB_switchs_margins}) !important; } }
 }
 
