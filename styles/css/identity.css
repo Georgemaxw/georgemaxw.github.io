@@ -458,7 +458,10 @@ TODO: Table - Skills
         display: inline-flex; 
     } 
     */
-  /* */
+  /*td > span { 
+        display: inline-block;
+        min-width: max-content;
+    }  */
 }
 
 .table_skills tr {
@@ -494,11 +497,6 @@ TODO: Table - Skills
   left: 0;
   background: white;
   outline: 1px solid DeepSkyBlue;
-}
-
-.table_skills td > span {
-  display: inline-block;
-  min-width: max-content;
 }
 
 .table_skills .type_icon {
