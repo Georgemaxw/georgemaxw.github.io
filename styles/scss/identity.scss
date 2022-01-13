@@ -527,7 +527,7 @@ TODO: Table - Skills
         border: 1px solid hsl(193,100%,86%);
     }
 
-    @media (min-width: 428px) {
+    @media (min-width: 370px /* 428px */) {
 
         .switch {
             justify-content: flex-start;
@@ -535,7 +535,7 @@ TODO: Table - Skills
         }
     }
 
-    @media (min-width: 615px) { .switch { width: calc(33% - 2 * #{$STSB_switchs_margins}) !important; } }
+    @media (min-width: 540px /* 615px */) { .switch { width: calc(33% - 2 * #{$STSB_switchs_margins}) !important; } }
     
     @media (min-width: 805px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
     
@@ -645,10 +645,10 @@ TODO: Table - Skills
 
     // Além de deixar todas as células em uma única linha, isso evita um bug escroto de que quando tem mais de um 
     // ícone de tipo, eles quebram em mais de uma linha!!! 
-    td > span { 
+    /* td > span { 
         display: inline-block;
         min-width: max-content; 
-    } 
+    } */
 
     .type_icon {
         width: 32px;

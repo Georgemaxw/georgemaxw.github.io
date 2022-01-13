@@ -359,14 +359,14 @@ TODO: Table - Skills
   border: 1px solid #b8f0ff;
 }
 
-@media (min-width: 428px) {
+@media (min-width: 370px) {
   .skills_types_switchs_box .switch {
     justify-content: flex-start;
     width: calc(50% - 2 * calc(0.5 * 20px)) !important;
   }
 }
 
-@media (min-width: 615px) {
+@media (min-width: 540px) {
   .skills_types_switchs_box .switch {
     width: calc(33% - 2 * calc(0.5 * 20px)) !important;
   }
@@ -457,6 +457,10 @@ TODO: Table - Skills
         display: inline-flex; 
     } 
     */
+  /* td > span { 
+        display: inline-block;
+        min-width: max-content; 
+    } */
 }
 
 .table_skills tr {
@@ -492,11 +496,6 @@ TODO: Table - Skills
   left: 0;
   background: white;
   outline: 1px solid DeepSkyBlue;
-}
-
-.table_skills td > span {
-  display: inline-block;
-  min-width: max-content;
 }
 
 .table_skills .type_icon {
