@@ -599,6 +599,7 @@ TODO: Table - Skills
 .table_skills  {
 
     //display: none;
+        min-width: max-content; 
     margin: auto; 
 
     tr {
@@ -643,7 +644,7 @@ TODO: Table - Skills
     } 
     */
 
-    td { 
+    th, td { 
         min-width: max-content; 
     }
 

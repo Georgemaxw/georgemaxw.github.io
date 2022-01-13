@@ -450,6 +450,7 @@ TODO: Table - Skills
 }
 
 .table_skills {
+  min-width: max-content;
   margin: auto;
   /* 
     // Isso evita um bug escroto de que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha!!! 
@@ -495,7 +496,7 @@ TODO: Table - Skills
   outline: 1px solid DeepSkyBlue;
 }
 
-.table_skills td {
+.table_skills th, .table_skills td {
   min-width: max-content;
 }
 
