@@ -130,6 +130,7 @@ document.querySelector('.nav-menu').innerHTML = `
             <li><a href="#">History</a></li>
             <li><a href="#">Characters</a></li>
             <li><a href="types.html">Types</a></li>
+            <li><a href="skills.html">Skills</a></li>
         </ul>
     </div>
 
@@ -160,7 +161,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul>
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 2.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 2.2</span></a></li>-->
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.5</span></a></li>
@@ -172,9 +173,9 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">L3</a>
 
     <div>
-        <ul class="nav_compact_subOptions_textBelow">
+        <ul class="nav_compact_sub_options_text_below">
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 3.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 3.2</span></a></li>-->
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.3</span></a></li>
             <!--<li><a href="#">Link 3.4</a></li>-->
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.5</span></a></li>
@@ -186,9 +187,9 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">L4</a>
 
     <div>
-        <ul class="nav_expanded_subOptions_h nav_expanded_subOptions_textBelow">
+        <ul class="nav_expanded_sub_options_h nav_expanded_sub_options_text_below">
             <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 4.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 4.2</span></a></li>-->
             <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.3</span></a></li>
            <!-- <li><a href="#">Link 4.4</a></li>-->
             <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.5</span></a></li>
@@ -201,9 +202,9 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">L5</a> 
 
     <div>
-        <ul class="nav_expanded_subOptions_h nav_subOptions_textBelow">
+        <ul class="nav_expanded_sub_options_h nav_sub_options_text_below">
             <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 5.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 5.2</span></a></li>-->
             <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.3</span></a></li>
            <!-- <li><a href="#">Link 5.4</a></li>-->
             <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.5</span></a></li>
@@ -215,13 +216,13 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="">∅</a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">L7</a>
+<li><a onclick="nav_menu_options(this)"><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 7.2</span></a></li>
-            <li><a href="#"><span><img src="../framework/images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 7.3</span></a></li>
+            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
             <li><a href="#"><img src="../framework/images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
@@ -577,7 +578,7 @@ function F_skills_types_switchs(el) {
         
         var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
 
-        var this_type = getImgName(el.querySelector('img'))
+        var this_type = getImgName(el.querySelector('.switch_icon'))
 
         for (i2 = 0; i2 < imgs_type.length; i2++) {
 
@@ -642,9 +643,56 @@ function F_skills_types_all_switch(el) {
 
 /*  
 ────────────────────────────
+TODO:            >>> Switch - hide skill names
+──────────────────────────── */
+
+function F_hide_skills_names(el) {
+    
+    STSB_switchs.forEach(function (current_switch) {
+    
+        if (el.classList.contains('on')) {
+            
+            //current_switch.querySelector('.switch_name').style.display = 'inline'
+            current_switch.classList.remove('hide_skills_names')
+            document.querySelector('.skills_types_switchs_box').classList.remove('hide_skills_names__justifyContent_center')
+        } else {
+            //current_switch.querySelector('.switch_name').style.display = 'none'
+            current_switch.classList.add('hide_skills_names')
+            document.querySelector('.skills_types_switchs_box').classList.add('hide_skills_names__justifyContent_center')
+        }
+    })
+}
+
+/*  
+────────────────────────────
 TODO:        >> Skills Data Switchs
 ──────────────────────────── */
 
+/*  
+────────────────────────────
+TODO:            >>> Decrease Size Of Buttons 
+                                On Highest Screen Width
+──────────────────────────── */
+
+var larger_screen_minWidth_setting = 1366 // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
+
+onresize = function() {
+
+    if(window.innerWidth >= larger_screen_minWidth_setting) {
+
+        SDSB_switchs.forEach(function (current_switch) {
+        
+            current_switch.classList.add('small')
+        })
+    } else {
+
+        SDSB_switchs.forEach(function (current_switch) {
+        
+            current_switch.classList.remove('small')
+        })
+    }
+}
+ 
 /*  
 ────────────────────────────
 TODO:            >>> Labels
@@ -652,9 +700,9 @@ TODO:            >>> Labels
 
 for (i = 1; i < SDSB_switchs.length; i++) {
 
-    SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent = table_skills_ths[i - 1].textContent
+    SDSB_switchs[i].querySelector(':scope .switch_name').textContent = table_skills_ths[i - 1].textContent
 }
-
+  
 /*  
 ────────────────────────────
 TODO:            >>> Logic
@@ -667,8 +715,6 @@ function F_skills_data_switchs(el) {
                 for (i = 0; i < SDSB_switchs.length; i++) {
 
             if (el === SDSB_switchs[i]) {
-
-                var SDSB_switchs_labelSwitch = SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent
                     
                 var SDSB_switchs_indexSwitch = i - 1
             }
@@ -738,37 +784,16 @@ TODO:            >>> Initial Setting
 ────────────────────────────
 TODO:                >>>> Activate 'All'
                                         Type switch
-──────────────────────────── 
+──────────────────────────── */
 
-for (ii = 0; ii < STSB_switchs.length; ii++) {
+STSB_switchs.forEach(function (current_switch) {
 
-    if (STSB_switchs[ii].querySelector(':scope > :nth-child(2)').textContent === 'All') {
+    if (current_switch.querySelector(':scope .switch_name').textContent === 'All') {
 
-        F_skills_types_all_switch(STSB_switchs[ii])
-        switch_event(STSB_switchs[ii])
+        F_skills_types_all_switch(current_switch)
+        switch_event(current_switch)
     }
-}*/
-
-
-
-STSB_switchs.forEach(function (item) {
-
-    if (item.querySelector(':scope > :nth-child(2)').textContent === 'All') {
-
-        F_skills_types_all_switch(item)
-        switch_event(item)
-    }
-    
 })
-
-
-
-/*
-collection.forEach(function (item) {
-
-    item
-})
-*/
 
 /*  
 ────────────────────────────
@@ -783,7 +808,7 @@ for (i = 0; i < activated_data.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) { 
 
-        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope > :nth-child(2)').textContent) {
+        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope .switch_name').textContent) {
 
             activated_data_indexes.push(i2)
         }
@@ -803,7 +828,7 @@ TODO:                >>>> Name Data disabled
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if (SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent === 'Name') {
+    if (SDSB_switchs[i].querySelector(':scope .switch_name').textContent === 'Name') {
 
         SDSB_switchs[i].classList.add('disabled')
     }
@@ -814,6 +839,7 @@ for (i = 0; i < SDSB_switchs.length; i++) {
 TODO:                >>>> Hidden Data Switchs
 ──────────────────────────── */
 
+var hidden_data_switchs = []
 var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
 
 var hidden_data_indexes = [ ]
@@ -822,7 +848,7 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
 
-        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope > :nth-child(2)').textContent) {
+        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope .switch_name').textContent) {
 
             SDSB_switchs[i2].style.display = 'none'
 
@@ -830,7 +856,7 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
         }
     }
 }
-
+ 
 /*  
 ────────────────────────────
 TODO:    > Replace Table Header 
@@ -851,15 +877,15 @@ for (i = 0; i < table_skills_ths.length; i++) {
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if(SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent.slice(0, 4) === 'plus') {
+    if(SDSB_switchs[i].querySelector(':scope .switch_name').textContent.slice(0, 4) === 'plus') {
 
-        SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent = SDSB_switchs[i].querySelector(':scope > :nth-child(2)').textContent.replace('plus', '+')
+        SDSB_switchs[i].querySelector(':scope .switch_name').textContent = SDSB_switchs[i].querySelector(':scope .switch_name').textContent.replace('plus', '+')
     }
 }
 
 /*  
 ────────────────────────────
-TODO:    > Go To Table
+TODO:    > Table Full Screen
 ──────────────────────────── */
 
 // console.log(skills_table_box.getBoundingClientRect())
@@ -868,14 +894,9 @@ skills_table_box.addEventListener('click', function() {
     
     //scroll({ top: skills_table_box.getBoundingClientRect().y  - 72, left: 0, behavior: 'smooth' })
 
-    skills_table_box.classList.toggle('skills_table_full')
+    skills_table_box.classList.toggle('skills_table_box_full')
     document.body.classList.toggle('overflow_hidden')
 })
-
-/*  
-────────────────────────────
-TODO:    > ...
-──────────────────────────── */
 
 
 
@@ -883,3 +904,10 @@ TODO:    > ...
 ──────────────────────────────────────────────────────
 TODO: ...
 ────────────────────────────────────────────────────── */
+
+/*  
+────────────────────────────
+TODO:    > ...
+──────────────────────────── */
+
+

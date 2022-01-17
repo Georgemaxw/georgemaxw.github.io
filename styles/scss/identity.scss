@@ -16,11 +16,11 @@ $font_size: 19rem;
 $font_small: 16rem;
 $font_smaller: 14rem;
 $central_maxWidth: 800px; /* Padrão: 600-700px. */
-$margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */  
+$margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
-$button_height_smaller: calc(2 * #{$margin_vertical});
+$button_height_smaller: 32px;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
 $border_radius_default: 20px;
@@ -67,6 +67,8 @@ $color_border_danger_dark: hsl(0, 100%, 31%);
 $color_border_table: hsl(0, 0%, 85%);
 $color_border_form: hsl(0, 0%, 80%); 
 $color_border_kbd: hsl(0, 0%, 95%);
+$color_border_switch_type_2_off: hsl(193, 0%,90%); /*  hsl(193, 0%,92%); */
+$color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 
 $color_shadow_text: hsla(0, 0%, 0%, 0.15);
 $color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
@@ -117,10 +119,14 @@ $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
 $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
 $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
 $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
+$bg_switch_ball: hsl(0, 0%, 100%); 
 $bg_switch_off: hsl(0, 0%, 93%);
 $bg_switch_on: hsl(115, 100%, 66%);
-$bg_switch_check: hsl(0, 0%, 100%); 
-$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%, $color_theme;
+$bg_switch_type_2_off: hsl(193, 0%,99%); 
+$bg_switch_type_2_on: 
+linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
 $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
@@ -136,7 +142,7 @@ $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81
 
 $zIndex_nav: 1000;
 $zIndex_choice_d_open: 1100;
-$zIndex_lightbox: 1200; 
+$zIndex_lightbox: 1200;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -451,8 +457,10 @@ TODO: Types Table
 TODO: Table - Skills
 ────────────────────────────────────────────────────── */
 
-/*  
-.skills_types_switchs_box { // Feito com Grid (Buga no celular!)
+$STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
+$SDSB_switchs_margin_horizontal: 10px;
+
+/*  .skills_types_switchs_box { // Feito com Grid (Buga no celular!)
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
@@ -500,31 +508,28 @@ TODO: Table - Skills
     margin-left: calc(0.5 * #{$margin_horizontal});
     margin-right: calc(0.5 * #{$margin_horizontal});
 
-    $STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
-
     .switch {
 
         width: calc(100% - 2 * #{$STSB_switchs_margins}) !important; 
-        padding: 10px;
+        padding: 10px; // <-
         margin: $STSB_switchs_margins;
-        background-color: hsl(193, 0%,99%);
-        border: 1px solid hsl(193, 0%,92%);
-        border-radius: 14px;
+        background-color: hsl(193, 0%,99%);// <-
+        border: 1px solid hsl(193, 0%,92%);// <-
+        border-radius: 1000px; // <-
         justify-content: center;
 
-        > :nth-child(2) img { // Isso evita bug leve.
-
+        .switch_icon { // Isso evita bug leve.
             margin-right: 11px;
+        }
+
+        .switch_button {
+            display: none;
         }
     }
 
-    .switch > :nth-child(1) {
-        display: none;
-    }
-
     .on {
-        background-color: hsl(193,100%,99%);
-        border: 1px solid hsl(193,100%,86%);
+        background-color: hsl(193,100%,99%); // <-
+        border: 1px solid hsl(193, 100%, 82%); // <-
     }
 
     @media (min-width: 370px /* 428px */) {
@@ -535,11 +540,11 @@ TODO: Table - Skills
         }
     }
 
-    @media (min-width: 540px /* 615px */) { .switch { width: calc(33% - 2 * #{$STSB_switchs_margins}) !important; } }
+    @media (min-width: 540px /* 615px */) { .switch { width: calc(33.3% - 2 * #{$STSB_switchs_margins}) !important; } }
     
-    @media (min-width: 805px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
+    @media (min-width: 816px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
     
-    @media (min-width: 900px) { .switch { width: calc(20% - 2 * #{$STSB_switchs_margins}) !important; } }
+    @media (min-width: 1012px) { .switch { width: calc(20% - 2 * #{$STSB_switchs_margins}) !important; } }
     
     //@media (min-width: 1040px) { .switch { width: calc(16.6% - 2 * #{$STSB_switchs_margins}) !important; } }
 }
@@ -548,8 +553,6 @@ TODO: Table - Skills
 
     margin-left: calc(0.5 * #{$margin_horizontal});
     margin-right: calc(0.5 * #{$margin_horizontal});
-
-    $SDSB_switchs_margin_horizontal: 10px;
 
     .switch {
         width: calc(100% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; 
@@ -598,7 +601,7 @@ TODO: Table - Skills
 
 .table_skills  {
 
-    min-width: max-content;  /*   Esta única declaração possui 3 utilidades:
+    min-width: max-content;  /*  Esta única declaração possui 3 utilidades:
     - Deixa todas as células em uma única linha.
     - Corrige um bug que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha.
     - Corrige um bug que deixa a largura da caixa da tabela maior do que a tabela se a tabela não tiver 
@@ -687,17 +690,199 @@ TODO: Table - Skills
         color: red;
     }
 }
-    .skills_table_full {
+
+.click_on_the_table {
+    text-align: center;
+}
+/*  
+%margins {
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
+    // @extend %margins; 
+}
+*/
+$larger_screen_minWidth_setting: 1366px; // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
+
+// Switch que oculta os nomes das habilidades nos switchs de tipo:
+
+.switch_hide_skills_names {
+
+    @media (min-width: $larger_screen_minWidth_setting) {
+
+        display: none !important; 
+    }
+}
+
+.switch.hide_skills_names {
+    @media (max-width: $larger_screen_minWidth_setting) {
+
+        width: 48px !important;
+        height: 48px; 
+        padding: 0px;  
+        border: 0;
+        
+        .switch_label { 
+
+            width: inherit;
+            height: inherit; 
+        
+            .switch_icon { 
+
+                width: inherit;
+                height: inherit; 
+                margin: 0;
+            }
+
+            .switch_name {
+
+                display: none;
+            }
+        }
+    }
+}
+
+.hide_skills_names__justifyContent_center {
+    @media (max-width: $larger_screen_minWidth_setting) {
+        justify-content: center;
+    }
+}
+
+// Tabela e caixas dos interruptores em full screen:
+
+@media (min-width: $larger_screen_minWidth_setting) { 
+
+    $skills_types_switchs_box_width: 340px;
+    $skills_data_switchs_box_width: 340px;
+    $STSB_and_SDSB_margin_horizontal: 30px; 
+
+    .skills_types_switchs_box {
+
+        $STSB_switchs_margin: 10px; 
+        $STSB_switchs_icons_size: 48px;
 
         position: fixed;
-        //top: 48px; bottom: 0; left: 0; right: 0;
-        top: 0; bottom: 0; left: 0; right: 0;
-        z-index: calc(#{$zIndex_nav} + 1);
-        width: 100vw;
-        max-width: 100vw;
-        max-height: calc(100vh - (0 * #{$button_height}));
-        background-color: $bg_html;
+        top: 165px; 
+        left: 0;
+        z-index: 1;
+        width: $skills_types_switchs_box_width;
+        margin-left: $STSB_and_SDSB_margin_horizontal;
+        margin-right: $STSB_and_SDSB_margin_horizontal;
+
+        .switch { 
+            padding: 0px; 
+            border: 0; 
+            margin: $STSB_switchs_margin;
+
+            .switch_icon {
+                width: $STSB_switchs_icons_size;
+                height: $STSB_switchs_icons_size;
+                margin: 0;
+            }
+
+            .switch_name {
+                display: none;
+            }
+        }
+
+        .switch.on:not(:nth-child(1)), .switch:not(:nth-child(1)):hover {
+
+            .switch_icon {
+
+                outline: 2px solid white;
+                border-radius: 1000px;
+                filter: drop-shadow(0px 0px 6px $color_theme); 
+            }
+        }
+
+        .switch:nth-of-type(1) { // Botão 'All'
+            
+                justify-content: center;
+                width: 320px !important; 
+                height: $STSB_switchs_icons_size;
+                background: linear-gradient(135deg, red, 14%, yellow, yellow, lime, cyan, cyan, Blue, 76%, magenta, magenta);  
+                border: 2px solid hsla(0, 0%, 65%, 0.4); 
+                border-radius: 1000px;
+                box-shadow: 
+                inset 0px -3px 5px 3px $color_shadow_box_inset_dark,
+                inset 5px 6px 5px 0px $color_shadow_box_inset_clear;
+
+            .switch_icon {
+                display: none;
+            }
+
+            .switch_name {
+                display: inline;
+                font-weight: bold;
+                color: white;
+                filter: drop-shadow(0px 0px 2px black); 
+            }
+        }
+
+        .switch:hover:not(:nth-child(1)) .switch_name { // janela flutuando que mostra os nomes ao sobrepor com o mouse.
+
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                width: 120px;
+                min-height: min-content;
+                margin-top: -97px;
+                margin-left: -36px;
+                background-color: hsl(193,100%,98%);
+                border: 1px solid hsl(193,100%,76%);
+                border-radius: 1000px;  
+        }
     }
+
+    .skills_data_switchs_box {
+
+        position: fixed;
+        top: 260px; /* 150px */
+        right: 0;
+        z-index: 1;
+        width: $skills_data_switchs_box_width;
+        margin-left: $STSB_and_SDSB_margin_horizontal;
+        margin-right: $STSB_and_SDSB_margin_horizontal;
+
+        .switch { 
+            width: calc(50% - 2 * #{$SDSB_switchs_margin_horizontal}) !important;     
+            margin-bottom: 0px;
+        }
+    }
+
+    .skills_table_box {
+/*  
+        position: fixed;
+        top: calc(2.8 * #{$button_height}); 
+        left: calc(#{ $skills_types_switchs_box_width} + 2 * #{$margin_horizontal});
+        z-index: 1;
+*/        
+        width: max-content;
+        max-width: calc(100% - #{$skills_types_switchs_box_width} - #{$skills_data_switchs_box_width} - 4 * #{$STSB_and_SDSB_margin_horizontal}); 
+        background-color: $bg_html;
+        max-height: 66vh;
+    }
+
+    footer {
+        /* The styles of this rule is on the Skills page. */
+    }
+}
+
+.skills_table_box_full {
+
+    position: fixed;
+    //top: 48px; bottom: 0; left: 0; right: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: calc(#{$zIndex_nav} + 1);
+    width: 100vw;
+    max-width: 100vw;
+    max-height: calc(100vh - (0 * #{$button_height}));
+    background-color: $bg_html;
+    border: 0; 
+}
+
 /* 
 ──────────────────────────────────────────────────────
 TODO: ...
