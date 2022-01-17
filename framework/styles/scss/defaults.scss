@@ -19,7 +19,7 @@ $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
-$button_height_smaller: calc(2 * #{$margin_vertical});
+$button_height_smaller: 32px;
 $table_border1_width: 1px;
 $table_border2_width: 1px;
 $border_radius_default: 20px;
@@ -66,6 +66,8 @@ $color_border_danger_dark: hsl(0, 100%, 31%);
 $color_border_table: hsl(0, 0%, 85%);
 $color_border_form: hsl(0, 0%, 80%); 
 $color_border_kbd: hsl(0, 0%, 95%);
+$color_border_switch_type_2_off: hsl(193, 0%,90%); /*  hsl(193, 0%,92%); */
+$color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 
 $color_shadow_text: hsla(0, 0%, 0%, 0.15);
 $color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
@@ -116,10 +118,14 @@ $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
 $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
 $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
 $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
+$bg_switch_ball: hsl(0, 0%, 100%); 
 $bg_switch_off: hsl(0, 0%, 93%);
 $bg_switch_on: hsl(115, 100%, 66%);
-$bg_switch_check: hsl(0, 0%, 100%); 
-$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%, $color_theme;
+$bg_switch_type_2_off: hsl(193, 0%,99%); 
+$bg_switch_type_2_on: 
+linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
 $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
@@ -695,7 +701,7 @@ TODO:    > Header-nav
             }
         }
 
-        .textImg, .textImg_size {
+        .text_img, .text_img_size {
             filter: drop-shadow(1px 1px 1px $color_shadow_text); 
         }
     }
@@ -1110,7 +1116,7 @@ TODO:    > Classes
     margin-left: 16px;
 } 
 */
-.nav_expanded_subOptions_h {
+.nav_expanded_sub_options_h {
     @media (min-width: $nav_expand) {
         
         overflow-x: auto;
@@ -1129,14 +1135,14 @@ TODO:    > Classes
     }
 }
 
-.nav_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+.nav_sub_options_text_below { // Serve para ambos os modos horizontal e vertical das sub opções.
     li > a {
         display: inline-flex;
         flex-direction: column;
     }
 }
 
-.nav_compact_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+.nav_compact_sub_options_text_below { // Serve para ambos os modos horizontal e vertical das sub opções.
 
     @media (max-width: $nav_expand) {
         li > a {
@@ -1146,7 +1152,7 @@ TODO:    > Classes
     }
 }
 
-.nav_expanded_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+.nav_expanded_sub_options_text_below { // Serve para ambos os modos horizontal e vertical das sub opções.
 
     @media (min-width: $nav_expand) {
         li > a {
@@ -1161,17 +1167,17 @@ TODO:    > Classes
 TODO: Multimedia
 ────────────────────────────────────────────────────── */
 
-/*.textImg_evenSize {
+/*.text_img_evenSize {
     max-width: 18px; 
     margin-bottom: -4px;
 }*/
 
-.textImg {
+.text_img {
     max-width: 19px !important;
     margin-bottom: -3px;
 }
 
-.textImg_size {
+.text_img_size { 
     max-width: 19px;
 }
 
@@ -1252,12 +1258,12 @@ table {
     }
 }
 /*
-.table_style_1 {
+table.type_1 {
      Estilo padrão. 
 }
 */
 
-.table_style_2 {
+table.type_2 {
     width: 100%;
     max-width: none;
     border-width: 0;
@@ -1285,13 +1291,13 @@ table {
 }
 
 @media (min-width: $screen_small_widthLimit) {
-    .table_style_2 {
+    table.type_2 {
         width: auto;
         max-width: calc(100% - 2 * #{$margin_horizontal});
     }
 }
 
-.table_style_3 {
+table.type_3 {
     border-width: 0;
 
     /*tr:hover {
@@ -1316,10 +1322,10 @@ table {
     }
 }
 
-/*----- table_style_4 -----*/
+/*----- table.type_4 -----*/ 
 
 @media (min-width: 0) and (max-width:  $screen_small_widthLimit) {
-    .table_style_4 {
+    table.type_4 {
         border-width: 0;
         margin-left: calc(2 * #{$margin_horizontal});
         margin-right: calc(2 * #{$margin_horizontal});
@@ -1358,7 +1364,7 @@ table {
 }
 
 @media (min-width: $screen_small_widthLimit) {
-    .table_style_4 {
+    table.type_4 {
         border-width: 0;
 
         tr {
@@ -2010,7 +2016,7 @@ TODO:    > Choices
     align-items: center; 
     color: $color_text_menu;
 
-    .textImg, .textImg_size {
+    .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }
@@ -2344,14 +2350,14 @@ TODO:        >> Option ON
 TODO:        >> No Label
 ──────────────────────────── */
 
-.noLabel {
+.no_label {
 
     > li:nth-of-type(1) {
         display: none;
     }
 }
 
-.choice_h.noLabel {
+.choice_h.no_label {
 
     > li:nth-of-type(2) a { 
         border-top-left-radius: 1000px;
@@ -2369,7 +2375,7 @@ TODO:        >> No Label
     }
 }
 
-.choice_v.noLabel > li:nth-of-type(2) { 
+.choice_v.no_label > li:nth-of-type(2) { 
 
         border-top-width: 0; 
 
@@ -2384,7 +2390,7 @@ TODO:        >> No Label
     }
 }
 
-.choice_d.noLabel {
+.choice_d.no_label {
 
     > li:nth-of-type(2) {
 
@@ -2401,13 +2407,13 @@ TODO:        >> No Label
     }
 }
 
-.choice_d.noLabel.choice_d_open > li:nth-of-type(2) > a > img  {
+.choice_d.no_label.choice_d_open > li:nth-of-type(2) > a > img  {
 
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-.choice_d.noLabel.choice_d_open > li:nth-of-type(2) span::after {
+.choice_d.no_label.choice_d_open > li:nth-of-type(2) span::after {
 
     content: "";
     margin-left: 0;
@@ -2443,8 +2449,10 @@ TODO:        >> Disabled
 
 /*  
 ──────────────────────────────────────────────────────
-TODO:    > Switchs
+TODO:    > Switchs 
 ────────────────────────────────────────────────────── */
+
+// --------- Apple Style ---------
 
 .switch {
 
@@ -2460,19 +2468,19 @@ TODO:    > Switchs
     margin-right: $margin_horizontal; 
     cursor: pointer;
 
-    > :nth-child(1) {
+    .switch_button {
         margin-right: 12px;
         background: $bg_switch_off;
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         content: '';
         display: inline-block;
-        background: $bg_switch_check; 
+        background: $bg_switch_ball; 
         position: relative;
     }
 
-    > :nth-child(2) {
+    .switch_label {
         display: inline-flex;
         align-items: center;
         font-size: $font_size;
@@ -2480,7 +2488,7 @@ TODO:    > Switchs
         padding: 0;
         text-indent: 0;
 
-        > img {
+        .switch_icon {
             width: 32px;
             height: 32px;
             margin-right: 12px;
@@ -2493,23 +2501,22 @@ TODO:    > Switchs
     opacity: 0.5;
     cursor: default;
 
-    > :nth-child(1) {
-        border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
-        background: transparent !important;
+    .switch_button {
+        // border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
+        // background: transparent !important;
     }
 
-    > :nth-child(1)::before {
-        border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
-        background-color: transparent; 
+    .switch_button::before {
+        // border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
+        // background-color: transparent; 
     }
 
-    > :nth-child(2) {
+    .switch_label {
         color: adjust-color($color_text, $alpha: -0.5);
     }
 }
 
-.switch.on > :nth-child(1) {
-    background: $color_theme;
+.switch.on .switch_button {
     background: $bg_switch_on;
 }
 
@@ -2517,71 +2524,76 @@ TODO:    > Switchs
     width: auto !important;
     justify-content: space-between;
 
-    > :nth-child(1) {
+    .switch_button {
         order: 1;
         margin-left: 18px; 
         margin-right: 0;
     }
 }
 
-// Switch - Tamanho escolhido: Medium Size
+/*  
+────────────────────────────
+TODO:        >> Sizes
+──────────────────────────── */
+
+// Switch - Tamanho escolhido para tela grande: Medium Size
 
 .switch {
 
-    > :nth-child(1) {
+    .switch_button {
         min-width: 47px;
         height: 28px;
         border-radius: 14px;
-        transition: all 0.35s; 
+        transition: all 0.33s; 
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         width: 24px;
         height: 24px;
         border-radius: 12px;
         top: 2px;
         left: 3px;
-        transition: all 0.35s; 
+        transition: all 0.33s; 
     }
 }
 
-.switch.disabled > :nth-child(1)::before {
-    width: 22px;
-    height: 22px;
-    top: 1px;
-    left: 2px;
+.switch.disabled .switch_button::before {
+    // width: 22px;
+    // height: 22px;
+    // top: 1px;
+    // left: 2px;
 }
 
 .switch.on { 
 
-    > :nth-child(1) {
-        transition: all 0.35s; 
+    .switch_button {
+        transition: all 0.33s; 
     }
     
-    > :nth-child(1)::before {
+    .switch_button::before {
         left: 21px;
-        transition: all 0.35s; 
+        transition: all 0.33s; 
     }
 }
 
-.switch.on.disabled > :nth-child(1)::before { 
-    left: 19px;
+.switch.on.disabled .switch_button::before { 
+    // left: 19px;
 }
 
 @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
 
-    // Switch - Tamanho escolhido: Bigger Size
+    // Switch - Tamanho escolhido para tela pequena: Bigger Size
 
     .switch {
 
-        > :nth-child(1) {
+        .switch_button {
             min-width: 53px;
             height: 32px;
             border-radius: 16px;
             transition: all 0.35s; 
         }
     
-        > :nth-child(1)::before {
+        .switch_button::before {
             width: 26px;
             height: 26px;
             border-radius: 13px;
@@ -2591,43 +2603,43 @@ TODO:    > Switchs
         }
     }
     
-    .switch.disabled > :nth-child(1)::before {
-        width: 26px;
-        height: 26px;
-        top: 1px;
-        left: 2px;
+    .switch.disabled .switch_button::before {
+        // width: 26px;
+        // height: 26px;
+        // top: 1px;
+        // left: 2px;
     }
     
     .switch.on { 
     
-        > :nth-child(1) {
+        .switch_button {
             transition: all 0.35s; 
         }
         
-        > :nth-child(1)::before {
+        .switch_button::before {
             left: 24px;
             transition: all 0.35s; 
         }
     }
     
-    .switch.on.disabled > :nth-child(1)::before { 
-        left: 21px;
+    .switch.on.disabled .switch_button::before { 
+        // left: 21px;
     }
-}
+} 
 
 /*
 // Switch - Smaller Size
 
-.switch_smaller {
+.switch.smaller {
 
-    > :nth-child(1) {
+    .switch_button {
         min-width: 38px;
         height: 24px;
         border-radius: 12px;
         transition: all 0.29s; 
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         width: 18px;
         height: 18px;
         border-radius: 9px;
@@ -2637,41 +2649,41 @@ TODO:    > Switchs
     }
 } 
 
-.switch_smaller.disabled > :nth-child(1)::before {
+.switch.smaller.disabled .switch_button::before {
     width: 18px;
     height: 18px;
     top: 1px;
     left: 1px;
 }
 
-.switch_smaller.on { 
+.switch.smaller.on { 
 
-    > :nth-child(1) {
+    .switch_button {
         transition: all 0.29s; 
     }
     
-    > :nth-child(1)::before {
+    .switch_button::before {
         left: 17px;
         transition: all 0.29s; 
     }
 }
 
-.switch_smaller.on.disabled > :nth-child(1)::before { 
+.switch.smaller.on.disabled .switch_button::before { 
     left: 14px;
 }
 
 // Switch - Small Size
 
-.switch_small {
+.switch.small {
 
-    > :nth-child(1) {
+    .switch_button {
         min-width: 42px;
         height: 26px;
         border-radius: 13px;
         transition: all 0.31s; 
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         width: 20px;
         height: 20px;
         border-radius: 10px;
@@ -2681,41 +2693,41 @@ TODO:    > Switchs
     }
 } 
 
-.switch_small.disabled > :nth-child(1)::before {
+.switch.small.disabled .switch_button::before {
     width: 20px;
     height: 20px;
     top: 1px;
     left: 2px;
 }
 
-.switch_small.on { 
+.switch.small.on { 
 
-    > :nth-child(1) {
+    .switch_button {
         transition: all 0.31s; 
     }
     
-    > :nth-child(1)::before {
+    .switch_button::before {
         left: 19px;
         transition: all 0.31s; 
     }
 }
 
-.switch_small.on.disabled > :nth-child(1)::before { 
+.switch.small.on.disabled .switch_button::before { 
     left: 16px;
 }
 
 // Switch - Medium Size
 
-.switch_medium {
+.switch.medium {
 
-    > :nth-child(1) {
+    .switch_button {
         min-width: 47px;
         height: 28px;
         border-radius: 14px;
         transition: all 0.33s; 
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         width: 24px;
         height: 24px;
         border-radius: 12px;
@@ -2725,41 +2737,41 @@ TODO:    > Switchs
     }
 }
 
-.switch_medium.disabled > :nth-child(1)::before {
+.switch.medium.disabled .switch_button::before {
     width: 22px;
     height: 22px;
     top: 1px;
     left: 2px;
 }
 
-.switch_medium.on { 
+.switch.medium.on { 
 
-    > :nth-child(1) {
+    .switch_button {
         transition: all 0.33s; 
     }
     
-    > :nth-child(1)::before {
+    .switch_button::before {
         left: 21px;
         transition: all 0.33s; 
     }
 }
 
-.switch_medium.on.disabled > :nth-child(1)::before { 
+.switch.medium.on.disabled .switch_button::before { 
     left: 19px;
 }
 
 // Switch - Big Size
 
-.switch_big {
+.switch.big {
 
-    > :nth-child(1) {
+    .switch_button {
         min-width: 49px;
         height: 30px;
         border-radius: 15px;
         transition: all 0.35s; 
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         width: 24px;
         height: 24px;
         border-radius: 12px;
@@ -2769,41 +2781,41 @@ TODO:    > Switchs
     }
 } 
 
-.switch_big.disabled > :nth-child(1)::before {
+.switch.big.disabled .switch_button::before {
     width: 24px;
     height: 24px;
     top: 1px;
     left: 2px;
 }
 
-.switch_big.on { 
+.switch.big.on { 
 
-    > :nth-child(1) {
+    .switch_button {
         transition: all 0.35s; 
     }
     
-    > :nth-child(1)::before {
+    .switch_button::before {
         left: 22px;
         transition: all 0.35s; 
     }
 }
 
-.switch_big.on.disabled > :nth-child(1)::before { 
+.switch.big.on.disabled .switch_button::before { 
     left: 19px;
 }
 
 // Switch - Bigger Size
 
-.switch_bigger {
+.switch.bigger {
 
-    > :nth-child(1) {
+    .switch_button {
         min-width: 53px;
         height: 32px;
         border-radius: 16px;
         transition: all 0.37s; 
     }
 
-    > :nth-child(1)::before {
+    .switch_button::before {
         width: 26px;
         height: 26px;
         border-radius: 13px;
@@ -2813,30 +2825,518 @@ TODO:    > Switchs
     }
 }
 
-.switch_bigger.disabled > :nth-child(1)::before {
+.switch.bigger.disabled .switch_button::before {
     width: 26px;
     height: 26px;
     top: 1px;
     left: 2px;
 }
 
-.switch_bigger.on { 
+.switch.bigger.on { 
 
-    > :nth-child(1) {
+    .switch_button {
         transition: all 0.37s; 
     }
     
-    > :nth-child(1)::before {
+    .switch_button::before {
         left: 24px;
         transition: all 0.37s; 
     }
 }
 
-.switch_bigger.on.disabled > :nth-child(1)::before { 
+.switch.bigger.on.disabled .switch_button::before { 
     left: 21px;
 }
 */
+
+/*  
+────────────────────────────
+TODO:        >> Hi-Tech Style
+──────────────────────────── */
+
+$bg_switch_ball: 
+linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
+hsl(0, 0%, 80%);
+
+$bg_switch_on_ball: 
+linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
+cyan;
+
+$bg_switch_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+$bg_switch_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
+
+$bg_switch_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+
+$switch_ball_size: 24px;
+$switch_ball_size_SS: 28px;
+
+.switch {
+    
+    .switch_button { // Path
+        background: $bg_switch_path_off !important;
+    }
+
+    .switch_button::before { // Ball
+
+        content: '';
+        display: inline-block;
+        position: relative;
+        border-radius: 1000px;
+        background: $bg_switch_ball;
+        transition: all 0.39s; 
+    }
+
+    .switch_button::after { // White shadow over the ball
+        
+        content: '';
+        display: inline-block;
+        position: relative;
+        border-radius: 1000px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+        transition: all 0.39s; 
+    }
+}
+/**/
+
+.switch.on {
+
+    .switch_button { // Path
+
+        border-color: hsl(187, 100%, 60%);
+        outline: 1px solid hsl(187, 100%, 90%);
+        background: $bg_switch_path_on !important;
+    }
+
+    .switch_button::before { // Ball
+
+        background: $bg_switch_on_ball;
+        filter: drop-shadow(0px 0px 6px hsl(187, 100%, 50%));
+    }
+}
+
+.switch.disabled .switch_button::before { // Ball
+
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.switch.on.disabled .switch_button::before { // Ball
+
+    outline: 2px solid hsl(187, 100%, 80%); 
+    filter: none; 
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Sizes
+──────────────────────────── */
+
+// Tamanho para tela grande
+
+.switch {
+
+    .switch_button { // Path
+
+        height: 6px; 
+        border: 1px solid black;
+        border-radius: 1000px;
+    }
+
+    .switch_button::before { // Ball
+
+        width: $switch_ball_size;
+        height: $switch_ball_size;
+        border: 0;
+        top: -11px;
+        left: -2px;
+    }
+
+    .switch_button::after {
+        top: calc(-0.9 * #{$switch_ball_size} + 3px);
+        left: calc(-1.05 * #{$switch_ball_size} + 0.25 * #{$switch_ball_size} - 2px); 
+        width: calc(0.6 * #{$switch_ball_size});
+        height: calc(0.6 * #{$switch_ball_size});
+    }
+}
+
+.switch.on {
+    
+    .switch_button::before { // Ball
+
+        left: 24px;
+        transition: all 0.39s; 
+    }
+
+    .switch_button::after { // White Shadow
+        
+        left: calc(-1.05 * #{$switch_ball_size} + 0.25 * #{$switch_ball_size} + 24px); 
+        transition: all 0.39s; 
+    }
+}
+
+@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+
+    // Tamanho para tela pequena
+
+    .switch {
+
+        .switch_button { // Path
+
+            min-width: calc(53px + #{$switch_ball_size_SS} - #{$switch_ball_size});
+            height: 8px; 
+            background: $bg_switch_path_off_SS !important;
+        }
+    
+        .switch_button::before { // Ball
+
+            top: -12px;
+            width: $switch_ball_size_SS;
+            height: $switch_ball_size_SS;
+            background: $bg_switch_ball;
+        }
+
+        .switch_button::after {
+            top: calc(-0.9 * #{$switch_ball_size_SS} + 3px);
+            left: calc(-1.05 * #{$switch_ball_size_SS} + 0.25 * #{$switch_ball_size_SS} - 2px); 
+            width: calc(0.6 * #{$switch_ball_size_SS});
+            height: calc(0.6 * #{$switch_ball_size_SS}); 
+        }
+    }
+    
+    .switch.on {
+
+        .switch_button { // Path
+
+            outline: 2px solid hsl(187, 100%, 92%);
+        }
+        
+        .switch_button::before { // Ball
+
+            left: 29px;
+        }
+
+        .switch_button::after { // White Shadow
+            
+            left: calc(-1.05 * #{$switch_ball_size_SS} + 0.25 * #{$switch_ball_size_SS} + 29px); 
+            transition: all 0.42s; 
+        } 
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Type 2
+──────────────────────────── */
+
+.switch.type_2_1, .switch.type_2_2, .switch.type_2_3 { 
+ 
+    min-width: $button_height_smaller;
+    min-height: $button_height_smaller;
+    border: 1px solid $color_border_switch_type_2_off;    
+    box-shadow: 
+    inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
+    background: $bg_switch_type_2_off; 
+    transition: 0.15s;
+
+    .switch_button {
+
+        display: none;
+    }
+}
+ 
+.switch.type_2_1 {
+
+    padding: 10px 13px 12px 10px; 
+    border-radius: 11px; 
+
+    .switch_icon {
+        display: none;
+    }
+}
       
+.switch.type_2_2 {
+
+    padding: 10px 12px 12px 10px; 
+    border-radius: 14px; 
+    
+    .switch_name {
+        display: none; 
+    }
+
+    .switch_icon {
+        margin: 0;
+    }
+}
+ 
+.switch.type_2_3 {
+
+    padding: 10px 12px 12px 10px; 
+    border-radius: 14px; 
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Rounded
+──────────────────────────── */
+
+.switch.type_2_1.rounded {
+
+    padding-left: 13px;
+    padding-right: 16px;
+    border-radius: 1000px; 
+}
+
+.switch.type_2_2.rounded {
+
+    border-radius: 1000px; 
+}
+
+.switch.type_2_3.rounded {
+
+    padding-left: 18px;
+    padding-right: 20px;
+    border-radius: 1000px; 
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+
+.switch.type_2_1.on, .switch.type_2_2.on, .switch.type_2_3.on {
+
+    border: 1px solid $color_border_switch_type_2_on;
+    outline: 2px solid white;
+    background: $bg_switch_type_2_on;
+    filter: drop-shadow(0px 0px 6px $color_theme); 
+}
+
+/*  
+────────────────────────────
+TODO:        >> Type 3
+──────────────────────────── */
+      
+.switch.type_3 {
+
+    $switch_icon_size: $button_height;
+
+    min-width: $button_height_smaller;
+    min-height: $button_height_smaller;
+    border-radius: calc(0.25 * #{$switch_icon_size});
+    transition: 0.17s; 
+
+    .switch_button {
+        display: none;
+    }
+    
+    .switch_name {
+        display: none;
+    }
+
+    .switch_icon {
+
+        width: $switch_icon_size;
+        height: $switch_icon_size;
+        margin: 0;
+    }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Rounded
+──────────────────────────── */
+
+.switch.type_3.rounded {
+
+    border-radius: 1000px; 
+
+    .switch_icon {
+
+        border-radius: 1000px; 
+    }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+
+.switch.type_3.on {
+
+    outline: 2px solid white;
+    filter: drop-shadow(0px 0px 6px $color_theme); 
+}
+
+/*  
+────────────────────────────
+// IMPORTANTE: Este tipo foi criado usando como base apenas o estilo da Apple, não o Hi-Tech!
+TODO:        >> Type 4
+──────────────────────────── 
+
+$bg_switch_type_4_check: url(../../images/icons/power.svg) left 3px center /18px no-repeat, hsl(0, 0%, 86%);
+$bg_switch_type_4_check_SS: url(../../images/icons/power.svg) left 3px center /22px no-repeat, hsl(0, 0%, 86%);
+$color_borderLeft_switch_type_4_check: hsl(0, 0%, 94%);
+$color_borderRight_switch_type_4_check: hsl(0, 0%, 65%);
+
+$bg_switch_type_4_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+//$bg_switch_type_4_path_on: cyan;
+
+$bg_switch_type_4_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+
+$bg_switch_type_4_rounded_check: 
+url(../../images/icons/power.svg) left 4px center /18px no-repeat,
+radial-gradient(hsl(0, 0%, 96%), rgba(231, 231, 231, 0.507) 30%, hsla(0, 0%, 0%, 0) 60%),
+linear-gradient(to bottom right, hsl(0, 0%, 99%), hsl(0, 0%, 60%));
+$bg_switch_type_4_rounded_check_SS: 
+url(../../images/icons/power.svg) left 4px center /22px no-repeat,
+radial-gradient(hsl(0, 0%, 96%), rgba(231, 231, 231, 0.507) 30%, hsla(0, 0%, 0%, 0) 60%),
+linear-gradient(to bottom right, hsl(0, 0%, 99%), hsl(0, 0%, 60%));
+
+
+$switch_type_4_check_border_width: 3px; 
+
+$switch_type_4_check_width: 26px;
+$switch_type_4_check_width_SS: 30px;
+$switch_type_4_rounded_check_width: 26px;
+$switch_type_4_rounded_check_width_SS: 30px;
+
+.switch.type_4 {
+    
+    .switch_button { // Path
+        background: $bg_switch_type_4_path_off !important;
+    }
+
+    .switch_button::before { // Check
+
+        content: '';
+        display: inline-block;
+        border-radius: 0;
+        background: $bg_switch_type_4_check; 
+        position: relative;
+        transition: all 0.39s; 
+    }
+}
+
+// .switch.type_4::before { // Shadow
+//     
+//     content: '';
+//     display: inline-block;
+//     position: absolute;
+//     margin-top: calc(0.5 * #{$switch_type_4_check_width} + 3px);
+//     margin-left: calc(9px);
+//     width: $switch_type_4_check_width;
+//     height: $switch_type_4_check_width;
+//     border-radius: 0;
+//     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), hsla(0, 0%, 0%, 0) 99%);
+//     transform: rotateZ(-45deg);
+// }
+
+// .switch.type_4.on {
+// 
+//     .switch_button { // Path
+//         //background: $bg_switch_type_4_path_on;
+//         //filter: drop-shadow(0px 0px 6px $color_theme);
+//     }
+// 
+//     .switch_button::before { // Check
+//         
+//     }
+// }
+
+.switch.type_4.disabled .switch_button::before { // Check
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.switch.type_4.rounded .switch_button::before { // Check
+        
+    border-radius: 1000px;
+    background: $bg_switch_type_4_rounded_check;
+}*/
+
+/*  
+────────────────────────────
+TODO:            >>> Sizes
+──────────────────────────── 
+
+// Tamanho para tela grande
+
+.switch.type_4 {
+
+    .switch_button { // Path
+
+        height: 6px; 
+        border: 1px solid black;
+        border-radius: 1000px;
+    }
+
+    .switch_button::before { // Check
+
+        width: calc(#{$switch_type_4_check_width} + 1 * #{$switch_type_4_check_border_width});
+        height: $switch_type_4_check_width;
+        border-left: $switch_type_4_check_border_width solid $color_borderLeft_switch_type_4_check;
+        border-right: $switch_type_4_check_border_width solid $color_borderRight_switch_type_4_check;
+        top: -12px;
+        left: -2px;
+    }
+}
+
+.switch.type_4.on .switch_button::before { // Check
+    left: 18px;
+}
+
+.switch.type_4.rounded .switch_button::before { // Check
+    
+    width: $switch_type_4_rounded_check_width;
+    height: $switch_type_4_rounded_check_width;
+    border: 0;
+}
+
+.switch.type_4.rounded.on .switch_button::before { // Check
+    left: 21px;
+}
+
+@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+
+    // Tamanho para tela pequena
+
+    .switch.type_4 {
+
+        .switch_button { // Path
+
+            min-width: calc(53px + #{$switch_type_4_check_width_SS} - #{$switch_type_4_check_width});
+            height: 8px; 
+            background: $bg_switch_type_4_path_off_SS !important;
+        }
+    
+        .switch_button::before { // Check
+
+            top: -13px;
+            width: calc(#{$switch_type_4_check_width_SS} + 1 * #{$switch_type_4_check_border_width});
+            height: $switch_type_4_check_width_SS;
+            background: $bg_switch_type_4_check_SS; 
+            transition: all 0.41s; 
+        }
+    }
+    
+    .switch.type_4.on .switch_button::before { // Check
+        left: 24px;
+    }
+
+    .switch.type_4.rounded .switch_button::before { // Check
+
+        width: $switch_type_4_rounded_check_width_SS;
+        height: $switch_type_4_rounded_check_width_SS;
+        background: $bg_switch_type_4_rounded_check_SS;
+    }
+    
+    .switch.type_4.rounded.on .switch_button::before { // Check
+        left: 27px;
+    }
+}*/
+
 /*
 ──────────────────────────────────────────────────────
 TODO:    > Cards & Posters
@@ -2970,7 +3470,7 @@ TODO:        >> Posters
         text-fill-color: currentcolor; 
     }
 
-    .textImg, .textImg_size {
+    .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }
@@ -3115,7 +3615,7 @@ TODO:    > Lightbox
     font-size: $font_size; 
     text-shadow: 1px 1px 1px $color_shadow_text;
 
-    .textImg, .textImg_size {
+    .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }

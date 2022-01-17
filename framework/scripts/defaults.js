@@ -17,7 +17,7 @@ desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao
 valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
 opção que aparece em um 'choice_d' quando ele está fechado.
 */
-
+ 
 var choice_d_open = false
 
 function choice(arg) {
