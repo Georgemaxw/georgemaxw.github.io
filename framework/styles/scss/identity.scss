@@ -1,6 +1,8 @@
+//@import '../../framework/styles/scss/defaults.scss';
+
 /*  
 ──────────────────────────────────────────────────────
-gmes-identity.css
+gmes-identity.css  
 ────────────────────────────────────────────────────── */
 
 /* 
@@ -8,10 +10,139 @@ gmes-identity.css
 TODO: Framework - Variables
 ────────────────────────────────────────────────────── */
 
+$font_default: 'Times New Roman', Times, Georgia, serif;
+$font_monospace: 'Courier New', Courier, monospace;
+$font_size: 19rem; 
+$font_small: 16rem;
+$font_smaller: 14rem;
+$central_maxWidth: 800px; /* Padrão: 600-700px. */
+$margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
+$margin_vertical: 16rem;
+$button_height: 48px;
+$button_height_small: 40px;
+$button_height_smaller: 32px;
+$table_border1_width: 1px;
+$table_border2_width: 1px;
+$border_radius_default: 20px;
+$border_radius_big: 40px;
+ 
+/* ------ Breakpoints ------ */ 
+
+$screen_small_widthLimit: 501px; // Largura máxima de um celular.
+/*$screen_medium_widthLimit: 1000px;  */ // Largura mínima de um PC.
+
+$nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
+$hr_stop: calc(#{$central_maxWidth} + 60px);
+
+/* ------ Colors And Backgrounds ------ */ 
+
+// $color_theme: hsl(193, 100%, 50%);
+//$color_theme: hsl(201, 100%, 48%);
+//$color_theme: DodgerBlue;
+$color_theme: DeepSkyBlue;
+$color_theme_clear: hsla(193, 100%, 98%, 1); 
+
+$color_text: black;
+$color_text_clear: hsl(0, 0%, 68%); 
+$color_text_menu: white; 
+$color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
+$color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
+$color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+$color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
+$color_text_form: $color_text; 
+$color_text_form_placeholder: $color_text_clear;
+$color_text_form_select: $color_text_clear;
+
+$color_text_success: hsl(120, 100%, 35%);
+$color_text_attention: hsl(45, 74%, 45%);
+$color_text_fail: hsl(0, 100%, 50%);
+$color_text_danger: white;
+
+$color_border_success: hsl(120, 100%, 44%);
+$color_border_attention: hsl(43, 74%, 72%);
+$color_border_fail: hsl(0, 100%, 70%);
+$color_border_danger_clear: hsl(0, 100%, 76%);
+$color_border_danger_dark: hsl(0, 100%, 31%);
+
+$color_border_table: hsl(0, 0%, 85%);
+$color_border_form: hsl(0, 0%, 80%); 
+$color_border_kbd: hsl(0, 0%, 95%);
+$color_border_switch_type_2_off: hsl(193, 0%,90%); /*  hsl(193, 0%,92%); */
+$color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
+
+$color_shadow_text: hsla(0, 0%, 0%, 0.15);
+$color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
+$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
+$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
+$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
+$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
+$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
+$color_shadow_footer: $color_shadow_headerNav_rounded;
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
+$color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
+$color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
+$color_shadow_lightbox: black; 
+$color_shadow_lightbox_button: black; 
+ 
+$color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
+$color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
+$color_scrollbar_track: hsla(0, 0%, 100%, 0.4);
+$color_scrollbar_track_firefox: transparent;
+$color_menu_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
+$color_menu_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menu_scrollbar_track: transparent;
+$color_menu_scrollbar_track_firefox: transparent;
+$color_menuRounded_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
+$color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menuRounded_scrollbar_track: transparent;
+$color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
+
+$bg_html: white;
+//$bg_html: hsl(0, 0%, 36%);
+//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
+$bg_header: url(../../images/bgs/header.png) center /100% 100%;
+$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%; 
+$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
+
+$bg_success: hsl(120, 100%, 91%);
+$bg_attention: hsl(54, 100%, 93%);
+$bg_fail: hsl(0, 100%, 94%);
+$bg_danger: red;
+
+$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
+$bg_table_tr_hover: $color_theme_clear; 
+$bg_kbd: hsl(0, 0%, 86%);
+$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
+$bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
+$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
+$bg_switch_ball: hsl(0, 0%, 100%); 
+$bg_switch_off: hsl(0, 0%, 93%);
+$bg_switch_on: hsl(115, 100%, 66%);
+$bg_switch_type_2_off: hsl(193, 0%,99%); 
+$bg_switch_type_2_on: 
+linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
+$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
+$bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
+
 /*
-(Colocar as variáveis de 'default.scss' do framework 
-aqui quando for usar este arquivo em um projeto.)
-*/ 
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+*/
+
+/* ------ z-index's ------ */
+
+$zIndex_nav: 1000;
+$zIndex_choice_d_open: 1100;
+$zIndex_lightbox: 1200;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -20,52 +151,739 @@ TODO: Framework - Classes JS
 
 // Classes Genéricas Pra Serem Aplicadas Somente Via JS:
 
-/* 
-(Colocar as classes genéricas aplicadas somente via JS de 'default.scss' 
-do framework aqui quando for usar este arquivo em um projeto.)
-*/
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Syntaxes
-────────────────────────────────────────────────────── */
-
-sc1 { color: red; }
-sc2 { color: blue; }
-sc3 { color: green; }
-sc4 { color: purple; }
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Display
-────────────────────────────────────────────────────── */
-
-.display {
-    display: inline-block; 
-    border: 6px ridge hsl(0, 0%, 83%); 
-    min-width: 34px; 
-    min-height: 40px;
-    border-radius: 10px; 
-    padding-right: 7px; 
-    color: white; 
-    background: hsl(0, 0%, 37%);
+.overflow_hidden {
+    overflow: hidden;
 }
 
-/*  
+/* 
 ──────────────────────────────────────────────────────
-TODO: Choice Examples
+TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
 
-$font_size: 19rem; 
+html { 
+    //background: url("../../images/bgs/html.png");
+}
 
-.choice_example_1, .choice_example_2, .choice_example_3 {
+.header-content {
+    max-width: 850px;
+}
+ 
+.central {
+    $central_maxWidth: 1000px; 
+    max-width: $central_maxWidth;
+}
 
-    > :not(:nth-child(1)) {
-        display: none;
+.presentation_float {
+
+    video {
+        width: 100%;
+        border-top: 2px solid $color_theme;
+        border-bottom: 2px solid $color_theme;
+        margin-top: $margin_vertical;
+        margin-bottom: $margin_vertical;    
+    }
+
+    @media (max-width: $screen_small_widthLimit) {
+
+        display: flex;
+        flex-direction: column;
+
+        video {
+            order: 1;
+        }
+    }
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        $video_width: 40%;
+
+        display: flow-root;
+
+        > div {
+            //float: left;
+            max-width: calc(100% - #{$video_width} - (1 * #{$margin_horizontal}));
+        }
+
+        video {
+            float: right;
+            max-width: $video_width;
+            border: 2px solid $color_theme;
+            margin-left: $margin_horizontal;
+            margin-right: $margin_horizontal;
+            border-radius: $border_radius_default;
+        }
+
+        p:nth-of-Type(2) {
+            //clear: both;
+        }
+
+        p:nth-last-of-Type(1) {  
+            margin-bottom: 0;
+        } 
+    } 
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Others
+────────────────────────────────────────────────────── */
+
+table { 
+
+    th {/*
+        background: url(../../framework/images/colors/text_table_th.png)  center /100% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent; */
+    }
+} 
+
+.rotate_device_to_max_img {
+    width: 130px;
+    padding: 8px 0px 0px 7px; 
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Slider
+────────────────────────────────────────────────────── */
+
+.slider {
+
+    border-top: 2px solid $color_theme;
+    border-bottom: 2px solid $color_theme;
+
+    img, picture { 
+        max-width: 94.4%;
+    }
+
+    img +  img {
+        border-left: 2px solid $color_theme; 
+    }
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        border: 2px solid $color_theme;
+        max-width: calc(100% - (2 * #{$margin_horizontal}));  
+
+        .slider img, .slider picture {
+            max-width: 938px;   
+        }
+    }
+
+    @media (min-width: calc(938px + (2 * #{$margin_horizontal})) ) {
+    
+        max-width: 1000px;
+
     }
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
+/* 
+────────────────────────────────────────────────────── 
+TODO: Download Page
+────────────────────────────────────────────────────── */
 
-    font-size: $font_size; 
+.download_buttons {
+
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+        //margin-bottom: 0;
+    }
 }
+
+.download {
+
+    .demo {
+
+        p {
+            //margin-bottom: 0;
+        }
+
+        div {
+            text-align: center;
+
+            button {
+                margin: 0;
+                font-size: 21px;
+            }
+        }
+    }
+
+    .stores_aligh {
+
+        text-align: center; 
+        
+        img {
+            width: 180px;
+        }
+    }
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Types Table
+────────────────────────────────────────────────────── */
+
+.types_table_msg {
+    @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
+        display: none !important;
+    }
+}
+ 
+.table_box {
+    display: none;
+
+    @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
+        display: block;
+    }
+ 
+    max-height: calc(100vh - #{$button_height} - (2 * #{$margin_vertical}));
+    margin: auto;
+    //margin-bottom: 63px;
+    border: 2px solid $color_theme;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    overflow: auto;
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        max-width: calc(100% - (2 * #{$margin_horizontal}) - 3px);
+    }
+}
+
+.types_table {
+    margin: 0;
+}
+
+.types_table tr:nth-of-type(1) {
+    position: sticky;
+    top: 0;
+    left: 0;
+   z-index: 1;
+   border-bottom: 1px solid hsla(193,100%,50%, 0%);
+}
+
+.types_table tr th {
+    position: sticky;
+    top: 0;
+    left: 0;
+   background: white; 
+   background: hsl(193,100%,97%);
+   outline: 1px solid $color_theme;
+}
+
+.types_table tr:nth-of-type(1) td {
+    position: sticky;
+    top: 0;
+    left: 0;
+   z-index: 1;
+   background: white;
+   background: hsl(193,100%,97%);
+   outline: 1px solid $color_theme;
+}
+
+.types_table tr td:nth-of-type(1) {
+    border-left: 0;
+}
+
+.types_table tr td {
+    border-left: 1px solid hsl(0, 0%, 85%);
+}
+
+.types_table tr {
+    border: 0;
+}
+
+.types_table tr td {
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+
+.types_table tr:nth-of-type(1) td {
+    border-bottom: 0;
+}
+
+.types_table tr:nth-last-of-type(1) td {
+    border-bottom: 1px solid $color_theme;
+}
+
+.types_table .type_icon {
+    width: 36.8px; // 48px 
+}
+
+.types_table th, .types_table td {
+    line-height: 0px;
+}
+
+.show-or-hide-plasma {
+    display: none;
+}
+
+.types_table .effect_icon {
+    width: 28px;
+}
+
+@media (pointer: coarse), (pointer: none) {
+
+    .table_box {
+        height: 100%; // Esta linha remove a barra vertical em dispositivos touch screen.
+        margin-bottom: 38px;
+        border-bottom: 0;
+    }
+}
+
+/*
+@media (pointer: coarse), (pointer: none) { // Ganbiarra necessária, pois os navegadores mobile n dão suporte à 'position: sticky'.
+
+    .types_table tr:nth-of-type(1), .types_table tr th, .types_table tr:nth-of-type(1) td {
+        position: static;  
+    }
+
+    .types_table .type_icon {
+        width: 24px;
+    }
+
+    .types_table .effect_icon {
+        width: 20px;
+    }
+}
+
+*/
+
+/* 
+──────────────────────────────────────────────────────
+TODO: Table - Skills
+────────────────────────────────────────────────────── */
+
+$STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
+$SDSB_switchs_margin_horizontal: 10px;
+
+/*  .skills_types_switchs_box { // Feito com Grid (Buga no celular!)
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
+    grid-gap: 10px; 
+    gap: 10px;
+
+    .switch {
+
+        padding: 10px;
+        margin: 0;
+        background-color: hsl(193, 0%,99%);
+        border: 1px solid hsl(193, 0%,92%);
+        border-radius: 14px;
+    }
+
+    .switch > :nth-child(1) {
+        display: none;
+    }
+
+    .switch > :nth-child(2) {
+         
+        justify-content: center;
+        width: 100%;
+    }
+
+    .on {
+        background-color: hsl(193,100%,99%);
+        border: 1px solid hsl(193,100%,86%);
+    }
+
+    @media (min-width: 419px) {
+
+        .switch > :nth-child(2) {
+            
+            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content;*/ /* <- Declarações necessárias 
+            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */ /*  
+        }
+    }
+}*/
+
+.skills_types_switchs_box { // Feito com Flexbox
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(0.5 * #{$margin_horizontal});
+    margin-right: calc(0.5 * #{$margin_horizontal});
+
+    .switch {
+
+        width: calc(100% - 2 * #{$STSB_switchs_margins}) !important; 
+        padding: 10px; // <-
+        margin: $STSB_switchs_margins;
+        background-color: hsl(193, 0%,99%);// <-
+        border: 1px solid hsl(193, 0%,92%);// <-
+        border-radius: 1000px; // <-
+        justify-content: center;
+
+        .switch_icon { // Isso evita bug leve.
+            margin-right: 11px;
+        }
+
+        .switch_button {
+            display: none;
+        }
+    }
+
+    .on {
+        background-color: hsl(193,100%,99%); // <-
+        border: 1px solid hsl(193, 100%, 82%); // <-
+    }
+
+    @media (min-width: 370px /* 428px */) {
+
+        .switch {
+            justify-content: flex-start;
+            width: calc(50% - 2 * #{$STSB_switchs_margins}) !important; 
+        }
+    }
+
+    @media (min-width: 540px /* 615px */) { .switch { width: calc(33.3% - 2 * #{$STSB_switchs_margins}) !important; } }
+    
+    @media (min-width: 816px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
+    
+    @media (min-width: 1012px) { .switch { width: calc(20% - 2 * #{$STSB_switchs_margins}) !important; } }
+    
+    //@media (min-width: 1040px) { .switch { width: calc(16.6% - 2 * #{$STSB_switchs_margins}) !important; } }
+}
+
+.skills_data_switchs_box {
+
+    margin-left: calc(0.5 * #{$margin_horizontal});
+    margin-right: calc(0.5 * #{$margin_horizontal});
+
+    .switch {
+        width: calc(100% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; 
+        margin-left: $SDSB_switchs_margin_horizontal;
+        margin-right: $SDSB_switchs_margin_horizontal;
+    }
+
+    @media (min-width: 400px) {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .switch { width: calc(50% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+
+    @media (min-width: 550px) { .switch { width: calc(33% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+    
+    @media (min-width: 700px) { .switch { width: calc(25% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+    
+    @media (min-width: 850px) { .switch { width: calc(20% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+    
+    @media (min-width: 1000px) { .switch { width: calc(16.6% - 2 * #{$SDSB_switchs_margin_horizontal}) !important; } }
+}
+
+.skills_table_box {
+
+    display: none;
+    
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+    
+    max-width: 100%;
+    //max-height: calc(100vh - #{$button_height} - (2 * #{$margin_vertical}));
+    max-height: calc(100vh - (2 * #{$button_height}));
+
+    //position: relative;
+    //bottom: 0;
+    margin: auto;
+    border: 1px solid $color_theme;
+    overflow-x: auto;
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        max-width: calc(100% - (2 * #{$margin_horizontal}));
+    }
+}
+
+.table_skills  {
+
+    min-width: max-content;  /*  Esta única declaração possui 3 utilidades:
+    - Deixa todas as células em uma única linha.
+    - Corrige um bug que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha.
+    - Corrige um bug que deixa a largura da caixa da tabela maior do que a tabela se a tabela não tiver 
+    largura suficiente para cobrir toda a largura da coluna da página em que está. */
+
+    margin: auto; 
+
+    tr {
+        display: none;
+    } 
+
+    tr:hover {
+        background-color: transparent;
+    }
+
+    tr:nth-of-type(1) {
+        display: table-row;
+        background-color: hsl(193,100%,98%);
+        outline: 1px solid $color_theme;
+
+        @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) { // <-- Isso evita bug em dispositivos móveis.
+            
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    tr:nth-of-type(1):hover { // Bug fix!
+        background-color: hsl(193,100%,98%);
+    }
+
+    tr td:nth-of-type(1) {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: $bg_html; 
+        //background: hsl(193,100%,98%);
+        outline: 1px solid $color_theme;
+    }
+    
+    /* 
+    // Isso evita um bug escroto de que quando tem mais de um ícone de tipo, eles quebram em mais de uma linha!!! 
+    td > span { 
+        display: inline-flex; 
+    } 
+    */
+
+    th, td { 
+        //min-width: max-content; 
+    }
+
+    // Além de deixar todas as células em uma única linha, isso evita um bug escroto de que quando tem mais de um 
+    // ícone de tipo, eles quebram em mais de uma linha!!! Isso buga no mobile.
+    /*td > span { 
+        display: inline-block;
+        min-width: max-content; 
+    }  */
+
+    .type_icon {
+        width: 32px;
+        height: 32px;
+        margin-top: 4px;
+    }
+
+    .cost {
+    }
+
+    .cost + .cost {
+        margin-left: 6px;
+    }
+
+    .cost.hp {
+        color: lime;
+    }
+
+    .cost.mp {
+        /* color: yellow;
+        text-shadow: 0 0 1px rgb(0, 0, 0); */
+
+        color: gold;
+    }
+
+    .cost.tp {
+        color: red;
+    }
+}
+
+.click_on_the_table {
+    text-align: center;
+}
+/*  
+%margins {
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
+    // @extend %margins; 
+}
+*/
+$larger_screen_minWidth_setting: 1366px; // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
+
+// Switch que oculta os nomes das habilidades nos switchs de tipo:
+
+.switch_hide_skills_names {
+
+    @media (min-width: $larger_screen_minWidth_setting) {
+
+        display: none !important; 
+    }
+}
+
+.switch.hide_skills_names {
+    @media (max-width: $larger_screen_minWidth_setting) {
+
+        width: 48px !important;
+        height: 48px; 
+        padding: 0px;  
+        border: 0;
+        
+        .switch_label { 
+
+            width: inherit;
+            height: inherit; 
+        
+            .switch_icon { 
+
+                width: inherit;
+                height: inherit; 
+                margin: 0;
+            }
+
+            .switch_name {
+
+                display: none;
+            }
+        }
+    }
+}
+
+.hide_skills_names__justifyContent_center {
+    @media (max-width: $larger_screen_minWidth_setting) {
+        justify-content: center;
+    }
+}
+
+// Tabela e caixas dos interruptores em full screen:
+
+@media (min-width: $larger_screen_minWidth_setting) { 
+
+    $skills_types_switchs_box_width: 340px;
+    $skills_data_switchs_box_width: 340px;
+    $STSB_and_SDSB_margin_horizontal: 30px; 
+
+    .skills_types_switchs_box {
+
+        $STSB_switchs_margin: 10px; 
+        $STSB_switchs_icons_size: 48px;
+
+        position: fixed;
+        top: 165px; 
+        left: 0;
+        z-index: 1;
+        width: $skills_types_switchs_box_width;
+        margin-left: $STSB_and_SDSB_margin_horizontal;
+        margin-right: $STSB_and_SDSB_margin_horizontal;
+
+        .switch { 
+            padding: 0px; 
+            border: 0; 
+            margin: $STSB_switchs_margin;
+
+            .switch_icon {
+                width: $STSB_switchs_icons_size;
+                height: $STSB_switchs_icons_size;
+                margin: 0;
+            }
+
+            .switch_name {
+                display: none;
+            }
+        }
+
+        .switch.on:not(:nth-child(1)), .switch:not(:nth-child(1)):hover {
+
+            .switch_icon {
+
+                outline: 2px solid white;
+                border-radius: 1000px;
+                filter: drop-shadow(0px 0px 6px $color_theme); 
+            }
+        }
+
+        .switch:nth-of-type(1) { // Botão 'All'
+            
+                justify-content: center;
+                width: 320px !important; 
+                height: $STSB_switchs_icons_size;
+                background: linear-gradient(135deg, red, 14%, yellow, yellow, lime, cyan, cyan, Blue, 76%, magenta, magenta);  
+                border: 2px solid hsla(0, 0%, 65%, 0.4); 
+                border-radius: 1000px;
+                box-shadow: 
+                inset 0px -3px 5px 3px $color_shadow_box_inset_dark,
+                inset 5px 6px 5px 0px $color_shadow_box_inset_clear;
+
+            .switch_icon {
+                display: none;
+            }
+
+            .switch_name {
+                display: inline;
+                font-weight: bold;
+                color: white;
+                filter: drop-shadow(0px 0px 2px black); 
+            }
+        }
+
+        .switch:hover:not(:nth-child(1)) .switch_name { // janela flutuando que mostra os nomes ao sobrepor com o mouse.
+
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                width: 120px;
+                min-height: min-content;
+                margin-top: -97px;
+                margin-left: -36px;
+                background-color: hsl(193,100%,98%);
+                border: 1px solid hsl(193,100%,76%);
+                border-radius: 1000px;  
+        }
+    }
+
+    .skills_data_switchs_box {
+
+        position: fixed;
+        top: 260px; /* 150px */
+        right: 0;
+        z-index: 1;
+        width: $skills_data_switchs_box_width;
+        margin-left: $STSB_and_SDSB_margin_horizontal;
+        margin-right: $STSB_and_SDSB_margin_horizontal;
+
+        .switch { 
+            width: calc(50% - 2 * #{$SDSB_switchs_margin_horizontal}) !important;     
+            margin-bottom: 0px;
+        }
+    }
+
+    .skills_table_box {
+/*  
+        position: fixed;
+        top: calc(2.8 * #{$button_height}); 
+        left: calc(#{ $skills_types_switchs_box_width} + 2 * #{$margin_horizontal});
+        z-index: 1;
+*/        
+        width: max-content;
+        max-width: calc(100% - #{$skills_types_switchs_box_width} - #{$skills_data_switchs_box_width} - 4 * #{$STSB_and_SDSB_margin_horizontal}); 
+        background-color: $bg_html;
+        max-height: 66vh;
+    }
+
+    footer {
+        /* The styles of this rule is on the Skills page. */
+    }
+}
+
+.skills_table_box_full {
+
+    position: fixed;
+    //top: 48px; bottom: 0; left: 0; right: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: calc(#{$zIndex_nav} + 1);
+    width: 100vw;
+    max-width: 100vw;
+    max-height: calc(100vh - (0 * #{$button_height}));
+    background-color: $bg_html;
+    border: 0; 
+}
+
+/* 
+──────────────────────────────────────────────────────
+TODO: ...
+────────────────────────────────────────────────────── */
