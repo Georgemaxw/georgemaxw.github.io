@@ -2905,7 +2905,7 @@ $switch_ball_size_SS: 28px;
     .switch_button { // Path
 
         border-color: hsl(187, 100%, 60%);
-        outline: 1px solid hsl(187, 100%, 90%);
+        // outline: 1px solid hsl(187, 100%, 90%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
         background: $bg_switch_path_on !important;
     }
 
@@ -2924,8 +2924,8 @@ $switch_ball_size_SS: 28px;
 
 .switch.on.disabled .switch_button::before { // Ball
 
-    outline: 2px solid hsl(187, 100%, 80%); 
-    filter: none; 
+    // outline: 2px solid hsl(187, 100%, 80%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
+    filter: drop-shadow(0px 0px 2px hsl(187, 100%, 50%));
 }
 
 /*  
@@ -3009,7 +3009,7 @@ TODO:            >>> Sizes
 
         .switch_button { // Path
 
-            outline: 2px solid hsl(187, 100%, 92%);
+            // outline: 2px solid hsl(187, 100%, 92%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
         }
         
         .switch_button::before { // Ball
@@ -3169,173 +3169,7 @@ TODO:            >>> Option ON
     filter: drop-shadow(0px 0px 6px $color_theme); 
 }
 
-/*  
-────────────────────────────
-// IMPORTANTE: Este tipo foi criado usando como base apenas o estilo da Apple, não o Hi-Tech!
-TODO:        >> Type 4
-──────────────────────────── 
 
-$bg_switch_type_4_check: url(../../images/icons/power.svg) left 3px center /18px no-repeat, hsl(0, 0%, 86%);
-$bg_switch_type_4_check_SS: url(../../images/icons/power.svg) left 3px center /22px no-repeat, hsl(0, 0%, 86%);
-$color_borderLeft_switch_type_4_check: hsl(0, 0%, 94%);
-$color_borderRight_switch_type_4_check: hsl(0, 0%, 65%);
-
-$bg_switch_type_4_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
-//$bg_switch_type_4_path_on: cyan;
-
-$bg_switch_type_4_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
-
-$bg_switch_type_4_rounded_check: 
-url(../../images/icons/power.svg) left 4px center /18px no-repeat,
-radial-gradient(hsl(0, 0%, 96%), rgba(231, 231, 231, 0.507) 30%, hsla(0, 0%, 0%, 0) 60%),
-linear-gradient(to bottom right, hsl(0, 0%, 99%), hsl(0, 0%, 60%));
-$bg_switch_type_4_rounded_check_SS: 
-url(../../images/icons/power.svg) left 4px center /22px no-repeat,
-radial-gradient(hsl(0, 0%, 96%), rgba(231, 231, 231, 0.507) 30%, hsla(0, 0%, 0%, 0) 60%),
-linear-gradient(to bottom right, hsl(0, 0%, 99%), hsl(0, 0%, 60%));
-
-
-$switch_type_4_check_border_width: 3px; 
-
-$switch_type_4_check_width: 26px;
-$switch_type_4_check_width_SS: 30px;
-$switch_type_4_rounded_check_width: 26px;
-$switch_type_4_rounded_check_width_SS: 30px;
-
-.switch.type_4 {
-    
-    .switch_button { // Path
-        background: $bg_switch_type_4_path_off !important;
-    }
-
-    .switch_button::before { // Check
-
-        content: '';
-        display: inline-block;
-        border-radius: 0;
-        background: $bg_switch_type_4_check; 
-        position: relative;
-        transition: all 0.39s; 
-    }
-}
-
-// .switch.type_4::before { // Shadow
-//     
-//     content: '';
-//     display: inline-block;
-//     position: absolute;
-//     margin-top: calc(0.5 * #{$switch_type_4_check_width} + 3px);
-//     margin-left: calc(9px);
-//     width: $switch_type_4_check_width;
-//     height: $switch_type_4_check_width;
-//     border-radius: 0;
-//     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), hsla(0, 0%, 0%, 0) 99%);
-//     transform: rotateZ(-45deg);
-// }
-
-// .switch.type_4.on {
-// 
-//     .switch_button { // Path
-//         //background: $bg_switch_type_4_path_on;
-//         //filter: drop-shadow(0px 0px 6px $color_theme);
-//     }
-// 
-//     .switch_button::before { // Check
-//         
-//     }
-// }
-
-.switch.type_4.disabled .switch_button::before { // Check
-    border-top: 0;
-    border-bottom: 0;
-}
-
-.switch.type_4.rounded .switch_button::before { // Check
-        
-    border-radius: 1000px;
-    background: $bg_switch_type_4_rounded_check;
-}*/
-
-/*  
-────────────────────────────
-TODO:            >>> Sizes
-──────────────────────────── 
-
-// Tamanho para tela grande
-
-.switch.type_4 {
-
-    .switch_button { // Path
-
-        height: 6px; 
-        border: 1px solid black;
-        border-radius: 1000px;
-    }
-
-    .switch_button::before { // Check
-
-        width: calc(#{$switch_type_4_check_width} + 1 * #{$switch_type_4_check_border_width});
-        height: $switch_type_4_check_width;
-        border-left: $switch_type_4_check_border_width solid $color_borderLeft_switch_type_4_check;
-        border-right: $switch_type_4_check_border_width solid $color_borderRight_switch_type_4_check;
-        top: -12px;
-        left: -2px;
-    }
-}
-
-.switch.type_4.on .switch_button::before { // Check
-    left: 18px;
-}
-
-.switch.type_4.rounded .switch_button::before { // Check
-    
-    width: $switch_type_4_rounded_check_width;
-    height: $switch_type_4_rounded_check_width;
-    border: 0;
-}
-
-.switch.type_4.rounded.on .switch_button::before { // Check
-    left: 21px;
-}
-
-@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
-
-    // Tamanho para tela pequena
-
-    .switch.type_4 {
-
-        .switch_button { // Path
-
-            min-width: calc(53px + #{$switch_type_4_check_width_SS} - #{$switch_type_4_check_width});
-            height: 8px; 
-            background: $bg_switch_type_4_path_off_SS !important;
-        }
-    
-        .switch_button::before { // Check
-
-            top: -13px;
-            width: calc(#{$switch_type_4_check_width_SS} + 1 * #{$switch_type_4_check_border_width});
-            height: $switch_type_4_check_width_SS;
-            background: $bg_switch_type_4_check_SS; 
-            transition: all 0.41s; 
-        }
-    }
-    
-    .switch.type_4.on .switch_button::before { // Check
-        left: 24px;
-    }
-
-    .switch.type_4.rounded .switch_button::before { // Check
-
-        width: $switch_type_4_rounded_check_width_SS;
-        height: $switch_type_4_rounded_check_width_SS;
-        background: $bg_switch_type_4_rounded_check_SS;
-    }
-    
-    .switch.type_4.rounded.on .switch_button::before { // Check
-        left: 27px;
-    }
-}*/
 
 /*
 ──────────────────────────────────────────────────────
