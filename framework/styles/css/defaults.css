@@ -12,6 +12,8 @@ TODO: Variables
 /* ------ Breakpoints ------ */
 /*$screen_medium_widthLimit: 1000px;  */
 /* ------ Colors And Backgrounds ------ */
+/*  hsl(193, 0%,92%); */
+/* hsl(193, 100%, 82%); */
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
 $bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
@@ -820,7 +822,7 @@ TODO:        >> Expanded
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
-.header-nav .nav .textImg, .header-nav .nav .textImg_size {
+.header-nav .nav .text_img, .header-nav .nav .text_img_size {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
@@ -1181,12 +1183,12 @@ TODO:    > Classes
 } 
 */
 @media (min-width: 565px) {
-  .nav_expanded_subOptions_h {
+  .nav_expanded_sub_options_h {
     overflow-x: auto;
     white-space: nowrap;
     font-size: 0;
   }
-  .nav_expanded_subOptions_h li {
+  .nav_expanded_sub_options_h li {
     display: inline-block;
     border-width: 0 !important;
     /*> a {
@@ -1196,20 +1198,20 @@ TODO:    > Classes
   }
 }
 
-.nav_subOptions_textBelow li > a {
+.nav_sub_options_text_below li > a {
   display: inline-flex;
   flex-direction: column;
 }
 
 @media (max-width: 565px) {
-  .nav_compact_subOptions_textBelow li > a {
+  .nav_compact_sub_options_text_below li > a {
     display: inline-flex;
     flex-direction: column;
   }
 }
 
 @media (min-width: 565px) {
-  .nav_expanded_subOptions_textBelow li > a {
+  .nav_expanded_sub_options_text_below li > a {
     display: inline-flex;
     flex-direction: column;
   }
@@ -1219,16 +1221,16 @@ TODO:    > Classes
 ──────────────────────────────────────────────────────
 TODO: Multimedia
 ────────────────────────────────────────────────────── */
-/*.textImg_evenSize {
+/*.text_img_evenSize {
     max-width: 18px; 
     margin-bottom: -4px;
 }*/
-.textImg {
+.text_img {
   max-width: 19px !important;
   margin-bottom: -3px;
 }
 
-.textImg_size {
+.text_img_size {
   max-width: 19px;
 }
 
@@ -1306,45 +1308,45 @@ table ul, table ol {
 }
 
 /*
-.table_style_1 {
+table.type_1 {
      Estilo padrão. 
 }
 */
-.table_style_2 {
+table.type_2 {
   width: 100%;
   max-width: none;
   border-width: 0;
   border-bottom: 1px solid DeepSkyBlue;
 }
 
-.table_style_2 tr :nth-child(1) {
+table.type_2 tr :nth-child(1) {
   font-weight: bold;
 }
 
-.table_style_2 tr:nth-of-type(1) {
+table.type_2 tr:nth-of-type(1) {
   border-bottom: 1px solid DeepSkyBlue;
 }
 
-.table_style_2 th {
+table.type_2 th {
   border-width: 0;
 }
 
-.table_style_2 th:nth-child(1) {
+table.type_2 th:nth-child(1) {
   color: black;
 }
 
-.table_style_2 td + td {
+table.type_2 td + td {
   border-width: 0;
 }
 
 @media (min-width: 501px) {
-  .table_style_2 {
+  table.type_2 {
     width: auto;
     max-width: calc(100% - 2 * 20px);
   }
 }
 
-.table_style_3 {
+table.type_3 {
   border-width: 0;
   /*tr:hover {
         outline: 1px solid $color_theme;
@@ -1355,66 +1357,66 @@ table ul, table ol {
     }*/
 }
 
-.table_style_3 tr:hover {
+table.type_3 tr:hover {
   background: 0;
 }
 
-.table_style_3 tr + tr {
+table.type_3 tr + tr {
   border-width: 0;
 }
 
-.table_style_3 th {
+table.type_3 th {
   border-width: 0;
   text-align: left;
 }
 
-/*----- table_style_4 -----*/
+/*----- table.type_4 -----*/
 @media (min-width: 0) and (max-width: 501px) {
-  .table_style_4 {
+  table.type_4 {
     border-width: 0;
     margin-left: calc(2 * 20px);
     margin-right: calc(2 * 20px);
   }
-  .table_style_4 tr {
+  table.type_4 tr {
     border-width: 0;
     margin-bottom: 16rem;
   }
-  .table_style_4 tr:hover {
+  table.type_4 tr:hover {
     background: 0;
   }
-  .table_style_4 tr, .table_style_4 th, .table_style_4 td {
+  table.type_4 tr, table.type_4 th, table.type_4 td {
     display: block;
   }
-  .table_style_4 th {
+  table.type_4 th {
     border-width: 0;
     border-bottom: 1px solid DeepSkyBlue;
     text-align: center;
   }
-  .table_style_4 td {
+  table.type_4 td {
     text-align: left;
   }
-  .table_style_4 td:nth-of-type(1) {
+  table.type_4 td:nth-of-type(1) {
     margin-top: 16rem;
   }
-  .table_style_4 li + li {
+  table.type_4 li + li {
     margin-top: 20rem;
   }
 }
 
 @media (min-width: 501px) {
-  .table_style_4 {
+  table.type_4 {
     border-width: 0;
   }
-  .table_style_4 tr {
+  table.type_4 tr {
     border-width: 0;
   }
-  .table_style_4 tr:hover {
+  table.type_4 tr:hover {
     background: 0;
   }
-  .table_style_4 th, .table_style_4 td {
+  table.type_4 th, table.type_4 td {
     border-width: 0;
   }
-  .table_style_4 td {
+  table.type_4 td {
     text-align: left;
   }
 }
@@ -2330,7 +2332,7 @@ figure.center {
 .button_hide_container {
   display: none;
   position: relative;
-  margin-top: calc((calc(2 * 16rem))/2);
+  margin-top: calc((32px)/2);
   margin-bottom: 16rem;
   margin-left: 20px;
   margin-right: 20px;
@@ -2340,11 +2342,11 @@ figure.center {
   display: inline-block;
   content: "";
   position: absolute;
-  top: calc((-1 * calc(2 * 16rem))/2);
+  top: calc((-1 * 32px)/2);
   right: 4px;
   cursor: pointer;
-  width: calc(2 * 16rem);
-  height: calc(2 * 16rem);
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: url(../../images/icons/button_hide.png) center/100% 100%;
 }
@@ -2352,7 +2354,7 @@ figure.center {
 .button_hide_container > :nth-child(2) {
   margin-left: 20px;
   margin-right: 20px;
-  padding-right: calc((calc(2 * 16rem))/2);
+  padding-right: calc((32px)/2);
 }
 
 /*
@@ -2509,7 +2511,7 @@ TODO:    > Choices
   color: white;
 }
 
-.choice_h > li span .textImg, .choice_h > li span .textImg_size, .choice_v > li span .textImg, .choice_v > li span .textImg_size, .choice_d > li span .textImg, .choice_d > li span .textImg_size {
+.choice_h > li span .text_img, .choice_h > li span .text_img_size, .choice_v > li span .text_img, .choice_v > li span .text_img_size, .choice_d > li span .text_img, .choice_d > li span .text_img_size {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
@@ -2810,57 +2812,57 @@ TODO:        >> Option ON
 ────────────────────────────
 TODO:        >> No Label
 ──────────────────────────── */
-.noLabel > li:nth-of-type(1) {
+.no_label > li:nth-of-type(1) {
   display: none;
 }
 
-.choice_h.noLabel > li:nth-of-type(2) a {
+.choice_h.no_label > li:nth-of-type(2) a {
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
 }
 
-.choice_h.noLabel > li:nth-of-type(2) span {
+.choice_h.no_label > li:nth-of-type(2) span {
   padding-left: 15px;
 }
 
-.choice_h.noLabel > li:nth-of-type(2) > a > img {
+.choice_h.no_label > li:nth-of-type(2) > a > img {
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
 }
 
-.choice_v.noLabel > li:nth-of-type(2) {
+.choice_v.no_label > li:nth-of-type(2) {
   border-top-width: 0;
 }
 
-.choice_v.noLabel > li:nth-of-type(2) a {
+.choice_v.no_label > li:nth-of-type(2) a {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.choice_v.noLabel > li:nth-of-type(2) > a > img {
+.choice_v.no_label > li:nth-of-type(2) > a > img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.choice_d.noLabel > li:nth-of-type(2) {
+.choice_d.no_label > li:nth-of-type(2) {
   display: inline-flex;
 }
 
-.choice_d.noLabel > li:nth-of-type(2) span::after {
+.choice_d.no_label > li:nth-of-type(2) span::after {
   content: "▼";
   margin-left: 5rem;
 }
 
-.choice_d.noLabel > li:nth-of-type(2) > a > img {
+.choice_d.no_label > li:nth-of-type(2) > a > img {
   border-radius: 20px;
 }
 
-.choice_d.noLabel.choice_d_open > li:nth-of-type(2) > a > img {
+.choice_d.no_label.choice_d_open > li:nth-of-type(2) > a > img {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 
-.choice_d.noLabel.choice_d_open > li:nth-of-type(2) span::after {
+.choice_d.no_label.choice_d_open > li:nth-of-type(2) span::after {
   content: "";
   margin-left: 0;
 }
@@ -2894,7 +2896,7 @@ TODO:        >> Disabled
 
 /*  
 ──────────────────────────────────────────────────────
-TODO:    > Switchs
+TODO:    > Switchs 
 ────────────────────────────────────────────────────── */
 .switch {
   display: flex;
@@ -2943,22 +2945,11 @@ TODO:    > Switchs
   cursor: default;
 }
 
-.switch.disabled .switch_button {
-  border: 2px dotted rgba(0, 0, 0, 0.3);
-  background: transparent !important;
-}
-
-.switch.disabled .switch_button::before {
-  border: 2px dotted rgba(0, 0, 0, 0.3);
-  background-color: transparent;
-}
-
 .switch.disabled .switch_label {
   color: rgba(0, 0, 0, 0.5);
 }
 
 .switch.on .switch_button {
-  background: DeepSkyBlue;
   background: #60ff52;
 }
 
@@ -2973,6 +2964,10 @@ TODO:    > Switchs
   margin-right: 0;
 }
 
+/*  
+────────────────────────────
+TODO:        >> Sizes
+──────────────────────────── */
 .switch .switch_button {
   min-width: 47px;
   height: 28px;
@@ -2989,13 +2984,6 @@ TODO:    > Switchs
   transition: all 0.33s;
 }
 
-.switch.disabled .switch_button::before {
-  width: 22px;
-  height: 22px;
-  top: 1px;
-  left: 2px;
-}
-
 .switch.on .switch_button {
   transition: all 0.33s;
 }
@@ -3003,10 +2991,6 @@ TODO:    > Switchs
 .switch.on .switch_button::before {
   left: 21px;
   transition: all 0.33s;
-}
-
-.switch.on.disabled .switch_button::before {
-  left: 19px;
 }
 
 @media (max-width: 501px), (max-height: 501px) {
@@ -3024,12 +3008,6 @@ TODO:    > Switchs
     left: 4px;
     transition: all 0.35s;
   }
-  .switch.disabled .switch_button::before {
-    width: 26px;
-    height: 26px;
-    top: 1px;
-    left: 2px;
-  }
   .switch.on .switch_button {
     transition: all 0.35s;
   }
@@ -3037,190 +3015,466 @@ TODO:    > Switchs
     left: 24px;
     transition: all 0.35s;
   }
-  .switch.on.disabled .switch_button::before {
+}
+
+/*
+// Switch - Smaller Size
+
+.switch.smaller {
+
+    .switch_button {
+        min-width: 38px;
+        height: 24px;
+        border-radius: 12px;
+        transition: all 0.29s; 
+    }
+
+    .switch_button::before {
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.29s; 
+    }
+} 
+
+.switch.smaller.disabled .switch_button::before {
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: 1px;
+}
+
+.switch.smaller.on { 
+
+    .switch_button {
+        transition: all 0.29s; 
+    }
+    
+    .switch_button::before {
+        left: 17px;
+        transition: all 0.29s; 
+    }
+}
+
+.switch.smaller.on.disabled .switch_button::before { 
+    left: 14px;
+}
+
+// Switch - Small Size
+
+.switch.small {
+
+    .switch_button {
+        min-width: 42px;
+        height: 26px;
+        border-radius: 13px;
+        transition: all 0.31s; 
+    }
+
+    .switch_button::before {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.31s; 
+    }
+} 
+
+.switch.small.disabled .switch_button::before {
+    width: 20px;
+    height: 20px;
+    top: 1px;
+    left: 2px;
+}
+
+.switch.small.on { 
+
+    .switch_button {
+        transition: all 0.31s; 
+    }
+    
+    .switch_button::before {
+        left: 19px;
+        transition: all 0.31s; 
+    }
+}
+
+.switch.small.on.disabled .switch_button::before { 
+    left: 16px;
+}
+
+// Switch - Medium Size
+
+.switch.medium {
+
+    .switch_button {
+        min-width: 47px;
+        height: 28px;
+        border-radius: 14px;
+        transition: all 0.33s; 
+    }
+
+    .switch_button::before {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        top: 2px;
+        left: 3px;
+        transition: all 0.33s; 
+    }
+}
+
+.switch.medium.disabled .switch_button::before {
+    width: 22px;
+    height: 22px;
+    top: 1px;
+    left: 2px;
+}
+
+.switch.medium.on { 
+
+    .switch_button {
+        transition: all 0.33s; 
+    }
+    
+    .switch_button::before {
+        left: 21px;
+        transition: all 0.33s; 
+    }
+}
+
+.switch.medium.on.disabled .switch_button::before { 
+    left: 19px;
+}
+
+// Switch - Big Size
+
+.switch.big {
+
+    .switch_button {
+        min-width: 49px;
+        height: 30px;
+        border-radius: 15px;
+        transition: all 0.35s; 
+    }
+
+    .switch_button::before {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.35s; 
+    }
+} 
+
+.switch.big.disabled .switch_button::before {
+    width: 24px;
+    height: 24px;
+    top: 1px;
+    left: 2px;
+}
+
+.switch.big.on { 
+
+    .switch_button {
+        transition: all 0.35s; 
+    }
+    
+    .switch_button::before {
+        left: 22px;
+        transition: all 0.35s; 
+    }
+}
+
+.switch.big.on.disabled .switch_button::before { 
+    left: 19px;
+}
+
+// Switch - Bigger Size
+
+.switch.bigger {
+
+    .switch_button {
+        min-width: 53px;
+        height: 32px;
+        border-radius: 16px;
+        transition: all 0.37s; 
+    }
+
+    .switch_button::before {
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        top: 3px;
+        left: 4px;
+        transition: all 0.37s; 
+    }
+}
+
+.switch.bigger.disabled .switch_button::before {
+    width: 26px;
+    height: 26px;
+    top: 1px;
+    left: 2px;
+}
+
+.switch.bigger.on { 
+
+    .switch_button {
+        transition: all 0.37s; 
+    }
+    
+    .switch_button::before {
+        left: 24px;
+        transition: all 0.37s; 
+    }
+}
+
+.switch.bigger.on.disabled .switch_button::before { 
     left: 21px;
+}
+*/
+/*  
+────────────────────────────
+TODO:        >> Hi-Tech Style
+──────────────────────────── */
+.switch .switch_button {
+  background: linear-gradient(to bottom, #b3b3b3, #bababa, white) !important;
+}
+
+.switch .switch_button::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  border-radius: 1000px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
+  transition: all 0.39s;
+}
+
+.switch .switch_button::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  border-radius: 1000px;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  transition: all 0.39s;
+}
+
+/*  
+.switch::before { // Shadow
+    
+    content: '';
+    display: inline-block;
+    position: absolute;
+    margin-top: calc(0.5 * 24px + 3px);
+    margin-left: calc(-1px);
+    width: $switch_ball_size;
+    height: $switch_ball_size;
+    border-radius: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), hsla(0, 0%, 0%, 0) 99%);
+    //transform: rotateZ(-45deg); 
+}  
+*/
+.switch.on .switch_button {
+  border-color: #33e7ff;
+  background: white !important;
+}
+
+.switch.on .switch_button::before {
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, white 75%), cyan;
+  box-shadow: 0px 0px 17px 1px #00e1ff;
+}
+
+.switch.disabled .switch_button::before {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Sizes
+──────────────────────────── */
+.switch .switch_button {
+  height: 6px;
+  border: 1px solid black;
+  border-radius: 1000px;
+}
+
+.switch .switch_button::before {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  top: -11px;
+  left: -2px;
+}
+
+.switch .switch_button::after {
+  top: calc(-0.9 * 24px + 3px);
+  left: calc(-1.05 * 24px + 0.25 * 24px - 2px);
+  width: calc(0.6 * 24px);
+  height: calc(0.6 * 24px);
+}
+
+.switch.on .switch_button::before {
+  left: 24px;
+  transition: all 0.39s;
+}
+
+.switch.on .switch_button::after {
+  left: calc(-1.05 * 24px + 0.25 * 24px + 24px);
+  transition: all 0.39s;
+}
+
+@media (max-width: 501px), (max-height: 501px) {
+  .switch .switch_button {
+    min-width: calc(53px + 28px - 24px);
+    height: 8px;
+    background: linear-gradient(to bottom, #b3b3b3, #c9c9c9, white) !important;
+  }
+  .switch .switch_button::before {
+    top: -12px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
+  }
+  .switch .switch_button::after {
+    top: calc(-0.9 * 28px + 3px);
+    left: calc(-1.05 * 28px + 0.25 * 28px - 2px);
+    width: calc(0.6 * 28px);
+    height: calc(0.6 * 28px);
+  }
+  .switch.on .switch_button::before {
+    left: 29px;
+  }
+  .switch.on .switch_button::after {
+    left: calc(-1.05 * 28px + 0.25 * 28px + 29px);
+    transition: all 0.42s;
   }
 }
 
-/**/
-.switch_smaller .switch_button {
-  min-width: 38px;
-  height: 24px;
-  border-radius: 12px;
-  transition: all 0.29s;
+/*  
+────────────────────────────
+TODO:        >> Type 2
+──────────────────────────── */
+.switch.type_2_1, .switch.type_2_2, .switch.type_2_3 {
+  min-width: 32px;
+  min-height: 32px;
+  border: 1px solid #e6e6e6;
+  box-shadow: inset -3px -3px 6px 0px rgba(0, 0, 0, 0.15);
+  background: #fcfcfc;
+  transition: 0.15s;
 }
 
-.switch_smaller .switch_button::before {
-  width: 18px;
-  height: 18px;
-  border-radius: 9px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.29s;
+.switch.type_2_1 .switch_button, .switch.type_2_2 .switch_button, .switch.type_2_3 .switch_button {
+  display: none;
 }
 
-.switch_smaller.disabled .switch_button::before {
-  width: 18px;
-  height: 18px;
-  top: 1px;
-  left: 1px;
+.switch.type_2_1 {
+  padding: 10px 13px 12px 10px;
+  border-radius: 11px;
 }
 
-.switch_smaller.on .switch_button {
-  transition: all 0.29s;
+.switch.type_2_1 .switch_icon {
+  display: none;
 }
 
-.switch_smaller.on .switch_button::before {
-  left: 17px;
-  transition: all 0.29s;
-}
-
-.switch_smaller.on.disabled .switch_button::before {
-  left: 14px;
-}
-
-.switch_small .switch_button {
-  min-width: 42px;
-  height: 26px;
-  border-radius: 13px;
-  transition: all 0.31s;
-}
-
-.switch_small .switch_button::before {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.31s;
-}
-
-.switch_small.disabled .switch_button::before {
-  width: 20px;
-  height: 20px;
-  top: 1px;
-  left: 2px;
-}
-
-.switch_small.on .switch_button {
-  transition: all 0.31s;
-}
-
-.switch_small.on .switch_button::before {
-  left: 19px;
-  transition: all 0.31s;
-}
-
-.switch_small.on.disabled .switch_button::before {
-  left: 16px;
-}
-
-.switch_medium .switch_button {
-  min-width: 47px;
-  height: 28px;
+.switch.type_2_2 {
+  padding: 10px 12px 12px 10px;
   border-radius: 14px;
-  transition: all 0.33s;
 }
 
-.switch_medium .switch_button::before {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  top: 2px;
-  left: 3px;
-  transition: all 0.33s;
+.switch.type_2_2 .switch_name {
+  display: none;
 }
 
-.switch_medium.disabled .switch_button::before {
-  width: 22px;
-  height: 22px;
-  top: 1px;
-  left: 2px;
+.switch.type_2_2 .switch_icon {
+  margin: 0;
 }
 
-.switch_medium.on .switch_button {
-  transition: all 0.33s;
+.switch.type_2_3 {
+  padding: 10px 12px 12px 10px;
+  border-radius: 14px;
 }
 
-.switch_medium.on .switch_button::before {
-  left: 21px;
-  transition: all 0.33s;
+/*  
+────────────────────────────
+TODO:            >>> Rounded
+──────────────────────────── */
+.switch.type_2_1.rounded {
+  padding-left: 13px;
+  padding-right: 16px;
+  border-radius: 1000px;
 }
 
-.switch_medium.on.disabled .switch_button::before {
-  left: 19px;
+.switch.type_2_2.rounded {
+  border-radius: 1000px;
 }
 
-.switch_big .switch_button {
-  min-width: 49px;
-  height: 30px;
-  border-radius: 15px;
-  transition: all 0.35s;
+.switch.type_2_3.rounded {
+  padding-left: 18px;
+  padding-right: 20px;
+  border-radius: 1000px;
 }
 
-.switch_big .switch_button::before {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.35s;
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+.switch.type_2_1.on, .switch.type_2_2.on, .switch.type_2_3.on {
+  border: 1px solid #8fe7ff;
+  outline: 2px solid white;
+  background: linear-gradient(to bottom right, white, rgba(255, 255, 255, 0)), linear-gradient(180deg, #b3eeff, #99e9ff);
+  filter: drop-shadow(0px 0px 6px DeepSkyBlue);
 }
 
-.switch_big.disabled .switch_button::before {
-  width: 24px;
-  height: 24px;
-  top: 1px;
-  left: 2px;
+/*  
+────────────────────────────
+TODO:        >> Type 3
+──────────────────────────── */
+.switch.type_3 {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: calc(0.25 * 48px);
+  transition: 0.17s;
 }
 
-.switch_big.on .switch_button {
-  transition: all 0.35s;
+.switch.type_3 .switch_button {
+  display: none;
 }
 
-.switch_big.on .switch_button::before {
-  left: 22px;
-  transition: all 0.35s;
+.switch.type_3 .switch_name {
+  display: none;
 }
 
-.switch_big.on.disabled .switch_button::before {
-  left: 19px;
+.switch.type_3 .switch_icon {
+  width: 48px;
+  height: 48px;
+  margin: 0;
 }
 
-.switch_bigger .switch_button {
-  min-width: 53px;
-  height: 32px;
-  border-radius: 16px;
-  transition: all 0.37s;
+/*  
+────────────────────────────
+TODO:            >>> Rounded
+──────────────────────────── */
+.switch.type_3.rounded {
+  border-radius: 1000px;
 }
 
-.switch_bigger .switch_button::before {
-  width: 26px;
-  height: 26px;
-  border-radius: 13px;
-  top: 3px;
-  left: 4px;
-  transition: all 0.37s;
+.switch.type_3.rounded .switch_icon {
+  border-radius: 1000px;
 }
 
-.switch_bigger.disabled .switch_button::before {
-  width: 26px;
-  height: 26px;
-  top: 1px;
-  left: 2px;
-}
-
-.switch_bigger.on .switch_button {
-  transition: all 0.37s;
-}
-
-.switch_bigger.on .switch_button::before {
-  left: 24px;
-  transition: all 0.37s;
-}
-
-.switch_bigger.on.disabled .switch_button::before {
-  left: 21px;
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+.switch.type_3.on {
+  outline: 2px solid white;
+  filter: drop-shadow(0px 0px 6px DeepSkyBlue);
 }
 
 /*
@@ -3334,7 +3588,7 @@ TODO:        >> Posters
   text-fill-color: currentcolor;
 }
 
-.poster .textImg, .poster .textImg_size {
+.poster .text_img, .poster .text_img_size {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
@@ -3534,7 +3788,7 @@ TODO:    > Lightbox
   max-height: calc(100vh - (3 * 48px));
   border-radius: 20px;
   color: white;
-  background: url(../../images/bgs/lightbox.png) center/100% 100%, DeepSkyBlue;
+  background: url(../../images/bgs/lightbox.png) center/100% 100%;
   box-shadow: 6px 6px 24px -14px black, inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -3559,7 +3813,7 @@ TODO:    > Lightbox
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.lightbox_text .textImg, .lightbox_text .textImg_size {
+.lightbox_text .text_img, .lightbox_text .text_img_size {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
