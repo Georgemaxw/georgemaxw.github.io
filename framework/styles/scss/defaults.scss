@@ -3031,11 +3031,15 @@ TODO:            >>> Sizes
         .switch_button { // Path
 
             // outline: 2px solid hsl(187, 100%, 92%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
+            box-shadow: 0px 0px 6px 0px hsla(188, 100%, 50%, 0.63);
         }
         
         .switch_button::before { // Ball
 
-            left: 29px;
+            top: -13px; // <=== -1
+            left: 29px;  
+            width: calc(#{$switch_ball_size_SS} + 2); // <=== +2 
+            height: calc(#{$switch_ball_size_SS} + 2); // <=== +2
         }
 
         .switch_button::after { // White Shadow

@@ -3351,8 +3351,14 @@ TODO:            >>> Sizes
     width: calc(0.6 * 28px);
     height: calc(0.6 * 28px);
   }
+  .switch.on .switch_button {
+    box-shadow: 0px 0px 6px 0px rgba(0, 221, 255, 0.63);
+  }
   .switch.on .switch_button::before {
+    top: -13px;
     left: 29px;
+    width: calc(28px + 2);
+    height: calc(28px + 2);
   }
   .switch.on .switch_button::after {
     left: calc(-1.05 * 28px + 0.25 * 28px + 29px);
