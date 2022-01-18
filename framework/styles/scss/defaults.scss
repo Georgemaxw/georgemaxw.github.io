@@ -2919,6 +2919,7 @@ $switch_ball_size_SS: 28px;
 
         border-color: hsl(187, 100%, 60%);
         // outline: 1px solid hsl(187, 100%, 90%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
+        box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
         background: $bg_switch_path_on !important;
     }
 
@@ -2983,7 +2984,7 @@ TODO:            >>> Sizes
     
     .switch_button::before { // Ball
 
-        top: -12px; // <=== -1
+        top: -10px; // <=== +1
         left: 23px; // <=== -1 
         width: calc(#{$switch_ball_size} + 2); // <=== +2
         height: calc(#{$switch_ball_size} + 2); // <=== +2
@@ -3018,7 +3019,7 @@ TODO:            >>> Sizes
             background: $bg_switch_ball;
         }
 
-        .switch_button::after {
+        .switch_button::after { // White Shadow
             top: calc(-0.9 * #{$switch_ball_size_SS} + 3px);
             left: calc(-1.05 * #{$switch_ball_size_SS} + 0.25 * #{$switch_ball_size_SS} - 2px); 
             width: calc(0.6 * #{$switch_ball_size_SS});
@@ -3036,7 +3037,7 @@ TODO:            >>> Sizes
         
         .switch_button::before { // Ball
 
-            top: -13px; // <=== -1
+            top: -11px; // <=== -1
             left: 29px;  
             width: calc(#{$switch_ball_size_SS} + 2); // <=== +2 
             height: calc(#{$switch_ball_size_SS} + 2); // <=== +2
@@ -3044,6 +3045,7 @@ TODO:            >>> Sizes
 
         .switch_button::after { // White Shadow
             
+            top: calc(-0.9 * #{$switch_ball_size_SS} + 5px);
             left: calc(-1.05 * #{$switch_ball_size_SS} + 0.25 * #{$switch_ball_size_SS} + 29px); 
             transition: all 0.42s; 
         } 
