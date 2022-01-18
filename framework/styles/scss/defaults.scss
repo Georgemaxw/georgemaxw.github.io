@@ -24,6 +24,8 @@ $table_border1_width: 1px;
 $table_border2_width: 1px;
 $border_radius_default: 20px;
 $border_radius_big: 40px;
+$switch_tech_ball_size: 24px;
+$switch_tech_ball_size_SS: 28px;
  
 /* ------ Breakpoints ------ */ 
 
@@ -66,8 +68,6 @@ $color_border_danger_dark: hsl(0, 100%, 31%);
 $color_border_table: hsl(0, 0%, 85%);
 $color_border_form: hsl(0, 0%, 80%); 
 $color_border_kbd: hsl(0, 0%, 95%);
-$color_border_switch_type_2_off: hsl(193, 0%,90%); /*  hsl(193, 0%,92%); */
-$color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 
 $color_shadow_text: hsla(0, 0%, 0%, 0.15);
 $color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
@@ -121,10 +121,19 @@ $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100
 $bg_switch_ball: hsl(0, 0%, 100%); 
 $bg_switch_off: hsl(0, 0%, 93%);
 $bg_switch_on: hsl(115, 100%, 66%);
-$bg_switch_type_2_off: hsl(193, 0%,99%); 
-$bg_switch_type_2_on: 
-linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
-linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
+$bg_switch_tech_ball: 
+linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
+hsl(0, 0%, 80%);
+$bg_switch_tech_on_ball: 
+linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
+cyan;
+$bg_switch_tech_ball_white_shadow: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+$bg_switch_tech_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+$bg_switch_tech_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
+$bg_switch_tech_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+
 $bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
 $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
@@ -2452,8 +2461,6 @@ TODO:        >> Disabled
 TODO:    > Switchs 
 ────────────────────────────────────────────────────── */
 
-// --------- Apple Style ---------
-
 .switch {
 
     display: flex;
@@ -2466,6 +2473,7 @@ TODO:    > Switchs
     margin-bottom: $margin_vertical;
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal; 
+
     cursor: pointer;
 
     .switch_button {
@@ -2501,16 +2509,6 @@ TODO:    > Switchs
     opacity: 0.5;
     cursor: default;
 
-    .switch_button {
-        // border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
-        // background: transparent !important;
-    }
-
-    .switch_button::before {
-        // border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
-        // background-color: transparent; 
-    }
-
     .switch_label {
         color: adjust-color($color_text, $alpha: -0.5);
     }
@@ -2536,7 +2534,7 @@ TODO:    > Switchs
 TODO:        >> Sizes
 ──────────────────────────── */
 
-// Switch - Tamanho escolhido para tela grande: Medium Size
+// Switch - Tamanho para tela grande: Medium Size
 
 .switch {
 
@@ -2851,31 +2849,13 @@ TODO:        >> Sizes
 
 /*  
 ────────────────────────────
-TODO:        >> Hi-Tech Style
+TODO:        >> Tech Style
 ──────────────────────────── */
-
-$bg_switch_ball: 
-linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
-radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
-hsl(0, 0%, 80%);
-
-$bg_switch_on_ball: 
-linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
-radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
-cyan;
-
-$bg_switch_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
-$bg_switch_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
-
-$bg_switch_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
-
-$switch_ball_size: 24px;
-$switch_ball_size_SS: 28px;
 
 .switch {
     
     .switch_button { // Path
-        background: $bg_switch_path_off !important;
+        background: $bg_switch_tech_path_off !important;
     }
 
     .switch_button::before { // Ball
@@ -2884,7 +2864,7 @@ $switch_ball_size_SS: 28px;
         display: inline-block;
         position: relative;
         border-radius: 1000px;
-        background: $bg_switch_ball;
+        background: $bg_switch_tech_ball;
         transition: all 0.39s; 
     }
 
@@ -2894,7 +2874,7 @@ $switch_ball_size_SS: 28px;
         display: inline-block;
         position: relative;
         border-radius: 1000px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+        background: $bg_switch_tech_ball_white_shadow;
         transition: all 0.39s; 
     }
 } 
@@ -2904,10 +2884,10 @@ $switch_ball_size_SS: 28px;
     content: '';
     display: inline-block;
     position: absolute;
-    margin-top: calc(0.5 * #{$switch_ball_size} + 3px);
+    margin-top: calc(0.5 * #{$switch_tech_ball_size} + 3px);
     margin-left: calc(-1px);
-    width: $switch_ball_size;
-    height: $switch_ball_size;
+    width: $switch_tech_ball_size;
+    height: $switch_tech_ball_size;
     border-radius: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), hsla(0, 0%, 0%, 0) 99%);
     //transform: rotateZ(-45deg); 
@@ -2920,18 +2900,18 @@ $switch_ball_size_SS: 28px;
         border-color: hsl(187, 100%, 60%);
         // outline: 1px solid hsl(187, 100%, 90%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
         box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
-        background: $bg_switch_path_on !important;
+        background: $bg_switch_tech_path_on !important;
     }
 
     .switch_button::before { // Ball
 
-        background: $bg_switch_on_ball;
+        background: $bg_switch_tech_on_ball;
         //filter: drop-shadow(0px 0px 6px hsl(187, 100%, 50%));
         //box-shadow: 0px 0px 17px 1px hsl(187, 100%, 50%);
         //box-shadow: 0px 0px 15px 0px hsl(187, 100%, 48%);
         //box-shadow: 0px 0px 15px 0px hsl(188, 100%, 48%);
-        border: 1px solid hsl(187, 100%, 80%); // <=== 
-        box-shadow: 0px 0px 13px 0px hsl(188, 100%, 60%); // <===   
+        border: 1px solid hsl(187, 100%, 80%); 
+        box-shadow: 0px 0px 13px 0px hsl(188, 100%, 60%); 
     } 
 }
 
@@ -2974,8 +2954,8 @@ TODO:            >>> Sizes
 
     .switch_button::before { // Ball
 
-        width: $switch_ball_size;
-        height: $switch_ball_size;
+        width: $switch_tech_ball_size;
+        height: $switch_tech_ball_size;
         border: 0;
         top: -11px;
         left: -2px;
@@ -2983,10 +2963,10 @@ TODO:            >>> Sizes
 
     .switch_button::after { // White Shadow
 
-        top: calc(-0.9 * #{$switch_ball_size} + 3px);
-        left: calc(-1.05 * #{$switch_ball_size} + 0.25 * #{$switch_ball_size} - 2px); 
-        width: calc(0.6 * #{$switch_ball_size});
-        height: calc(0.6 * #{$switch_ball_size});
+        top: calc(-0.9 * #{$switch_tech_ball_size} + 3px);
+        left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
+        width: calc(0.6 * #{$switch_tech_ball_size});
+        height: calc(0.6 * #{$switch_tech_ball_size});
     }
 }
 
@@ -2994,17 +2974,17 @@ TODO:            >>> Sizes
     
     .switch_button::before { // Ball
 
-        top: -10px; // <=== +1
-        left: 23px; // <=== -1 
-        width: calc(#{$switch_ball_size} + 2); // <=== +2
-        height: calc(#{$switch_ball_size} + 2); // <=== +2
+        top: -10px; 
+        left: 23px; 
+        width: calc(#{$switch_tech_ball_size} + 2); 
+        height: calc(#{$switch_tech_ball_size} + 2); 
         transition: all 0.39s; 
     }
 
     .switch_button::after { // White Shadow
         
-        top: calc(-0.9 * #{$switch_ball_size} + 4px);
-        left: calc(-1.05 * #{$switch_ball_size} + 0.25 * #{$switch_ball_size} + 23px); 
+        top: calc(-0.9 * #{$switch_tech_ball_size} + 4px);
+        left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} + 23px); 
         transition: all 0.39s; 
     }
 }
@@ -3017,24 +2997,24 @@ TODO:            >>> Sizes
 
         .switch_button { // Path
 
-            min-width: calc(53px + #{$switch_ball_size_SS} - #{$switch_ball_size});
+            min-width: calc(53px + #{$switch_tech_ball_size_SS} - #{$switch_tech_ball_size});
             height: 8px; 
-            background: $bg_switch_path_off_SS !important;
+            background: $bg_switch_tech_path_off_SS !important;
         }
     
         .switch_button::before { // Ball
 
             top: -12px;
-            width: $switch_ball_size_SS;
-            height: $switch_ball_size_SS;
-            background: $bg_switch_ball;
+            width: $switch_tech_ball_size_SS;
+            height: $switch_tech_ball_size_SS;
+            background: $bg_switch_tech_ball;
         }
 
         .switch_button::after { // White Shadow
-            top: calc(-0.9 * #{$switch_ball_size_SS} + 3px);
-            left: calc(-1.05 * #{$switch_ball_size_SS} + 0.25 * #{$switch_ball_size_SS} - 2px); 
-            width: calc(0.6 * #{$switch_ball_size_SS});
-            height: calc(0.6 * #{$switch_ball_size_SS}); 
+            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 3px);
+            left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} - 2px); 
+            width: calc(0.6 * #{$switch_tech_ball_size_SS});
+            height: calc(0.6 * #{$switch_tech_ball_size_SS}); 
         }
     }
     
@@ -3048,16 +3028,16 @@ TODO:            >>> Sizes
         
         .switch_button::before { // Ball
 
-            top: -11px; // <=== -1
+            top: -11px; 
             left: 29px;  
-            width: calc(#{$switch_ball_size_SS} + 2); // <=== +2 
-            height: calc(#{$switch_ball_size_SS} + 2); // <=== +2
+            width: calc(#{$switch_tech_ball_size_SS} + 2); 
+            height: calc(#{$switch_tech_ball_size_SS} + 2); 
         }
 
         .switch_button::after { // White Shadow
             
-            top: calc(-0.9 * #{$switch_ball_size_SS} + 5px);
-            left: calc(-1.05 * #{$switch_ball_size_SS} + 0.25 * #{$switch_ball_size_SS} + 29px); 
+            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 5px);
+            left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} + 29px); 
             transition: all 0.42s; 
         } 
     }
@@ -3068,7 +3048,20 @@ TODO:            >>> Sizes
 TODO:        >> Type 2
 ──────────────────────────── */
 
-.switch.type_2_1, .switch.type_2_2, .switch.type_2_3 { 
+$bg_switch_type_2_off: hsl(193, 0%,99%); 
+ 
+$bg_switch_type_2_on:  
+linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
+linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
+
+$bg_switch_type_2_rounded_white_shadow: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+
+$color_border_switch_type_2_off: transparent; /*  hsl(193, 0%,92%); */
+$color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
+
+
+
+.switch.type_2, .switch.type_2_2, .switch.type_2_3 { 
  
     min-width: $button_height_smaller;
     min-height: $button_height_smaller;
@@ -3082,9 +3075,20 @@ TODO:        >> Type 2
 
         display: none;
     }
+
+    .switch_icon {
+        //box-shadow: 0px 0px 0px 1px black;
+        filter: drop-shadow(0px 0px 1px rgb(0, 225, 255)); 
+    }
 }
  
-.switch.type_2_1 {
+.switch.type_2 {
+
+    padding: 10px 12px 12px 10px; 
+    border-radius: 14px; 
+}
+ 
+.switch.type_2_2 {
 
     padding: 10px 13px 12px 10px; 
     border-radius: 11px; 
@@ -3094,7 +3098,7 @@ TODO:        >> Type 2
     }
 }
       
-.switch.type_2_2 {
+.switch.type_2_3 {
 
     padding: 10px 12px 12px 10px; 
     border-radius: 14px; 
@@ -3107,34 +3111,29 @@ TODO:        >> Type 2
         margin: 0;
     }
 }
- 
-.switch.type_2_3 {
-
-    padding: 10px 12px 12px 10px; 
-    border-radius: 14px; 
-}
 
 /*  
 ────────────────────────────
 TODO:            >>> Rounded
 ──────────────────────────── */
 
-.switch.type_2_1.rounded {
+.switch.type_2.rounded {
+
+    padding-left: 18px;
+    padding-right: 20px;
+    border-radius: 1000px; 
+}
+
+.switch.type_2_2.rounded {
 
     padding-left: 13px;
     padding-right: 16px;
     border-radius: 1000px; 
 }
 
-.switch.type_2_2.rounded {
-
-    border-radius: 1000px; 
-}
-
 .switch.type_2_3.rounded {
 
-    padding-left: 18px;
-    padding-right: 20px;
+    padding: 11px 13px 13px 11px;  
     border-radius: 1000px; 
 }
 
@@ -3143,13 +3142,14 @@ TODO:            >>> Rounded
 TODO:            >>> Option ON
 ──────────────────────────── */
 
-.switch.type_2_1.on, .switch.type_2_2.on, .switch.type_2_3.on {
+.switch.type_2.on, .switch.type_2_2.on, .switch.type_2_3.on {
 
     border: 1px solid $color_border_switch_type_2_on;
-    outline: 2px solid white;
+    //outline: 2px solid white;
     background: $bg_switch_type_2_on;
-    filter: drop-shadow(0px 0px 6px $color_theme); 
+    //filter: drop-shadow(0px 0px 6px $color_theme); 
 }
+
 
 /*  
 ────────────────────────────
