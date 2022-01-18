@@ -2941,19 +2941,21 @@ $switch_ball_size_SS: 28px;
     border-bottom: 0;
 }
 
-.switch.on.disabled .switch_button::before { // Ball
+.switch.on.disabled {
 
-    // outline: 2px solid hsl(187, 100%, 80%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
-    //filter: drop-shadow(0px 0px 2px hsl(187, 100%, 50%));
-    border: 2px solid hsl(187, 100%, 80%);
-    box-shadow: 0px 0px 0px 0px hsl(188, 100%, 50%);
+    .switch_button { // Path
+
+        box-shadow: none;
+    }
+    
+    .switch_button::before { // Ball
+
+        // outline: 2px solid hsl(187, 100%, 80%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
+        //filter: drop-shadow(0px 0px 2px hsl(187, 100%, 50%));
+        border: 2px solid hsl(187, 100%, 80%);
+        box-shadow: none;
+    }
 }
-
-.switch.on.disabled .switch_button::after { // White Shadow
- 
-    //border: 1px solid hsl(0, 0%, 0%);
-}
-
 /*  
 ────────────────────────────
 TODO:            >>> Sizes
