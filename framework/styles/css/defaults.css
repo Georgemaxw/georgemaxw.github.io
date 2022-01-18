@@ -3296,6 +3296,11 @@ TODO:        >> Hi-Tech Style
   border-bottom: 0;
 }
 
+.switch.on.disabled .switch_button::before {
+  border: 2px solid #99f3ff;
+  box-shadow: 0px 0px 0px 0px #00ddff;
+}
+
 /*  
 ────────────────────────────
 TODO:            >>> Sizes
@@ -3330,7 +3335,8 @@ TODO:            >>> Sizes
 }
 
 .switch.on .switch_button::after {
-  left: calc(-1.05 * 24px + 0.25 * 24px + 24px);
+  top: calc(-0.9 * 24px + 4px);
+  left: calc(-1.05 * 24px + 0.25 * 24px + 23px);
   transition: all 0.39s;
 }
 
