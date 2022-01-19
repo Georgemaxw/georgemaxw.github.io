@@ -3394,29 +3394,25 @@ TODO:        >> Type 2
   display: none;
 }
 
-.switch.type_2 .switch_icon, .switch.type_2_2 .switch_icon, .switch.type_2_3 .switch_icon {
-  filter: drop-shadow(0px 0px 1px #00e1ff);
+.switch.type_2, .switch.type_2_2, .switch.type_2_3 {
+  box-shadow: inset 0px 0px 9px 2px rgba(0, 0, 0, 0.33);
 }
 
-.switch.type_2:not(.rounded) .switch_label::before, .switch.type_2_2:not(.rounded) .switch_label::before, .switch.type_2_3:not(.rounded) .switch_label::before {
+.switch.type_2 .switch_label::after, .switch.type_2_2 .switch_label::after, .switch.type_2_3 .switch_label::after {
   content: '';
   position: absolute;
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.25));
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 2 * 3px);
+  height: 49.5%;
+  border-radius: 10px;
 }
 
 .switch.type_2 {
   padding: 11px;
   padding-right: 12px;
   border-radius: 14px;
-  box-shadow: inset 0px 0px 9px 2px rgba(0, 0, 0, 0.33);
-}
-
-.switch.type_2 .switch_label::before {
-  top: 3px;
-  left: 3px;
-  width: calc(100% - 2 * 3px);
-  height: 50%;
-  border-radius: 10px;
 }
 
 .switch.type_2_2 {
@@ -3446,6 +3442,12 @@ TODO:        >> Type 2
 ────────────────────────────
 TODO:            >>> Rounded
 ──────────────────────────── */
+.switch.type_2.rounded .switch_label::after, .switch.type_2_2.rounded .switch_label::after, .switch.type_2_3.rounded .switch_label::after {
+  top: 3px;
+  height: 49.5%;
+  border-radius: 1000px;
+}
+
 .switch.type_2.rounded {
   padding-left: 18px;
   padding-right: 20px;
@@ -3458,8 +3460,13 @@ TODO:            >>> Rounded
   border-radius: 1000px;
 }
 
+.switch.type_2_2.rounded .switch_label::after {
+  left: 7px;
+  width: calc(100% - 2 * 7px);
+}
+
 .switch.type_2_3.rounded {
-  padding: 11px 13px 13px 11px;
+  padding: 11px;
   border-radius: 1000px;
 }
 
@@ -3470,6 +3477,11 @@ TODO:            >>> Option ON
 .switch.type_2.on, .switch.type_2_2.on, .switch.type_2_3.on {
   background: #a8ecff;
   box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
+}
+
+.switch.type_2.on.disabled, .switch.type_2_2.on.disabled, .switch.type_2_3.on.disabled {
+  box-shadow: inset 0px 0px 9px 4px white;
+  border: 1px solid #80dfff;
 }
 
 /*  

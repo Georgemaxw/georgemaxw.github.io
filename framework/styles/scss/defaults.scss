@@ -3087,19 +3087,33 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
     }
 
     .switch_icon {
-        //box-shadow: 0px 0px 0px 1px black;
-        filter: drop-shadow(0px 0px 1px hsl(187, 100%, 50%)); 
+
+        //filter: drop-shadow(0px 0px 1px hsl(187, 100%, 50%)); 
         //opacity: 0;
     }
 }
 
-.switch.type_2:not(.rounded), .switch.type_2_2:not(.rounded), .switch.type_2_3:not(.rounded)  {
+//.switch.type_2:not(.rounded), .switch.type_2_2:not(.rounded), .switch.type_2_3:not(.rounded)  {
+.switch.type_2, .switch.type_2_2, .switch.type_2_3  {
+    
+    box-shadow: 
+    inset 0px 0px 9px 2px $color_shadow_box_inset_switch_type_2_dark;
 
-    .switch_label::before { // White shadow over the ball   
+    .switch_label::after { // White shadow over the ball   
           
         content: '';
         position: absolute;
         background: $bg_switch_type_2_white_shadow;
+          
+        $offset: 3px;
+        $left:  $offset;
+        $height: 49.5%; //calc(24px + #{$offset});
+
+        top: $offset;  
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+        height: $height;
+        border-radius: 10px;
     }
 }
  
@@ -3108,21 +3122,6 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
     padding: 11px; 
     padding-right: 12px;
     border-radius: 14px; 
-    box-shadow: 
-    inset 0px 0px 9px 2px $color_shadow_box_inset_switch_type_2_dark;
-
-    .switch_label::before { // White Shadow  
-          
-        $offset: 3px;
-        $left:  $offset;
-        $height: 50%; //calc(24px + #{$offset});
-
-        top: $offset;  
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
-        height: $height;
-        border-radius: 10px;
-    }
 }
  
 .switch.type_2_2 {
@@ -3149,11 +3148,25 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
         margin: 0;
     }
 }
+//
 
 /*  
 ────────────────────────────
 TODO:            >>> Rounded
 ──────────────────────────── */
+
+.switch.type_2.rounded, .switch.type_2_2.rounded, .switch.type_2_3.rounded {
+
+    .switch_label::after { // White Shadow
+          
+        $top: 3px;
+        $height: 49.5%; //calc(24px + #{$top});
+
+        top: $top;  
+        height: $height;
+        border-radius: 1000px;
+    }
+}
 
 .switch.type_2.rounded {
 
@@ -3167,11 +3180,18 @@ TODO:            >>> Rounded
     padding-left: 13px;
     padding-right: 16px;
     border-radius: 1000px; 
+
+    .switch_label::after { // White Shadow
+          
+        $left:  7px;
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
 }
 
 .switch.type_2_3.rounded {
 
-    padding: 11px 13px 13px 11px;  
+    padding: 11px;  
     border-radius: 1000px; 
 }
 
@@ -3187,13 +3207,19 @@ TODO:            >>> Option ON
     background: $bg_switch_type_2_on;
     //box-shadow: inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
     box-shadow:  
-    inset 0px 0px 9px 4px $color_shadow_box_inset_switch_type_2_clear
-    , 0px 0px 12px 0px $color_theme
-    ;
+    inset 0px 0px 9px 4px $color_shadow_box_inset_switch_type_2_clear, 
+    0px 0px 12px 0px $color_theme;
+
     //filter: drop-shadow(0px 0px 6px $color_theme); 
-    //border: 1px solid adjust-color($color_theme, $lightness: 30%); 
 }
 
+.switch.type_2.on.disabled, .switch.type_2_2.on.disabled, .switch.type_2_3.on.disabled { 
+
+    
+    box-shadow:  
+    inset 0px 0px 9px 4px $color_shadow_box_inset_switch_type_2_clear;
+    border: 1px solid adjust-color($color_theme, $lightness: 25%); 
+}
 
 /*  
 ────────────────────────────
