@@ -3096,8 +3096,8 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 //.switch.type_2:not(.rounded), .switch.type_2_2:not(.rounded), .switch.type_2_3:not(.rounded)  {
 .switch.type_2, .switch.type_2_2, .switch.type_2_3  {
     
-    box-shadow: 
-    inset 0px 0px 9px 2px $color_shadow_box_inset_switch_type_2_dark;
+    //box-shadow: inset 0px 0px 9px 2px $color_shadow_box_inset_switch_type_2_dark;
+    box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_type_2_dark;
 
     .switch_label::after { // White shadow over the ball   
           
@@ -3105,7 +3105,7 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
         position: absolute;
         background: $bg_switch_type_2_white_shadow;
           
-        $offset: 3px;
+        $offset: 2px;
         $left:  $offset;
         $height: 49.5%; //calc(24px + #{$offset});
 
@@ -3164,10 +3164,11 @@ TODO:            >>> Rounded
 .switch.type_2.rounded, .switch.type_2_2.rounded, .switch.type_2_3.rounded {
 
     border-radius: 1000px; 
+    box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_2_dark; 
 
     .switch_label::after { // White Shadow
           
-        top: 3px;  
+        top: 2px;  
         border-radius: 1000px; 
     }
 }
@@ -3210,7 +3211,7 @@ TODO:            >>> Rounded
 
     .switch_label::after { // White Shadow
           
-        background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 50%, transparent 50%) center center / 100% 100% no-repeat; 
+        background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
            
         $top: 3px;
         $left:  3px; 

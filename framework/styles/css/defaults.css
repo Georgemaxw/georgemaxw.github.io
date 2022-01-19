@@ -3399,16 +3399,16 @@ TODO:        >> Type 2
 }
 
 .switch.type_2, .switch.type_2_2, .switch.type_2_3 {
-  box-shadow: inset 0px 0px 9px 2px rgba(0, 0, 0, 0.33);
+  box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.33);
 }
 
 .switch.type_2 .switch_label::after, .switch.type_2_2 .switch_label::after, .switch.type_2_3 .switch_label::after {
   content: '';
   position: absolute;
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
-  top: 3px;
-  left: 3px;
-  width: calc(100% - 2 * 3px);
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 2 * 2px);
   height: 49.5%;
   border-radius: 10px;
 }
@@ -3453,10 +3453,11 @@ TODO:            >>> Rounded
 ──────────────────────────── */
 .switch.type_2.rounded, .switch.type_2_2.rounded, .switch.type_2_3.rounded {
   border-radius: 1000px;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.33);
 }
 
 .switch.type_2.rounded .switch_label::after, .switch.type_2_2.rounded .switch_label::after, .switch.type_2_3.rounded .switch_label::after {
-  top: 3px;
+  top: 2px;
   border-radius: 1000px;
 }
 
@@ -3487,7 +3488,7 @@ TODO:            >>> Rounded
 }
 
 .switch.type_2_3.rounded .switch_label::after {
-  background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 50%, transparent 50%) center center/100% 100% no-repeat;
+  background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center/100% 100% no-repeat;
   height: calc(100% - 2 * 3px);
   left: 3px;
   width: calc(100% - 2 * 3px);
