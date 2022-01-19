@@ -3387,7 +3387,7 @@ TODO:        >> Type 2
   min-width: 32px;
   min-height: 32px;
   background: whitesmoke;
-  transition: 0.15s;
+  transition: 0s;
 }
 
 .switch.type_2 .switch_button, .switch.type_2_2 .switch_button, .switch.type_2_3 .switch_button {

@@ -3079,7 +3079,7 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
     //border: 1px solid $color_border_switch_type_2_off;    
     //box-shadow: inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
     background: $bg_switch_type_2_off; 
-    transition: 0.15s;
+    transition: 0s;
 
     .switch_button {
 
@@ -3191,6 +3191,7 @@ TODO:            >>> Option ON
     , 0px 0px 12px 0px $color_theme
     ;
     //filter: drop-shadow(0px 0px 6px $color_theme); 
+    //border: 1px solid adjust-color($color_theme, $lightness: 30%); 
 }
 
 
