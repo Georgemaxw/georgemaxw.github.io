@@ -3048,26 +3048,36 @@ TODO:            >>> Sizes
 TODO:        >> Type 2
 ──────────────────────────── */
 
-$bg_switch_type_2_off: hsl(193, 0%,99%); 
+$bg_switch_type_2_off: hsl(193, 0%,96%); 
  
 $bg_switch_type_2_on:  
 linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
 linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
 
-$bg_switch_type_2_rounded_white_shadow: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+$bg_switch_type_2_on:   
+//radial-gradient(circle at 25% 28%, white, transparent) center center / 100% 100% no-repeat,   
+//linear-gradient(to bottom, hsla(0, 0%, 0%, 0.05) 50%, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.05)),
+hsl(193, 100%, 83%); 
 
-$color_border_switch_type_2_off: transparent; /*  hsl(193, 0%,92%); */
+//$bg_switch_type_2_rounded_white_shadow: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+
+$bg_switch_type_2_white_shadow: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.25));
+
+$color_shadow_box_inset_switch_type_2_dark: hsla(0, 0%, 0%, 0.33); 
+$color_shadow_box_inset_switch_type_2_clear: white; 
+
+$color_border_switch_type_2_off: hsl(0, 100%, 50%); /*  hsl(193, 0%,92%); */
 $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 
 
 
 .switch.type_2, .switch.type_2_2, .switch.type_2_3 { 
  
+    position: relative;
     min-width: $button_height_smaller;
     min-height: $button_height_smaller;
-    border: 1px solid $color_border_switch_type_2_off;    
-    box-shadow: 
-    inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
+    //border: 1px solid $color_border_switch_type_2_off;    
+    //box-shadow: inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
     background: $bg_switch_type_2_off; 
     transition: 0.15s;
 
@@ -3078,19 +3088,47 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 
     .switch_icon {
         //box-shadow: 0px 0px 0px 1px black;
-        filter: drop-shadow(0px 0px 1px rgb(0, 225, 255)); 
+        filter: drop-shadow(0px 0px 1px hsl(187, 100%, 50%)); 
+        //opacity: 0;
+    }
+}
+
+.switch.type_2:not(.rounded), .switch.type_2_2:not(.rounded), .switch.type_2_3:not(.rounded)  {
+
+    .switch_label::before { // White shadow over the ball   
+          
+        content: '';
+        position: absolute;
+        background: $bg_switch_type_2_white_shadow;
     }
 }
  
 .switch.type_2 {
 
-    padding: 10px 12px 12px 10px; 
+    padding: 11px; 
+    padding-right: 12px;
     border-radius: 14px; 
+    box-shadow: 
+    inset 0px 0px 9px 2px $color_shadow_box_inset_switch_type_2_dark;
+
+    .switch_label::before { // White Shadow  
+          
+        $offset: 3px;
+        $left:  $offset;
+        $height: 50%; //calc(24px + #{$offset});
+
+        top: $offset;  
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+        height: $height;
+        border-radius: 10px;
+    }
 }
  
 .switch.type_2_2 {
 
-    padding: 10px 13px 12px 10px; 
+    padding: 10px; 
+    padding-right: 11px;
     border-radius: 11px; 
 
     .switch_icon {
@@ -3100,7 +3138,7 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
       
 .switch.type_2_3 {
 
-    padding: 10px 12px 12px 10px; 
+    padding: 10px; 
     border-radius: 14px; 
     
     .switch_name {
@@ -3144,10 +3182,12 @@ TODO:            >>> Option ON
 
 .switch.type_2.on, .switch.type_2_2.on, .switch.type_2_3.on {
 
-    border: 1px solid $color_border_switch_type_2_on;
+    //border: 1px solid $color_border_switch_type_2_on;
     //outline: 2px solid white;
     background: $bg_switch_type_2_on;
-    //filter: drop-shadow(0px 0px 6px $color_theme); 
+    //box-shadow: inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
+    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_type_2_clear;
+    filter: drop-shadow(0px 0px 6px $color_theme); 
 }
 
 

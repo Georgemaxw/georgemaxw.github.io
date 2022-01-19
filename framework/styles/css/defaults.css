@@ -3383,11 +3383,10 @@ TODO:        >> Type 2
 /*  hsl(193, 0%,92%); */
 /* hsl(193, 100%, 82%); */
 .switch.type_2, .switch.type_2_2, .switch.type_2_3 {
+  position: relative;
   min-width: 32px;
   min-height: 32px;
-  border: 1px solid transparent;
-  box-shadow: inset -3px -3px 6px 0px rgba(0, 0, 0, 0.15);
-  background: #fcfcfc;
+  background: whitesmoke;
   transition: 0.15s;
 }
 
@@ -3399,13 +3398,30 @@ TODO:        >> Type 2
   filter: drop-shadow(0px 0px 1px #00e1ff);
 }
 
+.switch.type_2:not(.rounded) .switch_label::before, .switch.type_2_2:not(.rounded) .switch_label::before, .switch.type_2_3:not(.rounded) .switch_label::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.25));
+}
+
 .switch.type_2 {
-  padding: 10px 12px 12px 10px;
+  padding: 11px;
+  padding-right: 12px;
   border-radius: 14px;
+  box-shadow: inset 0px 0px 9px 2px rgba(0, 0, 0, 0.33);
+}
+
+.switch.type_2 .switch_label::before {
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 2 * 3px);
+  height: 50%;
+  border-radius: 10px;
 }
 
 .switch.type_2_2 {
-  padding: 10px 13px 12px 10px;
+  padding: 10px;
+  padding-right: 11px;
   border-radius: 11px;
 }
 
@@ -3414,7 +3430,7 @@ TODO:        >> Type 2
 }
 
 .switch.type_2_3 {
-  padding: 10px 12px 12px 10px;
+  padding: 10px;
   border-radius: 14px;
 }
 
@@ -3452,8 +3468,9 @@ TODO:            >>> Rounded
 TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.type_2.on, .switch.type_2_2.on, .switch.type_2_3.on {
-  border: 1px solid #8fe7ff;
-  background: linear-gradient(to bottom right, white, rgba(255, 255, 255, 0)), linear-gradient(180deg, #b3eeff, #99e9ff);
+  background: #a8ecff;
+  box-shadow: inset 0px 0px 9px 4px white;
+  filter: drop-shadow(0px 0px 6px DeepSkyBlue);
 }
 
 /*  
