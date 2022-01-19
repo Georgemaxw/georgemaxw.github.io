@@ -3088,10 +3088,10 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
 
     .switch_icon {
 
-        filter: drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.5)); // drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.4)); // drop-shadow(0px 0px 1px hsl(187, 100%, 50%)); 
+        filter: drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.45)); // drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.4)); // drop-shadow(0px 0px 1px hsl(187, 100%, 50%)); 
         //opacity: 0;    
     }
-}
+} 
 
 //.switch.type_2:not(.rounded), .switch.type_2_2:not(.rounded), .switch.type_2_3:not(.rounded)  {
 .switch.type_2, .switch.type_2_2, .switch.type_2_3  {
