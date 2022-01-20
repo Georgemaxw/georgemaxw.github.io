@@ -3515,7 +3515,7 @@ TODO:            >>> Option ON
 .switch.type_2.on .switch_name, .switch.type_2_2.on .switch_name, .switch.type_2_3.on .switch_name {
   color: white;
   font-weight: bold;
-  filter: drop-shadow(0px 0px 2px #0094bd);
+  filter: drop-shadow(0px 0px 2px #00a0cc);
 }
 
 .switch.type_2.on .switch_icon, .switch.type_2_2.on .switch_icon, .switch.type_2_3.on .switch_icon {
