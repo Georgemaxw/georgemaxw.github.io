@@ -3395,7 +3395,7 @@ TODO:        >> Type 2
 }
 
 .switch.type_2 .switch_name, .switch.type_2_2 .switch_name, .switch.type_2_3 .switch_name {
-  color: #ebebeb;
+  color: #e6e6e6;
   filter: drop-shadow(0px 0px 1px black);
   font-weight: bold;
 }
