@@ -129,7 +129,7 @@ $bg_switch_tech_on_ball:
 linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
 radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
 cyan;
-$bg_switch_tech_ball_white_shadow: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+$bg_switch_tech_ball_shine: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
 $bg_switch_tech_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
 $bg_switch_tech_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
 $bg_switch_tech_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
@@ -2868,13 +2868,13 @@ TODO:        >> Tech Style
         transition: all 0.39s; 
     }
 
-    .switch_button::after { // White shadow over the ball
+    .switch_button::after { // Shine over the ball
         
         content: '';
         display: inline-block;
         position: relative;
         border-radius: 1000px;
-        background: $bg_switch_tech_ball_white_shadow;
+        background: $bg_switch_tech_ball_shine;
         transition: all 0.39s; 
     }
 } 
@@ -2961,7 +2961,7 @@ TODO:            >>> Sizes
         left: -2px;
     }
 
-    .switch_button::after { // White Shadow
+    .switch_button::after { // Shine
 
         top: calc(-0.9 * #{$switch_tech_ball_size} + 3px);
         left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
@@ -2981,7 +2981,7 @@ TODO:            >>> Sizes
         transition: all 0.39s; 
     }
 
-    .switch_button::after { // White Shadow
+    .switch_button::after { // Shine
         
         top: calc(-0.9 * #{$switch_tech_ball_size} + 4px);
         left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} + 23px); 
@@ -3010,7 +3010,7 @@ TODO:            >>> Sizes
             background: $bg_switch_tech_ball;
         }
 
-        .switch_button::after { // White Shadow
+        .switch_button::after { // Shine
             top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 3px);
             left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} - 2px); 
             width: calc(0.6 * #{$switch_tech_ball_size_SS});
@@ -3034,7 +3034,7 @@ TODO:            >>> Sizes
             height: calc(#{$switch_tech_ball_size_SS} + 2); 
         }
 
-        .switch_button::after { // White Shadow
+        .switch_button::after { // Shine
             
             top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 5px);
             left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} + 29px); 
@@ -3050,18 +3050,30 @@ TODO:        >> Type 2
 
 $bg_switch_type_2_off: hsl(193, 0%,96%); 
  
-$bg_switch_type_2_on:  
+/* $bg_switch_type_2_on:  
 linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),
-linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%);
+linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99%); */
 
 $bg_switch_type_2_on:   
 //radial-gradient(circle at 25% 28%, white, transparent) center center / 100% 100% no-repeat,   
 //linear-gradient(to bottom, hsla(0, 0%, 0%, 0.05) 50%, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.05)),
 hsl(193, 100%, 83%); 
 
-//$bg_switch_type_2_rounded_white_shadow: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+//$bg_switch_type_2_rounded_shine: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+    
+$bg_switch_type_2_rounded_off: hsl(193, 0%,94%); 
 
-$bg_switch_type_2_white_shadow: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
+$bg_switch_type_2_shine: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
+ 
+$bg_switch_type_2_3_rounded_off: 
+url(../../images/bgs/switch_type_2_3_rounded_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%, 92%);
+
+$bg_switch_type_2_3_rounded_on: 
+url(../../images/bgs/switch_type_2_3_rounded_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%);
+
+$switch_type_2_3_rounded_shine_above: url(../../images/bgs/switch_type_2_3_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
 
 $color_shadow_box_inset_switch_type_2_dark: hsla(0, 0%, 0%, 0.33); 
 $color_shadow_box_inset_switch_type_2_clear: white; 
@@ -3099,11 +3111,11 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
     //box-shadow: inset 0px 0px 9px 2px $color_shadow_box_inset_switch_type_2_dark;
     box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_type_2_dark;
 
-    .switch_label::after { // White shadow over the ball   
+    .switch_label::after { // Shine over the ball   
           
         content: '';
         position: absolute;
-        background: $bg_switch_type_2_white_shadow;
+        background: $bg_switch_type_2_shine;
           
         $offset: 2px;
         $left:  $offset;
@@ -3130,7 +3142,7 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
     padding-right: 11px;
     border-radius: 11px; 
 
-    .switch_label::after { // White Shadow 
+    .switch_label::after { // Shine 
           
         border-radius: 7px;
     }
@@ -3165,8 +3177,9 @@ TODO:            >>> Rounded
 
     border-radius: 1000px; 
     box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_2_dark; 
+    background: $bg_switch_type_2_rounded_off;
 
-    .switch_label::after { // White Shadow
+    .switch_label::after { // Shine
           
         top: 2px;  
         border-radius: 1000px; 
@@ -3178,7 +3191,7 @@ TODO:            >>> Rounded
     padding-left: 18px;
     padding-right: 20px;
 
-    .switch_label::after { // White Shadow
+    .switch_label::after { // Shine
           
         $left:  10px;
         $height: 49.5%;
@@ -3194,7 +3207,7 @@ TODO:            >>> Rounded
     padding-left: 13px;
     padding-right: 16px;
 
-    .switch_label::after { // White Shadow
+    .switch_label::after { // Shine
           
         $left:  8px;        
         $height: 49.5%; 
@@ -3209,9 +3222,9 @@ TODO:            >>> Rounded
 
     padding: 11px;  
 
-    .switch_label::after { // White Shadow
+    .switch_label::after { // Shine
           
-        background: url(../../images/bgs/switch_type_2_3_rounded_shine.svg) center 10% / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
+        background: $switch_type_2_3_rounded_shine_above;
            
         $top: 3px;
         $left:  3px; 
@@ -3222,6 +3235,11 @@ TODO:            >>> Rounded
         left:  $left;
         width: calc(100% - 2 * #{$left});
     }
+}
+
+.switch.type_2_3.rounded:not(.on) { 
+
+    background: $bg_switch_type_2_3_rounded_off;
 }
 
 /*  
@@ -3245,6 +3263,11 @@ TODO:            >>> Option ON
 
         filter: drop-shadow(0px 0px 1px hsl(187, 100%, 47%)); 
     }
+}
+
+.switch.type_2_3.on.rounded {
+
+    background: $bg_switch_type_2_3_rounded_on
 }
 
 .switch.type_2.on.disabled, .switch.type_2_2.on.disabled, .switch.type_2_3.on.disabled { 
