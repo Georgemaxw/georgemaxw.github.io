@@ -3397,6 +3397,12 @@ linear-gradient(180deg, hsl(193,100%,85%), hsl(193,100%,80%)); //hsl(193,100%,99
   display: none;
 }
 
+.switch.type_2 .switch_name, .switch.type_2_2 .switch_name, .switch.type_2_3 .switch_name {
+  color: #d9d9d9;
+  filter: drop-shadow(0px 0px 1px black);
+  font-weight: bold;
+}
+
 .switch.type_2 .switch_icon, .switch.type_2_2 .switch_icon, .switch.type_2_3 .switch_icon {
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.45));
 }
@@ -3514,7 +3520,6 @@ TODO:            >>> Option ON
 
 .switch.type_2.on .switch_name, .switch.type_2_2.on .switch_name, .switch.type_2_3.on .switch_name {
   color: white;
-  font-weight: bold;
   filter: drop-shadow(0px 0px 2px #00a0cc);
 }
 
