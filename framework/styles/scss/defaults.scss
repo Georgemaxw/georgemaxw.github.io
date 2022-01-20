@@ -3251,6 +3251,7 @@ TODO:            >>> Option ON
 
     //border: 1px solid $color_border_switch_type_2_on;
     //outline: 2px solid white;
+    color: hsl(193, 100%, 42%);
     background: $bg_switch_type_2_on;
     //box-shadow: inset -3px -3px 6px 0px $color_shadow_box_inset_dark;
     box-shadow:  
@@ -3258,6 +3259,12 @@ TODO:            >>> Option ON
     0px 0px 12px 0px $color_theme;
 
     //filter: drop-shadow(0px 0px 6px $color_theme); 
+
+    .switch_name {
+
+        color: white;
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 37%)); 
+    }
 
     .switch_icon {
 

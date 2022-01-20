@@ -3507,8 +3507,14 @@ TODO:            >>> Rounded
 TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.type_2.on, .switch.type_2_2.on, .switch.type_2_3.on {
+  color: #00a8d6;
   background: #a8ecff;
   box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
+}
+
+.switch.type_2.on .switch_name, .switch.type_2_2.on .switch_name, .switch.type_2_3.on .switch_name {
+  color: white;
+  filter: drop-shadow(0px 0px 2px #0094bd);
 }
 
 .switch.type_2.on .switch_icon, .switch.type_2_2.on .switch_icon, .switch.type_2_3.on .switch_icon {
