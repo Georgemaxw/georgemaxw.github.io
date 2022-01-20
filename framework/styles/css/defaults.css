@@ -3488,7 +3488,7 @@ TODO:            >>> Rounded
 }
 
 .switch.type_2_3.rounded .switch_label::after {
-  background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center/100% 100% no-repeat;
+  background: url(../../images/bgs/switch_type_2_3_rounded_shine.svg) center 10%/100% 100% no-repeat;
   height: calc(100% - 2 * 3px);
   left: 3px;
   width: calc(100% - 2 * 3px);

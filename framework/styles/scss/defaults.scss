@@ -3211,7 +3211,7 @@ TODO:            >>> Rounded
 
     .switch_label::after { // White Shadow
           
-        background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
+        background: url(../../images/bgs/switch_type_2_3_rounded_shine.svg) center 10% / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
            
         $top: 3px;
         $left:  3px; 
