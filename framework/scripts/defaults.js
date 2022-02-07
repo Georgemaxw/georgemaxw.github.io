@@ -271,7 +271,7 @@ function switches_type_button_and_buttons_type_button(elements) {
 
                 var switch_width = Number(getComputedStyle($switch).getPropertyValue('width').slice(0,-2)) 
                 var switch_height = Number(getComputedStyle($switch).getPropertyValue('height').slice(0,-2)) 
-
+/* 
                 if(switch_width >= switch_height) { 
 
                     var padding_top_current =  Number(getComputedStyle($switch).getPropertyValue('padding-top').slice(0,-2))
@@ -285,23 +285,23 @@ function switches_type_button_and_buttons_type_button(elements) {
                     $switch.style.width = switch_height_ceil + 'px'
                     $switch.style.height = switch_height_ceil + 'px'
                 }
-
-                /* Fazendo dessa forma os botões de ícone (button_icon) com a classe 'rounded' bugam no celular:
+*/
+                // Fazendo dessa forma os botões de ícone (button_icon) com a classe 'rounded' bugam no celular:
 
                 var switch_width_ceil = Math.ceil(switch_width)
                 var switch_height_ceil = Math.ceil(switch_height)
 
-                if(switch_width_ceil >= switch_height_ceil) { 
+                if(switch_width_ceil > switch_height_ceil) { 
             
                     $switch.style.width = switch_width_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                     $switch.style.height = switch_width_ceil + 'px'
             
-                } else { 
+                } else if (switch_width_ceil < switch_height_ceil) { 
             
                     $switch.style.width = switch_height_ceil + 'px'
                     $switch.style.height = switch_height_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                 }
-                */
+                
             }
 
             // ---------- Posição e preenchimento da etiqueta de hover dos botões de ícone ---------- 
