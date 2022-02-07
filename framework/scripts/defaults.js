@@ -218,11 +218,11 @@ function switches_type_button_and_buttons_type_button(elements) {
 
                     if(switch_icon_width <= 32 || switch_icon_height <= 32) {
 
-                        $switch.style.padding = (12/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                        //$switch.style.padding = (12/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
 
                     } else {
 
-                        $switch.style.padding = (11/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                        //$switch.style.padding = (11/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
                     }
                 }
             }
