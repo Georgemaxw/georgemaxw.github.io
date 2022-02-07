@@ -272,18 +272,20 @@ function switches_type_button_and_buttons_type_button(elements) {
                 var switch_width = Number(getComputedStyle($switch).getPropertyValue('width').slice(0,-2)) 
                 var switch_height = Number(getComputedStyle($switch).getPropertyValue('height').slice(0,-2)) 
 
-                // var switch_width_ceil = Math.ceil(switch_width)
-                // var switch_height_ceil = Math.ceil(switch_height)
+                var switch_width_ceil = Math.ceil(switch_width)
+                var switch_height_ceil = Math.ceil(switch_height)
+
+                $switch.style.padding = '' 
             
-                if(switch_width >= switch_height) {
+                if(switch_width_ceil >= switch_height_ceil) { 
             
-                    // $switch.style.width = switch_width + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
-                    $switch.style.height = switch_width + 'px'
+                    $switch.style.width = switch_width_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
+                    $switch.style.height = switch_width_ceil + 'px'
             
                 } else { 
             
-                    $switch.style.width = switch_height + 'px'
-                    // $switch.style.height = switch_height + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
+                    $switch.style.width = switch_height_ceil + 'px'
+                    $switch.style.height = switch_height_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                 }
             }
 
