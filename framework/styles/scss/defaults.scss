@@ -173,11 +173,13 @@ $color_icon_outline_switch_button_on: hsl(187, 100%, 47%);
 // $color_shadow_box_inset_switch_button_clear: white; // VÍNCULO: Váriável JS
 
 $bg_switch_button_off: 
-url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat,
+// url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
+linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),
 hsl(193, 0%,94%); // hsl(193, 0%,88%); 
 //$bg_switch_button_off: hsl(193, 0%,96%); 
 $bg_switch_button_on: 
-url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat,
+// url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
+linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),
 hsl(193, 100%, 83%); 
 
 /*      
@@ -193,6 +195,8 @@ hsl(193, 100%, 83%);
 $bg_switch_button_shine: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
  
 $bg_switch_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
+
+$bg_switch_button_rounded_shine: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.644) 52%, transparent 52%) center center / 100% 100% no-repeat; 
 
 // (Text floating):
 
@@ -1733,147 +1737,709 @@ TODO:    > Class
     } 
 }
 
-/*
+/*  
 ──────────────────────────────────────────────────────
-TODO: Components
+TODO:    > Switches 
 ────────────────────────────────────────────────────── */
 
+.switch {
+
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal; 
+
+    cursor: pointer;
+
+    .switch_text {
+
+        text-align: justify;
+    }
+}
+
+.switch.disabled {
+
+    opacity: 0.5;
+    cursor: default;
+}
+
 /*  
 ────────────────────────────
-TODO:    > Outdoors
+TODO:        >> Key
 ──────────────────────────── */
 
-img.outdoor, video.outdoor {
-    display: block;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
+.switch.key, .switch.key_no_icon {
 
-@media (min-width: $screen_small_widthLimit) {
-
-    img.outdoor, video.outdoor {
-        max-width: calc(100% - (2 * #{$margin_horizontal}) );
-        border-radius: $border_radius_big; 
-    }
-}
-
-// figure:
-
-figure.outdoor {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-figure.outdoor img {
-        max-width: 100%;
-}
-
-@media (min-width: $screen_small_widthLimit) {
-
-    figure.outdoor {
-        max-width: calc(100% - (2 * #{$margin_horizontal}) );
-}
-    figure.outdoor img {
-        border-radius: 40px;
-        // box-shadow: 6px 6px 24px -15px black;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
-}
+    .switch_key { // Path
+ 
+        order: 1;
+        margin-left: 18px; 
+        margin-right: 0;
+        //margin-right: 12px;
+        border-radius: 1000px;
+        background: $bg_switch_tech_path_off;
+    }
 
-// img, video, figure:
+    .switch_key::before { // Ball
 
-@media (max-height: $screen_small_widthLimit) {
+        content: '';
+        display: inline-block;
+        position: relative;
+        border-radius: 1000px;
+        background: $bg_switch_tech_ball; 
+        transition: all 0.39s; 
+    }
 
-    img.outdoor, video.outdoor, figure.outdoor img { 
-        max-height: 100vh;
-        //max-height: calc(100vh - #{$button_height}) ;
+    .switch_key::after { // Shine
+        
+        content: '';
+        display: inline-block;
+        position: relative;
+        border-radius: 1000px;
+        background: $bg_switch_tech_ball_shine;
+        transition: all 0.39s; 
+    }
+
+    .switch_label {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        text-indent: 0;
+    }
+
+    .switch_icon {
+
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        border-radius: 8px;
+        filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
+    }
+
+    .switch_text {
+
+        line-height: 1.5;
+    }
+} 
+
+.switch.key_no_icon {
+
+    .switch_icon {
+        display: none;
     }
 }
 
-/*  
-────────────────────────────
-TODO:    > Galleries
-──────────────────────────── */
+.switch.key.on, .switch.key_no_icon.on {
 
-.gallery img {
-    width: 50%;
-}
+    .switch_key { // Path
 
-.gallery a {
-    font-size: 0;
-}
-
-@media (min-width: $screen_small_widthLimit) { 
-
-    .gallery {
-        margin-left: $margin_horizontal;
-        margin-right: $margin_horizontal;
+        border-color: hsl(187, 100%, 60%);
+        background: $bg_switch_tech_path_on;
+        box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
     }
 
-    .gallery img { 
-        width: 25%; 
+    .switch_key::before { // Ball
+
+        border: 1px solid hsl(187, 100%, 80%); 
+        background: $bg_switch_tech_on_ball;
+        box-shadow: 0px 0px 13px 0px hsl(188, 100%, 60%); 
     } 
 }
 
+.switch.key.disabled, .switch.key_no_icon.disabled {
+
+    .switch_key::before { // Ball
+
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .switch_label {
+        color: adjust-color($color_text, $alpha: -0.5);
+    }
+}
+
+.switch.key.on.disabled, .switch.key_no_icon.on.disabled {
+
+    .switch_key { // Path
+
+        box-shadow: none;
+    }
+    
+    .switch_key::before { // Ball
+
+        border: 2px solid hsl(187, 100%, 80%);
+        box-shadow: none;
+    }
+}
+
+.switch.key.inverted, .switch.key_no_icon.inverted {
+
+    // justify-content: space-between;
+    justify-content: initial;
+
+    .switch_key {
+
+        /*  
+        order: 1;
+        margin-left: 18px; 
+        margin-right: 0;
+        */
+
+        order: initial;
+        margin-left: 0px; 
+        margin-right: 12px;
+    }
+} 
+
 /*  
 ────────────────────────────
-TODO:    > Sliders
+TODO:            >>> Sizes & Positions
 ──────────────────────────── */
 
-.slider {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
+// Tamanho para tela grande
+
+.switch.key, .switch.key_no_icon {
+
+    .switch_key { // Path
+
+        min-width: 47px;
+        height: 6px; 
+        border: 1px solid black;
+    }
+
+    .switch_key::before { // Ball
+
+        top: -11px;
+        left: -2px;
+        width: $switch_tech_ball_size;
+        height: $switch_tech_ball_size;
+        border: 0;
+    }
+
+    .switch_key::after { // Shine
+
+        top: -19px; // calc(-0.9 * #{$switch_tech_ball_size} + 3px);
+        left: -21px; //calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
+        width: 14px; // calc(0.585 * #{$switch_tech_ball_size});
+        height: 14px; // calc(0.585 * #{$switch_tech_ball_size});
+    }
+}
+
+.switch.key.on, .switch.key_no_icon.on {
+    
+    .switch_key::before { // Ball
+
+        top: -10px; 
+        left: 23px; 
+        width: calc(#{$switch_tech_ball_size} + 2); 
+        height: calc(#{$switch_tech_ball_size} + 2); 
+        transition: all 0.39s; 
+    }
+
+    .switch_key::after { // Shine
+        
+        top: calc(-0.9 * #{$switch_tech_ball_size} + 4px);
+        left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} + 23px); 
+        transition: all 0.39s; 
+    }
+}
+
+@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+
+    // Tamanho para tela pequena
+
+    .switch.key, .switch.key_no_icon {
+
+        .switch_key { // Path
+
+            min-width: calc(53px + #{$switch_tech_ball_size_SS} - #{$switch_tech_ball_size});
+            height: 8px; 
+            background: $bg_switch_tech_path_off_SS;
+        }
+    
+        .switch_key::before { // Ball
+
+            top: -12px;
+            width: $switch_tech_ball_size_SS;
+            height: $switch_tech_ball_size_SS;
+            background: $bg_switch_tech_ball;
+        }
+
+        .switch_key::after { // Shine
+
+            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 4px);
+            left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} - 2px); 
+            width: calc(0.6 * #{$switch_tech_ball_size_SS});
+            height: calc(0.6 * #{$switch_tech_ball_size_SS}); 
+        }
+    }
+    
+    .switch.key.on, .switch.key_no_icon.on {
+
+        .switch_key { // Path
+
+            box-shadow: 0px 0px 6px 0px hsla(188, 100%, 50%, 0.60);
+        }
+        
+        .switch_key::before { // Ball
+
+            top: -11px; 
+            left: 29px;  
+            width: calc(#{$switch_tech_ball_size_SS} + 2); 
+            height: calc(#{$switch_tech_ball_size_SS} + 2); 
+        }
+
+        .switch_key::after { // Shine
+            
+            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 5px);
+            left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} + 29px); 
+            transition: all 0.42s; 
+        } 
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Button
+──────────────────────────── */
+
+.switch.button, .switch.button_text, .switch.button_icon {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    min-width: $button_height_smaller;
+    min-height: $button_height_smaller;
+    background: $bg_switch_button_off; 
+    //box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
+    transition: 0s;
+
+    .switch_key {
+
+        display: none;
+    }
+
+    .switch_label {
+        
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .switch_shine { // Shine over the ball   
+          
+        content: '';
+        position: absolute;
+        z-index: 1;
+        background: $bg_switch_button_shine;
+          
+        $offset: 2px;
+        $left:  $offset;
+        $height: 49.8%; //calc(24px + #{$offset});
+
+        top: $offset;  
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+        height: $height; 
+        // border-radius: 10px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .switch_text {
+
+        color: $color_text_switch_button_off;
+        font-weight: bold; 
+    }
+
+    .switch_icon {
+
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_off);
+    }
 }
  
-.slider img, .slider picture {
-    max-width: 94%;   
+.switch.button {
+
+    padding: 11px; 
+    padding-right: 12px;
+    // border-radius: 14px; // Propriedade aplicada aprimorada via JS.
 }
+ 
+.switch.button_text {
 
-@media (max-height: $screen_small_widthLimit) {
+    padding: 10px; 
+    padding-right: 11px;
+    // border-radius: 11px; // Propriedade aplicada aprimorada via JS.
 
-    .slider img, .slider picture {
-        max-height: 100vh;
+    .switch_shine { // Shine 
+          
+        // border-radius: 7px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .switch_icon {
+        display: none;
+    }
+}
+      
+.switch.button_icon {
+
+    justify-content: center;
+    //padding: 10px; // Propriedade aplicada aprimorada via JS.
+    // border-radius: 13px; // Propriedade aplicada aprimorada via JS.
+    
+    .switch_text {
+        // display: none; // Propriedade aplicada via JS.
+        text-align: center;
+    }
+
+    .switch_icon {
+        margin: 0;
     }
 }
 
-@media (min-width: $screen_small_widthLimit) {  
+.switch.button.disabled, .switch.button_text.disabled {
 
-    .slider { 
-        margin-left: $margin_horizontal;
-        margin-right: $margin_horizontal;
+    .switch_label {
+        color: adjust-color($color_text, $alpha: -0.5);
     }
 }
+
+.switch.button_icon.disabled {
+    
+    .switch_text {
+        z-index: 1;
+    }
+}
+
+// ─────────── Pill ───────────
+
+.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
+
+    border-radius: 1000px; 
+    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
+    // background: $bg_switch_button_pill_and_rounded_off;
+
+    .switch_shine { // Shine
+           
+        top: 2px;  
+        height: 49.5%;
+        border-radius: 1000px; 
+    }
+}
+
+// .switch.button.pill {
+
+    // padding-left: 18px; // Propriedade aplicada aprimorada via JS.
+    // padding-right: 20px; // Propriedade aplicada aprimorada via JS.
+
+    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //       
+    //     $left:  10px;
+    // 
+    //     left:  $left;
+    //     width: calc(100% - 2 * #{$left}); 
+    // }  
+// }
+
+// .switch.button_text.pill {
+
+    // padding-left: 13px; // Propriedade aplicada aprimorada via JS.
+    // padding-right: 13px; // Propriedade aplicada aprimorada via JS.
+
+    //.switch_shine {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //      
+    //    $left: 8px;  
+    //
+    //    left:  $left;
+    //    width: calc(100% - 2 * #{$left});
+    // }
+// }
+
+// .switch.button_icon.pill {
+
+    // padding: 12px; // Propriedade aplicada aprimorada via JS.
+
+    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //        
+    //     $left: 10px;
+    //     
+    //     left:  $left;
+    //     width: calc(100% - 2 * #{$left});
+    // }
+// }
+
+
+// ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
+
+.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+
+    justify-content: center;
+    border-radius: 1000px; 
+    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
+    // background: $bg_switch_button_pill_and_rounded_off; 
+
+    .switch_shine { // Shine
+          
+        border-radius: 1000px; 
+        background: $bg_switch_button_rounded_shine;
+           
+        $top: 3px;
+        $left:  3px; 
+        $height: calc(100% - 2 * #{$top}); 
+
+        height: $height;
+
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
+
+.switch.button.rounded {
+
+    padding: 18px;  
+}
+
+.switch.button_text.rounded {
+
+    padding: 14px; 
+
+    .switch_text {
+
+        text-align: center;
+    }
+}
+
+.switch.button_icon.rounded {
+
+    // padding: 12px; // Propriedade aplicada aprimorada via JS.
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Text Below
+──────────────────────────── */
+
+.switch.button.text_below {  
+
+    justify-content: center; 
+
+    .switch_label {
+
+        flex-direction: column; 
+        justify-content: center; 
+    }
+
+    .switch_text {
+
+        text-align: center;
+    }
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+
+.switch.button.on, .switch.button_text.on, .switch.button_icon.on {
+
+    background: $bg_switch_button_on;
+    //box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
+ 
+    .switch_text {
+
+        color: $color_text_switch_button_on;
+        filter: drop-shadow(0px 0px 2px $color_text_switch_button_shadowOutline_on); 
+    }
+
+    .switch_icon {
+
+        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_on); 
+    }
+}
+
+.switch.button.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
+    
+    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear !important;
+    // border: 1px solid adjust-color($color_theme, $lightness: 30%);
+}
+
+// ─────────── Pill ───────────
+
+.switch.button_icon.on.pill {
+
+    // background: $bg_switch_button_pill_and_rounded_on;
+}
+
+// ─────────── Rounded ───────────
+
+.switch.button.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
+ 
+    // background: $bg_switch_button_pill_and_rounded_on;
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
 
 @media (pointer: fine) {
 
-    .slider {
-        overflow-x: hidden;
+    .switch.button_icon {
+
+        .switch_label {
+
+            justify-content: center; 
+        }
+        
+        .switch_text {
+
+            position: absolute;  
+            // top: -50px; // Propriedade aplicada aprimorada via JS. 
+            //left: -15px; // Propriedade aplicada aprimorada via JS. 
+            padding: 6px 9px; 
+            border: 1px solid;
+            border-color: $color_border_switch_button_icon_switch_text_floating_off; 
+            border-radius: 1000px;
+            font-weight: initial;
+            color: $color_text_switch_button_icon_switch_text_floating_off;
+            background: $bg_switch_button_icon_switch_text_floating_off;
+            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+        }
+    }
+
+    .switch.button_icon.on .switch_text {
+
+        color: $color_text_switch_button_icon_switch_text_floating_on;
+        border-color: $color_border_switch_button_icon_switch_text_floating_on; 
+        background: $bg_switch_button_icon_switch_text_floating_on;
+        filter: initial;
+        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
+    }
+
+    .switch.button_icon:hover .switch_text {
+
+        display: block !important;
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Image
+──────────────────────────── */
+      
+.switch.image {
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    min-width: $button_height_smaller;
+    min-height: $button_height_smaller;
+    border-radius: calc(0.25 * #{$switch_image_icon_size});
+    transition: 0.17s; 
+
+    .switch_key {
+        display: none;
     }
     
-    .slider:hover {
-        overflow-x: auto;
+    .switch_text {
+        // display: none; // Propriedade aplicada via JS.
+    }
+
+    .switch_icon {
+
+        width: $switch_image_icon_size;
+        height: $switch_image_icon_size;
+        margin: 0;
+        filter: drop-shadow(0px 0px 1px $color_outline_switch_image);
+
+        // border-radius: 12px; // Propriedade aplicada aprimorada via JS. 
     }
 }
 
-// Slider scrollbar:
+// ─────────── pill ───────────
 
-.slider::-webkit-scrollbar { // Entire bar
-    height: 12px; /* 15 */ 
+.switch.image.pill .switch_icon {
+
+    border-radius: 1000px !important;
 }
 
-.slider::-webkit-scrollbar-thumb { // Bar pointer
-    background: hsl(0, 0%, 74%);
-    border-radius: 10px;
-    /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+
+.switch.image.on .switch_icon {
+
+    // border: 2px solid white; filter: drop-shadow(0px 0px 6px $color_theme);  
+    // box-shadow: 0px 0px 0px 2px white; filter: drop-shadow(0px 0px 6px $color_theme);  
+    // box-shadow: 0px 0px 3px 3px white; filter: drop-shadow(0px 0px 7px $color_theme);  
+    
+    box-shadow:  0px 0px 0px 2px white, 0px 0px 12px 2px $color_theme;
 }
-   
-.slider::-webkit-scrollbar-track { // Bar background
-    background: hsl(0, 0%, 98%); 
-    border: 1px solid hsl(0, 0%, 86%);
-    border-radius: 10px; /* */ 
+ 
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
+
+@media (pointer: fine) {  
+
+    .switch.image {
+        
+        .switch_label {
+
+            display: inline-flex;
+            justify-content: center; 
+            align-items: center;
+            position: relative;
+        }
+
+        .switch_text {
+
+            position: absolute;  
+            // top: -49px; // Propriedade aplicada aprimorada via JS.  
+            // left: -15px; // Propriedade aplicada aprimorada via JS. 
+            padding-top: 6px; 
+            padding-bottom: 6px;
+            // padding-left e padding-right foram aplicados via JS.
+            border: 1px solid;
+            border-color: $color_border_switch_image_switch_text_floating_off; 
+            border-radius: 1000px;
+            color: $color_text_switch_image_switch_text_floating_off;
+            background: $bg_switch_image_switch_text_floating_off;
+            font-weight: initial;
+            text-align: center;
+            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+        }
+    }
+
+    .switch.image.on .switch_label {
+        
+        filter: initial; 
+    }
+
+    .switch.image.on .switch_text {
+
+        color: $color_text_switch_image_switch_text_floating_on;
+        border-color: $color_border_switch_image_switch_text_floating_on; 
+        background: $bg_switch_image_switch_text_floating_on;
+        filter: initial;
+        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
+    }
+
+    .switch.image:hover .switch_text {
+
+        display: block !important;
+    }
 }
 
 /*  
@@ -2341,708 +2907,147 @@ TODO:        >> Disabled
     text-shadow: 1px 1px 1px $color_shadow_text !important;
 }
 
-/*  
+/*
 ──────────────────────────────────────────────────────
-TODO:    > Switches 
+TODO: Components
 ────────────────────────────────────────────────────── */
 
-.switch {
+/*  
+────────────────────────────
+TODO:    > Outdoors
+──────────────────────────── */
 
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal; 
+img.outdoor, video.outdoor {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    cursor: pointer;
+@media (min-width: $screen_small_widthLimit) {
 
-    .switch_text {
-
-        text-align: justify;
+    img.outdoor, video.outdoor {
+        max-width: calc(100% - (2 * #{$margin_horizontal}) );
+        border-radius: $border_radius_big; 
     }
 }
 
-.switch.disabled {
+// figure:
 
-    opacity: 0.5;
-    cursor: default;
+figure.outdoor {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+figure.outdoor img {
+        max-width: 100%;
+}
+
+@media (min-width: $screen_small_widthLimit) {
+
+    figure.outdoor {
+        max-width: calc(100% - (2 * #{$margin_horizontal}) );
+}
+    figure.outdoor img {
+        border-radius: 40px;
+        // box-shadow: 6px 6px 24px -15px black;
+    }
+    
+}
+
+// img, video, figure:
+
+@media (max-height: $screen_small_widthLimit) {
+
+    img.outdoor, video.outdoor, figure.outdoor img { 
+        max-height: 100vh;
+        //max-height: calc(100vh - #{$button_height}) ;
+    }
 }
 
 /*  
 ────────────────────────────
-TODO:        >> Key
+TODO:    > Galleries
 ──────────────────────────── */
 
-.switch.key, .switch.key_no_icon {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    .switch_key { // Path
- 
-        order: 1;
-        margin-left: 18px; 
-        margin-right: 0;
-        //margin-right: 12px;
-        border-radius: 1000px;
-        background: $bg_switch_tech_path_off;
-    }
-
-    .switch_key::before { // Ball
-
-        content: '';
-        display: inline-block;
-        position: relative;
-        border-radius: 1000px;
-        background: $bg_switch_tech_ball; 
-        transition: all 0.39s; 
-    }
-
-    .switch_key::after { // Shine
-        
-        content: '';
-        display: inline-block;
-        position: relative;
-        border-radius: 1000px;
-        background: $bg_switch_tech_ball_shine;
-        transition: all 0.39s; 
-    }
-
-    .switch_label {
-        display: inline-flex;
-        align-items: center;
-        margin: 0;
-        text-indent: 0;
-    }
-
-    .switch_icon {
-
-        width: 32px;
-        height: 32px;
-        margin-right: 12px;
-        border-radius: 8px;
-        filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
-    }
-
-    .switch_text {
-
-        line-height: 1.5;
-    }
-} 
-
-.switch.key_no_icon {
-
-    .switch_icon {
-        display: none;
-    }
+.gallery img {
+    width: 50%;
 }
 
-.switch.key.on, .switch.key_no_icon.on {
+.gallery a {
+    font-size: 0;
+}
 
-    .switch_key { // Path
+@media (min-width: $screen_small_widthLimit) { 
 
-        border-color: hsl(187, 100%, 60%);
-        background: $bg_switch_tech_path_on;
-        box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
+    .gallery {
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
     }
 
-    .switch_key::before { // Ball
-
-        border: 1px solid hsl(187, 100%, 80%); 
-        background: $bg_switch_tech_on_ball;
-        box-shadow: 0px 0px 13px 0px hsl(188, 100%, 60%); 
+    .gallery img { 
+        width: 25%; 
     } 
 }
 
-.switch.key.disabled, .switch.key_no_icon.disabled {
-
-    .switch_key::before { // Ball
-
-        border-top: 0;
-        border-bottom: 0;
-    }
-
-    .switch_label {
-        color: adjust-color($color_text, $alpha: -0.5);
-    }
-}
-
-.switch.key.on.disabled, .switch.key_no_icon.on.disabled {
-
-    .switch_key { // Path
-
-        box-shadow: none;
-    }
-    
-    .switch_key::before { // Ball
-
-        border: 2px solid hsl(187, 100%, 80%);
-        box-shadow: none;
-    }
-}
-
-.switch.key.inverted, .switch.key_no_icon.inverted {
-
-    // justify-content: space-between;
-    justify-content: initial;
-
-    .switch_key {
-
-        /*  
-        order: 1;
-        margin-left: 18px; 
-        margin-right: 0;
-        */
-
-        order: initial;
-        margin-left: 0px; 
-        margin-right: 12px;
-    }
-} 
-
 /*  
 ────────────────────────────
-TODO:            >>> Sizes & Positions
+TODO:    > Sliders
 ──────────────────────────── */
 
-// Tamanho para tela grande
-
-.switch.key, .switch.key_no_icon {
-
-    .switch_key { // Path
-
-        min-width: 47px;
-        height: 6px; 
-        border: 1px solid black;
-    }
-
-    .switch_key::before { // Ball
-
-        top: -11px;
-        left: -2px;
-        width: $switch_tech_ball_size;
-        height: $switch_tech_ball_size;
-        border: 0;
-    }
-
-    .switch_key::after { // Shine
-
-        top: -19px; // calc(-0.9 * #{$switch_tech_ball_size} + 3px);
-        left: -21px; //calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
-        width: 14px; // calc(0.585 * #{$switch_tech_ball_size});
-        height: 14px; // calc(0.585 * #{$switch_tech_ball_size});
-    }
-}
-
-.switch.key.on, .switch.key_no_icon.on {
-    
-    .switch_key::before { // Ball
-
-        top: -10px; 
-        left: 23px; 
-        width: calc(#{$switch_tech_ball_size} + 2); 
-        height: calc(#{$switch_tech_ball_size} + 2); 
-        transition: all 0.39s; 
-    }
-
-    .switch_key::after { // Shine
-        
-        top: calc(-0.9 * #{$switch_tech_ball_size} + 4px);
-        left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} + 23px); 
-        transition: all 0.39s; 
-    }
-}
-
-@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
-
-    // Tamanho para tela pequena
-
-    .switch.key, .switch.key_no_icon {
-
-        .switch_key { // Path
-
-            min-width: calc(53px + #{$switch_tech_ball_size_SS} - #{$switch_tech_ball_size});
-            height: 8px; 
-            background: $bg_switch_tech_path_off_SS;
-        }
-    
-        .switch_key::before { // Ball
-
-            top: -12px;
-            width: $switch_tech_ball_size_SS;
-            height: $switch_tech_ball_size_SS;
-            background: $bg_switch_tech_ball;
-        }
-
-        .switch_key::after { // Shine
-
-            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 4px);
-            left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} - 2px); 
-            width: calc(0.6 * #{$switch_tech_ball_size_SS});
-            height: calc(0.6 * #{$switch_tech_ball_size_SS}); 
-        }
-    }
-    
-    .switch.key.on, .switch.key_no_icon.on {
-
-        .switch_key { // Path
-
-            box-shadow: 0px 0px 6px 0px hsla(188, 100%, 50%, 0.60);
-        }
-        
-        .switch_key::before { // Ball
-
-            top: -11px; 
-            left: 29px;  
-            width: calc(#{$switch_tech_ball_size_SS} + 2); 
-            height: calc(#{$switch_tech_ball_size_SS} + 2); 
-        }
-
-        .switch_key::after { // Shine
-            
-            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 5px);
-            left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} + 29px); 
-            transition: all 0.42s; 
-        } 
-    }
-}
-
-/*  
-────────────────────────────
-TODO:        >> Button
-──────────────────────────── */
-
-.switch.button, .switch.button_text, .switch.button_icon {
-
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-
-    min-width: $button_height_smaller;
-    min-height: $button_height_smaller;
-    background: $bg_switch_button_off; 
-    //box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
-    transition: 0s;
-
-    .switch_key {
-
-        display: none;
-    }
-
-    .switch_label {
-        
-        display: inline-flex;
-        align-items: center;
-    }
-
-    .switch_shine { // Shine over the ball   
-          
-        content: '';
-        position: absolute;
-        z-index: 1;
-        background: $bg_switch_button_shine;
-          
-        $offset: 2px;
-        $left:  $offset;
-        $height: 49.8%; //calc(24px + #{$offset});
-
-        top: $offset;  
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
-        height: $height; 
-        // border-radius: 10px; // Propriedade aplicada aprimorada via JS.
-    }
-
-    .switch_text {
-
-        color: $color_text_switch_button_off;
-        font-weight: bold; 
-    }
-
-    .switch_icon {
-
-        width: 32px;
-        height: 32px;
-        margin-right: 12px;
-        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_off);
-    }
+.slider {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
  
-.switch.button {
-
-    padding: 11px; 
-    padding-right: 12px;
-    // border-radius: 14px; // Propriedade aplicada aprimorada via JS.
+.slider img, .slider picture {
+    max-width: 94%;   
 }
- 
-.switch.button_text {
 
-    padding: 10px; 
-    padding-right: 11px;
-    // border-radius: 11px; // Propriedade aplicada aprimorada via JS.
+@media (max-height: $screen_small_widthLimit) {
 
-    .switch_shine { // Shine 
-          
-        // border-radius: 7px; // Propriedade aplicada aprimorada via JS.
-    }
-
-    .switch_icon {
-        display: none;
-    }
-}
-      
-.switch.button_icon {
-
-    justify-content: center;
-    //padding: 10px; // Propriedade aplicada aprimorada via JS.
-    // border-radius: 13px; // Propriedade aplicada aprimorada via JS.
-    
-    .switch_text {
-        // display: none; // Propriedade aplicada via JS.
-        text-align: center;
-    }
-
-    .switch_icon {
-        margin: 0;
+    .slider img, .slider picture {
+        max-height: 100vh;
     }
 }
 
-.switch.button.disabled, .switch.button_text.disabled {
+@media (min-width: $screen_small_widthLimit) {  
 
-    .switch_label {
-        color: adjust-color($color_text, $alpha: -0.5);
+    .slider { 
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
     }
 }
-
-.switch.button_icon.disabled {
-    
-    .switch_text {
-        z-index: 1;
-    }
-}
-
-// ─────────── Pill ───────────
-
-.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
-
-    border-radius: 1000px; 
-    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
-    // background: $bg_switch_button_pill_and_rounded_off;
-
-    .switch_shine { // Shine
-          
-        top: 2px;  
-        height: 49.5%;
-        border-radius: 1000px; 
-    }
-}
-
-.switch.button.pill {
-
-    // padding-left: 18px; // Propriedade aplicada aprimorada via JS.
-    // padding-right: 20px; // Propriedade aplicada aprimorada via JS.
-
-    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
-    //       
-    //     $left:  10px;
-    // 
-    //     left:  $left;
-    //     width: calc(100% - 2 * #{$left}); 
-    // }/*  */  
-}
-
-.switch.button_text.pill {
-
-    // padding-left: 13px; // Propriedade aplicada aprimorada via JS.
-    // padding-right: 13px; // Propriedade aplicada aprimorada via JS.
-
-    //.switch_shine {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
-    //      
-    //    $left: 8px;  
-    //
-    //    left:  $left;
-    //    width: calc(100% - 2 * #{$left});
-    // }
-}
-
-.switch.button_icon.pill {
-
-    // padding: 12px; // Propriedade aplicada aprimorada via JS.
-
-    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
-    //        
-    //     $left: 10px;
-    //     
-    //     left:  $left;
-    //     width: calc(100% - 2 * #{$left});
-    // }
-}
-
-// ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
-
-.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
-
-    justify-content: center;
-    border-radius: 1000px; 
-    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
-    // background: $bg_switch_button_pill_and_rounded_off; 
-
-    .switch_shine { // Shine
-          
-        border-radius: 1000px; 
-        background: $bg_switch_button_rounded_shine;
-           
-        $top: 3px;
-        $left:  3px; 
-        $height: calc(100% - 2 * #{$top}); 
-
-        height: $height;
-
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
-    }
-}
-
-.switch.button.rounded {
-
-    padding: 18px;  
-}
-
-.switch.button_text.rounded {
-
-    padding: 14px; 
-
-    .switch_text {
-
-        text-align: center;
-    }
-}
-
-.switch.button_icon.rounded {
-
-    // padding: 12px; // Propriedade aplicada aprimorada via JS.
-}
- 
-/*  
-────────────────────────────
-TODO:            >>> Text Below
-──────────────────────────── */
-
-.switch.button.text_below {  
-
-    justify-content: center; 
-
-    .switch_label {
-
-        flex-direction: column; 
-        justify-content: center; 
-    }
-
-    .switch_text {
-
-        text-align: center;
-    }
-}
- 
-/*  
-────────────────────────────
-TODO:            >>> Option ON
-──────────────────────────── */
-
-.switch.button.on, .switch.button_text.on, .switch.button_icon.on {
-
-    background: $bg_switch_button_on;
-    //box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
- 
-    .switch_text {
-
-        color: $color_text_switch_button_on;
-        filter: drop-shadow(0px 0px 2px $color_text_switch_button_shadowOutline_on); 
-    }
-
-    .switch_icon {
-
-        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_on); 
-    }
-}
-
-.switch.button.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
-    
-    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear !important;
-    // border: 1px solid adjust-color($color_theme, $lightness: 30%);
-}
-
-// ─────────── Pill ───────────
-
-.switch.button_icon.on.pill {
-
-    // background: $bg_switch_button_pill_and_rounded_on;
-}
-
-// ─────────── Rounded ───────────
-
-.switch.button.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
- 
-    // background: $bg_switch_button_pill_and_rounded_on;
-}
- 
-/*  
-────────────────────────────
-TODO:            >>> Floating Labels
-──────────────────────────── */
 
 @media (pointer: fine) {
 
-    .switch.button_icon {
-
-        .switch_label {
-
-            justify-content: center; 
-        }
-        
-        .switch_text {
-
-            position: absolute;  
-            // top: -50px; // Propriedade aplicada aprimorada via JS. 
-            //left: -15px; // Propriedade aplicada aprimorada via JS. 
-            padding: 6px 9px; 
-            border: 1px solid;
-            border-color: $color_border_switch_button_icon_switch_text_floating_off; 
-            border-radius: 1000px;
-            font-weight: initial;
-            color: $color_text_switch_button_icon_switch_text_floating_off;
-            background: $bg_switch_button_icon_switch_text_floating_off;
-            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
-        }
-    }
-
-    .switch.button_icon.on .switch_text {
-
-        color: $color_text_switch_button_icon_switch_text_floating_on;
-        border-color: $color_border_switch_button_icon_switch_text_floating_on; 
-        background: $bg_switch_button_icon_switch_text_floating_on;
-        filter: initial;
-        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
-    }
-
-    .switch.button_icon:hover .switch_text {
-
-        display: block !important;
-    }
-}
-
-/*  
-────────────────────────────
-TODO:        >> Image
-──────────────────────────── */
-      
-.switch.image {
-
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-
-    min-width: $button_height_smaller;
-    min-height: $button_height_smaller;
-    border-radius: calc(0.25 * #{$switch_image_icon_size});
-    transition: 0.17s; 
-
-    .switch_key {
-        display: none;
+    .slider {
+        overflow-x: hidden;
     }
     
-    .switch_text {
-        // display: none; // Propriedade aplicada via JS.
-    }
-
-    .switch_icon {
-
-        width: $switch_image_icon_size;
-        height: $switch_image_icon_size;
-        margin: 0;
-        filter: drop-shadow(0px 0px 1px $color_outline_switch_image);
-
-        // border-radius: 12px; // Propriedade aplicada aprimorada via JS. 
+    .slider:hover {
+        overflow-x: auto;
     }
 }
 
-// ─────────── pill ───────────
+// Slider scrollbar:
 
-.switch.image.pill .switch_icon {
-
-    border-radius: 1000px !important;
+.slider::-webkit-scrollbar { // Entire bar
+    height: 12px; /* 15 */ 
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Option ON
-──────────────────────────── */
-
-.switch.image.on .switch_icon {
-
-    // border: 2px solid white; filter: drop-shadow(0px 0px 6px $color_theme);  
-    // box-shadow: 0px 0px 0px 2px white; filter: drop-shadow(0px 0px 6px $color_theme);  
-    // box-shadow: 0px 0px 3px 3px white; filter: drop-shadow(0px 0px 7px $color_theme);  
-    
-    box-shadow:  0px 0px 0px 2px white, 0px 0px 12px 2px $color_theme;
+.slider::-webkit-scrollbar-thumb { // Bar pointer
+    background: hsl(0, 0%, 74%);
+    border-radius: 10px;
+    /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
 }
- 
-/*  
-────────────────────────────
-TODO:            >>> Floating Labels
-──────────────────────────── */
-
-@media (pointer: fine) {  
-
-    .switch.image {
-        
-        .switch_label {
-
-            display: inline-flex;
-            justify-content: center; 
-            align-items: center;
-            position: relative;
-        }
-
-        .switch_text {
-
-            position: absolute;  
-            // top: -49px; // Propriedade aplicada aprimorada via JS.  
-            // left: -15px; // Propriedade aplicada aprimorada via JS. 
-            padding-top: 6px; 
-            padding-bottom: 6px;
-            // padding-left e padding-right foram aplicados via JS.
-            border: 1px solid;
-            border-color: $color_border_switch_image_switch_text_floating_off; 
-            border-radius: 1000px;
-            color: $color_text_switch_image_switch_text_floating_off;
-            background: $bg_switch_image_switch_text_floating_off;
-            font-weight: initial;
-            text-align: center;
-            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
-        }
-    }
-
-    .switch.image.on .switch_label {
-        
-        filter: initial; 
-    }
-
-    .switch.image.on .switch_text {
-
-        color: $color_text_switch_image_switch_text_floating_on;
-        border-color: $color_border_switch_image_switch_text_floating_on; 
-        background: $bg_switch_image_switch_text_floating_on;
-        filter: initial;
-        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
-    }
-
-    .switch.image:hover .switch_text {
-
-        display: block !important;
-    }
+   
+.slider::-webkit-scrollbar-track { // Bar background
+    background: hsl(0, 0%, 98%); 
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 10px; /* */ 
 }
 
 /*

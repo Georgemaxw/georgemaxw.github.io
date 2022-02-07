@@ -1766,127 +1766,465 @@ TODO:    > Class
   height: calc(40rem + ( (30 - 1) * 28rem));
 }
 
-/*
-──────────────────────────────────────────────────────
-TODO: Components
-────────────────────────────────────────────────────── */
 /*  
-────────────────────────────
-TODO:    > Outdoors
-──────────────────────────── */
-img.outdoor, video.outdoor {
-  display: block;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+──────────────────────────────────────────────────────
+TODO:    > Switches 
+────────────────────────────────────────────────────── */
+.switch {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
-@media (min-width: 501px) {
-  img.outdoor, video.outdoor {
-    max-width: calc(100% - (2 * 20px));
-    border-radius: 40px;
+.switch .switch_text {
+  text-align: justify;
+}
+
+.switch.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/*  
+────────────────────────────
+TODO:        >> Key
+──────────────────────────── */
+.switch.key, .switch.key_no_icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch.key .switch_key, .switch.key_no_icon .switch_key {
+  order: 1;
+  margin-left: 18px;
+  margin-right: 0;
+  border-radius: 1000px;
+  background: linear-gradient(to bottom, #b3b3b3, #bababa, white);
+}
+
+.switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  border-radius: 1000px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
+  transition: all 0.39s;
+}
+
+.switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  border-radius: 1000px;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  transition: all 0.39s;
+}
+
+.switch.key .switch_label, .switch.key_no_icon .switch_label {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  text-indent: 0;
+}
+
+.switch.key .switch_icon, .switch.key_no_icon .switch_icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 8px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
+}
+
+.switch.key .switch_text, .switch.key_no_icon .switch_text {
+  line-height: 1.5;
+}
+
+.switch.key_no_icon .switch_icon {
+  display: none;
+}
+
+.switch.key.on .switch_key, .switch.key_no_icon.on .switch_key {
+  border-color: #33e7ff;
+  background: white;
+  box-shadow: 0px 0px 6px 0px rgba(0, 199, 230, 0.5);
+}
+
+.switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
+  border: 1px solid #99f3ff;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, white 75%), cyan;
+  box-shadow: 0px 0px 13px 0px #33e4ff;
+}
+
+.switch.key.disabled .switch_key::before, .switch.key_no_icon.disabled .switch_key::before {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.switch.key.disabled .switch_label, .switch.key_no_icon.disabled .switch_label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.switch.key.on.disabled .switch_key, .switch.key_no_icon.on.disabled .switch_key {
+  box-shadow: none;
+}
+
+.switch.key.on.disabled .switch_key::before, .switch.key_no_icon.on.disabled .switch_key::before {
+  border: 2px solid #99f3ff;
+  box-shadow: none;
+}
+
+.switch.key.inverted, .switch.key_no_icon.inverted {
+  justify-content: initial;
+}
+
+.switch.key.inverted .switch_key, .switch.key_no_icon.inverted .switch_key {
+  /*  
+        order: 1;
+        margin-left: 18px; 
+        margin-right: 0;
+        */
+  order: initial;
+  margin-left: 0px;
+  margin-right: 12px;
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Sizes & Positions
+──────────────────────────── */
+.switch.key .switch_key, .switch.key_no_icon .switch_key {
+  min-width: 47px;
+  height: 6px;
+  border: 1px solid black;
+}
+
+.switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
+  top: -11px;
+  left: -2px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+}
+
+.switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
+  top: -19px;
+  left: -21px;
+  width: 14px;
+  height: 14px;
+}
+
+.switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
+  top: -10px;
+  left: 23px;
+  width: calc(24px + 2);
+  height: calc(24px + 2);
+  transition: all 0.39s;
+}
+
+.switch.key.on .switch_key::after, .switch.key_no_icon.on .switch_key::after {
+  top: calc(-0.9 * 24px + 4px);
+  left: calc(-1.05 * 24px + 0.25 * 24px + 23px);
+  transition: all 0.39s;
+}
+
+@media (max-width: 501px), (max-height: 501px) {
+  .switch.key .switch_key, .switch.key_no_icon .switch_key {
+    min-width: calc(53px + 28px - 24px);
+    height: 8px;
+    background: linear-gradient(to bottom, #b3b3b3, #c9c9c9, white);
+  }
+  .switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
+    top: -12px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
+  }
+  .switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
+    top: calc(-0.9 * 28px + 4px);
+    left: calc(-1.05 * 28px + 0.25 * 28px - 2px);
+    width: calc(0.6 * 28px);
+    height: calc(0.6 * 28px);
+  }
+  .switch.key.on .switch_key, .switch.key_no_icon.on .switch_key {
+    box-shadow: 0px 0px 6px 0px rgba(0, 221, 255, 0.6);
+  }
+  .switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
+    top: -11px;
+    left: 29px;
+    width: calc(28px + 2);
+    height: calc(28px + 2);
+  }
+  .switch.key.on .switch_key::after, .switch.key_no_icon.on .switch_key::after {
+    top: calc(-0.9 * 28px + 5px);
+    left: calc(-1.05 * 28px + 0.25 * 28px + 29px);
+    transition: all 0.42s;
   }
 }
 
-figure.outdoor {
-  margin-left: auto;
-  margin-right: auto;
+/*  
+────────────────────────────
+TODO:        >> Button
+──────────────────────────── */
+.switch.button, .switch.button_text, .switch.button_icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: max-content;
+  -moz-width: fit-content;
+  width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  min-width: 32px;
+  min-height: 32px;
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #f0f0f0;
+  transition: 0s;
+}
+
+.switch.button .switch_key, .switch.button_text .switch_key, .switch.button_icon .switch_key {
+  display: none;
+}
+
+.switch.button .switch_label, .switch.button_text .switch_label, .switch.button_icon .switch_label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.switch.button .switch_shine, .switch.button_text .switch_shine, .switch.button_icon .switch_shine {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 2 * 2px);
+  height: 49.8%;
+}
+
+.switch.button .switch_text, .switch.button_text .switch_text, .switch.button_icon .switch_text {
+  color: gray;
+  font-weight: bold;
+}
+
+.switch.button .switch_icon, .switch.button_text .switch_icon, .switch.button_icon .switch_icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.45));
+}
+
+.switch.button {
+  padding: 11px;
+  padding-right: 12px;
+}
+
+.switch.button_text {
+  padding: 10px;
+  padding-right: 11px;
+}
+
+.switch.button_text .switch_icon {
+  display: none;
+}
+
+.switch.button_icon {
+  justify-content: center;
+}
+
+.switch.button_icon .switch_text {
   text-align: center;
 }
 
-figure.outdoor img {
-  max-width: 100%;
+.switch.button_icon .switch_icon {
+  margin: 0;
 }
 
-@media (min-width: 501px) {
-  figure.outdoor {
-    max-width: calc(100% - (2 * 20px));
-  }
-  figure.outdoor img {
-    border-radius: 40px;
-  }
+.switch.button.disabled .switch_label, .switch.button_text.disabled .switch_label {
+  color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-height: 501px) {
-  img.outdoor, video.outdoor, figure.outdoor img {
-    max-height: 100vh;
-  }
+.switch.button_icon.disabled .switch_text {
+  z-index: 1;
+}
+
+.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
+  border-radius: 1000px;
+}
+
+.switch.button.pill .switch_shine, .switch.button_text.pill .switch_shine, .switch.button_icon.pill .switch_shine {
+  top: 2px;
+  height: 49.5%;
+  border-radius: 1000px;
+}
+
+.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+  justify-content: center;
+  border-radius: 1000px;
+}
+
+.switch.button.rounded .switch_shine, .switch.button_text.rounded .switch_shine, .switch.button_icon.rounded .switch_shine {
+  border-radius: 1000px;
+  background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.644) 52%, transparent 52%) center center/100% 100% no-repeat;
+  height: calc(100% - 2 * 3px);
+  left: 3px;
+  width: calc(100% - 2 * 3px);
+}
+
+.switch.button.rounded {
+  padding: 18px;
+}
+
+.switch.button_text.rounded {
+  padding: 14px;
+}
+
+.switch.button_text.rounded .switch_text {
+  text-align: center;
 }
 
 /*  
 ────────────────────────────
-TODO:    > Galleries
+TODO:            >>> Text Below
 ──────────────────────────── */
-.gallery img {
-  width: 50%;
+.switch.button.text_below {
+  justify-content: center;
 }
 
-.gallery a {
-  font-size: 0;
+.switch.button.text_below .switch_label {
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (min-width: 501px) {
-  .gallery {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .gallery img {
-    width: 25%;
-  }
+.switch.button.text_below .switch_text {
+  text-align: center;
 }
 
 /*  
 ────────────────────────────
-TODO:    > Sliders
+TODO:            >>> Option ON
 ──────────────────────────── */
-.slider {
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
+.switch.button.on, .switch.button_text.on, .switch.button_icon.on {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
 }
 
-.slider img, .slider picture {
-  max-width: 94%;
+.switch.button.on .switch_text, .switch.button_text.on .switch_text, .switch.button_icon.on .switch_text {
+  color: white;
+  filter: drop-shadow(0px 0px 2px #00a0cc);
 }
 
-@media (max-height: 501px) {
-  .slider img, .slider picture {
-    max-height: 100vh;
-  }
+.switch.button.on .switch_icon, .switch.button_text.on .switch_icon, .switch.button_icon.on .switch_icon {
+  filter: drop-shadow(0px 0px 1px #00d4f0);
 }
 
-@media (min-width: 501px) {
-  .slider {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
 @media (pointer: fine) {
-  .slider {
-    overflow-x: hidden;
+  .switch.button_icon .switch_label {
+    justify-content: center;
   }
-  .slider:hover {
-    overflow-x: auto;
+  .switch.button_icon .switch_text {
+    position: absolute;
+    padding: 6px 9px;
+    border: 1px solid;
+    border-color: #bdbdbd;
+    border-radius: 1000px;
+    font-weight: initial;
+    color: #ababab;
+    background: linear-gradient(to bottom, white, #e8e8e8);
+    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
+  }
+  .switch.button_icon.on .switch_text {
+    color: #33d3ff;
+    border-color: #5cdcff;
+    background: linear-gradient(to bottom, white, #d6f6ff);
+    filter: initial;
+    box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
+  }
+  .switch.button_icon:hover .switch_text {
+    display: block !important;
   }
 }
 
-.slider::-webkit-scrollbar {
-  height: 12px;
-  /* 15 */
+/*  
+────────────────────────────
+TODO:        >> Image
+──────────────────────────── */
+.switch.image {
+  width: max-content;
+  -moz-width: fit-content;
+  width: fit-content;
+  /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: calc(0.25 * 48px);
+  transition: 0.17s;
 }
 
-.slider::-webkit-scrollbar-thumb {
-  background: #bdbdbd;
-  border-radius: 10px;
-  /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
+.switch.image .switch_key {
+  display: none;
 }
 
-.slider::-webkit-scrollbar-track {
-  background: #fafafa;
-  border: 1px solid #dbdbdb;
-  border-radius: 10px;
-  /* */
+.switch.image .switch_icon {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+}
+
+.switch.image.pill .switch_icon {
+  border-radius: 1000px !important;
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+.switch.image.on .switch_icon {
+  box-shadow: 0px 0px 0px 2px white, 0px 0px 12px 2px DeepSkyBlue;
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
+@media (pointer: fine) {
+  .switch.image .switch_label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .switch.image .switch_text {
+    position: absolute;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 1px solid;
+    border-color: #bdbdbd;
+    border-radius: 1000px;
+    color: #ababab;
+    background: linear-gradient(to bottom, white, #e8e8e8);
+    font-weight: initial;
+    text-align: center;
+    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
+  }
+  .switch.image.on .switch_label {
+    filter: initial;
+  }
+  .switch.image.on .switch_text {
+    color: #33d3ff;
+    border-color: #5cdcff;
+    background: linear-gradient(to bottom, white, #d6f6ff);
+    filter: initial;
+    box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
+  }
+  .switch.image:hover .switch_text {
+    display: block !important;
+  }
 }
 
 /*  
@@ -2303,465 +2641,127 @@ TODO:        >> Disabled
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
-/*  
+/*
 ──────────────────────────────────────────────────────
-TODO:    > Switches 
+TODO: Components
 ────────────────────────────────────────────────────── */
-.switch {
-  margin-top: 16rem;
-  margin-bottom: 16rem;
-  margin-left: 20px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.switch .switch_text {
-  text-align: justify;
-}
-
-.switch.disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
 /*  
 ────────────────────────────
-TODO:        >> Key
+TODO:    > Outdoors
 ──────────────────────────── */
-.switch.key, .switch.key_no_icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+img.outdoor, video.outdoor {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.switch.key .switch_key, .switch.key_no_icon .switch_key {
-  order: 1;
-  margin-left: 18px;
-  margin-right: 0;
-  border-radius: 1000px;
-  background: linear-gradient(to bottom, #b3b3b3, #bababa, white);
-}
-
-.switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
-  content: '';
-  display: inline-block;
-  position: relative;
-  border-radius: 1000px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
-  transition: all 0.39s;
-}
-
-.switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
-  content: '';
-  display: inline-block;
-  position: relative;
-  border-radius: 1000px;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
-  transition: all 0.39s;
-}
-
-.switch.key .switch_label, .switch.key_no_icon .switch_label {
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
-  text-indent: 0;
-}
-
-.switch.key .switch_icon, .switch.key_no_icon .switch_icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 12px;
-  border-radius: 8px;
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
-}
-
-.switch.key .switch_text, .switch.key_no_icon .switch_text {
-  line-height: 1.5;
-}
-
-.switch.key_no_icon .switch_icon {
-  display: none;
-}
-
-.switch.key.on .switch_key, .switch.key_no_icon.on .switch_key {
-  border-color: #33e7ff;
-  background: white;
-  box-shadow: 0px 0px 6px 0px rgba(0, 199, 230, 0.5);
-}
-
-.switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
-  border: 1px solid #99f3ff;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, white 75%), cyan;
-  box-shadow: 0px 0px 13px 0px #33e4ff;
-}
-
-.switch.key.disabled .switch_key::before, .switch.key_no_icon.disabled .switch_key::before {
-  border-top: 0;
-  border-bottom: 0;
-}
-
-.switch.key.disabled .switch_label, .switch.key_no_icon.disabled .switch_label {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.switch.key.on.disabled .switch_key, .switch.key_no_icon.on.disabled .switch_key {
-  box-shadow: none;
-}
-
-.switch.key.on.disabled .switch_key::before, .switch.key_no_icon.on.disabled .switch_key::before {
-  border: 2px solid #99f3ff;
-  box-shadow: none;
-}
-
-.switch.key.inverted, .switch.key_no_icon.inverted {
-  justify-content: initial;
-}
-
-.switch.key.inverted .switch_key, .switch.key_no_icon.inverted .switch_key {
-  /*  
-        order: 1;
-        margin-left: 18px; 
-        margin-right: 0;
-        */
-  order: initial;
-  margin-left: 0px;
-  margin-right: 12px;
-}
-
-/*  
-────────────────────────────
-TODO:            >>> Sizes & Positions
-──────────────────────────── */
-.switch.key .switch_key, .switch.key_no_icon .switch_key {
-  min-width: 47px;
-  height: 6px;
-  border: 1px solid black;
-}
-
-.switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
-  top: -11px;
-  left: -2px;
-  width: 24px;
-  height: 24px;
-  border: 0;
-}
-
-.switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
-  top: -19px;
-  left: -21px;
-  width: 14px;
-  height: 14px;
-}
-
-.switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
-  top: -10px;
-  left: 23px;
-  width: calc(24px + 2);
-  height: calc(24px + 2);
-  transition: all 0.39s;
-}
-
-.switch.key.on .switch_key::after, .switch.key_no_icon.on .switch_key::after {
-  top: calc(-0.9 * 24px + 4px);
-  left: calc(-1.05 * 24px + 0.25 * 24px + 23px);
-  transition: all 0.39s;
-}
-
-@media (max-width: 501px), (max-height: 501px) {
-  .switch.key .switch_key, .switch.key_no_icon .switch_key {
-    min-width: calc(53px + 28px - 24px);
-    height: 8px;
-    background: linear-gradient(to bottom, #b3b3b3, #c9c9c9, white);
-  }
-  .switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
-    top: -12px;
-    width: 28px;
-    height: 28px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
-  }
-  .switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
-    top: calc(-0.9 * 28px + 4px);
-    left: calc(-1.05 * 28px + 0.25 * 28px - 2px);
-    width: calc(0.6 * 28px);
-    height: calc(0.6 * 28px);
-  }
-  .switch.key.on .switch_key, .switch.key_no_icon.on .switch_key {
-    box-shadow: 0px 0px 6px 0px rgba(0, 221, 255, 0.6);
-  }
-  .switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
-    top: -11px;
-    left: 29px;
-    width: calc(28px + 2);
-    height: calc(28px + 2);
-  }
-  .switch.key.on .switch_key::after, .switch.key_no_icon.on .switch_key::after {
-    top: calc(-0.9 * 28px + 5px);
-    left: calc(-1.05 * 28px + 0.25 * 28px + 29px);
-    transition: all 0.42s;
+@media (min-width: 501px) {
+  img.outdoor, video.outdoor {
+    max-width: calc(100% - (2 * 20px));
+    border-radius: 40px;
   }
 }
 
-/*  
-────────────────────────────
-TODO:        >> Button
-──────────────────────────── */
-.switch.button, .switch.button_text, .switch.button_icon {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: max-content;
-  -moz-width: fit-content;
-  width: fit-content;
-  /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-  min-width: 32px;
-  min-height: 32px;
-  background: url(../../images/bgs/switch_button_shine_under.webp) center center/200% 100% no-repeat, #f0f0f0;
-  transition: 0s;
-}
-
-.switch.button .switch_key, .switch.button_text .switch_key, .switch.button_icon .switch_key {
-  display: none;
-}
-
-.switch.button .switch_label, .switch.button_text .switch_label, .switch.button_icon .switch_label {
-  display: inline-flex;
-  align-items: center;
-}
-
-.switch.button .switch_shine, .switch.button_text .switch_shine, .switch.button_icon .switch_shine {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
-  top: 2px;
-  left: 2px;
-  width: calc(100% - 2 * 2px);
-  height: 49.8%;
-}
-
-.switch.button .switch_text, .switch.button_text .switch_text, .switch.button_icon .switch_text {
-  color: gray;
-  font-weight: bold;
-}
-
-.switch.button .switch_icon, .switch.button_text .switch_icon, .switch.button_icon .switch_icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 12px;
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.45));
-}
-
-.switch.button {
-  padding: 11px;
-  padding-right: 12px;
-}
-
-.switch.button_text {
-  padding: 10px;
-  padding-right: 11px;
-}
-
-.switch.button_text .switch_icon {
-  display: none;
-}
-
-.switch.button_icon {
-  justify-content: center;
-}
-
-.switch.button_icon .switch_text {
+figure.outdoor {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
-.switch.button_icon .switch_icon {
-  margin: 0;
+figure.outdoor img {
+  max-width: 100%;
 }
 
-.switch.button.disabled .switch_label, .switch.button_text.disabled .switch_label {
-  color: rgba(0, 0, 0, 0.5);
+@media (min-width: 501px) {
+  figure.outdoor {
+    max-width: calc(100% - (2 * 20px));
+  }
+  figure.outdoor img {
+    border-radius: 40px;
+  }
 }
 
-.switch.button_icon.disabled .switch_text {
-  z-index: 1;
-}
-
-.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
-  border-radius: 1000px;
-}
-
-.switch.button.pill .switch_shine, .switch.button_text.pill .switch_shine, .switch.button_icon.pill .switch_shine {
-  top: 2px;
-  height: 49.5%;
-  border-radius: 1000px;
-}
-
-.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
-  justify-content: center;
-  border-radius: 1000px;
-}
-
-.switch.button.rounded .switch_shine, .switch.button_text.rounded .switch_shine, .switch.button_icon.rounded .switch_shine {
-  border-radius: 1000px;
-  background: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center/100% 100% no-repeat;
-  height: calc(100% - 2 * 3px);
-  left: 3px;
-  width: calc(100% - 2 * 3px);
-}
-
-.switch.button.rounded {
-  padding: 18px;
-}
-
-.switch.button_text.rounded {
-  padding: 14px;
-}
-
-.switch.button_text.rounded .switch_text {
-  text-align: center;
+@media (max-height: 501px) {
+  img.outdoor, video.outdoor, figure.outdoor img {
+    max-height: 100vh;
+  }
 }
 
 /*  
 ────────────────────────────
-TODO:            >>> Text Below
+TODO:    > Galleries
 ──────────────────────────── */
-.switch.button.text_below {
-  justify-content: center;
+.gallery img {
+  width: 50%;
 }
 
-.switch.button.text_below .switch_label {
-  flex-direction: column;
-  justify-content: center;
+.gallery a {
+  font-size: 0;
 }
 
-.switch.button.text_below .switch_text {
-  text-align: center;
+@media (min-width: 501px) {
+  .gallery {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .gallery img {
+    width: 25%;
+  }
 }
 
 /*  
 ────────────────────────────
-TODO:            >>> Option ON
+TODO:    > Sliders
 ──────────────────────────── */
-.switch.button.on, .switch.button_text.on, .switch.button_icon.on {
-  background: url(../../images/bgs/switch_button_shine_under.webp) center center/200% 100% no-repeat, #a8ecff;
+.slider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
-.switch.button.on .switch_text, .switch.button_text.on .switch_text, .switch.button_icon.on .switch_text {
-  color: white;
-  filter: drop-shadow(0px 0px 2px #00a0cc);
+.slider img, .slider picture {
+  max-width: 94%;
 }
 
-.switch.button.on .switch_icon, .switch.button_text.on .switch_icon, .switch.button_icon.on .switch_icon {
-  filter: drop-shadow(0px 0px 1px #00d4f0);
+@media (max-height: 501px) {
+  .slider img, .slider picture {
+    max-height: 100vh;
+  }
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Floating Labels
-──────────────────────────── */
+@media (min-width: 501px) {
+  .slider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 @media (pointer: fine) {
-  .switch.button_icon .switch_label {
-    justify-content: center;
+  .slider {
+    overflow-x: hidden;
   }
-  .switch.button_icon .switch_text {
-    position: absolute;
-    padding: 6px 9px;
-    border: 1px solid;
-    border-color: #bdbdbd;
-    border-radius: 1000px;
-    font-weight: initial;
-    color: #ababab;
-    background: linear-gradient(to bottom, white, #e8e8e8);
-    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
-  }
-  .switch.button_icon.on .switch_text {
-    color: #33d3ff;
-    border-color: #5cdcff;
-    background: linear-gradient(to bottom, white, #d6f6ff);
-    filter: initial;
-    box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
-  }
-  .switch.button_icon:hover .switch_text {
-    display: block !important;
+  .slider:hover {
+    overflow-x: auto;
   }
 }
 
-/*  
-────────────────────────────
-TODO:        >> Image
-──────────────────────────── */
-.switch.image {
-  width: max-content;
-  -moz-width: fit-content;
-  width: fit-content;
-  /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-  min-width: 32px;
-  min-height: 32px;
-  border-radius: calc(0.25 * 48px);
-  transition: 0.17s;
+.slider::-webkit-scrollbar {
+  height: 12px;
+  /* 15 */
 }
 
-.switch.image .switch_key {
-  display: none;
+.slider::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 10px;
+  /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
 }
 
-.switch.image .switch_icon {
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
-}
-
-.switch.image.pill .switch_icon {
-  border-radius: 1000px !important;
-}
-
-/*  
-────────────────────────────
-TODO:            >>> Option ON
-──────────────────────────── */
-.switch.image.on .switch_icon {
-  box-shadow: 0px 0px 0px 2px white, 0px 0px 12px 2px DeepSkyBlue;
-}
-
-/*  
-────────────────────────────
-TODO:            >>> Floating Labels
-──────────────────────────── */
-@media (pointer: fine) {
-  .switch.image .switch_label {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .switch.image .switch_text {
-    position: absolute;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: 1px solid;
-    border-color: #bdbdbd;
-    border-radius: 1000px;
-    color: #ababab;
-    background: linear-gradient(to bottom, white, #e8e8e8);
-    font-weight: initial;
-    text-align: center;
-    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
-  }
-  .switch.image.on .switch_label {
-    filter: initial;
-  }
-  .switch.image.on .switch_text {
-    color: #33d3ff;
-    border-color: #5cdcff;
-    background: linear-gradient(to bottom, white, #d6f6ff);
-    filter: initial;
-    box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
-  }
-  .switch.image:hover .switch_text {
-    display: block !important;
-  }
+.slider::-webkit-scrollbar-track {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  /* */
 }
 
 /*

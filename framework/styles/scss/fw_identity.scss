@@ -27,52 +27,7 @@ do framework aqui quando for usar este arquivo em um projeto.)
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Syntaxes
-────────────────────────────────────────────────────── */
-
-sc1 { color: red; }
-sc2 { color: blue; }
-sc3 { color: green; }
-sc4 { color: purple; }
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Display
-────────────────────────────────────────────────────── */
-
-.display {
-    display: inline-block; 
-    border: 6px ridge hsl(0, 0%, 83%); 
-    min-width: 34px; 
-    min-height: 40px;
-    border-radius: 10px; 
-    padding-right: 7px; 
-    color: white; 
-    background: hsl(0, 0%, 37%);
-}
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Choice Examples
-────────────────────────────────────────────────────── */
-
-$font_size: 19rem; 
-
-.choice_example_1, .choice_example_2, .choice_example_3 {
-
-    > :not(:nth-child(1)) {
-        display: none;
-    }
-}
-
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
-
-    font-size: $font_size; 
-}
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Switches Examples
+TODO: Switches (And Buttons) Examples
 ────────────────────────────────────────────────────── */
 
 // Switches Style
@@ -107,4 +62,49 @@ TODO: Switches Examples
 .SS_156x156 {
     width: 156px !important;
     height: 156px !important;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Choice Examples
+────────────────────────────────────────────────────── */
+
+$font_size: 19rem; 
+
+.choice_example_1, .choice_example_2, .choice_example_3 {
+
+    > :not(:nth-child(1)) {
+        display: none;
+    }
+}
+
+.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
+
+    font-size: $font_size; 
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Syntaxes
+────────────────────────────────────────────────────── */
+
+sc1 { color: red; }
+sc2 { color: blue; }
+sc3 { color: green; }
+sc4 { color: purple; }
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Display
+────────────────────────────────────────────────────── */
+
+.display {
+    display: inline-block; 
+    border: 6px ridge hsl(0, 0%, 83%); 
+    min-width: 34px; 
+    min-height: 40px;
+    border-radius: 10px; 
+    padding-right: 7px; 
+    color: white; 
+    background: hsl(0, 0%, 37%);
 }
