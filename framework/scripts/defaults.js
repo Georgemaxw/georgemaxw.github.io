@@ -191,7 +191,7 @@ function switches_type_button_and_buttons_type_button(elements) {
                     $switch.style.padding = (9/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
                 } 
                 
-                if($switch.classList.contains('pill')) {
+                if($switch.classList.contains('pill') || $switch.classList.contains('rounded')) {
 
                     if(switch_icon_width === switch_icon_height) {
 
@@ -213,7 +213,7 @@ function switches_type_button_and_buttons_type_button(elements) {
                         $switch.style.padding = (13/32) * switch_icon_width +'px '+ (10/32) * switch_icon_width +'px'
                     }
                 }
-/*  
+                /*  
                 if($switch.classList.contains('rounded')) {
 
                     if(switch_icon_width <= 32 || switch_icon_height <= 32) {
@@ -224,7 +224,8 @@ function switches_type_button_and_buttons_type_button(elements) {
 
                         $switch.style.padding = (11/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
                     }
-                }*/
+                }
+                */
             }
 
             // ---------- Definir o raio das bordas dos botões normais (quadrados) e de seus brilhos ---------- 
@@ -268,10 +269,10 @@ function switches_type_button_and_buttons_type_button(elements) {
             // ---------- Arredondar botões com a classe 'rounded' ---------- zzzz
 
             if($switch.classList.contains('rounded') && !$switch.classList.contains('text_below')) {
-/*
+
                 var switch_width = Number(getComputedStyle($switch).getPropertyValue('width').slice(0,-2)) 
                 var switch_height = Number(getComputedStyle($switch).getPropertyValue('height').slice(0,-2)) 
- 
+/* 
                 if(switch_width >= switch_height) { 
 
                     var padding_top_current =  Number(getComputedStyle($switch).getPropertyValue('padding-top').slice(0,-2))
@@ -285,7 +286,7 @@ function switches_type_button_and_buttons_type_button(elements) {
                     $switch.style.width = switch_height_ceil + 'px'
                     $switch.style.height = switch_height_ceil + 'px'
                 }
-
+*/   
                 // Fazendo dessa forma os botões de ícone (button_icon) com a classe 'rounded' bugam no celular:
 
                 var switch_width_ceil = Math.ceil(switch_width)
@@ -301,7 +302,7 @@ function switches_type_button_and_buttons_type_button(elements) {
                     $switch.style.width = switch_height_ceil + 'px'
                     $switch.style.height = switch_height_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                 }
-*/                
+             
             }
 
             // ---------- Posição e preenchimento da etiqueta de hover dos botões de ícone ---------- 
