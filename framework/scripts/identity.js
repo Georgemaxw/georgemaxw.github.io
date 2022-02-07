@@ -93,16 +93,15 @@ function choice_example_2_Action_3() {
     document.querySelector('.choice_divsExample_2_div_3').style = 'display: block'
 }
 
-// Switch - Sample functions:
+// Switches (And Buttons) - Sample functions:
 
 function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) /*console.log(arg.className) */ } 
 function switch_2(arg){ if(arg.classList.contains('disabled')) { return }; console.log(2) }
 function switch_3(arg){ if(arg.classList.contains('disabled')) { return }; console.log(3) }
 function switch_4(arg){ if(arg.classList.contains('disabled')) { return }; console.log(4) }
 function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; console.log(5) }
-}
 
-// Switch - Turn ON/OFF tests switches:
+// Switches - Turn ON/OFF tests switches:
 
 document.querySelector('.toggle_tests_switches').addEventListener('click', function() { 
     
@@ -115,6 +114,7 @@ document.querySelector('.toggle_tests_switches').addEventListener('click', funct
     
     update_switches_and_buttons(switches)
 })
+}
 
 /*  
 ──────────────────────────────────────────────────────

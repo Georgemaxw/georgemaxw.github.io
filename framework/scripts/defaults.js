@@ -12,141 +12,6 @@ var $color_theme = 'DeepSkyBlue' // VÍNCULO: Váriável SCSS
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Choice 
-────────────────────────────────────────────────────── */
-
-{ 
-
-var choice_anchorClicked = null
-var choice_anchorClickedBefore = null /* <- Variável necessária para 
-salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
-desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao seu 
-valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
-opção que aparece em um 'choice_d' quando ele está fechado.
-*/
- 
-var choice_d_open = false
-
-function choice(arg) {
-
-    var choice_d_liClicked = null
-
-    if(arg.classList.contains('choice_d')) {
-
-        if(arg.classList.contains('choice_d_open')) {
-
-                for(var i = 0; i < arg.children.length; i++) { 
-
-                    if(arg.children[i].children[0] === choice_anchorClicked) {
-
-                        choice_d_liClicked = arg.children[i]
-                        break
-                    }
-                }
-
-            if(choice_anchorClicked !== 'disabled') {
-
-                for(var i = 0; i < arg.children.length; i++) { 
-
-                    arg.children[i].style = 'display: none'
-                }
-
-                if(choice_d_liClicked !==  null) {
-
-                    choice_d_liClicked.style = 'display: inline-flex' 
-                } else {
-                    arg.children[0].style = 'display: inline-flex'
-                }
-            }
-
-        } else {
-
-            if(arg.classList.contains('disabled')) { return }
-
-            arg.children[0].style = 'display: none'
-            
-            for(var i = 1; i < arg.children.length; i++) { 
-
-                arg.children[i].style = 'display: inline-flex'
-            } 
-
-            if(choice_anchorClicked !== null) {
-                
-                for(var i = 1; i < arg.children.length - 1; i++) { 
-
-                    arg.children[i].children[0].classList.remove('on')
-                }
-
-                choice_anchorClicked.classList.add('on')
-            }
-        }
-            
-        if(choice_anchorClicked !== 'disabled') {
-
-            document.querySelector('html').classList.toggle('overflow_hidden')
-            arg.classList.toggle('choice_d_open')
-
-        } else {
-            choice_anchorClicked = choice_anchorClickedBefore
-        }
-
-    } else {
-
-        if(choice_anchorClicked === null || choice_anchorClicked === 'disabled') { return }
-
-        for(var i = 0; i < arg.children.length; i++) { 
-
-            arg.children[i].children[0].classList.remove('on')
-        }
-
-        choice_anchorClicked.classList.add('on')
-
-        choice_anchorClicked = null
-        
-        /*
-        if(choice_anchorClicked !== null) {
-
-            for(var i = 0; i < arg.children.length; i++) { 
-
-                arg.children[i].children[0].classList.remove('on')
-            }
-
-            choice_anchorClicked.classList.add('on')
-
-            choice_anchorClicked = null
-        }
-        */
-    }
-}
-
-function choice_option(arg) { 
-
-    if(arg.classList.contains('disabled')) { 
-
-        choice_anchorClickedBefore = choice_anchorClicked
-
-        choice_anchorClicked = 'disabled'
-
-    } else {
-        choice_anchorClicked =  arg
-    }
-}
-
-// Espaço no final ('li' invisível) do menu dos dropdowns:
-
-var allChoicesD = document.querySelectorAll('.choice_d')
-
-for(var i = 0; i < allChoicesD.length; i++) { 
-
-var e = document.createElement("li")
-
-    allChoicesD[i].appendChild(e)
-}
-
-}
-
-/*  
-──────────────────────────────────────────────────────
 TODO: Switches (And Buttons)
 ────────────────────────────────────────────────────── */
 
@@ -187,61 +52,27 @@ for (i = 0; i < switches.length; i++) {
 
 
 
-// Switch - Test class changes:
-/*  
-var $switch_test = document.querySelector('.switch_test')
 
-function switch_class_change() {
-
-    //$switch_test.style = ''
-    //$switch_test.removeEventListener('click', update_button_boxShadow)
-
-    //console.log(2)
-
-    if (innerWidth <= 550) {
-
-        $switch_test.classList.remove('button')
-        $switch_test.classList.remove('button_text')
-        $switch_test.classList.remove('button_icon')
-        $switch_test.classList.remove('image')
-        $switch_test.classList.add('key')
-        // update_buttons_and_switches()
-
-    } else if (550 < innerWidth && innerWidth <= 650) {
-
-        $switch_test.classList.remove('key')
-        $switch_test.classList.remove('button_text')
-        $switch_test.classList.remove('button_icon')
-        $switch_test.classList.remove('image')
-        $switch_test.classList.add('button') 
-        // update_buttons_and_switches()
-
-    } else if (650 < innerWidth) {
-
-        $switch_test.classList.remove('key')
-        $switch_test.classList.remove('button')
-        $switch_test.classList.remove('button_text')
-        $switch_test.classList.remove('button_icon')
-        $switch_test.classList.add('image')
-        // update_buttons_and_switches()
-    }
-}
-  
-window.addEventListener('resize', switch_class_change)
-*/
 /*  
 ────────────────────────────
-TODO:    > Switches Type Button And Buttons
+TODO:    > Switches Type Button And Buttons Type Button
 ──────────────────────────── */
 
 var $color_shadow_box_inset_switch_button_dark = 'hsla(0, 0%, 0%, 0.33)' // VÍNCULO: Váriável SCSS
 var $color_shadow_box_inset_switch_button_clear = 'white' // VÍNCULO: Váriável SCSS
 
-function switches_type_button_and_buttons(elements) {
+function switches_type_button_and_buttons_type_button(elements) {
 
     elements.forEach(function ($switch) {
 
         if($switch.classList.contains('button') || $switch.classList.contains('button_text') || $switch.classList.contains('button_icon')) {
+
+            // Evita o bug do box-shadow interno dos switches de tipos 'pill' e 'rounded' no Safari de desktop (só falta colocar no 'if' para identificar quando a tela for grande):
+            //if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && navigator.vendor === "Apple Computer, Inc.") { 
+            //
+            //    $switch.classList.remove('pill')
+            //    $switch.classList.remove('rounded')
+            //}
 
             var switch_is_square = !($switch.classList.contains('pill') || $switch.classList.contains('rounded'))
 
@@ -351,7 +182,7 @@ function switches_type_button_and_buttons(elements) {
                 }
             }
 
-            // --------- Definir o preenchimento dos botões de ícone --------- 
+            // --------- Definir o preenchimento dos botões de ícone --------- zzzz
 
             if($switch.classList.contains('button_icon')) {
             
@@ -434,25 +265,25 @@ function switches_type_button_and_buttons(elements) {
                 shine.style.width = 'calc(100% - 2 * '+ shine_x +')'
             }
 
-            // ---------- Arredondar botões com a classe 'rounded' ---------- 
+            // ---------- Arredondar botões com a classe 'rounded' ---------- zzzz
 
             if($switch.classList.contains('rounded') && !$switch.classList.contains('text_below')) {
 
                 var switch_width = Number(getComputedStyle($switch).getPropertyValue('width').slice(0,-2)) 
                 var switch_height = Number(getComputedStyle($switch).getPropertyValue('height').slice(0,-2)) 
 
-                var switch_width_ceil = Math.ceil(switch_width)
-                var switch_height_ceil = Math.ceil(switch_height)
+                // var switch_width_ceil = Math.ceil(switch_width)
+                // var switch_height_ceil = Math.ceil(switch_height)
             
-                if(switch_width_ceil >= switch_height_ceil) { 
+                if(switch_width >= switch_height) {
             
-                    $switch.style.width = switch_width_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
-                    $switch.style.height = switch_width_ceil + 'px'
+                    // $switch.style.width = switch_width + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
+                    $switch.style.height = switch_width + 'px'
             
                 } else { 
             
-                    $switch.style.width = switch_height_ceil + 'px'
-                    $switch.style.height = switch_height_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
+                    $switch.style.width = switch_height + 'px'
+                    // $switch.style.height = switch_height + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                 }
             }
 
@@ -611,7 +442,7 @@ function switches_type_button_and_buttons(elements) {
                             $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (4 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', 0px 0px 12px 0px '+ $color_theme
 
                         } else {
-                            
+
                             $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (4 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', 0px 0px 12px 0px '+ $color_theme
                         }
                     }
@@ -629,14 +460,14 @@ function switches_type_button_and_buttons(elements) {
     })
 }
 
-switches_type_button_and_buttons(document.querySelectorAll('.switch.button, .switch.button_text, .switch.button_icon'))
+switches_type_button_and_buttons_type_button(document.querySelectorAll('.switch.button, .switch.button_text, .switch.button_icon'))
 
 /*  
 ────────────────────────────
-TODO:    > Switches Type Image
+TODO:    > Switches Type Image And Buttons Type Image
 ──────────────────────────── */
 
-function switches_type_image(elements) {
+function switches_type_image_and_buttons_type_image(elements) {
 
     elements.forEach(function ($switch) {
 
@@ -689,7 +520,7 @@ function switches_type_image(elements) {
     })
 }
 
-switches_type_image(document.querySelectorAll('.switch.image'))
+switches_type_image_and_buttons_type_image(document.querySelectorAll('.switch.image'))
 
 /*  
 ────────────────────────────
@@ -764,11 +595,146 @@ function update_switches_and_buttons(elements, type_number) {
 
     // --------- Atualizar switches e buttons --------- 
     
-    switches_type_button_and_buttons(elements)
-    switches_type_image(elements)
+    switches_type_button_and_buttons_type_button(elements)
+    switches_type_image_and_buttons_type_image(elements)
 }
   
 // window.addEventListener('resize', update_switches_and_buttons)
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Choices 
+────────────────────────────────────────────────────── */
+
+{ 
+
+var choice_anchorClicked = null
+var choice_anchorClickedBefore = null /* <- Variável necessária para 
+salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
+desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao seu 
+valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
+opção que aparece em um 'choice_d' quando ele está fechado.
+*/
+ 
+var choice_d_open = false
+
+function choice(arg) {
+
+    var choice_d_liClicked = null
+
+    if(arg.classList.contains('choice_d')) {
+
+        if(arg.classList.contains('choice_d_open')) {
+
+                for(var i = 0; i < arg.children.length; i++) { 
+
+                    if(arg.children[i].children[0] === choice_anchorClicked) {
+
+                        choice_d_liClicked = arg.children[i]
+                        break
+                    }
+                }
+
+            if(choice_anchorClicked !== 'disabled') {
+
+                for(var i = 0; i < arg.children.length; i++) { 
+
+                    arg.children[i].style = 'display: none'
+                }
+
+                if(choice_d_liClicked !==  null) {
+
+                    choice_d_liClicked.style = 'display: inline-flex' 
+                } else {
+                    arg.children[0].style = 'display: inline-flex'
+                }
+            }
+
+        } else {
+
+            if(arg.classList.contains('disabled')) { return }
+
+            arg.children[0].style = 'display: none'
+            
+            for(var i = 1; i < arg.children.length; i++) { 
+
+                arg.children[i].style = 'display: inline-flex'
+            } 
+
+            if(choice_anchorClicked !== null) {
+                
+                for(var i = 1; i < arg.children.length - 1; i++) { 
+
+                    arg.children[i].children[0].classList.remove('on')
+                }
+
+                choice_anchorClicked.classList.add('on')
+            }
+        }
+            
+        if(choice_anchorClicked !== 'disabled') {
+
+            document.querySelector('html').classList.toggle('overflow_hidden')
+            arg.classList.toggle('choice_d_open')
+
+        } else {
+            choice_anchorClicked = choice_anchorClickedBefore
+        }
+
+    } else {
+
+        if(choice_anchorClicked === null || choice_anchorClicked === 'disabled') { return }
+
+        for(var i = 0; i < arg.children.length; i++) { 
+
+            arg.children[i].children[0].classList.remove('on')
+        }
+
+        choice_anchorClicked.classList.add('on')
+
+        choice_anchorClicked = null
+        
+        /*
+        if(choice_anchorClicked !== null) {
+
+            for(var i = 0; i < arg.children.length; i++) { 
+
+                arg.children[i].children[0].classList.remove('on')
+            }
+
+            choice_anchorClicked.classList.add('on')
+
+            choice_anchorClicked = null
+        }
+        */
+    }
+}
+
+function choice_option(arg) { 
+
+    if(arg.classList.contains('disabled')) { 
+
+        choice_anchorClickedBefore = choice_anchorClicked
+
+        choice_anchorClicked = 'disabled'
+
+    } else {
+        choice_anchorClicked =  arg
+    }
+}
+
+// Espaço no final ('li' invisível) do menu dos dropdowns:
+
+var allChoicesD = document.querySelectorAll('.choice_d')
+
+for(var i = 0; i < allChoicesD.length; i++) { 
+
+var e = document.createElement("li")
+
+    allChoicesD[i].appendChild(e)
+}
+
+}
 
 /*  
 ──────────────────────────────────────────────────────
