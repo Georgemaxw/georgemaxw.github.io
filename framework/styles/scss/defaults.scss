@@ -196,8 +196,6 @@ $bg_switch_button_shine: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4
  
 $bg_switch_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
 
-$bg_switch_button_rounded_shine: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.644) 52%, transparent 52%) center center / 100% 100% no-repeat; 
-
 // (Text floating):
 
 $bg_switch_button_icon_switch_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
@@ -2218,10 +2216,10 @@ TODO:        >> Button
     }
 }
 
-.switch.button_icon.rounded {
+//.switch.button_icon.rounded {
 
     // padding: 12px; // Propriedade aplicada aprimorada via JS.
-}
+//}
  
 /*  
 ────────────────────────────

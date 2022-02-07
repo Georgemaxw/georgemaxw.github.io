@@ -2066,7 +2066,7 @@ TODO:        >> Button
 
 .switch.button.rounded .switch_shine, .switch.button_text.rounded .switch_shine, .switch.button_icon.rounded .switch_shine {
   border-radius: 1000px;
-  background: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.644) 52%, transparent 52%) center center/100% 100% no-repeat;
+  background: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center/100% 100% no-repeat;
   height: calc(100% - 2 * 3px);
   left: 3px;
   width: calc(100% - 2 * 3px);
