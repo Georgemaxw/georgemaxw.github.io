@@ -351,7 +351,7 @@ TODO: Table - Skills
   margin-right: 11px;
 }
 
-.skills_types_switchs_box .switch .switch_button {
+.skills_types_switchs_box .switch .switch_key {
   display: none;
 }
 
@@ -564,7 +564,7 @@ TODO: Table - Skills
     height: inherit;
     margin: 0;
   }
-  .switch.hide_skills_names .switch_label .switch_name {
+  .switch.hide_skills_names .switch_label .switch_text {
     display: none;
   }
 }
@@ -595,7 +595,7 @@ TODO: Table - Skills
     height: 48px;
     margin: 0;
   }
-  .skills_types_switchs_box .switch .switch_name {
+  .skills_types_switchs_box .switch .switch_text {
     display: none;
   }
   .skills_types_switchs_box .switch.on:not(:nth-child(1)) .switch_icon, .skills_types_switchs_box .switch:not(:nth-child(1)):hover .switch_icon {
@@ -615,13 +615,13 @@ TODO: Table - Skills
   .skills_types_switchs_box .switch:nth-of-type(1) .switch_icon {
     display: none;
   }
-  .skills_types_switchs_box .switch:nth-of-type(1) .switch_name {
+  .skills_types_switchs_box .switch:nth-of-type(1) .switch_text {
     display: inline;
     font-weight: bold;
     color: white;
     filter: drop-shadow(0px 0px 2px black);
   }
-  .skills_types_switchs_box .switch:hover:not(:nth-child(1)) .switch_name {
+  .skills_types_switchs_box .switch:hover:not(:nth-child(1)) .switch_text {
     display: inline-flex;
     justify-content: center;
     align-items: center;

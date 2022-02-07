@@ -88,8 +88,19 @@
                         <li><a href="#Switch">Switch</a>
                         
                             <ul>
-                                <!-- <li><a href="#Switchs_Sizes">Sizes</a></li> -->
-                                <li><a href="#Switchs_Types">Types</a></li>
+                                <!-- <li><a href="#Switchs_Sizes">Sizes</a></li>Switch_Button_Rounded -->
+                                <li><a href="#Switch_Key">Key</a></li>
+                                <li><a href="#Switch_Button">Button</a>
+                                
+                                    <ul>
+                                        <li><a href="#Switch_Button_Normal">Normal</a></li>
+                                        <li><a href="#Switch_Button_Pill">Pill</a></li>
+                                        <li><a href="#Switch_Button_Rounded">Rounded</a></li>
+                                    </ul>
+                                
+                                </li>
+                                <li><a href="#Switch_Image">Image</a></li>
+                                <li><a href="#Switch_All">All</a></li>
                             </ul>
 
                         </li>
@@ -1289,368 +1300,1425 @@
 
                 <h2 id="Switch">Switch</h2> 
 
-                <div class="lb2"></div> 
+                <p>
+                    Obs.: Ao estilizar os switches, coloque os estilos na folha de estilos CSS (com !important) ao 
+                    invés de colocá-los inline, pois os estilos das funções que atualizam os switches sobrepõem 
+                    alguns estilos inline. (Também por este motivo, alguns estilos dos exemplos abaixo foram 
+                    colocados na folha de estilos CSS.)
+                </p>
 
-                <p>Switch:</p>
+                <p>
+                    Obs: O tamanho dos ícones dos switches são configurados por padrão com 32 x 32 no CSS, 
+                    exceto os de tipo Image que são 48 x 48, logo, caso queira um tamanho diferente desses, 
+                    deve-se configurá-los manualmente.
+                </p>
 
-                <div class="switch" onclick="switch_1(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <p class="switch_label"><span class="switch_name">Etiqueta</span></p>
+                <p>
+                    Obs: O preenchimento de um switch de botão de ícone (switch com a classe 'button_icon') é 
+                    definido automaticamente proporcionalmente ao tamanho do ícone.
+                </p>
+
+                <!--  
+                ────────────────────────────
+                TODO:    > Key
+                ──────────────────────────── --> 
+
+                <h3 id="Switch_Key">Key</h3>
+
+                <div class="lb2"></div>
+
+                <p>Switch com a classe 'key':</p>
+
+                <div class="switch key" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com a classe 'on':</p>
+                <p>Switch com as classes 'key', 'on':</p>
 
-                <div class="switch on" onclick="switch_2(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <p class="switch_label"><span class="switch_name">Etiqueta</span></p>
+                <div class="switch key on" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com a classe 'disabled':</p>
+                <p>Switch com as classes 'key', 'disabled':</p>
 
-                <div class="switch disabled" onclick="switch_3(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <p class="switch_label"><span class="switch_name">Etiqueta</span></p>
+                <div class="switch key disabled" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com as classes 'on' e 'disabled':</p>
+                <p>Switch com as classes 'key', 'on', 'disabled', e com etiqueta longa:</p>
 
-                <div class="switch on disabled" onclick="switch_4(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <p class="switch_label"><span class="switch_name">Etiqueta</span></p>
+                <div class="switch key on disabled" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">CSS (Cascading Style Sheets - Folhas de Estilo em Cascata) é uma linguagem de folha de estilos usada para aplicar estilo a um documento escrito em HTML ou XML.</span>
+                    </div>
                 </div>
 
                 <div class="lb3"></div> 
 
-                <p>Switch com a classe 'inverted':</p>
+                <p>Switch com a classe 'key_no_icon':</p>
 
-                <div class="switch inverted" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <p class="switch_label"><span class="switch_name">Etiqueta</span></p>
+                <div class="switch key_no_icon" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com as classes 'on' e 'inverted', e com a etiqueta com um ícone:</p>
+                <p>Switch com a classe 'key_no_icon', e 'on':</p>
 
-                <div class="switch on inverted" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <p class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
-                    </p>
+                <div class="switch key_no_icon on" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com as classes 'disabled' e 'inverted', e com etiqueta longa':</p>
+                <p>Switch com as classes 'key_no_icon', e 'disabled':</p>
 
-                <div class="switch inverted disabled" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <p class="switch_label"><span class="switch_name">JavaScript é a linguagem de programação usada para adicionar interatividade aos sites. A linguagem JavaScript é uma linguagem dinâmica orientada a objetos; tem tipos e operadores, objetos e métodos.</span></p>
+                <div class="switch key_no_icon disabled" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com as classes 'on', 'disabled', e 'inverted', e com etiqueta longa com um ícone:</p>
+                <p>Switch com as classes 'key_no_icon', 'on', disabled', e com etiqueta longa:</p>
 
-                <div class="switch on inverted disabled" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <p class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">CSS (Cascading Style Sheets - Folhas de Estilo em Cascata) é uma linguagem de folha de estilos usada para aplicar estilo a um documento escrito em HTML ou XML.</span>
-                    </p>
+                <div class="switch key_no_icon on disabled" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">JavaScript é a linguagem de programação usada para adicionar interatividade aos sites. A linguagem JavaScript é uma linguagem dinâmica orientada a objetos; tem tipos e operadores, objetos e métodos.</span>
+                    </div>
+                </div>
+
+                <div class="lb3"></div> 
+
+                <p>Switch com a classe 'key_no_icon', e 'inverted':</p>
+
+                <div class="switch key_no_icon inverted" onclick="switch_1(this); switch_event(this)">
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'on', e 'inverted':</p>
+
+                <div class="switch key_no_icon on inverted" onclick="switch_2(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'disabled', e 'inverted':</p>
+
+                <div class="switch key_no_icon disabled inverted" onclick="switch_3(this); switch_event(this)">
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'on', 'disabled', 'inverted', e com etiqueta longa:</p>
+
+                <div class="switch key_no_icon on disabled inverted" onclick="switch_4(this); switch_event(this)">
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">JavaScript é a linguagem de programação usada para adicionar interatividade aos sites. A linguagem JavaScript é uma linguagem dinâmica orientada a objetos; tem tipos e operadores, objetos e métodos.</span>
+                    </div>
+                </div>
+
+                <div class="lb3"></div>
+
+                <p>Switch com as classes 'key', 'center', e com width de 200px:</p>
+
+                <div class="switch key center SS_width_250px" onclick="switch_1(this); switch_event(this)""> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key', 'center', 'offset':</p>
+
+                <div class="switch key center offset" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'center', e com width de 200px:</p>
+
+                <div class="switch key_no_icon center SS_width_250px" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'center', 'offset':</p>
+
+                <div class="switch key_no_icon center offset" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'inverted', 'center':</p>
+
+                <div class="switch key_no_icon inverted center" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'key_no_icon', 'inverted', 'center', 'offset':</p>
+
+                <div class="switch key_no_icon inverted center offset" onclick="switch_1(this); switch_event(this)"> 
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
                 <div class="lb2"></div> 
 
                 <!--  
                 ────────────────────────────
-                TODO:    > Sizes For Apple Style
+                TODO:    > Button
                 ──────────────────────────── --> 
 
-                <!-- 
-                <h3 id="Switchs_Sizes">Tamanhos Dos Switch</h3> 
+                <h3 id="Switch_Button">Button</h3> 
 
-                <p>Switchs com a classe 'smaller':</p>
+                <p>Obs.: Os preenchimentos dos switches button's são definidos automaticamente relativos aos tamanhos de seus conteúdos.</p>
 
-                <div class="switch on smaller" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
+                <h4 id="Switch_Button_Normal">Normal</h4>  
 
-                <div class="switch smaller" onclick="switch_2(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
+                <p>Switch com a classe 'button':</p>
 
-                <div class="switch on disabled smaller" onclick="switch_3(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch disabled smaller" onclick="switch_4(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="lb2"></div> 
-
-                <p>Switchs com a classe 'small':</p>
-
-                <div class="switch on small" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch small" onclick="switch_2(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch on disabled small" onclick="switch_3(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch disabled small" onclick="switch_4(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="lb2"></div> 
-
-                <p>Switchs com a classe 'medium':</p>
-
-                <div class="switch on medium" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch medium" onclick="switch_2(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch on disabled medium" onclick="switch_3(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch disabled medium" onclick="switch_4(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="lb2"></div> 
-
-                <p>Switchs com a classe 'big':</p>
-
-                <div class="switch on big" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch big" onclick="switch_2(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch on disabled big" onclick="switch_3(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch disabled big" onclick="switch_4(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="lb2"></div> 
-
-                <p>Switchs com a classe 'bigger':</p>
-
-                <div class="switch on bigger" onclick="switch_1(this); switch_event(this)"> 
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch bigger" onclick="switch_2(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch on disabled bigger" onclick="switch_3(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="switch disabled bigger" onclick="switch_4(this); switch_event(this)">
-                    <div class="switch_button"></div>
-                    <div class="switch_label"><span class="switch_name">Etiqueta</span></div>
-                </div>
-
-                <div class="lb2"></div>  
-                -->
-
-                <!--  
-                ────────────────────────────
-                TODO:    > Types
-                ──────────────────────────── --> 
-
-                <h3 id="Switchs_Types">Tipos De Switchs</h3>
-
-                <h4>Tipo 1</h4>
-
-                <p style="text-align: center;">(Tipo padrão.) </p> 
-
-                <h4>Tipo 2</h4>
-<!--  -->
-                <p>Switch com a classe 'type_2':</p>
-
-                <div class="switch type_2" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div> 
                 </div>
 
-                <p>Switch com a classe 'type_2_2':</p>
+                <p>Switch com a classe 'button_text':</p>
 
-                <div class="switch type_2_2" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button_text" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
-                <p>Switch com a classe 'type_2_3':</p>
+                <p>Switch com a classe 'button_icon':</p>
 
-                <div class="switch type_2_3" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button_icon" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt=""> 
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
-                <p>Switch com as classes 'type_2', e 'disabled':</p>
+                <p>Switch com as classes 'button', e 'disabled':</p>
 
-                <div class="switch type_2 disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div> 
                 </div>
 
-                <p>Switch com as classes 'type_2', 'on', e 'disabled':</p>
+                <p>Switch com as classes 'button', 'on', e 'disabled':</p>
 
-                <div class="switch type_2 on disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div> 
                 </div>
 
-                <!--    -->
-                <p>Switch com as classes 'type_2' e 'rounded':</p>
+                <p>Switch com as classes 'button_icon', e 'disabled':</p>
 
-                <div class="switch type_2 rounded" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button_icon disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'on', e 'disabled':</p>
+
+                <div class="switch button_icon on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta <br> alta!</span> 
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'on', e com width de 200px e height de 300px:</p>
+
+                <div class="switch button on SS_200x300" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_text', 'on', e com width de 300px e height de 200px:</p>
+
+                <div class="switch button_text on SS_300x200" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'on', e com width de 156px e height de 156px:</p> 
+
+                <div class="switch button_icon on SS_156x156" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                        <span class="switch_text">Etiqueta mais longa</span>
+                    </div> 
+                </div>
+
+                <p>
+                    Switch com as classes 'button_icon', e 'on', e com ícone com width de 96px e height de 96px:
+                </p>
+
+                <div class="switch button_icon on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="" style="width: 96px; height: 96px">
+                        <span class="switch_text">Etiqueta <br> mais <br> alta!</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', e 'on', e com ícone com width de 96px e height de 96px:</p> 
+
+                <div class="switch button_icon on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z3.png" alt="" style="width: 96px; height: 96px">  
+                        <span class="switch_text">Etiqueta</span> 
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'on', e com ícone com width de 192px e height de 48px:</p>
+
+                <div class="switch button_icon on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_h_switch_label_x3.png" alt="" style="width: 192px; height: 48px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'on', e com ícone com width de 48px e height de 192px:</p>
+
+                <div class="switch button_icon on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_v_switch_label_x3.png" alt="" style="width: 48px; height: 192px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'text_below', e 'on', e com um ícone:</p>
+
+                <div class="switch button text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt=""> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'text_below', e 'on', e com ícone com width de 125px e height de 75px:</p>
+
+                <div class="switch button text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 125px; height: 75px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'text_below', e 'on', e com ícone com width de 250px e height de 150px:</p>
+
+                <div class="switch button text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px; height: 150px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'text_below', e 'on', e com ícone com width de 180px e height de 240px:</p> 
+
+                <div class="switch button text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 180px; height: 240px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <div class="lb2"></div> 
+
+                <p style="color: red; text-align: center;">Obs.: Os 3 próximos exemplos a seguir (que envolvem a classe 'center') também servem para suas formas em pill e rounded, incluindo os com a classe 'text_below'. E também para os botões de texto e botões de ícone em qualquer forma (normal (quadrada), pill, e rounded).</p>
+ 
+                <p>Switch com as classes 'button', 'on', e 'center':</p> 
+
+                <div class="switch button on center" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'text_below', 'on', e 'center'; e com switch e 'switch_label' com width de 100%, e com ícone com width de 50% e height de 100px:</p> 
+
+                <div class="switch button text_below on center SS_width_100_percent" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label" style="width: 100%;">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 50%; height: 100px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'text_below', 'on', 'center', e 'offset'; e com switch e 'switch_label' com width de 100%, e com ícone com width de 50% e height de 100px:</p> 
+
+                <div class="switch button text_below on center offset SS_width_100_percent" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label" style="width: 100%;">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 50%; height: 100px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <h4 id="Switch_Button_Pill">Pill</h4> 
+
+                <p>Switch com as classes 'button' e 'pill':</p>
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div> 
 
-                <p>Switch com as classes 'type_2_2' e 'rounded:</p>
+                <p>Switch com as classes 'button_text' e 'pill:</p>
 
-                <div class="switch type_2_2 rounded" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
-                <p>Switch com as classes 'type_2_3' e 'rounded:</p>
+                <p>Switch com as classes 'button_icon' e 'pill:</p>
 
-                <div class="switch type_2_3 rounded" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
-                    <div class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
-                    </div>
-                </div>
-
-                <p>Switch com as classes 'type_2', 'rounded, e 'disabled':</p>
-
-                <div class="switch type_2 rounded disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
-                    <div class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
-                    </div> 
-                </div>
-
-                <p>Switch com as classes 'type_2', 'rounded, 'on', e 'disabled':</p>
-
-                <div class="switch type_2 rounded on disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
-                    <div class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
-                    </div> 
-                </div>
-
-                <p>Switch com a classe 'type_2', e com width de 200px e height de 250px:</p>
-
-                <div class="switch type_2" onclick="switch_1(this); switch_event(this)" style="width: 200px; height: 250px">  
-                    <div class="switch_button"></div>
+                <div class="switch button_icon pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
-                    </div> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
                 </div>
 
-                <p>Switch com as classes 'type_2_3', 'rounded, 'on', e com width e height de 200px:</p>
- 
-                <div class="switch type_2_3 rounded on" onclick="switch_1(this); switch_event(this)" style="width: 200px; height: 200px">  
-                    <div class="switch_button"></div>
+                <p>Switch com as classes 'button', 'pill, e 'disabled':</p>
+
+                <div class="switch button pill disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div> 
                 </div>
-              
 
-                <h4>Tipo 3</h4>
+                <p>Switch com as classes 'button', 'pill, 'on', e 'disabled':</p>
 
-                <p>Switch com a classe 'type_3':</p>
-
-                <div class="switch type_3" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button pill on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'pill, e 'disabled':</p>
+
+                <div class="switch button_icon pill disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'pill, 'on', e 'disabled':</p>
+
+                <div class="switch button_icon pill on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill, 'on'', e com width de 300px e height de 150px:</p>
+ 
+                <div class="switch button pill on SS_300x150" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill, 'on', e com ícone com width de 48px e height de 192px:</p>
+
+                <div class="switch button pill on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_v_switch_label_x3.png" alt="" style="width: 48px; height: 192px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'on', e com ícone com width de 125px e height de 75px:</p>
+
+                <div class="switch button pill on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 125px; height: 75px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'on', e com ícone com width de 250px e height de 150px:</p>
+
+                <div class="switch button pill on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px; height: 150px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'on', e com ícone com width de 180px e height de 240px:</p> 
+
+                <div class="switch button pill on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 180px; height: 240px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switches com as classes 'button' e 'pill', e o texto da etiqueta (elemento com a classe 'switch_text') com width de 70px:</p> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <p>Switches com as classes 'button_text' e 'pill', e o texto da etiqueta (elemento com a classe 'switch_text') com width de 70px:</p>
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text" style="width: 70px">Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta Etiqueta</span>
+                    </div>
+                </div> 
+
+                <p>Switch com as classes 'button_icon', 'pill', e 'on', e com ícone com width de 96px e height de 96px:</p> 
+
+                <div class="switch button_icon pill on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="" style="width: 96px; height: 96px">  
+                        <span class="switch_text">Etiqueta</span> 
                     </div>
                 </div>
 
-                <p>Switch com as classes 'type_3' e 'rounded':</p>
+                <p>Switch com as classes 'button_icon', 'pill', e 'on', e com ícone com width de 96px e height de 96px:</p> 
 
-                <div class="switch type_3 rounded" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button_icon pill on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z3.png" alt="" style="width: 96px; height: 96px">  
+                        <span class="switch_text">Etiqueta</span> 
                     </div>
                 </div>
 
-                <p>Switch com as classes 'type_3', 'on', e 'disabled':</p>
+                <p>Switch com as classes 'button_icon' e 'pill', e ícone de 128 x 32:</p> 
 
-                <div class="switch type_3 on disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch button_icon pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <img class="switch_icon" src="../images/exs/icon_big_h_switch_label_x3.png" alt="" style="width: 128px; height: 32px;">
+                        <span class="switch_text">Etiqueta</span>
                     </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon' e 'pill', e ícone de 256 x 64:</p>  
+
+                <div class="switch button_icon pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_h_switch_label_x3.png" alt="" style="width: 256px; height: 64px;">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon' e 'pill', e ícone de 32 x 128:</p> 
+
+                <div class="switch button_icon pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_v_switch_label_x3.png" alt="" style="height: 128px;">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon' e 'pill', e ícone de 64 x 256:</p> 
+
+                <div class="switch button_icon pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_v_switch_label_x3.png" alt="" style="width: 64px; height: 256px;">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'pill', 'on', e com ícone com width de 125px e height de 75px:</p>
+
+                <div class="switch button_icon pill on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 125px; height: 75px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'pill', 'on', e com ícone com width de 250px e height de 150px:</p>
+
+                <div class="switch button_icon pill on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px; height: 150px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'pill', 'on', e com ícone com width de 180px e height de 240px:</p> 
+
+                <div class="switch button_icon pill on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 180px; height: 240px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'text_below', 'on', e com um ícone:</p>
+
+                <div class="switch button pill text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt=""> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'text_below', 'on', e com ícone com width de 125px e height de 75px:</p>
+
+                <div class="switch button pill text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 125px; height: 75px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'text_below', 'on', e com ícone com width de 250px e height de 150px:</p>
+
+                <div class="switch button pill text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px; height: 150px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'pill', 'text_below', 'on', e com ícone com width de 180px e height de 240px:</p> 
+
+                <div class="switch button pill text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 180px; height: 240px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <h4 id="Switch_Button_Rounded">Rounded</h4>
+
+                <p>Switch com as classes 'button' e 'rounded':</p>
+
+                <div class="switch button rounded" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+ 
+                <p>Switch com as classes 'button_text' e 'rounded':</p>
+
+                <div class="switch button_text rounded" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon' e 'rounded':</p>
+
+                <div class="switch button_icon rounded" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded', e 'disabled':</p>
+
+                <div class="switch button rounded disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded', 'on', e 'disabled':</p>
+
+                <div class="switch button rounded on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'rounded', e 'disabled':</p>
+
+                <div class="switch button_icon rounded disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'rounded', 'on', e 'disabled':</p>
+
+                <div class="switch button_icon rounded on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button' e 'rounded', e com um ícone com height de 128px:</p>
+
+                <div class="switch button rounded" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_big_v_switch_label_x3.png" alt="" style="height: 128px;"> 
+                        <span class="switch_text">?</span> 
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded, 'on', e com width de 200px:</p>
+ 
+                <div class="switch button rounded on SS_width_200px" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>
+                    Switch com as classes 'button_icon', 'rounded', e 'on', e com ícone com width de 96px e height de 96px:
+                </p>
+
+                <div class="switch button_icon rounded on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="" style="width: 96px; height: 96px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button_icon', 'rounded' e 'on', e com ícone com width de 96px e height de 96px:</p> 
+
+                <div class="switch button_icon rounded on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z3.png" alt="" style="width: 96px; height: 96px">  
+                        <span class="switch_text">Etiqueta</span> 
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded', 'text_below', 'on', e com um ícone:</p>
+
+                <div class="switch button rounded text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_x3z.png" alt=""> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded', 'text_below', 'on', e com ícone com width de 125px e height de 75px:</p>
+
+                <div class="switch button rounded text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 125px; height: 75px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded', 'text_below', 'on', e com ícone com width de 250px e height de 150px:</p>
+
+                <div class="switch button rounded text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px; height: 150px"> 
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div>
+
+                <p>Switch com as classes 'button', 'rounded', 'text_below', e 'on', e com ícone com width de 180px e height de 240px:</p> 
+
+                <div class="switch button rounded text_below on" onclick="switch_1(this); switch_event(this)">     
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/grassland_(435×580).png" alt="" style="width: 180px; height: 240px">  
+                        <span class="switch_text">Etiqueta</span>
+                    </div> 
+                </div> 
+
+                <!--  
+                ────────────────────────────
+                TODO:    > Image
+                ──────────────────────────── --> 
+
+                <h3 id="Switch_Image">Image</h3>
+
+                <p>Switch com a classe 'image':</p>
+
+                <div class="switch image" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com a classe 'image', e com ícone com width de 120px:</p>
+
+                <div class="switch image" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 120px;">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image', 'pill', e com ícone com width de 120px:</p>
+
+                <div class="switch image pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 120px;">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image', 'pill', e com ícone com height de 120px:</p>
+
+                <div class="switch image pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="height: 120px;">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image' e 'pill':</p>
+
+                <div class="switch image pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta <br> mais <br> alta!</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image', e 'disabled':</p>
+
+                <div class="switch image disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image', 'on', e 'disabled':</p>
+
+                <div class="switch image on disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta <br> alta!</span>
+                    </div>
+                </div>
+
+                <p>Switch com a classe 'image', e com ícone com width de 96px e height de 96px:</p>
+
+                <div class="switch image" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 96px; height: 96px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com a classe 'image', e com ícone com width de 270px e height de 96px:</p>
+
+                <div class="switch image" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 270px; height: 96px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image' e 'pill', e com ícone com width de 270px e height de 96px:</p>
+
+                <div class="switch image pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 270px; height: 96px">
+                        <span class="switch_text">Etiqueta mais longa!</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image' e 'pill', e com ícone com width de 96px e height de 270px:</p>
+
+                <div class="switch image pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 96px; height: 270px">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image' e 'pill', e com ícone com width de 96px e height de 96px:</p>
+
+                <div class="switch image pill" onclick="switch_1(this); switch_event(this)" style="width: 96px; height: 96px">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image' e 'center':</p>
+
+                <div class="switch image center" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="">
+                        <span class="switch_text">Etiqueta</span>
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image', 'center', e com switch, 'switch_label', e 'switch_icon' com width de 100%:</p>
+
+                <div class="switch image center SS_width_100_percent" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label" style="width: 100%;">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 100%;">
+                        <span class="switch_text">Etiqueta</span> 
+                    </div>
+                </div>
+
+                <p>Switch com as classes 'image', 'center', e 'offset', e com switch, 'switch_label', e 'switch_icon' com width de 100%:</p>
+
+                <div class="switch image center offset SS_width_100_percent" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
+                    <div class="switch_label" style="width: 100%;">
+                        <img class="switch_icon" src="../images/exs/icon_switch_label_square_x3.png" alt="" style="width: 100%;">
+                        <span class="switch_text">Etiqueta</span> 
+                    </div>
+                </div>
+
+                <!--  
+                ────────────────────────────
+                TODO:    > All
+                ──────────────────────────── --> 
+
+                <h3 id="Switch_All">All</h3>
+
+                <p>Mudar estilo de todos os botões para:</p>
+
+                <ol style="/position: fixed; top: 150px; left: 0;">
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 01)">Button Full - Square</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 02)">Button Full - Square - Text Below</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 03)">Button Full - Pill</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 04)">Button Full - Pill - Text Below</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 05)">Button Full - Rounded</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 06)">Button Full - Rounded - Text Below</span></li>
+                    <br>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 07)">Button Text - Square</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 08)">Button Text - Pill</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 09)">Button Text - Rounded</span></li>
+                    <br>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 10)">Button Icon - Square</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 11)">Button Icon - Pill</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 12)">Button Icon - Rounded</span></li>
+                    <br>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 13)">Image</span></li> 
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 14)">Image - Pill</span></li> 
+                    <br>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 15)">Key</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 16)">Key (no icon)</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'), 17)">Key (no icon) - inverted</span></li>
+                    <li><span class="click" onclick="update_switches_and_buttons(document.querySelectorAll('.test_switches_group .switch'))">Update switches</span></li> <!-- --> 
+                </ol>
+
+                <p>
+                    <span class="toggle_tests_switches click">
+                        ON/OFF switches
+                    </span>
+                </p> 
+
+                <br>
+ 
+                <div class="test_switches_group">
+
+                    <div class="switch button" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button_text" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button_icon" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button pill" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button_text pill" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button_icon pill" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button rounded" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button_text rounded" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button_icon rounded" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch image" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch image pill" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch key" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch key_no_icon" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch key_no_icon inverted" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch button pill disabled" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="switch key on disabled" onclick="switch_1(this); switch_event(this)">  
+                        <div class="switch_key"></div>
+                        <div class="switch_label"> 
+                            <img class="switch_icon" src="../images/exs/icon_switch_label_x3x.png" alt="">
+                            <span class="switch_text">Etiqueta</span>
+                        </div>
+                    </div>
+                
                 </div>
 
                 <!--
@@ -1659,78 +2727,78 @@
                 <p>Switch com a classe 'type_4':</p>
 
                 <div class="switch type_4" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
                 <p>Switch com as classes 'type_4', e 'on':</p>
 
                 <div class="switch type_4 on" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
                 <p>Switch com as classes 'type_4', 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
 
                 <div class="switch type_4 inverted disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div> 
 
                 <p>Switch com as classes 'type_4', on, 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
 
                 <div class="switch type_4 on inverted disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div> 
 
                 <p style="text-align: center;">Arredondado:</p>
 
-                <p>Switch com as classes 'type_4', e 'rounded':</p>
+                <p>Switch com as classes 'type_4', e 'pill':</p>
 
-                <div class="switch type_4 rounded" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch type_4 pill" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
-                <p>Switch com as classes 'type_4', 'rounded', e 'on':</p>
+                <p>Switch com as classes 'type_4', 'pill', e 'on':</p>
 
-                <div class="switch type_4 rounded on" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch type_4 pill on" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
-                <p>Switch com as classes 'type_4', 'rounded', 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
+                <p>Switch com as classes 'type_4', 'pill', 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
 
-                <div class="switch type_4 rounded inverted disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch type_4 pill inverted disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div> 
 
-                <p>Switch com as classes 'type_4', 'rounded', 'on', 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
+                <p>Switch com as classes 'type_4', 'pill', 'on', 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
 
-                <div class="switch type_4 rounded on inverted disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                <div class="switch type_4 pill on inverted disabled" onclick="switch_1(this); switch_event(this)">  
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div> 
                 -->
@@ -1741,38 +2809,38 @@
                 <p>Switch com a classe 'type_5':</p>
 
                 <div class="switch type_5" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
                 <p>Switch com as classes 'type_5' e 'on':</p>
 
                 <div class="switch type_5 on" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
                 <p>Switch com as classes 'type_5', 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
 
                 <div class="switch type_5 inverted disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
 
                 <p>Switch com as classes 'type_5', on, 'inverted', e 'disabled', e com a etiqueta com um ícone:</p>
 
                 <div class="switch type_5 on inverted disabled" onclick="switch_1(this); switch_event(this)">  
-                    <div class="switch_button"></div>
+                    <div class="switch_key"></div>
                     <div class="switch_label">
                         <img class="switch_icon" src="../images/exs/icon_switch_label_x3.png" alt="">
-                        <span class="switch_name">Etiqueta</span>
+                        <span class="switch_text">Etiqueta</span>
                     </div>
                 </div>
                 -->

@@ -20,14 +20,10 @@ $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
 $button_height_smaller: 32px;
-$table_border1_width: 1px;
-$table_border2_width: 1px;
 $border_radius_default: 20px;
 $border_radius_big: 40px;
-$switch_tech_ball_size: 24px;
-$switch_tech_ball_size_SS: 28px;
  
-/* ------ Breakpoints ------ */ 
+// ─────────── Breakpoints ───────────
 
 $screen_small_widthLimit: 501px; // Largura máxima de um celular.
 /*$screen_medium_widthLimit: 1000px;  */ // Largura mínima de um PC.
@@ -35,24 +31,76 @@ $screen_small_widthLimit: 501px; // Largura máxima de um celular.
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
 
-/* ------ Colors And Backgrounds ------ */ 
+// ─────────── z-index's ───────────
+
+$zIndex_nav: 1000;
+$zIndex_choice_d_open: 1100;
+$zIndex_lightbox: 1200;
+
+// ─────────── Colors And BG's Geral ───────────
 
 // $color_theme: hsl(193, 100%, 50%);
 //$color_theme: hsl(201, 100%, 48%);
 //$color_theme: DodgerBlue;
-$color_theme: DeepSkyBlue;
+$color_theme: DeepSkyBlue; // VÍNCULO: Váriável JS
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%); 
 $color_text_menu: white; 
+
+$color_shadow_text: hsla(0, 0%, 0%, 0.15);
+$color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
+$color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
+$color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
+
+$bg_html: white;
+//$bg_html: hsl(0, 0%, 36%);
+//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
+ 
+/*  
+────────────────────────────
+TODO:    > Specific Elements & Components
+──────────────────────────── */
+
+// ─────────── Header-Nav ───────────
+
+$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
+$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
+$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
+$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
+$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
+
+$bg_header: url(../../images/bgs/header.png) center /100% 100%;
+$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+
+/*
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+*/
+
+// ─────────── Footer ───────────
+
+$color_shadow_footer: $color_shadow_headerNav_rounded; 
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);   
+
+$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
+
+// $bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+
+// ─────────── Texts ───────────
+
 $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
+$color_border_kbd: hsl(0, 0%, 95%);
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
 $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
 $color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
-$color_text_form: $color_text; 
-$color_text_form_placeholder: $color_text_clear;
-$color_text_form_select: $color_text_clear;
+
+$bg_kbd: hsl(0, 0%, 86%);
+
+// ─────────── Signs ───────────
 
 $color_text_success: hsl(120, 100%, 35%);
 $color_text_attention: hsl(45, 74%, 45%);
@@ -65,23 +113,127 @@ $color_border_fail: hsl(0, 100%, 70%);
 $color_border_danger_clear: hsl(0, 100%, 76%);
 $color_border_danger_dark: hsl(0, 100%, 31%);
 
-$color_border_table: hsl(0, 0%, 85%);
-$color_border_form: hsl(0, 0%, 80%); 
-$color_border_kbd: hsl(0, 0%, 95%);
+$bg_success: hsl(120, 100%, 91%);
+$bg_attention: hsl(54, 100%, 93%);
+$bg_fail: hsl(0, 100%, 94%);
+$bg_danger: red;
 
-$color_shadow_text: hsla(0, 0%, 0%, 0.15);
-$color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
-$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
-$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
-$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
-$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
-$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
-$color_shadow_footer: $color_shadow_headerNav_rounded;
-$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
-$color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
-$color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
+// ─────────── Tables ───────────
+
+$table_border1_width: 1px;
+$table_border2_width: 1px;
+
+$color_border_table: hsl(0, 0%, 85%);
+
+$bg_table_tr_hover: $color_theme_clear; 
+
+// ─────────── Forms ───────────
+
+$color_text_form: $color_text; 
+$color_text_form_placeholder: $color_text_clear;
+$color_text_form_select: $color_text_clear;
+
+$color_border_form: hsl(0, 0%, 80%); 
+
+$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
+
+// $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+
+// ─────────── Switches ───────────
+
+// --- Type Key ---
+
+$switch_tech_ball_size: 24px;
+$switch_tech_ball_size_SS: 28px;
+
+$bg_switch_tech_ball: 
+linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
+hsl(0, 0%, 80%);
+$bg_switch_tech_on_ball: 
+linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
+cyan;
+$bg_switch_tech_ball_shine: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+$bg_switch_tech_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+$bg_switch_tech_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
+$bg_switch_tech_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+
+// --- Type Button ---
+
+$color_text_switch_button_off: hsl(0, 0%, 50%);
+$color_text_switch_button_on: white;
+$color_text_switch_button_shadowOutline_on: hsl(193, 100%, 40%);
+
+$color_icon_outline_switch_button_off: hsla(0, 0%, 0%, 0.45);
+$color_icon_outline_switch_button_on: hsl(187, 100%, 47%);
+
+// $color_shadow_box_inset_switch_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
+// $color_shadow_box_inset_switch_button_clear: white; // VÍNCULO: Váriável JS
+
+$bg_switch_button_off: 
+url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%,94%); // hsl(193, 0%,88%); 
+//$bg_switch_button_off: hsl(193, 0%,96%); 
+$bg_switch_button_on: 
+url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%); 
+
+/*      
+//$bg_switch_button_pill_and_rounded_off: hsl(193, 0%,94%);
+$bg_switch_button_pill_and_rounded_off: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%, 88%);
+$bg_switch_button_pill_and_rounded_on: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%);
+*/
+
+$bg_switch_button_shine: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
+ 
+$bg_switch_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
+
+// (Text floating):
+
+$bg_switch_button_icon_switch_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_button_icon_switch_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_button_icon_switch_text_floating_off: hsl(0, 0%, 67%); 
+$bg_switch_button_icon_switch_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_switch_button_icon_switch_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_switch_button_icon_switch_text_floating_on: hsl(193, 100%, 60%); 
+
+// --- Type Image ---
+
+$switch_image_icon_size: $button_height; 
+$color_outline_switch_image: hsla(0, 0%, 0%, 0.2); 
+
+// (Text floating):
+
+$bg_switch_image_switch_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_image_switch_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_image_switch_text_floating_off: hsl(0, 0%, 67%); 
+$bg_switch_image_switch_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_switch_image_switch_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_switch_image_switch_text_floating_on: hsl(193, 100%, 60%); 
+
+// ─────────── Choices ───────────
+
+$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
+$bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
+$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
+
+// ─────────── Lightboxs ───────────
+
 $color_shadow_lightbox: black; 
 $color_shadow_lightbox_button: black; 
+
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
+$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
+
+// ─────────── Scrollbars ───────────
  
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
@@ -96,61 +248,9 @@ $color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
 $color_menuRounded_scrollbar_track: transparent;
 $color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
-$bg_html: white;
-//$bg_html: hsl(0, 0%, 36%);
-//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
-$bg_header: url(../../images/bgs/header.png) center /100% 100%;
-$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%; 
-$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
-$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
+// ─────────── Others ───────────
 
-$bg_success: hsl(120, 100%, 91%);
-$bg_attention: hsl(54, 100%, 93%);
-$bg_fail: hsl(0, 100%, 94%);
-$bg_danger: red;
-
-$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
-$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
-$bg_table_tr_hover: $color_theme_clear; 
-$bg_kbd: hsl(0, 0%, 86%);
-$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
-$bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
-$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
-$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
-$bg_switch_ball: hsl(0, 0%, 100%); 
-$bg_switch_off: hsl(0, 0%, 93%);
-$bg_switch_on: hsl(115, 100%, 66%);
-$bg_switch_tech_ball: 
-linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
-radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
-hsl(0, 0%, 80%);
-$bg_switch_tech_on_ball: 
-linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
-radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
-cyan;
-$bg_switch_tech_ball_shine: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
-$bg_switch_tech_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
-$bg_switch_tech_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
-$bg_switch_tech_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
-
-$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
-$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
-$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
-
-/*
-$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
-$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
-*/
-
-/* ------ z-index's ------ */
-
-$zIndex_nav: 1000;
-$zIndex_choice_d_open: 1100;
-$zIndex_lightbox: 1200;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -432,7 +532,7 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     color: yellow;
 }
 
-.click {
+.click { 
 
     color: $color_text;
     text-decoration: underline;
@@ -1633,221 +1733,6 @@ TODO:    > Class
     } 
 }
 
-/*  
-──────────────────────────────────────────────────────
-TODO: Others
-────────────────────────────────────────────────────── */
-
-html {
-    background: $bg_html;
-}
-
-body {
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-hr {
-    border-top: 1px solid $color_theme;
-    border-bottom: 0; 
-    background: $color_theme;
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
-}
-
-// Não apage esta regra comentada:
-/*@media (min-width: $hr_stop) {
-
-    hr {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}*/
-
-a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
-    cursor: pointer;
-}
-
-.lb { /* Line break */
-    margin-top: $margin_vertical; 
-    margin-bottom:  $margin_vertical;
-} 
-
-@for $i from 1 through 70 { 
-    .lb#{$i} { /* Line break */
-        margin-top: calc(#{$i} * #{$margin_vertical}); 
-        margin-bottom:  calc(#{$i} * #{$margin_vertical});
-    } 
-}
-
-/*
-.content-left {
-    text-align: left;
-}
-
-.content-center {
-    text-align: center;
-}
-
-.content-right {
-    text-align: right;
-}
-
-.content-justify {
-    text-align: justify;
-}
-*/
-
-// ------ center ------
-
-.center:not(figure) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-figure.center {
-    text-align: center;
-}
-
-.center.choice_h {
-    display: flex;
-}
-
-.center.offset {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc(100% - (2 * #{$margin_horizontal}));
-}
-
-.center.offset.choice_d_open {
-    max-width: none;
-}
-
-// ----------------------
-
-.line {
-    border: 1px solid black;
-}
-
-.hidden {
-    display: none;
-}
-
-.button_height_small {
-    height: $button_height_small;
-}
-
-.border_radius_big {
-    @media (min-width: $screen_small_widthLimit) {
-
-        border-radius: $border_radius_big;
-    }
-}
-
-.cursor_pointer {
-    cursor: pointer;
-}
-
-// ------ Screen ------
-
-.screen_small, .ss {
-    
-    @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
-
-        display: none !important;
-    }
-}
-
-.screen_small_portrait, .ssp {
-    
-    @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
-
-        display: none !important;
-    }
-}
-
-.screen_small_landscape, .ssl  {
-    
-    @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
-
-        display: none !important;
-    }
-}
-
-/*
-.screen_medium {
-
-    @media (min-width: $screen_medium_widthLimit) and (min-height: $screen_medium_widthLimit)  {
-
-        display: none !important;
-    }
-}
-*/
-
-.screen_not_small, .sns {
-    
-    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit)  {
-
-        display: none !important;
-    }
-}
-
-.screen_not_small_portrait, .snsp {
-    
-    @media (orientation: portrait) and (max-width: $screen_small_widthLimit) {
-
-        display: none !important;
-    }
-}
-
-.screen_not_small_landscape, .snsl  {
-    
-    @media (orientation: landscape) and (max-height: $screen_small_widthLimit)  {
-
-        display: none !important;
-    }
-}
-
-// ----------------------
-
-.button_hide_container {
-    
-    display: none;
-    position: relative;
-    margin-top: calc((#{$button_height_smaller})/2); 
-    margin-bottom: $margin_vertical;
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
-
-    .button_hide {
-
-        display: inline-block;
-        content: "";
-        position: absolute; 
-        top: calc((-1 * #{$button_height_smaller})/2);
-        right: 4px;
-        cursor: pointer;
-
-        width: $button_height_smaller;  
-        height: $button_height_smaller;
-        border-radius: 50%;
-        background: $bg_button_hide; 
-        //box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button, inset 3px 3px 5px 0px hsla(0, 0%, 100%, 0.5), inset -2px -3px 5px 3px hsla(0, 0%, 0%, 0.4);
-        //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
-    }
- 
-    > :nth-child(2) { 
-        
-        margin-left: $margin_horizontal;
-        margin-right: $margin_horizontal;
-        padding-right: calc((#{$button_height_smaller})/2);
-    }
-}
-
 /*
 ──────────────────────────────────────────────────────
 TODO: Components
@@ -2458,16 +2343,10 @@ TODO:        >> Disabled
 
 /*  
 ──────────────────────────────────────────────────────
-TODO:    > Switchs 
+TODO:    > Switches 
 ────────────────────────────────────────────────────── */
 
 .switch {
-
-    display: flex;
-    align-items: center;
-
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
@@ -2476,31 +2355,9 @@ TODO:    > Switchs
 
     cursor: pointer;
 
-    .switch_button {
-        margin-right: 12px;
-        background: $bg_switch_off;
-    }
+    .switch_text {
 
-    .switch_button::before {
-        content: '';
-        display: inline-block;
-        background: $bg_switch_ball; 
-        position: relative;
-    }
-
-    .switch_label {
-        display: inline-flex;
-        align-items: center;
-        font-size: $font_size;
-        margin: 0;
-        padding: 0;
-        text-indent: 0;
-
-        .switch_icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 12px;
-        }
+        text-align: justify;
     }
 }
 
@@ -2508,367 +2365,40 @@ TODO:    > Switchs
 
     opacity: 0.5;
     cursor: default;
-
-    .switch_label {
-        color: adjust-color($color_text, $alpha: -0.5);
-    }
 }
 
-.switch.on .switch_button {
-    background: $bg_switch_on;
-}
+/*  
+────────────────────────────
+TODO:        >> Key
+──────────────────────────── */
 
-.switch.inverted {
-    width: auto !important;
+.switch.key, .switch.key_no_icon {
+
+    display: flex;
     justify-content: space-between;
-
-    .switch_button {
+    align-items: center;
+    
+    .switch_key { // Path
+ 
         order: 1;
         margin-left: 18px; 
         margin-right: 0;
-    }
-}
-
-/*  
-────────────────────────────
-TODO:        >> Sizes
-──────────────────────────── */
-
-// Switch - Tamanho para tela grande: Medium Size
-
-.switch {
-
-    .switch_button {
-        min-width: 47px;
-        height: 28px;
-        border-radius: 14px;
-        transition: all 0.33s; 
+        //margin-right: 12px;
+        border-radius: 1000px;
+        background: $bg_switch_tech_path_off;
     }
 
-    .switch_button::before {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        top: 2px;
-        left: 3px;
-        transition: all 0.33s; 
-    }
-}
-
-.switch.disabled .switch_button::before {
-    // width: 22px;
-    // height: 22px;
-    // top: 1px;
-    // left: 2px;
-}
-
-.switch.on { 
-
-    .switch_button {
-        transition: all 0.33s; 
-    }
-    
-    .switch_button::before {
-        left: 21px;
-        transition: all 0.33s; 
-    }
-}
-
-.switch.on.disabled .switch_button::before { 
-    // left: 19px;
-}
-
-@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
-
-    // Switch - Tamanho escolhido para tela pequena: Bigger Size
-
-    .switch {
-
-        .switch_button {
-            min-width: 53px;
-            height: 32px;
-            border-radius: 16px;
-            transition: all 0.35s; 
-        }
-    
-        .switch_button::before {
-            width: 26px;
-            height: 26px;
-            border-radius: 13px;
-            top: 3px;
-            left: 4px;
-            transition: all 0.35s; 
-        }
-    }
-    
-    .switch.disabled .switch_button::before {
-        // width: 26px;
-        // height: 26px;
-        // top: 1px;
-        // left: 2px;
-    }
-    
-    .switch.on { 
-    
-        .switch_button {
-            transition: all 0.35s; 
-        }
-        
-        .switch_button::before {
-            left: 24px;
-            transition: all 0.35s; 
-        }
-    }
-    
-    .switch.on.disabled .switch_button::before { 
-        // left: 21px;
-    }
-} 
-
-/*
-// Switch - Smaller Size
-
-.switch.smaller {
-
-    .switch_button {
-        min-width: 38px;
-        height: 24px;
-        border-radius: 12px;
-        transition: all 0.29s; 
-    }
-
-    .switch_button::before {
-        width: 18px;
-        height: 18px;
-        border-radius: 9px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.29s; 
-    }
-} 
-
-.switch.smaller.disabled .switch_button::before {
-    width: 18px;
-    height: 18px;
-    top: 1px;
-    left: 1px;
-}
-
-.switch.smaller.on { 
-
-    .switch_button {
-        transition: all 0.29s; 
-    }
-    
-    .switch_button::before {
-        left: 17px;
-        transition: all 0.29s; 
-    }
-}
-
-.switch.smaller.on.disabled .switch_button::before { 
-    left: 14px;
-}
-
-// Switch - Small Size
-
-.switch.small {
-
-    .switch_button {
-        min-width: 42px;
-        height: 26px;
-        border-radius: 13px;
-        transition: all 0.31s; 
-    }
-
-    .switch_button::before {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.31s; 
-    }
-} 
-
-.switch.small.disabled .switch_button::before {
-    width: 20px;
-    height: 20px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch.small.on { 
-
-    .switch_button {
-        transition: all 0.31s; 
-    }
-    
-    .switch_button::before {
-        left: 19px;
-        transition: all 0.31s; 
-    }
-}
-
-.switch.small.on.disabled .switch_button::before { 
-    left: 16px;
-}
-
-// Switch - Medium Size
-
-.switch.medium {
-
-    .switch_button {
-        min-width: 47px;
-        height: 28px;
-        border-radius: 14px;
-        transition: all 0.33s; 
-    }
-
-    .switch_button::before {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        top: 2px;
-        left: 3px;
-        transition: all 0.33s; 
-    }
-}
-
-.switch.medium.disabled .switch_button::before {
-    width: 22px;
-    height: 22px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch.medium.on { 
-
-    .switch_button {
-        transition: all 0.33s; 
-    }
-    
-    .switch_button::before {
-        left: 21px;
-        transition: all 0.33s; 
-    }
-}
-
-.switch.medium.on.disabled .switch_button::before { 
-    left: 19px;
-}
-
-// Switch - Big Size
-
-.switch.big {
-
-    .switch_button {
-        min-width: 49px;
-        height: 30px;
-        border-radius: 15px;
-        transition: all 0.35s; 
-    }
-
-    .switch_button::before {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.35s; 
-    }
-} 
-
-.switch.big.disabled .switch_button::before {
-    width: 24px;
-    height: 24px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch.big.on { 
-
-    .switch_button {
-        transition: all 0.35s; 
-    }
-    
-    .switch_button::before {
-        left: 22px;
-        transition: all 0.35s; 
-    }
-}
-
-.switch.big.on.disabled .switch_button::before { 
-    left: 19px;
-}
-
-// Switch - Bigger Size
-
-.switch.bigger {
-
-    .switch_button {
-        min-width: 53px;
-        height: 32px;
-        border-radius: 16px;
-        transition: all 0.37s; 
-    }
-
-    .switch_button::before {
-        width: 26px;
-        height: 26px;
-        border-radius: 13px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.37s; 
-    }
-}
-
-.switch.bigger.disabled .switch_button::before {
-    width: 26px;
-    height: 26px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch.bigger.on { 
-
-    .switch_button {
-        transition: all 0.37s; 
-    }
-    
-    .switch_button::before {
-        left: 24px;
-        transition: all 0.37s; 
-    }
-}
-
-.switch.bigger.on.disabled .switch_button::before { 
-    left: 21px;
-}
-*/
-
-/*  
-────────────────────────────
-TODO:        >> Tech Style
-──────────────────────────── */
-
-.switch {
-    
-    .switch_button { // Path
-        background: $bg_switch_tech_path_off !important;
-    }
-
-    .switch_button::before { // Ball
+    .switch_key::before { // Ball
 
         content: '';
         display: inline-block;
         position: relative;
         border-radius: 1000px;
-        background: $bg_switch_tech_ball;
+        background: $bg_switch_tech_ball; 
         transition: all 0.39s; 
     }
 
-    .switch_button::after { // Shine over the ball
+    .switch_key::after { // Shine
         
         content: '';
         display: inline-block;
@@ -2877,102 +2407,136 @@ TODO:        >> Tech Style
         background: $bg_switch_tech_ball_shine;
         transition: all 0.39s; 
     }
-} 
-/*  
-.switch::before { // Shadow
-    
-    content: '';
-    display: inline-block;
-    position: absolute;
-    margin-top: calc(0.5 * #{$switch_tech_ball_size} + 3px);
-    margin-left: calc(-1px);
-    width: $switch_tech_ball_size;
-    height: $switch_tech_ball_size;
-    border-radius: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), hsla(0, 0%, 0%, 0) 99%);
-    //transform: rotateZ(-45deg); 
-}  
-*/
-.switch.on {
 
-    .switch_button { // Path
-
-        border-color: hsl(187, 100%, 60%);
-        // outline: 1px solid hsl(187, 100%, 90%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
-        box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
-        background: $bg_switch_tech_path_on !important;
+    .switch_label {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        text-indent: 0;
     }
 
-    .switch_button::before { // Ball
+    .switch_icon {
 
-        background: $bg_switch_tech_on_ball;
-        //filter: drop-shadow(0px 0px 6px hsl(187, 100%, 50%));
-        //box-shadow: 0px 0px 17px 1px hsl(187, 100%, 50%);
-        //box-shadow: 0px 0px 15px 0px hsl(187, 100%, 48%);
-        //box-shadow: 0px 0px 15px 0px hsl(188, 100%, 48%);
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        border-radius: 8px;
+        filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
+    }
+
+    .switch_text {
+
+        line-height: 1.5;
+    }
+} 
+
+.switch.key_no_icon {
+
+    .switch_icon {
+        display: none;
+    }
+}
+
+.switch.key.on, .switch.key_no_icon.on {
+
+    .switch_key { // Path
+
+        border-color: hsl(187, 100%, 60%);
+        background: $bg_switch_tech_path_on;
+        box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
+    }
+
+    .switch_key::before { // Ball
+
         border: 1px solid hsl(187, 100%, 80%); 
+        background: $bg_switch_tech_on_ball;
         box-shadow: 0px 0px 13px 0px hsl(188, 100%, 60%); 
     } 
 }
 
-.switch.disabled .switch_button::before { // Ball
+.switch.key.disabled, .switch.key_no_icon.disabled {
 
-    border-top: 0;
-    border-bottom: 0;
+    .switch_key::before { // Ball
+
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .switch_label {
+        color: adjust-color($color_text, $alpha: -0.5);
+    }
 }
 
-.switch.on.disabled {
+.switch.key.on.disabled, .switch.key_no_icon.on.disabled {
 
-    .switch_button { // Path
+    .switch_key { // Path
 
         box-shadow: none;
     }
     
-    .switch_button::before { // Ball
+    .switch_key::before { // Ball
 
-        // outline: 2px solid hsl(187, 100%, 80%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
-        //filter: drop-shadow(0px 0px 2px hsl(187, 100%, 50%));
         border: 2px solid hsl(187, 100%, 80%);
         box-shadow: none;
     }
 }
+
+.switch.key.inverted, .switch.key_no_icon.inverted {
+
+    // justify-content: space-between;
+    justify-content: initial;
+
+    .switch_key {
+
+        /*  
+        order: 1;
+        margin-left: 18px; 
+        margin-right: 0;
+        */
+
+        order: initial;
+        margin-left: 0px; 
+        margin-right: 12px;
+    }
+} 
+
 /*  
 ────────────────────────────
-TODO:            >>> Sizes
+TODO:            >>> Sizes & Positions
 ──────────────────────────── */
 
 // Tamanho para tela grande
 
-.switch {
+.switch.key, .switch.key_no_icon {
 
-    .switch_button { // Path
+    .switch_key { // Path
 
+        min-width: 47px;
         height: 6px; 
         border: 1px solid black;
-        border-radius: 1000px;
     }
 
-    .switch_button::before { // Ball
+    .switch_key::before { // Ball
 
+        top: -11px;
+        left: -2px;
         width: $switch_tech_ball_size;
         height: $switch_tech_ball_size;
         border: 0;
-        top: -11px;
-        left: -2px;
     }
 
-    .switch_button::after { // Shine
+    .switch_key::after { // Shine
 
-        top: calc(-0.9 * #{$switch_tech_ball_size} + 3px);
-        left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
-        width: calc(0.6 * #{$switch_tech_ball_size});
-        height: calc(0.6 * #{$switch_tech_ball_size});
+        top: -19px; // calc(-0.9 * #{$switch_tech_ball_size} + 3px);
+        left: -21px; //calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
+        width: 14px; // calc(0.585 * #{$switch_tech_ball_size});
+        height: 14px; // calc(0.585 * #{$switch_tech_ball_size});
     }
 }
 
-.switch.on {
+.switch.key.on, .switch.key_no_icon.on {
     
-    .switch_button::before { // Ball
+    .switch_key::before { // Ball
 
         top: -10px; 
         left: 23px; 
@@ -2981,7 +2545,7 @@ TODO:            >>> Sizes
         transition: all 0.39s; 
     }
 
-    .switch_button::after { // Shine
+    .switch_key::after { // Shine
         
         top: calc(-0.9 * #{$switch_tech_ball_size} + 4px);
         left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} + 23px); 
@@ -2993,16 +2557,16 @@ TODO:            >>> Sizes
 
     // Tamanho para tela pequena
 
-    .switch {
+    .switch.key, .switch.key_no_icon {
 
-        .switch_button { // Path
+        .switch_key { // Path
 
             min-width: calc(53px + #{$switch_tech_ball_size_SS} - #{$switch_tech_ball_size});
             height: 8px; 
-            background: $bg_switch_tech_path_off_SS !important;
+            background: $bg_switch_tech_path_off_SS;
         }
     
-        .switch_button::before { // Ball
+        .switch_key::before { // Ball
 
             top: -12px;
             width: $switch_tech_ball_size_SS;
@@ -3010,23 +2574,23 @@ TODO:            >>> Sizes
             background: $bg_switch_tech_ball;
         }
 
-        .switch_button::after { // Shine
-            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 3px);
+        .switch_key::after { // Shine
+
+            top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 4px);
             left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} - 2px); 
             width: calc(0.6 * #{$switch_tech_ball_size_SS});
             height: calc(0.6 * #{$switch_tech_ball_size_SS}); 
         }
     }
     
-    .switch.on {
+    .switch.key.on, .switch.key_no_icon.on {
 
-        .switch_button { // Path
+        .switch_key { // Path
 
-            // outline: 2px solid hsl(187, 100%, 92%); // Bug: outline não arredondada em navegadores dos smartphone, e em alguns de desktop.
             box-shadow: 0px 0px 6px 0px hsla(188, 100%, 50%, 0.60);
         }
         
-        .switch_button::before { // Ball
+        .switch_key::before { // Ball
 
             top: -11px; 
             left: 29px;  
@@ -3034,7 +2598,7 @@ TODO:            >>> Sizes
             height: calc(#{$switch_tech_ball_size_SS} + 2); 
         }
 
-        .switch_button::after { // Shine
+        .switch_key::after { // Shine
             
             top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 5px);
             left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} + 29px); 
@@ -3045,103 +2609,84 @@ TODO:            >>> Sizes
 
 /*  
 ────────────────────────────
-TODO:        >> Type 2
+TODO:        >> Button
 ──────────────────────────── */
 
-$bg_switch_type_2_off: hsl(193, 0%,96%); 
+.switch.button, .switch.button_text, .switch.button_icon {
 
-$bg_switch_type_2_on: hsl(193, 100%, 83%); 
-    
-$bg_switch_type_2_rounded_off: hsl(193, 0%,94%); 
-
-$bg_switch_type_2_shine: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
- 
-$bg_switch_type_2_3_rounded_off: 
-url(../../images/bgs/switch_type_2_3_rounded_shine_under.webp) center center / 200% 100% no-repeat,
-hsl(193, 0%, 92%);
-
-$bg_switch_type_2_3_rounded_on: 
-url(../../images/bgs/switch_type_2_3_rounded_shine_under.webp) center center / 200% 100% no-repeat,
-hsl(193, 100%, 83%);
-
-$switch_type_2_3_rounded_shine_above: url(../../images/bgs/switch_type_2_3_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
-
-$color_shadow_box_inset_switch_type_2_dark: hsla(0, 0%, 0%, 0.33); 
-$color_shadow_box_inset_switch_type_2_clear: white; 
-
-$color_border_switch_type_2_off: hsl(0, 100%, 50%); /*  hsl(193, 0%,92%); */
-$color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
-
-
-
-.switch.type_2, .switch.type_2_2, .switch.type_2_3 { 
- 
+    display: flex;
+    align-items: center;
     position: relative;
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
     min-width: $button_height_smaller;
     min-height: $button_height_smaller;
-    background: $bg_switch_type_2_off; 
+    background: $bg_switch_button_off; 
+    //box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
     transition: 0s;
 
-    .switch_button {
+    .switch_key {
 
         display: none;
     }
 
-    .switch_name {
-
+    .switch_label {
         
+        display: inline-flex;
+        align-items: center;
+    }
 
-        //color: hsl(0, 0%, 94%);  
-        //filter: drop-shadow(0px 0px 1px hsl(0, 0%, 0%)); 
+    .switch_shine { // Shine over the ball   
+          
+        content: '';
+        position: absolute;
+        z-index: 1;
+        background: $bg_switch_button_shine;
+          
+        $offset: 2px;
+        $left:  $offset;
+        $height: 49.8%; //calc(24px + #{$offset});
 
-        color: hsl(0, 0%, 50%);
+        top: $offset;  
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+        height: $height; 
+        // border-radius: 10px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .switch_text {
+
+        color: $color_text_switch_button_off;
         font-weight: bold; 
     }
 
     .switch_icon {
 
-        filter: drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.45)); // drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.4)); // drop-shadow(0px 0px 1px hsl(187, 100%, 50%));  
-    }
-} 
-
-.switch.type_2, .switch.type_2_2, .switch.type_2_3  {
-
-    box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_type_2_dark;
-
-    .switch_label::after { // Shine over the ball   
-          
-        content: '';
-        position: absolute;
-        background: $bg_switch_type_2_shine;
-          
-        $offset: 2px;
-        $left:  $offset;
-        $height: 49.5%; //calc(24px + #{$offset});
-
-        top: $offset;  
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
-        height: $height;
-        border-radius: 10px;
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_off);
     }
 }
  
-.switch.type_2 {
+.switch.button {
 
     padding: 11px; 
     padding-right: 12px;
-    border-radius: 14px; 
+    // border-radius: 14px; // Propriedade aplicada aprimorada via JS.
 }
  
-.switch.type_2_2 {
+.switch.button_text {
 
     padding: 10px; 
     padding-right: 11px;
-    border-radius: 11px; 
+    // border-radius: 11px; // Propriedade aplicada aprimorada via JS.
 
-    .switch_label::after { // Shine 
+    .switch_shine { // Shine 
           
-        border-radius: 7px;
+        // border-radius: 7px; // Propriedade aplicada aprimorada via JS.
     }
 
     .switch_icon {
@@ -3149,79 +2694,106 @@ $color_border_switch_type_2_on: hsl(193, 100%, 78%); /* hsl(193, 100%, 82%); */
     }
 }
       
-.switch.type_2_3 {
+.switch.button_icon {
 
     justify-content: center;
-    padding: 10px; 
-    border-radius: 14px; 
+    //padding: 10px; // Propriedade aplicada aprimorada via JS.
+    // border-radius: 13px; // Propriedade aplicada aprimorada via JS.
     
-    .switch_name {
-        display: none; 
+    .switch_text {
+        // display: none; // Propriedade aplicada via JS.
+        text-align: center;
     }
 
     .switch_icon {
         margin: 0;
     }
 }
-//
 
-/*  
-────────────────────────────
-TODO:            >>> Rounded
-──────────────────────────── */
+.switch.button.disabled, .switch.button_text.disabled {
 
-.switch.type_2.rounded, .switch.type_2_2.rounded, .switch.type_2_3.rounded {
+    .switch_label {
+        color: adjust-color($color_text, $alpha: -0.5);
+    }
+}
+
+.switch.button_icon.disabled {
+    
+    .switch_text {
+        z-index: 1;
+    }
+}
+
+// ─────────── Pill ───────────
+
+.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
 
     border-radius: 1000px; 
-    box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_2_dark; 
-    background: $bg_switch_type_2_rounded_off;
+    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
+    // background: $bg_switch_button_pill_and_rounded_off;
 
-    .switch_label::after { // Shine
+    .switch_shine { // Shine
           
         top: 2px;  
+        height: 49.5%;
         border-radius: 1000px; 
     }
 }
 
-.switch.type_2.rounded {
+.switch.button.pill {
 
-    padding-left: 18px;
-    padding-right: 20px;
+    // padding-left: 18px; // Propriedade aplicada aprimorada via JS.
+    // padding-right: 20px; // Propriedade aplicada aprimorada via JS.
 
-    .switch_label::after { // Shine
-          
-        $left:  10px;
-        $height: 49.5%;
-
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
-        height: $height;
-    }
+    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //       
+    //     $left:  10px;
+    // 
+    //     left:  $left;
+    //     width: calc(100% - 2 * #{$left}); 
+    // }/*  */  
 }
 
-.switch.type_2_2.rounded {
+.switch.button_text.pill {
 
-    padding-left: 13px;
-    padding-right: 16px;
+    // padding-left: 13px; // Propriedade aplicada aprimorada via JS.
+    // padding-right: 13px; // Propriedade aplicada aprimorada via JS.
 
-    .switch_label::after { // Shine
-          
-        $left:  8px;        
-        $height: 49.5%; 
-
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
-        height: $height; 
-    }
+    //.switch_shine {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //      
+    //    $left: 8px;  
+    //
+    //    left:  $left;
+    //    width: calc(100% - 2 * #{$left});
+    // }
 }
 
-.switch.type_2_3.rounded {
+.switch.button_icon.pill {
 
-    padding: 11px;  
+    // padding: 12px; // Propriedade aplicada aprimorada via JS.
 
-    .switch_label::after { // Shine
+    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //        
+    //     $left: 10px;
+    //     
+    //     left:  $left;
+    //     width: calc(100% - 2 * #{$left});
+    // }
+}
+
+// ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
+
+.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+
+    justify-content: center;
+    border-radius: 1000px; 
+    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
+    // background: $bg_switch_button_pill_and_rounded_off; 
+
+    .switch_shine { // Shine
           
-        background: $switch_type_2_3_rounded_shine_above;
+        border-radius: 1000px; 
+        background: $bg_switch_button_rounded_shine;
            
         $top: 3px;
         $left:  3px; 
@@ -3234,92 +2806,173 @@ TODO:            >>> Rounded
     }
 }
 
-.switch.type_2_3.rounded:not(.on) { 
+.switch.button.rounded {
 
-    background: $bg_switch_type_2_3_rounded_off;
+    padding: 18px;  
 }
 
+.switch.button_text.rounded {
+
+    padding: 14px; 
+
+    .switch_text {
+
+        text-align: center;
+    }
+}
+
+.switch.button_icon.rounded {
+
+    // padding: 12px; // Propriedade aplicada aprimorada via JS.
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Text Below
+──────────────────────────── */
+
+.switch.button.text_below {  
+
+    justify-content: center; 
+
+    .switch_label {
+
+        flex-direction: column; 
+        justify-content: center; 
+    }
+
+    .switch_text {
+
+        text-align: center;
+    }
+}
+ 
 /*  
 ────────────────────────────
 TODO:            >>> Option ON
 ──────────────────────────── */
 
-.switch.type_2.on, .switch.type_2_2.on, .switch.type_2_3.on {
+.switch.button.on, .switch.button_text.on, .switch.button_icon.on {
 
-    color: hsl(193, 100%, 42%);
-    background: $bg_switch_type_2_on;
-    box-shadow:  
-    inset 0px 0px 9px 4px $color_shadow_box_inset_switch_type_2_clear, 
-    0px 0px 12px 0px $color_theme;
+    background: $bg_switch_button_on;
+    //box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
+ 
+    .switch_text {
 
-    .switch_name {
-
-        color: white;
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 40%)); 
+        color: $color_text_switch_button_on;
+        filter: drop-shadow(0px 0px 2px $color_text_switch_button_shadowOutline_on); 
     }
 
     .switch_icon {
 
-        filter: drop-shadow(0px 0px 1px hsl(187, 100%, 47%)); 
+        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_on); 
     }
 }
 
-.switch.type_2_3.on.rounded {
-
-    background: $bg_switch_type_2_3_rounded_on
+.switch.button.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
+    
+    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear !important;
+    // border: 1px solid adjust-color($color_theme, $lightness: 30%);
 }
 
-.switch.type_2.on.disabled, .switch.type_2_2.on.disabled, .switch.type_2_3.on.disabled { 
+// ─────────── Pill ───────────
 
-    
-    box-shadow:  
-    inset 0px 0px 9px 4px $color_shadow_box_inset_switch_type_2_clear;
-    border: 1px solid adjust-color($color_theme, $lightness: 30%);
+.switch.button_icon.on.pill {
+
+    // background: $bg_switch_button_pill_and_rounded_on;
+}
+
+// ─────────── Rounded ───────────
+
+.switch.button.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
+ 
+    // background: $bg_switch_button_pill_and_rounded_on;
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
+
+@media (pointer: fine) {
+
+    .switch.button_icon {
+
+        .switch_label {
+
+            justify-content: center; 
+        }
+        
+        .switch_text {
+
+            position: absolute;  
+            // top: -50px; // Propriedade aplicada aprimorada via JS. 
+            //left: -15px; // Propriedade aplicada aprimorada via JS. 
+            padding: 6px 9px; 
+            border: 1px solid;
+            border-color: $color_border_switch_button_icon_switch_text_floating_off; 
+            border-radius: 1000px;
+            font-weight: initial;
+            color: $color_text_switch_button_icon_switch_text_floating_off;
+            background: $bg_switch_button_icon_switch_text_floating_off;
+            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+        }
+    }
+
+    .switch.button_icon.on .switch_text {
+
+        color: $color_text_switch_button_icon_switch_text_floating_on;
+        border-color: $color_border_switch_button_icon_switch_text_floating_on; 
+        background: $bg_switch_button_icon_switch_text_floating_on;
+        filter: initial;
+        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
+    }
+
+    .switch.button_icon:hover .switch_text {
+
+        display: block !important;
+    }
 }
 
 /*  
 ────────────────────────────
-TODO:        >> Type 3
+TODO:        >> Image
 ──────────────────────────── */
       
-.switch.type_3 {
+.switch.image {
 
-    $switch_icon_size: $button_height;
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 
     min-width: $button_height_smaller;
     min-height: $button_height_smaller;
-    border-radius: calc(0.25 * #{$switch_icon_size});
+    border-radius: calc(0.25 * #{$switch_image_icon_size});
     transition: 0.17s; 
 
-    .switch_button {
+    .switch_key {
         display: none;
     }
     
-    .switch_name {
-        display: none;
+    .switch_text {
+        // display: none; // Propriedade aplicada via JS.
     }
 
     .switch_icon {
 
-        width: $switch_icon_size;
-        height: $switch_icon_size;
+        width: $switch_image_icon_size;
+        height: $switch_image_icon_size;
         margin: 0;
+        filter: drop-shadow(0px 0px 1px $color_outline_switch_image);
+
+        // border-radius: 12px; // Propriedade aplicada aprimorada via JS. 
     }
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Rounded
-──────────────────────────── */
+// ─────────── pill ───────────
 
-.switch.type_3.rounded {
+.switch.image.pill .switch_icon {
 
-    border-radius: 1000px; 
-
-    .switch_icon {
-
-        border-radius: 1000px; 
-    }
+    border-radius: 1000px !important;
 }
 
 /*  
@@ -3327,13 +2980,70 @@ TODO:            >>> Rounded
 TODO:            >>> Option ON
 ──────────────────────────── */
 
-.switch.type_3.on {
+.switch.image.on .switch_icon {
 
-    outline: 2px solid white;
-    filter: drop-shadow(0px 0px 6px $color_theme); 
+    // border: 2px solid white; filter: drop-shadow(0px 0px 6px $color_theme);  
+    // box-shadow: 0px 0px 0px 2px white; filter: drop-shadow(0px 0px 6px $color_theme);  
+    // box-shadow: 0px 0px 3px 3px white; filter: drop-shadow(0px 0px 7px $color_theme);  
+    
+    box-shadow:  0px 0px 0px 2px white, 0px 0px 12px 2px $color_theme;
 }
+ 
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
 
+@media (pointer: fine) {  
 
+    .switch.image {
+        
+        .switch_label {
+
+            display: inline-flex;
+            justify-content: center; 
+            align-items: center;
+            position: relative;
+        }
+
+        .switch_text {
+
+            position: absolute;  
+            // top: -49px; // Propriedade aplicada aprimorada via JS.  
+            // left: -15px; // Propriedade aplicada aprimorada via JS. 
+            padding-top: 6px; 
+            padding-bottom: 6px;
+            // padding-left e padding-right foram aplicados via JS.
+            border: 1px solid;
+            border-color: $color_border_switch_image_switch_text_floating_off; 
+            border-radius: 1000px;
+            color: $color_text_switch_image_switch_text_floating_off;
+            background: $bg_switch_image_switch_text_floating_off;
+            font-weight: initial;
+            text-align: center;
+            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+        }
+    }
+
+    .switch.image.on .switch_label {
+        
+        filter: initial; 
+    }
+
+    .switch.image.on .switch_text {
+
+        color: $color_text_switch_image_switch_text_floating_on;
+        border-color: $color_border_switch_image_switch_text_floating_on; 
+        background: $bg_switch_image_switch_text_floating_on;
+        filter: initial;
+        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
+    }
+
+    .switch.image:hover .switch_text {
+
+        display: block !important;
+    }
+}
 
 /*
 ──────────────────────────────────────────────────────
@@ -3657,4 +3367,230 @@ TODO:    > Lightbox
 .lightbox_layout {
     scrollbar-width: auto;
     scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Others
+────────────────────────────────────────────────────── */
+
+html {
+    background: $bg_html;
+}
+
+body {
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border-top: 1px solid $color_theme;
+    border-bottom: 0; 
+    background: $color_theme;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+}
+
+// Não apage esta regra comentada:
+/*@media (min-width: $hr_stop) {
+
+    hr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}*/
+
+a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+    cursor: pointer;
+}
+
+.lb { /* Line break */
+    margin-top: $margin_vertical; 
+    margin-bottom:  $margin_vertical;
+} 
+
+@for $i from 1 through 70 { 
+    .lb#{$i} { /* Line break */
+        margin-top: calc(#{$i} * #{$margin_vertical}); 
+        margin-bottom:  calc(#{$i} * #{$margin_vertical});
+    } 
+}
+
+/*
+.content-left {
+    text-align: left;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.content-right {
+    text-align: right;
+}
+
+.content-justify {
+    text-align: justify;
+}
+*/
+
+// ------ center ------
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center.offset {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(100% - (2 * #{$margin_horizontal}));
+}
+
+figure.center {
+    text-align: center;
+} 
+
+.center.choice_h {
+    display: flex;
+}
+
+.center.offset.choice_d_open {
+    max-width: none;
+}
+
+.switch.key.center, .switch.button.center, .switch.button_text.center, .switch.button_icon.center, button.button.center, button.button_text.center, button.button_icon.center {
+    
+    display: flex;
+}
+
+.switch.key.inverted.center, .switch.key_no_icon.inverted.center {
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+}
+
+// ----------------------
+
+.line {
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.button_height_small {
+    height: $button_height_small;
+}
+
+.border_radius_big {
+    @media (min-width: $screen_small_widthLimit) {
+
+        border-radius: $border_radius_big;
+    }
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+// ------ Screen ------
+
+.screen_small, .ss {
+    
+    @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_small_portrait, .ssp {
+    
+    @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_small_landscape, .ssl  {
+    
+    @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+/*
+.screen_medium {
+
+    @media (min-width: $screen_medium_widthLimit) and (min-height: $screen_medium_widthLimit)  {
+
+        display: none !important;
+    }
+}
+*/
+
+.screen_not_small, .sns {
+    
+    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_portrait, .snsp {
+    
+    @media (orientation: portrait) and (max-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_landscape, .snsl  {
+    
+    @media (orientation: landscape) and (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+// ----------------------
+
+.button_hide_container {
+    
+    display: none;
+    position: relative;
+    margin-top: calc((#{$button_height_smaller})/2); 
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+
+    .button_hide {
+
+        display: inline-block;
+        content: "";
+        position: absolute; 
+        top: calc((-1 * #{$button_height_smaller})/2);
+        right: 4px;
+        cursor: pointer;
+
+        width: $button_height_smaller;  
+        height: $button_height_smaller;
+        border-radius: 50%;
+        background: $bg_button_hide; 
+        //box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button, inset 3px 3px 5px 0px hsla(0, 0%, 100%, 0.5), inset -2px -3px 5px 3px hsla(0, 0%, 0%, 0.4);
+        //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
+    }
+ 
+    > :nth-child(2) { 
+        
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
+        padding-right: calc((#{$button_height_smaller})/2);
+    }
 }

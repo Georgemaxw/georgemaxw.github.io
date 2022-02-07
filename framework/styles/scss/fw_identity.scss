@@ -69,3 +69,42 @@ $font_size: 19rem;
 
     font-size: $font_size; 
 }
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Switches Examples
+────────────────────────────────────────────────────── */
+
+// Switches Style
+
+.SS_width_100_percent {
+    width: 100% !important;
+}
+
+.SS_width_200px {
+    width: 200px !important;
+}
+
+.SS_width_250px {
+    width: 250px !important;
+}
+
+.SS_200x300 {
+    width: 200px !important;
+    height: 300px !important;
+}
+
+.SS_300x200 {
+    width: 300px !important;
+    height: 200px !important;
+}
+
+.SS_300x150 {
+    width: 300px !important;
+    height: 150px !important;
+}
+
+.SS_156x156 {
+    width: 156px !important;
+    height: 156px !important;
+}

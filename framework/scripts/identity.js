@@ -95,12 +95,26 @@ function choice_example_2_Action_3() {
 
 // Switch - Sample functions:
 
-function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) }
+function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) /*console.log(arg.className) */ } 
 function switch_2(arg){ if(arg.classList.contains('disabled')) { return }; console.log(2) }
 function switch_3(arg){ if(arg.classList.contains('disabled')) { return }; console.log(3) }
 function switch_4(arg){ if(arg.classList.contains('disabled')) { return }; console.log(4) }
 function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; console.log(5) }
 }
+
+// Switch - Turn ON/OFF tests switches:
+
+document.querySelector('.toggle_tests_switches').addEventListener('click', function() { 
+    
+    var switches = document.querySelectorAll('.test_switches_group .switch')
+    
+    switches.forEach(function ($switch) { 
+
+        switch_event($switch) 
+    })
+    
+    update_switches_and_buttons(switches)
+})
 
 /*  
 ──────────────────────────────────────────────────────
@@ -135,7 +149,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul>
             <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 2.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 2.2</span></a></li>-->
             <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
             <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.5</span></a></li>
@@ -147,9 +161,9 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">L3</a>
 
     <div>
-        <ul class="nav_compact_subOptions_textBelow">
+        <ul class="nav_compact_sub_options_text_below">
             <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 3.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 3.2</span></a></li>-->
             <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.3</span></a></li>
             <!--<li><a href="#">Link 3.4</a></li>-->
             <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.5</span></a></li>
@@ -161,9 +175,9 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">L4</a>
 
     <div>
-        <ul class="nav_expanded_subOptions_h nav_expanded_subOptions_textBelow">
+        <ul class="nav_expanded_sub_options_h nav_expanded_sub_options_text_below">
             <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 4.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 4.2</span></a></li>-->
             <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.3</span></a></li>
            <!-- <li><a href="#">Link 4.4</a></li>-->
             <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.5</span></a></li>
@@ -176,9 +190,9 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a onclick="nav_menu_options(this)">L5</a> 
 
     <div>
-        <ul class="nav_expanded_subOptions_h nav_subOptions_textBelow">
+        <ul class="nav_expanded_sub_options_h nav_sub_options_text_below">
             <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 5.2</span></a></li>-->
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 5.2</span></a></li>-->
             <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.3</span></a></li>
            <!-- <li><a href="#">Link 5.4</a></li>-->
             <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.5</span></a></li>
@@ -190,13 +204,13 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <li><a href="">∅</a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">L7</a>
+<li><a onclick="nav_menu_options(this)"><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 7.2</span></a></li>
-            <li><a href="#"><span><img src="../images/exs/textImg_2_1.svg" alt="" class="textImg_size">Link 7.3</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
             <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
             <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
