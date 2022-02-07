@@ -286,7 +286,8 @@ function switches_type_button_and_buttons_type_button(elements) {
                     $switch.style.height = switch_height_ceil + 'px'
                 }
 
-                /*
+                /* Fazendo dessa forma os botões de ícone (button_icon) com a classe 'rounded' bugam no celular:
+
                 var switch_width_ceil = Math.ceil(switch_width)
                 var switch_height_ceil = Math.ceil(switch_height)
 
