@@ -26,7 +26,9 @@ $border_radius_big: 40px;
 // ─────────── Breakpoints ───────────
 
 $screen_small_widthLimit: 501px; // Largura máxima de um celular.
-/*$screen_medium_widthLimit: 1000px;  */ // Largura mínima de um PC.
+// $screen_medium_widthLimit: 1000px; // Largura mínima de um PC.
+
+// $tablet_height_limit: 1366px; // Altura máxima de um tablet.
 
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);

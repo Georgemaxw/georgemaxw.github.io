@@ -67,12 +67,23 @@ function switches_type_button_and_buttons_type_button(elements) {
 
         if($switch.classList.contains('button') || $switch.classList.contains('button_text') || $switch.classList.contains('button_icon')) {
 
-            // Evita o bug do box-shadow interno dos switches de tipos 'pill' e 'rounded' no Safari de desktop (só falta colocar no 'if' para identificar quando a tela for grande):
-            //if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && navigator.vendor === "Apple Computer, Inc.") { 
-            //
-            //    $switch.classList.remove('pill')
-            //    $switch.classList.remove('rounded')
-            //}
+            // Bug Fix - O box-shadow interno dos elementos com a classe 'pill' ou 'rounded' não renderizam corretamente no Safari para desktop:
+            
+            if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && navigator.vendor.indexOf('Apple') !== -1 && navigator.userAgent.indexOf('Mac OS') !== -1) { 
+            
+                $switch.classList.remove('pill')
+                $switch.classList.remove('rounded')
+            }
+
+            // Bug Fix - Os elementos com as classes 'button_icon' e 'rounded' ficam muito grandes no mobile:
+
+            if ($switch.classList.contains('button_icon') && $switch.classList.contains('rounded') && innerWidth <= 1366 && innerHeight <= 1366) { 
+
+                $switch.classList.remove('rounded')
+                $switch.classList.add('pill')
+            }
+
+
 
             var switch_is_square = !($switch.classList.contains('pill') || $switch.classList.contains('rounded'))
 
@@ -271,22 +282,6 @@ function switches_type_button_and_buttons_type_button(elements) {
 
                 var switch_width = Number(getComputedStyle($switch).getPropertyValue('width').slice(0,-2)) 
                 var switch_height = Number(getComputedStyle($switch).getPropertyValue('height').slice(0,-2)) 
-/* 
-                if(switch_width >= switch_height) { 
-
-                    var padding_top_current =  Number(getComputedStyle($switch).getPropertyValue('padding-top').slice(0,-2))
-                    var padding_bottom_current =  Number(getComputedStyle($switch).getPropertyValue('padding-bottom').slice(0,-2))
-            
-                    $switch.style.paddingTop = padding_top_current + 1/2 * (switch_width - switch_height) + 'px'
-                    $switch.style.paddingBottom = padding_bottom_current + 1/2 * (switch_width - switch_height) + 'px'
-            
-                } else {  
-            
-                    $switch.style.width = switch_height_ceil + 'px'
-                    $switch.style.height = switch_height_ceil + 'px'
-                }
-*/   
-                // Fazendo dessa forma os botões de ícone (button_icon) com a classe 'rounded' bugam no celular:
 
                 var switch_width_ceil = Math.ceil(switch_width)
                 var switch_height_ceil = Math.ceil(switch_height)
@@ -301,7 +296,23 @@ function switches_type_button_and_buttons_type_button(elements) {
                     $switch.style.width = switch_height_ceil + 'px'
                     $switch.style.height = switch_height_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                 }
-             
+
+                /* // Maneira alternativa:
+
+                if(switch_width >= switch_height) { 
+
+                    var padding_top_current =  Number(getComputedStyle($switch).getPropertyValue('padding-top').slice(0,-2))
+                    var padding_bottom_current =  Number(getComputedStyle($switch).getPropertyValue('padding-bottom').slice(0,-2))
+            
+                    $switch.style.paddingTop = padding_top_current + 1/2 * (switch_width - switch_height) + 'px'
+                    $switch.style.paddingBottom = padding_bottom_current + 1/2 * (switch_width - switch_height) + 'px'
+            
+                } else {  
+            
+                    $switch.style.width = switch_height_ceil + 'px'
+                    $switch.style.height = switch_height_ceil + 'px'
+                }
+                */
             }
 
             // ---------- Posição e preenchimento da etiqueta de hover dos botões de ícone ---------- 
