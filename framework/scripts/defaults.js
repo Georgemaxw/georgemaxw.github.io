@@ -68,8 +68,10 @@ function switches_type_button_and_buttons_type_button(elements) {
         if($switch.classList.contains('button') || $switch.classList.contains('button_text') || $switch.classList.contains('button_icon')) {
 
             // Bug Fix - O box-shadow interno dos elementos com a classe 'pill' ou 'rounded' não renderizam corretamente no Safari para desktop:
+
+            // 
             
-            if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && navigator.vendor.indexOf('Apple') !== -1 && navigator.userAgent.indexOf('Macintosh') !== -1) { 
+            if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && navigator.vendor.indexOf('Apple') !== -1) { 
             
                 $switch.classList.remove('pill')
                 $switch.classList.remove('rounded')
