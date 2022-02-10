@@ -200,12 +200,12 @@ $bg_switch_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shin
 
 // (Text floating):
 
-$bg_switch_button_icon_switch_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
-$color_border_switch_button_icon_switch_text_floating_off: hsl(0, 0%, 74%); 
-$color_text_switch_button_icon_switch_text_floating_off: hsl(0, 0%, 67%); 
-$bg_switch_button_icon_switch_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
-$color_border_switch_button_icon_switch_text_floating_on: hsl(193, 100%, 68%);  
-$color_text_switch_button_icon_switch_text_floating_on: hsl(193, 100%, 60%); 
+$bg_switch_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_switch_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_switch_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_switch_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
 
 // --- Type Image ---
 
@@ -214,12 +214,12 @@ $color_outline_switch_image: hsla(0, 0%, 0%, 0.2);
 
 // (Text floating):
 
-$bg_switch_image_switch_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
-$color_border_switch_image_switch_text_floating_off: hsl(0, 0%, 74%); 
-$color_text_switch_image_switch_text_floating_off: hsl(0, 0%, 67%); 
-$bg_switch_image_switch_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
-$color_border_switch_image_switch_text_floating_on: hsl(193, 100%, 68%);  
-$color_text_switch_image_switch_text_floating_on: hsl(193, 100%, 60%); 
+$bg_switch_image_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_image_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_image_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_switch_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_switch_image_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_switch_image_piece_text_floating_on: hsl(193, 100%, 60%); 
 
 // ─────────── Choices ───────────
 
@@ -363,12 +363,13 @@ a[href^="http"] {
 
 @for $i from 7 through 20 { 
 	h#{$i} {
+
         display: block;
         font-size: 20rem;
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;
         margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
+        margin-right: $margin_horizontal;
         text-align: center; 
         font-weight: bold;
         // color: $color_theme;
@@ -378,6 +379,15 @@ a[href^="http"] {
         background-clip: text;
         text-fill-color: transparent; 
 	}
+}
+
+.mini_topic {
+
+    font-size: $font_size;
+    background: 0;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-fill-color: initial;
 }
 
 p, li, ul, ol, dl, dt, dd {
@@ -649,6 +659,11 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
             margin-right: $margin_horizontal;
         }
     }
+}
+
+.list_index > ul > li > ul > li > a {
+
+        text-decoration: underline; 
 }
 
 .list_featured {
@@ -1677,7 +1692,7 @@ select {
 /*  
 ────────────────────────────
 TODO:        >> button
-──────────────────────────── */
+──────────────────────────── 
 
 button {
     min-width: 116px; // Tava em 120px
@@ -1696,7 +1711,7 @@ button {
 
 button:disabled {
     opacity: 0.5;
-}
+}*/
 
 /*  
 ────────────────────────────
@@ -1739,10 +1754,10 @@ TODO:    > Class
 
 /*  
 ──────────────────────────────────────────────────────
-TODO:    > Switches 
+TODO:    > Switches And Buttons
 ────────────────────────────────────────────────────── */
 
-.switch {
+.switch, button {
 
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
@@ -1751,16 +1766,21 @@ TODO:    > Switches
 
     cursor: pointer;
 
-    .switch_text {
+    .piece_text {
 
         text-align: justify;
     }
 }
 
-.switch.disabled {
+.switch.disabled, button.disabled {
 
     opacity: 0.5;
     cursor: default;
+}
+
+button {
+
+    border-width: 0;
 }
 
 /*  
@@ -1774,7 +1794,7 @@ TODO:        >> Key
     justify-content: space-between;
     align-items: center;
     
-    .switch_key { // Path
+    .piece_key { // Path
  
         order: 1;
         margin-left: 18px; 
@@ -1784,7 +1804,7 @@ TODO:        >> Key
         background: $bg_switch_tech_path_off;
     }
 
-    .switch_key::before { // Ball
+    .piece_key::before { // Ball
 
         content: '';
         display: inline-block;
@@ -1794,7 +1814,7 @@ TODO:        >> Key
         transition: all 0.39s; 
     }
 
-    .switch_key::after { // Shine
+    .piece_key::after { // Shine
         
         content: '';
         display: inline-block;
@@ -1804,14 +1824,14 @@ TODO:        >> Key
         transition: all 0.39s; 
     }
 
-    .switch_label {
+    .piece_label {
         display: inline-flex;
         align-items: center;
         margin: 0;
         text-indent: 0;
     }
 
-    .switch_icon {
+    .piece_icon {
 
         width: 32px;
         height: 32px;
@@ -1820,7 +1840,7 @@ TODO:        >> Key
         filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
     }
 
-    .switch_text {
+    .piece_text {
 
         line-height: 1.5;
     }
@@ -1828,21 +1848,21 @@ TODO:        >> Key
 
 .switch.key_no_icon {
 
-    .switch_icon {
+    .piece_icon {
         display: none;
     }
 }
 
 .switch.key.on, .switch.key_no_icon.on {
 
-    .switch_key { // Path
+    .piece_key { // Path
 
         border-color: hsl(187, 100%, 60%);
         background: $bg_switch_tech_path_on;
         box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
     }
 
-    .switch_key::before { // Ball
+    .piece_key::before { // Ball
 
         border: 1px solid hsl(187, 100%, 80%); 
         background: $bg_switch_tech_on_ball;
@@ -1852,25 +1872,25 @@ TODO:        >> Key
 
 .switch.key.disabled, .switch.key_no_icon.disabled {
 
-    .switch_key::before { // Ball
+    .piece_key::before { // Ball
 
         border-top: 0;
         border-bottom: 0;
     }
 
-    .switch_label {
+    .piece_label {
         color: adjust-color($color_text, $alpha: -0.5);
     }
 }
 
 .switch.key.on.disabled, .switch.key_no_icon.on.disabled {
 
-    .switch_key { // Path
+    .piece_key { // Path
 
         box-shadow: none;
     }
     
-    .switch_key::before { // Ball
+    .piece_key::before { // Ball
 
         border: 2px solid hsl(187, 100%, 80%);
         box-shadow: none;
@@ -1882,7 +1902,7 @@ TODO:        >> Key
     // justify-content: space-between;
     justify-content: initial;
 
-    .switch_key {
+    .piece_key {
 
         /*  
         order: 1;
@@ -1905,14 +1925,14 @@ TODO:            >>> Sizes & Positions
 
 .switch.key, .switch.key_no_icon {
 
-    .switch_key { // Path
+    .piece_key { // Path
 
         min-width: 47px;
         height: 6px; 
         border: 1px solid black;
     }
 
-    .switch_key::before { // Ball
+    .piece_key::before { // Ball
 
         top: -11px;
         left: -2px;
@@ -1921,7 +1941,7 @@ TODO:            >>> Sizes & Positions
         border: 0;
     }
 
-    .switch_key::after { // Shine
+    .piece_key::after { // Shine
 
         top: -19px; // calc(-0.9 * #{$switch_tech_ball_size} + 3px);
         left: -21px; //calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} - 2px); 
@@ -1932,7 +1952,7 @@ TODO:            >>> Sizes & Positions
 
 .switch.key.on, .switch.key_no_icon.on {
     
-    .switch_key::before { // Ball
+    .piece_key::before { // Ball
 
         top: -10px; 
         left: 23px; 
@@ -1941,7 +1961,7 @@ TODO:            >>> Sizes & Positions
         transition: all 0.39s; 
     }
 
-    .switch_key::after { // Shine
+    .piece_key::after { // Shine
         
         top: calc(-0.9 * #{$switch_tech_ball_size} + 4px);
         left: calc(-1.05 * #{$switch_tech_ball_size} + 0.25 * #{$switch_tech_ball_size} + 23px); 
@@ -1955,14 +1975,14 @@ TODO:            >>> Sizes & Positions
 
     .switch.key, .switch.key_no_icon {
 
-        .switch_key { // Path
+        .piece_key { // Path
 
             min-width: calc(53px + #{$switch_tech_ball_size_SS} - #{$switch_tech_ball_size});
             height: 8px; 
             background: $bg_switch_tech_path_off_SS;
         }
     
-        .switch_key::before { // Ball
+        .piece_key::before { // Ball
 
             top: -12px;
             width: $switch_tech_ball_size_SS;
@@ -1970,7 +1990,7 @@ TODO:            >>> Sizes & Positions
             background: $bg_switch_tech_ball;
         }
 
-        .switch_key::after { // Shine
+        .piece_key::after { // Shine
 
             top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 4px);
             left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} - 2px); 
@@ -1981,12 +2001,12 @@ TODO:            >>> Sizes & Positions
     
     .switch.key.on, .switch.key_no_icon.on {
 
-        .switch_key { // Path
+        .piece_key { // Path
 
             box-shadow: 0px 0px 6px 0px hsla(188, 100%, 50%, 0.60);
         }
         
-        .switch_key::before { // Ball
+        .piece_key::before { // Ball
 
             top: -11px; 
             left: 29px;  
@@ -1994,7 +2014,7 @@ TODO:            >>> Sizes & Positions
             height: calc(#{$switch_tech_ball_size_SS} + 2); 
         }
 
-        .switch_key::after { // Shine
+        .piece_key::after { // Shine
             
             top: calc(-0.9 * #{$switch_tech_ball_size_SS} + 5px);
             left: calc(-1.05 * #{$switch_tech_ball_size_SS} + 0.25 * #{$switch_tech_ball_size_SS} + 29px); 
@@ -2008,7 +2028,7 @@ TODO:            >>> Sizes & Positions
 TODO:        >> Button
 ──────────────────────────── */
 
-.switch.button, .switch.button_text, .switch.button_icon {
+.switch.button, .switch.button_text, .switch.button_icon, button.button, button.button_text, button.button_icon {
 
     display: flex;
     align-items: center;
@@ -2019,22 +2039,9 @@ TODO:        >> Button
 
     min-width: $button_height_smaller;
     min-height: $button_height_smaller;
-    background: $bg_switch_button_off; 
-    //box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
     transition: 0s;
 
-    .switch_key {
-
-        display: none;
-    }
-
-    .switch_label {
-        
-        display: inline-flex;
-        align-items: center;
-    }
-
-    .switch_shine { // Shine over the ball   
+    .button_shine { // Shine over the ball   
           
         content: '';
         position: absolute;
@@ -2052,13 +2059,12 @@ TODO:        >> Button
         // border-radius: 10px; // Propriedade aplicada aprimorada via JS.
     }
 
-    .switch_text {
+    .piece_text {
 
-        color: $color_text_switch_button_off;
         font-weight: bold; 
     }
 
-    .switch_icon {
+    .piece_icon {
 
         width: 32px;
         height: 32px;
@@ -2066,69 +2072,151 @@ TODO:        >> Button
         filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_off);
     }
 }
- 
-.switch.button {
+
+.switch.button, .switch.button_text, .switch.button_icon {
+
+    background: $bg_switch_button_off; 
+
+    //box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
+
+    .piece_key {
+
+        display: none;
+    }
+
+    .piece_label {
+        
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .piece_text {
+
+        color: $color_text_switch_button_off;
+    }
+}
+
+button.button, button.button_text, button.button_icon {
+
+    background: 
+    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+
+    //box-shadow: inset 0px 0px 9px 5px hsla(0, 0%, 100%, 0.9), 0px 0px 0px 1px hsl(195, 100%, 77%) !important;    
+
+    .button_shine {
+
+        opacity: 0.9;
+    }
+
+    .piece_text {
+
+        color: $color_text_menu;
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 50%));
+    }
+}
+
+button.button:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
+//button.button, button.button_text, button.button_icon {
+
+    background: $bg_switch_button_on;
+    
+    //box-shadow: inset 0px 0px 9px 4px white; // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
+    filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
+
+    .button_shine {
+        opacity: 1;
+    }
+}
+
+// --------------------------------------------------- Estilos de buttons alternativos -----------------------------------------------------
+
+button.estilo_2 {
+    
+    background: linear-gradient(to bottom, 
+    hsl(195, 100%, 100%), hsl(195, 100%, 67%) 80%, hsl(195, 100%, 50%), hsl(195, 100%, 40%));   
+    box-shadow: 0 0px 0px 1px hsl(195, 100%, 60%), inset 0 0px 9px 4px hsla(0, 0%, 100%, 0.7) !important;
+
+    .button_shine {
+        opacity: 0.85;
+    }
+}
+
+button.estilo_3 {
+
+    background: linear-gradient(to bottom, hsl(195, 100%, 60%), hsl(195, 100%, 74%), hsl(195, 100%, 60%)); 
+    box-shadow: inset 0px 0px 10px 1px hsla(0, 0%, 0%, 0.5) !important;
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
+.switch.button, button.button {
 
     padding: 11px; 
     padding-right: 12px;
     // border-radius: 14px; // Propriedade aplicada aprimorada via JS.
 }
  
-.switch.button_text {
+.switch.button_text, button.button_text {
 
     padding: 10px; 
     padding-right: 11px;
     // border-radius: 11px; // Propriedade aplicada aprimorada via JS.
 
-    .switch_shine { // Shine 
+    .button_shine { // Shine 
           
         // border-radius: 7px; // Propriedade aplicada aprimorada via JS.
     }
 
-    .switch_icon {
+    .piece_icon {
         display: none;
     }
 }
       
-.switch.button_icon {
+.switch.button_icon, button.button_icon {
 
     justify-content: center;
     //padding: 10px; // Propriedade aplicada aprimorada via JS.
     // border-radius: 13px; // Propriedade aplicada aprimorada via JS.
     
-    .switch_text {
+    .piece_text {
         // display: none; // Propriedade aplicada via JS.
         text-align: center;
     }
 
-    .switch_icon {
+    .piece_icon {
         margin: 0;
     }
 }
 
 .switch.button.disabled, .switch.button_text.disabled {
 
-    .switch_label {
+    .piece_label {
         color: adjust-color($color_text, $alpha: -0.5);
     }
 }
 
-.switch.button_icon.disabled {
+button.button.disabled, button.button_text.disabled {
+
+    color: adjust-color($color_text, $alpha: -0.5);
+}
+
+.switch.button_icon.disabled, button.button_icon.disabled {
     
-    .switch_text {
+    .piece_text {
         z-index: 1;
     }
 }
 
 // ─────────── Pill ───────────
 
-.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
+.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill, button.button.pill, button.button_text.pill, button.button_icon.pill {
 
     border-radius: 1000px; 
     // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
     // background: $bg_switch_button_pill_and_rounded_off;
 
-    .switch_shine { // Shine
+    .button_shine { // Shine
            
         top: 2px;  
         height: 49.5%;
@@ -2136,12 +2224,12 @@ TODO:        >> Button
     }
 }
 
-// .switch.button.pill {
+// .switch.button.pill, button.button.pill {
 
     // padding-left: 18px; // Propriedade aplicada aprimorada via JS.
     // padding-right: 20px; // Propriedade aplicada aprimorada via JS.
 
-    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    // .button_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
     //       
     //     $left:  10px;
     // 
@@ -2150,12 +2238,12 @@ TODO:        >> Button
     // }  
 // }
 
-// .switch.button_text.pill {
+// .switch.button_text.pill, button.button_text.pill {
 
     // padding-left: 13px; // Propriedade aplicada aprimorada via JS.
     // padding-right: 13px; // Propriedade aplicada aprimorada via JS.
 
-    //.switch_shine {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    //.button_shine {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
     //      
     //    $left: 8px;  
     //
@@ -2164,11 +2252,11 @@ TODO:        >> Button
     // }
 // }
 
-// .switch.button_icon.pill {
+// .switch.button_icon.pill, button.button_icon.pill {
 
     // padding: 12px; // Propriedade aplicada aprimorada via JS.
 
-    // .switch_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    // .button_shine { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
     //        
     //     $left: 10px;
     //     
@@ -2180,14 +2268,14 @@ TODO:        >> Button
 
 // ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
 
-.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button.rounded, button.button_text.rounded, button.button_icon.rounded {
 
     justify-content: center;
     border-radius: 1000px; 
     // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_button_dark; // Propriedade aplicada aprimorada via JS. 
     // background: $bg_switch_button_pill_and_rounded_off; 
 
-    .switch_shine { // Shine
+    .button_shine { // Shine 
           
         border-radius: 1000px; 
         background: $bg_switch_button_rounded_shine;
@@ -2203,22 +2291,22 @@ TODO:        >> Button
     }
 }
 
-.switch.button.rounded {
+.switch.button.rounded, button.button.rounded {
 
     padding: 18px;  
 }
 
-.switch.button_text.rounded {
+.switch.button_text.rounded, button.button_text.rounded {
 
     padding: 14px; 
 
-    .switch_text {
+    .piece_text {
 
         text-align: center;
     }
 }
 
-//.switch.button_icon.rounded {
+//.switch.button_icon.rounded, button.button_icon.rounded {
 
     // padding: 12px; // Propriedade aplicada aprimorada via JS.
 //}
@@ -2228,20 +2316,25 @@ TODO:        >> Button
 TODO:            >>> Text Below
 ──────────────────────────── */
 
-.switch.button.text_below {  
+.switch.button.text_below, button.button.text_below {  
 
     justify-content: center; 
 
-    .switch_label {
-
-        flex-direction: column; 
-        justify-content: center; 
-    }
-
-    .switch_text {
+    .piece_text {
 
         text-align: center;
     }
+}
+
+.switch.button.text_below .piece_label {
+
+        flex-direction: column; 
+        justify-content: center; 
+}
+
+button.button.text_below {  
+
+    flex-direction: column; 
 }
  
 /*  
@@ -2254,13 +2347,13 @@ TODO:            >>> Option ON
     background: $bg_switch_button_on;
     //box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_switch_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
  
-    .switch_text {
+    .piece_text {
 
         color: $color_text_switch_button_on;
         filter: drop-shadow(0px 0px 2px $color_text_switch_button_shadowOutline_on); 
     }
 
-    .switch_icon {
+    .piece_icon {
 
         filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_button_on); 
     }
@@ -2293,41 +2386,64 @@ TODO:            >>> Floating Labels
 
 @media (pointer: fine) {
 
-    .switch.button_icon {
+    .switch.button_icon, button.button_icon {
 
-        .switch_label {
-
-            justify-content: center; 
-        }
-        
-        .switch_text {
+        .piece_text {
 
             position: absolute;  
             // top: -50px; // Propriedade aplicada aprimorada via JS. 
             //left: -15px; // Propriedade aplicada aprimorada via JS. 
             padding: 6px 9px; 
             border: 1px solid;
-            border-color: $color_border_switch_button_icon_switch_text_floating_off; 
             border-radius: 1000px;
             font-weight: initial;
-            color: $color_text_switch_button_icon_switch_text_floating_off;
-            background: $bg_switch_button_icon_switch_text_floating_off;
             box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+            filter: initial;
         }
     }
 
-    .switch.button_icon.on .switch_text {
+    .switch.button_icon .piece_text {
 
-        color: $color_text_switch_button_icon_switch_text_floating_on;
-        border-color: $color_border_switch_button_icon_switch_text_floating_on; 
-        background: $bg_switch_button_icon_switch_text_floating_on;
-        filter: initial;
-        box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
+        border-color: $color_border_switch_button_icon_piece_text_floating_off; 
+        color: $color_text_switch_button_icon_piece_text_floating_off;
+        background: $bg_switch_button_icon_piece_text_floating_off;
+    }
+/*  
+    button.button_icon .piece_text {
+
+        $color_border_element_button_icon_piece_text_floating_off: hsl(195, 100%, 50%); 
+        $color_text_element_button_icon_piece_text_floating_off: white; 
+        $bg_element_button_icon_piece_text_floating_off: hsla(195, 100%, 70%, 0.75);
+
+        text-shadow: 1px 1px 1px $color_shadow_text; 
+        border-color: $color_border_element_button_icon_piece_text_floating_off; 
+        color: $color_text_element_button_icon_piece_text_floating_off;
+        background: $bg_element_button_icon_piece_text_floating_off;
+    }
+*/
+    .switch.button_icon .piece_label {
+
+        justify-content: center; 
     }
 
-    .switch.button_icon:hover .switch_text {
+    .switch.button_icon.on, button.button_icon { 
+    
+        .piece_text { 
 
-        display: block !important;
+            color: $color_text_switch_button_icon_piece_text_floating_on;
+            border-color: $color_border_switch_button_icon_piece_text_floating_on; 
+            background: $bg_switch_button_icon_piece_text_floating_on;
+            filter: initial;
+            box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24); 
+        } 
+    }
+
+    .switch.button_icon:hover, button.button_icon:hover {
+    
+        .piece_text {
+
+            display: block !important;
+        }
     }
 }
 
@@ -2336,7 +2452,7 @@ TODO:            >>> Floating Labels
 TODO:        >> Image
 ──────────────────────────── */
       
-.switch.image {
+.switch.image, button.image {
 
     width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
@@ -2345,16 +2461,12 @@ TODO:        >> Image
     min-height: $button_height_smaller;
     border-radius: calc(0.25 * #{$switch_image_icon_size});
     transition: 0.17s; 
-
-    .switch_key {
-        display: none;
-    }
     
-    .switch_text {
+    .piece_text {
         // display: none; // Propriedade aplicada via JS.
     }
 
-    .switch_icon {
+    .piece_icon {
 
         width: $switch_image_icon_size;
         height: $switch_image_icon_size;
@@ -2365,11 +2477,19 @@ TODO:        >> Image
     }
 }
 
+.switch.image .piece_key {
+    
+    display: none;
+}
+
 // ─────────── pill ───────────
 
-.switch.image.pill .switch_icon {
+.switch.image.pill, button.image.pill {
+    
+    .piece_icon {
 
-    border-radius: 1000px !important;
+        border-radius: 1000px !important;
+    }
 }
 
 /*  
@@ -2377,7 +2497,7 @@ TODO:        >> Image
 TODO:            >>> Option ON
 ──────────────────────────── */
 
-.switch.image.on .switch_icon {
+.switch.image.on .piece_icon {
 
     // border: 2px solid white; filter: drop-shadow(0px 0px 6px $color_theme);  
     // box-shadow: 0px 0px 0px 2px white; filter: drop-shadow(0px 0px 6px $color_theme);  
@@ -2393,17 +2513,9 @@ TODO:            >>> Floating Labels
 
 @media (pointer: fine) {  
 
-    .switch.image {
+    .switch.image, button.image {
         
-        .switch_label {
-
-            display: inline-flex;
-            justify-content: center; 
-            align-items: center;
-            position: relative;
-        }
-
-        .switch_text {
+        .piece_text {
 
             position: absolute;  
             // top: -49px; // Propriedade aplicada aprimorada via JS.  
@@ -2412,33 +2524,52 @@ TODO:            >>> Floating Labels
             padding-bottom: 6px;
             // padding-left e padding-right foram aplicados via JS.
             border: 1px solid;
-            border-color: $color_border_switch_image_switch_text_floating_off; 
+            border-color: $color_border_switch_image_piece_text_floating_off; 
             border-radius: 1000px;
-            color: $color_text_switch_image_switch_text_floating_off;
-            background: $bg_switch_image_switch_text_floating_off;
+            color: $color_text_switch_image_piece_text_floating_off;
+            background: $bg_switch_image_piece_text_floating_off;
             font-weight: initial;
             text-align: center;
             box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
         }
     }
 
-    .switch.image.on .switch_label {
+    .switch.image .piece_label {
+
+        display: inline-flex;
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+    }
+
+    button.image {
+
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+    }
+
+    .switch.image.on .piece_label {
         
         filter: initial; 
     }
 
-    .switch.image.on .switch_text {
+    .switch.image.on .piece_text {
 
-        color: $color_text_switch_image_switch_text_floating_on;
-        border-color: $color_border_switch_image_switch_text_floating_on; 
-        background: $bg_switch_image_switch_text_floating_on;
+        color: $color_text_switch_image_piece_text_floating_on;
+        border-color: $color_border_switch_image_piece_text_floating_on; 
+        background: $bg_switch_image_piece_text_floating_on;
         filter: initial;
         box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24);  
     }
 
-    .switch.image:hover .switch_text {
+    .switch.image:hover, button.image:hover {
+        
+        .piece_text {
 
-        display: block !important;
+            display: block !important;
+        }
     }
 }
 
@@ -3408,7 +3539,8 @@ hr {
     }
 }*/
 
-a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+a, button:not(button[disabled], .disabled), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+    
     cursor: pointer;
 }
 

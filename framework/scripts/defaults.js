@@ -8,6 +8,10 @@ gmes-defaults.js
 TODO: Global Variables
 ────────────────────────────────────────────────────── */
 
+var $is_cellphone = innerWidth <= 500 || innerHeight <= 500
+
+var $is_mobile = innerWidth <= 1366 && innerHeight <= 1366
+
 var $color_theme = 'DeepSkyBlue' // VÍNCULO: Váriável SCSS
 
 /*  
@@ -58,22 +62,23 @@ for (i = 0; i < switches.length; i++) {
 TODO:    > Switches Type Button And Buttons Type Button
 ──────────────────────────── */
 
-var $color_shadow_box_inset_switch_button_dark = 'hsla(0, 0%, 0%, 0.33)' // VÍNCULO: Váriável SCSS
-var $color_shadow_box_inset_switch_button_clear = 'white' // VÍNCULO: Váriável SCSS
+var $is_safari_for_desktop_or_is_a_mobile_browser = navigator.vendor.indexOf('Apple') !== -1
+var $is_safari_for_desktop_or_is_a_tablet_browser = $is_safari_for_desktop_or_is_a_mobile_browser && !($is_cellphone)
 
 function switches_type_button_and_buttons_type_button(elements) {
 
+    var $color_shadow_box_inset_switch_button_dark = 'hsla(0, 0%, 0%, 0.33)' // VÍNCULO: Váriável SCSS
+    var $color_shadow_box_inset_switch_button_clear = 'white' // VÍNCULO: Váriável SCSS
+            
     elements.forEach(function ($switch) {
 
         if($switch.classList.contains('button') || $switch.classList.contains('button_text') || $switch.classList.contains('button_icon')) {
 
-            // Bug Fix - O box-shadow interno dos elementos com a classe 'pill' ou 'rounded' não renderizam corretamente no Safari para desktop:
+            // Bug Fix - As sombras internas criadas pelo box-shadow ('box-shadow: inset ...') dos elementos com qualquer uma das classes 
+            // 'pill' ou 'rounded' PODEM não renderizar corretamente no Safari para desktop dependendo do tamanho da janela (seja o 
+            // tamanho horizontal ou vertical):
 
-            var is_cellphone = innerWidth <= 500 || innerHeight <= 500
-
-            var is_safari_for_desktop_or_is_a_tablet_browser = (navigator.vendor.indexOf('Apple') !== -1) && !(is_cellphone)
-            
-            if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && is_safari_for_desktop_or_is_a_tablet_browser) { 
+            if (($switch.classList.contains('pill') || $switch.classList.contains('rounded')) && $is_safari_for_desktop_or_is_a_tablet_browser) { 
             
                 $switch.classList.remove('pill')
                 $switch.classList.remove('rounded')
@@ -81,7 +86,7 @@ function switches_type_button_and_buttons_type_button(elements) {
 
             // Bug Fix - Os elementos com as classes 'button_icon' e 'rounded' ficam muito grandes no mobile:
 
-            if ($switch.classList.contains('button_icon') && $switch.classList.contains('rounded') && innerWidth <= 1366 && innerHeight <= 1366) { 
+            if ($switch.classList.contains('button_icon') && $switch.classList.contains('rounded') && $is_mobile) { 
 
                 $switch.classList.remove('rounded')
                 $switch.classList.add('pill')
@@ -94,17 +99,17 @@ function switches_type_button_and_buttons_type_button(elements) {
             // Obs.: As variáveis 'switch_width' e 'switch_height' não foram colocadas aqui pois 
             // a largura e altura dos botões variam desde o do início até o final desta função.
 
-            var switch_icon_size_default = 32
+            var piece_icon_size_default = 32
 
-            var switch_icon = $switch.querySelector(':scope .switch_icon')
+            var piece_icon = $switch.querySelector(':scope .piece_icon')
 
-            var switch_icon_width = Number(getComputedStyle(switch_icon).getPropertyValue('width').slice(0,-2)) 
-            var switch_icon_height = Number(getComputedStyle(switch_icon).getPropertyValue('height').slice(0,-2)) 
-            var switch_icon_area = switch_icon_width * switch_icon_height
+            var piece_icon_width = Number(getComputedStyle(piece_icon).getPropertyValue('width').slice(0,-2)) 
+            var piece_icon_height = Number(getComputedStyle(piece_icon).getPropertyValue('height').slice(0,-2)) 
+            var piece_icon_area = piece_icon_width * piece_icon_height
 
-            var switch_text = $switch.querySelector(':scope .switch_text')
-            var switch_text_width = Number(getComputedStyle(switch_text).getPropertyValue('width').slice(0,-2)) 
-            var switch_text_height = Number(getComputedStyle(switch_text).getPropertyValue('height').slice(0,-2)) 
+            var piece_text = $switch.querySelector(':scope .piece_text')
+            var piece_text_width = Number(getComputedStyle(piece_text).getPropertyValue('width').slice(0,-2)) 
+            var piece_text_height = Number(getComputedStyle(piece_text).getPropertyValue('height').slice(0,-2)) 
 
             // Variável  smallest_initial_dimension:
             if($switch.classList.contains('button') && !$switch.classList.contains('rounded') && !$switch.classList.contains('text_below')) { var smallest_initial_dimension = 54 }
@@ -115,25 +120,25 @@ function switches_type_button_and_buttons_type_button(elements) {
             if($switch.classList.contains('rounded')) { var smallest_initial_dimension = 56 }
 
             var switch_button_icon_min_size = 50
-            var switch_text_height_of_1_line = 35.84
-            var switch_text_height_of_2_lines = 57.69
+            var piece_text_height_of_1_line = 35.84
+            var piece_text_height_of_2_lines = 57.69
 
             // --------- Brilho ---------
 
-            var shine = $switch.querySelector(':scope .switch_shine') 
+            var shine = $switch.querySelector(':scope .button_shine') 
 
             if (shine === null) {
 
                 var shine = document.createElement('div')
 
-                shine.classList.add('switch_shine')
+                shine.classList.add('button_shine')
             
-                $switch.querySelector(':scope .switch_icon').insertAdjacentElement('beforebegin', shine)
+                $switch.querySelector(':scope .piece_icon').insertAdjacentElement('beforebegin', shine)
             }
 
             // --------- Definir o raio das bordas dos ícones dos botões ---------
 
-            switch_icon.style.borderRadius = 1/4 * Math.min(switch_icon_width, switch_icon_height) +'px' 
+            piece_icon.style.borderRadius = 1/4 * Math.min(piece_icon_width, piece_icon_height) +'px' 
 
             // --------- Definir o preenchimento dos botões em forma de pílula com ícone e texto, e somente texto --------- 
 
@@ -160,7 +165,7 @@ function switches_type_button_and_buttons_type_button(elements) {
 
                     if(!$switch.classList.contains('text_below')) {
 
-                        $switch.style.paddingLeft = 18 + Math.max(0, 0.29 * (switch_icon_height - switch_icon_size_default)) +'px'  
+                        $switch.style.paddingLeft = 18 + Math.max(0, 0.29 * (piece_icon_height - piece_icon_size_default)) +'px'  
                     }
                 }
 
@@ -187,57 +192,57 @@ function switches_type_button_and_buttons_type_button(elements) {
 
             if($switch.classList.contains('button') && $switch.classList.contains('rounded') && !$switch.classList.contains('text_below')) {
 
-                if (switch_icon_width === switch_icon_height) {
+                if (piece_icon_width === piece_icon_height) {
                     
-                    $switch.style.paddingLeft = 18 + Math.max(0, 0.06 * (switch_icon_height - switch_icon_size_default)) +'px'
+                    $switch.style.paddingLeft = 18 + Math.max(0, 0.06 * (piece_icon_height - piece_icon_size_default)) +'px'
 
                 } else {
 
-                    $switch.style.paddingLeft = 18 + Math.max(0, 0.22 * (switch_icon_height - switch_icon_size_default)) +'px'
+                    $switch.style.paddingLeft = 18 + Math.max(0, 0.22 * (piece_icon_height - piece_icon_size_default)) +'px'
                 }
             }
 
-            // --------- Definir o preenchimento dos botões de ícone --------- zzzz
+            // --------- Definir o preenchimento dos botões de ícone ---------
 
             if($switch.classList.contains('button_icon')) {
             
                 if(switch_is_square) {
 
-                    $switch.style.padding = (9/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                    $switch.style.padding = (9/32) * Math.min(piece_icon_width, piece_icon_height) +'px'
                 } 
                 
                 if($switch.classList.contains('pill')) {
 
-                    if(switch_icon_width === switch_icon_height) {
+                    if(piece_icon_width === piece_icon_height) {
 
-                        if(switch_icon_width <= 32 || switch_icon_height <= 32) {
+                        if(piece_icon_width <= 32 || piece_icon_height <= 32) {
 
-                            $switch.style.padding = (12/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                            $switch.style.padding = (12/32) * Math.min(piece_icon_width, piece_icon_height) +'px'
 
                         } else {
 
-                            $switch.style.padding = (11/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                            $switch.style.padding = (11/32) * Math.min(piece_icon_width, piece_icon_height) +'px'
                         }
 
-                    } else if (switch_icon_width > switch_icon_height) {
+                    } else if (piece_icon_width > piece_icon_height) {
 
-                        $switch.style.padding = (10/32) * switch_icon_height +'px '+ (13/32) * switch_icon_height +'px'
+                        $switch.style.padding = (10/32) * piece_icon_height +'px '+ (13/32) * piece_icon_height +'px'
 
-                    }  else if (switch_icon_width < switch_icon_height) {
+                    }  else if (piece_icon_width < piece_icon_height) {
 
-                        $switch.style.padding = (13/32) * switch_icon_width +'px '+ (10/32) * switch_icon_width +'px'
+                        $switch.style.padding = (13/32) * piece_icon_width +'px '+ (10/32) * piece_icon_width +'px'
                     }
                 }
                 /**/
                 if($switch.classList.contains('rounded')) {
 
-                    if(switch_icon_width <= 32 || switch_icon_height <= 32) {
+                    if(piece_icon_width <= 32 || piece_icon_height <= 32) {
 
-                        $switch.style.padding = (12/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                        $switch.style.padding = (12/32) * Math.min(piece_icon_width, piece_icon_height) +'px'
 
                     } else {
 
-                        $switch.style.padding = (11/32) * Math.min(switch_icon_width, switch_icon_height) +'px'
+                        $switch.style.padding = (11/32) * Math.min(piece_icon_width, piece_icon_height) +'px'
                     }
                 }
             }
@@ -280,7 +285,7 @@ function switches_type_button_and_buttons_type_button(elements) {
                 shine.style.width = 'calc(100% - 2 * '+ shine_x +')'
             }
 
-            // ---------- Arredondar botões com a classe 'rounded' ---------- zzzz
+            // ---------- Arredondar botões com a classe 'rounded' ---------- 
 
             if($switch.classList.contains('rounded') && !$switch.classList.contains('text_below')) {
 
@@ -326,31 +331,31 @@ function switches_type_button_and_buttons_type_button(elements) {
                 var switch_width = Number(getComputedStyle($switch).getPropertyValue('width').slice(0,-2)) 
                 var switch_height = Number(getComputedStyle($switch).getPropertyValue('height').slice(0,-2)) 
 
-                switch_text.style.display = 'none' // Esta propriedade foi aplicada aqui para que o JS consiga pegar o valor 'switch_text_width' antes do elemento 'switch_text' ser ocultado.
+                piece_text.style.display = 'none' // Esta propriedade foi aplicada aqui para que o JS consiga pegar o valor 'piece_text_width' antes do elemento 'piece_text' ser ocultado.
 
                 if (!$switch.classList.contains('disabled')) {
 
                     if (switch_height >= switch_button_icon_min_size) {
 
-                        var y0 = 50 + Math.max(0, switch_text_height - switch_text_height_of_1_line) 
+                        var y0 = 50 + Math.max(0, piece_text_height - piece_text_height_of_1_line) 
                         var y_offset = Math.max(0, Math.min(15, 0.00028 * ((switch_width * switch_height) - (switch_button_icon_min_size * switch_button_icon_min_size))))
 
-                        switch_text.style.top = -1 * (y0 + y_offset) + 'px'  
+                        piece_text.style.top = -1 * (y0 + y_offset) + 'px'  
                     }
                 }
 
                 // Padding:
 
-                if (switch_text_height > Math.ceil(switch_text_height_of_2_lines)) { // Altura para 3+ linhas.
+                if (piece_text_height > Math.ceil(piece_text_height_of_2_lines)) { // Altura para 3+ linhas.
                 
-                    switch_text.style.paddingTop = '10px'  
-                    switch_text.style.paddingLeft = '11px'
-                    switch_text.style.paddingRight = '11px'
+                    piece_text.style.paddingTop = '10px'  
+                    piece_text.style.paddingLeft = '11px'
+                    piece_text.style.paddingRight = '11px'
             
                 } else {
             
-                    switch_text.style.paddingLeft = '9px'
-                    switch_text.style.paddingRight = '9px'
+                    piece_text.style.paddingLeft = '9px'
+                    piece_text.style.paddingRight = '9px'
                 } 
             }
 
@@ -360,56 +365,56 @@ function switches_type_button_and_buttons_type_button(elements) {
             
                 if(switch_is_square) {
 
-                    var icon_margin_T = Math.max(10, 0.00050 * switch_icon_area)
-                    var icon_margin_B = Math.max(10, 0.00036 * switch_icon_area) 
-                    var icon_margin_LR = Math.max(10, 0.00050 * switch_icon_area)
+                    var icon_margin_T = Math.max(10, 0.00050 * piece_icon_area)
+                    var icon_margin_B = Math.max(10, 0.00036 * piece_icon_area) 
+                    var icon_margin_LR = Math.max(10, 0.00050 * piece_icon_area)
             
-                    switch_icon.style.marginTop = icon_margin_T +'px '
-                    switch_icon.style.marginBottom = icon_margin_B +'px '
-                    switch_icon.style.marginLeft = icon_margin_LR +'px'  
-                    switch_icon.style.marginRight = icon_margin_LR +'px'
+                    piece_icon.style.marginTop = icon_margin_T +'px '
+                    piece_icon.style.marginBottom = icon_margin_B +'px '
+                    piece_icon.style.marginLeft = icon_margin_LR +'px'  
+                    piece_icon.style.marginRight = icon_margin_LR +'px'
 
                     $switch.style.paddingBottom = icon_margin_B +'px'
                 } 
 
                 if ($switch.classList.contains('pill')) { 
 
-                    var icon_margin_T = Math.max(10, 0.00050 * switch_icon_area)
-                    var icon_margin_B = Math.max(10, 0.00043 * switch_icon_area)  
-                    var icon_margin_LR = Math.max(12, 0.0011 * switch_icon_area)
+                    var icon_margin_T = Math.max(10, 0.00050 * piece_icon_area)
+                    var icon_margin_B = Math.max(10, 0.00043 * piece_icon_area)  
+                    var icon_margin_LR = Math.max(12, 0.0011 * piece_icon_area)
             
-                    switch_icon.style.marginTop = icon_margin_T +'px'
-                    switch_icon.style.marginBottom = icon_margin_B +'px'
-                    switch_icon.style.marginLeft = icon_margin_LR +'px'  
-                    switch_icon.style.marginRight = icon_margin_LR +'px'
+                    piece_icon.style.marginTop = icon_margin_T +'px'
+                    piece_icon.style.marginBottom = icon_margin_B +'px'
+                    piece_icon.style.marginLeft = icon_margin_LR +'px'  
+                    piece_icon.style.marginRight = icon_margin_LR +'px'
 
                     $switch.style.paddingBottom = 1.14 * icon_margin_B +'px'
 
                     var text_margin_LR = 12
 
-                    switch_text.style.marginLeft = text_margin_LR +'px'  
-                    switch_text.style.marginRight = text_margin_LR +'px'   
+                    piece_text.style.marginLeft = text_margin_LR +'px'  
+                    piece_text.style.marginRight = text_margin_LR +'px'   
 
                     $switch.style.paddingRight = Number(getComputedStyle($switch).getPropertyValue('padding-left').slice(0,-2))  +'px'
                 }  
 
                 if($switch.classList.contains('rounded')) {
 
-                    var icon_margin_T = Math.max(20, 0.00073 * switch_icon_area)
-                    var icon_margin_B = Math.max(10, 0.00036 * switch_icon_area) 
-                    var icon_margin_LR = Math.max(10, 0.00050 * switch_icon_area)
+                    var icon_margin_T = Math.max(20, 0.00073 * piece_icon_area)
+                    var icon_margin_B = Math.max(10, 0.00036 * piece_icon_area) 
+                    var icon_margin_LR = Math.max(10, 0.00050 * piece_icon_area)
             
-                    switch_icon.style.marginTop = icon_margin_T +'px '
-                    switch_icon.style.marginBottom = icon_margin_B +'px '
-                    switch_icon.style.marginLeft = icon_margin_LR +'px'  
-                    switch_icon.style.marginRight = icon_margin_LR +'px'
+                    piece_icon.style.marginTop = icon_margin_T +'px '
+                    piece_icon.style.marginBottom = icon_margin_B +'px '
+                    piece_icon.style.marginLeft = icon_margin_LR +'px'  
+                    piece_icon.style.marginRight = icon_margin_LR +'px'
 
                     $switch.style.paddingBottom = icon_margin_B +'px'
 
                     var text_margin_LR = 12
 
-                    switch_text.style.marginLeft = text_margin_LR +'px'  
-                    switch_text.style.marginRight = text_margin_LR +'px'   
+                    piece_text.style.marginLeft = text_margin_LR +'px'  
+                    piece_text.style.marginRight = text_margin_LR +'px'   
                 }
             
                 if($switch.classList.contains('rounded')) { // Arredondar botões com a classe 'rounded'.
@@ -450,32 +455,58 @@ function switches_type_button_and_buttons_type_button(elements) {
             var $ON_pill_and_rounded_delta_blur = 7 * constant_of_increase 
             var $ON_pill_and_rounded_delta_spread = 5 * constant_of_increase 
 
+            /*if(!$switch.classList.contains('switch')) {
+
+                $color_shadow_box_inset_switch_button_dark = 'hsla(0, 0%, 100%, 0.99)' 
+                $color_shadow_box_inset_switch_button_dark = 'hsla(0, 0%, 0%, 0.43)' 
+                $color_shadow_box_inset_switch_button_dark = 'hsla(195, 100%, 30%, 1)' 
+                $color_shadow_box_inset_switch_button_dark = 'hsla(0, 0%, 0%, 0.5)' 
+            }*/
+
             update_button_boxShadow($switch)
 
             function update_button_boxShadow() {
 
                 if($switch.classList.contains('button') || $switch.classList.contains('button_text') || $switch.classList.contains('button_icon')) { 
 
-                    if(!$switch.classList.contains('on')) { // OFF
+                    var box_shadow_out_clear_square = '0px 0px 12px 0px '+ $color_theme
+                    
+                    var box_shadow_out_clear_no_square = '0px 0px 12px 0px '+ $color_theme
 
-                        if(switch_is_square) {
+                    if($switch.classList.contains('switch')) { 
 
-                            $switch.style.boxShadow = 'inset 0px 0px '+ (8 + $OFF_square_delta_blur) +'px '+ (1 + $OFF_square_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_dark
+                        if(!$switch.classList.contains('on')) { // OFF
 
-                        } else {
-                            
-                            $switch.style.boxShadow = 'inset 0px 0px '+ (10 + $OFF_pill_and_rounded_delta_blur) +'px '+ (1 + $OFF_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_dark
+                            if(switch_is_square) {
+
+                                $switch.style.boxShadow = 'inset 0px 0px '+ (8 + $OFF_square_delta_blur) +'px '+ (1 + $OFF_square_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_dark
+
+                            } else {
+                                
+                                $switch.style.boxShadow = 'inset 0px 0px '+ (10 + $OFF_pill_and_rounded_delta_blur) +'px '+ (1 + $OFF_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_dark
+                            }
+
+                        } else { // ON
+
+                            if(switch_is_square) {
+
+                                $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (4 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', '+ box_shadow_out_clear_square
+
+                            } else {
+
+                                $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (4 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', '+ box_shadow_out_clear_no_square
+                            }
                         }
 
-                    } else { // ON
+                    } else if ($switch.nodeName === 'BUTTON') {  
 
                         if(switch_is_square) {
 
-                            $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (4 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', 0px 0px 12px 0px '+ $color_theme
+                            $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (5 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
 
-                        } else {
+                        } else { 
 
-                            $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (4 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', 0px 0px 12px 0px '+ $color_theme
+                            $switch.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (5 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_switch_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
                         }
                     }
                 }
@@ -492,7 +523,7 @@ function switches_type_button_and_buttons_type_button(elements) {
     })
 }
 
-switches_type_button_and_buttons_type_button(document.querySelectorAll('.switch.button, .switch.button_text, .switch.button_icon'))
+switches_type_button_and_buttons_type_button(document.querySelectorAll('.switch.button, .switch.button_text, .switch.button_icon, button.button, button.button_text, button.button_icon'))
 
 /*  
 ────────────────────────────
@@ -505,54 +536,54 @@ function switches_type_image_and_buttons_type_image(elements) {
 
         if($switch.classList.contains('image')) {
 
-            var switch_icon = $switch.querySelector(':scope .switch_icon')
-            var switch_icon_width = Number(getComputedStyle(switch_icon).getPropertyValue('width').slice(0,-2)) 
-            var switch_icon_height = Number(getComputedStyle(switch_icon).getPropertyValue('height').slice(0,-2)) 
-            var switch_icon_area = switch_icon_width * switch_icon_height
+            var piece_icon = $switch.querySelector(':scope .piece_icon')
+            var piece_icon_width = Number(getComputedStyle(piece_icon).getPropertyValue('width').slice(0,-2)) 
+            var piece_icon_height = Number(getComputedStyle(piece_icon).getPropertyValue('height').slice(0,-2)) 
+            var piece_icon_area = piece_icon_width * piece_icon_height
 
-            var switch_icon_min_size = 48
+            var piece_icon_min_size = 48
 
-            var switch_text = $switch.querySelector(':scope .switch_text')
-            // var switch_text_width = Number(getComputedStyle(switch_text).getPropertyValue('width').slice(0,-2)) 
-            var switch_text_height = Number(getComputedStyle(switch_text).getPropertyValue('height').slice(0,-2)) 
+            var piece_text = $switch.querySelector(':scope .piece_text')
+            // var piece_text_width = Number(getComputedStyle(piece_text).getPropertyValue('width').slice(0,-2)) 
+            var piece_text_height = Number(getComputedStyle(piece_text).getPropertyValue('height').slice(0,-2)) 
 
-            var switch_text_height_of_1_line = 35.84
-            var switch_text_height_of_2_lines = 57.69
+            var piece_text_height_of_1_line = 35.84
+            var piece_text_height_of_2_lines = 57.69
 
             // --------- Arredondar botões (ícones) --------- 
             
-            switch_icon.style.borderRadius = 1/4 * Math.min(switch_icon_width, switch_icon_height) +'px' 
+            piece_icon.style.borderRadius = 1/4 * Math.min(piece_icon_width, piece_icon_height) +'px' 
 
             // ---------- Propriedade top da etiqueta de hover dos botões ---------- 
 
-            switch_text.style.display = 'none' // Esta propriedade foi aplicada aqui para que o JS consiga pegar o valor 'switch_text_width' antes do elemento 'switch_text' ser ocultado.
+            piece_text.style.display = 'none' // Esta propriedade foi aplicada aqui para que o JS consiga pegar o valor 'piece_text_width' antes do elemento 'piece_text' ser ocultado.
 
             if (!$switch.classList.contains('disabled')) {
 
-                var y0 = 49 + Math.max(0, switch_text_height - switch_text_height_of_1_line)
-                var y_offset = Math.min(15, 0.00028 * (switch_icon_area - (switch_icon_min_size * switch_icon_min_size)))
+                var y0 = 49 + Math.max(0, piece_text_height - piece_text_height_of_1_line)
+                var y_offset = Math.min(15, 0.00028 * (piece_icon_area - (piece_icon_min_size * piece_icon_min_size)))
 
-                switch_text.style.top = -1 * (y0 + y_offset) + 'px'   
+                piece_text.style.top = -1 * (y0 + y_offset) + 'px'   
             }
 
             // ---------- Padding da etiqueta de hover dos botões ---------- 
 
-            if (switch_text_height > Math.ceil(switch_text_height_of_2_lines)) { // Altura para 3+ linhas.
+            if (piece_text_height > Math.ceil(piece_text_height_of_2_lines)) { // Altura para 3+ linhas.
                 
-                switch_text.style.paddingTop = '10px'  
-                switch_text.style.paddingLeft = '11px'
-                switch_text.style.paddingRight = '11px'
+                piece_text.style.paddingTop = '10px'  
+                piece_text.style.paddingLeft = '11px'
+                piece_text.style.paddingRight = '11px'
 
             } else {
 
-                switch_text.style.paddingLeft = '9px'
-                switch_text.style.paddingRight = '9px'
+                piece_text.style.paddingLeft = '9px'
+                piece_text.style.paddingRight = '9px'
             } 
         }
     })
 }
 
-switches_type_image_and_buttons_type_image(document.querySelectorAll('.switch.image'))
+switches_type_image_and_buttons_type_image(document.querySelectorAll('.switch.image, button.image'))
 
 /*  
 ────────────────────────────
@@ -565,9 +596,9 @@ function update_switches_and_buttons(elements, type_number) {
 
         // --------- Desfazer alterações dos tipos --------- 
 
-        var switch_icon = $switch.querySelector(':scope .switch_icon')
-        var switch_text = $switch.querySelector(':scope .switch_text')
-        var shine = $switch.querySelector(':scope .switch_shine') 
+        var piece_icon = $switch.querySelector(':scope .piece_icon')
+        var piece_text = $switch.querySelector(':scope .piece_text')
+        var shine = $switch.querySelector(':scope .button_shine') 
 
         $switch.style.width = '' 
         $switch.style.height = ''
@@ -575,17 +606,17 @@ function update_switches_and_buttons(elements, type_number) {
         $switch.style.borderRadius = ''
         $switch.style.boxShadow = ''
 
-        switch_icon.style.borderRadius = ''
-        switch_icon.style.margin = ''
+        piece_icon.style.borderRadius = ''
+        piece_icon.style.margin = ''
 
-        switch_text.style.display = 'inline'
-        switch_text.style.padding = ''
-        switch_text.style.margin = ''
-        switch_text.style.top = ''
+        piece_text.style.display = 'inline'
+        piece_text.style.padding = ''
+        piece_text.style.margin = ''
+        piece_text.style.top = ''
          
         if (shine !== null) { // <- Verifica se o brilho existe.
 
-            $switch.querySelector(':scope .switch_shine').remove()
+            $switch.querySelector(':scope .button_shine').remove()
 
             /* shine.style.width = ''; shine.style.borderRadius = ''; shine.style.left = '' */
         }
@@ -1052,7 +1083,7 @@ var rule
 
 for(i = 0; i < stylesheet.cssRules.length; i++) {
 
-    if(stylesheet.cssRules[i].selectorText === '.switch.button.pill .switch_label::after') {
+    if(stylesheet.cssRules[i].selectorText === '.switch.button.pill .piece_label::after') {
         
         rule = stylesheet.cssRules[i]
     }

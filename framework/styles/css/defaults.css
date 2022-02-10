@@ -416,6 +416,14 @@ h20 {
   text-fill-color: transparent;
 }
 
+.mini_topic {
+  font-size: 19rem;
+  background: 0;
+  text-align: center;
+  font-weight: bold;
+  -webkit-text-fill-color: initial;
+}
+
 p, li, ul, ol, dl, dt, dd {
   line-height: 1.5;
 }
@@ -659,6 +667,10 @@ p.container_text {
     margin-left: calc(1 * 20px + 21px);
     margin-right: 20px;
   }
+}
+
+.list_index > ul > li > ul > li > a {
+  text-decoration: underline;
 }
 
 .list_featured {
@@ -1596,24 +1608,26 @@ select {
 /*  
 ────────────────────────────
 TODO:        >> button
-──────────────────────────── */
+──────────────────────────── 
+
 button {
-  min-width: 116px;
-  color: white;
-  padding: 10rem 16rem;
-  border-width: 0;
-  border-radius: 100px;
-  margin-top: 16rem;
-  margin-bottom: 16rem;
-  background: url(../../images/bgs/button.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+    min-width: 116px; // Tava em 120px
+    color: $color_text_menu;
+    padding: 10rem 16rem;
+    border-width: 0;
+    border-radius: 100px;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    background: $bg_button;
+    text-shadow: 1px 1px 1px $color_shadow_text; 
+    box-shadow: 
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 }
 
 button:disabled {
-  opacity: 0.5;
-}
-
+    opacity: 0.5;
+}*/
 /*  
 ────────────────────────────
 TODO:    > Focus Effect
@@ -1767,9 +1781,9 @@ TODO:    > Class
 
 /*  
 ──────────────────────────────────────────────────────
-TODO:    > Switches 
+TODO:    > Switches And Buttons
 ────────────────────────────────────────────────────── */
-.switch {
+.switch, button {
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: 20px;
@@ -1777,13 +1791,17 @@ TODO:    > Switches
   cursor: pointer;
 }
 
-.switch .switch_text {
+.switch .piece_text, button .piece_text {
   text-align: justify;
 }
 
-.switch.disabled {
+.switch.disabled, button.disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+button {
+  border-width: 0;
 }
 
 /*  
@@ -1796,7 +1814,7 @@ TODO:        >> Key
   align-items: center;
 }
 
-.switch.key .switch_key, .switch.key_no_icon .switch_key {
+.switch.key .piece_key, .switch.key_no_icon .piece_key {
   order: 1;
   margin-left: 18px;
   margin-right: 0;
@@ -1804,7 +1822,7 @@ TODO:        >> Key
   background: linear-gradient(to bottom, #b3b3b3, #bababa, white);
 }
 
-.switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
+.switch.key .piece_key::before, .switch.key_no_icon .piece_key::before {
   content: '';
   display: inline-block;
   position: relative;
@@ -1813,7 +1831,7 @@ TODO:        >> Key
   transition: all 0.39s;
 }
 
-.switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
+.switch.key .piece_key::after, .switch.key_no_icon .piece_key::after {
   content: '';
   display: inline-block;
   position: relative;
@@ -1822,14 +1840,14 @@ TODO:        >> Key
   transition: all 0.39s;
 }
 
-.switch.key .switch_label, .switch.key_no_icon .switch_label {
+.switch.key .piece_label, .switch.key_no_icon .piece_label {
   display: inline-flex;
   align-items: center;
   margin: 0;
   text-indent: 0;
 }
 
-.switch.key .switch_icon, .switch.key_no_icon .switch_icon {
+.switch.key .piece_icon, .switch.key_no_icon .piece_icon {
   width: 32px;
   height: 32px;
   margin-right: 12px;
@@ -1837,40 +1855,40 @@ TODO:        >> Key
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
 }
 
-.switch.key .switch_text, .switch.key_no_icon .switch_text {
+.switch.key .piece_text, .switch.key_no_icon .piece_text {
   line-height: 1.5;
 }
 
-.switch.key_no_icon .switch_icon {
+.switch.key_no_icon .piece_icon {
   display: none;
 }
 
-.switch.key.on .switch_key, .switch.key_no_icon.on .switch_key {
+.switch.key.on .piece_key, .switch.key_no_icon.on .piece_key {
   border-color: #33e7ff;
   background: white;
   box-shadow: 0px 0px 6px 0px rgba(0, 199, 230, 0.5);
 }
 
-.switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
+.switch.key.on .piece_key::before, .switch.key_no_icon.on .piece_key::before {
   border: 1px solid #99f3ff;
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, white 75%), cyan;
   box-shadow: 0px 0px 13px 0px #33e4ff;
 }
 
-.switch.key.disabled .switch_key::before, .switch.key_no_icon.disabled .switch_key::before {
+.switch.key.disabled .piece_key::before, .switch.key_no_icon.disabled .piece_key::before {
   border-top: 0;
   border-bottom: 0;
 }
 
-.switch.key.disabled .switch_label, .switch.key_no_icon.disabled .switch_label {
+.switch.key.disabled .piece_label, .switch.key_no_icon.disabled .piece_label {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.switch.key.on.disabled .switch_key, .switch.key_no_icon.on.disabled .switch_key {
+.switch.key.on.disabled .piece_key, .switch.key_no_icon.on.disabled .piece_key {
   box-shadow: none;
 }
 
-.switch.key.on.disabled .switch_key::before, .switch.key_no_icon.on.disabled .switch_key::before {
+.switch.key.on.disabled .piece_key::before, .switch.key_no_icon.on.disabled .piece_key::before {
   border: 2px solid #99f3ff;
   box-shadow: none;
 }
@@ -1879,7 +1897,7 @@ TODO:        >> Key
   justify-content: initial;
 }
 
-.switch.key.inverted .switch_key, .switch.key_no_icon.inverted .switch_key {
+.switch.key.inverted .piece_key, .switch.key_no_icon.inverted .piece_key {
   /*  
         order: 1;
         margin-left: 18px; 
@@ -1894,13 +1912,13 @@ TODO:        >> Key
 ────────────────────────────
 TODO:            >>> Sizes & Positions
 ──────────────────────────── */
-.switch.key .switch_key, .switch.key_no_icon .switch_key {
+.switch.key .piece_key, .switch.key_no_icon .piece_key {
   min-width: 47px;
   height: 6px;
   border: 1px solid black;
 }
 
-.switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
+.switch.key .piece_key::before, .switch.key_no_icon .piece_key::before {
   top: -11px;
   left: -2px;
   width: 24px;
@@ -1908,14 +1926,14 @@ TODO:            >>> Sizes & Positions
   border: 0;
 }
 
-.switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
+.switch.key .piece_key::after, .switch.key_no_icon .piece_key::after {
   top: -19px;
   left: -21px;
   width: 14px;
   height: 14px;
 }
 
-.switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
+.switch.key.on .piece_key::before, .switch.key_no_icon.on .piece_key::before {
   top: -10px;
   left: 23px;
   width: calc(24px + 2);
@@ -1923,40 +1941,40 @@ TODO:            >>> Sizes & Positions
   transition: all 0.39s;
 }
 
-.switch.key.on .switch_key::after, .switch.key_no_icon.on .switch_key::after {
+.switch.key.on .piece_key::after, .switch.key_no_icon.on .piece_key::after {
   top: calc(-0.9 * 24px + 4px);
   left: calc(-1.05 * 24px + 0.25 * 24px + 23px);
   transition: all 0.39s;
 }
 
 @media (max-width: 501px), (max-height: 501px) {
-  .switch.key .switch_key, .switch.key_no_icon .switch_key {
+  .switch.key .piece_key, .switch.key_no_icon .piece_key {
     min-width: calc(53px + 28px - 24px);
     height: 8px;
     background: linear-gradient(to bottom, #b3b3b3, #c9c9c9, white);
   }
-  .switch.key .switch_key::before, .switch.key_no_icon .switch_key::before {
+  .switch.key .piece_key::before, .switch.key_no_icon .piece_key::before {
     top: -12px;
     width: 28px;
     height: 28px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.5)), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.6) 50%, rgba(0, 0, 0, 0.45) 75%), #cccccc;
   }
-  .switch.key .switch_key::after, .switch.key_no_icon .switch_key::after {
+  .switch.key .piece_key::after, .switch.key_no_icon .piece_key::after {
     top: calc(-0.9 * 28px + 4px);
     left: calc(-1.05 * 28px + 0.25 * 28px - 2px);
     width: calc(0.6 * 28px);
     height: calc(0.6 * 28px);
   }
-  .switch.key.on .switch_key, .switch.key_no_icon.on .switch_key {
+  .switch.key.on .piece_key, .switch.key_no_icon.on .piece_key {
     box-shadow: 0px 0px 6px 0px rgba(0, 221, 255, 0.6);
   }
-  .switch.key.on .switch_key::before, .switch.key_no_icon.on .switch_key::before {
+  .switch.key.on .piece_key::before, .switch.key_no_icon.on .piece_key::before {
     top: -11px;
     left: 29px;
     width: calc(28px + 2);
     height: calc(28px + 2);
   }
-  .switch.key.on .switch_key::after, .switch.key_no_icon.on .switch_key::after {
+  .switch.key.on .piece_key::after, .switch.key_no_icon.on .piece_key::after {
     top: calc(-0.9 * 28px + 5px);
     left: calc(-1.05 * 28px + 0.25 * 28px + 29px);
     transition: all 0.42s;
@@ -1967,7 +1985,7 @@ TODO:            >>> Sizes & Positions
 ────────────────────────────
 TODO:        >> Button
 ──────────────────────────── */
-.switch.button, .switch.button_text, .switch.button_icon {
+.switch.button, .switch.button_text, .switch.button_icon, button.button, button.button_text, button.button_icon {
   display: flex;
   align-items: center;
   position: relative;
@@ -1978,20 +1996,10 @@ TODO:        >> Button
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   min-width: 32px;
   min-height: 32px;
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #f0f0f0;
   transition: 0s;
 }
 
-.switch.button .switch_key, .switch.button_text .switch_key, .switch.button_icon .switch_key {
-  display: none;
-}
-
-.switch.button .switch_label, .switch.button_text .switch_label, .switch.button_icon .switch_label {
-  display: inline-flex;
-  align-items: center;
-}
-
-.switch.button .switch_shine, .switch.button_text .switch_shine, .switch.button_icon .switch_shine {
+.switch.button .button_shine, .switch.button_text .button_shine, .switch.button_icon .button_shine, button.button .button_shine, button.button_text .button_shine, button.button_icon .button_shine {
   content: '';
   position: absolute;
   z-index: 1;
@@ -2002,68 +2010,124 @@ TODO:        >> Button
   height: 49.8%;
 }
 
-.switch.button .switch_text, .switch.button_text .switch_text, .switch.button_icon .switch_text {
-  color: gray;
+.switch.button .piece_text, .switch.button_text .piece_text, .switch.button_icon .piece_text, button.button .piece_text, button.button_text .piece_text, button.button_icon .piece_text {
   font-weight: bold;
 }
 
-.switch.button .switch_icon, .switch.button_text .switch_icon, .switch.button_icon .switch_icon {
+.switch.button .piece_icon, .switch.button_text .piece_icon, .switch.button_icon .piece_icon, button.button .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon {
   width: 32px;
   height: 32px;
   margin-right: 12px;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.45));
 }
 
-.switch.button {
+.switch.button, .switch.button_text, .switch.button_icon {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #f0f0f0;
+}
+
+.switch.button .piece_key, .switch.button_text .piece_key, .switch.button_icon .piece_key {
+  display: none;
+}
+
+.switch.button .piece_label, .switch.button_text .piece_label, .switch.button_icon .piece_label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.switch.button .piece_text, .switch.button_text .piece_text, .switch.button_icon .piece_text {
+  color: gray;
+}
+
+button.button, button.button_text, button.button_icon {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
+}
+
+button.button .button_shine, button.button_text .button_shine, button.button_icon .button_shine {
+  opacity: 0.9;
+}
+
+button.button .piece_text, button.button_text .piece_text, button.button_icon .piece_text {
+  color: white;
+  filter: drop-shadow(0px 0px 2px #00c8ff);
+}
+
+button.button:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+  filter: drop-shadow(0px 0px 5px #24c8ff);
+}
+
+button.button:not(.disabled):hover .button_shine, button.button_text:not(.disabled):hover .button_shine, button.button_icon:not(.disabled):hover .button_shine {
+  opacity: 1;
+}
+
+button.estilo_2 {
+  background: linear-gradient(to bottom, white, #57d5ff 80%, deepskyblue, #0099cc);
+  box-shadow: 0 0px 0px 1px #33ccff, inset 0 0px 9px 4px rgba(255, 255, 255, 0.7) !important;
+}
+
+button.estilo_2 .button_shine {
+  opacity: 0.85;
+}
+
+button.estilo_3 {
+  background: linear-gradient(to bottom, #33ccff, #7adeff, #33ccff);
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+.switch.button, button.button {
   padding: 11px;
   padding-right: 12px;
 }
 
-.switch.button_text {
+.switch.button_text, button.button_text {
   padding: 10px;
   padding-right: 11px;
 }
 
-.switch.button_text .switch_icon {
+.switch.button_text .piece_icon, button.button_text .piece_icon {
   display: none;
 }
 
-.switch.button_icon {
+.switch.button_icon, button.button_icon {
   justify-content: center;
 }
 
-.switch.button_icon .switch_text {
+.switch.button_icon .piece_text, button.button_icon .piece_text {
   text-align: center;
 }
 
-.switch.button_icon .switch_icon {
+.switch.button_icon .piece_icon, button.button_icon .piece_icon {
   margin: 0;
 }
 
-.switch.button.disabled .switch_label, .switch.button_text.disabled .switch_label {
+.switch.button.disabled .piece_label, .switch.button_text.disabled .piece_label {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.switch.button_icon.disabled .switch_text {
+button.button.disabled, button.button_text.disabled {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.switch.button_icon.disabled .piece_text, button.button_icon.disabled .piece_text {
   z-index: 1;
 }
 
-.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill {
+.switch.button.pill, .switch.button_text.pill, .switch.button_icon.pill, button.button.pill, button.button_text.pill, button.button_icon.pill {
   border-radius: 1000px;
 }
 
-.switch.button.pill .switch_shine, .switch.button_text.pill .switch_shine, .switch.button_icon.pill .switch_shine {
+.switch.button.pill .button_shine, .switch.button_text.pill .button_shine, .switch.button_icon.pill .button_shine, button.button.pill .button_shine, button.button_text.pill .button_shine, button.button_icon.pill .button_shine {
   top: 2px;
   height: 49.5%;
   border-radius: 1000px;
 }
 
-.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+.switch.button.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button.rounded, button.button_text.rounded, button.button_icon.rounded {
   justify-content: center;
   border-radius: 1000px;
 }
 
-.switch.button.rounded .switch_shine, .switch.button_text.rounded .switch_shine, .switch.button_icon.rounded .switch_shine {
+.switch.button.rounded .button_shine, .switch.button_text.rounded .button_shine, .switch.button_icon.rounded .button_shine, button.button.rounded .button_shine, button.button_text.rounded .button_shine, button.button_icon.rounded .button_shine {
   border-radius: 1000px;
   background: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center/100% 100% no-repeat;
   height: calc(100% - 2 * 3px);
@@ -2071,15 +2135,15 @@ TODO:        >> Button
   width: calc(100% - 2 * 3px);
 }
 
-.switch.button.rounded {
+.switch.button.rounded, button.button.rounded {
   padding: 18px;
 }
 
-.switch.button_text.rounded {
+.switch.button_text.rounded, button.button_text.rounded {
   padding: 14px;
 }
 
-.switch.button_text.rounded .switch_text {
+.switch.button_text.rounded .piece_text, button.button_text.rounded .piece_text {
   text-align: center;
 }
 
@@ -2087,17 +2151,21 @@ TODO:        >> Button
 ────────────────────────────
 TODO:            >>> Text Below
 ──────────────────────────── */
-.switch.button.text_below {
+.switch.button.text_below, button.button.text_below {
   justify-content: center;
 }
 
-.switch.button.text_below .switch_label {
+.switch.button.text_below .piece_text, button.button.text_below .piece_text {
+  text-align: center;
+}
+
+.switch.button.text_below .piece_label {
   flex-direction: column;
   justify-content: center;
 }
 
-.switch.button.text_below .switch_text {
-  text-align: center;
+button.button.text_below {
+  flex-direction: column;
 }
 
 /*  
@@ -2108,12 +2176,12 @@ TODO:            >>> Option ON
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
 }
 
-.switch.button.on .switch_text, .switch.button_text.on .switch_text, .switch.button_icon.on .switch_text {
+.switch.button.on .piece_text, .switch.button_text.on .piece_text, .switch.button_icon.on .piece_text {
   color: white;
   filter: drop-shadow(0px 0px 2px #00a0cc);
 }
 
-.switch.button.on .switch_icon, .switch.button_text.on .switch_icon, .switch.button_icon.on .switch_icon {
+.switch.button.on .piece_icon, .switch.button_text.on .piece_icon, .switch.button_icon.on .piece_icon {
   filter: drop-shadow(0px 0px 1px #00d4f0);
 }
 
@@ -2122,28 +2190,44 @@ TODO:            >>> Option ON
 TODO:            >>> Floating Labels
 ──────────────────────────── */
 @media (pointer: fine) {
-  .switch.button_icon .switch_label {
-    justify-content: center;
-  }
-  .switch.button_icon .switch_text {
+  .switch.button_icon .piece_text, button.button_icon .piece_text {
     position: absolute;
     padding: 6px 9px;
     border: 1px solid;
-    border-color: #bdbdbd;
     border-radius: 1000px;
     font-weight: initial;
+    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
+    filter: initial;
+  }
+  .switch.button_icon .piece_text {
+    border-color: #bdbdbd;
     color: #ababab;
     background: linear-gradient(to bottom, white, #e8e8e8);
-    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
   }
-  .switch.button_icon.on .switch_text {
+  /*  
+    button.button_icon .piece_text {
+
+        $color_border_element_button_icon_piece_text_floating_off: hsl(195, 100%, 50%); 
+        $color_text_element_button_icon_piece_text_floating_off: white; 
+        $bg_element_button_icon_piece_text_floating_off: hsla(195, 100%, 70%, 0.75);
+
+        text-shadow: 1px 1px 1px $color_shadow_text; 
+        border-color: $color_border_element_button_icon_piece_text_floating_off; 
+        color: $color_text_element_button_icon_piece_text_floating_off;
+        background: $bg_element_button_icon_piece_text_floating_off;
+    }
+*/
+  .switch.button_icon .piece_label {
+    justify-content: center;
+  }
+  .switch.button_icon.on .piece_text, button.button_icon .piece_text {
     color: #33d3ff;
     border-color: #5cdcff;
     background: linear-gradient(to bottom, white, #d6f6ff);
     filter: initial;
     box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
   }
-  .switch.button_icon:hover .switch_text {
+  .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text {
     display: block !important;
   }
 }
@@ -2152,7 +2236,7 @@ TODO:            >>> Floating Labels
 ────────────────────────────
 TODO:        >> Image
 ──────────────────────────── */
-.switch.image {
+.switch.image, button.image {
   width: max-content;
   -moz-width: fit-content;
   width: fit-content;
@@ -2164,18 +2248,18 @@ TODO:        >> Image
   transition: 0.17s;
 }
 
-.switch.image .switch_key {
-  display: none;
-}
-
-.switch.image .switch_icon {
+.switch.image .piece_icon, button.image .piece_icon {
   width: 48px;
   height: 48px;
   margin: 0;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
 }
 
-.switch.image.pill .switch_icon {
+.switch.image .piece_key {
+  display: none;
+}
+
+.switch.image.pill .piece_icon, button.image.pill .piece_icon {
   border-radius: 1000px !important;
 }
 
@@ -2183,7 +2267,7 @@ TODO:        >> Image
 ────────────────────────────
 TODO:            >>> Option ON
 ──────────────────────────── */
-.switch.image.on .switch_icon {
+.switch.image.on .piece_icon {
   box-shadow: 0px 0px 0px 2px white, 0px 0px 12px 2px DeepSkyBlue;
 }
 
@@ -2192,13 +2276,7 @@ TODO:            >>> Option ON
 TODO:            >>> Floating Labels
 ──────────────────────────── */
 @media (pointer: fine) {
-  .switch.image .switch_label {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .switch.image .switch_text {
+  .switch.image .piece_text, button.image .piece_text {
     position: absolute;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -2211,17 +2289,29 @@ TODO:            >>> Floating Labels
     text-align: center;
     box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
   }
-  .switch.image.on .switch_label {
+  .switch.image .piece_label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  button.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .switch.image.on .piece_label {
     filter: initial;
   }
-  .switch.image.on .switch_text {
+  .switch.image.on .piece_text {
     color: #33d3ff;
     border-color: #5cdcff;
     background: linear-gradient(to bottom, white, #d6f6ff);
     filter: initial;
     box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
   }
-  .switch.image:hover .switch_text {
+  .switch.image:hover .piece_text, button.image:hover .piece_text {
     display: block !important;
   }
 }
@@ -3168,7 +3258,7 @@ hr {
         margin-right: 0;
     }
 }*/
-a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+a, button:not(button[disabled]):not(.disabled), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
   cursor: pointer;
 }
 
