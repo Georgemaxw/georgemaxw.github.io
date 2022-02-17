@@ -27,41 +27,60 @@ do framework aqui quando for usar este arquivo em um projeto.)
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Switches (And Buttons) Examples
+TODO: Switches & Buttons Examples
 ────────────────────────────────────────────────────── */
 
 // Switches Style
 
-.SS_width_100_percent {
+.width_100_percent {
     width: 100% !important;
 }
 
-.SS_width_200px {
+.width_150px {
+    width: 150px !important;
+}
+
+.width_200px {
     width: 200px !important;
 }
 
-.SS_width_250px {
+.width_250px {
     width: 250px !important;
 }
 
-.SS_200x300 {
+.size_300x450 {
+    width: 300px !important;
+    height: 450px !important;
+}
+
+.size_200x300 {
     width: 200px !important;
     height: 300px !important;
 }
 
-.SS_300x200 {
+.size_300x200 {
     width: 300px !important;
     height: 200px !important;
 }
 
-.SS_300x150 {
+.size_300x150 {
     width: 300px !important;
     height: 150px !important;
 }
 
-.SS_156x156 {
+.size_200x100 {
+    width: 200px !important;
+    height: 100px !important;
+}
+
+.size_156x156 {
     width: 156px !important;
     height: 156px !important;
+}
+
+.size_100x100 {
+    width: 100px !important;
+    height: 100px !important;
 }
 
 /*  

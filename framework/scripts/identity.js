@@ -93,7 +93,7 @@ function choice_example_2_Action_3() {
     document.querySelector('.choice_divsExample_2_div_3').style = 'display: block'
 }
 
-// Switches (And Buttons) - Sample functions:
+// Switches & Buttons - Sample functions:
 
 function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) /*console.log(arg.className) */ } 
 function switch_2(arg){ if(arg.classList.contains('disabled')) { return }; console.log(2) }
@@ -103,17 +103,43 @@ function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; conso
 
 // Switches - Turn ON/OFF tests switches:
 
-document.querySelector('.toggle_tests_switches').addEventListener('click', function() { 
-    
-    var switches = document.querySelectorAll('.test_switches_group .switch')
-    
-    switches.forEach(function ($switch) { 
+var switches_group = document.querySelector('.toggle_tests_switches')
 
-        switch_event($switch) 
+if (switches_group !== null) {
+        
+    switches_group.addEventListener('click', function() { 
+        
+        var switches = document.querySelectorAll('.test_switches_group .switch')
+        
+        switches.forEach(function ($switch) { 
+
+            switch_event($switch) 
+        })
+        
+        update_switches_and_buttons(switches)
     })
-    
-    update_switches_and_buttons(switches)
-})
+}
+
+
+// Switches - Turn ON/OFF tests switches 2:
+
+var switches_group_2 = document.querySelector('.toggle_tests_switches_2')
+
+if (switches_group_2 !== null) {
+
+    switches_group_2.addEventListener('click', function() { 
+        
+        var switches = document.querySelectorAll('.test_switches_group_2 .switch')
+        
+        switches.forEach(function ($switch) { 
+
+            switch_event($switch) 
+        })
+        
+        update_switches_and_buttons(switches)
+    })
+}
+
 }
 
 /*  
