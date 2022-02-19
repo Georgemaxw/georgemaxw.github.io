@@ -259,7 +259,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 }
             }
 
-            // ---------- Definir o raio das bordas dos botões normais (quadrados) e de seus brilhos ---------- 
+            // ---------- Definir o raio das bordas dos botões normais (quadrados) e de seus brilhos ----------
 
             if($swt_or_btn_is_square) {
 
