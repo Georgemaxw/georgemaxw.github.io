@@ -153,8 +153,8 @@ $color_text_switch_type_button_shadow_outline_on: hsl(193, 100%, 40%);
 $color_icon_outline_switch_type_button_off: hsla(0, 0%, 0%, 0.45);
 $color_icon_outline_switch_type_button_on: hsl(187, 100%, 47%);
 
-// $color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
-// $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear: white; // VÍNCULO: Váriável JS
+$color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
+$color_shadow_box_inset_button_type_normal_and_switch_type_button_clear: white; // VÍNCULO: Váriável JS
 
 $bg_switch_type_button_off: 
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
@@ -1832,7 +1832,6 @@ TODO:        >> Button
         left:  $left;
         width: calc(100% - 2 * #{$left});
         height: $height; 
-        // border-radius: 10px; // Propriedade aplicada aprimorada via JS.
     }
 
     .piece_text {
@@ -1842,8 +1841,11 @@ TODO:        >> Button
 
     .piece_icon {
 
-        width: 32px;
-        // height: 32px;
+        $width: 32px;
+
+        width: $width;
+        border-radius: calc(1/4 * #{$width});
+
         margin-right: 12px;
     }
 }
@@ -1852,9 +1854,9 @@ TODO:        >> Button
 
     background: $bg_switch_type_button_off; 
 
-    //box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
+    box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 
-    .piece_key {
+    .piece_key { 
 
         display: none;
     }
@@ -1882,7 +1884,7 @@ button.button_full, button.button_text, button.button_icon {
     linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
     linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    //box-shadow: inset 0px 0px 9px 5px hsla(0, 0%, 100%, 0.9), 0px 0px 0px 1px hsl(195, 100%, 77%) !important; // Propriedade aplicada aprimorada via JS.     
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.     
 
     /* 
     .button_shine_top {
@@ -1903,21 +1905,17 @@ button.button_full, button.button_text, button.button_icon {
     }
 }
 
-/*
 button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
 //button.button_full, button.button_text, button.button_icon {
 
     background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
     
-    //box-shadow: inset 0px 0px 9px 4px white; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
-    filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
+    box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
+    // filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
 
-    filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
-    //.button_shine_top {
-    //    opacity: 1;
-    //}
+    // filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
 }
-*/
+
 // --------------------------------------------------- Estilos de buttons alternativos -----------------------------------------------------
 
 button.estilo_2 {
@@ -1943,18 +1941,23 @@ button.estilo_3 {
 
     padding: 11px; 
     padding-right: 12px;
-    // border-radius: 14px; // Propriedade aplicada aprimorada via JS.
+    border-radius: 14px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // Shine 
+          
+        border-radius: 12px; // Propriedade aplicada aprimorada via JS.
+    }
 }
  
 .switch.button_text, button.button_text {
 
     padding: 10px; 
     padding-right: 11px;
-    // border-radius: 11px; // Propriedade aplicada aprimorada via JS.
+    border-radius: 11px; // Propriedade aplicada aprimorada via JS.
 
     .button_shine_top { // Shine 
           
-        // border-radius: 7px; // Propriedade aplicada aprimorada via JS.
+        border-radius: 9px; // Propriedade aplicada aprimorada via JS.
     }
 
     .piece_icon {
@@ -1965,16 +1968,33 @@ button.estilo_3 {
 .switch.button_icon, button.button_icon {
 
     // justify-content: center;
-    //padding: 10px; // Propriedade aplicada aprimorada via JS.
-    // border-radius: 13px; // Propriedade aplicada aprimorada via JS.
+    padding: 9px; // Propriedade aplicada aprimorada via JS.
+    border-radius: 13px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // Shine 
+          
+        border-radius: 10px; // Propriedade aplicada aprimorada via JS.
+    }
     
     .piece_text {
-        // display: none; // Propriedade aplicada via JS.
+
+        display: none; // Propriedade aplicada via JS.
+
+        padding-left: 9px; // Propriedade aplicada via JS.
+        padding-right: 9px; // Propriedade aplicada via JS.
         text-align: center;
     }
 
     .piece_icon {
         margin: 0;
+    }
+}
+      
+.switch.button_icon:not(.disabled), button.button_icon:not(.disabled) {
+
+    .piece_text {
+
+        top: -50px; // Propriedade aplicada via JS.
     }
 }
 
@@ -1993,6 +2013,7 @@ button.button_full.disabled, button.button_text.disabled {
 .switch.button_icon.disabled, button.button_icon.disabled {
     
     .piece_text {
+
         z-index: 1;
     }
 }
@@ -2014,49 +2035,49 @@ button.button_full.disabled, button.button_text.disabled {
 
 .switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill {
 
-    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
+    box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 }
 
-// .switch.button_full.pill, button.button_full.pill {
+.switch.button_full.pill, button.button_full.pill {
 
-    // padding-left: 18px; // Propriedade aplicada aprimorada via JS.
-    // padding-right: 20px; // Propriedade aplicada aprimorada via JS.
+    padding-left: 18px; // Propriedade aplicada aprimorada via JS.
+    padding-right: 20px; // Propriedade aplicada aprimorada via JS.
 
-    // .button_shine_top { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
-    //       
-    //     $left:  10px;
-    // 
-    //     left:  $left;
-    //     width: calc(100% - 2 * #{$left}); 
-    // }  
-// }
+    .button_shine_top { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+          
+        $left:  12px;
+    
+        left:  $left;
+        width: calc(100% - 2 * #{$left}); 
+    }  
+}
 
-// .switch.button_text.pill, button.button_text.pill {
+.switch.button_text.pill, button.button_text.pill {
 
-    // padding-left: 13px; // Propriedade aplicada aprimorada via JS.
-    // padding-right: 13px; // Propriedade aplicada aprimorada via JS.
+    padding-left: 13px; // Propriedade aplicada aprimorada via JS.
+    padding-right: 13px; // Propriedade aplicada aprimorada via JS.
 
-    //.button_shine_top {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
-    //      
-    //    $left: 8px;  
-    //
-    //    left:  $left;
-    //    width: calc(100% - 2 * #{$left});
-    // }
-// }
+    .button_shine_top {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    
+       $left: 9px;  
+    
+       left:  $left;
+       width: calc(100% - 2 * #{$left});
+    }
+}
 
-// .switch.button_icon.pill, button.button_icon.pill {
+.switch.button_icon.pill, button.button_icon.pill {
 
-    // padding: 12px; // Propriedade aplicada aprimorada via JS.
+    padding: 12px; // Propriedade aplicada aprimorada via JS.
 
-    // .button_shine_top { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
-    //        
-    //     $left: 10px;
-    //     
-    //     left:  $left;
-    //     width: calc(100% - 2 * #{$left});
-    // }
-// }
+    .button_shine_top { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+        
+        $left: 12px;
+        
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
 
 
 // ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
@@ -2085,7 +2106,7 @@ button.button_full.disabled, button.button_text.disabled {
 
 .switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
 
-    // box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
+    box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 }
 
 button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
@@ -2111,20 +2132,26 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
     }
 }
 
-//.switch.button_icon.rounded, button.button_icon.rounded {
+.switch.button_icon.rounded, button.button_icon.rounded {
 
-    // padding: 12px; // Propriedade aplicada aprimorada via JS.
-//}
+    padding: 12px; // Propriedade aplicada aprimorada via JS.
+}
  
 /*  
 ────────────────────────────
 TODO:            >>> Text Below
 ──────────────────────────── */
 
-.switch.button_full.text_below, button.button_full.text_below {  
+.switch.button_full.text_below, button.button_full.text_below { 
 
-    // justify-content: center; 
+    // justify-content: center;
     flex-direction: column; // Necessário caso o switch não tenha 'piece_label'.
+    padding-bottom: 10px; // Propriedade aplicada aprimorada via JS.
+
+    .piece_icon {
+
+        margin: 10px; // Propriedade aplicada aprimorada via JS.
+    }
 
     .piece_text {
 
@@ -2132,15 +2159,51 @@ TODO:            >>> Text Below
     }
 }
 
-.switch.button_full.text_below .piece_label {
+.switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded) {
 
-        flex-direction: column; 
-        justify-content: center; 
+    border-radius: 24px; // Propriedade aplicada aprimorada via JS.
+}
+
+.switch.button_full.text_below:not(.pill, .rounded) .button_shine_top, button.button_full.text_below:not(.pill, .rounded) .button_shine_top {
+
+    border-radius: 22px; // Propriedade aplicada aprimorada via JS. // Obs.: Esta propriedade buga se for colocada na regra com o seletor ".switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded)".
+}
+
+.switch.button_full.text_below.pill, button.button_full.text_below.pill {
+
+    padding-left: 18px; // Propriedade aplicada aprimorada via JS.
+    padding-right: 18px; // Propriedade aplicada aprimorada via JS.
+    padding-bottom: 11px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top {
+
+        $left: 18px;
+
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+
+    .piece_icon {
+
+        margin: 10px 12px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .piece_text {
+
+        margin-left: 12px; // Propriedade aplicada aprimorada via JS.
+        margin-right: 12px; // Propriedade aplicada aprimorada via JS.
+    }
 }
 
 button.button_full.text_below {  
 
     flex-direction: column; 
+}
+
+.switch.button_full.text_below .piece_label {
+
+    flex-direction: column; 
+    justify-content: center; 
 }
  
 /*  
@@ -2151,7 +2214,7 @@ TODO:            >>> Option ON
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
 
     background: $bg_button_type_normal_hover_and_switch_type_button_on;
-    //box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
+    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
  
     .piece_text {
 
@@ -2269,12 +2332,16 @@ TODO:        >> Image
     min-width: $button_height_smaller;
     min-height: $button_height_smaller;
     width: $button_and_switch_both_type_image_icon_size;
-    height: $button_and_switch_both_type_image_icon_size;
+    // height: $button_and_switch_both_type_image_icon_size;
 
     background: 0; 
     
     .piece_text {
+
         // display: none; // Propriedade aplicada via JS.
+
+        padding-left: 9px; // Propriedade aplicada via JS.
+        padding-right: 9px; // Propriedade aplicada via JS.
     }
 
     .piece_icon {
@@ -2286,7 +2353,7 @@ TODO:        >> Image
         filter: drop-shadow(0px 0px 1px $color_outline_button_and_switch_both_type_image);
         // transition: 0.17s; // Buga se usado com 'filter'!
 
-        // border-radius: 12px; // Propriedade aplicada aprimorada via JS. 
+        border-radius: calc(1/4 * #{$button_and_switch_both_type_image_icon_size}); // Propriedade aplicada aprimorada via JS. 
     }
 }
 
@@ -2299,6 +2366,14 @@ TODO:        >> Image
 .switch.image .piece_key {
     
     display: none;
+}
+      
+.switch.image:not(.disabled), button.image:not(.disabled) {
+
+    .piece_text {
+
+        top: -49px; // Propriedade aplicada via JS.
+    }
 }
 
 // ─────────── pill ───────────
@@ -2460,10 +2535,12 @@ TODO:        >> Key (Only Switches)
 
     .piece_icon {
 
-        width: 32px;
-        height: 32px;
+        $width: 32px;
+
+        width: $width;
+        border-radius: calc(1/4 * #{$width});
+
         margin-right: 12px;
-        border-radius: 8px;
         filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
     }
 

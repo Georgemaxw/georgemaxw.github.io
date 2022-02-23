@@ -1840,11 +1840,13 @@ TODO:        >> Button
 
 .switch.button_full .piece_icon, .switch.button_text .piece_icon, .switch.button_icon .piece_icon, button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon {
   width: 32px;
+  border-radius: calc(1/4 * 32px);
   margin-right: 12px;
 }
 
 .switch.button_full, .switch.button_text, .switch.button_icon {
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #f0f0f0;
+  box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.33);
 }
 
 .switch.button_full .piece_key, .switch.button_text .piece_key, .switch.button_icon .piece_key {
@@ -1866,6 +1868,7 @@ TODO:        >> Button
 
 button.button_full, button.button_text, button.button_icon {
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
   /* 
     .button_shine_top {
 
@@ -1883,21 +1886,11 @@ button.button_full .piece_icon, button.button_text .piece_icon, button.button_ic
   filter: drop-shadow(0px 0px 1px rgba(87, 213, 255, 0.7));
 }
 
-/*
 button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
-//button.button_full, button.button_text, button.button_icon {
-
-    background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
-    
-    //box-shadow: inset 0px 0px 9px 4px white; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
-    filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
-
-    filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
-    //.button_shine_top {
-    //    opacity: 1;
-    //}
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+  box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
 }
-*/
+
 button.estilo_2 {
   background: linear-gradient(to bottom, white, #57d5ff 80%, deepskyblue, #0099cc);
   box-shadow: 0 0px 0px 1px #33ccff, inset 0 0px 9px 4px rgba(255, 255, 255, 0.7) !important;
@@ -1915,23 +1908,49 @@ button.estilo_3 {
 .switch.button_full, button.button_full {
   padding: 11px;
   padding-right: 12px;
+  border-radius: 14px;
+}
+
+.switch.button_full .button_shine_top, button.button_full .button_shine_top {
+  border-radius: 12px;
 }
 
 .switch.button_text, button.button_text {
   padding: 10px;
   padding-right: 11px;
+  border-radius: 11px;
+}
+
+.switch.button_text .button_shine_top, button.button_text .button_shine_top {
+  border-radius: 9px;
 }
 
 .switch.button_text .piece_icon, button.button_text .piece_icon {
   display: none;
 }
 
+.switch.button_icon, button.button_icon {
+  padding: 9px;
+  border-radius: 13px;
+}
+
+.switch.button_icon .button_shine_top, button.button_icon .button_shine_top {
+  border-radius: 10px;
+}
+
 .switch.button_icon .piece_text, button.button_icon .piece_text {
+  display: none;
+  padding-left: 9px;
+  padding-right: 9px;
   text-align: center;
 }
 
 .switch.button_icon .piece_icon, button.button_icon .piece_icon {
   margin: 0;
+}
+
+.switch.button_icon:not(.disabled) .piece_text, button.button_icon:not(.disabled) .piece_text {
+  top: -50px;
 }
 
 .switch.button_full.disabled .piece_label, .switch.button_text.disabled .piece_label {
@@ -1956,6 +1975,39 @@ button.button_full.disabled, button.button_text.disabled {
   border-radius: 1000px;
 }
 
+.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill {
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.33);
+}
+
+.switch.button_full.pill, button.button_full.pill {
+  padding-left: 18px;
+  padding-right: 20px;
+}
+
+.switch.button_full.pill .button_shine_top, button.button_full.pill .button_shine_top {
+  left: 12px;
+  width: calc(100% - 2 * 12px);
+}
+
+.switch.button_text.pill, button.button_text.pill {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.switch.button_text.pill .button_shine_top, button.button_text.pill .button_shine_top {
+  left: 9px;
+  width: calc(100% - 2 * 9px);
+}
+
+.switch.button_icon.pill, button.button_icon.pill {
+  padding: 12px;
+}
+
+.switch.button_icon.pill .button_shine_top, button.button_icon.pill .button_shine_top {
+  left: 12px;
+  width: calc(100% - 2 * 12px);
+}
+
 .switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
   border-radius: 1000px;
 }
@@ -1966,6 +2018,10 @@ button.button_full.disabled, button.button_text.disabled {
   height: calc(100% - 2 * 3px);
   left: 3px;
   width: calc(100% - 2 * 3px);
+}
+
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.33);
 }
 
 button.button_full.rounded .button_shine_top, button.button_text.rounded .button_shine_top, button.button_icon.rounded .button_shine_top {
@@ -1984,25 +2040,62 @@ button.button_full.rounded .button_shine_top, button.button_text.rounded .button
   text-align: center;
 }
 
+.switch.button_icon.rounded, button.button_icon.rounded {
+  padding: 12px;
+}
+
 /*  
 ────────────────────────────
 TODO:            >>> Text Below
 ──────────────────────────── */
 .switch.button_full.text_below, button.button_full.text_below {
   flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.switch.button_full.text_below .piece_icon, button.button_full.text_below .piece_icon {
+  margin: 10px;
 }
 
 .switch.button_full.text_below .piece_text, button.button_full.text_below .piece_text {
   text-align: center;
 }
 
-.switch.button_full.text_below .piece_label {
-  flex-direction: column;
-  justify-content: center;
+.switch.button_full.text_below:not(.pill):not(.rounded), button.button_full.text_below:not(.pill):not(.rounded) {
+  border-radius: 24px;
+}
+
+.switch.button_full.text_below:not(.pill):not(.rounded) .button_shine_top, button.button_full.text_below:not(.pill):not(.rounded) .button_shine_top {
+  border-radius: 22px;
+}
+
+.switch.button_full.text_below.pill, button.button_full.text_below.pill {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 11px;
+}
+
+.switch.button_full.text_below.pill .button_shine_top, button.button_full.text_below.pill .button_shine_top {
+  left: 18px;
+  width: calc(100% - 2 * 18px);
+}
+
+.switch.button_full.text_below.pill .piece_icon, button.button_full.text_below.pill .piece_icon {
+  margin: 10px 12px;
+}
+
+.switch.button_full.text_below.pill .piece_text, button.button_full.text_below.pill .piece_text {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 button.button_full.text_below {
   flex-direction: column;
+}
+
+.switch.button_full.text_below .piece_label {
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*  
@@ -2011,6 +2104,7 @@ TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+  box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
 }
 
 .switch.button_full.on .piece_text, .switch.button_text.on .piece_text, .switch.button_icon.on .piece_text {
@@ -2080,8 +2174,12 @@ TODO:        >> Image
   min-width: 32px;
   min-height: 32px;
   width: 48px;
-  height: 48px;
   background: 0;
+}
+
+.switch.image .piece_text, button.image .piece_text {
+  padding-left: 9px;
+  padding-right: 9px;
 }
 
 .switch.image .piece_icon, button.image .piece_icon {
@@ -2089,6 +2187,7 @@ TODO:        >> Image
   height: inherit;
   margin: 0;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+  border-radius: calc(1/4 * 48px);
 }
 
 .switch.image .piece_label {
@@ -2098,6 +2197,10 @@ TODO:        >> Image
 
 .switch.image .piece_key {
   display: none;
+}
+
+.switch.image:not(.disabled) .piece_text, button.image:not(.disabled) .piece_text {
+  top: -49px;
 }
 
 .switch.image.pill, button.image.pill {
@@ -2218,9 +2321,8 @@ TODO:        >> Key (Only Switches)
 
 .switch.key_full .piece_icon, .switch.key_text .piece_icon {
   width: 32px;
-  height: 32px;
+  border-radius: calc(1/4 * 32px);
   margin-right: 12px;
-  border-radius: 8px;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
 }
 

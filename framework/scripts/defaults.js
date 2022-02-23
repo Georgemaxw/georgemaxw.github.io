@@ -69,10 +69,12 @@ var $is_safari_for_desktop_or_is_a_tablet_browser = $is_safari_for_desktop_or_is
 
 function switches_type_button_and_buttons_type_button($switches_or_buttons) {
 
+    /*
     var $color_shadow_box_inset_switch_type_button_dark = 'hsla(0, 0%, 0%, 0.33)' // VÍNCULO: Váriável SCSS
     var $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear = 'white' // VÍNCULO: Váriável SCSS
     var $bg_button_type_normal_hover_and_switch_type_button_on = 'linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), hsl(193, 100%, 83%)' // VÍNCULO: Váriável SCSS
-
+    */
+    
     $switches_or_buttons.forEach(function ($swt_or_btn) {
 
         if($swt_or_btn.classList.contains('button_full') || $swt_or_btn.classList.contains('button_text') || $swt_or_btn.classList.contains('button_icon')) {
@@ -91,16 +93,16 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
 
             // Bug Fix 2 - Os elementos com as classes 'button_icon' e 'rounded' ficam muito grandes no mobile:
 
+            /*
             if ($swt_or_btn.classList.contains('button_icon') && $swt_or_btn.classList.contains('rounded') && $is_mobile) { 
 
                 $swt_or_btn.classList.remove('rounded')
                 $swt_or_btn.classList.add('pill')
             }
+            */
 
             // --------- Variáveis ---------
-
-            var $swt_or_btn_is_square = !($swt_or_btn.classList.contains('pill') || $swt_or_btn.classList.contains('rounded'))
-
+            
             // Obs.: As variáveis '$swt_or_btn_width' e '$swt_or_btn_height' não foram colocadas aqui pois 
             // a largura e altura dos botões variam desde o do início até o final desta função.
 
@@ -117,6 +119,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 var $swt_or_btn__type_button_icon_min_size = 50
             }
             
+            /* 
             if ($piece_text !== null) {  
 
                 // var $piece_text_width = Number(getComputedStyle($piece_text).getPropertyValue('width').slice(0,-2)) 
@@ -133,6 +136,9 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
             if($swt_or_btn.classList.contains('button_icon') && $swt_or_btn.classList.contains('pill') && !$swt_or_btn.classList.contains('rounded')) { var $smallest_initial_dimension = 56 }
             if($swt_or_btn.classList.contains('rounded')) { var $smallest_initial_dimension = 56 }
 
+            var $swt_or_btn_is_square = !($swt_or_btn.classList.contains('pill') || $swt_or_btn.classList.contains('rounded'))
+            */
+
             // --------- Brilho ---------
 
             var $shine = $swt_or_btn.querySelector(':scope .button_shine_top') 
@@ -148,6 +154,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 else if ($piece_text !== null) { $swt_or_btn.querySelector(':scope .piece_text').insertAdjacentElement('beforebegin', $shine) }
             }
 
+            /* 
             // --------- Definir o border-radius dos ícones ---------
 
             if ($piece_icon !== null) { $piece_icon.style.borderRadius = 1/4 * Math.min($piece_icon_width, $piece_icon_height) +'px' }
@@ -245,7 +252,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                         $swt_or_btn.style.padding = (13/32) * $piece_icon_width +'px '+ (10/32) * $piece_icon_width +'px'
                     }
                 }
-                /**/
+                
                 if($swt_or_btn.classList.contains('rounded')) {
 
                     if($piece_icon_width <= 32 || $piece_icon_height <= 32) {
@@ -296,6 +303,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 $shine.style.left = $shine_x 
                 $shine.style.width = 'calc(100% - 2 * '+ $shine_x +')'
             }
+            */
 
             // ---------- Arredondar botões com a classe 'rounded' ---------- 
 
@@ -318,24 +326,24 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                     $swt_or_btn.style.height = $swt_or_btn_height_ceil + 'px' // <- Esta instrução tem como único propósito arredondar a largura do switch.
                 }
 
-                /* // Maneira alternativa:
+                // Maneira alternativa:
 
-                if($swt_or_btn_width >= $swt_or_btn_height) { 
+                // if($swt_or_btn_width >= $swt_or_btn_height) { 
 
-                    var $padding_top_current =  Number(getComputedStyle($swt_or_btn).getPropertyValue('padding-top').slice(0,-2))
-                    var $padding_bottom_current =  Number(getComputedStyle($swt_or_btn).getPropertyValue('padding-bottom').slice(0,-2))
-            
-                    $swt_or_btn.style.paddingTop = $padding_top_current + 1/2 * ($swt_or_btn_width - $swt_or_btn_height) + 'px'
-                    $swt_or_btn.style.paddingBottom = $padding_bottom_current + 1/2 * ($swt_or_btn_width - $swt_or_btn_height) + 'px'
-            
-                } else {  
-            
-                    $swt_or_btn.style.width = $swt_or_btn_height_ceil + 'px'
-                    $swt_or_btn.style.height = $swt_or_btn_height_ceil + 'px'
-                }
-                */
+                //     var $padding_top_current =  Number(getComputedStyle($swt_or_btn).getPropertyValue('padding-top').slice(0,-2))
+                //     var $padding_bottom_current =  Number(getComputedStyle($swt_or_btn).getPropertyValue('padding-bottom').slice(0,-2))
+
+                //     $swt_or_btn.style.paddingTop = $padding_top_current + 1/2 * ($swt_or_btn_width - $swt_or_btn_height) + 'px'
+                //     $swt_or_btn.style.paddingBottom = $padding_bottom_current + 1/2 * ($swt_or_btn_width - $swt_or_btn_height) + 'px'
+
+                // } else {  
+
+                //     $swt_or_btn.style.width = $swt_or_btn_height_ceil + 'px'
+                //     $swt_or_btn.style.height = $swt_or_btn_height_ceil + 'px'
+                // }
             }
 
+            /*
             // ---------- Posição e preenchimento da etiqueta de hover dos botões de ícone ---------- 
 
             if($swt_or_btn.classList.contains('button_icon')) {
@@ -373,11 +381,12 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                     } 
                 }
             }
-
+            */
             // --------- Definir os estilos dos 'button_full' com 'text_below' --------- 
 
             if($swt_or_btn.classList.contains('button_full') && $swt_or_btn.classList.contains('text_below')) {
-            
+
+                /*  
                 if($swt_or_btn_is_square) {
 
                     var $icon_margin_T = Math.max(10, 0.00050 * $piece_icon_area)
@@ -412,6 +421,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
 
                     $swt_or_btn.style.paddingRight = Number(getComputedStyle($swt_or_btn).getPropertyValue('padding-left').slice(0,-2))  +'px'
                 }  
+                */
 
                 if($swt_or_btn.classList.contains('rounded')) {
 
@@ -436,7 +446,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
             
                     var $swt_or_btn_width = Number(getComputedStyle($swt_or_btn).getPropertyValue('width').slice(0,-2)) 
                     var $swt_or_btn_height = Number(getComputedStyle($swt_or_btn).getPropertyValue('height').slice(0,-2)) 
-            
+                
                     var $swt_or_btn_width_ceil = Math.ceil($swt_or_btn_width)
                     var $swt_or_btn_height_ceil = Math.ceil($swt_or_btn_height)
                 
@@ -453,6 +463,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 }
             }
 
+            /*  
             // --------- Definir o box-shadow --------- 
 
             var $swt_or_btn_width = Number(getComputedStyle($swt_or_btn).getPropertyValue('width').slice(0,-2)) 
@@ -582,6 +593,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                     $swt_or_btn.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (6 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
                 }
             }
+            */
         }
     })
 }
@@ -617,25 +629,28 @@ function switches_type_image_and_buttons_type_image($switches_or_buttons) {
             var $piece_text_height_of_1_line = 35.84
             var $piece_text_height_of_2_lines = 57.69
 
+            /*
             // --------- Arredondar os ícones --------- 
             
             $piece_icon.style.borderRadius = 1/4 * Math.min($piece_icon_width, $piece_icon_height) +'px' 
+            */
 
             // ---------- Propriedade top da etiqueta de hover ---------- 
 
-            if ($piece_text !== null) {  
+            if ($piece_text !== null) { 
 
-                $piece_text.style.display = 'none' // Esta propriedade foi aplicada aqui para que o JS consiga pegar o valor '$piece_text_width' antes do elemento '$piece_text' ser ocultado.
+                $piece_text.style.display = 'none' // Esta propriedade foi aplicada aqui para que o JS consiga pegar o valor '$piece_text_height' antes do elemento '$piece_text' ser ocultado.
 
                 if (!$swt_or_btn.classList.contains('disabled')) {
 
                     var $y0 = 49 + Math.max(0, $piece_text_height - $piece_text_height_of_1_line)
                     var $y_offset = Math.min(15, 0.00028 * ($piece_icon_area - ($piece_icon_min_size * $piece_icon_min_size)))
 
-                    $piece_text.style.top = -1 * ($y0 + $y_offset) + 'px'   
+                    $piece_text.style.top = -1 * ($y0 + $y_offset) + 'px'
                 }
             }
 
+            /*  
             // ---------- Padding da etiqueta de hover ---------- 
 
             if ($piece_text !== null) {
@@ -652,6 +667,7 @@ function switches_type_image_and_buttons_type_image($switches_or_buttons) {
                     $piece_text.style.paddingRight = '9px'
                 } 
             }
+            */
         }
     })
 }
