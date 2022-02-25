@@ -27,6 +27,13 @@ url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 2
 hsl(193, 100%, 83%);
 */
 /*  
+$color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
+$color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
+$color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
+$color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%, 0.24);
+$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
+*/
+/*  
 ──────────────────────────────────────────────────────
 TODO: Classes JS
 ────────────────────────────────────────────────────── */
@@ -695,6 +702,12 @@ p.container_text {
   border-top: 1px solid DeepSkyBlue;
   margin-top: calc(0.5 * 16rem);
   padding-top: calc(0.5 * 16rem);
+}
+
+.list_only_markup {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
 }
 
 .success, .attention, .fail, .danger {
@@ -1779,15 +1792,12 @@ TODO:    > Class
   height: calc(40rem + ( (30 - 1) * 28rem));
 }
 
-/*  
+/* 
 ──────────────────────────────────────────────────────
 TODO:    > Switches & Buttons
 ────────────────────────────────────────────────────── */
 .switch, button {
-  display: flex;
   align-items: center;
-  margin-top: 16rem;
-  margin-bottom: 16rem;
   margin-left: 20px;
   margin-right: 20px;
   cursor: pointer;
@@ -1811,6 +1821,7 @@ button {
 TODO:        >> Button
 ──────────────────────────── */
 .switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon {
+  display: inline-flex;
   justify-content: center;
   position: relative;
   width: max-content;
@@ -1939,7 +1950,6 @@ button.estilo_3 {
 }
 
 .switch.button_icon .piece_text, button.button_icon .piece_text {
-  display: none;
   padding-left: 9px;
   padding-right: 9px;
   text-align: center;
@@ -2044,6 +2054,10 @@ button.button_full.rounded .button_shine_top, button.button_text.rounded .button
   padding: 12px;
 }
 
+.switch.button_icon.rounded:not(.on) .button_shine_top {
+  opacity: 0.85;
+}
+
 /*  
 ────────────────────────────
 TODO:            >>> Text Below
@@ -2087,6 +2101,19 @@ TODO:            >>> Text Below
 .switch.button_full.text_below.pill .piece_text, button.button_full.text_below.pill .piece_text {
   margin-left: 12px;
   margin-right: 12px;
+}
+
+.switch.button_full.text_below.rounded, button.button_full.text_below.rounded {
+  padding-bottom: 10px;
+}
+
+.switch.button_full.text_below.rounded .piece_icon, button.button_full.text_below.rounded .piece_icon {
+  margin: 20px 10px 10px 10px;
+}
+
+.switch.button_full.text_below.rounded .piece_text, button.button_full.text_below.rounded .piece_text {
+  margin-left: 14px;
+  margin-right: 14px;
 }
 
 button.button_full.text_below {
@@ -2169,6 +2196,7 @@ TODO:            >>> Floating Labels
 TODO:        >> Image
 ──────────────────────────── */
 .switch.image, button.image {
+  display: inline-flex;
   /* width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
   min-width: 32px;
@@ -2245,10 +2273,10 @@ TODO:            >>> Floating Labels
     box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
   }
   button.image .piece_text {
-    color: #05d5ff;
-    border-color: deepskyblue;
-    background: rgba(245, 253, 255, 0.95);
-    box-shadow: inset 0px 0px 7px 1px rgba(0, 191, 255, 0.3), 0px 7px 4px -2px rgba(82, 217, 255, 0.24);
+    color: #33d3ff;
+    border-color: #5cdcff;
+    background: linear-gradient(to bottom, white, #d6f6ff);
+    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
   }
   .switch.image .piece_label {
     display: inline-flex;
@@ -2283,7 +2311,10 @@ TODO:            >>> Floating Labels
 TODO:        >> Key (Only Switches)
 ──────────────────────────── */
 .switch.key_full, .switch.key_text {
+  display: flex;
   justify-content: space-between;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
 .switch.key_full .piece_key, .switch.key_text .piece_key {
@@ -3865,8 +3896,8 @@ figure.center {
   max-width: none;
 }
 
-.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image, .switch.key_full.center, .switch.key_text.center,
-button.button_full.center, button.button_text.center, button.button_icon.center, button.image {
+.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center,
+.switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
   display: flex;
 }
 

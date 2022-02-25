@@ -229,11 +229,19 @@ $bg_switch_type_key_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl
 
 // Obs.: Algumas variáveis dos botões estão em Switches.
 
+/*  
 $color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
 $color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
-$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
 $color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
 $color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%, 0.24);
+$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
+*/
+
+$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
+$color_border_button_type_image_piece_text_floating: $color_border_switch_type_image_piece_text_floating_on;
+$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating: $color_box_shadow_switch_type_image_piece_text_floating_on;
+$bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floating_on; 
 
 // ─────────── Choices ───────────
 
@@ -703,6 +711,13 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
         margin-top: calc(0.5 * #{$margin_vertical});
         padding-top: calc(0.5 * #{$margin_vertical});
     }
+}
+
+.list_only_markup {
+
+    list-style: none; 
+    padding: 0; 
+    margin-left: 20px;
 }
 
 .success, .attention, .fail, .danger  {
@@ -1766,18 +1781,17 @@ TODO:    > Class
     } 
 }
 
-/*  
+/* 
 ──────────────────────────────────────────────────────
 TODO:    > Switches & Buttons
 ────────────────────────────────────────────────────── */
 
 .switch, button {
 
-    display: flex;
     align-items: center;
 
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
+    // margin-top: $margin_vertical;
+    // margin-bottom: $margin_vertical;
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal; 
 
@@ -1807,6 +1821,7 @@ TODO:        >> Button
 
 .switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon {
 
+    display: inline-flex;
     justify-content: center;
     position: relative;
 
@@ -1978,7 +1993,7 @@ button.estilo_3 {
     
     .piece_text {
 
-        display: none; // Propriedade aplicada via JS.
+        // display: none; // Propriedade aplicada via JS.
 
         padding-left: 9px; // Propriedade aplicada via JS.
         padding-right: 9px; // Propriedade aplicada via JS.
@@ -2136,6 +2151,11 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
 
     padding: 12px; // Propriedade aplicada aprimorada via JS.
 }
+
+.switch.button_icon.rounded:not(.on) .button_shine_top { 
+
+    opacity: 0.85;
+}
  
 /*  
 ────────────────────────────
@@ -2192,6 +2212,22 @@ TODO:            >>> Text Below
 
         margin-left: 12px; // Propriedade aplicada aprimorada via JS.
         margin-right: 12px; // Propriedade aplicada aprimorada via JS.
+    }
+}
+
+.switch.button_full.text_below.rounded, button.button_full.text_below.rounded {
+
+    padding-bottom: 10px; // Propriedade aplicada aprimorada via JS.
+
+    .piece_icon {
+
+        margin: 20px 10px 10px 10px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .piece_text {
+
+        margin-left: 14px; // Propriedade aplicada aprimorada via JS.
+        margin-right: 14px; // Propriedade aplicada aprimorada via JS.
     }
 }
 
@@ -2325,6 +2361,8 @@ TODO:        >> Image
 ──────────────────────────── */
       
 .switch.image, button.image {
+
+    display: inline-flex;
 
     /* width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
@@ -2494,7 +2532,11 @@ TODO:        >> Key (Only Switches)
 
 .switch.key_full, .switch.key_text {
 
+    display: flex;
     justify-content: space-between;
+
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
     
     .piece_key { // Path
  
@@ -3754,8 +3796,8 @@ figure.center {
     max-width: none;
 }
 
-.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image, .switch.key_full.center, .switch.key_text.center, 
-button.button_full.center, button.button_text.center, button.button_icon.center, button.image {
+.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, 
+.switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
     
     display: flex;
 }

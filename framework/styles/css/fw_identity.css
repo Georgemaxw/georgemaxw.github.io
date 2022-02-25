@@ -59,9 +59,19 @@ TODO: Switches & Buttons Examples
   height: 150px !important;
 }
 
+.size_200x115 {
+  width: 200px !important;
+  height: 115px !important;
+}
+
 .size_200x100 {
   width: 200px !important;
   height: 100px !important;
+}
+
+.size_200x66 {
+  width: 200px !important;
+  height: 66px !important;
 }
 
 .size_156x156 {

@@ -119,15 +119,15 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 var $swt_or_btn__type_button_icon_min_size = 50
             }
             
-            /* 
             if ($piece_text !== null) {  
 
                 // var $piece_text_width = Number(getComputedStyle($piece_text).getPropertyValue('width').slice(0,-2)) 
                 var $piece_text_height = Number(getComputedStyle($piece_text).getPropertyValue('height').slice(0,-2)) 
                 var $piece_text_height_of_1_line = 35.84
-                var $piece_text_height_of_2_lines = 57.69
+                // var $piece_text_height_of_2_lines = 57.69
             }
 
+            /* 
             // Variável  $smallest_initial_dimension:
             if($swt_or_btn.classList.contains('button_full') && !$swt_or_btn.classList.contains('rounded') && !$swt_or_btn.classList.contains('text_below')) { var $smallest_initial_dimension = 54 }
             if($swt_or_btn.classList.contains('button_full') && !$swt_or_btn.classList.contains('rounded') && $swt_or_btn.classList.contains('text_below')) { var $smallest_initial_dimension = 92.69 }
@@ -343,7 +343,6 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                 // }
             }
 
-            /*
             // ---------- Posição e preenchimento da etiqueta de hover dos botões de ícone ---------- 
 
             if($swt_or_btn.classList.contains('button_icon')) {
@@ -366,6 +365,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                         }
                     }
 
+                    /*
                     // Padding:
 
                     if ($piece_text_height > Math.ceil($piece_text_height_of_2_lines)) { // Altura para 3+ linhas.
@@ -379,9 +379,10 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                         $piece_text.style.paddingLeft = '9px'
                         $piece_text.style.paddingRight = '9px'
                     } 
+                    */
                 }
             }
-            */
+            
             // --------- Definir os estilos dos 'button_full' com 'text_below' --------- 
 
             if($swt_or_btn.classList.contains('button_full') && $swt_or_btn.classList.contains('text_below')) {
@@ -421,7 +422,6 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
 
                     $swt_or_btn.style.paddingRight = Number(getComputedStyle($swt_or_btn).getPropertyValue('padding-left').slice(0,-2))  +'px'
                 }  
-                */
 
                 if($swt_or_btn.classList.contains('rounded')) {
 
@@ -441,6 +441,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
                     $piece_text.style.marginLeft = $text_margin_LR +'px'  
                     $piece_text.style.marginRight = $text_margin_LR +'px'   
                 }
+                */
             
                 if($swt_or_btn.classList.contains('rounded')) { // Arredondar botões com a classe 'rounded'.
             
@@ -703,7 +704,7 @@ function update_switches_and_buttons($switches_or_buttons, type_number) {
 
         if ($piece_text !== null) {  
 
-            $piece_text.style.display = 'inline'
+            // $piece_text.style.display = 'inline'
             $piece_text.style.padding = ''
             $piece_text.style.margin = ''
             $piece_text.style.top = ''

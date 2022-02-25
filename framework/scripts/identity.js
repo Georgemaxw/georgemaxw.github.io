@@ -115,8 +115,6 @@ if (switches_group !== null) {
 
             switch_event($switch) 
         })
-        
-        update_switches_and_buttons(switches)
     })
 }
 
@@ -127,7 +125,7 @@ var switches_group_2 = document.querySelector('.toggle_tests_switches_2')
 
 if (switches_group_2 !== null) {
 
-    switches_group_2.addEventListener('click', function() { 
+    switches_group_2.addEventListener('click', function() {
         
         var switches = document.querySelectorAll('.test_switches_group_2 .switch')
         
@@ -135,8 +133,6 @@ if (switches_group_2 !== null) {
 
             switch_event($switch) 
         })
-        
-        update_switches_and_buttons(switches)
     })
 }
 
