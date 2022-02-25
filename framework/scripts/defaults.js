@@ -307,7 +307,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
 
             // ---------- Arredondar botões com a classe 'rounded' ---------- 
 
-            if($swt_or_btn.classList.contains('rounded') && !$swt_or_btn.classList.contains('text_below')) {
+            if($swt_or_btn.classList.contains('rounded') && !$swt_or_btn.classList.contains('button_icon') && !$swt_or_btn.classList.contains('text_below')) {
 
                 var $swt_or_btn_width = Number(getComputedStyle($swt_or_btn).getPropertyValue('width').slice(0,-2)) 
                 var $swt_or_btn_height = Number(getComputedStyle($swt_or_btn).getPropertyValue('height').slice(0,-2)) 
