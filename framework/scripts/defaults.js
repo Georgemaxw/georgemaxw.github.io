@@ -305,7 +305,7 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
             }
             */
 
-            // ---------- Arredondar botões com a classe 'rounded' ---------- 
+            // ---------- Arredondar 'button_full's e 'button_text's com a classe 'rounded' ---------- 
 
             if($swt_or_btn.classList.contains('rounded') && !$swt_or_btn.classList.contains('button_icon') && !$swt_or_btn.classList.contains('text_below')) {
 
@@ -704,7 +704,7 @@ function update_switches_and_buttons($switches_or_buttons, type_number) {
 
         if ($piece_text !== null) {  
 
-            // $piece_text.style.display = 'inline'
+            $piece_text.style.display = 'inline'
             $piece_text.style.padding = ''
             $piece_text.style.margin = ''
             $piece_text.style.top = ''
