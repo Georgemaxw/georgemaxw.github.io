@@ -1920,15 +1920,18 @@ button.button_full, button.button_text, button.button_icon {
     }
 }
 
-button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
-//button.button_full, button.button_text, button.button_icon {
+@media not all and (pointer: coarse) {
 
-    background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
-    
-    box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
-    // filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
+    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
+    //button.button_full, button.button_text, button.button_icon {
 
-    // filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
+        background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
+        
+        box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
+        // filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
+
+        // filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
+    }
 }
 
 // --------------------------------------------------- Estilos de buttons alternativos -----------------------------------------------------
@@ -2299,6 +2302,7 @@ TODO:            >>> Floating Labels
             // top: -50px; // Propriedade aplicada aprimorada via JS. 
             //left: -15px; // Propriedade aplicada aprimorada via JS. 
             z-index: 1;
+
             padding: 6px 9px; 
             border: 1px solid;
             border-radius: 1000px;
