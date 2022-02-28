@@ -85,11 +85,11 @@ function switches_type_button_and_buttons_type_button($switches_or_buttons) {
             // 'pill' ou 'rounded' PODEM não renderizar corretamente no Safari para desktop dependendo do tamanho da janela (seja o 
             // tamanho horizontal ou vertical):
 
-            if (($swt_or_btn.classList.contains('pill') || $swt_or_btn.classList.contains('rounded')) && $is_safari_for_desktop_or_is_a_tablet_browser) { 
-            
-                $swt_or_btn.classList.remove('pill')
-                $swt_or_btn.classList.remove('rounded')
-            }
+            // if (($swt_or_btn.classList.contains('pill') || $swt_or_btn.classList.contains('rounded')) && $is_safari_for_desktop_or_is_a_tablet_browser) { 
+            // 
+            //     $swt_or_btn.classList.remove('pill')
+            //     $swt_or_btn.classList.remove('rounded')
+            // }
 
             // Bug Fix 2 - Os elementos com as classes 'button_icon' e 'rounded' ficam muito grandes no mobile:
 

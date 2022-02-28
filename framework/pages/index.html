@@ -969,17 +969,18 @@
                 <h3 class="mini_topic">Notas sobre bugs</h3>
 
                 <ul class="spaced_items">
-                    <li>
-                        As sombras internas criadas pelo box-shadow ('box-shadow: inset ...') dos switches do tipo 'button' com qualquer uma das classes 
-                        'pill' ou 'rounded' PODEM não renderizar corretamente no Safari para desktop dependendo do tamanho da janela 
-                        do navegador (seja o tamanho horizontal ou vertical). Para resolver isso, tive que fazer com que os que possuem as classes 
-                        'pill' e 'rounded' percam estas classes (ou seja, ficarão quadrados) no Safari para desktop e nos navegadores de tablets.
+                    <li style="color: red;">
+                        As sombras internas criadas pelo box-shadow ('box-shadow: inset ...') dos switches dos tipos 'button_full', 'button_text', e 
+                        'button_icon' com qualquer uma das classes 'pill' ou 'rounded' PODEM não renderizar corretamente no Safari para desktop 
+                        dependendo do tamanho da janela do navegador (seja o tamanho horizontal ou vertical). Para resolver isso, tive que fazer 
+                        com que os que possuem as classes 'pill' e 'rounded' percam estas classes (ou seja, ficarão quadrados) no Safari para desktop 
+                        e nos navegadores de tablets.
                     </li>
-                    <li>
+                    <li style="color: red;">
                         Os switches com as classes 'button_icon' e 'rounded' ficam muito grandes no mobile. Para resolver isso, substitui neles a classe 
                         'rounded' por 'pill' no mobile.
                     </li>
-                    <li>
+                    <li style="color: red;">
                         Switches com as classes 'button_icon' e 'pill', e com o ícone com a altura muito maior do que a largura, PODEM ficar com o brilho 
                         de cima muito estreito.
                     </li>
@@ -1032,7 +1033,7 @@
                     <div class="piece_key"></div>
                     <div class="piece_label">
                         <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt=""> 
-                        <span class="piece_text">Etiqueta <br> alta!</span>
+                        <span class="piece_text">Etiqueta alta!</span>
                     </div>
                 </div>
 
@@ -1310,9 +1311,9 @@
                     </div> 
                 </div>
 
-                <p>Switch com as classes 'button_full', 'pill, 'on', e com width de 250px:</p>
+                <p>Switch com as classes 'button_full', 'pill, 'on', e com width de 200px e height de 66px:</p>
  
-                <div class="switch button_full pill on width_250px" onclick="switch_1(this); switch_event(this)">  
+                <div class="switch button_full pill on size_200x66" onclick="switch_1(this); switch_event(this)">  
                     <div class="piece_key"></div>
                     <div class="piece_label">
                         <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
@@ -1954,13 +1955,13 @@
                 </div>                    
                 -->
 
-                <p>Switch com a classe 'image', e com width de 120px e height de 48px:</p>
+                <p>Switch com a classe 'image', e com width de 120px e height de 48px:</p> 
 
                 <div class="switch image" onclick="switch_1(this); switch_event(this)" style="width: 120px; height: 48px;"> 
                     <div class="piece_key"></div>
                     <div class="piece_label">
                         <img class="piece_icon" src="../images/exs/icon_swt_&_btn_1.png" alt="">
-                        <span class="piece_text">Etiqueta <br> alta!</span>
+                        <span class="piece_text">Etiqueta alta!</span>
                     </div>
                 </div>
 
@@ -3235,9 +3236,9 @@
                     <span class="piece_text">Etiqueta</span> 
                 </button>
 
-                <p>&lt;button> com as classes 'button_full', 'pill, e com width de 250px:</p>
+                <p>&lt;button> com as classes 'button_full', 'pill, e com width de 200px e height de 66px:</p>
  
-                <button class="button_full pill width_250px">
+                <button class="button_full pill width_250px size_200x66">
                     <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
                     <span class="piece_text">Etiqueta</span> 
                 </button>
@@ -3664,11 +3665,11 @@
                 </button>
                 -->
 
-                <p>&lt;button> com a classe 'image', e com width de 120px e height de 48px:</p> 
+                <p>&lt;button> com a classe 'image', e com width de 120px e height de 48px:</p>
 
                 <button class="image" style="width: 120px; height: 48px;">  
                     <img class="piece_icon" src="../images/exs/icon_swt_&_btn_1.png" alt="">
-                    <span class="piece_text">Etiqueta <br> alta!</span>
+                    <span class="piece_text">Etiqueta alta!</span>
                 </button>
 
                 <p>&lt;button> com as classes 'image' e 'pill':</p>
@@ -3971,7 +3972,7 @@
                     <div class="lb1"></div>
 
                     <button class="image">  
-                        <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                        <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
                         <span class="piece_text">Etiqueta</span>
                     </button>
 
