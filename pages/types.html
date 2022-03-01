@@ -61,9 +61,11 @@
 
                 <h2>Types</h2>
 
+                <!--  
                 <div class="lb2"></div>
 
                 <img src="../images/game/icons/types/All.webp" alt="" style="width: 100%;" class="center offset"> 
+                -->
 
                 <h3>Types Table</h3>
 
@@ -108,7 +110,7 @@
                         <th scope="col"><img class="type_icon" src="../images/game/icons/types/Piercing.webp" alt="Piercing"></th>
                         
                         <th scope="col"><img class="type_icon" src="../images/game/icons/types/Fighter.webp" alt="Fighter"></th>
-                        <th scope="col"><img class="type_icon" src="../images/game/icons/types/Energy.webp" alt="Energy"></th>
+                        <th scope="col"><img class="type_icon" src="../images/game/icons/types/Vital Energy.webp" alt="Energy"></th>
                         <th scope="col"><img class="type_icon" src="../images/game/icons/types/Psychic.webp" alt="Psychic"></th>
                         <th scope="col"><img class="type_icon" src="../images/game/icons/types/Magic.webp" alt="Magic"></th>
 
@@ -466,7 +468,7 @@
                     </tr>
 
                     <tr>
-                        <th scope="row"><img class="type_icon" src="../images/game/icons/types/Energy.webp" alt="Energy"></th>
+                        <th scope="row"><img class="type_icon" src="../images/game/icons/types/Vital Energy.webp" alt="Energy"></th>
 
                         <!-- Assist --> <td></td>
                         <!-- Impact --> <td></td>
@@ -1445,9 +1447,9 @@
                         <th scope="row"><img class="type_icon" src="../images/game/icons/types/Wind.webp" alt="Wind"></th>
 
                         <!-- Assist --> <td></td>
-                        <!-- Impact --> <td></td>
+                        <!-- Impact --> <td><img class="effect_icon" src="../images/game/icons/types/effect/+.webp" alt=""></td>
                         <!-- Cut --> <td><img class="effect_icon" src="../images/game/icons/types/effect/+.webp" alt=""></td>
-                        <!-- Piercing --> <td></td>
+                        <!-- Piercing --> <td><img class="effect_icon" src="../images/game/icons/types/effect/+.webp" alt=""></td>
 
                         <!-- Fighter --> <td><img class="effect_icon" src="../images/game/icons/types/effect/+.webp" alt=""></td>
                         <!-- Energy --> <td></td>
@@ -1465,11 +1467,11 @@
                         <!-- Ghost --> <td></td>
 
                         <!-- Plant --> <td></td>
-                        <!-- Crystal --> <td></td>
+                        <!-- Crystal --> <td><img class="effect_icon" src="../images/game/icons/types/effect/-.webp" alt=""></td>
                         <!-- Fire --> <td></td>
                         <!-- Water --> <td></td>
 
-                        <!-- Electric --> <td></td>
+                        <!-- Electric --> <td><img class="effect_icon" src="../images/game/icons/types/effect/-.webp" alt=""></td>
                         <!-- Wind --> <td></td>
                         <!-- Rock --> <td><img class="effect_icon" src="../images/game/icons/types/effect/-.webp" alt=""></td>
                         <!-- Earth --> <td></td>
@@ -1479,7 +1481,7 @@
                         <!-- Dark --> <td></td>
                         <!-- Metal --> <td><img class="effect_icon" src="../images/game/icons/types/effect/-.webp" alt=""></td>
 
-                        <!-- Machine --> <td><img class="effect_icon" src="../images/game/icons/types/effect/-.webp" alt=""></td>
+                        <!-- Machine --> <td></td>
                         <!-- Laser --> <td></td>
                         <!-- Shot --> <td></td>
                         <!-- Chemical --> <td></td>
@@ -2935,8 +2937,14 @@
 
     <footer></footer>
 
-    <script src="../framework/scripts/defaults.js"></script>
-    <script src="../scripts/identity.js"></script>
+    <!-- 
+        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
+        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
+        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+    -->
+
+    <script defer src="../framework/scripts/defaults.js"></script>
+    <script defer src="../scripts/identity.js"></script>
 
 </body> 
 </html>

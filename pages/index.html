@@ -134,10 +134,17 @@
 
                     <h3 class="hidden">Download</h3>
 
+                    <div class="lb"></div>
+                    
                     <div class="download_buttons">
-                        <button style="width: 155px;">Free Demo</button>
-                        <!--<button>Download the Free Demo</button>-->
-                        <button>Buy it on Steam</button> 
+                        <!-- <button>Free Demo</button> -->
+                        <button class="button_text pill" style="width: 155px;">
+                            <span class="piece_text"><!-- Download --> Free Demo</span>
+                        </button>
+                        
+                        <button class="button_text pill">
+                            <span class="piece_text">Buy it on Steam</span>
+                        </button>
                         <!--<button>Buy for $14.99</button>-->
                     </div>
 
@@ -207,8 +214,14 @@
 
     <footer></footer>
 
-    <script src="../framework/scripts/defaults.js"></script>
-    <script src="../scripts/identity.js"></script>
+    <!-- 
+        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
+        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
+        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+    -->
+
+    <script defer src="../framework/scripts/defaults.js"></script>
+    <script defer src="../scripts/identity.js"></script>
 
 </body> 
 </html>
