@@ -12,6 +12,8 @@ TODO: Framework - Variables
 /* ------ Breakpoints ------ */
 /*$screen_medium_widthLimit: 1000px;  */
 /* ------ Colors And Backgrounds ------ */
+/*  hsl(193, 0%,92%); */
+/* hsl(193, 100%, 82%); */
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
 $bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
@@ -286,101 +288,12 @@ TODO: Types Table
 ──────────────────────────────────────────────────────
 TODO: Table - Skills
 ────────────────────────────────────────────────────── */
-/*  .skills_types_switchs_box { // Feito com Grid (Buga no celular!)
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
-    grid-gap: 10px; 
-    gap: 10px;
-
-    .switch {
-
-        padding: 10px;
-        margin: 0;
-        background-color: hsl(193, 0%,99%);
-        border: 1px solid hsl(193, 0%,92%);
-        border-radius: 14px;
-    }
-
-    .switch > :nth-child(1) {
-        display: none;
-    }
-
-    .switch > :nth-child(2) {
-         
-        justify-content: center;
-        width: 100%;
-    }
-
-    .on {
-        background-color: hsl(193,100%,99%);
-        border: 1px solid hsl(193,100%,86%);
-    }
-
-    @media (min-width: 419px) {
-
-        .switch > :nth-child(2) {
-            
-            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content;*/
-/* <- Declarações necessárias 
-            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-/*  
-        }
-    }
-}*/
-.skills_types_switchs_box {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(0.5 * 20px);
-  margin-right: calc(0.5 * 20px);
+.skills_types_choice img {
+  width: 40px;
 }
 
-.skills_types_switchs_box .switch {
-  width: calc(100% - 2 * calc(0.5 * 20px)) !important;
-  padding: 10px;
-  margin: calc(0.5 * 20px);
-  background-color: #fcfcfc;
-  border: 1px solid #ebebeb;
-  border-radius: 1400px;
-  justify-content: center;
-}
-
-.skills_types_switchs_box .switch .switch_icon {
-  margin-right: 11px;
-}
-
-.skills_types_switchs_box .switch .switch_button {
-  display: none;
-}
-
-.skills_types_switchs_box .on {
-  background-color: #fafeff;
-  border: 1px solid #a3ebff;
-}
-
-@media (min-width: 370px) {
-  .skills_types_switchs_box .switch {
-    justify-content: flex-start;
-    width: calc(50% - 2 * calc(0.5 * 20px)) !important;
-  }
-}
-
-@media (min-width: 540px) {
-  .skills_types_switchs_box .switch {
-    width: calc(33.3% - 2 * calc(0.5 * 20px)) !important;
-  }
-}
-
-@media (min-width: 816px) {
-  .skills_types_switchs_box .switch {
-    width: calc(25% - 2 * calc(0.5 * 20px)) !important;
-  }
-}
-
-@media (min-width: 1012px) {
-  .skills_types_switchs_box .switch {
-    width: calc(20% - 2 * calc(0.5 * 20px)) !important;
-  }
+.skills_types_choice.dropdown_open img {
+  width: 32px;
 }
 
 .skills_data_switchs_box {
@@ -429,7 +342,6 @@ TODO: Table - Skills
 }
 
 .skills_table_box {
-  display: none;
   width: max-content;
   -moz-width: fit-content;
   width: fit-content;
@@ -562,7 +474,7 @@ TODO: Table - Skills
     height: inherit;
     margin: 0;
   }
-  .switch.hide_skills_names .switch_label .switch_name {
+  .switch.hide_skills_names .switch_label .switch_text {
     display: none;
   }
 }
@@ -593,7 +505,7 @@ TODO: Table - Skills
     height: 48px;
     margin: 0;
   }
-  .skills_types_switchs_box .switch .switch_name {
+  .skills_types_switchs_box .switch .switch_text {
     display: none;
   }
   .skills_types_switchs_box .switch.on:not(:nth-child(1)) .switch_icon, .skills_types_switchs_box .switch:not(:nth-child(1)):hover .switch_icon {
@@ -613,13 +525,13 @@ TODO: Table - Skills
   .skills_types_switchs_box .switch:nth-of-type(1) .switch_icon {
     display: none;
   }
-  .skills_types_switchs_box .switch:nth-of-type(1) .switch_name {
+  .skills_types_switchs_box .switch:nth-of-type(1) .switch_text {
     display: inline;
     font-weight: bold;
     color: white;
     filter: drop-shadow(0px 0px 2px black);
   }
-  .skills_types_switchs_box .switch:hover:not(:nth-child(1)) .switch_name {
+  .skills_types_switchs_box .switch:hover:not(:nth-child(1)) .switch_text {
     display: inline-flex;
     justify-content: center;
     align-items: center;

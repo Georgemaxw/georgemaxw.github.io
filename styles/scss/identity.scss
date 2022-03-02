@@ -457,97 +457,21 @@ TODO: Types Table
 TODO: Table - Skills
 ────────────────────────────────────────────────────── */
 
-$STSB_switchs_margins: calc(0.5 * #{$margin_horizontal});
-$SDSB_switchs_margin_horizontal: 10px;
-
-/*  .skills_types_switchs_box { // Feito com Grid (Buga no celular!)
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(177px, 1fr));
-    grid-gap: 10px; 
-    gap: 10px;
-
-    .switch {
-
-        padding: 10px;
-        margin: 0;
-        background-color: hsl(193, 0%,99%);
-        border: 1px solid hsl(193, 0%,92%);
-        border-radius: 14px;
+.skills_types_choice { 
+  
+    img {
+        width: 40px;
     }
-
-    .switch > :nth-child(1) {
-        display: none;
-    }
-
-    .switch > :nth-child(2) {
-         
-        justify-content: center;
-        width: 100%;
-    }
-
-    .on {
-        background-color: hsl(193,100%,99%);
-        border: 1px solid hsl(193,100%,86%);
-    }
-
-    @media (min-width: 419px) {
-
-        .switch > :nth-child(2) {
-            
-            width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content;*/ /* <- Declarações necessárias 
-            para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */ /*  
-        }
-    }
-}*/
-
-.skills_types_switchs_box { // Feito com Flexbox
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(0.5 * #{$margin_horizontal});
-    margin-right: calc(0.5 * #{$margin_horizontal});
-
-    .switch {
-
-        width: calc(100% - 2 * #{$STSB_switchs_margins}) !important; 
-        padding: 10px; // <-
-        margin: $STSB_switchs_margins;
-        background-color: hsl(193, 0%,99%);// <-
-        border: 1px solid hsl(193, 0%,92%);// <-
-        border-radius: 1000px; // <-
-        justify-content: center;
-
-        .switch_icon { // Isso evita bug leve.
-            margin-right: 11px;
-        }
-
-        .switch_button {
-            display: none;
-        }
-    }
-
-    .on {
-        background-color: hsl(193,100%,99%); // <-
-        border: 1px solid hsl(193, 100%, 82%); // <-
-    }
-
-    @media (min-width: 370px /* 428px */) {
-
-        .switch {
-            justify-content: flex-start;
-            width: calc(50% - 2 * #{$STSB_switchs_margins}) !important; 
-        }
-    }
-
-    @media (min-width: 540px /* 615px */) { .switch { width: calc(33.3% - 2 * #{$STSB_switchs_margins}) !important; } }
-    
-    @media (min-width: 816px) { .switch { width: calc(25% - 2 * #{$STSB_switchs_margins}) !important; } }
-    
-    @media (min-width: 1012px) { .switch { width: calc(20% - 2 * #{$STSB_switchs_margins}) !important; } }
-    
-    //@media (min-width: 1040px) { .switch { width: calc(16.6% - 2 * #{$STSB_switchs_margins}) !important; } }
 }
+
+.skills_types_choice.dropdown_open { 
+  
+    img {
+        width: 32px;
+    }
+}
+
+$SDSB_switchs_margin_horizontal: 10px;
 
 .skills_data_switchs_box {
 
@@ -578,7 +502,7 @@ $SDSB_switchs_margin_horizontal: 10px;
 
 .skills_table_box {
 
-    display: none;
+    // display: none;
     
     width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
@@ -735,7 +659,7 @@ $larger_screen_minWidth_setting: 1366px; // VÍNCULO: Váriável JS, SCSS, e HTM
                 margin: 0;
             }
 
-            .switch_name {
+            .switch_text {
 
                 display: none;
             }
@@ -781,7 +705,7 @@ $larger_screen_minWidth_setting: 1366px; // VÍNCULO: Váriável JS, SCSS, e HTM
                 margin: 0;
             }
 
-            .switch_name {
+            .switch_text {
                 display: none;
             }
         }
@@ -812,7 +736,7 @@ $larger_screen_minWidth_setting: 1366px; // VÍNCULO: Váriável JS, SCSS, e HTM
                 display: none;
             }
 
-            .switch_name {
+            .switch_text {
                 display: inline;
                 font-weight: bold;
                 color: white;
@@ -820,7 +744,7 @@ $larger_screen_minWidth_setting: 1366px; // VÍNCULO: Váriável JS, SCSS, e HTM
             }
         }
 
-        .switch:hover:not(:nth-child(1)) .switch_name { // janela flutuando que mostra os nomes ao sobrepor com o mouse.
+        .switch:hover:not(:nth-child(1)) .switch_text { // janela flutuando que mostra os nomes ao sobrepor com o mouse.
 
                 display: inline-flex;
                 justify-content: center;

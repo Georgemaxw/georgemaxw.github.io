@@ -550,13 +550,55 @@ for (i = 0; i < table_skills_ths.length; i++) {
 
 /*  
 ────────────────────────────
+TODO:    > Skills 'Choice'
+──────────────────────────── */
+
+imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img')) // <------------------------------------------------------
+
+function F_skills_types_switchs(el) {
+
+    for (i = 1; i < table_skills_lines.length; i++) {
+        
+        var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
+
+        var this_type = getImgName(el.querySelector('.piece_icon'))
+
+        for (i2 = 0; i2 < imgs_type.length; i2++) {
+
+            if(getImgName(imgs_type[i2]) === this_type) {
+
+                /*
+                if(el.classList.contains('on')) {
+
+                    quantity_of_types_activated--
+                    table_skills_lines[i].activated_skill_counter--
+                } else {
+                    quantity_of_types_activated++
+                    table_skills_lines[i].activated_skill_counter++
+                }
+
+                if(table_skills_lines[i].activated_skill_counter >= 1) {
+
+                    table_skills_lines[i].style.display = 'table-row'
+                } else {
+                    table_skills_lines[i].style.display = 'none'
+                }
+                */
+            }
+        }
+    }
+}
+
+
+/*  
+────────────────────────────
 TODO:    > Skills Switchs
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
 TODO:        >> Initial Settings
-──────────────────────────── */
+──────────────────────────── 
 
 var quantity_of_types_activated = 0
 
@@ -566,11 +608,12 @@ for (i = 0; i < table_skills_lines.length; i++) {
 }
 
 imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
+*/
 
 /*  
 ────────────────────────────
 TODO:        >> Skills Types Switchs
-──────────────────────────── */
+──────────────────────────── 
 
 function F_skills_types_switchs(el) {
 
@@ -578,7 +621,7 @@ function F_skills_types_switchs(el) {
         
         var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
 
-        var this_type = getImgName(el.querySelector('.switch_icon'))
+        var this_type = getImgName(el.querySelector('.piece_icon'))
 
         for (i2 = 0; i2 < imgs_type.length; i2++) {
 
@@ -605,16 +648,16 @@ function F_skills_types_switchs(el) {
                     document.querySelector('.skills_table_box').style.display = 'block'
                 } else {
                     document.querySelector('.skills_table_box').style.display = 'none'
-                }/**/
+                }
             }
         }            
     }
-}
+}*/
 
 /*  
 ────────────────────────────
 TODO:            >>> 'All' Switch
-──────────────────────────── */
+──────────────────────────── 
 
 function F_skills_types_all_switch(el) {
 
@@ -639,12 +682,12 @@ function F_skills_types_all_switch(el) {
             }
         }
     }
-}
+}*/
 
 /*  
 ────────────────────────────
 TODO:            >>> Switch - hide skill names
-──────────────────────────── */
+──────────────────────────── 
 
 function F_hide_skills_names(el) {
     
@@ -652,16 +695,16 @@ function F_hide_skills_names(el) {
     
         if (el.classList.contains('on')) {
             
-            //current_switch.querySelector('.switch_name').style.display = 'inline'
+            //current_switch.querySelector('.piece_text').style.display = 'inline'
             current_switch.classList.remove('hide_skills_names')
             document.querySelector('.skills_types_switchs_box').classList.remove('hide_skills_names__justifyContent_center')
         } else {
-            //current_switch.querySelector('.switch_name').style.display = 'none'
+            //current_switch.querySelector('.piece_text').style.display = 'none'
             current_switch.classList.add('hide_skills_names')
             document.querySelector('.skills_types_switchs_box').classList.add('hide_skills_names__justifyContent_center')
         }
     })
-}
+}*/
 
 /*  
 ────────────────────────────
@@ -672,7 +715,7 @@ TODO:        >> Skills Data Switchs
 ────────────────────────────
 TODO:            >>> Decrease Size Of Buttons 
                                 On Highest Screen Width
-──────────────────────────── */
+──────────────────────────── 
 
 var larger_screen_minWidth_setting = 1366 // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
 
@@ -691,7 +734,7 @@ onresize = function() {
             current_switch.classList.remove('small')
         })
     }
-}
+}*/
  
 /*  
 ────────────────────────────
@@ -700,7 +743,7 @@ TODO:            >>> Labels
 
 for (i = 1; i < SDSB_switchs.length; i++) {
 
-    SDSB_switchs[i].querySelector(':scope .switch_name').textContent = table_skills_ths[i - 1].textContent
+    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = table_skills_ths[i - 1].textContent
 }
   
 /*  
@@ -788,7 +831,7 @@ TODO:                >>>> Activate 'All'
 
 STSB_switchs.forEach(function (current_switch) {
 
-    if (current_switch.querySelector(':scope .switch_name').textContent === 'All') {
+    if (current_switch.querySelector(':scope .piece_text').textContent === 'All') {
 
         F_skills_types_all_switch(current_switch)
         switch_event(current_switch)
@@ -808,7 +851,7 @@ for (i = 0; i < activated_data.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) { 
 
-        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope .switch_name').textContent) {
+        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope .piece_text').textContent) {
 
             activated_data_indexes.push(i2)
         }
@@ -823,12 +866,12 @@ for (ix = 0; ix < activated_data_indexes.length; ix++) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> Name Data disabled
+TODO:                >>>> 'Name' Data disabled
 ──────────────────────────── */
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if (SDSB_switchs[i].querySelector(':scope .switch_name').textContent === 'Name') {
+    if (SDSB_switchs[i].querySelector(':scope .piece_text').textContent === 'Name') {
 
         SDSB_switchs[i].classList.add('disabled')
     }
@@ -848,7 +891,7 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
 
-        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope .switch_name').textContent) {
+        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope .piece_text').textContent) {
 
             SDSB_switchs[i2].style.display = 'none'
 
@@ -877,9 +920,9 @@ for (i = 0; i < table_skills_ths.length; i++) {
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if(SDSB_switchs[i].querySelector(':scope .switch_name').textContent.slice(0, 4) === 'plus') {
+    if(SDSB_switchs[i].querySelector(':scope .piece_text').textContent.slice(0, 4) === 'plus') {
 
-        SDSB_switchs[i].querySelector(':scope .switch_name').textContent = SDSB_switchs[i].querySelector(':scope .switch_name').textContent.replace('plus', '+')
+        SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('plus', '+')
     }
 }
 
