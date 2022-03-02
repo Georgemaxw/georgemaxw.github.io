@@ -779,24 +779,24 @@ var choice_anchorClickedBefore = null /* <- Variável necessária para
 salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
 desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao seu 
 valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
-opção que aparece em um 'choice_d' quando ele está fechado.
+opção que aparece em um 'dropdown' quando ele está fechado.
 */
  
-var choice_d_open = false
+var dropdown_open = false
 
 function choice(arg) {
 
-    var choice_d_liClicked = null
+    var dropdown_liClicked = null
 
-    if(arg.classList.contains('choice_d')) {
+    if(arg.classList.contains('dropdown')) {
 
-        if(arg.classList.contains('choice_d_open')) {
+        if(arg.classList.contains('dropdown_open')) {
 
                 for(var i = 0; i < arg.children.length; i++) { 
 
                     if(arg.children[i].children[0] === choice_anchorClicked) {
 
-                        choice_d_liClicked = arg.children[i]
+                        dropdown_liClicked = arg.children[i]
                         break
                     }
                 }
@@ -808,9 +808,9 @@ function choice(arg) {
                     arg.children[i].style = 'display: none'
                 }
 
-                if(choice_d_liClicked !==  null) {
+                if(dropdown_liClicked !==  null) {
 
-                    choice_d_liClicked.style = 'display: inline-flex' 
+                    dropdown_liClicked.style = 'display: inline-flex' 
                 } else {
                     arg.children[0].style = 'display: inline-flex'
                 }
@@ -841,7 +841,7 @@ function choice(arg) {
         if(choice_anchorClicked !== 'disabled') {
 
             document.querySelector('html').classList.toggle('overflow_hidden')
-            arg.classList.toggle('choice_d_open')
+            arg.classList.toggle('dropdown_open')
 
         } else {
             choice_anchorClicked = choice_anchorClickedBefore
@@ -891,7 +891,7 @@ function choice_option(arg) {
 
 // Espaço no final ('li' invisível) do menu dos dropdowns:
 
-var allChoicesD = document.querySelectorAll('.choice_d')
+var allChoicesD = document.querySelectorAll('.dropdown')
 
 for(var i = 0; i < allChoicesD.length; i++) { 
 

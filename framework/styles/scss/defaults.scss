@@ -312,13 +312,13 @@ TODO: Margins
     margin-right: $margin_horizontal;
 }
 
-.offset.choice_h { 
+.offset.choice.horizontal { 
     display: inline-flex;
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
 }
 
-.offset.choice_v, .offset.choice_d { 
+.offset.choice.vertical, .offset.choice.dropdown { 
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
 }
@@ -2778,7 +2778,7 @@ TODO:            >>> Sizes & Positions
 TODO:    > Choices
 ──────────────────────────── */
 
-.choice_h, .choice_v, .choice_d {
+.choice.horizontal, .choice.vertical, .choice.dropdown {
 
     display: inline-block;
     font-size: 0;
@@ -2792,7 +2792,7 @@ TODO:    > Choices
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
 }
 
-.choice_h > li a, .choice_v > li a, .choice_d > li a {
+.choice.horizontal > li a, .choice.vertical > li a, .choice.dropdown > li a {
 
     display: inline-flex;
     align-items: center;
@@ -2800,7 +2800,7 @@ TODO:    > Choices
     height: 100%;
 }
 
-.choice_h > li span, .choice_v > li span, .choice_d > li span {
+.choice.horizontal > li span, .choice.vertical > li span, .choice.dropdown > li span {
 
     display: inline-flex;
     justify-content: center;
@@ -2812,7 +2812,7 @@ TODO:    > Choices
     }
 }
 
-.choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
+.choice.horizontal > li span > img, .choice.vertical > li span > img, .choice.dropdown > li span > img {
 
     margin-right: 6px;
 }
@@ -2822,7 +2822,7 @@ TODO:    > Choices
 TODO:        >> Horizontal
 ──────────────────────────── */
 
-.choice_h {
+.choice.horizontal {
 
     display: inline-flex;
     border-radius: 1000px;
@@ -2904,7 +2904,7 @@ TODO:        >> Horizontal
 TODO:        >> Vertical
 ──────────────────────────── */
 
-.choice_v {
+.choice.vertical {
 
     border-radius: $border_radius_default;
     background: $bg_choice;
@@ -2979,7 +2979,7 @@ TODO:        >> Vertical
 TODO:        >> Dropdown
 ──────────────────────────── */
 
-.choice_d {
+.choice.dropdown {
 
     border-radius: $border_radius_default;
     background: $bg_choice;
@@ -3026,7 +3026,7 @@ TODO:        >> Dropdown
 
 // Dropdown - Open:
 
-.choice_d.choice_d_open {
+.choice.dropdown.choice.dropdown_open {
 
     position: fixed; top: 0; bottom: 0; left: 0; right: 0;
     z-index: $zIndex_choice_d_open;
@@ -3089,32 +3089,32 @@ TODO:        >> Dropdown
 
 // Dropdown - Open - Scrollbars:
 
-.choice_d.choice_d_open::-webkit-scrollbar { // Entire bar
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar { // Entire bar
     width: 10px;
     height: 11px;
 }
 
-.choice_d.choice_d_open::-webkit-scrollbar-thumb { // Bar pointer
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb { // Bar pointer
     background: $color_menu_scrollbar_thumb;    
     border-radius: 10px;
 }
 
-.choice_d.choice_d_open::-webkit-scrollbar-track {   // Bar background
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-track {   // Bar background
     background: $color_menu_scrollbar_track; 
 }
 
-.choice_d.choice_d_open {
+.choice.dropdown.choice.dropdown_open {
     scrollbar-width: auto;
     scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
 }
 
 /* @media (pointer: fine) {
 
-    .choice_d.choice_d_open {
+    .choice.dropdown.choice.dropdown_open {
         overflow: hidden;
     }
     
-    .choice_d.choice_d_open:hover {
+    .choice.dropdown.choice.dropdown_open:hover {
         overflow: auto;
     }
 }*/
@@ -3124,13 +3124,13 @@ TODO:        >> Dropdown
 TODO:        >> Option ON
 ──────────────────────────── */
 
-.choice_h > li > a.on, .choice_v > li > a.on { 
+.choice.horizontal > li > a.on, .choice.vertical > li > a.on { 
 
     background: $bg_choice_selector;
     text-shadow: 1px 1px 1px $color_shadow_text_strong;
 }
 
-.choice_d.choice_d_open > li > .on { // .choice_h > li > a.on, .choice_v > li > a.on
+.choice.dropdown.choice.dropdown_open > li > .on { // .choice.horizontal > li > a.on, .choice.vertical > li > a.on
 
     background: $bg_choice_selector;
     text-shadow: 1px 1px 1px $color_shadow_text_strong;
@@ -3148,7 +3148,7 @@ TODO:        >> No Label
     }
 }
 
-.choice_h.no_label {
+.choice.horizontal.no_label {
 
     > li:nth-of-type(2) a { 
         border-top-left-radius: 1000px;
@@ -3166,7 +3166,7 @@ TODO:        >> No Label
     }
 }
 
-.choice_v.no_label > li:nth-of-type(2) { 
+.choice.vertical.no_label > li:nth-of-type(2) { 
 
         border-top-width: 0; 
 
@@ -3181,7 +3181,7 @@ TODO:        >> No Label
     }
 }
 
-.choice_d.no_label {
+.choice.dropdown.no_label {
 
     > li:nth-of-type(2) {
 
@@ -3198,13 +3198,13 @@ TODO:        >> No Label
     }
 }
 
-.choice_d.no_label.choice_d_open > li:nth-of-type(2) > a > img  {
+.choice.dropdown.no_label.choice.dropdown_open > li:nth-of-type(2) > a > img  {
 
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-.choice_d.no_label.choice_d_open > li:nth-of-type(2) span::after {
+.choice.dropdown.no_label.choice.dropdown_open > li:nth-of-type(2) span::after {
 
     content: "";
     margin-left: 0;
@@ -3215,25 +3215,25 @@ TODO:        >> No Label
 TODO:        >> Disabled
 ──────────────────────────── */
 
-.choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
+.choice.horizontal.disabled, .choice.vertical.disabled, .choice.dropdown.disabled {
     opacity: 0.5;
 }
 
-.choice_h.disabled *, .choice_v.disabled *, .choice_d.disabled * {
+.choice.horizontal.disabled *, .choice.vertical.disabled *, .choice.dropdown.disabled * {
     cursor: default !important; 
 }
 
-.choice_h > li > a.disabled, .choice_v > li > a.disabled, .choice_d > li > a.disabled {
+.choice.horizontal > li > a.disabled, .choice.vertical > li > a.disabled, .choice.dropdown > li > a.disabled {
     opacity: 0.5;
     cursor: default; 
 }
 
-.choice_h.disabled > li > a, .choice_v.disabled > li > a {
+.choice.horizontal.disabled > li > a, .choice.vertical.disabled > li > a {
     background: 0 !important;
     text-shadow: 1px 1px 1px $color_shadow_text !important;
 }
 
-.choice_h > li > a.disabled, .choice_v > li > a.disabled {
+.choice.horizontal > li > a.disabled, .choice.vertical > li > a.disabled {
     background: 0 !important;
     text-shadow: 1px 1px 1px $color_shadow_text !important;
 }
@@ -3777,14 +3777,14 @@ a, button:not(button[disabled], .disabled), input[type="radio"]:not(fieldset[dis
 // ------ center ------
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .center.offset {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
     max-width: calc(100% - (2 * #{$margin_horizontal}));
 }
 
@@ -3792,18 +3792,18 @@ figure.center {
     text-align: center;
 } 
 
-.center.choice_h {
-    display: flex;
+.center.choice.horizontal {
+    display: flex !important;
 }
 
-.center.offset.choice_d_open {
+.center.offset.choice.dropdown_open {
     max-width: none;
 }
 
 .switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, 
 .switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
     
-    display: flex;
+    display: flex !important;
 }
 
 .switch.key_full.inverted.center, .switch.key_text.inverted.center {
