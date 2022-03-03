@@ -517,9 +517,9 @@ TODO:    > Variables Used In 2+ Topics
 
 var skills_table_box = document.querySelector('.skills_table_box')
 
-var table_skills_lines = document.querySelectorAll('.table_skills tr')
+var skills_table_rows = document.querySelectorAll('.table_skills tr')
 
-var table_skills_ths = document.querySelectorAll('.table_skills th')
+var skills_table_ths = document.querySelectorAll('.table_skills th')
 
 var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch')
 
@@ -531,17 +531,17 @@ TODO:    > Add Classes Of <th> names
                     In Table Cells
 ──────────────────────────── */
 
-for (i = 0; i < table_skills_ths.length; i++) {
+for (i = 0; i < skills_table_ths.length; i++) {
 
-    var table_skills_th_content = table_skills_ths[i].textContent
+    var table_skills_th_content = skills_table_ths[i].textContent
     
-    table_skills_ths[i].classList.add(table_skills_th_content)
+    skills_table_ths[i].classList.add(table_skills_th_content)
 
-    for (i2 = 1; i2 < table_skills_lines.length; i2++) {
+    for (i2 = 1; i2 < skills_table_rows.length; i2++) {
 
-        if(table_skills_lines[i2]) {
+        if(skills_table_rows[i2]) {
 
-            var tds = table_skills_lines[i2].querySelectorAll(':scope td')
+            var tds = skills_table_rows[i2].querySelectorAll(':scope td')
 
             tds[i].classList.add(table_skills_th_content)
         }
@@ -553,40 +553,93 @@ for (i = 0; i < table_skills_ths.length; i++) {
 TODO:    > Skills 'Choice'
 ──────────────────────────── */
 
-imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img')) // <------------------------------------------------------
+imgsNamesAsAlts(document.querySelectorAll('.skills_types_choices_box img')) // <------------------------------------------------------
 
-function F_skills_types_switchs(el) {
+function func_skills_types_choices(el) {
 
-    for (i = 1; i < table_skills_lines.length; i++) {
-        
-        var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
+    document.querySelector('.skills_table_box').style.display = 'block'
 
-        var this_type = getImgName(el.querySelector('.piece_icon'))
+    skills_table_rows.forEach(function (skill_row) {
+    
+        var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
 
-        for (i2 = 0; i2 < imgs_type.length; i2++) {
+        if (el.querySelector('img') === null) {
 
-            if(getImgName(imgs_type[i2]) === this_type) {
+            skill_row.style.display = 'table-row'
+            
+        } else {
+            
+            var this_type_img = getImgName(el.querySelector('img'))
 
-                /*
-                if(el.classList.contains('on')) {
+            // skill_types_imgs.forEach(function (skill_type_img) {
+            for (i = 0; i < skill_types_imgs.length; i++) {
 
-                    quantity_of_types_activated--
-                    table_skills_lines[i].activated_skill_counter--
+                if(getImgName(skill_types_imgs[i]) === this_type_img) {
+
+                    skill_row.style.display = 'table-row'
+
+                    break
+
                 } else {
-                    quantity_of_types_activated++
-                    table_skills_lines[i].activated_skill_counter++
-                }
 
-                if(table_skills_lines[i].activated_skill_counter >= 1) {
-
-                    table_skills_lines[i].style.display = 'table-row'
-                } else {
-                    table_skills_lines[i].style.display = 'none'
+                    skill_row.style.display = 'none'
                 }
-                */
             }
+            //})
         }
-    }
+    })
+
+
+
+
+    
+
+
+
+
+
+
+
+
+//    for (i = 1; i < skills_table_rows.length; i++) {
+//        
+//        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Types img') 
+//
+//        var this_type = getImgName(el.querySelector('.piece_icon'))
+//
+//        for (i2 = 0; i2 < imgs_type.length; i2++) {
+//
+//            if(getImgName(imgs_type[i2]) === this_type) {
+//
+//
+//
+//                /*
+//                if(el.classList.contains('on')) {
+//
+//                    quantity_of_types_activated--
+//                    skills_table_rows[i].activated_skill_counter--
+//                } else {
+//                    quantity_of_types_activated++
+//                    skills_table_rows[i].activated_skill_counter++
+//                }
+//
+//                if(skills_table_rows[i].activated_skill_counter >= 1) {
+//
+//                    skills_table_rows[i].style.display = 'table-row'
+//                } else {
+//                    skills_table_rows[i].style.display = 'none'
+//                }
+//
+//                if(quantity_of_types_activated >= 1) {
+//
+//                    document.querySelector('.skills_table_box').style.display = 'block'
+//                } else {
+//                    document.querySelector('.skills_table_box').style.display = 'none'
+//                }
+//                */
+//            }
+//        }
+//    }
 }
 
 
@@ -602,9 +655,9 @@ TODO:        >> Initial Settings
 
 var quantity_of_types_activated = 0
 
-for (i = 0; i < table_skills_lines.length; i++) {
+for (i = 0; i < skills_table_rows.length; i++) {
 
-    table_skills_lines[i].activated_skill_counter = 0
+    skills_table_rows[i].activated_skill_counter = 0
 }
 
 imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
@@ -617,9 +670,9 @@ TODO:        >> Skills Types Switchs
 
 function F_skills_types_switchs(el) {
 
-    for (i = 1; i < table_skills_lines.length; i++) {
+    for (i = 1; i < skills_table_rows.length; i++) {
         
-        var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
+        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Types img') 
 
         var this_type = getImgName(el.querySelector('.piece_icon'))
 
@@ -630,17 +683,17 @@ function F_skills_types_switchs(el) {
                 if(el.classList.contains('on')) {
 
                     quantity_of_types_activated--
-                    table_skills_lines[i].activated_skill_counter--
+                    skills_table_rows[i].activated_skill_counter--
                 } else {
                     quantity_of_types_activated++
-                    table_skills_lines[i].activated_skill_counter++
+                    skills_table_rows[i].activated_skill_counter++
                 }
 
-                if(table_skills_lines[i].activated_skill_counter >= 1) {
+                if(skills_table_rows[i].activated_skill_counter >= 1) {
 
-                    table_skills_lines[i].style.display = 'table-row'
+                    skills_table_rows[i].style.display = 'table-row'
                 } else {
-                    table_skills_lines[i].style.display = 'none'
+                    skills_table_rows[i].style.display = 'none'
                 }
 
                 if(quantity_of_types_activated >= 1) {
@@ -743,7 +796,7 @@ TODO:            >>> Labels
 
 for (i = 1; i < SDSB_switchs.length; i++) {
 
-    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = table_skills_ths[i - 1].textContent
+    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = skills_table_ths[i - 1].textContent
 }
   
 /*  
@@ -765,18 +818,18 @@ function F_skills_data_switchs(el) {
 
         if (el.classList.contains('on')) {
             
-            table_skills_ths[SDSB_switchs_indexSwitch].style.display = 'none'
+            skills_table_ths[SDSB_switchs_indexSwitch].style.display = 'none'
 
-            for (i = 1; i < table_skills_lines.length; i++) {
+            for (i = 1; i < skills_table_rows.length; i++) {
             
-                table_skills_lines[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'none'
+                skills_table_rows[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'none'
             }
         } else {
-            table_skills_ths[SDSB_switchs_indexSwitch].style.display = 'table-cell'
+            skills_table_ths[SDSB_switchs_indexSwitch].style.display = 'table-cell'
 
-            for (i = 1; i < table_skills_lines.length; i++) {
+            for (i = 1; i < skills_table_rows.length; i++) {
             
-                table_skills_lines[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'table-cell'
+                skills_table_rows[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'table-cell'
             }
         }
     }
@@ -908,11 +961,11 @@ TODO:    > Replace Table Header
 
 // Replace In Table Header:
 
-for (i = 0; i < table_skills_ths.length; i++) {
+for (i = 0; i < skills_table_ths.length; i++) {
 
-    if(table_skills_ths[i].textContent.slice(0, 4) === 'plus') {
+    if(skills_table_ths[i].textContent.slice(0, 4) === 'plus') {
 
-        table_skills_ths[i].textContent = table_skills_ths[i].textContent.replace('plus', '+')
+        skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('plus', '+')
     }
 }
 

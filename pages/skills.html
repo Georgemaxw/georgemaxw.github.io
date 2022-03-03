@@ -263,11 +263,17 @@
                 </div>
                 -->
 
-                <ul class="choice dropdown center skills_types_choice" onclick="choice(this)">
-                    <li><span>Choose skill type</span></li>
-                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../images/game/icons/types/Cybernetic.webp" alt=" "><span>Cybernetic</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../images/game/icons/types/Digital.webp" alt=" "><span>Digital</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../images/game/icons/types/Fire.webp" alt=" "><span>Fire</span></a></li>
+                <ul class="choice dropdown center skills_types_choices_box" onclick="choice(this)">
+                    <li><span>Choose Skill Type</span></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><span>All Types</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cybernetic.webp" alt=" "><span>Cybernetic</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Digital.webp" alt=" "><span>Digital</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Electric.webp" alt=" "><span>Electric</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Fire.webp" alt=" "><span>Fire</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Gravity.webp" alt=" "><span>Gravity</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Laser.webp" alt=" "><span>Laser</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Liquid Metal.webp" alt=" "><span>Liquid Metal</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Machine.webp" alt=" "><span>Machine</span></a></li>
                 </ul>
 
                 <div class="lb2"></div>
@@ -491,11 +497,11 @@
 
                 <div class="lb2"></div>
 
-                <!-- 
-                <div id="go_to_table_01" class="button_hide_container container_organize"> 
+                <!--  -->
+                <div id="go_to_table_02" class="button_hide_container container_organize"> 
                     <div class="button_hide"></div>
                     <p class="attention container_organize" style="text-align: center;">Click on the table to view it in full screen.</p>
-                </div>  -->
+                </div> 
 
                 <div class="lb2"></div>
 
@@ -537,38 +543,6 @@
                             <th scope="col">Notes</th>
                         </tr>
 
-                        <!-- --------------- Elemento <tr> de modelo: --------------- --> 
-
-                        <tr>
-                            <td><span>...</span></td>
-                            <td><span>  <img class="type_icon" src="../images/game/icons/types/.webp" alt="">
-                                                    <img class="type_icon" src="../images/game/icons/types/.webp" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
                         <tr>
                             <td><span>Backup</span></td>
                             <td><span><img class="type_icon" src="../images/game/icons/types/Digital.webp" alt=""></span></td>
@@ -1210,9 +1184,8 @@
                         </tr>
 
                         <tr>
-                            <td><span>Shortware</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.webp" alt="">
-                                                <img class="type_icon" src="../images/game/icons/types/Electric.webp" alt=""></span></td>
+                            <td><span>Thunder</span></td>
+                            <td><span><img class="type_icon" src="../images/game/icons/types/Electric.webp" alt=""></span></td>
 
                             <!-- Physical --><td><span></span></td>
                             <!-- Intensity --><td><span></span></td>
@@ -1269,10 +1242,50 @@
                         </tr>
 
                     </table>
-                
-                </div> <!-- -->
 
-                <p class="click_on_the_table">*Click on the table to view it in full screen.</p>
+
+
+                    <div style="display: none;"> 
+
+                        <!-- --------------- Elemento <tr> de modelo: --------------- --> 
+
+                        <tr>
+                            <td><span>Skill name</span></td>
+                            <td><span>  <img class="type_icon" src="../images/game/icons/types/.webp" alt="">
+                                                    <img class="type_icon" src="../images/game/icons/types/.webp" alt=""></span></td>
+
+                            <!-- Physical --><td><span></span></td>
+                            <!-- Intensity --><td><span></span></td>
+                            <!-- Critical --><td><span></span></td>
+                            <!-- Effect --><td><span></span></td>
+                            <!-- Scope --><td><span></span></td>
+
+                            <!-- ACC --><td><span></span></td>
+                            <!-- +TP --><td><span></span></td>
+                            <!-- SPD --><td><span></span></td>
+                            <!-- Costs --><td><span>
+                                                        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+                            <!-- Equips --><td><span></span></td>
+
+                            <!-- Extra1 --><td><span></span></td>
+                            <!-- Extra2 --><td><span></span></td>
+                            <!-- Extra3 --><td><span></span></td>
+                            <!-- Extra4 --><td><span></span></td>
+                            <!-- Extra5 --><td><span></span></td>
+                            <!-- Extra6 --><td><span></span></td>
+                            
+                            <!-- Description --><td><span></span></td>
+                            <!-- Notes --><td><span></span></td>
+                        </tr>
+                        
+                    </div>
+
+
+                
+                </div> 
+
+                <!-- <p class="click_on_the_table">*Click on the table to view it in full screen.</p> -->
 
             </div>
             
