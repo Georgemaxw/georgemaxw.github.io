@@ -2683,7 +2683,7 @@ TODO:        >> Dropdown
 }
 
 .choice.dropdown > li span {
-  padding: 0 11px 0 15px;
+  padding: 0 11px 0 12px;
 }
 
 .choice.dropdown > li > a > img {
@@ -2759,7 +2759,7 @@ TODO:        >> Dropdown
 }
 
 .choice.dropdown.choice.dropdown_open li span {
-  padding: 0 15px 0 15px;
+  padding: 0 12px 0 12px;
 }
 
 .choice.dropdown.choice.dropdown_open > li:nth-of-type(2) > a > img[src] {
