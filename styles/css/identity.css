@@ -296,48 +296,51 @@ TODO: Table - Skills
   width: 32px;
 }
 
+/* .skills_data_switchs_box {
+
+    margin-left: calc(0.5 * 20px);
+    margin-right: calc(0.5 * 20px);
+
+    .switch {
+        width: calc(100% - 2 * 10px) !important; 
+        margin-left: $SDSB_switchs_margin_horizontal;
+        margin-right: $SDSB_switchs_margin_horizontal;
+    }
+
+    @media (min-width: 400px) {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .switch { width: calc(50% - 2 * 10px) !important; } }
+
+    @media (min-width: 550px) { .switch { width: calc(33% - 2 * 10px) !important; } }
+    
+    @media (min-width: 700px) { .switch { width: calc(25% - 2 * 10px) !important; } }
+    
+    @media (min-width: 850px) { .switch { width: calc(20% - 2 * 10px) !important; } }
+    
+    @media (min-width: 1000px) { .switch { width: calc(16.6% - 2 * 10px) !important; } }
+} */
 .skills_data_switchs_box {
   margin-left: calc(0.5 * 20px);
   margin-right: calc(0.5 * 20px);
 }
 
 .skills_data_switchs_box .switch {
-  width: calc(100% - 2 * 10px) !important;
+  width: calc((100% - 4 * 10px)/2);
+  height: 42px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-@media (min-width: 400px) {
-  .skills_data_switchs_box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .skills_data_switchs_box .switch {
-    width: calc(50% - 2 * 10px) !important;
-  }
+.skills_data_switchs_box .switch + .switch {
+  margin-top: 16rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 410px) {
   .skills_data_switchs_box .switch {
-    width: calc(33% - 2 * 10px) !important;
-  }
-}
-
-@media (min-width: 700px) {
-  .skills_data_switchs_box .switch {
-    width: calc(25% - 2 * 10px) !important;
-  }
-}
-
-@media (min-width: 850px) {
-  .skills_data_switchs_box .switch {
-    width: calc(20% - 2 * 10px) !important;
-  }
-}
-
-@media (min-width: 1000px) {
-  .skills_data_switchs_box .switch {
-    width: calc(16.6% - 2 * 10px) !important;
+    width: calc((100% - 6 * 10px)/3);
   }
 }
 
