@@ -644,6 +644,19 @@ $SDSB_switchs_margin_horizontal: 10px;
     }
 }
 
+.skills_table_box_full {
+
+    position: fixed;
+    //top: 48px; bottom: 0; left: 0; right: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: calc(#{$zIndex_nav} + 1);
+    width: 100vw;
+    max-width: 100vw;
+    max-height: calc(100vh - (0 * #{$button_height}));
+    background-color: $bg_html;
+    border: 0; 
+}
+
 .click_on_the_table {
     text-align: center;
 }
