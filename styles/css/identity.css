@@ -517,6 +517,10 @@ TODO: Skills - Table
   margin-top: 4px;
 }
 
+.skills_table .type_icon + .type_icon {
+  margin-left: 3px;
+}
+
 .skills_table .cost + .cost {
   margin-left: 6px;
 }

@@ -661,6 +661,11 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
         margin-top: 4px;
     }
 
+    .type_icon + .type_icon {
+
+        margin-left: 3px;
+    }
+
     .cost {
      //filter: drop-shadow(0px 0px 1px black);
     }
