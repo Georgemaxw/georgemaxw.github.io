@@ -517,9 +517,9 @@ TODO:    > Variables Used In 2+ Topics
 
 var skills_table_box = document.querySelector('.skills_table_box')
 
-var skills_table_rows = document.querySelectorAll('.table_skills tr')
+var skills_table_rows = document.querySelectorAll('.skills_table tr')
 
-var skills_table_ths = document.querySelectorAll('.table_skills th')
+var skills_table_ths = document.querySelectorAll('.skills_table th')
 
 var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch')
 
@@ -533,9 +533,9 @@ TODO:    > Add Classes Of <th> names
 
 for (i = 0; i < skills_table_ths.length; i++) {
 
-    var table_skills_th_content = skills_table_ths[i].textContent
+    var skills_table_th_content = skills_table_ths[i].textContent
     
-    skills_table_ths[i].classList.add(table_skills_th_content)
+    skills_table_ths[i].classList.add(skills_table_th_content)
 
     for (i2 = 1; i2 < skills_table_rows.length; i2++) {
 
@@ -543,7 +543,7 @@ for (i = 0; i < skills_table_ths.length; i++) {
 
             var tds = skills_table_rows[i2].querySelectorAll(':scope td')
 
-            tds[i].classList.add(table_skills_th_content)
+            tds[i].classList.add(skills_table_th_content)
         }
     }
 }
