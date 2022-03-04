@@ -622,14 +622,16 @@ $SDSB_switchs_margin_horizontal: 10px;
     }
 
     .cost {
+     //filter: drop-shadow(0px 0px 1px black);
     }
 
     .cost + .cost {
         margin-left: 6px;
     }
 
+
     .cost.hp {
-        color: lime;
+        color: hsl(120, 100%, 48%);
     }
 
     .cost.mp {
