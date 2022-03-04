@@ -14,7 +14,7 @@
     <link href='../styles/css/identity.css' rel='stylesheet'>
 <style>
 
-    .Name, .Types, .Physical, .Intensity, .Critical, .Effect, .Scope, .ACC, .plusTP, .SPD, .Costs, .Equips, 
+    .Name, .Types, .Physical, .Intensity, .Critical, .Effect, .Scope, .ACC, .plusTP, .plusSPD, .Costs, .Equips, 
     .Extra1, .Extra2, .Extra3, .Extra4, .Extra5, .Extra6, .Description, .Notes {
         display: none; 
     }
@@ -263,7 +263,7 @@
                 </div>
                 -->
 
-                <ul class="choice dropdown center skills_types_choices_box" onclick="choice(this)">
+                <ul class="choice dropdown center skills_types_choice" onclick="choice(this)">
                     <li><span>Choose Skill Type</span></li>
                     <li><a onclick="choice_option(this); func_skills_types_choices(this)"><span>All Types</span></a></li>
                     <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cybernetic.webp" alt=" "><span>Cybernetic</span></a></li>
@@ -274,9 +274,12 @@
                     <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Laser.webp" alt=" "><span>Laser</span></a></li>
                     <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Liquid Metal.webp" alt=" "><span>Liquid Metal</span></a></li>
                     <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Machine.webp" alt=" "><span>Machine</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Neutral Magic.webp" alt=" "><span>Neutral Magic</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Plasma.webp" alt=" "><span>Plasma</span></a></li>
+                    <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Vital Energy.webp" alt=" "><span>Vital Energy</span></a></li>
                 </ul>
 
-                <div class="lb2"></div>
+                <div class="lb"></div>
 
                 <!--  
                 <ul class="skills_data_switchs_box list_only_markup">

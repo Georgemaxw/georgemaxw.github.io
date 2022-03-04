@@ -550,14 +550,12 @@ for (i = 0; i < skills_table_ths.length; i++) {
 
 /*  
 ────────────────────────────
-TODO:    > Skills 'Choice'
+TODO:    > Skills Choice
 ──────────────────────────── */
 
-imgsNamesAsAlts(document.querySelectorAll('.skills_types_choices_box img')) // <------------------------------------------------------
+imgsNamesAsAlts(document.querySelectorAll('.skills_types_choice img'))
 
 function func_skills_types_choices(el) {
-
-    document.querySelector('.skills_table_box').style.display = 'block'
 
     skills_table_rows.forEach(function (skill_row) {
     
@@ -571,7 +569,6 @@ function func_skills_types_choices(el) {
             
             var this_type_img = getImgName(el.querySelector('img'))
 
-            // skill_types_imgs.forEach(function (skill_type_img) {
             for (i = 0; i < skill_types_imgs.length; i++) {
 
                 if(getImgName(skill_types_imgs[i]) === this_type_img) {
@@ -585,72 +582,20 @@ function func_skills_types_choices(el) {
                     skill_row.style.display = 'none'
                 }
             }
-            //})
         }
     })
 
-
-
-
-    
-
-
-
-
-
-
-
-
-//    for (i = 1; i < skills_table_rows.length; i++) {
-//        
-//        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Types img') 
-//
-//        var this_type = getImgName(el.querySelector('.piece_icon'))
-//
-//        for (i2 = 0; i2 < imgs_type.length; i2++) {
-//
-//            if(getImgName(imgs_type[i2]) === this_type) {
-//
-//
-//
-//                /*
-//                if(el.classList.contains('on')) {
-//
-//                    quantity_of_types_activated--
-//                    skills_table_rows[i].activated_skill_counter--
-//                } else {
-//                    quantity_of_types_activated++
-//                    skills_table_rows[i].activated_skill_counter++
-//                }
-//
-//                if(skills_table_rows[i].activated_skill_counter >= 1) {
-//
-//                    skills_table_rows[i].style.display = 'table-row'
-//                } else {
-//                    skills_table_rows[i].style.display = 'none'
-//                }
-//
-//                if(quantity_of_types_activated >= 1) {
-//
-//                    document.querySelector('.skills_table_box').style.display = 'block'
-//                } else {
-//                    document.querySelector('.skills_table_box').style.display = 'none'
-//                }
-//                */
-//            }
-//        }
-//    }
+    document.querySelector('.skills_table_box').style.display = 'block'
 }
-
 
 /*  
 ────────────────────────────
-TODO:    > Skills Switchs
+OUT:    > Skills Types Switchs
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:        >> Initial Settings
+OUT:        >> Initial Settings
 ──────────────────────────── 
 
 var quantity_of_types_activated = 0
@@ -665,7 +610,7 @@ imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
 
 /*  
 ────────────────────────────
-TODO:        >> Skills Types Switchs
+OUT:        >> Skills Types Switchs Function
 ──────────────────────────── 
 
 function F_skills_types_switchs(el) {
@@ -709,7 +654,7 @@ function F_skills_types_switchs(el) {
 
 /*  
 ────────────────────────────
-TODO:            >>> 'All' Switch
+OUT:            >> 'All' Switch
 ──────────────────────────── 
 
 function F_skills_types_all_switch(el) {
@@ -739,7 +684,7 @@ function F_skills_types_all_switch(el) {
 
 /*  
 ────────────────────────────
-TODO:            >>> Switch - hide skill names
+OUT:            >> Switch - hide skill names
 ──────────────────────────── 
 
 function F_hide_skills_names(el) {
@@ -761,12 +706,12 @@ function F_hide_skills_names(el) {
 
 /*  
 ────────────────────────────
-TODO:        >> Skills Data Switchs
+TODO:    > Skills Data Switchs
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:            >>> Decrease Size Of Buttons 
+TODO:      >> Decrease Size Of Buttons 
                                 On Highest Screen Width
 ──────────────────────────── 
 
@@ -791,7 +736,7 @@ onresize = function() {
  
 /*  
 ────────────────────────────
-TODO:            >>> Labels
+TODO:      >> Labels
 ──────────────────────────── */
 
 for (i = 1; i < SDSB_switchs.length; i++) {
@@ -801,7 +746,7 @@ for (i = 1; i < SDSB_switchs.length; i++) {
   
 /*  
 ────────────────────────────
-TODO:            >>> Logic
+TODO:      >> Logic
 ──────────────────────────── */
 
 function F_skills_data_switchs(el) {
@@ -837,7 +782,7 @@ function F_skills_data_switchs(el) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> 'All' Switch
+TODO:          >>> 'All' Switch
 ──────────────────────────── */
 
 function F_skills_data_all_switch(el) {
@@ -873,12 +818,12 @@ function F_skills_data_all_switch(el) {
 
 /*  
 ────────────────────────────
-TODO:            >>> Initial Setting
+TODO:      >> Initial Setting
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:                >>>> Activate 'All'
+TODO:          >>> Activate 'All'
                                         Type switch
 ──────────────────────────── */
 
@@ -893,7 +838,7 @@ STSB_switchs.forEach(function (current_switch) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> Activateds Data
+TODO:          >>> Activateds Data
 ──────────────────────────── */
 
 var activated_data = ['Name', 'Types', 'Effect', 'Notes']
@@ -919,7 +864,7 @@ for (ix = 0; ix < activated_data_indexes.length; ix++) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> 'Name' Data disabled
+TODO:          >>> 'Name' Data disabled
 ──────────────────────────── */
 
 for (i = 0; i < SDSB_switchs.length; i++) {
@@ -932,7 +877,7 @@ for (i = 0; i < SDSB_switchs.length; i++) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> Hidden Data Switchs
+TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []

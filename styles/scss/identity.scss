@@ -457,14 +457,18 @@ TODO: Types Table
 TODO: Skills - Table
 ────────────────────────────────────────────────────── */
 
-.skills_types_choices_box { 
+.skills_types_choice { 
+
+    //height: 42px;
   
     img {
+        // width: 32px; margin-left: 8px;
+
         width: 40px;
     }
 }
 
-.skills_types_choices_box.dropdown_open {
+.skills_types_choice.dropdown_open {
 
     a {
         height: 44px !important; 
@@ -522,6 +526,14 @@ $SDSB_switchs_margin_horizontal: 10px;
     }
 
     @media (min-width: 410px) { .switch { width: calc((100% - 6 * #{$SDSB_switchs_margin_horizontal})/3); } }
+
+    @media (min-width: 540px) { .switch { width: calc((100% - 8 * #{$SDSB_switchs_margin_horizontal})/4); } }
+
+    @media (min-width: 670px) { .switch { width: calc((100% - 10 * #{$SDSB_switchs_margin_horizontal})/5); } }
+
+    @media (min-width: 800px) { .switch { width: calc((100% - 12 * #{$SDSB_switchs_margin_horizontal})/6); } }
+
+    @media (min-width: 930px) { .switch { width: calc((100% - 14 * #{$SDSB_switchs_margin_horizontal})/7); } }
 }
 
 .skills_table_box {

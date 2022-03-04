@@ -288,15 +288,15 @@ TODO: Types Table
 ──────────────────────────────────────────────────────
 TODO: Skills - Table
 ────────────────────────────────────────────────────── */
-.skills_types_choices_box img {
+.skills_types_choice img {
   width: 40px;
 }
 
-.skills_types_choices_box.dropdown_open a {
+.skills_types_choice.dropdown_open a {
   height: 44px !important;
 }
 
-.skills_types_choices_box.dropdown_open img {
+.skills_types_choice.dropdown_open img {
   width: 32px;
 }
 
@@ -345,6 +345,30 @@ TODO: Skills - Table
 @media (min-width: 410px) {
   .skills_data_switchs_box .switch {
     width: calc((100% - 6 * 10px)/3);
+  }
+}
+
+@media (min-width: 540px) {
+  .skills_data_switchs_box .switch {
+    width: calc((100% - 8 * 10px)/4);
+  }
+}
+
+@media (min-width: 670px) {
+  .skills_data_switchs_box .switch {
+    width: calc((100% - 10 * 10px)/5);
+  }
+}
+
+@media (min-width: 800px) {
+  .skills_data_switchs_box .switch {
+    width: calc((100% - 12 * 10px)/6);
+  }
+}
+
+@media (min-width: 930px) {
+  .skills_data_switchs_box .switch {
+    width: calc((100% - 14 * 10px)/7);
   }
 }
 
