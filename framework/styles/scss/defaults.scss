@@ -1367,6 +1367,7 @@ table {
 
     th {
         color: $color_theme;
+        // background-color: hsl(193,100%,98%);
         border: $table_border1_width solid $color_theme;
         font-weight: bold;
 
@@ -1397,7 +1398,7 @@ table {
     }
 
     th, td {
-        padding: 6px;
+        padding: 6px 9px;
     }
 
     td {
