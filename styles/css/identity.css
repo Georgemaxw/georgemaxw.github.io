@@ -490,13 +490,11 @@ TODO: Skills - Table
 }
 
 .skills_table .cost.hp {
-  color: #00f500;
+  color: #00f000;
 }
 
 .skills_table .cost.mp {
-  /* color: yellow;
-        text-shadow: 0 0 1px rgb(0, 0, 0); */
-  color: gold;
+  color: #f5dc00;
 }
 
 .skills_table .cost.tp {

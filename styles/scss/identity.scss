@@ -631,14 +631,14 @@ $SDSB_switchs_margin_horizontal: 10px;
 
 
     .cost.hp {
-        color: hsl(120, 100%, 48%);
+        color: hsl(120, 100%, 47%);
     }
 
     .cost.mp {
-        /* color: yellow;
-        text-shadow: 0 0 1px rgb(0, 0, 0); */
-
-        color: gold;
+        
+        // color: hsl(60, 100%, 50%); // yellow
+        // color: hsl(51, 100%, 50%); // gold
+        color: hsl(54, 100%, 48%);
     }
 
     .cost.tp {
