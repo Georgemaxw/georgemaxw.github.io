@@ -1320,7 +1320,7 @@ table td + td {
 }
 
 table th, table td {
-  padding: 6px;
+  padding: 6px 9px;
 }
 
 table td {

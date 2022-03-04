@@ -288,6 +288,18 @@ TODO: Types Table
 ──────────────────────────────────────────────────────
 TODO: Skills - Table
 ────────────────────────────────────────────────────── */
+@media (min-width: 1920px) {
+  .FULLHD_STC_conteiner {
+    position: fixed;
+    top: 151px;
+    left: 0;
+    z-index: 1000;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 .skills_types_choice img {
   width: 40px;
 }
@@ -404,6 +416,20 @@ TODO: Skills - Table
   }
 }
 
+@media (min-width: 1920px) {
+  .skills_data_switchs_box {
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    width: calc((2 * 130px + 4 * 10px));
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .skills_data_switchs_box .switch {
+    width: 130px;
+  }
+}
+
 .skills_table_box {
   display: none;
   width: max-content;
@@ -421,6 +447,12 @@ TODO: Skills - Table
 @media (min-width: 501px) {
   .skills_table_box {
     max-width: calc(100% - (2 * 20px));
+  }
+}
+
+@media (min-width: 1920px) {
+  .skills_table_box {
+    max-height: calc(100vh - 180px);
   }
 }
 
