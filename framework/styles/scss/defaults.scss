@@ -1913,7 +1913,7 @@ button.button_full, button.button_text, button.button_icon {
     .piece_text {
 
         color: $color_text_menu;
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 50%));
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%));
     }
 
     .piece_icon {
@@ -2792,6 +2792,7 @@ TODO:    > Choices
     margin: 0;
     list-style-type: none;
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
+    // text-shadow: 1px 1px 1px $color_shadow_text; // <- Parte do estilo de choice anterior!
 }
 
 .choice.horizontal > li a, .choice.vertical > li a, .choice.dropdown > li a {
@@ -2802,16 +2803,26 @@ TODO:    > Choices
     height: 100%;
 }
 
-.choice.horizontal > li span, .choice.vertical > li span, .choice.dropdown > li span {
+.choice.horizontal > li, .choice.vertical > li, .choice.dropdown > li {
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center; 
-    color: $color_text_menu;
-    font-weight: bold;
+    span {
 
-    .text_img, .text_img_size {
-        filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+        display: inline-flex;
+        justify-content: center;
+        align-items: center; 
+        color: $color_text_menu;
+        font-weight: bold;
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%)); // <- Parte do estilo de choice novo! 
+
+        .text_img, .text_img_size {
+            
+            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+        }
+    }
+
+    span:hover {
+        
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
     }
 }
 
@@ -2830,7 +2841,6 @@ TODO:        >> Horizontal
     display: inline-flex;
     border-radius: 1000px;
     background: $bg_choice;
-    text-shadow: 1px 1px 1px $color_shadow_text;
     // box-shadow: // <- Parte do estilo de choice anterior!
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
@@ -2901,7 +2911,7 @@ TODO:        >> Horizontal
 
     > li a:hover {
         background: $bg_choice_selector;
-        text-shadow: 1px 1px 1px $color_shadow_text_strong;
+        // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
     }
 
     > li:nth-of-type(1) a:hover {
@@ -2923,7 +2933,6 @@ TODO:        >> Vertical
 
     border-radius: $border_radius_default;
     background: $bg_choice;
-    text-shadow: 1px 1px 1px $color_shadow_text;
     box-shadow: 
     inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
@@ -2944,7 +2953,7 @@ TODO:        >> Vertical
 
     > li a:hover {
         background: $bg_choice_selector;
-        text-shadow: 1px 1px 1px $color_shadow_text_strong;
+        // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
     }
 
     > li:nth-of-type(1) a:hover {
@@ -3003,7 +3012,6 @@ TODO:        >> Dropdown
     linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
     linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    text-shadow: 1px 1px 1px $color_shadow_text;
     // box-shadow: // <- Parte do estilo de choice anterior!
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
@@ -3146,17 +3154,19 @@ TODO:        >> Dropdown
 TODO:        >> Option ON
 ──────────────────────────── */
 
-.choice.horizontal > li > a.on, .choice.vertical > li > a.on { 
+
+.choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on { 
 
     background: $bg_choice_selector;
-    text-shadow: 1px 1px 1px $color_shadow_text_strong;
+    // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
+
+    span {
+
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
+    }
 }
 
-.choice.dropdown.choice.dropdown_open > li > .on { // .choice.horizontal > li > a.on, .choice.vertical > li > a.on
 
-    background: $bg_choice_selector;
-    text-shadow: 1px 1px 1px $color_shadow_text_strong;
-}
 
 /*  
 ────────────────────────────

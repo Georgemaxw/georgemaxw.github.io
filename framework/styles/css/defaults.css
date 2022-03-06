@@ -1890,7 +1890,7 @@ button.button_full, button.button_text, button.button_icon {
 
 button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text {
   color: white;
-  filter: drop-shadow(0px 0px 2px #00c8ff);
+  filter: drop-shadow(0px 0px 2px #00a8d6);
 }
 
 button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon {
@@ -2515,10 +2515,15 @@ TODO:    > Choices
   align-items: center;
   color: white;
   font-weight: bold;
+  filter: drop-shadow(0px 0px 2px #00a8d6);
 }
 
 .choice.horizontal > li span .text_img, .choice.horizontal > li span .text_img_size, .choice.vertical > li span .text_img, .choice.vertical > li span .text_img_size, .choice.dropdown > li span .text_img, .choice.dropdown > li span .text_img_size {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+.choice.horizontal > li span:hover, .choice.vertical > li span:hover, .choice.dropdown > li span:hover {
+  filter: drop-shadow(0px 0px 2px #0090b8);
 }
 
 .choice.horizontal > li span > img, .choice.vertical > li span > img, .choice.dropdown > li span > img {
@@ -2533,7 +2538,6 @@ TODO:        >> Horizontal
   display: inline-flex;
   border-radius: 1000px;
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
   box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
@@ -2587,7 +2591,6 @@ TODO:        >> Horizontal
 
 .choice.horizontal > li a:hover {
   background: url(../../images/bgs/choice_selector.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice.horizontal > li:nth-of-type(1) a:hover {
@@ -2606,7 +2609,6 @@ TODO:        >> Vertical
 .choice.vertical {
   border-radius: 20px;
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
 }
 
@@ -2626,7 +2628,6 @@ TODO:        >> Vertical
 
 .choice.vertical > li a:hover {
   background: url(../../images/bgs/choice_selector.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .choice.vertical > li:nth-of-type(1) a:hover {
@@ -2674,7 +2675,6 @@ TODO:        >> Dropdown
 .choice.dropdown {
   border-radius: 1000px;
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
@@ -2806,14 +2806,12 @@ TODO:        >> Dropdown
 ────────────────────────────
 TODO:        >> Option ON
 ──────────────────────────── */
-.choice.horizontal > li > a.on, .choice.vertical > li > a.on {
+.choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on {
   background: url(../../images/bgs/choice_selector.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.choice.dropdown.choice.dropdown_open > li > .on {
-  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+.choice.horizontal > li > a.on span, .choice.vertical > li > a.on span, .choice.dropdown.choice.dropdown_open > li > .on span {
+  filter: drop-shadow(0px 0px 2px #0090b8);
 }
 
 /*  
