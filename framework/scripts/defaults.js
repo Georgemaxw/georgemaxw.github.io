@@ -772,7 +772,19 @@ window.addEventListener('resize', update_switches_and_buttons_resize)
 TODO: Choices 
 ────────────────────────────────────────────────────── */
 
-{ 
+
+
+/*
+var $shine = $swt_or_btn.querySelector(':scope .button_shine_top') 
+
+if ($shine === null) {
+
+
+}
+*/
+
+
+
 
 var choice_anchorClicked = null
 var choice_anchorClickedBefore = null /* <- Variável necessária para 
@@ -810,15 +822,39 @@ function choice(arg) {
 
                 if(dropdown_liClicked !==  null) {
 
-                    dropdown_liClicked.style = 'display: inline-flex' 
+                    dropdown_liClicked.style = 'display: inline-flex'
+
                 } else {
+
                     arg.children[0].style = 'display: inline-flex'
                 }
+
+
+
+                var $shine = document.createElement('div') 
+
+                $shine.classList.add('choice_shine_top')
+            
+                arg.insertAdjacentElement('afterbegin', $shine)
             }
 
         } else {
 
-            if(arg.classList.contains('disabled')) { return }
+            if(arg.classList.contains('disabled')) { 
+                
+                return 
+            }
+
+            
+
+            var $shine = arg.querySelector(':scope .choice_shine_top') 
+
+            if ($shine !== null) {
+
+                $shine.remove()
+            }
+
+
 
             arg.children[0].style = 'display: none'
             
@@ -859,20 +895,6 @@ function choice(arg) {
         choice_anchorClicked.classList.add('on')
 
         choice_anchorClicked = null
-        
-        /*
-        if(choice_anchorClicked !== null) {
-
-            for(var i = 0; i < arg.children.length; i++) { 
-
-                arg.children[i].children[0].classList.remove('on')
-            }
-
-            choice_anchorClicked.classList.add('on')
-
-            choice_anchorClicked = null
-        }
-        */
     }
 }
 
@@ -900,7 +922,44 @@ var e = document.createElement("li")
     allChoicesD[i].appendChild(e)
 }
 
-}
+/*  
+────────────────────────────
+TODO:    > Shine
+──────────────────────────── */
+
+document.querySelectorAll('.choice.horizontal, .choice.dropdown').forEach(function ($choice) {
+
+    // var $shine = $choice.querySelector(':scope .choice_shine_top') 
+
+    if($choice.classList.contains('horizontal')) {
+
+        var $shine = document.createElement('div') 
+
+        $shine.classList.add('choice_shine_top')
+
+        $choice.querySelector(':scope li:nth-of-type(1)').insertAdjacentElement('afterbegin', $shine)
+
+        var $choice_parts = $choice.querySelectorAll(':scope a') 
+        
+        $choice_parts.forEach(function (part) {
+
+            var $shine = document.createElement('div') 
+
+            $shine.classList.add('choice_shine_top')
+        
+            part.insertAdjacentElement('afterbegin', $shine)
+        })
+    }
+
+    if($choice.classList.contains('dropdown')) {
+
+        var $shine = document.createElement('div') 
+
+        $shine.classList.add('choice_shine_top')
+
+        $choice.insertAdjacentElement('afterbegin', $shine)
+    }
+})
 
 /*  
 ──────────────────────────────────────────────────────
