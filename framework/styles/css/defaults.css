@@ -2537,7 +2537,6 @@ TODO:        >> Horizontal
 .choice.horizontal {
   display: inline-flex;
   border-radius: 1000px;
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
   box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
@@ -2561,7 +2560,6 @@ TODO:        >> Horizontal
   border-right: 1px solid white;
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
-  background: url(../../images/bgs/choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
   box-shadow: inset 2px 0px 9px 4px #00a4db, 0px 0px 0px 1px #8ae2ff;
@@ -2590,7 +2588,7 @@ TODO:        >> Horizontal
 }
 
 .choice.horizontal > li a:hover {
-  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .choice.horizontal > li:nth-of-type(1) a:hover {
@@ -2608,8 +2606,8 @@ TODO:        >> Vertical
 ──────────────────────────── */
 .choice.vertical {
   border-radius: 20px;
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
-  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li {
@@ -2627,7 +2625,7 @@ TODO:        >> Vertical
 }
 
 .choice.vertical > li a:hover {
-  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .choice.vertical > li:nth-of-type(1) a:hover {
@@ -2639,9 +2637,9 @@ TODO:        >> Vertical
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   justify-content: center;
-  background: url(../../images/bgs/choice_label.png) center/100% 100%;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px -4px 5px 3px rgba(0, 0, 0, 0.15), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
+  box-shadow: inset 2px 0px 9px 4px #00a4db, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li:nth-of-type(1) a {
@@ -2807,11 +2805,15 @@ TODO:        >> Dropdown
 TODO:        >> Option ON
 ──────────────────────────── */
 .choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on {
-  background: url(../../images/bgs/choice_selector.png) center/100% 100%;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .choice.horizontal > li > a.on span, .choice.vertical > li > a.on span, .choice.dropdown.choice.dropdown_open > li > .on span {
   filter: drop-shadow(0px 0px 2px #0090b8);
+}
+
+.choice.vertical > li > a.on {
+  background: rgba(245, 252, 255, 0.9);
 }
 
 /*  
@@ -2944,6 +2946,25 @@ TODO:        >> Shine
   width: calc(100% - 9px);
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
+}
+
+.choice.vertical li {
+  position: relative;
+}
+
+.choice.vertical .choice_shine_top {
+  content: '';
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  height: 52%;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.3));
+  border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;
+  border-bottom-left-radius: 650px;
+  border-bottom-right-radius: 650px;
+  left: 7px;
+  width: calc(100% - 2 * 7px);
 }
 
 .choice.dropdown {

@@ -927,7 +927,7 @@ var e = document.createElement("li")
 TODO:    > Shine
 ──────────────────────────── */
 
-document.querySelectorAll('.choice.horizontal, .choice.dropdown').forEach(function ($choice) {
+document.querySelectorAll('.choice').forEach(function ($choice) {
 
     // var $shine = $choice.querySelector(':scope .choice_shine_top') 
 
@@ -949,6 +949,15 @@ document.querySelectorAll('.choice.horizontal, .choice.dropdown').forEach(functi
         
             part.insertAdjacentElement('afterbegin', $shine)
         })
+    }
+
+    if($choice.classList.contains('vertical')) {
+
+        var $shine = document.createElement('div') 
+
+        $shine.classList.add('choice_shine_top')
+
+        $choice.querySelector(':scope li:nth-of-type(1)').insertAdjacentElement('afterbegin', $shine) 
     }
 
     if($choice.classList.contains('dropdown')) {

@@ -245,11 +245,10 @@ $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floa
 
 // ─────────── Choices ───────────
 
-$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
+// $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
-$bg_choice: linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),hsl(193, 100%, 83%);  // <- Parte do estilo de choice novo!
 $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
-$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
+// $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 
 // ─────────── Lightboxs ───────────
 
@@ -2840,7 +2839,7 @@ TODO:        >> Horizontal
 
     display: inline-flex;
     border-radius: 1000px;
-    background: $bg_choice;
+    // background: $bg_choice; // <- Parte do estilo de choice anterior!
     // box-shadow: // <- Parte do estilo de choice anterior!
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
@@ -2871,7 +2870,7 @@ TODO:        >> Horizontal
         border-top-left-radius: 1000px;
         border-bottom-left-radius: 1000px;
 
-        background: $bg_choice_label;
+        // background: $bg_choice_label; // <- Parte do estilo de choice anterior!
         text-shadow: 1px 1px 1px $color_shadow_text;
         // box-shadow: // <- Parte do estilo de choice anterior!
         // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
@@ -2910,7 +2909,8 @@ TODO:        >> Horizontal
     }
 
     > li a:hover {
-        background: $bg_choice_selector;
+
+        background: hsla(0, 0%, 100%, 0.25); 
         // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
     }
 
@@ -2932,10 +2932,16 @@ TODO:        >> Vertical
 .choice.vertical {
 
     border-radius: $border_radius_default;
-    background: $bg_choice;
-    box-shadow: 
-    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+    // background: $bg_choice; // <- Parte do estilo de choice anterior!
+    // box-shadow: // <- Parte do estilo de choice anterior!
+    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+
+    background: // <- Parte do estilo de choice novo!
+    linear-gradient(to top, hsla(195, 100%, 100%, 0.9), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
     > li {
         display: flex;
@@ -2952,7 +2958,8 @@ TODO:        >> Vertical
     }
 
     > li a:hover {
-        background: $bg_choice_selector;
+        // background: $bg_choice_selector; // <- Parte do estilo de choice anterior!
+        background: hsla(0, 0%, 100%, 0.3);
         // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
     }
 
@@ -2962,15 +2969,22 @@ TODO:        >> Vertical
     }
 
     > li:nth-of-type(1) {
+
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
 
         justify-content: center;
-        background: $bg_choice_label;
+        // background: $bg_choice_label; // <- Parte do estilo de choice anterior!
         text-shadow: 1px 1px 1px $color_shadow_text;
-        box-shadow: 
-        inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-        inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+        // box-shadow:  // <- Parte do estilo de choice anterior!
+        // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+        // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+
+        background: // <- Parte do estilo de choice novo!
+        linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+        linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
+
+        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
         a {
             display: flex;
@@ -3157,7 +3171,8 @@ TODO:        >> Option ON
 
 .choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on { 
 
-    background: $bg_choice_selector;
+    // background: $bg_choice_selector; // <- Parte do estilo de choice anterior!
+    background: hsla(0, 0%, 100%, 0.5);
     // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
 
     span {
@@ -3166,7 +3181,13 @@ TODO:        >> Option ON
     }
 }
 
+.choice.vertical > li > a.on { 
 
+    // background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.6)); // <- Parte do estilo de choice novo! 
+    // background: hsl(195, 100%, 93%);// <- Parte do estilo de choice novo!
+    // background: hsla(0, 0%, 100%, 0.8);// <- Parte do estilo de choice novo! 
+    background: hsla(195, 100%, 98%, 0.9);// <- Parte do estilo de choice novo!
+}
 
 /*  
 ────────────────────────────
@@ -3338,7 +3359,28 @@ TODO:        >> Shine
 
 .choice.vertical {
 
+    li {
+        position: relative;
+    }
 
+    .choice_shine_top { 
+          
+        content: '';
+        position: absolute;
+        top: 0px;  
+        z-index: 1; 
+        height: 52%;
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.3));
+        border-top-left-radius: 1000px;
+        border-top-right-radius: 1000px;
+        border-bottom-left-radius: 650px; 
+        border-bottom-right-radius: 650px; 
+        
+        $left: 7px;  
+    
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
 }
 
 .choice.dropdown {
