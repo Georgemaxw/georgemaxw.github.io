@@ -3080,10 +3080,10 @@ TODO:        >> Dropdown
     background: $bg_choice_d_open;
     background: rgb(128, 0, 128);
     background: 
-linear-gradient(217deg, rgba(0, 191, 255,.8), rgba(0, 191, 255,0) 71%),
-linear-gradient(127deg, rgba(255,255,255,.8), rgba(255,255,255,0) 71%),
-linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0,255,255,0) 71%),
-white;
+    linear-gradient(217deg, rgba(0, 191, 255,.8), rgba(0, 191, 255,0) 71%),
+    linear-gradient(127deg, rgba(255,255,255,.8), rgba(255,255,255,0) 71%),
+    linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0,255,255,0) 71%),
+    white;
      
     overflow-y: auto;
 
@@ -3094,6 +3094,11 @@ white;
 
         position: relative; top: $button_height_small;
         width: 100%;
+
+        span {
+
+            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 38%)); // <- Parte do estilo de choice novo! 
+        }
 
         > a {
             flex-grow: 1;
