@@ -19,37 +19,90 @@ $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
 $button_height_small: 40px;
-$button_height_smaller: calc(2 * #{$margin_vertical});
-$table_border1_width: 1px;
-$table_border2_width: 1px;
+$button_height_smaller: 32px;
 $border_radius_default: 20px;
 $border_radius_big: 40px;
  
-/* ------ Breakpoints ------ */ 
+// ─────────── Breakpoints ───────────
 
 $screen_small_widthLimit: 501px; // Largura máxima de um celular.
-/*$screen_medium_widthLimit: 1000px;  */ // Largura mínima de um PC.
+// $screen_medium_widthLimit: 1000px; // Largura mínima de um PC.
+
+// $tablet_height_limit: 1366px; // Altura máxima de um tablet.
 
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
 
-/* ------ Colors And Backgrounds ------ */ 
+// ─────────── z-index's ───────────
+
+$zIndex_nav: 1000;
+$zIndex_choice_d_open: 1100;
+$zIndex_lightbox: 1200;
+
+// ─────────── Colors And BG's Geral ───────────
 
 // $color_theme: hsl(193, 100%, 50%);
 //$color_theme: hsl(201, 100%, 48%);
 //$color_theme: DodgerBlue;
-$color_theme: DeepSkyBlue;
+$color_theme: DeepSkyBlue; // VÍNCULO: Váriável JS
 $color_theme_clear: hsla(193, 100%, 98%, 1); 
 
 $color_text: black;
 $color_text_clear: hsl(0, 0%, 68%); 
 $color_text_menu: white; 
+
+$color_shadow_text: hsla(0, 0%, 0%, 0.15);
+$color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
+$color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
+$color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
+
+$bg_html: white;
+//$bg_html: hsl(0, 0%, 36%);
+//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
+ 
+/*  
+────────────────────────────
+TODO:    > Specific Elements & Components
+──────────────────────────── */
+
+// ─────────── Header-Nav ───────────
+
+$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
+$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
+$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
+$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
+$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
+
+$bg_header: url(../../images/bgs/header.png) center /100% 100%;
+$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
+$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+
+/*
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+*/
+
+// ─────────── Footer ───────────
+
+$color_shadow_footer: $color_shadow_headerNav_rounded; 
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);   
+
+$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
+
+// $bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+
+// ─────────── Texts ───────────
+
 $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
+$color_border_kbd: hsl(0, 0%, 95%);
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
 $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
-$color_text_form: $color_text; 
-$color_text_form_placeholder: $color_text_clear;
-$color_text_form_select: $color_text_clear;
+$color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
+
+$bg_kbd: hsl(0, 0%, 86%);
+
+// ─────────── Signs ───────────
 
 $color_text_success: hsl(120, 100%, 35%);
 $color_text_attention: hsl(45, 74%, 45%);
@@ -62,23 +115,151 @@ $color_border_fail: hsl(0, 100%, 70%);
 $color_border_danger_clear: hsl(0, 100%, 76%);
 $color_border_danger_dark: hsl(0, 100%, 31%);
 
-$color_border_table: hsl(0, 0%, 85%);
-$color_border_form: hsl(0, 0%, 80%); 
-$color_border_kbd: hsl(0, 0%, 95%);
+$bg_success: hsl(120, 100%, 91%);
+$bg_attention: hsl(54, 100%, 93%);
+$bg_fail: hsl(0, 100%, 94%);
+$bg_danger: red;
 
-$color_shadow_text: hsla(0, 0%, 0%, 0.15);
-$color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
-$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
-$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
-$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
-$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
-$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
-$color_shadow_footer: $color_shadow_headerNav_rounded;
-$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);
-$color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
-$color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
+// ─────────── Tables ───────────
+
+$table_border1_width: 1px;
+$table_border2_width: 1px;
+
+$color_border_table: hsl(0, 0%, 85%);
+
+$bg_table_tr_hover: $color_theme_clear; 
+
+// ─────────── Forms ───────────
+
+$color_text_form: $color_text; 
+$color_text_form_placeholder: $color_text_clear;
+$color_text_form_select: $color_text_clear;
+
+$color_border_form: hsl(0, 0%, 80%); 
+
+$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
+
+// $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+
+// ─────────── Switches ───────────
+
+// --- Type Button ---
+
+$color_text_switch_type_button_off: hsl(0, 0%, 50%);
+$color_text_switch_type_button_on: white;
+$color_text_switch_type_button_shadow_outline_on: hsl(193, 100%, 40%);
+
+$color_icon_outline_switch_type_button_off: hsla(0, 0%, 0%, 0.45);
+$color_icon_outline_switch_type_button_on: hsl(187, 100%, 47%);
+
+$color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
+$color_shadow_box_inset_button_type_normal_and_switch_type_button_clear: white; // VÍNCULO: Váriável JS
+
+$bg_switch_type_button_off: 
+// url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
+linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),
+hsl(193, 0%,94%); // hsl(193, 0%,88%); 
+//$bg_switch_type_button_off: hsl(193, 0%,96%); 
+
+$bg_button_type_normal_hover_and_switch_type_button_on:  // VÍNCULO: Váriável JS
+// url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
+linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),
+hsl(193, 100%, 83%); 
+
+/*      
+//$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
+$bg_switch_type_button_pill_and_rounded_off: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%, 88%);
+$bg_switch_type_button_pill_and_rounded_on: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%);
+*/
+
+$bg_button_type_normal_and_switch_type_button_shine_top: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
+ 
+$bg_button_type_normal_and_switch_type_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
+
+// (Text floating):
+
+$bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+
+// --- Type Image ---
+
+$button_and_switch_both_type_image_icon_size: $button_height; 
+$color_outline_button_and_switch_both_type_image: hsla(0, 0%, 0%, 0.2); 
+
+// (Text floating):
+
+$color_text_switch_type_image_piece_text_floating_off: hsl(0, 0%, 67%); 
+$color_border_switch_type_image_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_box_shadow_switch_type_image_piece_text_floating_off: hsla(0, 0%, 0%, 0.09);
+$bg_switch_type_image_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+
+$color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
+$color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+$bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+
+// --- Type Key ---
+
+$switch_type_key_ball_size: 24px;
+$switch_type_key_ball_size_SS: 28px;
+
+$bg_switch_type_key_ball: 
+linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
+hsl(0, 0%, 80%);
+$bg_switch_type_key_on_ball: 
+linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
+cyan;
+$bg_switch_type_key_ball_shine: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+$bg_switch_type_key_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+$bg_switch_type_key_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
+$bg_switch_type_key_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+
+// ─────────── Buttons ───────────
+
+// Obs.: Algumas variáveis dos botões estão em Switches.
+
+/*  
+$color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
+$color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
+$color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
+$color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%, 0.24);
+$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
+*/
+
+$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
+$color_border_button_type_image_piece_text_floating: $color_border_switch_type_image_piece_text_floating_on;
+$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating: $color_box_shadow_switch_type_image_piece_text_floating_on;
+$bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floating_on; 
+
+// ─────────── Choices ───────────
+
+// $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+// $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+// $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+
+// ─────────── Lightboxs ───────────
+
 $color_shadow_lightbox: black; 
 $color_shadow_lightbox_button: black; 
+
+$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
+$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
+
+// ─────────── Scrollbars ───────────
  
 $color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
 $color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
@@ -93,48 +274,9 @@ $color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
 $color_menuRounded_scrollbar_track: transparent;
 $color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
 
-$bg_html: white;
-//$bg_html: hsl(0, 0%, 36%);
-//$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
-$bg_header: url(../../images/bgs/header.png) center /100% 100%;
-$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%; 
-$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
-$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
+// ─────────── Others ───────────
 
-$bg_success: hsl(120, 100%, 91%);
-$bg_attention: hsl(54, 100%, 93%);
-$bg_fail: hsl(0, 100%, 94%);
-$bg_danger: red;
-
-$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
-$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
-$bg_table_tr_hover: $color_theme_clear; 
-$bg_kbd: hsl(0, 0%, 86%);
-$bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%;
-$bg_choice: url(../../images/bgs/choice.png)  center /100% 100%;
-$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
-$bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%;
-$bg_switch_off: hsl(0, 0%, 93%);
-$bg_switch_on: hsl(115, 100%, 66%);
-$bg_switch_check: hsl(0, 0%, 100%); 
-$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%, $color_theme;
-$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
-$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
-
-/*
-$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
-$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
-$bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
-*/
-
-/* ------ z-index's ------ */
-
-$zIndex_nav: 1000;
-$zIndex_choice_d_open: 1100;
-$zIndex_lightbox: 1200;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -170,13 +312,13 @@ TODO: Margins
     margin-right: $margin_horizontal;
 }
 
-.offset.choice_h { 
+.offset.choice.horizontal { 
     display: inline-flex;
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
 }
 
-.offset.choice_v, .offset.choice_d { 
+.offset.choice.vertical, .offset.choice.dropdown { 
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
 }
@@ -216,13 +358,21 @@ a {
     text-decoration: none;
 } 
 
+a[href^="http"] {
+    color: $color_text;
+    text-decoration: underline;
+    background: url('../../images/icons/link_external.png') no-repeat 100% 0;   
+    background-size: 17px 17px; 
+    padding-right: 20px; 
+}
+
 @for $i from 1 through 6 { 
 	h#{$i} {
         font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
+        margin-right: $margin_horizontal;
         text-align: center; 
         // color: $color_theme;
         background: $color_text_hx;
@@ -235,12 +385,13 @@ a {
 
 @for $i from 7 through 20 { 
 	h#{$i} {
+
         display: block;
         font-size: 20rem;
         margin-top: $margin_vertical;
         margin-bottom: $margin_vertical;
         margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
+        margin-right: $margin_horizontal;
         text-align: center; 
         font-weight: bold;
         // color: $color_theme;
@@ -250,6 +401,15 @@ a {
         background-clip: text;
         text-fill-color: transparent; 
 	}
+}
+
+.mini_topic {
+
+    font-size: $font_size;
+    background: 0;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-fill-color: initial;
 }
 
 p, li, ul, ol, dl, dt, dd {
@@ -308,8 +468,14 @@ strong, b, em, i {
     text-decoration: underline;
 }
 
-abbr[title] { 
-    text-decoration: underline dotted;
+abbr[title] {
+    /* text-decoration: underline dotted;*/
+    //text-decoration: underline; 
+    text-decoration: none;
+    background: url('../../images/icons/interrogation.svg') no-repeat 100% 0;    
+    background-size: 21px 21px;  
+    padding-right: 21px;
+    cursor: pointer;
 }
 
 dfn, var, address, cite {
@@ -382,37 +548,56 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     padding: 5px 13px 5px;
 }
 
-.highlight {
-    //color: $color_text_highlight;
-    background: $color_text_highlight;
+.highlight, .hl {
+    /*background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent; 
+    text-fill-color: transparent;*/
+
+    color: $color_theme;
 }
 
-.highlight_menu {
-    //color: $color_text_highlight_menu;
-    background: $color_text_highlight_menu;
+.highlight_menu, .hlm {
+    /*background: $color_text_highlight_menu;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent; 
+    text-fill-color: transparent;*/ 
+
+    color: yellow;
 }
 
-.click {
-    padding-left: 4px;
+.click { 
+
+    color: $color_text;
+    text-decoration: underline;
+    background: url('../../images/icons/button.svg') no-repeat 100% 0;    
+    background-size: 21px 21px;  
+    padding-right: 23px; 
+    cursor: pointer;
+
+
+
+
+    /*padding-left: 4px;
     padding-right: 4px;
-    /*border-top: 3px solid hsl(0, 0%, 86%) !important;
-    border-left: 3px solid hsl(0, 0%, 86%) !important;
-    border-bottom: 3px solid hsl(0, 0%, 70%) !important;
-    border-right: 3px solid hsl(0, 0%, 70%) !important;*/
+    
     border: 1px solid hsl(0, 0%, 76%) !important; 
     border-radius: 5px;
     color: hsl(0, 0%, 53%);
-    background: hsl(0, 0%, 95%);
+    background: hsl(0, 0%, 95%);*/
+
+    
+    /*
+    background: $color_text_click;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     text-decoration: none !important;
     cursor: pointer;
+    */
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -498,6 +683,11 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     }
 }
 
+.list_index > ul > li > ul > li > a {
+
+        text-decoration: underline; 
+}
+
 .list_featured {
 
     list-style-type: none;
@@ -521,6 +711,13 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
         margin-top: calc(0.5 * #{$margin_vertical});
         padding-top: calc(0.5 * #{$margin_vertical});
     }
+}
+
+.list_only_markup {
+
+    list-style: none; 
+    padding: 0; 
+    margin-left: 20px;
 }
 
 .success, .attention, .fail, .danger  {
@@ -661,7 +858,7 @@ TODO:    > Header-nav
             }
         }
 
-        .textImg, .textImg_size {
+        .text_img, .text_img_size {
             filter: drop-shadow(1px 1px 1px $color_shadow_text); 
         }
     }
@@ -1006,7 +1203,7 @@ TODO:    > Footer
     }
 
     .footer-icons {
-        width: 100%;
+        width: calc(100% - (2 * #{$margin_horizontal}));
         height: 48px;
         border-radius: 50px;
         background-color: $color_theme;
@@ -1034,10 +1231,11 @@ TODO:    > Footer
             filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
         }
 
-        @media (max-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) {
+        // Não apage esta regra comentada:
+        /*@media (min-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) { 
 
-            width: calc(100% - (2 * #{$margin_horizontal}));
-        } 
+            width: 100%;
+        }*/
 
         // Footer-icons em smartphone - paisagem:
 
@@ -1049,7 +1247,7 @@ TODO:    > Footer
 
     @media (max-height: $screen_small_widthLimit) {
 
-        max-width: none;
+        max-width: none !important; 
     }
 
     .copyright {
@@ -1075,7 +1273,7 @@ TODO:    > Classes
     margin-left: 16px;
 } 
 */
-.nav_expanded_subOptions_h {
+.nav_expanded_sub_options_h {
     @media (min-width: $nav_expand) {
         
         overflow-x: auto;
@@ -1094,14 +1292,14 @@ TODO:    > Classes
     }
 }
 
-.nav_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+.nav_sub_options_text_below { // Serve para ambos os modos horizontal e vertical das sub opções.
     li > a {
         display: inline-flex;
         flex-direction: column;
     }
 }
 
-.nav_compact_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+.nav_compact_sub_options_text_below { // Serve para ambos os modos horizontal e vertical das sub opções.
 
     @media (max-width: $nav_expand) {
         li > a {
@@ -1111,7 +1309,7 @@ TODO:    > Classes
     }
 }
 
-.nav_expanded_subOptions_textBelow { // Serve para ambos os modos horizontal e vertical das sub opções.
+.nav_expanded_sub_options_text_below { // Serve para ambos os modos horizontal e vertical das sub opções.
 
     @media (min-width: $nav_expand) {
         li > a {
@@ -1126,17 +1324,17 @@ TODO:    > Classes
 TODO: Multimedia
 ────────────────────────────────────────────────────── */
 
-/*.textImg_evenSize {
+/*.text_img_evenSize {
     max-width: 18px; 
     margin-bottom: -4px;
 }*/
 
-.textImg {
+.text_img {
     max-width: 19px !important;
     margin-bottom: -3px;
 }
 
-.textImg_size {
+.text_img_size { 
     max-width: 19px;
 }
 
@@ -1169,13 +1367,14 @@ table {
 
     th {
         color: $color_theme;
+        // background-color: hsl(193,100%,98%);
         border: $table_border1_width solid $color_theme;
-        font-weight: normal;
+        font-weight: bold;
 
-        /**/@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+        /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
             font-weight: bold; 
-        }
+        }*/
     }
 
     tr:hover {  
@@ -1199,7 +1398,7 @@ table {
     }
 
     th, td {
-        padding: 6px;
+        padding: 7px 11px; 
     }
 
     td {
@@ -1217,12 +1416,12 @@ table {
     }
 }
 /*
-.table_style_1 {
+table.type_1 {
      Estilo padrão. 
 }
 */
 
-.table_style_2 {
+table.type_2 {
     width: 100%;
     max-width: none;
     border-width: 0;
@@ -1250,13 +1449,13 @@ table {
 }
 
 @media (min-width: $screen_small_widthLimit) {
-    .table_style_2 {
+    table.type_2 {
         width: auto;
         max-width: calc(100% - 2 * #{$margin_horizontal});
     }
 }
 
-.table_style_3 {
+table.type_3 {
     border-width: 0;
 
     /*tr:hover {
@@ -1281,10 +1480,10 @@ table {
     }
 }
 
-/*----- table_style_4 -----*/
+/*----- table.type_4 -----*/ 
 
 @media (min-width: 0) and (max-width:  $screen_small_widthLimit) {
-    .table_style_4 {
+    table.type_4 {
         border-width: 0;
         margin-left: calc(2 * #{$margin_horizontal});
         margin-right: calc(2 * #{$margin_horizontal});
@@ -1323,7 +1522,7 @@ table {
 }
 
 @media (min-width: $screen_small_widthLimit) {
-    .table_style_4 {
+    table.type_4 {
         border-width: 0;
 
         tr {
@@ -1387,7 +1586,7 @@ fieldset:disabled label {
 ────────────────────────────
 TODO:    > Widgets
 ──────────────────────────── */
-
+ 
 /*  
 ────────────────────────────
 TODO:        >> inputs e textarea
@@ -1523,7 +1722,7 @@ select {
 /*  
 ────────────────────────────
 TODO:        >> button
-──────────────────────────── */
+──────────────────────────── 
 
 button {
     min-width: 116px; // Tava em 120px
@@ -1542,7 +1741,7 @@ button {
 
 button:disabled {
     opacity: 0.5;
-}
+}*/
 
 /*  
 ────────────────────────────
@@ -1583,218 +1782,1647 @@ TODO:    > Class
     } 
 }
 
-/*  
+/* 
 ──────────────────────────────────────────────────────
-TODO: Others
+TODO:    > Switches & Buttons
 ────────────────────────────────────────────────────── */
 
-html {
-    background: $bg_html;
-}
+.switch, button {
 
-body {
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    align-items: center;
 
-hr {
-    border-top: 1px solid $color_theme;
-    border-bottom: 0; 
-    background: $color_theme;
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
+    // margin-top: $margin_vertical;
+    // margin-bottom: $margin_vertical;
     margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
-}
+    margin-right: $margin_horizontal; 
 
-@media (min-width: $hr_stop) {
+    cursor: pointer;
 
-    hr {
-        margin-left: 0;
-        margin-right: 0;
+    .piece_text {
+
+        text-align: justify;
     }
 }
 
-a, button:not(button[disabled]), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
-    cursor: pointer;
+.switch.disabled, button.disabled {
+
+    opacity: 0.5;
+    cursor: default;
 }
 
-.lb { /* Line break */
-    margin-top: $margin_vertical; 
-    margin-bottom:  $margin_vertical;
+button {
+
+    border-width: 0;
+}
+
+/*  
+────────────────────────────
+TODO:        >> Button
+──────────────────────────── */
+
+.switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon {
+
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    min-width: $button_height_smaller;
+    min-height: $button_height_smaller;
+    transition: 0s;
+
+    .button_shine_top { // Shine
+          
+        content: '';
+        position: absolute;
+        z-index: 1;
+        background: $bg_button_type_normal_and_switch_type_button_shine_top;
+          
+        $offset: 2px;
+        $left:  $offset;
+        $height: 49.8%; //calc(24px + #{$offset});
+
+        top: $offset;  
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+        height: $height; 
+    }
+
+    .piece_text {
+
+        font-weight: bold; 
+    }
+
+    .piece_icon {
+
+        $width: 32px;
+
+        width: $width;
+        border-radius: calc(1/4 * #{$width});
+
+        margin-right: 12px;
+    }
+}
+
+.switch.button_full, .switch.button_text, .switch.button_icon {
+
+    background: $bg_switch_type_button_off; 
+
+    box-shadow: inset 0px 0px 8px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
+
+    .piece_key { 
+
+        display: none;
+    }
+
+    .piece_label {
+        
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .piece_text {
+
+        color: $color_text_switch_type_button_off;
+    }
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_type_button_off);
+    }
+}
+
+button.button_full, button.button_text, button.button_icon {
+
+    background: 
+    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.     
+
+    /* 
+    .button_shine_top {
+
+        opacity: 1;
+    } 
+    */
+
+    .piece_text {
+
+        color: $color_text_menu;
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%));
+    }
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsla(195, 100%, 67%, 0.7));
+    }
+}
+
+@media not all and (pointer: coarse) {
+
+    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
+    //button.button_full, button.button_text, button.button_icon {
+
+        background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
+        
+        box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
+        // filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
+
+        // filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
+    }
+}
+
+// --------------------------------------------------- Estilos de buttons alternativos -----------------------------------------------------
+
+button.estilo_2 {
+    
+    background: linear-gradient(to bottom, 
+    hsl(195, 100%, 100%), hsl(195, 100%, 67%) 80%, hsl(195, 100%, 50%), hsl(195, 100%, 40%));   
+    box-shadow: 0 0px 0px 1px hsl(195, 100%, 60%), inset 0 0px 9px 4px hsla(0, 0%, 100%, 0.7) !important;
+
+    .button_shine_top {
+        opacity: 0.85;
+    }
+}
+
+button.estilo_3 {
+
+    background: linear-gradient(to bottom, hsl(195, 100%, 60%), hsl(195, 100%, 74%), hsl(195, 100%, 60%)); 
+    box-shadow: inset 0px 0px 10px 1px hsla(0, 0%, 0%, 0.5) !important;
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
+.switch.button_full, button.button_full {
+
+    padding: 11px; 
+    padding-right: 12px;
+    border-radius: 14px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // Shine 
+          
+        border-radius: 12px; // Propriedade aplicada aprimorada via JS.
+    }
+}
+ 
+.switch.button_text, button.button_text {
+
+    padding: 10px; 
+    padding-right: 11px;
+    border-radius: 11px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // Shine 
+          
+        border-radius: 9px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .piece_icon {
+        display: none;
+    }
+}
+      
+.switch.button_icon, button.button_icon {
+
+    // justify-content: center;
+    padding: 9px; // Propriedade aplicada aprimorada via JS.
+    border-radius: 13px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // Shine 
+          
+        border-radius: 10px; // Propriedade aplicada aprimorada via JS.
+    }
+    
+    .piece_text {
+
+        // display: none; // Propriedade aplicada via JS.
+
+        padding-left: 9px; // Propriedade aplicada via JS.
+        padding-right: 9px; // Propriedade aplicada via JS.
+        text-align: center;
+    }
+
+    .piece_icon {
+        margin: 0;
+    }
+}
+      
+.switch.button_icon:not(.disabled), button.button_icon:not(.disabled) {
+
+    .piece_text {
+
+        top: -50px; // Propriedade aplicada via JS.
+    }
+}
+
+.switch.button_full.disabled, .switch.button_text.disabled {
+
+    .piece_label {
+        color: adjust-color($color_text, $alpha: -0.5);
+    }
+}
+
+button.button_full.disabled, button.button_text.disabled {
+
+    color: adjust-color($color_text, $alpha: -0.5);
+}
+
+.switch.button_icon.disabled, button.button_icon.disabled {
+    
+    .piece_text {
+
+        z-index: 1;
+    }
+}
+
+// ─────────── Pill ───────────
+
+.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, button.button_full.pill, button.button_text.pill, button.button_icon.pill {
+
+    border-radius: 1000px; 
+    // background: $bg_switch_type_button_pill_and_rounded_off;
+
+    .button_shine_top { // Shine
+           
+        top: 2px;  
+        height: 49.5%;
+        border-radius: 1000px; 
+    }
+}
+
+.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill {
+
+    box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
+}
+
+.switch.button_full.pill, button.button_full.pill {
+
+    padding-left: 18px; // Propriedade aplicada aprimorada via JS.
+    padding-right: 20px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+          
+        $left:  12px;
+    
+        left:  $left;
+        width: calc(100% - 2 * #{$left}); 
+    }  
+}
+
+.switch.button_text.pill, button.button_text.pill {
+
+    padding-left: 13px; // Propriedade aplicada aprimorada via JS.
+    padding-right: 13px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top {  // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+    
+       $left: 9px;  
+    
+       left:  $left;
+       width: calc(100% - 2 * #{$left});
+    }
+}
+
+.switch.button_icon.pill, button.button_icon.pill {
+
+    padding: 12px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top { // As propriedades que estão comentadas dentro desta regra foram aplicadas aprimoradas via JS.
+        
+        $left: 12px;
+        
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
+
+
+// ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
+
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+
+    // justify-content: center;
+    border-radius: 1000px; 
+    // background: $bg_switch_type_button_pill_and_rounded_off; 
+
+    .button_shine_top { // Shine 
+          
+        border-radius: 1000px; 
+        background: $bg_button_type_normal_and_switch_type_button_rounded_shine;
+           
+        $top: 3px;
+        $left:  3px; 
+        $height: calc(100% - 2 * #{$top}); 
+
+        height: $height;
+
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
+
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+
+    box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
+}
+
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+
+    .button_shine_top {
+
+        opacity: 0.96;
+    }
+}
+
+.switch.button_full.rounded, button.button_full.rounded {
+
+    padding: 18px;  
+}
+
+.switch.button_text.rounded, button.button_text.rounded {
+
+    padding: 14px; 
+
+    .piece_text {
+
+        text-align: center;
+    }
+}
+
+.switch.button_icon.rounded, button.button_icon.rounded {
+
+    padding: 12px; // Propriedade aplicada aprimorada via JS.
+}
+
+.switch.button_icon.rounded:not(.on) .button_shine_top { 
+
+    opacity: 0.85;
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Text Below
+──────────────────────────── */
+
+.switch.button_full.text_below, button.button_full.text_below { 
+
+    // justify-content: center;
+    flex-direction: column; // Necessário caso o switch não tenha 'piece_label'.
+    padding-bottom: 10px; // Propriedade aplicada aprimorada via JS.
+
+    .piece_icon {
+
+        margin: 10px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .piece_text {
+
+        text-align: center;
+    }
+}
+
+.switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded) {
+
+    border-radius: 24px; // Propriedade aplicada aprimorada via JS.
+}
+
+.switch.button_full.text_below:not(.pill, .rounded) .button_shine_top, button.button_full.text_below:not(.pill, .rounded) .button_shine_top {
+
+    border-radius: 22px; // Propriedade aplicada aprimorada via JS. // Obs.: Esta propriedade buga se for colocada na regra com o seletor ".switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded)".
+}
+
+.switch.button_full.text_below.pill, button.button_full.text_below.pill {
+
+    padding-left: 18px; // Propriedade aplicada aprimorada via JS.
+    padding-right: 18px; // Propriedade aplicada aprimorada via JS.
+    padding-bottom: 11px; // Propriedade aplicada aprimorada via JS.
+
+    .button_shine_top {
+
+        $left: 18px;
+
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+
+    .piece_icon {
+
+        margin: 10px 12px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .piece_text {
+
+        margin-left: 12px; // Propriedade aplicada aprimorada via JS.
+        margin-right: 12px; // Propriedade aplicada aprimorada via JS.
+    }
+}
+
+.switch.button_full.text_below.rounded, button.button_full.text_below.rounded {
+
+    padding-bottom: 10px; // Propriedade aplicada aprimorada via JS.
+
+    .piece_icon {
+
+        margin: 20px 10px 10px 10px; // Propriedade aplicada aprimorada via JS.
+    }
+
+    .piece_text {
+
+        margin-left: 14px; // Propriedade aplicada aprimorada via JS.
+        margin-right: 14px; // Propriedade aplicada aprimorada via JS.
+    }
+}
+
+button.button_full.text_below {  
+
+    flex-direction: column; 
+}
+
+.switch.button_full.text_below .piece_label {
+
+    flex-direction: column; 
+    justify-content: center; 
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+
+.switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
+
+    background: $bg_button_type_normal_hover_and_switch_type_button_on;
+    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
+ 
+    .piece_text {
+
+        color: $color_text_switch_type_button_on;
+        filter: drop-shadow(0px 0px 2px $color_text_switch_type_button_shadow_outline_on); 
+    }
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_type_button_on); 
+    }
+}
+
+.switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
+    
+    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear !important;
+    // border: 1px solid adjust-color($color_theme, $lightness: 30%);
+}
+
+// ─────────── Pill ───────────
+
+.switch.button_icon.on.pill {
+
+    // background: $bg_switch_type_button_pill_and_rounded_on;
+}
+
+// ─────────── Rounded ───────────
+
+.switch.button_full.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
+ 
+    // background: $bg_switch_type_button_pill_and_rounded_on;
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
+
+@media (pointer: fine) {
+
+    .switch.button_icon, button.button_icon {
+
+        .piece_text {
+
+            position: absolute;  
+            // top: -50px; // Propriedade aplicada aprimorada via JS. 
+            //left: -15px; // Propriedade aplicada aprimorada via JS. 
+            z-index: 1;
+
+            padding: 6px 9px; 
+            border: 1px solid;
+            border-radius: 1000px;
+            font-weight: initial;
+            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+            filter: initial;
+        }
+    }
+
+    .switch.button_icon .piece_text {
+
+        border-color: $color_border_switch_type_button_icon_piece_text_floating_off; 
+        color: $color_text_switch_type_button_icon_piece_text_floating_off;
+        background: $bg_switch_type_button_icon_piece_text_floating_off;
+    }
+
+    /*  
+    button.button_icon .piece_text {
+
+        $color_border_element_button_icon_piece_text_floating_off: hsl(195, 100%, 50%); 
+        $color_text_element_button_icon_piece_text_floating_off: white; 
+        $bg_element_button_icon_piece_text_floating_off: hsla(195, 100%, 70%, 0.75);
+
+        text-shadow: 1px 1px 1px $color_shadow_text; 
+        border-color: $color_border_element_button_icon_piece_text_floating_off; 
+        color: $color_text_element_button_icon_piece_text_floating_off;
+        background: $bg_element_button_icon_piece_text_floating_off;
+    }
+    */
+
+    .switch.button_icon .piece_label {
+
+        justify-content: center; 
+    }
+
+    .switch.button_icon.on, button.button_icon { 
+    
+        .piece_text { 
+
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on;
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
+            filter: initial;
+            box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24); 
+        } 
+    }
+
+    .switch.button_icon:hover, button.button_icon:hover {
+    
+        .piece_text {
+
+            display: block !important;
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Image
+──────────────────────────── */
+      
+.switch.image, button.image {
+
+    display: inline-flex;
+
+    /* width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    min-width: $button_height_smaller;
+    min-height: $button_height_smaller;
+    width: $button_and_switch_both_type_image_icon_size;
+    // height: $button_and_switch_both_type_image_icon_size;
+
+    background: 0; 
+    
+    .piece_text {
+
+        // display: none; // Propriedade aplicada via JS.
+
+        padding-left: 9px; // Propriedade aplicada via JS.
+        padding-right: 9px; // Propriedade aplicada via JS.
+    }
+
+    .piece_icon {
+
+        width: inherit;
+        height: inherit;
+        margin: 0;
+
+        filter: drop-shadow(0px 0px 1px $color_outline_button_and_switch_both_type_image);
+        // transition: 0.17s; // Buga se usado com 'filter'!
+
+        border-radius: calc(1/4 * #{$button_and_switch_both_type_image_icon_size}); // Propriedade aplicada aprimorada via JS. 
+    }
+}
+
+.switch.image .piece_label {
+
+    width: inherit;
+    height: inherit;
+}
+
+.switch.image .piece_key {
+    
+    display: none;
+}
+      
+.switch.image:not(.disabled), button.image:not(.disabled) {
+
+    .piece_text {
+
+        top: -49px; // Propriedade aplicada via JS.
+    }
+}
+
+// ─────────── pill ───────────
+
+.switch.image.pill, button.image.pill {
+
+    border-radius: 1000px !important; // Declaração necessária apenas para 'button:focus'.
+    
+    .piece_icon {
+
+        border-radius: 1000px !important;
+    }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Option ON
+──────────────────────────── */
+
+.switch.image.on .piece_icon {
+
+    // border: 2px solid white; filter: drop-shadow(0px 0px 6px $color_theme);  
+    // box-shadow: 0px 0px 0px 2px white; filter: drop-shadow(0px 0px 6px $color_theme);  
+    // box-shadow: 0px 0px 3px 3px white; filter: drop-shadow(0px 0px 7px $color_theme);  
+    
+    box-shadow:  0px 0px 0px 2px white, 0px 0px 12px 2px $color_theme;
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Floating Labels
+──────────────────────────── */
+
+@media (pointer: fine) {  
+
+    .switch.image, button.image {
+        
+        justify-content: center;
+        position: relative;
+
+        .piece_text {
+
+            position: absolute;  
+            // top: -49px; // Propriedade aplicada aprimorada via JS.  
+            // left: -15px; // Propriedade aplicada aprimorada via JS. 
+            z-index: 1;
+            padding-top: 6px; 
+            padding-bottom: 6px;
+            // padding-left e padding-right foram aplicados via JS.
+            border: 1px solid;
+            border-radius: 1000px;
+            font-weight: initial;
+            text-align: center;
+        }
+    }
+
+    .switch.image .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_off;
+        border-color: $color_border_switch_type_image_piece_text_floating_off; 
+        background: $bg_switch_type_image_piece_text_floating_off;
+        box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_off; 
+    }
+
+    button.image .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating;
+        border-color: $color_border_button_type_image_piece_text_floating; 
+        background: $bg_button_type_image_piece_text_floating;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating;  
+    }
+
+    .switch.image .piece_label {
+
+        display: inline-flex;
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+    }
+
+    /*
+    button.image {
+
+        justify-content: center;
+        position: relative;
+    }
+    */
+
+    .switch.image.on .piece_label {
+        
+        filter: initial; 
+    }
+
+    .switch.image.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on;
+        border-color: $color_border_switch_type_image_piece_text_floating_on; 
+        background: $bg_switch_type_image_piece_text_floating_on;
+        filter: initial;
+        box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_on;  
+    }
+
+    .switch.image:hover, button.image:hover {
+        
+        .piece_text {
+
+            display: block !important;
+        }
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Key (Only Switches)
+──────────────────────────── */
+
+.switch.key_full, .switch.key_text {
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    
+    .piece_key { // Path
+ 
+        order: 1;
+        margin-left: 18px; 
+        margin-right: 0;
+        //margin-right: 12px;
+        border-radius: 1000px;
+        background: $bg_switch_type_key_path_off;
+    }
+
+    .piece_key::before { // Ball
+
+        content: '';
+        display: inline-block;
+        position: relative;
+        border-radius: 1000px;
+        background: $bg_switch_type_key_ball; 
+        transition: all 0.39s; 
+    }
+
+    .piece_key::after { // Shine
+        
+        content: '';
+        display: inline-block;
+        position: relative;
+        border-radius: 1000px;
+        background: $bg_switch_type_key_ball_shine;
+        transition: all 0.39s; 
+    }
+
+    .piece_label {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        text-indent: 0;
+    }
+
+    .piece_icon {
+
+        $width: 32px;
+
+        width: $width;
+        border-radius: calc(1/4 * #{$width});
+
+        margin-right: 12px;
+        filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
+    }
+
+    .piece_text {
+
+        line-height: 1.5;
+    }
 } 
 
-@for $i from 1 through 70 { 
-    .lb#{$i} { /* Line break */
-        margin-top: calc(#{$i} * #{$margin_vertical}); 
-        margin-bottom:  calc(#{$i} * #{$margin_vertical});
+.switch.key_text {
+
+    .piece_icon {
+        display: none;
+    }
+}
+
+.switch.key_full.on, .switch.key_text.on {
+
+    .piece_key { // Path
+
+        border-color: hsl(187, 100%, 60%);
+        background: $bg_switch_type_key_path_on;
+        box-shadow: 0px 0px 6px 0px hsla(188, 100%, 45%, 0.50);
+    }
+
+    .piece_key::before { // Ball
+
+        border: 1px solid hsl(187, 100%, 80%); 
+        background: $bg_switch_type_key_on_ball;
+        box-shadow: 0px 0px 13px 0px hsl(188, 100%, 60%); 
     } 
 }
 
-/*
-.content-left {
-    text-align: left;
-}
+.switch.key_full.disabled, .switch.key_text.disabled {
 
-.content-center {
-    text-align: center;
-}
+    .piece_key::before { // Ball
 
-.content-right {
-    text-align: right;
-}
+        border-top: 0;
+        border-bottom: 0;
+    }
 
-.content-justify {
-    text-align: justify;
-}
-*/
-
-// ------ center ------
-
-.center:not(figure) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-figure.center {
-    text-align: center;
-}
-
-.center.choice_h {
-    display: flex;
-}
-
-.center.offset {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc(100% - (2 * #{$margin_horizontal}));
-}
-
-.center.offset.choice_d_open {
-    max-width: none;
-}
-
-// ----------------------
-
-.line {
-    border: 1px solid black;
-}
-
-.hidden {
-    display: none;
-}
-
-.button_height_small {
-    height: $button_height_small;
-}
-
-.border_radius_big {
-    @media (min-width: $screen_small_widthLimit) {
-
-        border-radius: $border_radius_big;
+    .piece_label {
+        color: adjust-color($color_text, $alpha: -0.5);
     }
 }
 
-.cursor_pointer {
-    cursor: pointer;
-}
+.switch.key_full.on.disabled, .switch.key_text.on.disabled {
 
-// ------ Screen ------
+    .piece_key { // Path
 
-.screen_small, .ss {
+        box-shadow: none;
+    }
     
-    @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
+    .piece_key::before { // Ball
 
-        display: none !important;
+        border: 2px solid hsl(187, 100%, 80%);
+        box-shadow: none;
     }
 }
 
-.screen_small_portrait, .ssp {
+.switch.key_full.inverted, .switch.key_text.inverted {
+
+    // justify-content: space-between;
+    justify-content: initial;
+
+    .piece_key {
+
+        /*  
+        order: 1;
+        margin-left: 18px; 
+        margin-right: 0;
+        */
+
+        order: initial;
+        margin-left: 0px; 
+        margin-right: 12px;
+    }
+} 
+
+/*  
+────────────────────────────
+TODO:            >>> Sizes & Positions
+──────────────────────────── */
+
+// Tamanho para tela grande
+
+.switch.key_full, .switch.key_text {
+
+    .piece_key { // Path
+
+        min-width: 47px;
+        height: 6px; 
+        border: 1px solid black;
+    }
+
+    .piece_key::before { // Ball
+
+        top: -11px;
+        left: -2px;
+        width: $switch_type_key_ball_size;
+        height: $switch_type_key_ball_size;
+        border: 0;
+    }
+
+    .piece_key::after { // Shine
+
+        top: -19px; // calc(-0.9 * #{$switch_type_key_ball_size} + 3px);
+        left: -21px; //calc(-1.05 * #{$switch_type_key_ball_size} + 0.25 * #{$switch_type_key_ball_size} - 2px); 
+        width: 14px; // calc(0.585 * #{$switch_type_key_ball_size});
+        height: 14px; // calc(0.585 * #{$switch_type_key_ball_size});
+    }
+}
+
+.switch.key_full.on, .switch.key_text.on {
     
-    @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
+    .piece_key::before { // Ball
 
-        display: none !important;
+        top: -10px; 
+        left: 23px; 
+        width: calc(#{$switch_type_key_ball_size} + 2); 
+        height: calc(#{$switch_type_key_ball_size} + 2); 
+        transition: all 0.39s; 
+    }
+
+    .piece_key::after { // Shine
+        
+        top: calc(-0.9 * #{$switch_type_key_ball_size} + 4px);
+        left: calc(-1.05 * #{$switch_type_key_ball_size} + 0.25 * #{$switch_type_key_ball_size} + 23px); 
+        transition: all 0.39s; 
     }
 }
 
-.screen_small_landscape, .ssl  {
+@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
+
+    // Tamanho para tela pequena
+
+    .switch.key_full, .switch.key_text {
+
+        .piece_key { // Path
+
+            min-width: calc(53px + #{$switch_type_key_ball_size_SS} - #{$switch_type_key_ball_size});
+            height: 8px; 
+            background: $bg_switch_type_key_path_off_SS;
+        }
     
-    @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
+        .piece_key::before { // Ball
 
-        display: none !important;
+            top: -12px;
+            width: $switch_type_key_ball_size_SS;
+            height: $switch_type_key_ball_size_SS;
+            background: $bg_switch_type_key_ball;
+        }
+
+        .piece_key::after { // Shine
+
+            top: calc(-0.9 * #{$switch_type_key_ball_size_SS} + 4px);
+            left: calc(-1.05 * #{$switch_type_key_ball_size_SS} + 0.25 * #{$switch_type_key_ball_size_SS} - 2px); 
+            width: calc(0.6 * #{$switch_type_key_ball_size_SS});
+            height: calc(0.6 * #{$switch_type_key_ball_size_SS}); 
+        }
     }
-}
-
-/*
-.screen_medium {
-
-    @media (min-width: $screen_medium_widthLimit) and (min-height: $screen_medium_widthLimit)  {
-
-        display: none !important;
-    }
-}
-*/
-
-.screen_not_small, .sns {
     
-    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit)  {
+    .switch.key_full.on, .switch.key_text.on {
 
-        display: none !important;
+        .piece_key { // Path
+
+            box-shadow: 0px 0px 6px 0px hsla(188, 100%, 50%, 0.60);
+        }
+        
+        .piece_key::before { // Ball
+
+            top: -11px; 
+            left: 29px;  
+            width: calc(#{$switch_type_key_ball_size_SS} + 2); 
+            height: calc(#{$switch_type_key_ball_size_SS} + 2); 
+        }
+
+        .piece_key::after { // Shine
+            
+            top: calc(-0.9 * #{$switch_type_key_ball_size_SS} + 5px);
+            left: calc(-1.05 * #{$switch_type_key_ball_size_SS} + 0.25 * #{$switch_type_key_ball_size_SS} + 29px); 
+            transition: all 0.42s; 
+        } 
     }
 }
 
-.screen_not_small_portrait, .snsp {
-    
-    @media (orientation: portrait) and (max-width: $screen_small_widthLimit) {
+/*  
+────────────────────────────
+TODO:    > Choices
+──────────────────────────── */
 
-        display: none !important;
+.choice.horizontal, .choice.vertical, .choice.dropdown {
+
+    display: inline-block;
+    font-size: 0;
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    //border: 1px solid adjust-color($color_theme, $lightness: -1%);
+    // text-shadow: 1px 1px 1px $color_shadow_text; // <- Parte do estilo de choice anterior!
+}
+
+.choice.horizontal > li a, .choice.vertical > li a, .choice.dropdown > li a {
+
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.choice.horizontal > li, .choice.vertical > li, .choice.dropdown > li {
+
+    span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center; 
+        color: $color_text_menu;
+        font-weight: bold;
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%)); // <- Parte do estilo de choice novo! 
+
+        .text_img, .text_img_size {
+            
+            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+        }
+    }
+
+    span:hover {
+        
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
     }
 }
 
-.screen_not_small_landscape, .snsl  {
-    
-    @media (orientation: landscape) and (max-height: $screen_small_widthLimit)  {
+.choice.horizontal > li span > img, .choice.vertical > li span > img, .choice.dropdown > li span > img {
 
-        display: none !important;
+    margin-right: 6px;
+}
+
+/*  
+────────────────────────────
+TODO:        >> Horizontal
+──────────────────────────── */
+
+.choice.horizontal {
+
+    display: inline-flex;
+    border-radius: 1000px;
+    // background: $bg_choice; // <- Parte do estilo de choice anterior!
+    // box-shadow: // <- Parte do estilo de choice anterior!
+    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+
+    background: // <- Parte do estilo de choice novo!
+    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+
+    > li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center; 
+        min-height: $button_height_small;
+
+        a {
+            min-height: $button_height_small;
+        }
+
+        span {
+            padding: 0 10px;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        border-right: 1px solid $color_text_menu; 
+        border-top-left-radius: 1000px;
+        border-bottom-left-radius: 1000px;
+
+        // background: $bg_choice_label; // <- Parte do estilo de choice anterior!
+        text-shadow: 1px 1px 1px $color_shadow_text;
+        // box-shadow: // <- Parte do estilo de choice anterior!
+        // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+        // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+
+        background: // <- Parte do estilo de choice novo!
+        linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+        linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
+
+        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+            
+        span {
+            padding-left: 15px;
+        }
+    }
+     
+    > li:nth-of-type(2) {
+        border-left-width: 0px;
+    }
+
+    > li:nth-last-of-type(1) { 
+
+        a { 
+            border-top-right-radius: 1000px;
+            border-bottom-right-radius: 1000px;
+        }
+
+        > a > img {
+            border-top-right-radius: 1000px;
+            border-bottom-right-radius: 1000px;
+        }
+
+        span {
+            padding-right: 15px;
+        }
+    }
+
+    > li a:hover {
+
+        background: hsla(0, 0%, 100%, 0.25); 
+        // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
+    }
+
+    > li:nth-of-type(1) a:hover {
+        background: 0;
+        text-shadow: 1px 1px 1px $color_shadow_text;
+    }
+
+    > li + li {
+        border-left: 1px solid $color_text_menu;
     }
 }
 
-// ----------------------
+/*  
+────────────────────────────
+TODO:        >> Vertical
+──────────────────────────── */
 
-.button_hide_container {
-    
-    display: none;
-    position: relative;
-    margin-top: calc((#{$button_height_smaller})/2); 
-    margin-bottom: $margin_vertical;
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal;
+.choice.vertical {
 
-    .button_hide {
+    border-radius: $border_radius_default;
+    // background: $bg_choice; // <- Parte do estilo de choice anterior!
+    // box-shadow: // <- Parte do estilo de choice anterior!
+    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-        display: inline-block;
-        content: "";
-        position: absolute; 
-        top: calc((-1 * #{$button_height_smaller})/2);
-        right: 4px;
+    background: // <- Parte do estilo de choice novo!
+    linear-gradient(to top, hsla(195, 100%, 100%, 0.9), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+
+    > li {
+        display: flex;
+        align-items: center;
+        min-height: $button_height;
+
+        a {
+            min-height: $button_height;
+        }
+
+        span {
+            padding: 0px 19px 0px 17px;
+        }
+    }
+
+    > li a:hover {
+        // background: $bg_choice_selector; // <- Parte do estilo de choice anterior!
+        background: hsla(0, 0%, 100%, 0.3);
+        // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
+    }
+
+    > li:nth-of-type(1) a:hover {
+        background: 0;
+        text-shadow: 1px 1px 1px $color_shadow_text;
+    }
+
+    > li:nth-of-type(1) {
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        justify-content: center;
+        // background: $bg_choice_label; // <- Parte do estilo de choice anterior!
+        text-shadow: 1px 1px 1px $color_shadow_text;
+        // box-shadow:  // <- Parte do estilo de choice anterior!
+        // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+        // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+
+        background: // <- Parte do estilo de choice novo!
+        linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+        linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
+
+        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    > li:nth-last-of-type(1) {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        a {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px; 
+        }
+
+        > a > img {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+   
+    > li + li {
+        border-top: 1px solid $color_text_menu;
+    }
+}
+
+/*  
+────────────────────────────
+TODO:        >> Dropdown
+──────────────────────────── */
+
+.choice.dropdown {
+
+    border-radius: 1000px;
+    // background: $bg_choice; // <- Parte do estilo de choice anterior!
+
+    background: // <- Parte do estilo de choice novo!
+    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+
+    // box-shadow: // <- Parte do estilo de choice anterior!
+    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+
+    > li {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: $button_height_small;
+
+        span {
+            padding: 0 10px 0 14px;
+        }
+
+        > a > img {
+            border-radius: 1000px;
+        }
+
+        span::after { 
+            content: "▼";
+            margin-left: 5rem;
+        }
+    }
+
+    > li:not(:nth-of-type(1)) {
+        display: none;
+    }
+
+    > li:nth-of-type(1) {
+
+        background: 0;
+
         cursor: pointer;
 
-        width: $button_height_smaller;  
-        height: $button_height_smaller;
-        border-radius: 50%;
-        background: $bg_button_hide; 
-        //box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button, inset 3px 3px 5px 0px hsla(0, 0%, 100%, 0.5), inset -2px -3px 5px 3px hsla(0, 0%, 0%, 0.4);
-        //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
+        > img {
+            border-radius: 1000px;
+        }
     }
- 
-    > :nth-child(2) { 
+}
+
+// Dropdown - Open:
+
+.choice.dropdown.dropdown_open {
+
+    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+    z-index: $zIndex_choice_d_open;
+    width: auto;
+    margin: 0;
+    border-radius: 0px;
+    background: $bg_choice_d_open;
+    background: rgb(128, 0, 128);
+    background: 
+    linear-gradient(237deg, rgba(0, 191, 255,.8), rgba(0, 191, 255,0) 71%),
+    linear-gradient(147deg, rgba(255,255,255,.8), rgba(255,255,255,0) 71%),
+    linear-gradient(356deg, rgba(0, 255, 255, 0.8), rgba(0,255,255,0) 71%),
+    white;
+      
+    overflow-y: auto;
+
+    > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // <- Neste caso, alinha verticalmente!
+
+        position: relative; top: $button_height_small;
+        width: 100%;
+
+        span {
+
+            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 38%)); // <- Parte do estilo de choice novo! 
+        }
+
+        > a {
+            flex-grow: 1;
+            justify-content: center;
+
+            img {
+                border-radius: 0px;
+            }
+        }
+
+        a > span::after {
+
+            content: "";
+            margin-left: 0;
+        }
+    }
+
+    > li:nth-of-type(1) {
+        display: none;
+    }
+
+    > li:nth-of-type(2) {
+        border-top: 1px solid $color_text_menu;
+    }
+
+    > li:nth-last-of-type(1) { // Esta regra só deve existir caso o último 'li' tiver sido criado via JS.
+        border: 0;
+    }
+
+    li span {
+        padding: 0 12px 0 12px;
+    }
+
+    > li:nth-of-type(2) > a > img[src] {
+        border-radius: 0;
+    }
+
+    > li + li {
+        border-bottom: 1px solid $color_text_menu;
+    }
+
+    /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
+}
+
+// Dropdown - Open - Scrollbars:
+
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar { // Entire bar
+    width: 10px;
+    height: 11px;
+}
+
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb { // Bar pointer
+    background: $color_menu_scrollbar_thumb;    
+    border-radius: 10px;
+}
+
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-track {   // Bar background
+    background: $color_menu_scrollbar_track; 
+}
+
+.choice.dropdown.choice.dropdown_open {
+    scrollbar-width: auto;
+    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+}
+
+/* @media (pointer: fine) {
+
+    .choice.dropdown.choice.dropdown_open {
+        overflow: hidden;
+    }
+    
+    .choice.dropdown.choice.dropdown_open:hover {
+        overflow: auto;
+    }
+}*/
+
+/*  
+────────────────────────────
+TODO:        >> Option ON
+──────────────────────────── */
+
+
+.choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on { 
+
+    // background: $bg_choice_selector; // <- Parte do estilo de choice anterior!
+    background: hsla(0, 0%, 100%, 0.5);
+    // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
+
+    span {
+
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
+    }
+}
+
+.choice.vertical > li > a.on { 
+
+    // background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.6)); // <- Parte do estilo de choice novo! 
+    // background: hsl(195, 100%, 93%);// <- Parte do estilo de choice novo!
+    // background: hsla(0, 0%, 100%, 0.8);// <- Parte do estilo de choice novo! 
+    background: hsla(195, 100%, 98%, 0.9);// <- Parte do estilo de choice novo!
+}
+
+/*  
+────────────────────────────
+TODO:        >> No Label
+──────────────────────────── */
+
+.no_label {
+
+    > li:nth-of-type(1) {
+        display: none;
+    }
+}
+
+.choice.horizontal.no_label {
+
+    > li:nth-of-type(2) a { 
+        border-top-left-radius: 1000px;
+        border-bottom-left-radius: 1000px;
+    }
+
+    > li:nth-of-type(2) span {
+
+        padding-left: 15px;
+    }
+
+    > li:nth-of-type(2) > a > img {
+            border-top-left-radius: 1000px;
+            border-bottom-left-radius: 1000px;
+    }
+}
+
+.choice.vertical.no_label > li:nth-of-type(2) { 
+
+        border-top-width: 0; 
+
+        a {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+    > a > img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.choice.dropdown.no_label {
+
+    > li:nth-of-type(2) {
+
+        display: inline-flex;
+    
+        span::after { 
+            content: "▼";
+            margin-left: 5rem;
+        }
+
+        > a > img {
+            border-radius: 1000px;
+        }
+    }
+}
+
+.choice.dropdown.no_label.choice.dropdown_open > li:nth-of-type(2) > a > img  {
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.choice.dropdown.no_label.choice.dropdown_open > li:nth-of-type(2) span::after {
+
+    content: "";
+    margin-left: 0;
+}
+
+/*  
+────────────────────────────
+TODO:        >> Disabled
+──────────────────────────── */
+
+.choice.horizontal.disabled, .choice.vertical.disabled, .choice.dropdown.disabled {
+    opacity: 0.5;
+}
+
+.choice.horizontal.disabled *, .choice.vertical.disabled *, .choice.dropdown.disabled * {
+    cursor: default !important; 
+}
+
+.choice.horizontal > li > a.disabled, .choice.vertical > li > a.disabled, .choice.dropdown > li > a.disabled {
+
+    cursor: default; 
+}
+
+.choice.horizontal > li > a.disabled > *:not(.choice_shine_top) {
+
+    opacity: 0.5;
+}
+
+.choice.vertical > li > a.disabled, .choice.dropdown > li > a.disabled {
+    
+    opacity: 0.5;
+}
+
+.choice.horizontal.disabled > li > a, .choice.vertical.disabled > li > a {
+    background: 0 !important;
+    text-shadow: 1px 1px 1px $color_shadow_text !important;
+}
+
+.choice.horizontal > li > a.disabled, .choice.vertical > li > a.disabled {
+    background: 0 !important;
+    text-shadow: 1px 1px 1px $color_shadow_text !important;
+}
+
+/*  
+──────────────────────────── // <- Parte do estilo de choice novo!
+TODO:        >> Shine
+──────────────────────────── */
+
+.choice.horizontal {
+
+    li {
+        position: relative;
+    }
+    
+    .choice_shine_top { 
+          
+        content: '';
+        position: absolute;
+        top: 0px;  
+        z-index: 1; 
+        width: 100%;
+        height: 52%;
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4));
+    }
+
+    li:nth-of-type(1) .choice_shine_top { 
         
-        margin-left: $margin_horizontal;
-        margin-right: $margin_horizontal;
-        padding-right: calc((#{$button_height_smaller})/2);
+        $left: 9px;
+    
+        left:  $left;
+        width: calc(100% - #{$left});
+
+        border-top-left-radius: 1000px;
+        border-bottom-left-radius: 1000px; 
     }
+
+    li:nth-last-of-type(1) .choice_shine_top { 
+        
+        $right: 9px;
+    
+        right:  $right;
+        width: calc(100% - #{$right});
+
+        border-top-right-radius: 1000px;
+        border-bottom-right-radius: 1000px; 
+    }
+}
+
+.choice.horizontal.no_label li:nth-of-type(2) .choice_shine_top {
+        
+    $left: 9px;
+
+    left:  $left;
+    width: calc(100% - #{$left});
+
+    border-top-left-radius: 1000px;
+    border-bottom-left-radius: 1000px; 
+}
+
+.choice.vertical {
+
+    li {
+        position: relative;
+    }
+
+    .choice_shine_top { 
+          
+        content: '';
+        position: absolute;
+        z-index: 1; 
+
+        $offset: 1px;
+        top: $offset;  
+        height: calc(52% - #{$offset}) ;
+        
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.2)); 
+        border-top-left-radius: 1000px;
+        border-top-right-radius: 1000px;
+        border-bottom-left-radius: 650px; 
+        border-bottom-right-radius: 650px; 
+        
+        $left: 7px;  
+    
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
+
+.choice.dropdown {
+
+    position: relative;
+    cursor: pointer;
+
+    .choice_shine_top { 
+          
+        content: '';
+        position: absolute;
+        top: 0px;  
+        z-index: 1; 
+        height: 52%;
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4));
+        border-radius: 1000px;
+        
+        $left: 9px;  
+    
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
+
+.choice.dropdown.dropdown_open {
+
+    cursor: default;
 }
 
 /*
@@ -1891,9 +3519,9 @@ TODO:    > Sliders
     overflow-y: hidden;
     white-space: nowrap;
 }
-
+ 
 .slider img, .slider picture {
-    max-width: 94%;
+    max-width: 94%;   
 }
 
 @media (max-height: $screen_small_widthLimit) {
@@ -1940,867 +3568,6 @@ TODO:    > Sliders
     border-radius: 10px; /* */ 
 }
 
-/*  
-────────────────────────────
-TODO:    > Choices
-──────────────────────────── */
-
-.choice_h, .choice_v, .choice_d {
-
-    display: inline-block;
-    font-size: 0;
-
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    //border: 1px solid adjust-color($color_theme, $lightness: -1%);
-}
-
-.choice_h > li a, .choice_v > li a, .choice_d > li a {
-
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.choice_h > li span, .choice_v > li span, .choice_d > li span {
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center; 
-    color: $color_text_menu;
-
-    .textImg, .textImg_size {
-        filter: drop-shadow(1px 1px 1px $color_shadow_text); 
-    }
-}
-
-.choice_h > li span > img, .choice_v > li span > img, .choice_d > li span > img {
-
-    margin-right: 6px;
-}
-
-/*  
-────────────────────────────
-TODO:        >> Horizontal
-──────────────────────────── */
-
-.choice_h {
-
-    display: inline-flex;
-    border-radius: 1000px;
-    background: $bg_choice;
-    text-shadow: 1px 1px 1px $color_shadow_text;
-    box-shadow: 
-    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
-
-    > li {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        min-height: $button_height_small;
-
-        a {
-            min-height: $button_height_small;
-        }
-
-        span {
-            padding: 0 10px;
-        }
-    }
-
-    > li:nth-of-type(1) {
-        border-right: 1px solid $color_text_menu; 
-        border-top-left-radius: 1000px;
-        border-bottom-left-radius: 1000px;
-
-        background: $bg_choice_label;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-        box-shadow: 
-        inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-        inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
-        
-        span {
-            padding-left: 15px;
-        }
-    }
-     
-    > li:nth-of-type(2) {
-        border-left-width: 0px;
-    }
-
-    > li:nth-last-of-type(1) { 
-
-        a { 
-            border-top-right-radius: 1000px;
-            border-bottom-right-radius: 1000px;
-        }
-
-        > a > img {
-            border-top-right-radius: 1000px;
-            border-bottom-right-radius: 1000px;
-        }
-
-        span {
-            padding-right: 15px;
-        }
-    }
-
-    > li a:hover {
-        background: $bg_choice_selector;
-        text-shadow: 1px 1px 1px $color_shadow_text_strong;
-    }
-
-    > li:nth-of-type(1) a:hover {
-        background: 0;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-    }
-
-    > li + li {
-        border-left: 1px solid $color_text_menu;
-    }
-}
-
-/*  
-────────────────────────────
-TODO:        >> Vertical
-──────────────────────────── */
-
-.choice_v {
-
-    border-radius: $border_radius_default;
-    background: $bg_choice;
-    text-shadow: 1px 1px 1px $color_shadow_text;
-    box-shadow: 
-    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
-
-    > li {
-        display: flex;
-        align-items: center;
-        min-height: $button_height;
-
-        a {
-            min-height: $button_height;
-        }
-
-        span {
-            padding: 0px 19px 0px 17px;
-        }
-    }
-
-    > li a:hover {
-        background: $bg_choice_selector;
-        text-shadow: 1px 1px 1px $color_shadow_text_strong;
-    }
-
-    > li:nth-of-type(1) a:hover {
-        background: 0;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-    }
-
-    > li:nth-of-type(1) {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-
-        justify-content: center;
-        background: $bg_choice_label;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-        box-shadow: 
-        inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-        inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
-
-        a {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    > li:nth-last-of-type(1) {
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-
-        a {
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px; 
-        }
-
-        > a > img {
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-    }
-   
-    > li + li {
-        border-top: 1px solid $color_text_menu;
-    }
-}
-
-/*  
-────────────────────────────
-TODO:        >> Dropdown
-──────────────────────────── */
-
-.choice_d {
-
-    border-radius: $border_radius_default;
-    background: $bg_choice;
-    text-shadow: 1px 1px 1px $color_shadow_text;
-    box-shadow: 
-    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
-
-    > li {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        min-height: $button_height_small;
-
-        span {
-            padding: 0 11px 0 15px;
-        }
-
-        > a > img {
-            border-radius: $border_radius_default;
-        }
-
-        span::after { 
-            content: "▼";
-            margin-left: 5rem;
-        }
-    }
-
-    > li:not(:nth-of-type(1)) {
-        display: none;
-    }
-
-    > li:nth-of-type(1) {
-
-        background: 0;
-
-        cursor: pointer;
-
-        > img {
-            border-radius: $border_radius_default;
-        }
-    }
-}
-
-// Dropdown - Open:
-
-.choice_d.choice_d_open {
-
-    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
-    z-index: $zIndex_choice_d_open;
-    width: auto;
-    margin: 0;
-    border-radius: 0px;
-    background: $bg_choice_d_open;
-    overflow-y: auto;
-
-    > li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; // <- Neste caso, alinha verticalmente!
-
-        position: relative; top: $button_height_small;
-        width: 100%;
-
-        > a {
-            flex-grow: 1;
-            justify-content: center;
-
-            img {
-                border-radius: 0px;
-            }
-        }
-
-        a > span::after {
-
-            content: "";
-            margin-left: 0;
-        }
-    }
-
-    > li:nth-of-type(1) {
-        display: none;
-    }
-
-    > li:nth-of-type(2) {
-        border-top: 1px solid $color_text_menu;
-    }
-
-    > li:nth-last-of-type(1) { // Esta regra só deve existir caso o último 'li' tiver sido criado via JS.
-        border: 0;
-    }
-
-    li span {
-        padding: 0 15px 0 15px;
-    }
-
-    > li:nth-of-type(2) > a > img[src] {
-        border-radius: 0;
-    }
-
-    > li + li {
-        border-bottom: 1px solid $color_text_menu;
-    }
-
-    /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * #{$button_height_small}); } } */
-}
-
-// Dropdown - Open - Scrollbars:
-
-.choice_d.choice_d_open::-webkit-scrollbar { // Entire bar
-    width: 10px;
-    height: 11px;
-}
-
-.choice_d.choice_d_open::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_menu_scrollbar_thumb;    
-    border-radius: 10px;
-}
-
-.choice_d.choice_d_open::-webkit-scrollbar-track {   // Bar background
-    background: $color_menu_scrollbar_track; 
-}
-
-.choice_d.choice_d_open {
-    scrollbar-width: auto;
-    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
-}
-
-/* @media (pointer: fine) {
-
-    .choice_d.choice_d_open {
-        overflow: hidden;
-    }
-    
-    .choice_d.choice_d_open:hover {
-        overflow: auto;
-    }
-}*/
-
-/*  
-────────────────────────────
-TODO:        >> Option ON
-──────────────────────────── */
-
-.choice_h > li > a.on, .choice_v > li > a.on { 
-
-    background: $bg_choice_selector;
-    text-shadow: 1px 1px 1px $color_shadow_text_strong;
-}
-
-.choice_d.choice_d_open > li > .on { // .choice_h > li > a.on, .choice_v > li > a.on
-
-    background: $bg_choice_selector;
-    text-shadow: 1px 1px 1px $color_shadow_text_strong;
-}
-
-/*  
-────────────────────────────
-TODO:        >> No Label
-──────────────────────────── */
-
-.noLabel {
-
-    > li:nth-of-type(1) {
-        display: none;
-    }
-}
-
-.choice_h.noLabel {
-
-    > li:nth-of-type(2) a { 
-        border-top-left-radius: 1000px;
-        border-bottom-left-radius: 1000px;
-    }
-
-    > li:nth-of-type(2) span {
-
-        padding-left: 15px;
-    }
-
-    > li:nth-of-type(2) > a > img {
-            border-top-left-radius: 1000px;
-            border-bottom-left-radius: 1000px;
-    }
-}
-
-.choice_v.noLabel > li:nth-of-type(2) { 
-
-        border-top-width: 0; 
-
-        a {
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-
-    > a > img {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-}
-
-.choice_d.noLabel {
-
-    > li:nth-of-type(2) {
-
-        display: inline-flex;
-    
-        span::after { 
-            content: "▼";
-            margin-left: 5rem;
-        }
-
-        > a > img {
-            border-radius: $border_radius_default;
-        }
-    }
-}
-
-.choice_d.noLabel.choice_d_open > li:nth-of-type(2) > a > img  {
-
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.choice_d.noLabel.choice_d_open > li:nth-of-type(2) span::after {
-
-    content: "";
-    margin-left: 0;
-}
-
-/*  
-────────────────────────────
-TODO:        >> Disabled
-──────────────────────────── */
-
-.choice_h.disabled, .choice_v.disabled, .choice_d.disabled {
-    opacity: 0.5;
-}
-
-.choice_h.disabled *, .choice_v.disabled *, .choice_d.disabled * {
-    cursor: default !important; 
-}
-
-.choice_h > li > a.disabled, .choice_v > li > a.disabled, .choice_d > li > a.disabled {
-    opacity: 0.5;
-    cursor: default; 
-}
-
-.choice_h.disabled > li > a, .choice_v.disabled > li > a {
-    background: 0 !important;
-    text-shadow: 1px 1px 1px $color_shadow_text !important;
-}
-
-.choice_h > li > a.disabled, .choice_v > li > a.disabled {
-    background: 0 !important;
-    text-shadow: 1px 1px 1px $color_shadow_text !important;
-}
-
-/*  
-──────────────────────────────────────────────────────
-TODO:    > Switchs
-────────────────────────────────────────────────────── */
-
-.switch {
-
-    display: flex;
-    align-items: center;
-
-    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
-    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
-
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
-    margin-left: $margin_horizontal;
-    margin-right: $margin_horizontal; 
-    cursor: pointer;
-
-    > :nth-child(1) {
-        margin-right: 12px;
-        background: $bg_switch_off;
-    }
-
-    > :nth-child(1)::before {
-        content: '';
-        display: inline-block;
-        background: $bg_switch_check; 
-        position: relative;
-    }
-
-    > :nth-child(2) {
-        display: inline-flex;
-        align-items: center;
-        font-size: $font_size;
-        margin: 0;
-        padding: 0;
-        text-indent: 0;
-
-        > img {
-            width: 32px;
-            height: 32px;
-            margin-right: 12px;
-        }
-    }
-}
-
-.switch.disabled {
-
-    opacity: 0.5;
-    cursor: default;
-
-    > :nth-child(1) {
-        border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
-        background: transparent !important;
-    }
-
-    > :nth-child(1)::before {
-        border: 2px dotted adjust-color($color_text, $alpha: -0.7); 
-        background-color: transparent; 
-    }
-
-    > :nth-child(2) {
-        color: adjust-color($color_text, $alpha: -0.5);
-    }
-}
-
-.switch.on > :nth-child(1) {
-    background: $color_theme;
-    background: $bg_switch_on;
-}
-
-.switch.inverted {
-    width: auto !important;
-    justify-content: space-between;
-
-    > :nth-child(1) {
-        order: 1;
-        margin-left: 18px; 
-        margin-right: 0;
-    }
-}
-
-// Switch - Tamanho escolhido: Medium Size
-
-.switch {
-
-    > :nth-child(1) {
-        min-width: 47px;
-        height: 28px;
-        border-radius: 14px;
-        transition: all 0.35s; 
-    }
-
-    > :nth-child(1)::before {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        top: 2px;
-        left: 3px;
-        transition: all 0.35s; 
-    }
-}
-
-.switch.disabled > :nth-child(1)::before {
-    width: 22px;
-    height: 22px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch.on { 
-
-    > :nth-child(1) {
-        transition: all 0.35s; 
-    }
-    
-    > :nth-child(1)::before {
-        left: 21px;
-        transition: all 0.35s; 
-    }
-}
-
-.switch.on.disabled > :nth-child(1)::before { 
-    left: 19px;
-}
-
-@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
-
-    // Switch - Tamanho escolhido: Bigger Size
-
-    .switch {
-
-        > :nth-child(1) {
-            min-width: 53px;
-            height: 32px;
-            border-radius: 16px;
-            transition: all 0.35s; 
-        }
-    
-        > :nth-child(1)::before {
-            width: 26px;
-            height: 26px;
-            border-radius: 13px;
-            top: 3px;
-            left: 4px;
-            transition: all 0.35s; 
-        }
-    }
-    
-    .switch.disabled > :nth-child(1)::before {
-        width: 26px;
-        height: 26px;
-        top: 1px;
-        left: 2px;
-    }
-    
-    .switch.on { 
-    
-        > :nth-child(1) {
-            transition: all 0.35s; 
-        }
-        
-        > :nth-child(1)::before {
-            left: 24px;
-            transition: all 0.35s; 
-        }
-    }
-    
-    .switch.on.disabled > :nth-child(1)::before { 
-        left: 21px;
-    }
-}
-
-/*
-// Switch - Smaller Size
-
-.switch_smaller {
-
-    > :nth-child(1) {
-        min-width: 38px;
-        height: 24px;
-        border-radius: 12px;
-        transition: all 0.29s; 
-    }
-
-    > :nth-child(1)::before {
-        width: 18px;
-        height: 18px;
-        border-radius: 9px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.29s; 
-    }
-} 
-
-.switch_smaller.disabled > :nth-child(1)::before {
-    width: 18px;
-    height: 18px;
-    top: 1px;
-    left: 1px;
-}
-
-.switch_smaller.on { 
-
-    > :nth-child(1) {
-        transition: all 0.29s; 
-    }
-    
-    > :nth-child(1)::before {
-        left: 17px;
-        transition: all 0.29s; 
-    }
-}
-
-.switch_smaller.on.disabled > :nth-child(1)::before { 
-    left: 14px;
-}
-
-// Switch - Small Size
-
-.switch_small {
-
-    > :nth-child(1) {
-        min-width: 42px;
-        height: 26px;
-        border-radius: 13px;
-        transition: all 0.31s; 
-    }
-
-    > :nth-child(1)::before {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.31s; 
-    }
-} 
-
-.switch_small.disabled > :nth-child(1)::before {
-    width: 20px;
-    height: 20px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch_small.on { 
-
-    > :nth-child(1) {
-        transition: all 0.31s; 
-    }
-    
-    > :nth-child(1)::before {
-        left: 19px;
-        transition: all 0.31s; 
-    }
-}
-
-.switch_small.on.disabled > :nth-child(1)::before { 
-    left: 16px;
-}
-
-// Switch - Medium Size
-
-.switch_medium {
-
-    > :nth-child(1) {
-        min-width: 47px;
-        height: 28px;
-        border-radius: 14px;
-        transition: all 0.33s; 
-    }
-
-    > :nth-child(1)::before {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        top: 2px;
-        left: 3px;
-        transition: all 0.33s; 
-    }
-}
-
-.switch_medium.disabled > :nth-child(1)::before {
-    width: 22px;
-    height: 22px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch_medium.on { 
-
-    > :nth-child(1) {
-        transition: all 0.33s; 
-    }
-    
-    > :nth-child(1)::before {
-        left: 21px;
-        transition: all 0.33s; 
-    }
-}
-
-.switch_medium.on.disabled > :nth-child(1)::before { 
-    left: 19px;
-}
-
-// Switch - Big Size
-
-.switch_big {
-
-    > :nth-child(1) {
-        min-width: 49px;
-        height: 30px;
-        border-radius: 15px;
-        transition: all 0.35s; 
-    }
-
-    > :nth-child(1)::before {
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.35s; 
-    }
-} 
-
-.switch_big.disabled > :nth-child(1)::before {
-    width: 24px;
-    height: 24px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch_big.on { 
-
-    > :nth-child(1) {
-        transition: all 0.35s; 
-    }
-    
-    > :nth-child(1)::before {
-        left: 22px;
-        transition: all 0.35s; 
-    }
-}
-
-.switch_big.on.disabled > :nth-child(1)::before { 
-    left: 19px;
-}
-
-// Switch - Bigger Size
-
-.switch_bigger {
-
-    > :nth-child(1) {
-        min-width: 53px;
-        height: 32px;
-        border-radius: 16px;
-        transition: all 0.37s; 
-    }
-
-    > :nth-child(1)::before {
-        width: 26px;
-        height: 26px;
-        border-radius: 13px;
-        top: 3px;
-        left: 4px;
-        transition: all 0.37s; 
-    }
-}
-
-.switch_bigger.disabled > :nth-child(1)::before {
-    width: 26px;
-    height: 26px;
-    top: 1px;
-    left: 2px;
-}
-
-.switch_bigger.on { 
-
-    > :nth-child(1) {
-        transition: all 0.37s; 
-    }
-    
-    > :nth-child(1)::before {
-        left: 24px;
-        transition: all 0.37s; 
-    }
-}
-
-.switch_bigger.on.disabled > :nth-child(1)::before { 
-    left: 21px;
-}
-*/
-      
 /*
 ──────────────────────────────────────────────────────
 TODO:    > Cards & Posters
@@ -2934,7 +3701,7 @@ TODO:        >> Posters
         text-fill-color: currentcolor; 
     }
 
-    .textImg, .textImg_size {
+    .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }
@@ -3017,6 +3784,8 @@ TODO:    > Lightbox
     left: 0;
     width: 100%;
     height: 100%; 
+
+    opacity: 0;
 }
 
 .lightbox_closeArea {
@@ -3077,7 +3846,7 @@ TODO:    > Lightbox
     font-size: $font_size; 
     text-shadow: 1px 1px 1px $color_shadow_text;
 
-    .textImg, .textImg_size {
+    .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }
@@ -3121,4 +3890,232 @@ TODO:    > Lightbox
 .lightbox_layout {
     scrollbar-width: auto;
     scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Others
+────────────────────────────────────────────────────── */
+
+html {
+    background: $bg_html;
+}
+
+body {
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border-top: 1px solid $color_theme;
+    border-bottom: 0; 
+    background: $color_theme;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+}
+
+// Não apage esta regra comentada:
+/*@media (min-width: $hr_stop) {
+
+    hr {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}*/
+
+a, button:not(button[disabled], .disabled), input[type="radio"]:not(fieldset[disabled] input[type="radio"]), input[type="checkbox"]:not(fieldset[disabled] input[type="checkbox"]), select {
+    
+    cursor: pointer;
+}
+
+.lb { /* Line break */
+    margin-top: $margin_vertical; 
+    margin-bottom:  $margin_vertical;
+} 
+
+@for $i from 1 through 70 { 
+    .lb#{$i} { /* Line break */
+        margin-top: calc(#{$i} * #{$margin_vertical}); 
+        margin-bottom:  calc(#{$i} * #{$margin_vertical});
+    } 
+}
+
+/*
+.content-left {
+    text-align: left;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.content-right {
+    text-align: right;
+}
+
+.content-justify {
+    text-align: justify;
+}
+*/
+
+// ------ center ------
+
+.center {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.center.offset {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: calc(100% - (2 * #{$margin_horizontal}));
+}
+
+figure.center {
+    text-align: center;
+} 
+
+.center.choice.horizontal {
+    display: flex !important;
+}
+
+.center.offset.choice.dropdown_open {
+    max-width: none;
+}
+
+.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, 
+.switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
+    
+    display: flex !important;
+}
+
+.switch.key_full.inverted.center, .switch.key_text.inverted.center {
+
+    width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
+    para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+}
+
+// ----------------------
+
+.line {
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.button_height_small {
+    height: $button_height_small;
+}
+
+.border_radius_big {
+    @media (min-width: $screen_small_widthLimit) {
+
+        border-radius: $border_radius_big;
+    }
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+// ------ Screen ------
+
+.screen_small, .ss {
+    
+    @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_small_portrait, .ssp {
+    
+    @media  (orientation: landscape), (orientation: portrait) and (min-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_small_landscape, .ssl  {
+    
+    @media (orientation: portrait), (orientation: landscape) and (min-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+/*
+.screen_medium {
+
+    @media (min-width: $screen_medium_widthLimit) and (min-height: $screen_medium_widthLimit)  {
+
+        display: none !important;
+    }
+}
+*/
+
+.screen_not_small, .sns {
+    
+    @media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_portrait, .snsp {
+    
+    @media (orientation: portrait) and (max-width: $screen_small_widthLimit) {
+
+        display: none !important;
+    }
+}
+
+.screen_not_small_landscape, .snsl  {
+    
+    @media (orientation: landscape) and (max-height: $screen_small_widthLimit)  {
+
+        display: none !important;
+    }
+}
+
+// ----------------------
+
+.button_hide_container {
+    
+    display: none;
+    position: relative;
+    margin-top: calc((#{$button_height_smaller})/2); 
+    margin-bottom: $margin_vertical;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+
+    .button_hide {
+
+        display: inline-block;
+        content: "";
+        position: absolute; 
+        top: calc((-1 * #{$button_height_smaller})/2);
+        right: 4px;
+        cursor: pointer;
+
+        width: $button_height_smaller;  
+        height: $button_height_smaller;
+        border-radius: 50%;
+        background: $bg_button_hide; 
+        //box-shadow: 6px 6px 8px -7px $color_shadow_lightbox_button, inset 3px 3px 5px 0px hsla(0, 0%, 100%, 0.5), inset -2px -3px 5px 3px hsla(0, 0%, 0%, 0.4);
+        //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
+    }
+ 
+    > :nth-child(2) { 
+        
+        margin-left: $margin_horizontal;
+        margin-right: $margin_horizontal;
+        padding-right: calc((#{$button_height_smaller})/2);
+    }
 }
