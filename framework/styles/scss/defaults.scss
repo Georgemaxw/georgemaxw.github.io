@@ -247,7 +247,7 @@ $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floa
 
 // $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
-$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+// $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 
 // ─────────── Lightboxs ───────────
@@ -2275,7 +2275,7 @@ TODO:            >>> Option ON
  
     .piece_text {
 
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 32%)); 
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
     }
 }
 
@@ -3082,8 +3082,7 @@ TODO:        >> Dropdown
     width: auto;
     margin: 0;
     border-radius: 0px;
-    background: $bg_choice_d_open;
-    background: #7b68ee;
+    // background: $bg_choice_d_open; // <- Parte do estilo de choice anterior!
     background:  // <- Parte do estilo de choice novo! 
     // linear-gradient(127deg, hsl(180, 100%, 72%), hsla(180, 100%, 50%, 0) 71%),
     // linear-gradient(217deg, hsl(195, 100%, 50%), hsla(195, 100%, 50%, 0) 71%),
