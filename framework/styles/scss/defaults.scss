@@ -3079,10 +3079,15 @@ TODO:        >> Dropdown
     border-radius: 0px;
     background: $bg_choice_d_open;
     background: #7b68ee;
-    background: 
-    linear-gradient(127deg, hsl(180, 100%, 72%), hsla(180, 100%, 50%, 0) 71%),
-    linear-gradient(217deg, hsl(195, 100%, 50%), hsla(195, 100%, 50%, 0) 71%),
-    linear-gradient(336deg, hsl(204, 100%, 54%), hsla(0, 0%, 100%, 0) 71%),
+    background:  // <- Parte do estilo de choice novo! 
+    // linear-gradient(127deg, hsl(180, 100%, 72%), hsla(180, 100%, 50%, 0) 71%),
+    // linear-gradient(217deg, hsl(195, 100%, 50%), hsla(195, 100%, 50%, 0) 71%),
+    // linear-gradient(336deg, hsl(204, 100%, 54%), hsla(0, 0%, 100%, 0) 71%),
+    // white;
+
+    linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(127deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
     white;
       
     overflow-y: auto;
@@ -3097,7 +3102,8 @@ TODO:        >> Dropdown
 
         span {
 
-            filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%)); // <- Parte do estilo de choice novo! 
+            // filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%)); // <- Parte do estilo de choice novo! 
+            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); // <- Parte do estilo de choice novo! 
         }
 
         > a {
