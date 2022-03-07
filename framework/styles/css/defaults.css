@@ -2639,7 +2639,7 @@ TODO:        >> Vertical
   justify-content: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
-  box-shadow: inset 2px 0px 9px 4px #00a4db, 0px 0px 0px 1px #8ae2ff;
+  box-shadow: inset 2px -2px 9px 4px #00a4db, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li:nth-of-type(1) a {
@@ -2720,6 +2720,8 @@ TODO:        >> Dropdown
   margin: 0;
   border-radius: 0px;
   background: url(../../images/bgs/choice_d_open.png) center/100% 100%;
+  background: purple;
+  background: linear-gradient(217deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(127deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 71%), linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
   overflow-y: auto;
   /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * 40px); } } */
 }
@@ -2955,10 +2957,10 @@ TODO:        >> Shine
 .choice.vertical .choice_shine_top {
   content: '';
   position: absolute;
-  top: 0px;
   z-index: 1;
-  height: 52%;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.3));
+  top: 1px;
+  height: calc(52% - 1px);
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
   border-top-left-radius: 1000px;
   border-top-right-radius: 1000px;
   border-bottom-left-radius: 650px;
