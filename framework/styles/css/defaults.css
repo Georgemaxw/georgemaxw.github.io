@@ -2720,8 +2720,8 @@ TODO:        >> Dropdown
   margin: 0;
   border-radius: 0px;
   background: url(../../images/bgs/choice_d_open.png) center/100% 100%;
-  background: purple;
-  background: linear-gradient(237deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(147deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 71%), linear-gradient(356deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
+  background: #7b68ee;
+  background: linear-gradient(127deg, #70ffff, rgba(0, 255, 255, 0) 71%), linear-gradient(217deg, deepskyblue, rgba(0, 191, 255, 0) 71%), linear-gradient(336deg, #14a1ff, rgba(255, 255, 255, 0) 71%), white;
   overflow-y: auto;
   /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * 40px); } } */
 }

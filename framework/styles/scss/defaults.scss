@@ -3078,11 +3078,11 @@ TODO:        >> Dropdown
     margin: 0;
     border-radius: 0px;
     background: $bg_choice_d_open;
-    background: rgb(128, 0, 128);
+    background: #7b68ee;
     background: 
-    linear-gradient(237deg, rgba(0, 191, 255,.8), rgba(0, 191, 255,0) 71%),
-    linear-gradient(147deg, rgba(255,255,255,.8), rgba(255,255,255,0) 71%),
-    linear-gradient(356deg, rgba(0, 255, 255, 0.8), rgba(0,255,255,0) 71%),
+    linear-gradient(127deg, hsl(180, 100%, 72%), hsla(180, 100%, 50%, 0) 71%),
+    linear-gradient(217deg, hsl(195, 100%, 50%), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(336deg, hsl(204, 100%, 54%), hsla(0, 0%, 100%, 0) 71%),
     white;
       
     overflow-y: auto;
