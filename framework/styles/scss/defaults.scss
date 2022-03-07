@@ -2272,6 +2272,11 @@ TODO:            >>> Option ON
     
     // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear !important;
     // border: 1px solid adjust-color($color_theme, $lightness: 30%);
+ 
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 32%)); 
+    }
 }
 
 // ─────────── Pill ───────────
