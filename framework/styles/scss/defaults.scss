@@ -137,7 +137,7 @@ $color_text_form_select: $color_text_clear;
 
 $color_border_form: hsl(0, 0%, 80%); 
 
-$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+// $bg_button: url(../../images/bgs/button.png)  center /100% 100%;
 $bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
 
 // $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
@@ -817,6 +817,7 @@ TODO:    > Header-nav
     background-color: $color_theme;
     background: $bg_header;
     box-shadow: 0 0px 10px 0px $color_shadow_headerNav;
+    font-weight: bold;
 
     .nav {
         display: flex;
@@ -826,7 +827,7 @@ TODO:    > Header-nav
         h1 {
             margin: 0;
             margin-top: -1px;
-            font-weight: normal;
+            // font-weight: normal;
             color: $color_text_menu;
 
              // As declarações abaixo desfazem o bg como cor do texto:
@@ -3070,6 +3071,16 @@ TODO:        >> Dropdown
         > img {
             border-radius: 1000px;
         }
+    }
+}
+
+@media not all and (pointer: coarse) {
+
+    .choice.dropdown:not(.disabled, .dropdown_open):hover {
+
+        background: linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), hsl(193, 100%, 83%);
+        
+        box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px $color_theme;
     }
 }
 

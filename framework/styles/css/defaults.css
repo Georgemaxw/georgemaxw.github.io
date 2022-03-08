@@ -804,6 +804,7 @@ TODO:    > Header-nav
   background-color: DeepSkyBlue;
   background: url(../../images/bgs/header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
   /*  
 ────────────────────────────
 TODO:        >> Menu
@@ -823,7 +824,6 @@ TODO:        >> Expanded
 .header-nav .nav h1 {
   margin: 0;
   margin-top: -1px;
-  font-weight: normal;
   color: white;
   background: 0;
   -webkit-background-clip: border-box;
@@ -2711,6 +2711,13 @@ TODO:        >> Dropdown
 
 .choice.dropdown > li:nth-of-type(1) > img {
   border-radius: 1000px;
+}
+
+@media not all and (pointer: coarse) {
+  .choice.dropdown:not(.disabled):not(.dropdown_open):hover {
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
+  }
 }
 
 .choice.dropdown.dropdown_open {
