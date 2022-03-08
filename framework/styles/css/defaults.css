@@ -3461,7 +3461,7 @@ TODO:    > Lightbox
   font-size: 19rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 1px black);
-  filter: drop-shadow(0px 0px 2px #0088ad);
+  filter: drop-shadow(0px 0px 2px #007899);
 }
 
 .lightbox_text .text_img, .lightbox_text .text_img_size {
