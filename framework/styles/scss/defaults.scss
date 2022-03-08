@@ -3850,7 +3850,7 @@ TODO:    > Lightbox
     $bg_lightbox_border_1: hsl(198, 100%, 74%);
     $bg_lightbox_border_2: white;
     background: 
-    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.8), hsla(198, 100%, 74%, 0.8), hsla(0, 0%, 100%, 0.8)) padding-box, 
+    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.83), hsla(198, 100%, 74%, 0.83), hsla(0, 0%, 100%, 0.83)) padding-box, 
 
     linear-gradient(to right, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box top/100% $lightbox_border_width no-repeat,
     linear-gradient(to bottom, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box right/$lightbox_border_width 100% no-repeat,
