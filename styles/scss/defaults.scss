@@ -74,13 +74,15 @@ $color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
 $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 
 $bg_header: url(../../images/bgs/header.png) center /100% 100%;
-$bg_nav_1: url(../../images/bgs/nav_1.png)  center /100% 100%;
-$bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
-$bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+// $bg_nav: url(../../images/bgs/nav.png)  center /100% 100%;
+$bg_nav: linear-gradient(to right, rgb(41, 152, 244), rgb(115, 218, 247), rgb(41, 152, 244)); 
+// $bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+// $bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+$bg_nav_selector: hsla(0, 0%, 0%, 0.12); // VÍNCULO: Váriável JS
 
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
-$bg_nav_1: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+$bg_nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 */
 
 // ─────────── Footer ───────────
@@ -137,8 +139,9 @@ $color_text_form_select: $color_text_clear;
 
 $color_border_form: hsl(0, 0%, 80%); 
 
-$bg_button: url(../../images/bgs/button.png)  center /100% 100%;
-$bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG!
+// $bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+// $bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG! 
+$bg_select: linear-gradient(to bottom, hsl(0, 0%, 91%), white);  
 
 // $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 
@@ -247,7 +250,7 @@ $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floa
 
 // $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
-$bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%;
+// $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 
 // ─────────── Lightboxs ───────────
@@ -817,6 +820,7 @@ TODO:    > Header-nav
     background-color: $color_theme;
     background: $bg_header;
     box-shadow: 0 0px 10px 0px $color_shadow_headerNav;
+    font-weight: bold;
 
     .nav {
         display: flex;
@@ -826,7 +830,7 @@ TODO:    > Header-nav
         h1 {
             margin: 0;
             margin-top: -1px;
-            font-weight: normal;
+            // font-weight: normal;
             color: $color_text_menu;
 
              // As declarações abaixo desfazem o bg como cor do texto:
@@ -906,7 +910,7 @@ TODO:        >> Menu
             margin: 0;
             padding: 0;
             list-style-type: none;
-            background: $bg_nav_1;
+            background: $bg_nav;
             overflow: auto;
 
             li {
@@ -1074,7 +1078,7 @@ TODO:        >> Expanded
         .nav-menu ul li div { 
             display: none;
             position: fixed; top: $button_height; left: 0; bottom: 0; right: 0;
-            background: $bg_nav_2;
+            // background: hsla(0, 0%, 100%, 0.5);
             text-align: center;
         }
 
@@ -1090,7 +1094,7 @@ TODO:        >> Expanded
             border-radius: 25px;
             margin-top: $button_height;
             background-color: $color_theme;
-            background: $bg_nav_1;
+            background: $bg_nav;
             box-shadow: 6px 6px 13px 0px $color_shadow_nav_subOptions;
 
             li:nth-child(1) {
@@ -2272,6 +2276,11 @@ TODO:            >>> Option ON
     
     // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear !important;
     // border: 1px solid adjust-color($color_theme, $lightness: 30%);
+ 
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
+    }
 }
 
 // ─────────── Pill ───────────
@@ -3068,6 +3077,16 @@ TODO:        >> Dropdown
     }
 }
 
+@media not all and (pointer: coarse) {
+
+    .choice.dropdown:not(.disabled, .dropdown_open):hover {
+
+        background: linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), hsl(193, 100%, 83%);
+        
+        box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px $color_theme;
+    }
+}
+
 // Dropdown - Open:
 
 .choice.dropdown.dropdown_open {
@@ -3077,12 +3096,16 @@ TODO:        >> Dropdown
     width: auto;
     margin: 0;
     border-radius: 0px;
-    background: $bg_choice_d_open;
-    background: rgb(128, 0, 128);
-    background: 
-    linear-gradient(237deg, rgba(0, 191, 255,.8), rgba(0, 191, 255,0) 71%),
-    linear-gradient(147deg, rgba(255,255,255,.8), rgba(255,255,255,0) 71%),
-    linear-gradient(356deg, rgba(0, 255, 255, 0.8), rgba(0,255,255,0) 71%),
+    // background: $bg_choice_d_open; // <- Parte do estilo de choice anterior!
+    background:  // <- Parte do estilo de choice novo! 
+    // linear-gradient(127deg, hsl(180, 100%, 72%), hsla(180, 100%, 50%, 0) 71%),
+    // linear-gradient(217deg, hsl(195, 100%, 50%), hsla(195, 100%, 50%, 0) 71%),
+    // linear-gradient(336deg, hsl(204, 100%, 54%), hsla(0, 0%, 100%, 0) 71%),
+    // white;
+
+    linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
     white;
       
     overflow-y: auto;
@@ -3097,7 +3120,8 @@ TODO:        >> Dropdown
 
         span {
 
-            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 38%)); // <- Parte do estilo de choice novo! 
+            // filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%)); // <- Parte do estilo de choice novo! 
+            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); // <- Parte do estilo de choice novo! 
         }
 
         > a {
@@ -3817,12 +3841,26 @@ TODO:    > Lightbox
 
     max-width: calc(100vw - (2 * #{$button_height_small}));
     max-height: calc(100vh - (3 * #{$button_height}));
-    border-radius: $border_radius_default;
+    // border-radius: $border_radius_default;
     color: $color_text_menu;
     background: $bg_lightbox;
+
+    $lightbox_border_width: 5px;
+    border: $lightbox_border_width solid rgba(0, 0, 0, 0);
+    $bg_lightbox_border_1: hsl(198, 100%, 74%);
+    $bg_lightbox_border_2: white;
+    background: 
+    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.8), hsla(198, 100%, 74%, 0.8), hsla(0, 0%, 100%, 0.8)) padding-box, 
+
+    linear-gradient(to right, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box top/100% $lightbox_border_width no-repeat,
+    linear-gradient(to bottom, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box right/$lightbox_border_width 100% no-repeat,
+    linear-gradient(to left, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box bottom/100% $lightbox_border_width no-repeat,
+    linear-gradient(to top, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box left/$lightbox_border_width 100% no-repeat;
+    
     box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,
-    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
+    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear
+    ;
 }
 
 .lightbox_img {
@@ -3844,14 +3882,15 @@ TODO:    > Lightbox
 .lightbox_text {
     //display: block; 
     font-size: $font_size; 
-    text-shadow: 1px 1px 1px $color_shadow_text;
+    //text-shadow: 1px 1px 1px $color_shadow_text;
+    filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%));
 
     .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }
   
-/* Close Button */
+/* Close Button 
 
 .lightbox_closeArea::after {
     content: "";
@@ -3870,7 +3909,7 @@ TODO:    > Lightbox
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
 }
-
+*/
 // Lightbox Layout - Scrollbars:
 
 .lightbox_layout::-webkit-scrollbar { // Entire bar
