@@ -2565,7 +2565,7 @@ TODO:        >> Horizontal
   border-bottom-left-radius: 1000px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
-  box-shadow: inset 2px 0px 9px 4px #00a4db, 0px 0px 0px 1px #8ae2ff;
+  box-shadow: inset 2px 0px 9px 4px #00b0eb, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.horizontal > li:nth-of-type(1) span {
@@ -2642,7 +2642,7 @@ TODO:        >> Vertical
   justify-content: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
-  box-shadow: inset 2px -2px 9px 4px #00a4db, 0px 0px 0px 1px #8ae2ff;
+  box-shadow: inset 2px -2px 9px 4px #00b0eb, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li:nth-of-type(1) a {
@@ -3435,9 +3435,8 @@ TODO:    > Lightbox
   max-width: calc(100vw - (2 * 40px));
   max-height: calc(100vh - (3 * 48px));
   color: white;
-  background: url(../../images/bgs/lightbox.png) center/100% 100%;
   border: 5px solid rgba(0, 0, 0, 0);
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.83), rgba(122, 215, 255, 0.83), rgba(255, 255, 255, 0.83)) padding-box, linear-gradient(to right, #7ad7ff, white) border-box top/100% 5px no-repeat, linear-gradient(to bottom, white, #7ad7ff) border-box right/5px 100% no-repeat, linear-gradient(to left, #7ad7ff, white) border-box bottom/100% 5px no-repeat, linear-gradient(to top, white, #7ad7ff) border-box left/5px 100% no-repeat;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.85), rgba(122, 215, 255, 0.85), rgba(255, 255, 255, 0.85)) padding-box, linear-gradient(to right, #7ad7ff, white) border-box top/100% 5px no-repeat, linear-gradient(to bottom, white, #7ad7ff) border-box right/5px 100% no-repeat, linear-gradient(to left, #7ad7ff, white) border-box bottom/100% 5px no-repeat, linear-gradient(to top, white, #7ad7ff) border-box left/5px 100% no-repeat;
   box-shadow: 6px 6px 24px -14px black;
 }
 

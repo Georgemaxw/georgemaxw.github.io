@@ -258,7 +258,7 @@ $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floa
 $color_shadow_lightbox: black; 
 $color_shadow_lightbox_button: black; 
 
-$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
+// $bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
 $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 
@@ -2889,7 +2889,7 @@ TODO:        >> Horizontal
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
             
         span {
             padding-left: 15px;
@@ -2993,7 +2993,7 @@ TODO:        >> Vertical
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
         a {
             display: flex;
@@ -3843,14 +3843,14 @@ TODO:    > Lightbox
     max-height: calc(100vh - (3 * #{$button_height}));
     // border-radius: $border_radius_default;
     color: $color_text_menu;
-    background: $bg_lightbox;
+    // background: $bg_lightbox;
 
     $lightbox_border_width: 5px;
     border: $lightbox_border_width solid rgba(0, 0, 0, 0);
     $bg_lightbox_border_1: hsl(198, 100%, 74%);
     $bg_lightbox_border_2: white;
     background: 
-    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.83), hsla(198, 100%, 74%, 0.83), hsla(0, 0%, 100%, 0.83)) padding-box, 
+    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.85), hsla(198, 100%, 74%, 0.85), hsla(0, 0%, 100%, 0.85)) padding-box, 
 
     linear-gradient(to right, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box top/100% $lightbox_border_width no-repeat,
     linear-gradient(to bottom, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box right/$lightbox_border_width 100% no-repeat,
