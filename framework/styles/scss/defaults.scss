@@ -2917,22 +2917,22 @@ TODO:        >> Horizontal
         }
     }
 
-    > li a:hover {
+    // > li a:hover {
 
-        background: hsla(0, 0%, 100%, 0.25); 
-        // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
-    }
+    //     background: hsla(0, 0%, 100%, 0.25); 
+    //     // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
+    // }
 
-    > li:nth-of-type(1) a:hover {
-        background: 0;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-    }
+    // > li:nth-of-type(1) a:hover {
+    //     background: 0;
+    //     text-shadow: 1px 1px 1px $color_shadow_text;
+    // }
 
     > li + li {
         border-left: 1px solid $color_text_menu;
     }
 }
-
+ 
 /*  
 ────────────────────────────
 TODO:        >> Vertical
@@ -2966,16 +2966,16 @@ TODO:        >> Vertical
         }
     }
 
-    > li a:hover {
+    // > li a:hover {
         // background: $bg_choice_selector; // <- Parte do estilo de choice anterior!
-        background: hsla(0, 0%, 100%, 0.3);
+        // background: hsla(0, 0%, 100%, 0.3);
         // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
-    }
+    // }
 
-    > li:nth-of-type(1) a:hover {
-        background: 0;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-    }
+    // > li:nth-of-type(1) a:hover {
+    //     background: 0;
+    //     text-shadow: 1px 1px 1px $color_shadow_text;
+    // }
 
     > li:nth-of-type(1) {
 

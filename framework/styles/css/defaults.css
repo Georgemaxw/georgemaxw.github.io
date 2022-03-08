@@ -2590,15 +2590,6 @@ TODO:        >> Horizontal
   padding-right: 15px;
 }
 
-.choice.horizontal > li a:hover {
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.choice.horizontal > li:nth-of-type(1) a:hover {
-  background: 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-}
-
 .choice.horizontal > li + li {
   border-left: 1px solid white;
 }
@@ -2625,15 +2616,6 @@ TODO:        >> Vertical
 
 .choice.vertical > li span {
   padding: 0px 19px 0px 17px;
-}
-
-.choice.vertical > li a:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.choice.vertical > li:nth-of-type(1) a:hover {
-  background: 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .choice.vertical > li:nth-of-type(1) {
