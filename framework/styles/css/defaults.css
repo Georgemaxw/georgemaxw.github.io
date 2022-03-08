@@ -3437,7 +3437,7 @@ TODO:    > Lightbox
   color: white;
   background: url(../../images/bgs/lightbox.png) center/100% 100%;
   border: 6px solid rgba(0, 0, 0, 0);
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(122, 215, 255, 0.8), rgba(255, 255, 255, 0.8)) padding-box, linear-gradient(to right, #7ad1ff, white) border-box top/100% 6px no-repeat, linear-gradient(to bottom, white, #7ad1ff) border-box right/6px 100% no-repeat, linear-gradient(to left, #7ad1ff, white) border-box bottom/100% 6px no-repeat, linear-gradient(to top, white, #7ad1ff) border-box left/6px 100% no-repeat;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(122, 215, 255, 0.8), rgba(255, 255, 255, 0.8)) padding-box, linear-gradient(to right, #7ad7ff, white) border-box top/100% 6px no-repeat, linear-gradient(to bottom, white, #7ad7ff) border-box right/6px 100% no-repeat, linear-gradient(to left, #7ad7ff, white) border-box bottom/100% 6px no-repeat, linear-gradient(to top, white, #7ad7ff) border-box left/6px 100% no-repeat;
   box-shadow: 6px 6px 24px -14px black;
 }
 
