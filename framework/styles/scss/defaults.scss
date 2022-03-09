@@ -56,7 +56,7 @@ $color_shadow_text_strong: hsla(0, 0%, 0%, 0.3);
 $color_shadow_box_inset_clear: hsla(0, 0%, 100%, 0.4);
 $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15); 
 
-$bg_html: white;
+$bg_html: rgb(0, 0, 0);
 //$bg_html: hsl(0, 0%, 36%);
 //$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
  
@@ -2820,7 +2820,7 @@ TODO:    > Choices
         align-items: center; 
         color: $color_text_menu;
         font-weight: bold;
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%)); // <- Parte do estilo de choice novo! 
+        // filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%)); // <- Parte do estilo de choice novo! 
 
         .text_img, .text_img_size {
             
@@ -2830,7 +2830,7 @@ TODO:    > Choices
 
     span:hover {
         
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
+        // filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
     }
 }
 
@@ -2853,11 +2853,11 @@ TODO:        >> Horizontal
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    background: // <- Parte do estilo de choice novo!
-    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
-    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    // background: // <- Parte do estilo de choice novo!
+    // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    // box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
     > li {
         display: inline-flex;
@@ -2885,11 +2885,11 @@ TODO:        >> Horizontal
         // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
         // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-        background: // <- Parte do estilo de choice novo!
-        linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
-        linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
+        // background: // <- Parte do estilo de choice novo!
+        // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+        // linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        // box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
             
         span {
             padding-left: 15px;
@@ -2946,11 +2946,11 @@ TODO:        >> Vertical
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    background: // <- Parte do estilo de choice novo!
-    linear-gradient(to top, hsla(195, 100%, 100%, 0.9), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), 
-    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    // background: // <- Parte do estilo de choice novo!
+    // linear-gradient(to top, hsla(195, 100%, 100%, 0.9), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), 
+    // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    // box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
     > li {
         display: flex;
@@ -2989,11 +2989,11 @@ TODO:        >> Vertical
         // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
         // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-        background: // <- Parte do estilo de choice novo!
-        linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
-        linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
+        // background: // <- Parte do estilo de choice novo!
+        // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+        // linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        // box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
         a {
             display: flex;
@@ -3097,16 +3097,16 @@ TODO:        >> Dropdown
     margin: 0;
     border-radius: 0px;
     // background: $bg_choice_d_open; // <- Parte do estilo de choice anterior!
-    background:  // <- Parte do estilo de choice novo! 
+    // background:  // <- Parte do estilo de choice novo! 
     // linear-gradient(127deg, hsl(180, 100%, 72%), hsla(180, 100%, 50%, 0) 71%),
     // linear-gradient(217deg, hsl(195, 100%, 50%), hsla(195, 100%, 50%, 0) 71%),
     // linear-gradient(336deg, hsl(204, 100%, 54%), hsla(0, 0%, 100%, 0) 71%),
     // white;
 
-    linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
-    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 100%, 0) 71%),
-    linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
-    white;
+    // linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    // linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    // linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
+    // white;
       
     overflow-y: auto;
 
@@ -3121,7 +3121,7 @@ TODO:        >> Dropdown
         span {
 
             // filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%)); // <- Parte do estilo de choice novo! 
-            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); // <- Parte do estilo de choice novo! 
+            // filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); // <- Parte do estilo de choice novo! 
         }
 
         > a {
@@ -3213,7 +3213,7 @@ TODO:        >> Option ON
 
     span {
 
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
+        // filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%)); // <- Parte do estilo de choice novo! 
     }
 }
 
@@ -3222,7 +3222,7 @@ TODO:        >> Option ON
     // background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 1), hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.6)); // <- Parte do estilo de choice novo! 
     // background: hsl(195, 100%, 93%);// <- Parte do estilo de choice novo!
     // background: hsla(0, 0%, 100%, 0.8);// <- Parte do estilo de choice novo! 
-    background: hsla(195, 100%, 98%, 0.9);// <- Parte do estilo de choice novo!
+    // background: hsla(195, 100%, 98%, 0.9);// <- Parte do estilo de choice novo!
 }
 
 /*  
