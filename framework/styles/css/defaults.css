@@ -2518,10 +2518,15 @@ TODO:    > Choices
   align-items: center;
   color: white;
   font-weight: bold;
+  filter: drop-shadow(0px 0px 2px #00a8d6);
 }
 
 .choice.horizontal > li span .text_img, .choice.horizontal > li span .text_img_size, .choice.vertical > li span .text_img, .choice.vertical > li span .text_img_size, .choice.dropdown > li span .text_img, .choice.dropdown > li span .text_img_size {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+.choice.horizontal > li span:hover, .choice.vertical > li span:hover, .choice.dropdown > li span:hover {
+  filter: drop-shadow(0px 0px 2px #0090b8);
 }
 
 .choice.horizontal > li span > img, .choice.vertical > li span > img, .choice.dropdown > li span > img {
@@ -2535,6 +2540,8 @@ TODO:        >> Horizontal
 .choice.horizontal {
   display: inline-flex;
   border-radius: 1000px;
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.horizontal > li {
@@ -2557,6 +2564,8 @@ TODO:        >> Horizontal
   border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
+  box-shadow: inset 2px 0px 9px 4px #00b0eb, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.horizontal > li:nth-of-type(1) span {
@@ -2591,6 +2600,8 @@ TODO:        >> Vertical
 ──────────────────────────── */
 .choice.vertical {
   border-radius: 20px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li {
@@ -2612,6 +2623,8 @@ TODO:        >> Vertical
   border-top-right-radius: 20px;
   justify-content: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
+  box-shadow: inset 2px -2px 9px 4px #00b0eb, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li:nth-of-type(1) a {
@@ -2698,6 +2711,7 @@ TODO:        >> Dropdown
   width: auto;
   margin: 0;
   border-radius: 0px;
+  background: linear-gradient(217deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(127deg, rgba(224, 224, 224, 0.8), rgba(255, 255, 255, 0) 71%), linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
   overflow-y: auto;
   /* @media (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {  > li { position: relative; top: calc(3 * 40px); } } */
 }
@@ -2709,6 +2723,10 @@ TODO:        >> Dropdown
   position: relative;
   top: 40px;
   width: 100%;
+}
+
+.choice.dropdown.dropdown_open > li span {
+  filter: drop-shadow(0px 0px 2px #0088ad);
 }
 
 .choice.dropdown.dropdown_open > li > a {
@@ -2784,6 +2802,14 @@ TODO:        >> Option ON
 ──────────────────────────── */
 .choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.choice.horizontal > li > a.on span, .choice.vertical > li > a.on span, .choice.dropdown.choice.dropdown_open > li > .on span {
+  filter: drop-shadow(0px 0px 2px #0090b8);
+}
+
+.choice.vertical > li > a.on {
+  background: rgba(245, 252, 255, 0.9);
 }
 
 /*  
@@ -3467,7 +3493,7 @@ TODO:    > Lightbox
 TODO: Others
 ────────────────────────────────────────────────────── */
 html {
-  background: black;
+  background: white;
 }
 
 body {
