@@ -895,7 +895,7 @@ TODO:        >> Expanded
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background: linear-gradient(to right, #1f9aff, #8fe7ff, #1f9aff);
+  background: linear-gradient(to right, #1fb0ff, #8fe7ff, #1fb0ff);
   overflow: auto;
 }
 
@@ -1054,7 +1054,7 @@ TODO:        >> Expanded
     border-radius: 25px;
     margin-top: 48px;
     background-color: DeepSkyBlue;
-    background: linear-gradient(to right, #1f9aff, #8fe7ff, #1f9aff);
+    background: linear-gradient(to right, #1fb0ff, #8fe7ff, #1fb0ff);
     box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.26);
     /* li:hover {
                 background: $bg_nav_selector;
