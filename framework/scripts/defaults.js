@@ -925,11 +925,9 @@ var e = document.createElement("li")
 /*  
 ────────────────────────────
 TODO:    > Shine
-──────────────────────────── */
+──────────────────────────── 
 
 document.querySelectorAll('.choice').forEach(function ($choice) {
-
-    // var $shine = $choice.querySelector(':scope .choice_shine_top') 
 
     if($choice.classList.contains('horizontal')) {
 
@@ -968,7 +966,7 @@ document.querySelectorAll('.choice').forEach(function ($choice) {
 
         $choice.insertAdjacentElement('afterbegin', $shine)
     }
-})
+})*/
 
 /*  
 ──────────────────────────────────────────────────────
