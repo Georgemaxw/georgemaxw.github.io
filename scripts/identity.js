@@ -557,6 +557,8 @@ imgsNamesAsAlts(document.querySelectorAll('.skills_types_choice img'))
 
 function func_skills_types_choices(el) {
 
+    var skills_quantity = 0
+
     skills_table_rows.forEach(function (skill_row) {
     
         var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
@@ -564,6 +566,7 @@ function func_skills_types_choices(el) {
         if (el.querySelector('img') === null) {
 
             skill_row.style.display = 'table-row'
+            skills_quantity++
             
         } else {
             
@@ -574,6 +577,7 @@ function func_skills_types_choices(el) {
                 if(getImgName(skill_types_imgs[i]) === this_type_img) {
 
                     skill_row.style.display = 'table-row'
+                    skills_quantity++
 
                     break
 
@@ -586,7 +590,10 @@ function func_skills_types_choices(el) {
     })
 
     document.querySelector('.skills_table_box').style.display = 'block'
-}
+    document.querySelector('.skills_quantity').style.display = 'block'
+
+    document.querySelector('.skills_quantity span').textContent = skills_quantity
+} 
 
 /*  
 ────────────────────────────

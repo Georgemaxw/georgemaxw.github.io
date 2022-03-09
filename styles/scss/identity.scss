@@ -483,12 +483,12 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     height: 44px;
   
     img {
-        // width: 40px;
 
-        width: 32px; margin-left: 10px;// margin-top: 13px;
+        width: 32px; 
+        margin-left: 10px;
     }
 
-    span {
+    img + span { 
 
         padding-left: 9px !important; 
     }
@@ -496,17 +496,38 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 
 .skills_types_choice.choice.dropdown.dropdown_open {
 
-    a {
-        height: 44px !important; 
+    // li {
+        // border: 0;
+    // }
+
+    li { 
+        border-right: 1px solid white;
     }
+
+    li:nth-last-of-type(1) { 
+ 
+        display: none !important;  
+    }
+
+    // li:not(:nth-of-type(2)) a {
+    //     
+    //     padding-left: 8px;
+    // }
+
+    a {
+        // width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+        height: 44px !important;
+        // border-radius: 1000px; 
+    }
+
+    // a.on {
+
+    //     background: hsla(0, 0%, 100%, 0.68);
+    // }
   
     img {
+
         width: 32px;
-    }
-
-    li:not(:nth-of-type(2), :nth-last-of-type(1)) { 
-
-        border-right: 1px solid white;
     }
 
     @media (min-width: 400px) { li:not(:nth-of-type(2)) { width: 50%; } }
@@ -610,14 +631,17 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     margin: auto; 
 
     tr {
+
         display: none;
     } 
 
     tr:hover {
+
         background-color: transparent;
     }
 
     tr:nth-of-type(1) {
+
         display: table-row;
         background-color: hsl(193,100%,98%);
         outline: 1px solid $color_theme;
@@ -632,10 +656,12 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
 
     tr:nth-of-type(1):hover { // Bug fix!
+
         background-color: hsl(193,100%,98%);
     }
 
     tr td:nth-of-type(1) {
+
         position: sticky;
         top: 0;
         left: 0;
@@ -652,6 +678,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     */
 
     th, td { 
+
         //min-width: max-content; 
     }
 
@@ -663,6 +690,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }  */
 
     .type_icon {
+
         width: 32px;
         height: 32px;
         margin-top: 4px;
@@ -674,15 +702,17 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
 
     .cost {
-     //filter: drop-shadow(0px 0px 1px black);
+
+        //filter: drop-shadow(0px 0px 1px black);
     }
 
     .cost + .cost {
+
         margin-left: 6px;
     }
 
-
     .cost.hp {
+
         color: hsl(120, 100%, 47%);
     }
 
@@ -694,6 +724,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
 
     .cost.tp {
+
         color: red;
     }
 }
@@ -712,6 +743,12 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 }
 
 .click_on_the_table {
+    text-align: center;
+}
+
+.skills_quantity {
+
+    display: none;
     text-align: center;
 }
 
