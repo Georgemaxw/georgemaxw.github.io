@@ -925,7 +925,7 @@ var e = document.createElement("li")
 /*  
 ────────────────────────────
 TODO:    > Shine
-──────────────────────────── 
+──────────────────────────── */
 
 document.querySelectorAll('.choice').forEach(function ($choice) {
 
@@ -966,7 +966,7 @@ document.querySelectorAll('.choice').forEach(function ($choice) {
 
         $choice.insertAdjacentElement('afterbegin', $shine)
     }
-})*/
+})
 
 /*  
 ──────────────────────────────────────────────────────
