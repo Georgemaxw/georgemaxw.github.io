@@ -75,7 +75,7 @@ $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 
 $bg_header: url(../../images/bgs/header.png) center /100% 100%;
 // $bg_nav: url(../../images/bgs/nav.png)  center /100% 100%;
-$bg_nav: linear-gradient(to right, rgb(41, 152, 244), rgb(115, 218, 247), rgb(41, 152, 244)); 
+$bg_nav: linear-gradient(to right, hsl(207, 100%, 56%), hsl(193, 100%, 78%), hsl(207, 100%, 56%)); 
 // $bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
 // $bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_nav_selector: hsla(0, 0%, 0%, 0.12); // VÍNCULO: Váriável JS
