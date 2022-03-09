@@ -300,8 +300,19 @@ TODO: Skills - Table
   }
 }
 
-.skills_types_choice img {
-  width: 40px;
+.skills_types_choice:not(.dropdown_open) {
+  display: flex !important;
+  align-items: center;
+  height: 44px;
+}
+
+.skills_types_choice:not(.dropdown_open) img {
+  width: 32px;
+  margin-left: 10px;
+}
+
+.skills_types_choice:not(.dropdown_open) span {
+  padding-left: 9px !important;
 }
 
 .skills_types_choice.choice.dropdown.dropdown_open a {
@@ -518,7 +529,7 @@ TODO: Skills - Table
 }
 
 .skills_table .type_icon + .type_icon {
-  margin-left: 3px;
+  margin-left: 4px;
 }
 
 .skills_table .cost + .cost {

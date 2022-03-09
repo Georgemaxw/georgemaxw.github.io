@@ -476,14 +476,21 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
 }
 
-.skills_types_choice { 
+.skills_types_choice:not(.dropdown_open) {
 
-    //height: 42px;
+    display: flex !important;
+    align-items: center;
+    height: 44px;
   
     img {
-        // width: 32px; margin-left: 8px;
+        // width: 40px;
 
-        width: 40px;
+        width: 32px; margin-left: 10px;// margin-top: 13px;
+    }
+
+    span {
+
+        padding-left: 9px !important; 
     }
 }
 
@@ -663,7 +670,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 
     .type_icon + .type_icon {
 
-        margin-left: 3px;
+        margin-left: 4px;
     }
 
     .cost {
