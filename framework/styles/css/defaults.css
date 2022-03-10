@@ -1199,15 +1199,41 @@ TODO:    > Footer
             width: calc(100% - 16px);
         }
         */
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: calc(100% - (2 * 20px));
-  max-width: 370px;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
   list-style-type: none;
+  text-align: center;
+}
+
+.footer-content .footer-icons li {
+  display: inline-block;
+}
+
+@media (min-width: 0px) {
+  .footer-content .footer-icons li + li {
+    margin-left: 20px;
+  }
+  .footer-content .footer-icons li:nth-last-of-type(1) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 362px) {
+  .footer-content .footer-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 370px;
+  }
+  .footer-content .footer-icons li + li {
+    margin-left: 0;
+  }
+  .footer-content .footer-icons li:nth-last-of-type(1) {
+    margin-right: 0;
+  }
 }
 
 .footer-content .footer-icons button {

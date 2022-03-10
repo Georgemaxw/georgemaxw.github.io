@@ -1276,18 +1276,43 @@ TODO:    > Footer
 
 
 
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
         //align-items: center; 
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         
         width: calc(100% - (2 * #{$margin_horizontal})); 
-        max-width: 370px; // 5 * 58 + 4 * 20
+        padding: 0;
         margin-left: auto;
         margin-right: auto; 
         margin-bottom: 0; // Retirar para o rodapé de estilo anterior.
         // text-align: center; 
         list-style-type: none;
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+
+        @media (min-width: 0px) { 
+            
+            $li_margin_horizontal: 20px; // calc((100% - 3 * 62px)/2);
+
+            li + li { margin-left: $li_margin_horizontal; } 
+            li:nth-last-of-type(1) { margin-right: $li_margin_horizontal; } 
+        } 
+
+        @media (min-width: 362px) {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            max-width: 370px; // 5 * 58 + 4 * 20
+
+            li + li { margin-left: 0; } 
+            li:nth-last-of-type(1) { margin-right: 0; } 
+        }
 
         button {
 
