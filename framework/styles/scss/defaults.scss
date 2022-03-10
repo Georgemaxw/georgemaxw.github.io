@@ -1301,7 +1301,7 @@ TODO:    > Footer
 
             background: 
             linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(195, 0%, 76%), hsl(195, 0%, 63%), hsl(195, 0%, 56%));
+            linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
 
             box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
         }
@@ -1310,7 +1310,7 @@ TODO:    > Footer
 
             background: 
             linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(120, 100%, 76%), hsl(120, 100%, 63%), hsl(120, 100%, 56%));
+            linear-gradient(to bottom, hsl(120, 100%, 72%), hsl(120, 100%, 60%), hsl(120, 100%, 52%));
 
             box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 69%);
 
@@ -1953,9 +1953,9 @@ TODO:        >> Button
           
         $offset: 2px;
         $left:  $offset;
-        $height: 49.8%; //calc(24px + #{$offset});
+        $height: 50%; 
 
-        top: $offset;  
+        top: 1px; 
         left:  $left;
         width: calc(100% - 2 * #{$left});
         height: $height; 
