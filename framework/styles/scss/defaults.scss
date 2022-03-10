@@ -1290,6 +1290,8 @@ TODO:    > Footer
 
         button {
 
+            width: 58px;
+            height: 58px;
             color: #000000; 
             margin: 0;
             margin-bottom: $margin_vertical; 
@@ -1311,6 +1313,10 @@ TODO:    > Footer
             linear-gradient(to bottom, hsl(120, 100%, 80%), hsl(120, 100%, 67%), hsl(120, 100%, 60%));
 
             box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 71%);
+
+            img {
+                padding-top: 1px;
+            }
         }
 
         .youtube {
