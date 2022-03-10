@@ -1281,7 +1281,8 @@ TODO:    > Footer
         //align-items: center; 
         flex-wrap: wrap;
         
-        max-width: calc(100% - (2 * #{$margin_horizontal})); 
+        width: calc(100% - (2 * #{$margin_horizontal})); 
+        max-width: 370px; // 5 * 58 + 4 * 20
         margin-left: auto;
         margin-right: auto; 
         margin-bottom: 0; // Retirar para o rodapé de estilo anterior.
