@@ -169,7 +169,9 @@
 
                 <p>A classe <span class="highlight">highlight</span> é usada para destacar o texto.</p>
 
+                <!--  
                 <p>A classe <span class="highlight">highlight_menu</span> é usada para destacar o texto em um menu. (Foi usada em <span class="highlight">Lightbox</span>.)</p>
+                -->
 
                 <p>
                     <span class="click" onclick="lightbox(`Eu tenho a classe 'click' para indicar que sou um texto clicável, e o evento 'onclick' para chamar o lightbox.`)">Clique aqui!</span>
@@ -4030,9 +4032,9 @@
 
                 <ul class="choice horizontal" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Op. 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Op. 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Op. 3</span></a></li>
                 </ul>
 
                 <div class="lb2"></div>
@@ -4064,10 +4066,9 @@
 
                 <ul class="choice horizontal center" onclick="choice(this)">
                     <li><span>Esc.</span></li>
-                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../images/exs/landscape.png" alt=" " style="width: 65px; height: 65px;"></a></li>
-                    <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../images/exs/landscape.png" alt=" " style="width: 65px; height: 65px;"><span>#2</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_3(this)"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">#3</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_4(this)"><img src="../images/exs/landscape.png" alt=" " style="width: 65px; height: 65px;"></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../images/exs/landscape.png" alt=" " style="width: 65px; height: 65px;"><span>#2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">#3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../images/exs/landscape.png" alt=" " style="width: 65px; height: 65px;"></a></li>
                 </ul>
 
                 <div class="lb2"></div>
@@ -4076,9 +4077,9 @@
 
                 <ul class="choice horizontal disabled" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
-                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Op. 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_2(this)"><span>Op. 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_option_3(this)"><span>Op. 3</span></a></li>
                 </ul>
 
                 <div class="lb2"></div>
@@ -4361,9 +4362,9 @@
 
                 <ul class="choice horizontal center" onclick="choice(this)">
                     <li><span>Escolher</span></li>
-                    <li><a onclick="choice_option(this); choice_example_1_Action_1()" class="on"><span>Opção 1</span></a></li>
-                    <li><a onclick="choice_option(this); choice_example_1_Action_2()"><span>Opção 2</span></a></li>
-                    <li><a onclick="choice_option(this); choice_example_1_Action_3()"><span>Opção 3</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_1_Action_1()" class="on"><span>Op. 1</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_1_Action_2()"><span>Op. 2</span></a></li>
+                    <li><a onclick="choice_option(this); choice_example_1_Action_3()"><span>Op. 3</span></a></li> 
                 </ul>
 
                 <div class="lb2"></div>
@@ -5091,11 +5092,11 @@
                 </p>   
 
                 <p>
-                    <a onclick="lightbox(`Lightbox com a função <span class='highlight_menu'>lightbox()</span>.`, '../images/exs/1920×1080.png', '200px')">Lightbox 4</a>  
+                    <a onclick="lightbox(`Lightbox com a função <span class='highlight'>lightbox()</span>.`, '../images/exs/1920×1080.png', '200px')">Lightbox 4</a>  
                 </p>  
 
                 <p>
-                    <a onclick="lightbox2(`Lightbox com a função <span class='highlight_menu'>lightbox2()</span>.`, '../images/exs/1920×1080.png', '200px')">Lightbox 5</a>  
+                    <a onclick="lightbox2(`Lightbox com a função <span class='highlight'>lightbox2()</span>.`, '../images/exs/1920×1080.png', '200px')">Lightbox 5</a>  
                 </p>    
 
                 <p>
@@ -5218,7 +5219,70 @@
     TODO: Footer
     ────────────────────────────────────────────────────── --> 
 
-    <footer></footer>
+    <footer>
+
+        <div class="central footer-content">
+
+            <address>
+            
+                <!--<p>Contactthe author of this page:</p>-->
+                <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
+                <!--  <ul>
+                        <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
+                        <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
+                        </ul>-->
+                <!--<p>Follow us on:</p>-->
+            
+                    <ul class="footer-icons">
+                        <!--  
+                        <li><a href="mailto:support@company.com.br"><img src="../images/icons/mail.svg" alt=""></a></li>  
+                        <li><a href="#"><img src="../images/icons/youtube.svg" alt=""></a></li> 
+                        <li><a href="#"><img src="../images/icons/twitch.svg" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icons/instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="../images/icons/facebook.svg" alt=""></a></li>  
+                        <li><a href="#"><img src="../images/icons/twitter.svg" alt=""></a></li> 
+                        -->
+
+                        <li>
+                            <button class="button_icon rounded email"> 
+                                <img class="piece_icon" src="../images/icons/email.svg" alt=""> 
+                            </button> 
+                        </li> 
+
+                        <li>
+                            <button class="button_icon rounded whatsapp"> 
+                                <img class="piece_icon" src="../images/icons/whatsapp.svg" alt="">
+                            </button> 
+                        </li> 
+
+                        <li>
+                            <button class="button_icon rounded youtube"> 
+                                <img class="piece_icon" src="../images/icons/youtube.svg" alt="">
+                            </button> 
+                        </li> 
+
+                        <li>
+                            <button class="button_icon rounded instagram"> 
+                                <img class="piece_icon" src="../images/icons/instagram.svg" alt="">
+                            </button> 
+                        </li> 
+
+                        <li>
+                            <button class="button_icon rounded facebook"> 
+                                <img class="piece_icon" src="../images/icons/facebook.svg" alt="">
+                            </button>
+                        </li> 
+                    </ul>
+            
+                <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+            
+            </address> 
+            
+            <p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
+            
+        </div>
+
+    </footer>
 
     <!-- 
         Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
@@ -5306,7 +5370,6 @@
     - mini_topic
     - container_text
     - highlight
-    - highlight_menu
     - click
     - spaced_items
     - list_index

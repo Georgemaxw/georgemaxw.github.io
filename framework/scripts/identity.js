@@ -477,7 +477,7 @@ document.querySelector('.headerNav-button').onclick = function() { // <- Show He
 /*  
 ──────────────────────────────────────────────────────
 TODO: Footer - HTML
-────────────────────────────────────────────────────── */
+────────────────────────────────────────────────────── 
 
 document.querySelector('footer').innerHTML = `
 
@@ -508,8 +508,10 @@ document.querySelector('footer').innerHTML = `
 
 <p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
 
-    </div>
+</div>
+
 `
+*/
 
 /* 
 ──────────────────────────────────────────────────────

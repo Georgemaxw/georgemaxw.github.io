@@ -103,7 +103,7 @@ $color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 90%), hsl(201, 100%, 5
 $color_text_hx: linear-gradient(to bottom, hsl(199, 100%, 90%), hsl(199, 100%, 50%), hsl(187, 100%, 87%), hsl(201, 100%, 50%)); 
 $color_border_kbd: hsl(0, 0%, 95%);
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%; 
-$color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+// $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
 $color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 
 $bg_kbd: hsl(0, 0%, 86%);
@@ -267,19 +267,23 @@ $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 10
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 
 // ─────────── Scrollbars ───────────
- 
-$color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
-$color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
-$color_scrollbar_track: hsla(0, 0%, 100%, 0.4);
+
+// $color_1_scrollbar: hsla(0, 0%, 0%, 0.14);
+$color_1_scrollbar: linear-gradient(to bottom, hsla(180, 100%, 85%, 1), hsla(195, 100%, 55%, 1)); // hsl(188, 100%, 85%);
+$color_2_scrollbar: hsla(0, 0%, 100%, 0.4);
+
+$color_scrollbar_thumb: $color_1_scrollbar;
+$color_scrollbar_thumb_firefox: $color_1_scrollbar;
+$color_scrollbar_track: $color_2_scrollbar;
 $color_scrollbar_track_firefox: transparent;
-$color_menu_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
-$color_menu_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menu_scrollbar_thumb: $color_1_scrollbar;  
+$color_menu_scrollbar_thumb_firefox: $color_1_scrollbar; 
 $color_menu_scrollbar_track: transparent;
 $color_menu_scrollbar_track_firefox: transparent;
-$color_menuRounded_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
-$color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+$color_menuRounded_scrollbar_thumb: $color_1_scrollbar;  
+$color_menuRounded_scrollbar_thumb_firefox: $color_1_scrollbar; 
 $color_menuRounded_scrollbar_track: transparent;
-$color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
+$color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
 
 // ─────────── Others ───────────
 
@@ -387,8 +391,6 @@ a[href^="http"] {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent; 
-        //filter: drop-shadow(2px 2px 2px hsla(0, 0%, 0%, 0.20));
-        //filter: drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.99));
 	}
 }
 
@@ -557,24 +559,33 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     padding: 5px 13px 5px;
 }
 
-.highlight, .hl {
+// .highlight {
     /*background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;*/
 
-    color: $color_theme;
-}
+//     color: $color_theme;
+// }
 
-.highlight_menu, .hlm {
+// .highlight_menu {
     /*background: $color_text_highlight_menu;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;*/ 
 
-    color: yellow;
+//     color: yellow;
+// }
+
+.highlight {
+
+    background: $color_text_highlight;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .click { 
@@ -1210,47 +1221,50 @@ TODO:    > Footer
 ──────────────────────────── */
 
 .footer-content {
+
     width: 100%;
     margin-top: calc(2 * #{$margin_vertical});
 
     address {
+
         width: 100%;
     }
 
     .footer-icons {
-        width: calc(100% - (2 * #{$margin_horizontal}));
-        height: 48px;
-        border-radius: 50px;
-        background-color: $color_theme;
-        background: $bg_footer_icons;
-        //padding: 6px 0 0px;
-        padding-top: 2px;
-        margin-left: auto;
-        margin-right: auto; 
-        //box-shadow: 4px 6px 9px 0px hsla(0, 0%, 0%, 0.22);
-        box-shadow: 3px 3px 6px 0px $color_shadow_footer;
 
-        list-style-type: none;
+        /*
         display: flex;
         justify-content: space-evenly;
         align-items: center; 
+        
+        width: calc(100% - (2 * #{$margin_horizontal}));
+        height: 48px;
+        border-radius: 50px;
+        padding-top: 2px;
+        margin-left: auto;
+        margin-right: auto; 
+        background: $bg_footer_icons;
+        box-shadow: 3px 3px 6px 0px $color_shadow_footer;
+        list-style-type: none;
  
         li, a {
+        
             height: 40px !important;
         }
-
+        
         img {
+        
             padding: 5px;
             border: 2px solid $color_text_menu;
             border-radius: 50%;
             filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
-        }
+        } 
 
         // Não apage esta regra comentada:
-        /*@media (min-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) { 
+        // @media (min-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) { 
 
-            width: 100%;
-        }*/
+        //     width: 100%;
+        // }
 
         // Footer-icons em smartphone - paisagem:
 
@@ -1258,22 +1272,114 @@ TODO:    > Footer
 
             width: calc(100% - 16px);
         }
+        */
+
+
+
+        display: flex;
+        justify-content: space-between;
+        //align-items: center; 
+        flex-wrap: wrap;
+        
+        max-width: calc(100% - (2 * #{$margin_horizontal})); 
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 0; // Retirar para o rodapé de estilo anterior.
+        // text-align: center; 
+        list-style-type: none;
+
+        button {
+
+            color: #000000; 
+            margin: 0;
+            margin-bottom: $margin_vertical; 
+        }
+
+        .email {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(195, 0%, 80%), hsl(195, 0%, 67%), hsl(195, 0%, 60%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
+
+            img {
+
+                width: 33px; 
+            }
+        }
+
+        .whatsapp {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(120, 100%, 80%), hsl(120, 100%, 67%), hsl(120, 100%, 60%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 71%);
+        }
+
+        .youtube {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
+
+            img {
+
+                width: 33px; 
+            }
+        }
+
+        .instagram {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
+
+            img {
+
+                width: 30px;
+                filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
+            }
+        }
+
+        .facebook {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%);
+
+            img { 
+
+                width: 30px;
+            }
+        }
     }
 
+    /*
     @media (max-height: $screen_small_widthLimit) {
 
         max-width: none !important; 
     }
+    */
 
     .copyright {
+
+        margin-top: 0; // Retirar para o rodapé de estilo anterior. 
         font-size: $font_smaller;
         text-indent: 0;
         text-align: center;
 
-        /*padding: 6px 0;
-        margin: 14px 0 0;
-        color: $color_text_menu;
-        background-color: black;*/
+        // padding: 6px 0;
+        // margin: 14px 0 0;
+        // color: $color_text_menu;
+        // background-color: black;
     }
 }
 
@@ -3115,10 +3221,10 @@ TODO:        >> Dropdown
     // white;
 
     linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
-    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 88%, 0) 71%),
     linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
     white;
-      
+
     overflow-y: auto;
 
     > li {
@@ -3164,7 +3270,7 @@ TODO:        >> Dropdown
     }
 
     li span {
-        padding: 0 12px 0 12px;
+        padding: 0 11px 0 11px;
     }
 
     > li:nth-of-type(2) > a > img[src] {
@@ -3895,8 +4001,9 @@ TODO:    > Lightbox
     font-size: $font_size; 
     font-weight: bold;
     //text-shadow: 1px 1px 1px $color_shadow_text;
-    filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%));
+    // filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%));
     filter: drop-shadow(0px 0px 2px hsl(193, 100%, 30%));
+    line-height: 1.5; 
 
     .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
