@@ -1953,12 +1953,11 @@ TODO:        >> Button
           
         $offset: 2px;
         $left:  $offset;
-        $height: 50%; 
 
-        top: 1px; 
+        top: 0px;
         left:  $left;
         width: calc(100% - 2 * #{$left});
-        height: $height; 
+        height: 53.2%;
     }
 
     .piece_text {

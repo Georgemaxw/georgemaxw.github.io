@@ -1895,10 +1895,10 @@ TODO:        >> Button
   position: absolute;
   z-index: 1;
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
-  top: 1px;
+  top: 0px;
   left: 2px;
   width: calc(100% - 2 * 2px);
-  height: 50%;
+  height: 53.2%;
 }
 
 .switch.button_full .piece_text, .switch.button_text .piece_text, .switch.button_icon .piece_text, button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text {
