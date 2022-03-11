@@ -2520,6 +2520,11 @@ a.button_full.red, a.button_text.red, a.button_icon.red {
     linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(0, 100%, 67%));
+    }
 }
 
 button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow, 
@@ -2545,6 +2550,11 @@ a.button_full.green, a.button_text.green, a.button_icon.green {
     linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(120, 100%, 56%));
+    }
 }
 
 button.button_full.black, button.button_text.black, button.button_icon.black, 
@@ -2555,6 +2565,11 @@ a.button_full.black, a.button_text.black, a.button_icon.black {
     linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(195, 0%, 60%));
+    }
 }
 
 /*  
