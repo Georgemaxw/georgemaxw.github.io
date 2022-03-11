@@ -489,6 +489,11 @@ abbr[title] {
     cursor: pointer;
 }
 
+address {
+
+    line-height: 1.5;
+}
+
 dfn, var, address, cite {
     font-style: normal;
 }
@@ -1314,7 +1319,7 @@ TODO:    > Footer
             li:nth-last-of-type(1) { margin-right: 0; } 
         }
 
-        button {
+        a {
 
             width: 58px;
             height: 58px;
@@ -1924,7 +1929,9 @@ TODO:    > Class
 TODO:    > Switches & Buttons
 ────────────────────────────────────────────────────── */
 
-.switch, button {
+.switch, 
+button, 
+a.button_full, a.button_text, a.button_icon, a.image {
 
     align-items: center;
 
@@ -1941,7 +1948,7 @@ TODO:    > Switches & Buttons
     }
 }
 
-.switch.disabled, button.disabled {
+.switch.disabled, button.disabled, a.disabled {
 
     opacity: 0.5;
     cursor: default;
@@ -1957,7 +1964,9 @@ button {
 TODO:        >> Button
 ──────────────────────────── */
 
-.switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon {
+.switch.button_full, .switch.button_text, .switch.button_icon, 
+button.button_full, button.button_text, button.button_icon, 
+a.button_full, a.button_text, a.button_icon {
 
     display: inline-flex;
     justify-content: center;
@@ -2030,7 +2039,8 @@ TODO:        >> Button
     }
 }
 
-button.button_full, button.button_text, button.button_icon {
+button.button_full, button.button_text, button.button_icon, 
+a.button_full, a.button_text, a.button_icon {
 
     background: 
     linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
@@ -2059,7 +2069,9 @@ button.button_full, button.button_text, button.button_icon {
 
 @media not all and (pointer: coarse) {
 
-    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
+    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
+    a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover {
+
     //button.button_full, button.button_text, button.button_icon {
 
         background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
@@ -2092,7 +2104,7 @@ button.estilo_3 {
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
 
-.switch.button_full, button.button_full {
+.switch.button_full, button.button_full, a.button_full {
 
     padding: 11px; 
     padding-right: 12px;
@@ -2104,7 +2116,7 @@ button.estilo_3 {
     }
 }
  
-.switch.button_text, button.button_text {
+.switch.button_text, button.button_text, a.button_text {
 
     padding: 10px; 
     padding-right: 11px;
@@ -2120,7 +2132,7 @@ button.estilo_3 {
     }
 }
       
-.switch.button_icon, button.button_icon {
+.switch.button_icon, button.button_icon, a.button_icon {
 
     // justify-content: center;
     padding: 9px; // Propriedade aplicada aprimorada via JS.
@@ -2145,7 +2157,7 @@ button.estilo_3 {
     }
 }
       
-.switch.button_icon:not(.disabled), button.button_icon:not(.disabled) {
+.switch.button_icon:not(.disabled), button.button_icon:not(.disabled), a.button_icon:not(.disabled) {
 
     .piece_text {
 
@@ -2160,12 +2172,13 @@ button.estilo_3 {
     }
 }
 
-button.button_full.disabled, button.button_text.disabled {
+button.button_full.disabled, button.button_text.disabled, 
+a.button_full.disabled, a.button_text.disabled {
 
     color: adjust-color($color_text, $alpha: -0.5);
 }
 
-.switch.button_icon.disabled, button.button_icon.disabled {
+.switch.button_icon.disabled, button.button_icon.disabled, a.button_icon.disabled {
     
     .piece_text {
 
@@ -2175,7 +2188,9 @@ button.button_full.disabled, button.button_text.disabled {
 
 // ─────────── Pill ───────────
 
-.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, button.button_full.pill, button.button_text.pill, button.button_icon.pill {
+.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, 
+button.button_full.pill, button.button_text.pill, button.button_icon.pill, 
+a.button_full.pill, a.button_text.pill, a.button_icon.pill {
 
     border-radius: 1000px; 
     // background: $bg_switch_type_button_pill_and_rounded_off;
@@ -2193,7 +2208,7 @@ button.button_full.disabled, button.button_text.disabled {
     box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 }
 
-.switch.button_full.pill, button.button_full.pill {
+.switch.button_full.pill, button.button_full.pill, a.button_full.pill {
 
     padding-left: 18px; // Propriedade aplicada aprimorada via JS.
     padding-right: 20px; // Propriedade aplicada aprimorada via JS.
@@ -2207,7 +2222,7 @@ button.button_full.disabled, button.button_text.disabled {
     }  
 }
 
-.switch.button_text.pill, button.button_text.pill {
+.switch.button_text.pill, button.button_text.pill, a.button_text.pill {
 
     padding-left: 13px; // Propriedade aplicada aprimorada via JS.
     padding-right: 13px; // Propriedade aplicada aprimorada via JS.
@@ -2221,7 +2236,7 @@ button.button_full.disabled, button.button_text.disabled {
     }
 }
 
-.switch.button_icon.pill, button.button_icon.pill {
+.switch.button_icon.pill, button.button_icon.pill, a.button_icon.pill {
 
     padding: 12px; // Propriedade aplicada aprimorada via JS.
 
@@ -2237,7 +2252,9 @@ button.button_full.disabled, button.button_text.disabled {
 
 // ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
 
-.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, 
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
 
     // justify-content: center;
     border-radius: 1000px; 
@@ -2264,7 +2281,8 @@ button.button_full.disabled, button.button_text.disabled {
     box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 }
 
-button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded,
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
 
     .button_shine_top {
 
@@ -2272,12 +2290,12 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
     }
 }
 
-.switch.button_full.rounded, button.button_full.rounded {
+.switch.button_full.rounded, button.button_full.rounded, a.button_full.rounded {
 
     padding: 18px;  
 }
 
-.switch.button_text.rounded, button.button_text.rounded {
+.switch.button_text.rounded, button.button_text.rounded, a.button_text.rounded {
 
     padding: 14px; 
 
@@ -2287,7 +2305,7 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
     }
 }
 
-.switch.button_icon.rounded, button.button_icon.rounded {
+.switch.button_icon.rounded, button.button_icon.rounded, a.button_icon.rounded {
 
     padding: 12px; // Propriedade aplicada aprimorada via JS.
 }
@@ -2302,7 +2320,7 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
 TODO:            >>> Text Below
 ──────────────────────────── */
 
-.switch.button_full.text_below, button.button_full.text_below { 
+.switch.button_full.text_below, button.button_full.text_below, a.button_full.text_below { 
 
     // justify-content: center;
     flex-direction: column; // Necessário caso o switch não tenha 'piece_label'.
@@ -2319,17 +2337,21 @@ TODO:            >>> Text Below
     }
 }
 
-.switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded) {
+.switch.button_full.text_below:not(.pill, .rounded), 
+button.button_full.text_below:not(.pill, .rounded), 
+a.button_full.text_below:not(.pill, .rounded) {
 
     border-radius: 24px; // Propriedade aplicada aprimorada via JS.
 }
 
-.switch.button_full.text_below:not(.pill, .rounded) .button_shine_top, button.button_full.text_below:not(.pill, .rounded) .button_shine_top {
+.switch.button_full.text_below:not(.pill, .rounded) .button_shine_top, 
+button.button_full.text_below:not(.pill, .rounded) .button_shine_top, 
+a.button_full.text_below:not(.pill, .rounded) .button_shine_top {
 
     border-radius: 22px; // Propriedade aplicada aprimorada via JS. // Obs.: Esta propriedade buga se for colocada na regra com o seletor ".switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded)".
 }
 
-.switch.button_full.text_below.pill, button.button_full.text_below.pill {
+.switch.button_full.text_below.pill, button.button_full.text_below.pill, a.button_full.text_below.pill {
 
     padding-left: 18px; // Propriedade aplicada aprimorada via JS.
     padding-right: 18px; // Propriedade aplicada aprimorada via JS.
@@ -2355,7 +2377,7 @@ TODO:            >>> Text Below
     }
 }
 
-.switch.button_full.text_below.rounded, button.button_full.text_below.rounded {
+.switch.button_full.text_below.rounded, button.button_full.text_below.rounded, a.button_full.text_below.rounded {
 
     padding-bottom: 10px; // Propriedade aplicada aprimorada via JS.
 
@@ -2371,7 +2393,8 @@ TODO:            >>> Text Below
     }
 }
 
-button.button_full.text_below {  
+button.button_full.text_below,
+a.button_full.text_below {  
 
     flex-direction: column; 
 }
@@ -2436,7 +2459,7 @@ TODO:            >>> Floating Labels
 
 @media (pointer: fine) {
 
-    .switch.button_icon, button.button_icon {
+    .switch.button_icon, button.button_icon, a.button_icon {
 
         .piece_text {
 
@@ -2462,7 +2485,8 @@ TODO:            >>> Floating Labels
     }
 
     /*  
-    button.button_icon .piece_text {
+    button.button_icon .piece_text,
+    a.button_icon .piece_text {
 
         $color_border_element_button_icon_piece_text_floating_off: hsl(195, 100%, 50%); 
         $color_text_element_button_icon_piece_text_floating_off: white; 
@@ -2480,7 +2504,7 @@ TODO:            >>> Floating Labels
         justify-content: center; 
     }
 
-    .switch.button_icon.on, button.button_icon { 
+    .switch.button_icon.on, button.button_icon, a.button_icon { 
     
         .piece_text { 
 
@@ -2492,7 +2516,7 @@ TODO:            >>> Floating Labels
         } 
     }
 
-    .switch.button_icon:hover, button.button_icon:hover {
+    .switch.button_icon:hover, button.button_icon:hover, a.button_icon:hover {
     
         .piece_text {
 
@@ -2506,7 +2530,7 @@ TODO:            >>> Floating Labels
 TODO:        >> Image
 ──────────────────────────── */
       
-.switch.image, button.image {
+.switch.image, button.image, a.image {
 
     display: inline-flex;
 
@@ -2552,7 +2576,7 @@ TODO:        >> Image
     display: none;
 }
       
-.switch.image:not(.disabled), button.image:not(.disabled) {
+.switch.image:not(.disabled), button.image:not(.disabled), a.image:not(.disabled) {
 
     .piece_text {
 
@@ -2562,7 +2586,7 @@ TODO:        >> Image
 
 // ─────────── pill ───────────
 
-.switch.image.pill, button.image.pill {
+.switch.image.pill, button.image.pill, a.image.pill {
 
     border-radius: 1000px !important; // Declaração necessária apenas para 'button:focus'.
     
@@ -2593,7 +2617,7 @@ TODO:            >>> Floating Labels
 
 @media (pointer: fine) {  
 
-    .switch.image, button.image {
+    .switch.image, button.image, a.image {
         
         justify-content: center;
         position: relative;
@@ -2622,7 +2646,7 @@ TODO:            >>> Floating Labels
         box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_off; 
     }
 
-    button.image .piece_text {
+    button.image .piece_text, a.image .piece_text {
 
         color: $color_text_button_type_image_piece_text_floating;
         border-color: $color_border_button_type_image_piece_text_floating; 
@@ -2641,7 +2665,7 @@ TODO:            >>> Floating Labels
     }
 
     /*
-    button.image {
+    button.image, a.image {
 
         justify-content: center;
         position: relative;
@@ -2662,7 +2686,7 @@ TODO:            >>> Floating Labels
         box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_on;  
     }
 
-    .switch.image:hover, button.image:hover {
+    .switch.image:hover, button.image:hover, a.image:hover { 
         
         .piece_text {
 
@@ -4161,8 +4185,9 @@ figure.center {
     max-width: none;
 }
 
-.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, 
-.switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
+.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, .switch.key_text.center, 
+button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center, 
+a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center {
     
     display: flex !important;
 }

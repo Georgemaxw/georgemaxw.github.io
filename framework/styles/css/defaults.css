@@ -486,6 +486,10 @@ abbr[title] {
   cursor: pointer;
 }
 
+address {
+  line-height: 1.5;
+}
+
 dfn, var, address, cite {
   font-style: normal;
 }
@@ -1236,7 +1240,7 @@ TODO:    > Footer
   }
 }
 
-.footer-content .footer-icons button {
+.footer-content .footer-icons a {
   width: 58px;
   height: 58px;
   color: #000000;
@@ -1879,18 +1883,22 @@ TODO:    > Class
 ──────────────────────────────────────────────────────
 TODO:    > Switches & Buttons
 ────────────────────────────────────────────────────── */
-.switch, button {
+.switch,
+button,
+a.button_full, a.button_text, a.button_icon, a.image {
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
   cursor: pointer;
 }
 
-.switch .piece_text, button .piece_text {
+.switch .piece_text,
+button .piece_text,
+a.button_full .piece_text, a.button_text .piece_text, a.button_icon .piece_text, a.image .piece_text {
   text-align: justify;
 }
 
-.switch.disabled, button.disabled {
+.switch.disabled, button.disabled, a.disabled {
   opacity: 0.5;
   cursor: default;
 }
@@ -1903,7 +1911,9 @@ button {
 ────────────────────────────
 TODO:        >> Button
 ──────────────────────────── */
-.switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon {
+.switch.button_full, .switch.button_text, .switch.button_icon,
+button.button_full, button.button_text, button.button_icon,
+a.button_full, a.button_text, a.button_icon {
   display: inline-flex;
   justify-content: center;
   position: relative;
@@ -1917,7 +1927,9 @@ TODO:        >> Button
   transition: 0s;
 }
 
-.switch.button_full .button_shine_top, .switch.button_text .button_shine_top, .switch.button_icon .button_shine_top, button.button_full .button_shine_top, button.button_text .button_shine_top, button.button_icon .button_shine_top {
+.switch.button_full .button_shine_top, .switch.button_text .button_shine_top, .switch.button_icon .button_shine_top,
+button.button_full .button_shine_top, button.button_text .button_shine_top, button.button_icon .button_shine_top,
+a.button_full .button_shine_top, a.button_text .button_shine_top, a.button_icon .button_shine_top {
   content: '';
   position: absolute;
   z-index: 1;
@@ -1928,11 +1940,15 @@ TODO:        >> Button
   height: 53.2%;
 }
 
-.switch.button_full .piece_text, .switch.button_text .piece_text, .switch.button_icon .piece_text, button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text {
+.switch.button_full .piece_text, .switch.button_text .piece_text, .switch.button_icon .piece_text,
+button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text,
+a.button_full .piece_text, a.button_text .piece_text, a.button_icon .piece_text {
   font-weight: bold;
 }
 
-.switch.button_full .piece_icon, .switch.button_text .piece_icon, .switch.button_icon .piece_icon, button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon {
+.switch.button_full .piece_icon, .switch.button_text .piece_icon, .switch.button_icon .piece_icon,
+button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon,
+a.button_full .piece_icon, a.button_text .piece_icon, a.button_icon .piece_icon {
   width: 32px;
   border-radius: calc(1/4 * 32px);
   margin-right: 12px;
@@ -1960,7 +1976,8 @@ TODO:        >> Button
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.45));
 }
 
-button.button_full, button.button_text, button.button_icon {
+button.button_full, button.button_text, button.button_icon,
+a.button_full, a.button_text, a.button_icon {
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
   box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
   /* 
@@ -1971,17 +1988,20 @@ button.button_full, button.button_text, button.button_icon {
     */
 }
 
-button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text {
+button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text,
+a.button_full .piece_text, a.button_text .piece_text, a.button_icon .piece_text {
   color: white;
   filter: drop-shadow(0px 0px 2px #00a8d6);
 }
 
-button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon {
+button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon,
+a.button_full .piece_icon, a.button_text .piece_icon, a.button_icon .piece_icon {
   filter: drop-shadow(0px 0px 1px rgba(87, 213, 255, 0.7));
 }
 
 @media not all and (pointer: coarse) {
-  button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
+  button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
+  a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover {
     background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
     box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
   }
@@ -2001,50 +2021,50 @@ button.estilo_3 {
   box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5) !important;
 }
 
-.switch.button_full, button.button_full {
+.switch.button_full, button.button_full, a.button_full {
   padding: 11px;
   padding-right: 12px;
   border-radius: 14px;
 }
 
-.switch.button_full .button_shine_top, button.button_full .button_shine_top {
+.switch.button_full .button_shine_top, button.button_full .button_shine_top, a.button_full .button_shine_top {
   border-radius: 12px;
 }
 
-.switch.button_text, button.button_text {
+.switch.button_text, button.button_text, a.button_text {
   padding: 10px;
   padding-right: 11px;
   border-radius: 11px;
 }
 
-.switch.button_text .button_shine_top, button.button_text .button_shine_top {
+.switch.button_text .button_shine_top, button.button_text .button_shine_top, a.button_text .button_shine_top {
   border-radius: 9px;
 }
 
-.switch.button_text .piece_icon, button.button_text .piece_icon {
+.switch.button_text .piece_icon, button.button_text .piece_icon, a.button_text .piece_icon {
   display: none;
 }
 
-.switch.button_icon, button.button_icon {
+.switch.button_icon, button.button_icon, a.button_icon {
   padding: 9px;
   border-radius: 13px;
 }
 
-.switch.button_icon .button_shine_top, button.button_icon .button_shine_top {
+.switch.button_icon .button_shine_top, button.button_icon .button_shine_top, a.button_icon .button_shine_top {
   border-radius: 10px;
 }
 
-.switch.button_icon .piece_text, button.button_icon .piece_text {
+.switch.button_icon .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
   padding-left: 9px;
   padding-right: 9px;
   text-align: center;
 }
 
-.switch.button_icon .piece_icon, button.button_icon .piece_icon {
+.switch.button_icon .piece_icon, button.button_icon .piece_icon, a.button_icon .piece_icon {
   margin: 0;
 }
 
-.switch.button_icon:not(.disabled) .piece_text, button.button_icon:not(.disabled) .piece_text {
+.switch.button_icon:not(.disabled) .piece_text, button.button_icon:not(.disabled) .piece_text, a.button_icon:not(.disabled) .piece_text {
   top: -50px;
 }
 
@@ -2052,19 +2072,24 @@ button.estilo_3 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-button.button_full.disabled, button.button_text.disabled {
+button.button_full.disabled, button.button_text.disabled,
+a.button_full.disabled, a.button_text.disabled {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.switch.button_icon.disabled .piece_text, button.button_icon.disabled .piece_text {
+.switch.button_icon.disabled .piece_text, button.button_icon.disabled .piece_text, a.button_icon.disabled .piece_text {
   z-index: 1;
 }
 
-.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, button.button_full.pill, button.button_text.pill, button.button_icon.pill {
+.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill,
+button.button_full.pill, button.button_text.pill, button.button_icon.pill,
+a.button_full.pill, a.button_text.pill, a.button_icon.pill {
   border-radius: 1000px;
 }
 
-.switch.button_full.pill .button_shine_top, .switch.button_text.pill .button_shine_top, .switch.button_icon.pill .button_shine_top, button.button_full.pill .button_shine_top, button.button_text.pill .button_shine_top, button.button_icon.pill .button_shine_top {
+.switch.button_full.pill .button_shine_top, .switch.button_text.pill .button_shine_top, .switch.button_icon.pill .button_shine_top,
+button.button_full.pill .button_shine_top, button.button_text.pill .button_shine_top, button.button_icon.pill .button_shine_top,
+a.button_full.pill .button_shine_top, a.button_text.pill .button_shine_top, a.button_icon.pill .button_shine_top {
   top: 2px;
   height: 49.5%;
   border-radius: 1000px;
@@ -2074,40 +2099,44 @@ button.button_full.disabled, button.button_text.disabled {
   box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.33);
 }
 
-.switch.button_full.pill, button.button_full.pill {
+.switch.button_full.pill, button.button_full.pill, a.button_full.pill {
   padding-left: 18px;
   padding-right: 20px;
 }
 
-.switch.button_full.pill .button_shine_top, button.button_full.pill .button_shine_top {
+.switch.button_full.pill .button_shine_top, button.button_full.pill .button_shine_top, a.button_full.pill .button_shine_top {
   left: 12px;
   width: calc(100% - 2 * 12px);
 }
 
-.switch.button_text.pill, button.button_text.pill {
+.switch.button_text.pill, button.button_text.pill, a.button_text.pill {
   padding-left: 13px;
   padding-right: 13px;
 }
 
-.switch.button_text.pill .button_shine_top, button.button_text.pill .button_shine_top {
+.switch.button_text.pill .button_shine_top, button.button_text.pill .button_shine_top, a.button_text.pill .button_shine_top {
   left: 9px;
   width: calc(100% - 2 * 9px);
 }
 
-.switch.button_icon.pill, button.button_icon.pill {
+.switch.button_icon.pill, button.button_icon.pill, a.button_icon.pill {
   padding: 12px;
 }
 
-.switch.button_icon.pill .button_shine_top, button.button_icon.pill .button_shine_top {
+.switch.button_icon.pill .button_shine_top, button.button_icon.pill .button_shine_top, a.button_icon.pill .button_shine_top {
   left: 12px;
   width: calc(100% - 2 * 12px);
 }
 
-.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded,
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded,
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
   border-radius: 1000px;
 }
 
-.switch.button_full.rounded .button_shine_top, .switch.button_text.rounded .button_shine_top, .switch.button_icon.rounded .button_shine_top, button.button_full.rounded .button_shine_top, button.button_text.rounded .button_shine_top, button.button_icon.rounded .button_shine_top {
+.switch.button_full.rounded .button_shine_top, .switch.button_text.rounded .button_shine_top, .switch.button_icon.rounded .button_shine_top,
+button.button_full.rounded .button_shine_top, button.button_text.rounded .button_shine_top, button.button_icon.rounded .button_shine_top,
+a.button_full.rounded .button_shine_top, a.button_text.rounded .button_shine_top, a.button_icon.rounded .button_shine_top {
   border-radius: 1000px;
   background: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center/100% 100% no-repeat;
   height: calc(100% - 2 * 3px);
@@ -2119,23 +2148,24 @@ button.button_full.disabled, button.button_text.disabled {
   box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.33);
 }
 
-button.button_full.rounded .button_shine_top, button.button_text.rounded .button_shine_top, button.button_icon.rounded .button_shine_top {
+button.button_full.rounded .button_shine_top, button.button_text.rounded .button_shine_top, button.button_icon.rounded .button_shine_top,
+a.button_full.rounded .button_shine_top, a.button_text.rounded .button_shine_top, a.button_icon.rounded .button_shine_top {
   opacity: 0.96;
 }
 
-.switch.button_full.rounded, button.button_full.rounded {
+.switch.button_full.rounded, button.button_full.rounded, a.button_full.rounded {
   padding: 18px;
 }
 
-.switch.button_text.rounded, button.button_text.rounded {
+.switch.button_text.rounded, button.button_text.rounded, a.button_text.rounded {
   padding: 14px;
 }
 
-.switch.button_text.rounded .piece_text, button.button_text.rounded .piece_text {
+.switch.button_text.rounded .piece_text, button.button_text.rounded .piece_text, a.button_text.rounded .piece_text {
   text-align: center;
 }
 
-.switch.button_icon.rounded, button.button_icon.rounded {
+.switch.button_icon.rounded, button.button_icon.rounded, a.button_icon.rounded {
   padding: 12px;
 }
 
@@ -2147,61 +2177,66 @@ button.button_full.rounded .button_shine_top, button.button_text.rounded .button
 ────────────────────────────
 TODO:            >>> Text Below
 ──────────────────────────── */
-.switch.button_full.text_below, button.button_full.text_below {
+.switch.button_full.text_below, button.button_full.text_below, a.button_full.text_below {
   flex-direction: column;
   padding-bottom: 10px;
 }
 
-.switch.button_full.text_below .piece_icon, button.button_full.text_below .piece_icon {
+.switch.button_full.text_below .piece_icon, button.button_full.text_below .piece_icon, a.button_full.text_below .piece_icon {
   margin: 10px;
 }
 
-.switch.button_full.text_below .piece_text, button.button_full.text_below .piece_text {
+.switch.button_full.text_below .piece_text, button.button_full.text_below .piece_text, a.button_full.text_below .piece_text {
   text-align: center;
 }
 
-.switch.button_full.text_below:not(.pill):not(.rounded), button.button_full.text_below:not(.pill):not(.rounded) {
+.switch.button_full.text_below:not(.pill):not(.rounded),
+button.button_full.text_below:not(.pill):not(.rounded),
+a.button_full.text_below:not(.pill):not(.rounded) {
   border-radius: 24px;
 }
 
-.switch.button_full.text_below:not(.pill):not(.rounded) .button_shine_top, button.button_full.text_below:not(.pill):not(.rounded) .button_shine_top {
+.switch.button_full.text_below:not(.pill):not(.rounded) .button_shine_top,
+button.button_full.text_below:not(.pill):not(.rounded) .button_shine_top,
+a.button_full.text_below:not(.pill):not(.rounded) .button_shine_top {
   border-radius: 22px;
 }
 
-.switch.button_full.text_below.pill, button.button_full.text_below.pill {
+.switch.button_full.text_below.pill, button.button_full.text_below.pill, a.button_full.text_below.pill {
   padding-left: 18px;
   padding-right: 18px;
   padding-bottom: 11px;
 }
 
-.switch.button_full.text_below.pill .button_shine_top, button.button_full.text_below.pill .button_shine_top {
+.switch.button_full.text_below.pill .button_shine_top, button.button_full.text_below.pill .button_shine_top, a.button_full.text_below.pill .button_shine_top {
   left: 18px;
   width: calc(100% - 2 * 18px);
 }
 
-.switch.button_full.text_below.pill .piece_icon, button.button_full.text_below.pill .piece_icon {
+.switch.button_full.text_below.pill .piece_icon, button.button_full.text_below.pill .piece_icon, a.button_full.text_below.pill .piece_icon {
   margin: 10px 12px;
 }
 
-.switch.button_full.text_below.pill .piece_text, button.button_full.text_below.pill .piece_text {
+.switch.button_full.text_below.pill .piece_text, button.button_full.text_below.pill .piece_text, a.button_full.text_below.pill .piece_text {
   margin-left: 12px;
   margin-right: 12px;
 }
 
-.switch.button_full.text_below.rounded, button.button_full.text_below.rounded {
+.switch.button_full.text_below.rounded, button.button_full.text_below.rounded, a.button_full.text_below.rounded {
   padding-bottom: 10px;
 }
 
-.switch.button_full.text_below.rounded .piece_icon, button.button_full.text_below.rounded .piece_icon {
+.switch.button_full.text_below.rounded .piece_icon, button.button_full.text_below.rounded .piece_icon, a.button_full.text_below.rounded .piece_icon {
   margin: 20px 10px 10px 10px;
 }
 
-.switch.button_full.text_below.rounded .piece_text, button.button_full.text_below.rounded .piece_text {
+.switch.button_full.text_below.rounded .piece_text, button.button_full.text_below.rounded .piece_text, a.button_full.text_below.rounded .piece_text {
   margin-left: 14px;
   margin-right: 14px;
 }
 
-button.button_full.text_below {
+button.button_full.text_below,
+a.button_full.text_below {
   flex-direction: column;
 }
 
@@ -2237,7 +2272,7 @@ TODO:            >>> Option ON
 TODO:            >>> Floating Labels
 ──────────────────────────── */
 @media (pointer: fine) {
-  .switch.button_icon .piece_text, button.button_icon .piece_text {
+  .switch.button_icon .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
     position: absolute;
     z-index: 1;
     padding: 6px 9px;
@@ -2253,7 +2288,8 @@ TODO:            >>> Floating Labels
     background: linear-gradient(to bottom, white, #e8e8e8);
   }
   /*  
-    button.button_icon .piece_text {
+    button.button_icon .piece_text,
+    a.button_icon .piece_text {
 
         $color_border_element_button_icon_piece_text_floating_off: hsl(195, 100%, 50%); 
         $color_text_element_button_icon_piece_text_floating_off: white; 
@@ -2268,14 +2304,14 @@ TODO:            >>> Floating Labels
   .switch.button_icon .piece_label {
     justify-content: center;
   }
-  .switch.button_icon.on .piece_text, button.button_icon .piece_text {
+  .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
     color: #33d3ff;
     border-color: #5cdcff;
     background: linear-gradient(to bottom, white, #d6f6ff);
     filter: initial;
     box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
   }
-  .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text {
+  .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text, a.button_icon:hover .piece_text {
     display: block !important;
   }
 }
@@ -2284,7 +2320,7 @@ TODO:            >>> Floating Labels
 ────────────────────────────
 TODO:        >> Image
 ──────────────────────────── */
-.switch.image, button.image {
+.switch.image, button.image, a.image {
   display: inline-flex;
   /* width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
@@ -2294,12 +2330,12 @@ TODO:        >> Image
   background: 0;
 }
 
-.switch.image .piece_text, button.image .piece_text {
+.switch.image .piece_text, button.image .piece_text, a.image .piece_text {
   padding-left: 9px;
   padding-right: 9px;
 }
 
-.switch.image .piece_icon, button.image .piece_icon {
+.switch.image .piece_icon, button.image .piece_icon, a.image .piece_icon {
   width: inherit;
   height: inherit;
   margin: 0;
@@ -2316,15 +2352,15 @@ TODO:        >> Image
   display: none;
 }
 
-.switch.image:not(.disabled) .piece_text, button.image:not(.disabled) .piece_text {
+.switch.image:not(.disabled) .piece_text, button.image:not(.disabled) .piece_text, a.image:not(.disabled) .piece_text {
   top: -49px;
 }
 
-.switch.image.pill, button.image.pill {
+.switch.image.pill, button.image.pill, a.image.pill {
   border-radius: 1000px !important;
 }
 
-.switch.image.pill .piece_icon, button.image.pill .piece_icon {
+.switch.image.pill .piece_icon, button.image.pill .piece_icon, a.image.pill .piece_icon {
   border-radius: 1000px !important;
 }
 
@@ -2341,11 +2377,11 @@ TODO:            >>> Option ON
 TODO:            >>> Floating Labels
 ──────────────────────────── */
 @media (pointer: fine) {
-  .switch.image, button.image {
+  .switch.image, button.image, a.image {
     justify-content: center;
     position: relative;
   }
-  .switch.image .piece_text, button.image .piece_text {
+  .switch.image .piece_text, button.image .piece_text, a.image .piece_text {
     position: absolute;
     z-index: 1;
     padding-top: 6px;
@@ -2361,7 +2397,7 @@ TODO:            >>> Floating Labels
     background: linear-gradient(to bottom, white, #e8e8e8);
     box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
   }
-  button.image .piece_text {
+  button.image .piece_text, a.image .piece_text {
     color: #33d3ff;
     border-color: #5cdcff;
     background: linear-gradient(to bottom, white, #d6f6ff);
@@ -2374,7 +2410,7 @@ TODO:            >>> Floating Labels
     position: relative;
   }
   /*
-    button.image {
+    button.image, a.image {
 
         justify-content: center;
         position: relative;
@@ -2390,7 +2426,7 @@ TODO:            >>> Floating Labels
     filter: initial;
     box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
   }
-  .switch.image:hover .piece_text, button.image:hover .piece_text {
+  .switch.image:hover .piece_text, button.image:hover .piece_text, a.image:hover .piece_text {
     display: block !important;
   }
 }
@@ -4074,8 +4110,9 @@ figure.center {
   max-width: none;
 }
 
-.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center,
-.switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
+.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, .switch.key_text.center,
+button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center,
+a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center {
   display: flex !important;
 }
 
