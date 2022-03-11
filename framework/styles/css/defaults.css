@@ -1924,7 +1924,7 @@ a.button_full .piece_icon, a.button_text .piece_icon, a.button_icon .piece_icon 
 }
 
 .switch.button_full, .switch.button_text, .switch.button_icon {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #f0f0f0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #f0f0f0;
   box-shadow: inset 0px 0px 8px 1px rgba(0, 0, 0, 0.33);
 }
 
@@ -1947,13 +1947,12 @@ a.button_full .piece_icon, a.button_text .piece_icon, a.button_icon .piece_icon 
 
 button.button_full, button.button_text, button.button_icon,
 a.button_full, a.button_text, a.button_icon {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
   /* 
-    .button_shine_top {
+    background: 
+    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-        opacity: 1;
-    } 
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.
     */
 }
 
@@ -1963,15 +1962,10 @@ a.button_full .piece_text, a.button_text .piece_text, a.button_icon .piece_text 
   filter: drop-shadow(0px 0px 2px #00a8d6);
 }
 
-button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon,
-a.button_full .piece_icon, a.button_text .piece_icon, a.button_icon .piece_icon {
-  filter: drop-shadow(0px 0px 1px rgba(87, 213, 255, 0.7));
-}
-
 @media not all and (pointer: coarse) {
   button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
   a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover {
-    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #a8ecff;
     box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
   }
 }
@@ -2228,7 +2222,7 @@ a.button_full.text_below {
 TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #a8ecff;
   box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
 }
 
@@ -2254,54 +2248,6 @@ TODO:            >>> Option ON
 */
 .switch.button_full.on.disabled .piece_text, .switch.button_text.on.disabled .piece_text, .switch.button_icon.on.disabled .piece_text {
   filter: drop-shadow(0px 0px 2px #0088ad);
-}
-
-/*  
-────────────────────────────
-TODO:            >>> Colors
-──────────────────────────── 
-
-button.button_full.colorrr, button.button_text.colorrr, button.button_icon.colorrr, 
-a.button_full.colorrr, a.button_text.colorrr, a.button_icon.colorrr
-*/
-button.button_full.black, button.button_text.black, button.button_icon.black,
-a.button_full.black, a.button_text.black, a.button_icon.black {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #b8b8b8, #999999, #858585);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #c4c4c4;
-}
-
-button.button_full.green, button.button_text.green, button.button_icon.green,
-a.button_full.green, a.button_text.green, a.button_icon.green {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #5cff5c, #1fff1f, #00f500);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #4dff4d;
-}
-
-button.button_full.green img, button.button_text.green img, button.button_icon.green img,
-a.button_full.green img, a.button_text.green img, a.button_icon.green img {
-  padding-top: 1px;
-}
-
-button.button_full.red, button.button_text.red, button.button_icon.red,
-a.button_full.red, a.button_text.red, a.button_icon.red {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #ff9999, #ff5757, #ff3333);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #ffb8b8;
-}
-
-button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow,
-a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, yellow, #f0f000, #cccc00);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #e0e000;
-}
-
-button.button_full.yellow img, button.button_text.yellow img, button.button_icon.yellow img,
-a.button_full.yellow img, a.button_text.yellow img, a.button_icon.yellow img {
-  filter: drop-shadow(0px 0px 1px #b8b800);
-}
-
-button.button_full.blue, button.button_text.blue, button.button_icon.blue,
-a.button_full.blue, a.button_text.blue, a.button_icon.blue {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
 /*  
@@ -2351,6 +2297,54 @@ TODO:            >>> Floating Labels
   .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text, a.button_icon:hover .piece_text {
     display: block !important;
   }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── */
+button.button_full, button.button_text, button.button_icon,
+a.button_full, a.button_text, a.button_icon,
+button.button_full.blue, button.button_text.blue, button.button_icon.blue,
+a.button_full.blue, a.button_text.blue, a.button_icon.blue {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #47d1ff;
+  box-shadow: 0px 0px 0px 1px #7adeff, inset 0px 0px 9px 6px white;
+}
+
+button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon,
+a.button_full .piece_icon, a.button_text .piece_icon, a.button_icon .piece_icon,
+button.button_full.blue .piece_icon, button.button_text.blue .piece_icon, button.button_icon.blue .piece_icon,
+a.button_full.blue .piece_icon, a.button_text.blue .piece_icon, a.button_icon.blue .piece_icon {
+  filter: drop-shadow(0px 0px 1px #57d5ff);
+}
+
+button.button_full.red, button.button_text.red, button.button_icon.red,
+a.button_full.red, a.button_text.red, a.button_icon.red {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), linear-gradient(to bottom, #ff9999, #ff5757, #ff3333);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #ffb8b8;
+}
+
+button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow,
+a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), linear-gradient(to bottom, yellow, #f0f000, #cccc00);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #e0e000;
+}
+
+button.button_full.yellow .piece_icon, button.button_text.yellow .piece_icon, button.button_icon.yellow .piece_icon,
+a.button_full.yellow .piece_icon, a.button_text.yellow .piece_icon, a.button_icon.yellow .piece_icon {
+  filter: drop-shadow(0px 0px 1px #b8b800);
+}
+
+button.button_full.green, button.button_text.green, button.button_icon.green,
+a.button_full.green, a.button_text.green, a.button_icon.green {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), linear-gradient(to bottom, #5cff5c, #1fff1f, #00f500);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #4dff4d;
+}
+
+button.button_full.black, button.button_text.black, button.button_icon.black,
+a.button_full.black, a.button_text.black, a.button_icon.black {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), linear-gradient(to bottom, #b8b8b8, #999999, #858585);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #c4c4c4;
 }
 
 /*  
@@ -2853,7 +2847,7 @@ TODO:        >> Dropdown
 
 @media not all and (pointer: coarse) {
   .choice.dropdown:not(.disabled):not(.dropdown_open):hover {
-    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), #a8ecff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #a8ecff;
     box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
   }
 }
