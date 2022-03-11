@@ -1327,6 +1327,60 @@ TODO:    > Footer
             margin: 0;
             margin-bottom: $margin_vertical; 
         }
+
+        .email {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
+        }
+
+        .whatsapp {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
+
+            img {
+                padding-top: 1px;
+            }
+        }
+
+        .youtube {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
+        }
+
+        .instagram {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
+
+            img {
+
+                filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
+            }
+        }
+
+        .facebook {
+
+            background: 
+            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+            linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
+
+            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%);
+        }
     }
 
     /*
@@ -1935,10 +1989,10 @@ a.button_full, a.button_text, a.button_icon {
         $offset: 2px;
         $left:  $offset;
 
-        top: 0px;
+        top: 2px;
         left:  $left;
         width: calc(100% - 2 * #{$left});
-        height: 53.2%;
+        height: 49.8%;
     }
 
     .piece_text {
@@ -2216,6 +2270,24 @@ a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
         $height: calc(100% - 2 * #{$top}); 
 
         height: $height;
+
+        left:  $left;
+        width: calc(100% - 2 * #{$left});
+    }
+}
+
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
+
+    .button_shine_top { // height: 50px -> 51px
+           
+        $top: 3px;
+        $left:  2px;
+        $height: calc(100% - 2 * #{$top}); 
+
+        top: 1;
+        height: $height;
+        height: 91.1%; 
 
         left:  $left;
         width: calc(100% - 2 * #{$left});
@@ -4264,71 +4336,3 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
         padding-right: calc((#{$button_height_smaller})/2);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-        .email {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
-        }
-
-        .whatsapp {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
-
-            img {
-                padding-top: 1px;
-            }
-        }
-
-        .youtube {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
-        }
-
-        .instagram {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
-
-            img {
-
-                filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
-            }
-        }
-
-        .facebook {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%);
-        }
-
-*/
