@@ -95,6 +95,24 @@ TODO: Switches & Buttons Examples
 
 /*  
 ──────────────────────────────────────────────────────
+TODO: <button>/<a> Change Color
+────────────────────────────────────────────────────── */
+
+.button_or_a__change_color {
+
+    li {
+        display: inline-block;
+        padding: 3px 8px;
+        border: 1px solid deepskyblue;
+        border-radius: 1000px;
+        background: hsl(195, 100%, 98%);
+        color: deepskyblue;
+        cursor: pointer;
+    }
+}
+
+/*  
+──────────────────────────────────────────────────────
 TODO: Choice Examples
 ────────────────────────────────────────────────────── */
 

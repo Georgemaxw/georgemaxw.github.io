@@ -1237,7 +1237,8 @@ TODO:    > Footer
 
     .footer-icons {
 
-        /*
+        /* Rodapé de estilo anterior.
+
         display: flex;
         justify-content: space-evenly;
         align-items: center; 
@@ -1278,20 +1279,12 @@ TODO:    > Footer
             width: calc(100% - 16px);
         }
         */
-
-
-
-        // display: flex;
-        // justify-content: space-between;
-        //align-items: center; 
-        // flex-wrap: wrap;
         
         width: calc(100% - (2 * #{$margin_horizontal})); 
         padding: 0;
         margin-left: auto;
         margin-right: auto; 
         margin-bottom: 0; // Retirar para o rodapé de estilo anterior.
-        // text-align: center; 
         list-style-type: none;
         text-align: center;
 
@@ -1327,63 +1320,10 @@ TODO:    > Footer
             margin: 0;
             margin-bottom: $margin_vertical; 
         }
-
-        .email {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
-        }
-
-        .whatsapp {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
-
-            img {
-                padding-top: 1px;
-            }
-        }
-
-        .youtube {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
-        }
-
-        .instagram {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
-
-            img {
-
-                filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
-            }
-        }
-
-        .facebook {
-
-            background: 
-            linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
-            linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
-
-            box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%);
-        }
     }
 
-    /*
+    /* Rodapé de estilo anterior.
+
     @media (max-height: $screen_small_widthLimit) {
 
         max-width: none !important; 
@@ -2265,32 +2205,31 @@ a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
         border-radius: 1000px; 
         background: $bg_button_type_normal_and_switch_type_button_rounded_shine;
            
-        $top: 3px;
         $left:  3px; 
-        $height: calc(100% - 2 * #{$top}); 
-
-        height: $height;
 
         left:  $left;
         width: calc(100% - 2 * #{$left});
     }
 }
 
-button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
-a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
 
-    .button_shine_top { // height: 50px -> 51px
-           
+    .button_shine_top {
+ 
         $top: 3px;
-        $left:  2px;
-        $height: calc(100% - 2 * #{$top}); 
 
-        top: 1;
-        height: $height;
+        height: calc(100% - 2 * #{$top});
+    }
+}
+
+// Regra necessária para o brilho se ajustar direito no botão (mais precisamente, o 'x.button_icon.rounded'):
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded { 
+
+    .button_shine_top {
+
+        top: 1px;
         height: 91.1%; 
-
-        left:  $left;
-        width: calc(100% - 2 * #{$left});
     }
 }
 
@@ -2445,6 +2384,18 @@ TODO:            >>> Option ON
     }
 }
 
+/*  
+// Regra necessária para o brilho se ajustar direito no botão:
+.switch.button_full.rounded.on, .switch.button_text.rounded.on, .switch.button_icon.rounded.on {
+
+    .button_shine_top {
+
+        top: 1px;
+        height: 91.1%; 
+    }
+}
+*/
+
 .switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
     
     // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear !important;
@@ -2468,6 +2419,74 @@ TODO:            >>> Option ON
 .switch.button_full.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
  
     // background: $bg_switch_type_button_pill_and_rounded_on;
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── 
+
+button.button_full.colorrr, button.button_text.colorrr, button.button_icon.colorrr, 
+a.button_full.colorrr, a.button_text.colorrr, a.button_icon.colorrr
+*/
+
+button.button_full.black, button.button_text.black, button.button_icon.black, 
+a.button_full.black, a.button_text.black, a.button_icon.black {
+
+    background: 
+    linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
+}
+
+button.button_full.green, button.button_text.green, button.button_icon.green, 
+a.button_full.green, a.button_text.green, a.button_icon.green {
+
+    background: 
+    linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
+
+    img {
+        padding-top: 1px;
+    }
+}
+
+button.button_full.red, button.button_text.red, button.button_icon.red, 
+a.button_full.red, a.button_text.red, a.button_icon.red {
+
+    background: 
+    linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
+}
+
+button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow, 
+a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
+
+    background: 
+    linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
+
+    img {
+
+        filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
+    }
+}
+
+button.button_full.blue, button.button_text.blue, button.button_icon.blue, 
+a.button_full.blue, a.button_text.blue, a.button_icon.blue {
+
+    background: 
+    linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), 
+    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
+
+    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%);
 }
  
 /*  

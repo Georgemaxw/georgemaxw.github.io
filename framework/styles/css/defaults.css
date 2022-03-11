@@ -1149,7 +1149,8 @@ TODO:    > Footer
 .footer-content {
   width: 100%;
   margin-top: calc(2 * 16rem);
-  /*
+  /* Rodapé de estilo anterior.
+
     @media (max-height: $screen_small_widthLimit) {
 
         max-width: none !important; 
@@ -1162,7 +1163,8 @@ TODO:    > Footer
 }
 
 .footer-content .footer-icons {
-  /*
+  /* Rodapé de estilo anterior.
+
         display: flex;
         justify-content: space-evenly;
         align-items: center; 
@@ -1246,39 +1248,6 @@ TODO:    > Footer
   color: #000000;
   margin: 0;
   margin-bottom: 16rem;
-}
-
-.footer-content .footer-icons .email {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #b8b8b8, #999999, #858585);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #c4c4c4;
-}
-
-.footer-content .footer-icons .whatsapp {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #5cff5c, #1fff1f, #00f500);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #4dff4d;
-}
-
-.footer-content .footer-icons .whatsapp img {
-  padding-top: 1px;
-}
-
-.footer-content .footer-icons .youtube {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #ff9999, #ff5757, #ff3333);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #ffb8b8;
-}
-
-.footer-content .footer-icons .instagram {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, yellow, #f0f000, #cccc00);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #e0e000;
-}
-
-.footer-content .footer-icons .instagram img {
-  filter: drop-shadow(0px 0px 1px #b8b800);
-}
-
-.footer-content .footer-icons .facebook {
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
 .footer-content .copyright {
@@ -2139,18 +2108,18 @@ button.button_full.rounded .button_shine_top, button.button_text.rounded .button
 a.button_full.rounded .button_shine_top, a.button_text.rounded .button_shine_top, a.button_icon.rounded .button_shine_top {
   border-radius: 1000px;
   background: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center/100% 100% no-repeat;
-  height: calc(100% - 2 * 3px);
   left: 3px;
   width: calc(100% - 2 * 3px);
 }
 
+.switch.button_full.rounded .button_shine_top, .switch.button_text.rounded .button_shine_top, .switch.button_icon.rounded .button_shine_top {
+  height: calc(100% - 2 * 3px);
+}
+
 button.button_full.rounded .button_shine_top, button.button_text.rounded .button_shine_top, button.button_icon.rounded .button_shine_top,
 a.button_full.rounded .button_shine_top, a.button_text.rounded .button_shine_top, a.button_icon.rounded .button_shine_top {
-  top: 1;
-  height: calc(100% - 2 * 3px);
+  top: 1px;
   height: 91.1%;
-  left: 2px;
-  width: calc(100% - 2 * 2px);
 }
 
 .switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
@@ -2272,8 +2241,67 @@ TODO:            >>> Option ON
   filter: drop-shadow(0px 0px 1px #00d4f0);
 }
 
+/*  
+// Regra necessária para o brilho se ajustar direito no botão:
+.switch.button_full.rounded.on, .switch.button_text.rounded.on, .switch.button_icon.rounded.on {
+
+    .button_shine_top {
+
+        top: 1px;
+        height: 91.1%; 
+    }
+}
+*/
 .switch.button_full.on.disabled .piece_text, .switch.button_text.on.disabled .piece_text, .switch.button_icon.on.disabled .piece_text {
   filter: drop-shadow(0px 0px 2px #0088ad);
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── 
+
+button.button_full.colorrr, button.button_text.colorrr, button.button_icon.colorrr, 
+a.button_full.colorrr, a.button_text.colorrr, a.button_icon.colorrr
+*/
+button.button_full.black, button.button_text.black, button.button_icon.black,
+a.button_full.black, a.button_text.black, a.button_icon.black {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #b8b8b8, #999999, #858585);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #c4c4c4;
+}
+
+button.button_full.green, button.button_text.green, button.button_icon.green,
+a.button_full.green, a.button_text.green, a.button_icon.green {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #5cff5c, #1fff1f, #00f500);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #4dff4d;
+}
+
+button.button_full.green img, button.button_text.green img, button.button_icon.green img,
+a.button_full.green img, a.button_text.green img, a.button_icon.green img {
+  padding-top: 1px;
+}
+
+button.button_full.red, button.button_text.red, button.button_icon.red,
+a.button_full.red, a.button_text.red, a.button_icon.red {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #ff9999, #ff5757, #ff3333);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #ffb8b8;
+}
+
+button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow,
+a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, yellow, #f0f000, #cccc00);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #e0e000;
+}
+
+button.button_full.yellow img, button.button_text.yellow img, button.button_icon.yellow img,
+a.button_full.yellow img, a.button_text.yellow img, a.button_icon.yellow img {
+  filter: drop-shadow(0px 0px 1px #b8b800);
+}
+
+button.button_full.blue, button.button_text.blue, button.button_icon.blue,
+a.button_full.blue, a.button_text.blue, a.button_icon.blue {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #99e6ff, #57d5ff, #33ccff);
+  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #8ae2ff;
 }
 
 /*  

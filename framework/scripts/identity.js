@@ -515,5 +515,34 @@ document.querySelector('footer').innerHTML = `
 
 /* 
 ──────────────────────────────────────────────────────
+TODO: <button>/<a> Change Color
+────────────────────────────────────────────────────── */
+
+btn_blue = document.querySelector('.button_or_a__change_color .blue').addEventListener('click', func_change_btns_color)
+btn_red = document.querySelector('.button_or_a__change_color .red').addEventListener('click', func_change_btns_color)
+btn_green = document.querySelector('.button_or_a__change_color .green').addEventListener('click', func_change_btns_color)
+btn_yellow = document.querySelector('.button_or_a__change_color .yellow').addEventListener('click', func_change_btns_color)
+btn_black = document.querySelector('.button_or_a__change_color .black').addEventListener('click', func_change_btns_color)
+ 
+function func_change_btns_color() { 
+
+    var new_color = this.classList[0]
+
+    var buttons = document.querySelectorAll('.test_buttons_group button')
+ 
+    buttons.forEach(function (button) {
+
+        button.classList.remove('blue')
+        button.classList.remove('red')
+        button.classList.remove('green')
+        button.classList.remove('yellow')
+        button.classList.remove('black')
+    
+        button.classList.add(new_color)
+    })
+} 
+
+/* 
+──────────────────────────────────────────────────────
 TODO: ...
 ────────────────────────────────────────────────────── */

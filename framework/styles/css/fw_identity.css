@@ -86,6 +86,20 @@ TODO: Switches & Buttons Examples
 
 /*  
 ──────────────────────────────────────────────────────
+TODO: <button>/<a> Change Color
+────────────────────────────────────────────────────── */
+.button_or_a__change_color li {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid deepskyblue;
+  border-radius: 1000px;
+  background: #f5fcff;
+  color: deepskyblue;
+  cursor: pointer;
+}
+
+/*  
+──────────────────────────────────────────────────────
 TODO: Choice Examples
 ────────────────────────────────────────────────────── */
 .choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
