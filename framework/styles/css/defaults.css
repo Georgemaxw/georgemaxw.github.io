@@ -2307,8 +2307,8 @@ button.button_full, button.button_text, button.button_icon,
 a.button_full, a.button_text, a.button_icon,
 button.button_full.blue, button.button_text.blue, button.button_icon.blue,
 a.button_full.blue, a.button_text.blue, a.button_icon.blue {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #47d1ff;
-  box-shadow: 0px 0px 0px 1px #7adeff, inset 0px 0px 9px 6px white;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #4dd2ff;
+  box-shadow: 0px 0px 0px 1px #80dfff, inset 0px 0px 9px 6px white;
 }
 
 button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon,
