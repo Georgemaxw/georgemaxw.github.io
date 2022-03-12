@@ -377,15 +377,16 @@ a[href^="http"] {
     padding-right: 20px; 
 }
 
-@for $i from 2 through 6 { // h1: 45, h6: 20
+@for $i from 2 through 6 {
+
 	h#{$i} {
+
         font-size: calc(58rem - (6 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
         margin-right: $margin_horizontal;
-        text-align: center; 
-        // color: $color_theme;
+        text-align: center;
         background: $color_text_hx;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -625,6 +626,26 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     */
 }
 
+$color_border_token_blue: deepskyblue;
+$bg_token_blue: hsl(195, 100%, 98%);
+$color_token_blue: deepskyblue;
+
+$color_border_token_red: red;
+$bg_token_red: hsl(0, 100%, 99%);
+$color_token_red: red;
+
+$color_border_token_yellow: ;
+$bg_token_yellow: ;
+$color_token_yellow: ;
+
+$color_border_token_green: ;
+$bg_token_green: ;
+$color_token_green: ;
+
+$color_token_black: ;
+$color_border_token_black: ;
+$bg_token_black: ;
+
 span.token {
 
     padding: 6px 8px;
@@ -633,23 +654,23 @@ span.token {
 
 span.token, span.token.blue {
 
-    border: 1px solid deepskyblue;
-    background: hsl(195, 100%, 98%);
-    color: deepskyblue;
+    border: 1px solid $color_border_token_blue;
+    background: $bg_token_blue;
+    color: $color_token_blue;
 }
 
 span.token.red {
 
-    border: 1px solid red;
-    background: hsl(0, 100%, 99%);
-    color: red;        
-}
+    border: 1px solid $color_border_token_red;
+    background: $bg_token_red;
+    color: $color_token_red;        
+} 
 
 span.token.yellow {
 
     border: 1px solid hsl(55, 96%, 44%);
     background: hsl(60, 100%, 97%);
-    color: hsl(60, 100%, 50%);        
+    color: hsl(60, 100%, 50%); // yellow
     color: hsl(55, 96%, 44%); 
 }
 

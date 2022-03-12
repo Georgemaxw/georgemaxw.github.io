@@ -59,7 +59,7 @@
 
             <div class="central">
 
-                <h2>Índice 0</h2>
+                <h2>Índice</h2>
 
                 <div class="list_index">
                     <ul>
@@ -163,8 +163,8 @@
                 
                 <h2 id="Texts">Texts</h2>
 
-                <h1>Título 1 Muito Grande Para Testes</h1> 
-                <h1>Título 1</h1>
+                <h1>Título 1 (&lt;h1> não é grande pois é destinado apenas pro &lt;header>)</h1> 
+                <h2>Título 2 Muito Grande Para Testes</h2> 
                 <h2>Título 2</h2>
                 <h3>Título 3</h3>
                 <h4>Título 4</h4>
@@ -242,6 +242,14 @@
             </div>
                     
             <div class="central">
+
+                <p>Tokens (&lt;span>'s com a classe 'token'):</p> 
+
+                <span class="token">Token</span><div class="lb"></div>  
+                <span class="token red">Token com a classe red</span><div class="lb"></div>  
+                <span class="token yellow">Token com a classe yellow</span><div class="lb"></div>  
+                <span class="token green">Token com a classe green</span><div class="lb"></div>  
+                <span class="token black">Token com a classe black</span><div class="lb"></div>  
 
                 <!--  
                 ────────────────────────────
@@ -4038,16 +4046,16 @@
                 <p>Mudar as cores de todos os botões para:</p>
 
                 <ul class="button_or_a__change_color list_only_markup"> 
-                    <li class="blue">Blue</li>
-                    <li class="red">Red</li>
-                    <li class="yellow">Yellow</li>
-                    <li class="green">Green</li>
-                    <li class="black">Black</li>
+                    <li><span class="token blue">Blue</span></li>
+                    <li><span class="token red">Red</span></li>
+                    <li><span class="token yellow">Yellow</span></li>
+                    <li><span class="token green">Green</span></li>
+                    <li><span class="token black">Black</span></li>
                 </ul>
 
                 <br>
  
-                <div class="test_buttons_group">
+                <div class="test_buttons_group"> 
 
                     <button class="button_full text_below">  
                         <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
@@ -5548,6 +5556,8 @@
     - attention
     - fail
     - danger
+    - token (em <span>)
+      └ blue, red, yellow, green, black
 
     ────────────────────────────
     >> Layout Sections
@@ -5635,12 +5645,15 @@
             └ text_below
          └ rounded
             └ text_below
+         └ blue, red, yellow, green, black
       └ button_text
          └ pill
          └ rounded
+         └ blue, red, yellow, green, black
       └ button_icon
          └ pill
          └ rounded
+         └ blue, red, yellow, green, black
       └ image
          └ pill
       └ key_full (only for switch)
@@ -5664,7 +5677,8 @@
 
     - lightbox(text, image, width)
     - lightbox2(text, image, width) (round the corners of the image)
-    - Mudar ou atualizar o tipo de switches/buttons: update_switches_and_buttons(switches/buttons, type_number)
+    - Mudar ou atualizar o tipo de switches/buttons/anchors: 
+       update_switches_and_buttons(switches/buttons, type_number)
 
     Number - Type:
 

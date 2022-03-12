@@ -526,7 +526,7 @@ btn_black = document.querySelector('.button_or_a__change_color .black').addEvent
  
 function func_change_btns_color() { 
 
-    var new_color = this.classList[0]
+    var new_color = this.classList[1]
 
     var buttons = document.querySelectorAll('.test_buttons_group button')
  
