@@ -377,9 +377,9 @@ a[href^="http"] {
     padding-right: 20px; 
 }
 
-@for $i from 1 through 6 { 
+@for $i from 1 through 6 { // h1: 45, h6: 20
 	h#{$i} {
-        font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
+        font-size: calc(56rem - (6 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
@@ -623,6 +623,48 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-decoration: none !important;
     cursor: pointer;
     */
+}
+
+span.token {
+
+    padding: 6px 8px;
+    border-radius: 1000px;
+}
+
+span.token, span.token.blue {
+
+    border: 1px solid deepskyblue;
+    background: hsl(195, 100%, 98%);
+    color: deepskyblue;
+}
+
+span.token.red {
+
+    border: 1px solid red;
+    background: hsl(0, 100%, 99%);
+    color: red;        
+}
+
+span.token.yellow {
+
+    border: 1px solid hsl(55, 96%, 44%);
+    background: hsl(60, 100%, 97%);
+    color: hsl(60, 100%, 50%);        
+    color: hsl(55, 96%, 44%); 
+}
+
+span.token.green {
+
+    border: 1px solid hsl(120, 100%, 46%);
+    background: hsl(120, 100%, 98%);
+    color: hsl(120, 100%, 46%);
+}
+
+span.token.black {
+
+    border: 1px solid black;
+    background: hsl(0, 0%, 97%);
+    color: black;        
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -2516,7 +2558,7 @@ button.button_full.red, button.button_text.red, button.button_icon.red,
 a.button_full.red, a.button_text.red, a.button_icon.red {
 
     background: 
-    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white), 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
@@ -2531,7 +2573,7 @@ button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow,
 a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
 
     background: 
-    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white), 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
@@ -2546,7 +2588,7 @@ button.button_full.green, button.button_text.green, button.button_icon.green,
 a.button_full.green, a.button_text.green, a.button_icon.green {
 
     background: 
-    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white), 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
@@ -2561,7 +2603,7 @@ button.button_full.black, button.button_text.black, button.button_icon.black,
 a.button_full.black, a.button_text.black, a.button_icon.black {
 
     background: 
-    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white), 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
 
     box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
