@@ -2308,7 +2308,7 @@ a.button_full, a.button_text, a.button_icon,
 button.button_full.blue, button.button_text.blue, button.button_icon.blue,
 a.button_full.blue, a.button_text.blue, a.button_icon.blue {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), deepskyblue;
-  box-shadow: 0px 0px 0px 1px #5cd6ff, inset 0px 0px 9px 7px white;
+  box-shadow: 0px 0px 0px 1px #66d9ff, inset 0px 0px 9px 7px white;
 }
 
 button.button_full .piece_icon, button.button_text .piece_icon, button.button_icon .piece_icon,
