@@ -613,9 +613,9 @@ span.token.yellow {
 }
 
 span.token.green {
-  border: 1px solid #00eb00;
+  border: 1px solid #00e000;
   background: #f5fff5;
-  color: #00eb00;
+  color: #00e000;
 }
 
 span.token.black {

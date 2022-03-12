@@ -626,7 +626,7 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     */
 }
 
-$color_border_token_blue: deepskyblue;
+$color_border_token_blue: hsl(195, 100%, 50%);
 $bg_token_blue: hsl(195, 100%, 98%);
 $color_token_blue: deepskyblue;
 
@@ -634,17 +634,17 @@ $color_border_token_red: red;
 $bg_token_red: hsl(0, 100%, 99%);
 $color_token_red: red;
 
-$color_border_token_yellow: ;
-$bg_token_yellow: ;
-$color_token_yellow: ;
+$color_border_token_yellow: hsl(55, 96%, 44%);
+$bg_token_yellow: hsl(60, 100%, 97%);
+$color_token_yellow: hsl(55, 96%, 44%);
 
-$color_border_token_green: ;
-$bg_token_green: ;
-$color_token_green: ;
+$color_border_token_green: hsl(120, 100%, 44%);
+$bg_token_green: hsl(120, 100%, 98%);
+$color_token_green: hsl(120, 100%, 44%);
 
-$color_token_black: ;
-$color_border_token_black: ;
-$bg_token_black: ;
+$color_border_token_black: black;
+$bg_token_black: hsl(0, 0%, 97%);
+$color_token_black: black;
 
 span.token {
 
@@ -668,24 +668,24 @@ span.token.red {
 
 span.token.yellow {
 
-    border: 1px solid hsl(55, 96%, 44%);
-    background: hsl(60, 100%, 97%);
+    border: 1px solid $color_border_token_yellow;
+    background: $bg_token_yellow;
     color: hsl(60, 100%, 50%); // yellow
-    color: hsl(55, 96%, 44%); 
+    color: $color_token_yellow; 
 }
 
 span.token.green {
 
-    border: 1px solid hsl(120, 100%, 46%);
-    background: hsl(120, 100%, 98%);
-    color: hsl(120, 100%, 46%);
+    border: 1px solid $color_border_token_green;
+    background: $bg_token_green;
+    color: $color_token_green;
 }
 
 span.token.black {
 
-    border: 1px solid black;
-    background: hsl(0, 0%, 97%);
-    color: black;        
+    border: 1px solid $color_border_token_black;
+    background: $bg_token_black;
+    color: $color_token_black;        
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
