@@ -377,9 +377,9 @@ a[href^="http"] {
     padding-right: 20px; 
 }
 
-@for $i from 1 through 6 { // h1: 45, h6: 20
+@for $i from 2 through 6 { // h1: 45, h6: 20
 	h#{$i} {
-        font-size: calc(56rem - (6 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
+        font-size: calc(58rem - (6 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
