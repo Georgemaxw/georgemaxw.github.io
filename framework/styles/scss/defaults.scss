@@ -2504,11 +2504,11 @@ a.button_full.blue, a.button_text.blue, a.button_icon.blue {
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white), 
     hsl(195, 100%, 50%); // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
 
-    box-shadow: 0px 0px 0px 1px hsl(195, 100%, 73%), inset 0px 0px 9px 7px white;
+    box-shadow: 0px 0px 0px 1px hsl(195, 100%, 68%), inset 0px 0px 9px 7px white;
 
     .piece_icon {
 
-        filter: drop-shadow(0px 0px 1px hsl(195, 100%, 65%));
+        filter: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
     }
 }
 
