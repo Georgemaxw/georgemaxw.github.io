@@ -2056,7 +2056,7 @@ a.button_full, a.button_text, a.button_icon {
     .piece_text {
 
         color: $color_text_menu;
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%));
+        // filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%));
     }
 
     .piece_icon {
@@ -2557,6 +2557,8 @@ TODO:            >>> Floating Labels
 TODO:            >>> Colors
 ──────────────────────────── */
 
+/*------ Default: Blue ------*/
+
 button.button_full, button.button_text, button.button_icon, 
 a.button_full, a.button_text, a.button_icon,
 
@@ -2565,7 +2567,7 @@ a.button_full.blue, a.button_text.blue, a.button_icon.blue {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    hsl(195, 100%, 50%); // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%));
+    linear-gradient(to bottom, hsl(195, 100%, 60%), hsl(195, 100%, 50%), hsl(195, 100%, 50%));
 
     box-shadow: 0px 0px 0px 1px hsl(195, 100%, 66%), inset 0px 0px 9px 7px white;
 
@@ -2575,14 +2577,28 @@ a.button_full.blue, a.button_text.blue, a.button_icon.blue {
     }
 }
 
+button.button_full, button.button_text,
+a.button_full, a.button_text, 
+
+button.button_full.blue, button.button_text.blue, 
+a.button_full.blue, a.button_text.blue { 
+
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+    }
+}
+
+/*------ Red ------*/
+
 button.button_full.red, button.button_text.red, button.button_icon.red, 
 a.button_full.red, a.button_text.red, a.button_icon.red {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(0, 100%, 80%), hsl(0, 100%, 67%), hsl(0, 100%, 60%));
+    linear-gradient(to bottom, hsl(0, 100%, 88%), hsl(0, 100%, 67%), hsl(0, 100%, 67%));
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(0, 100%, 86%);
+    box-shadow: 0px 0px 0px 1px hsl(0, 100%, 86%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
@@ -2590,14 +2606,25 @@ a.button_full.red, a.button_text.red, a.button_icon.red {
     }
 }
 
+button.button_full.red, button.button_text.red, 
+a.button_full.red, a.button_text.red {
+
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+    }
+}
+
+/*------ Yellow ------*/
+
 button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow, 
 a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(60, 100%, 50%), hsl(60, 100%, 47%), hsl(60, 100%, 40%));
+    linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(60, 100%, 44%);
+    box-shadow: 0px 0px 0px 1px hsl(60, 100%, 41%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
@@ -2605,14 +2632,25 @@ a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
     }
 }
 
+button.button_full.yellow, button.button_text.yellow,
+a.button_full.yellow, a.button_text.yellow {
+
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(60, 100%, 29%));
+    }
+}
+
+/*------ Green ------*/
+
 button.button_full.green, button.button_text.green, button.button_icon.green, 
 a.button_full.green, a.button_text.green, a.button_icon.green {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 56%), hsl(120, 100%, 48%));
+    linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 46%), hsl(120, 100%, 54%));
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(120, 100%, 65%);
+    box-shadow: 0px 0px 0px 1px hsl(120, 100%, 47%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
@@ -2620,21 +2658,41 @@ a.button_full.green, a.button_text.green, a.button_icon.green {
     }
 }
 
+button.button_full.green, button.button_text.green, 
+a.button_full.green, a.button_text.green {
+
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
+    }
+}
+
+/*------ Black ------*/
+
 button.button_full.black, button.button_text.black, button.button_icon.black, 
 a.button_full.black, a.button_text.black, a.button_icon.black {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(195, 0%, 72%), hsl(195, 0%, 60%), hsl(195, 0%, 52%));
+    linear-gradient(to bottom, hsl(195, 0%, 80%), hsl(195, 0%, 50%), hsl(195, 0%, 50%));
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 0%, 77%);
+    box-shadow: 0px 0px 0px 1px hsl(195, 0%, 70%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
-        filter: drop-shadow(0px 0px 1px hsl(195, 0%, 60%));
+        filter: drop-shadow(0px 0px 1px hsl(0, 0%, 60%));
     }
 }
 
+button.button_full.black, button.button_text.black,
+a.button_full.black, a.button_text.black {
+
+    .piece_text {
+
+        filter: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+    }
+}
+ 
 /*  
 ────────────────────────────
 TODO:        >> Image

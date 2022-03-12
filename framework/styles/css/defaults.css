@@ -1981,7 +1981,6 @@ a.button_full, a.button_text, a.button_icon {
 button.button_full .piece_text, button.button_text .piece_text, button.button_icon .piece_text,
 a.button_full .piece_text, a.button_text .piece_text, a.button_icon .piece_text {
   color: white;
-  filter: drop-shadow(0px 0px 2px #00a8d6);
 }
 
 @media not all and (pointer: coarse) {
@@ -2325,11 +2324,12 @@ TODO:            >>> Floating Labels
 ────────────────────────────
 TODO:            >>> Colors
 ──────────────────────────── */
+/*------ Default: Blue ------*/
 button.button_full, button.button_text, button.button_icon,
 a.button_full, a.button_text, a.button_icon,
 button.button_full.blue, button.button_text.blue, button.button_icon.blue,
 a.button_full.blue, a.button_text.blue, a.button_icon.blue {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), deepskyblue;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #33ccff, deepskyblue, deepskyblue);
   box-shadow: 0px 0px 0px 1px #52d4ff, inset 0px 0px 9px 7px white;
 }
 
@@ -2340,10 +2340,18 @@ a.button_full.blue .piece_icon, a.button_text.blue .piece_icon, a.button_icon.bl
   filter: drop-shadow(0px 0px 1px #1ac6ff);
 }
 
+button.button_full .piece_text, button.button_text .piece_text,
+a.button_full .piece_text, a.button_text .piece_text,
+button.button_full.blue .piece_text, button.button_text.blue .piece_text,
+a.button_full.blue .piece_text, a.button_text.blue .piece_text {
+  filter: drop-shadow(0px 0px 2px #00a0cc);
+}
+
+/*------ Red ------*/
 button.button_full.red, button.button_text.red, button.button_icon.red,
 a.button_full.red, a.button_text.red, a.button_icon.red {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #ff9999, #ff5757, #ff3333);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #ffb8b8;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #ffc2c2, #ff5757, #ff5757);
+  box-shadow: 0px 0px 0px 1px #ffb8b8, inset 0px 0px 9px 6px white;
 }
 
 button.button_full.red .piece_icon, button.button_text.red .piece_icon, button.button_icon.red .piece_icon,
@@ -2351,10 +2359,16 @@ a.button_full.red .piece_icon, a.button_text.red .piece_icon, a.button_icon.red 
   filter: drop-shadow(0px 0px 1px #ff5757);
 }
 
+button.button_full.red .piece_text, button.button_text.red .piece_text,
+a.button_full.red .piece_text, a.button_text.red .piece_text {
+  filter: drop-shadow(0px 0px 2px #e00000);
+}
+
+/*------ Yellow ------*/
 button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow,
 a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, yellow, #f0f000, #cccc00);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #e0e000;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #ffff14, #dbdb00, #ebeb00);
+  box-shadow: 0px 0px 0px 1px #d1d100, inset 0px 0px 9px 6px white;
 }
 
 button.button_full.yellow .piece_icon, button.button_text.yellow .piece_icon, button.button_icon.yellow .piece_icon,
@@ -2362,10 +2376,16 @@ a.button_full.yellow .piece_icon, a.button_text.yellow .piece_icon, a.button_ico
   filter: drop-shadow(0px 0px 1px #b8b800);
 }
 
+button.button_full.yellow .piece_text, button.button_text.yellow .piece_text,
+a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
+  filter: drop-shadow(0px 0px 2px #949400);
+}
+
+/*------ Green ------*/
 button.button_full.green, button.button_text.green, button.button_icon.green,
 a.button_full.green, a.button_text.green, a.button_icon.green {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #5cff5c, #1fff1f, #00f500);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #4dff4d;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #5cff5c, #00eb00, #14ff14);
+  box-shadow: 0px 0px 0px 1px #00f000, inset 0px 0px 9px 6px white;
 }
 
 button.button_full.green .piece_icon, button.button_text.green .piece_icon, button.button_icon.green .piece_icon,
@@ -2373,15 +2393,26 @@ a.button_full.green .piece_icon, a.button_text.green .piece_icon, a.button_icon.
   filter: drop-shadow(0px 0px 1px #1fff1f);
 }
 
+button.button_full.green .piece_text, button.button_text.green .piece_text,
+a.button_full.green .piece_text, a.button_text.green .piece_text {
+  filter: drop-shadow(0px 0px 2px #00ad00);
+}
+
+/*------ Black ------*/
 button.button_full.black, button.button_text.black, button.button_icon.black,
 a.button_full.black, a.button_text.black, a.button_icon.black {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #b8b8b8, #999999, #858585);
-  box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px #c4c4c4;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #cccccc, gray, gray);
+  box-shadow: 0px 0px 0px 1px #b3b3b3, inset 0px 0px 9px 6px white;
 }
 
 button.button_full.black .piece_icon, button.button_text.black .piece_icon, button.button_icon.black .piece_icon,
 a.button_full.black .piece_icon, a.button_text.black .piece_icon, a.button_icon.black .piece_icon {
   filter: drop-shadow(0px 0px 1px #999999);
+}
+
+button.button_full.black .piece_text, button.button_text.black .piece_text,
+a.button_full.black .piece_text, a.button_text.black .piece_text {
+  filter: drop-shadow(0px 0px 2px #4d4d4d);
 }
 
 /*  
