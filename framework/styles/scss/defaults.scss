@@ -2598,11 +2598,11 @@ a.button_full.red, a.button_text.red, a.button_icon.red {
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(0, 100%, 88%), hsl(0, 100%, 67%), hsl(0, 100%, 67%));
 
-    box-shadow: 0px 0px 0px 1px hsl(0, 100%, 86%), inset 0px 0px 9px 6px white;
+    box-shadow: 0px 0px 0px 1px hsl(0, 100%, 84%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
-        filter: drop-shadow(0px 0px 1px hsl(0, 100%, 67%));
+        filter: drop-shadow(0px 0px 1px hsl(0, 100%, 65%));
     }
 }
 
@@ -2624,7 +2624,7 @@ a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
 
-    box-shadow: 0px 0px 0px 1px hsl(60, 100%, 41%), inset 0px 0px 9px 6px white;
+    box-shadow: 0px 0px 0px 1px hsl(60, 100%, 43%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
@@ -2650,11 +2650,11 @@ a.button_full.green, a.button_text.green, a.button_icon.green {
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
     linear-gradient(to bottom, hsl(120, 100%, 68%), hsl(120, 100%, 46%), hsl(120, 100%, 54%));
 
-    box-shadow: 0px 0px 0px 1px hsl(120, 100%, 47%), inset 0px 0px 9px 6px white;
+    box-shadow: 0px 0px 0px 1px hsl(120, 100%, 45%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
-        filter: drop-shadow(0px 0px 1px hsl(120, 100%, 56%));
+        filter: drop-shadow(0px 0px 1px hsl(120, 100%, 40%));
     }
 }
 
@@ -2674,13 +2674,13 @@ a.button_full.black, a.button_text.black, a.button_icon.black {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(195, 0%, 80%), hsl(195, 0%, 50%), hsl(195, 0%, 50%));
+    linear-gradient(to bottom, hsl(195, 0%, 80%), hsl(195, 0%, 46%), hsl(195, 0%, 46%));
 
     box-shadow: 0px 0px 0px 1px hsl(195, 0%, 70%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
-        filter: drop-shadow(0px 0px 1px hsl(0, 0%, 60%));
+        filter: drop-shadow(0px 0px 1px hsl(0, 0%, 50%));
     }
 }
 
