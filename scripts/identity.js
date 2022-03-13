@@ -119,24 +119,24 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
 
-<li><a href="../framework/pages/index.html">Home</a><div><ul></ul></div></li>
+<li><a href="../framework/pages/index.html"><span>Home</span></a><div><ul></ul></div></li>
 
-<li><a href="#">News</a><div><ul></ul></div></li><!---->
+<li><a href="#"><span>News</span></a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)">Gameplay</a>
+<li><a onclick="nav_menu_options(this)"><span>Gameplay</span></a>
 
     <div>
         <ul>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Characters</a></li>
-            <li><a href="types.html">Types</a></li>
-            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#"><span>History</span></a></li>
+            <li><a href="#"><span>Characters</span></a></li>
+            <li><a href="types.html"><span>Types</span></a></li>
+            <li><a href="skills.html"><span>Skills</span></a></li>
         </ul>
     </div>
 
 </li> 
 
-<!--<li><a href="download.html">Download</a><div><ul></ul></div></li>-->
+<!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 
 <li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
@@ -144,95 +144,95 @@ document.querySelector('.nav-menu').innerHTML = `
 
 /*
 <ul>
-<li><a onclick="nav_menu_options(this)">Link 1</a>
+<li><a onclick="nav_menu_options(this)"><span>Link 1</span></a>
 
     <div>
         <ul>
-            <li><a href="#">Link 1.1</a></li>
-            <li><a href="#">Link 1.2</a></li>
-            <li><a href="#">Link 1.3</a></li>
+            <li><a href="#"><span>Link 1.1</span></a></li>
+            <li><a href="#"><span>Link 1.2</span></a></li>
+            <li><a href="#"><span>Link 1.3</span></a></li>
         </ul>
     </div>
 
 </li> 
 
-<li><a onclick="nav_menu_options(this)">Link 2</a>
+<li><a onclick="nav_menu_options(this)"><span>Link 2</span></a>
 
     <div>
         <ul>
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 2.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 2.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.5</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L3</a>
+<li><a onclick="nav_menu_options(this)"><span>L3</span></a>
 
     <div>
         <ul class="nav_compact_sub_options_text_below">
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 3.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 3.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.3</span></a></li>
             <!--<li><a href="#">Link 3.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.5</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L4</a>
+<li><a onclick="nav_menu_options(this)"><span>L4</span></a>
 
     <div>
         <ul class="nav_expanded_sub_options_h nav_expanded_sub_options_text_below">
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 4.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 4.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.3</span></a></li>
            <!-- <li><a href="#">Link 4.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.5</span></a></li>
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.6</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.6</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L5</a> 
+<li><a onclick="nav_menu_options(this)"><span>L5</span></a> 
 
     <div>
         <ul class="nav_expanded_sub_options_h nav_sub_options_text_below">
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 5.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 5.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.3</span></a></li>
            <!-- <li><a href="#">Link 5.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.5</span></a></li>
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.6</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.6</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a href="">∅</a><div><ul></ul></div></li><!---->
+<li><a href=""><span>∅</span></a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</a>
+<li><a onclick="nav_menu_options(this)"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</span></a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
-            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
+            <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
         </ul>
     </div>
 
 </li>
 
-<li><a href="page.html">P</a><div><ul></ul></div></li>
-<li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
+<li><a href="page.html"><span>P</span></a><div><ul></ul></div></li>
+<li><a aria-label="Hide bar"><img src="../images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 */
 
