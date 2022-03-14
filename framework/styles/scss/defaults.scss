@@ -171,7 +171,7 @@ hsl(193, 0%,94%); // hsl(193, 0%,88%);
 
 $bg_element_type_button_clear:  // VÍNCULO: Váriável JS
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white),
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.1) 46%, hsla(0, 0%, 100%, 0.64), white),
 hsl(193, 100%, 80%); // hsl(193, 100%, 83%); 
 
 /*      

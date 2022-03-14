@@ -2274,7 +2274,7 @@ a.button_full.text_below {
 TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
   box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
 }
 
@@ -2383,7 +2383,7 @@ a.button_full.blue .piece_text, a.button_text.blue .piece_text {
   a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover,
   button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
   a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
     box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
   }
 }
