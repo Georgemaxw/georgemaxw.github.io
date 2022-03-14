@@ -169,10 +169,10 @@ linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), wh
 hsl(193, 0%,94%); // hsl(193, 0%,88%); 
 //$bg_switch_type_button_off: hsl(193, 0%,96%); 
 
-$bg_button_type_normal_hover_and_switch_type_button_on:  // VÍNCULO: Váriável JS
+$bg_element_type_button_clear:  // VÍNCULO: Váriável JS
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
 linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white),
-hsl(193, 100%, 83%); 
+hsl(193, 100%, 78%); // hsl(193, 100%, 83%); 
 
 /*      
 //$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
@@ -263,23 +263,27 @@ $color_shadow_lightbox: black;
 $color_shadow_lightbox_button: black; 
 
 // $bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
-$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+// $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 
 // ─────────── Scrollbars ───────────
 
+// Header-nav, choice dropdown, lightbox, <textarea>
+
 // $color_1_scrollbar: hsla(0, 0%, 0%, 0.14);
-$color_1_scrollbar: linear-gradient(to bottom, hsla(180, 100%, 85%, 1), hsla(195, 100%, 55%, 1)); // hsl(188, 100%, 85%);
+$color_1_scrollbar: linear-gradient(to bottom, hsl(180, 100%, 85%), hsl(195, 100%, 55%)); // hsl(188, 100%, 85%);
 $color_2_scrollbar: hsla(0, 0%, 100%, 0.4);
 
 $color_scrollbar_thumb: $color_1_scrollbar;
 $color_scrollbar_thumb_firefox: $color_1_scrollbar;
 $color_scrollbar_track: $color_2_scrollbar;
 $color_scrollbar_track_firefox: transparent;
+
 $color_menu_scrollbar_thumb: $color_1_scrollbar;  
 $color_menu_scrollbar_thumb_firefox: $color_1_scrollbar; 
 $color_menu_scrollbar_track: transparent;
 $color_menu_scrollbar_track_firefox: transparent;
+
 $color_menuRounded_scrollbar_thumb: $color_1_scrollbar;  
 $color_menuRounded_scrollbar_thumb_firefox: $color_1_scrollbar; 
 $color_menuRounded_scrollbar_track: transparent;
@@ -288,17 +292,6 @@ $color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
 // ─────────── Others ───────────
 
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Classes JS
-────────────────────────────────────────────────────── */
-
-// Classes Genéricas Pra Serem Aplicadas Somente Via JS:
-
-.overflow_hidden {
-    overflow: hidden;
-}
 
 /*  
 ──────────────────────────────────────────────────────
@@ -311,6 +304,91 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: <html> & <body> 
+────────────────────────────────────────────────────── */
+
+html {
+
+    background: $bg_html;
+}
+
+html::-webkit-scrollbar { // Entire bar
+
+    width: 14px;
+    height: 14px;
+}
+
+html::-webkit-scrollbar-thumb { // Bar pointer  
+
+    border-radius: 1000px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+
+
+
+    // $delta_deg: 116deg; 
+    // $delta_deg: 140deg; 
+    // $delta_deg: 231deg; 
+    // $delta_deg: 295deg; 
+
+    // background:
+    // linear-gradient(calc(217deg + #{$delta_deg}), hsla(190, 100%, 80%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    // linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    // linear-gradient(calc(336deg + #{$delta_deg}), hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    // hsla(0, 0%, 100%, 0);
+
+
+
+    // $delta_deg: 320deg;
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 83%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    hsla(0, 0%, 100%, 0);
+}
+
+html::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 78%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.85), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 92%, 0.8), hsla(190, 100%, 80%, 0) 71%);
+
+    box-shadow: 
+    inset 0px 0px 0px 1px hsla(195, 100%, 50%, 0.15),
+    0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar-track {   // Bar background
+
+    border-top: 1px solid $color_theme;
+    border-left: 1px solid $color_theme;
+    background: radial-gradient(white, hsl(195, 100%, 95%));
+}
+
+// html::-webkit-scrollbar-track:hover {   // Bar background hover
+
+//     background: hsla(195, 100%, 50%, 0.1);
+// }
+
+html { // Regra para o Firefox
+        
+    scrollbar-width: auto;
+    scrollbar-color: hsl(195, 100%, 50%) hsla(195, 100%, 50%, 0.06);
+}
+
+body {
+
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
        
 /*  
@@ -1001,9 +1079,9 @@ TODO:        >> Menu
             li {
                 border-top: 1px solid $color_text_menu;
 
-                        a {
+                        span { 
 
-                            filter: drop-shadow(0px 0px 2px hsl(193, 100%, 44%));  
+                            filter: drop-shadow(0px 0px 2px hsl(195, 100%, 44%));  
                         }
 
                 div { // <- Sub opções
@@ -1068,22 +1146,29 @@ TODO:        >> Menu
     // Scrollbars:
 
     .nav-menu ul::-webkit-scrollbar { // Entire bar
-        width: 10px;
-        height: 11px;
+
+        width: 11px;
+        height: 12px;
     }
     
     .nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
-        background: $color_menuRounded_scrollbar_thumb;    
-        border-radius: 10px; 
+        
+        // background: linear-gradient(to bottom, hsl(195, 100%, 93%), white, hsl(195, 100%, 93%));
+        background: white;
+        border-radius: 1000px; 
+        box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 72%, 1);
     }
     
     .nav-menu ul::-webkit-scrollbar-track {   // Bar background
-        background: $color_menuRounded_scrollbar_track;
+
+        background: hsla(195, 100%, 85%, 0.5);
+        border-radius: 1000px; 
     }
 
-    .nav-menu ul {
+    .nav-menu ul { // Regra para o Firefox
+
         scrollbar-width: thin;
-        scrollbar-color: $color_menuRounded_scrollbar_thumb_firefox $color_menuRounded_scrollbar_track_firefox;
+        scrollbar-color: white hsla(0, 0%, 100%, 0.22);
     }
 
     @media (pointer: fine) {
@@ -1300,7 +1385,7 @@ TODO:    > Footer
 
     .footer-icons {
 
-        /* Rodapé de estilo anterior.
+        /* footer anterior.
 
         display: flex;
         justify-content: space-evenly;
@@ -1343,11 +1428,13 @@ TODO:    > Footer
         }
         */
         
+        // footer novo:
+
         width: calc(100% - (2 * #{$margin_horizontal})); 
         padding: 0;
         margin-left: auto;
         margin-right: auto; 
-        margin-bottom: 0; // Retirar para o rodapé de estilo anterior.
+        margin-bottom: 0; 
         list-style-type: none;
         text-align: center;
 
@@ -1355,9 +1442,20 @@ TODO:    > Footer
             display: inline-block;
         }
 
+        a {
+
+            width: 58px;
+            height: 58px;
+            color: #000000; 
+            margin: 0;
+            margin-bottom: $margin_vertical; 
+        }
+
+        // Configuração para 5 ícones:
+
         @media (min-width: 0px) { 
             
-            $li_margin_horizontal: 20px; // calc((100% - 3 * 62px)/2);
+            $li_margin_horizontal: 20px;
 
             li + li { margin-left: $li_margin_horizontal; } 
             li:nth-last-of-type(1) { margin-right: $li_margin_horizontal; } 
@@ -1374,18 +1472,9 @@ TODO:    > Footer
             li + li { margin-left: 0; } 
             li:nth-last-of-type(1) { margin-right: 0; } 
         }
-
-        a {
-
-            width: 58px;
-            height: 58px;
-            color: #000000; 
-            margin: 0;
-            margin-bottom: $margin_vertical; 
-        }
     }
 
-    /* Rodapé de estilo anterior.
+    /* footer anterior.
 
     @media (max-height: $screen_small_widthLimit) {
 
@@ -1395,7 +1484,7 @@ TODO:    > Footer
 
     .copyright {
 
-        margin-top: 0; // Retirar para o rodapé de estilo anterior. 
+        margin-top: 0; // Retirar para o footer anterior. 
         font-size: $font_smaller;
         text-indent: 0;
         text-align: center;
@@ -1769,25 +1858,35 @@ textarea {
 // Scrollbar:
 
 textarea::-webkit-scrollbar { // Entire bar
+
     width: 10px;
     height: 11px;
 }
 
 textarea::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_scrollbar_thumb;    
-    border-radius: 10px;
+
+    background: hsla(0, 0%, 0%, 0.14);    
+    border-radius: 1000px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    background: hsla(0, 0%, 35%, 0.14);    
 }
 
 textarea::-webkit-scrollbar-track {   // Bar background
-    background: $color_scrollbar_track;
+
+    background: transparent;
 }
 
-textarea {
+textarea { // Regra para o Firefox
+        
     scrollbar-width: auto;
-    scrollbar-color: $color_scrollbar_thumb_firefox $color_scrollbar_track_firefox;
+    scrollbar-color: hsla(0, 0%, 0%, 0.14) transparent;
 } 
 
 input[type="file"] {
+
     color: transparent;
     border-radius: 0;
     filter: none;
@@ -1796,6 +1895,7 @@ input[type="file"] {
 }
 
 input[type="radio"], input[type="checkbox"] {
+
     width: auto;
     margin-top: 0;
     margin-left: 20px;
@@ -2062,22 +2162,6 @@ a.button_full, a.button_text, a.button_icon {
     .piece_icon {
 
         // filter: drop-shadow(0px 0px 1px hsla(195, 100%, 67%, 0.7));
-    }
-}
-
-@media not all and (pointer: coarse) {
-
-    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
-    a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover {
-
-    //button.button_full, button.button_text, button.button_icon {
-
-        background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
-        
-        box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
-        // filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
-
-        // filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
     }
 }
 
@@ -2427,7 +2511,7 @@ TODO:            >>> Option ON
 
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
 
-    background: $bg_button_type_normal_hover_and_switch_type_button_on;
+    background: $bg_element_type_button_clear;
     box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
  
     .piece_text {
@@ -2586,6 +2670,20 @@ a.button_full.blue, a.button_text.blue {
     .piece_text {
 
         filter: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+    }
+}
+
+@media not all and (pointer: coarse) {
+
+    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
+    a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover,
+
+    button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
+    a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear; // <- Propriedade aplicada aprimorada via JS.
+        
+        box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
     }
 }
 
@@ -3494,22 +3592,32 @@ TODO:        >> Dropdown
 // Dropdown - Open - Scrollbars:
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar { // Entire bar
-    width: 10px;
-    height: 11px;
+
+    width: 12px;
+    height: 13px;
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_menu_scrollbar_thumb;    
-    border-radius: 10px;
+
+    background: linear-gradient(to bottom, hsl(180, 100%, 85%), hsl(195, 100%, 55%));    
+    border-radius: 1000px;
+    box-shadow: inset 0px 0px 0px 1px hsl(195, 100%, 100%);
+}
+
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    background: linear-gradient(to bottom, hsl(180, 100%, 91%), hsl(195, 100%, 71%));    
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-track {   // Bar background
-    background: $color_menu_scrollbar_track; 
+
+    background: transparent; 
 }
 
-.choice.dropdown.choice.dropdown_open {
+.choice.dropdown.choice.dropdown_open { // Regra para o Firefox
+        
     scrollbar-width: auto;
-    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+    scrollbar-color: hsl(195, 100%, 94%) transparent;
 }
 
 /* @media (pointer: fine) {
@@ -3863,18 +3971,34 @@ TODO:    > Sliders
 ──────────────────────────── */
 
 .slider {
+
+    white-space: nowrap;
+
+    border-top: 2px solid $color_theme;
+    border-bottom: 2px solid $color_theme;
     overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
+
+    img +  img {
+
+        border-left: 2px solid $color_theme; 
+    }
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        border: 2px solid $color_theme;
+    }
 }
  
 .slider img, .slider picture {
+
     max-width: 94%;   
 }
 
 @media (max-height: $screen_small_widthLimit) {
 
     .slider img, .slider picture {
+
         max-height: 100vh;
     }
 }
@@ -3882,6 +4006,7 @@ TODO:    > Sliders
 @media (min-width: $screen_small_widthLimit) {  
 
     .slider { 
+
         margin-left: $margin_horizontal;
         margin-right: $margin_horizontal;
     }
@@ -3890,30 +4015,99 @@ TODO:    > Sliders
 @media (pointer: fine) {
 
     .slider {
+
         overflow-x: hidden;
     }
     
     .slider:hover {
+
         overflow-x: auto;
     }
 }
 
 // Slider scrollbar:
 
+/* // Scrollbar anterior do slider
+
 .slider::-webkit-scrollbar { // Entire bar
-    height: 12px; /* 15 */ 
+
+    height: 12px;
 }
 
 .slider::-webkit-scrollbar-thumb { // Bar pointer
+
     background: hsl(0, 0%, 74%);
-    border-radius: 10px;
-    /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
+    border-radius: 1000px;
 }
    
 .slider::-webkit-scrollbar-track { // Bar background
+
     background: hsl(0, 0%, 98%); 
     border: 1px solid hsl(0, 0%, 86%);
-    border-radius: 10px; /* */ 
+    border-radius: 1000px; 
+}
+*/
+
+.slider::-webkit-scrollbar { // Entire bar
+
+    width: 14px;
+    height: 14px;
+}
+
+.slider::-webkit-scrollbar-thumb { // Bar pointer  
+
+    border-radius: 1000px;
+    
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 83%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    white;
+
+    box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 50%, 0.18);
+}
+
+.slider::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 78%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.85), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 92%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    white;
+
+    box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 50%, 0.25);
+} 
+
+.slider::-webkit-scrollbar-track {   // Bar background
+
+    border-top: 2px solid $color_theme;
+    // background: radial-gradient(white, hsl(195, 100%, 94%));
+    background: white;
+}
+
+@media (min-width: $screen_small_widthLimit) {  
+
+    .slider.border_radius_big::-webkit-scrollbar-thumb { // Bar pointer  
+
+        border-left-width: 1px;
+        border-right-width: 1px;
+    }
+
+    .slider.border_radius_big::-webkit-scrollbar-track { // Bar background
+        
+        border: 1px solid $color_theme;
+        border-radius: 1000px;
+    }
+}
+
+.slider { // Regra para o Firefox
+        
+    scrollbar-width: auto;
+    scrollbar-color: $color_theme hsl(195, 100%, 100%);
 }
 
 /*
@@ -4158,6 +4352,7 @@ TODO:    > Lightbox
   /* Lightbox Layout */
 
 .lightbox_layout {
+
     position: relative;
     padding: 24px;
     overflow-x: hidden;
@@ -4165,9 +4360,15 @@ TODO:    > Lightbox
 
     max-width: calc(100vw - (2 * #{$button_height_small}));
     max-height: calc(100vh - (3 * #{$button_height}));
-    // border-radius: $border_radius_default;
     color: $color_text_menu;
-    // background: $bg_lightbox;
+    /* border-radius: $border_radius_default;  // Lightbox anterior 
+    background: $bg_lightbox;  // Lightbox anterior 
+
+    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,  // Lightbox anterior 
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear; */
+
+     // Lightbox novo:
 
     $lightbox_border_width: 5px;
     border: $lightbox_border_width solid rgba(0, 0, 0, 0);
@@ -4181,10 +4382,7 @@ TODO:    > Lightbox
     linear-gradient(to left, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box bottom/100% $lightbox_border_width no-repeat,
     linear-gradient(to top, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box left/$lightbox_border_width 100% no-repeat;
     
-    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,
-    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear
-    ;
+    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox;
 }
 
 .lightbox_img {
@@ -4204,12 +4402,11 @@ TODO:    > Lightbox
 }
 
 .lightbox_text {
-    //display: block; 
+
     font-size: $font_size; 
-    font-weight: bold;
-    //text-shadow: 1px 1px 1px $color_shadow_text;
-    // filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%));
-    filter: drop-shadow(0px 0px 2px hsl(193, 100%, 30%));
+    font-weight: bold;  // Lightbox novo
+    // text-shadow: 1px 1px 1px $color_shadow_text;  // Lightbox anterior 
+    filter: drop-shadow(0px 0px 2px hsl(193, 100%, 30%));  // Lightbox novo
     line-height: 1.5; 
 
     .text_img, .text_img_size {
@@ -4217,9 +4414,10 @@ TODO:    > Lightbox
     }
 }
   
-/* Close Button 
+/* Close Button   // Lightbox anterior 
 
 .lightbox_closeArea::after {
+
     content: "";
     position: absolute;
     top: -19px;
@@ -4235,27 +4433,44 @@ TODO:    > Lightbox
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
-}
-*/
+}*/
+
 // Lightbox Layout - Scrollbars:
 
 .lightbox_layout::-webkit-scrollbar { // Entire bar
-    width: 10px;
+
+    width: 11px;
     height: 11px;
 }
 
 .lightbox_layout::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_menu_scrollbar_thumb;    
-    border-radius: 10px;
+
+    border-radius: 1000px;
+    
+    // background: linear-gradient(to bottom, hsl(198, 100%, 100%), hsl(198, 100%, 74%));
+    // box-shadow: inset 0px 0px 0px 1px hsl(198, 100%, 87%);   
+
+    background: hsl(198, 100%, 89%);
+    box-shadow: inset 0px 0px 0px 1px white;
+}
+
+.lightbox_layout::-webkit-scrollbar-thumb:hover { // Bar pointer
+
+    // background: linear-gradient(to bottom, hsl(198, 100%, 74%), hsl(198, 100%, 100%));
+    // background: linear-gradient(to bottom, hsl(198, 100%, 90%), hsl(198, 100%, 94%));
+    background: hsl(198, 100%, 91%); 
+    box-shadow: inset 0px 0px 0px 1px white;
 }
 
 .lightbox_layout::-webkit-scrollbar-track {   // Bar background
-    background: $color_menu_scrollbar_track; 
+
+    background: transparent; 
 }
 
-.lightbox_layout {
+.lightbox_layout { // Regra para o Firefox
+
     scrollbar-width: auto;
-    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+    scrollbar-color: hsl(195, 100%, 100%) hsla(194, 100%, 50%, 0.1);  
 }
 
 /*  
@@ -4263,17 +4478,8 @@ TODO:    > Lightbox
 TODO: Others
 ────────────────────────────────────────────────────── */
 
-html {
-    background: $bg_html;
-}
-
-body {
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 hr {
+
     border-top: 1px solid $color_theme;
     border-bottom: 0; 
     background: $color_theme;
@@ -4330,26 +4536,31 @@ a, button:not(button[disabled], .disabled), input[type="radio"]:not(fieldset[dis
 // ------ center ------
 
 .center {
+    
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
 .center.offset {
+    
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: calc(100% - (2 * #{$margin_horizontal}));
 }
 
 figure.center {
+    
     text-align: center;
 } 
 
 .center.choice.horizontal {
+    
     display: flex !important;
 }
 
 .center.offset.choice.dropdown_open {
+    
     max-width: none;
 }
 
@@ -4485,4 +4696,21 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
         margin-right: $margin_horizontal;
         padding-right: calc((#{$button_height_smaller})/2);
     }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Classes JS
+────────────────────────────────────────────────────── */
+
+// Classes Genéricas Pra Serem Aplicadas Somente Via JS:
+
+.display_none {
+    
+    display: none;
+}
+
+.overflow_hidden {
+    
+    overflow: hidden;
 }

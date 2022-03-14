@@ -35,14 +35,6 @@ $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95);
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Classes JS
-────────────────────────────────────────────────────── */
-.overflow_hidden {
-  overflow: hidden;
-}
-
-/*  
-──────────────────────────────────────────────────────
 Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 html {
@@ -51,6 +43,47 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: <html> & <body> 
+────────────────────────────────────────────────────── */
+html {
+  background: white;
+}
+
+html::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(calc(217deg + 51deg), rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(calc(127deg + 51deg), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 71%), linear-gradient(calc(336deg + 51deg), rgba(168, 241, 255, 0.8), rgba(153, 238, 255, 0) 71%), rgba(255, 255, 255, 0);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(calc(217deg + 51deg), rgba(143, 227, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(calc(127deg + 51deg), rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 71%), linear-gradient(calc(336deg + 51deg), rgba(214, 248, 255, 0.8), rgba(153, 238, 255, 0) 71%);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 191, 255, 0.15), 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar-track {
+  border-top: 1px solid DeepSkyBlue;
+  border-left: 1px solid DeepSkyBlue;
+  background: radial-gradient(white, #e6f9ff);
+}
+
+html {
+  scrollbar-width: auto;
+  scrollbar-color: deepskyblue rgba(0, 191, 255, 0.06);
+}
+
+body {
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*  
@@ -929,8 +962,8 @@ TODO:        >> Expanded
   border-top: 1px solid white;
 }
 
-.header-nav .nav-menu ul li a {
-  filter: drop-shadow(0px 0px 2px #00b0e0);
+.header-nav .nav-menu ul li span {
+  filter: drop-shadow(0px 0px 2px #00a8e0);
 }
 
 .header-nav .nav-menu ul li div {
@@ -987,22 +1020,24 @@ TODO:        >> Expanded
 }
 
 .header-nav .nav-menu ul::-webkit-scrollbar {
-  width: 10px;
-  height: 11px;
+  width: 11px;
+  height: 12px;
 }
 
 .header-nav .nav-menu ul::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #b3ffff, #1ac6ff);
-  border-radius: 10px;
+  background: white;
+  border-radius: 1000px;
+  box-shadow: inset 0px 0px 0px 1px #70dbff;
 }
 
 .header-nav .nav-menu ul::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(179, 236, 255, 0.5);
+  border-radius: 1000px;
 }
 
 .header-nav .nav-menu ul {
   scrollbar-width: thin;
-  scrollbar-color: linear-gradient(to bottom, #b3ffff, #1ac6ff) rgba(255, 255, 255, 0.4);
+  scrollbar-color: white rgba(255, 255, 255, 0.22);
 }
 
 @media (pointer: fine) {
@@ -1171,7 +1206,7 @@ TODO:    > Footer
 .footer-content {
   width: 100%;
   margin-top: calc(2 * 16rem);
-  /* Rodapé de estilo anterior.
+  /* footer anterior.
 
     @media (max-height: $screen_small_widthLimit) {
 
@@ -1185,7 +1220,7 @@ TODO:    > Footer
 }
 
 .footer-content .footer-icons {
-  /* Rodapé de estilo anterior.
+  /* footer anterior.
 
         display: flex;
         justify-content: space-evenly;
@@ -1240,6 +1275,14 @@ TODO:    > Footer
   display: inline-block;
 }
 
+.footer-content .footer-icons a {
+  width: 58px;
+  height: 58px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 16rem;
+}
+
 @media (min-width: 0px) {
   .footer-content .footer-icons li + li {
     margin-left: 20px;
@@ -1262,14 +1305,6 @@ TODO:    > Footer
   .footer-content .footer-icons li:nth-last-of-type(1) {
     margin-right: 0;
   }
-}
-
-.footer-content .footer-icons a {
-  width: 58px;
-  height: 58px;
-  color: #000000;
-  margin: 0;
-  margin-bottom: 16rem;
 }
 
 .footer-content .copyright {
@@ -1607,17 +1642,21 @@ textarea::-webkit-scrollbar {
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #b3ffff, #1ac6ff);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.14);
+  border-radius: 1000px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(89, 89, 89, 0.14);
 }
 
 textarea::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.4);
+  background: transparent;
 }
 
 textarea {
   scrollbar-width: auto;
-  scrollbar-color: linear-gradient(to bottom, #b3ffff, #1ac6ff) transparent;
+  scrollbar-color: rgba(0, 0, 0, 0.14) transparent;
 }
 
 input[type="file"] {
@@ -1983,14 +2022,6 @@ a.button_full .piece_text, a.button_text .piece_text, a.button_icon .piece_text 
   color: white;
 }
 
-@media not all and (pointer: coarse) {
-  button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
-  a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #a8ecff;
-    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
-  }
-}
-
 button.estilo_2 {
   background: linear-gradient(to bottom, white, #57d5ff 80%, deepskyblue, #0099cc);
   box-shadow: 0 0px 0px 1px #33ccff, inset 0 0px 9px 4px rgba(255, 255, 255, 0.7) !important;
@@ -2243,7 +2274,7 @@ a.button_full.text_below {
 TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #a8ecff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #8fe7ff;
   box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
 }
 
@@ -2345,6 +2376,16 @@ a.button_full .piece_text, a.button_text .piece_text,
 button.button_full.blue .piece_text, button.button_text.blue .piece_text,
 a.button_full.blue .piece_text, a.button_text.blue .piece_text {
   filter: drop-shadow(0px 0px 2px #00a0cc);
+}
+
+@media not all and (pointer: coarse) {
+  button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
+  a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover,
+  button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
+  a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.64), white), #8fe7ff;
+    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
+  }
 }
 
 /*------ Red ------*/
@@ -2987,13 +3028,18 @@ TODO:        >> Dropdown
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar {
-  width: 10px;
-  height: 11px;
+  width: 12px;
+  height: 13px;
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #b3ffff, #1ac6ff);
-  border-radius: 10px;
+  border-radius: 1000px;
+  box-shadow: inset 0px 0px 0px 1px white;
+}
+
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #d1ffff, #6bdaff);
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-track {
@@ -3002,7 +3048,7 @@ TODO:        >> Dropdown
 
 .choice.dropdown.choice.dropdown_open {
   scrollbar-width: auto;
-  scrollbar-color: linear-gradient(to bottom, #b3ffff, #1ac6ff) transparent;
+  scrollbar-color: #e0f7ff transparent;
 }
 
 /* @media (pointer: fine) {
@@ -3277,9 +3323,21 @@ TODO:    > Galleries
 TODO:    > Sliders
 ──────────────────────────── */
 .slider {
+  white-space: nowrap;
+  border-top: 2px solid DeepSkyBlue;
+  border-bottom: 2px solid DeepSkyBlue;
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
+}
+
+.slider img + img {
+  border-left: 2px solid DeepSkyBlue;
+}
+
+@media (min-width: 501px) {
+  .slider {
+    border: 2px solid DeepSkyBlue;
+  }
 }
 
 .slider img, .slider picture {
@@ -3308,22 +3366,61 @@ TODO:    > Sliders
   }
 }
 
+/* // Scrollbar anterior do slider
+
+.slider::-webkit-scrollbar { // Entire bar
+
+    height: 12px;
+}
+
+.slider::-webkit-scrollbar-thumb { // Bar pointer
+
+    background: hsl(0, 0%, 74%);
+    border-radius: 1000px;
+}
+   
+.slider::-webkit-scrollbar-track { // Bar background
+
+    background: hsl(0, 0%, 98%); 
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 1000px; 
+}
+*/
 .slider::-webkit-scrollbar {
-  height: 12px;
-  /* 15 */
+  width: 14px;
+  height: 14px;
 }
 
 .slider::-webkit-scrollbar-thumb {
-  background: #bdbdbd;
-  border-radius: 10px;
-  /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
+  border-radius: 1000px;
+  background: linear-gradient(calc(217deg + 51deg), rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(calc(127deg + 51deg), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 71%), linear-gradient(calc(336deg + 51deg), rgba(168, 241, 255, 0.8), rgba(153, 238, 255, 0) 71%), white;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 191, 255, 0.18);
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(calc(217deg + 51deg), rgba(143, 227, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(calc(127deg + 51deg), rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 71%), linear-gradient(calc(336deg + 51deg), rgba(214, 248, 255, 0.8), rgba(153, 238, 255, 0) 71%), white;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 191, 255, 0.25);
 }
 
 .slider::-webkit-scrollbar-track {
-  background: #fafafa;
-  border: 1px solid #dbdbdb;
-  border-radius: 10px;
-  /* */
+  border-top: 2px solid DeepSkyBlue;
+  background: white;
+}
+
+@media (min-width: 501px) {
+  .slider.border_radius_big::-webkit-scrollbar-thumb {
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+  .slider.border_radius_big::-webkit-scrollbar-track {
+    border: 1px solid DeepSkyBlue;
+    border-radius: 1000px;
+  }
+}
+
+.slider {
+  scrollbar-width: auto;
+  scrollbar-color: DeepSkyBlue white;
 }
 
 /*
@@ -3636,6 +3733,12 @@ TODO:    > Lightbox
   max-width: calc(100vw - (2 * 40px));
   max-height: calc(100vh - (3 * 48px));
   color: white;
+  /* border-radius: $border_radius_default;  // Lightbox anterior 
+    background: $bg_lightbox;  // Lightbox anterior 
+
+    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,  // Lightbox anterior 
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear; */
   border: 5px solid rgba(0, 0, 0, 0);
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.85), rgba(122, 215, 255, 0.85), rgba(255, 255, 255, 0.85)) padding-box, linear-gradient(to right, #7ad7ff, white) border-box top/100% 5px no-repeat, linear-gradient(to bottom, white, #7ad7ff) border-box right/5px 100% no-repeat, linear-gradient(to left, #7ad7ff, white) border-box bottom/100% 5px no-repeat, linear-gradient(to top, white, #7ad7ff) border-box left/5px 100% no-repeat;
   box-shadow: 6px 6px 24px -14px black;
@@ -3668,9 +3771,10 @@ TODO:    > Lightbox
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
-/* Close Button 
+/* Close Button   // Lightbox anterior 
 
 .lightbox_closeArea::after {
+
     content: "";
     position: absolute;
     top: -19px;
@@ -3686,16 +3790,21 @@ TODO:    > Lightbox
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
-}
-*/
+}*/
 .lightbox_layout::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
   height: 11px;
 }
 
 .lightbox_layout::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #b3ffff, #1ac6ff);
-  border-radius: 10px;
+  border-radius: 1000px;
+  background: #c7eeff;
+  box-shadow: inset 0px 0px 0px 1px white;
+}
+
+.lightbox_layout::-webkit-scrollbar-thumb:hover {
+  background: #d1f1ff;
+  box-shadow: inset 0px 0px 0px 1px white;
 }
 
 .lightbox_layout::-webkit-scrollbar-track {
@@ -3704,23 +3813,13 @@ TODO:    > Lightbox
 
 .lightbox_layout {
   scrollbar-width: auto;
-  scrollbar-color: linear-gradient(to bottom, #b3ffff, #1ac6ff) transparent;
+  scrollbar-color: white rgba(0, 196, 255, 0.1);
 }
 
 /*  
 ──────────────────────────────────────────────────────
 TODO: Others
 ────────────────────────────────────────────────────── */
-html {
-  background: white;
-}
-
-body {
-  min-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 hr {
   border-top: 1px solid DeepSkyBlue;
   border-bottom: 0;
@@ -4316,4 +4415,16 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
   margin-left: 20px;
   margin-right: 20px;
   padding-right: calc((32px)/2);
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Classes JS
+────────────────────────────────────────────────────── */
+.display_none {
+  display: none;
+}
+
+.overflow_hidden {
+  overflow: hidden;
 }
