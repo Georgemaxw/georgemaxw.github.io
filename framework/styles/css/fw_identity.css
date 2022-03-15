@@ -86,8 +86,13 @@ TODO: Switches & Buttons Examples
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: <button>/<a> Change Color
+TODO: Switches, <button>'s, <a>'s Change Color
 ────────────────────────────────────────────────────── */
+.switches_change_color li {
+  display: inline-block;
+  cursor: pointer;
+}
+
 .button_or_a__change_color li {
   display: inline-block;
   cursor: pointer;

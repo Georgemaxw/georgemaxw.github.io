@@ -108,6 +108,28 @@ $color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 
 $bg_kbd: hsl(0, 0%, 86%);
 
+// Tokens:
+
+$color_border_token_blue: hsl(195, 100%, 50%);
+$bg_token_blue: hsl(195, 100%, 98%);
+$color_text_token_blue: deepskyblue;
+
+$color_border_token_red: red;
+$bg_token_red: hsl(0, 100%, 99%);
+$color_text_token_red: red;
+
+$color_border_token_yellow: hsl(55, 96%, 44%);
+$bg_token_yellow: hsl(60, 100%, 97%);
+$color_text_token_yellow: hsl(55, 96%, 44%);
+
+$color_border_token_green: hsl(120, 100%, 42%);
+$bg_token_green: hsl(120, 100%, 98%);
+$color_text_token_green: hsl(120, 100%, 42%);
+
+$color_border_token_black: hsl(0, 0%, 55%);
+$bg_token_black: hsl(0, 0%, 97%); 
+$color_text_token_black: hsl(0, 0%, 55%);
+
 // ─────────── Signs ───────────
 
 $color_text_success: hsl(120, 100%, 35%);
@@ -205,12 +227,38 @@ $bg_button_type_normal_and_switch_type_button_rounded_shine: url(../../images/bg
 
 // (Text floating):
 
+/*  
 $bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
 $color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
 $color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
 $bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
 $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
 $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+*/
+
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$bg_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 96%); //linear-gradient(to bottom, white, hsl(193, 0%, 91%));
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_token_blue;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_token_blue;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_token_blue; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_token_red;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_token_red;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_token_red; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_token_yellow;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_token_yellow;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_token_yellow; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_token_green;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_token_green;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_token_green; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_token_black;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_token_black;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_token_black; 
 
 // --- Type Image ---
 
@@ -219,15 +267,42 @@ $color_outline_button_and_switch_both_type_image: hsla(0, 0%, 0%, 0.2);
 
 // (Text floating):
 
-$color_text_switch_type_image_piece_text_floating_off: hsl(0, 0%, 67%); 
-$color_border_switch_type_image_piece_text_floating_off: hsl(0, 0%, 74%); 
-$color_box_shadow_switch_type_image_piece_text_floating_off: hsla(0, 0%, 0%, 0.09);
-$bg_switch_type_image_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_image_piece_text_floating_off: $color_border_switch_type_button_icon_piece_text_floating_off; 
+$bg_switch_type_image_piece_text_floating_off:  $bg_switch_type_button_icon_piece_text_floating_off;
+$color_text_switch_type_image_piece_text_floating_off: $color_text_switch_type_button_icon_piece_text_floating_off; 
+$color_box_shadow_switch_type_image_piece_text_floating_off: transparent; // hsla(0, 0%, 0%, 0.09);
 
+/*  
 $color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
 $color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
-$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
 $bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+*/
+
+$color_border_switch_type_image_piece_text_floating_on: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on;  
+$bg_switch_type_image_piece_text_floating_on: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
+$color_text_switch_type_image_piece_text_floating_on: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on; 
+$color_box_shadow_switch_type_image_piece_text_floating_on: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_red: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red;  
+$bg_switch_type_image_piece_text_floating_on_red: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+$color_text_switch_type_image_piece_text_floating_on_red: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_red: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_yellow: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;  
+$bg_switch_type_image_piece_text_floating_on_yellow: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+$color_text_switch_type_image_piece_text_floating_on_yellow: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_yellow: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_green: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green;  
+$bg_switch_type_image_piece_text_floating_on_green: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+$color_text_switch_type_image_piece_text_floating_on_green: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_green: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_black: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black;  
+$bg_switch_type_image_piece_text_floating_on_black: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+$color_text_switch_type_image_piece_text_floating_on_black: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_black: transparent;
 
 // --- Type Key ---
 
@@ -259,11 +334,35 @@ $color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%
 $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
 */
 
-$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
 $color_border_button_type_image_piece_text_floating: $color_border_switch_type_image_piece_text_floating_on;
-$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
-$color_box_shadow_out_button_type_image_piece_text_floating: $color_box_shadow_switch_type_image_piece_text_floating_on;
 $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floating_on; 
+$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
+$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating: transparent; // $color_box_shadow_switch_type_image_piece_text_floating_on;
+
+$color_border_button_type_image_piece_text_floating_red: $color_border_switch_type_image_piece_text_floating_on_red;
+$bg_button_type_image_piece_text_floating_red: $bg_switch_type_image_piece_text_floating_on_red; 
+$color_text_button_type_image_piece_text_floating_red: $color_text_switch_type_image_piece_text_floating_on_red; 
+$color_box_shadow_in_button_type_image_piece_text_floating_red: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_red: transparent;
+
+$color_border_button_type_image_piece_text_floating_yellow: $color_border_switch_type_image_piece_text_floating_on_yellow;
+$bg_button_type_image_piece_text_floating_yellow: $bg_switch_type_image_piece_text_floating_on_yellow; 
+$color_text_button_type_image_piece_text_floating_yellow: $color_text_switch_type_image_piece_text_floating_on_yellow; 
+$color_box_shadow_in_button_type_image_piece_text_floating_yellow: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_yellow: transparent;
+
+$color_border_button_type_image_piece_text_floating_green: $color_border_switch_type_image_piece_text_floating_on_green;
+$bg_button_type_image_piece_text_floating_green: $bg_switch_type_image_piece_text_floating_on_green; 
+$color_text_button_type_image_piece_text_floating_green: $color_text_switch_type_image_piece_text_floating_on_green; 
+$color_box_shadow_in_button_type_image_piece_text_floating_green: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_green: transparent;
+
+$color_border_button_type_image_piece_text_floating_black: $color_border_switch_type_image_piece_text_floating_on_black;
+$bg_button_type_image_piece_text_floating_black: $bg_switch_type_image_piece_text_floating_on_black; 
+$color_text_button_type_image_piece_text_floating_black: $color_text_switch_type_image_piece_text_floating_on_black; 
+$color_box_shadow_in_button_type_image_piece_text_floating_black: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_black: transparent;
 
 // ─────────── Choices ───────────
 
@@ -719,26 +818,6 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     */
 }
 
-$color_border_token_blue: hsl(195, 100%, 50%);
-$bg_token_blue: hsl(195, 100%, 98%);
-$color_token_blue: deepskyblue;
-
-$color_border_token_red: red;
-$bg_token_red: hsl(0, 100%, 99%);
-$color_token_red: red;
-
-$color_border_token_yellow: hsl(55, 96%, 44%);
-$bg_token_yellow: hsl(60, 100%, 97%);
-$color_token_yellow: hsl(55, 96%, 44%);
-
-$color_border_token_green: hsl(120, 100%, 42%);
-$bg_token_green: hsl(120, 100%, 98%);
-$color_token_green: hsl(120, 100%, 42%);
-
-$color_border_token_black: hsl(0, 0%, 55%);
-$bg_token_black: hsl(0, 0%, 97%); 
-$color_token_black: hsl(0, 0%, 55%);
-
 span.token {
 
     padding: 6px 8px;
@@ -749,14 +828,14 @@ span.token, span.token.blue {
 
     border: 1px solid $color_border_token_blue;
     background: $bg_token_blue;
-    color: $color_token_blue;
+    color: $color_text_token_blue;
 }
 
 span.token.red {
 
     border: 1px solid $color_border_token_red;
     background: $bg_token_red;
-    color: $color_token_red;        
+    color: $color_text_token_red;        
 } 
 
 span.token.yellow {
@@ -764,21 +843,21 @@ span.token.yellow {
     border: 1px solid $color_border_token_yellow;
     background: $bg_token_yellow;
     color: hsl(60, 100%, 50%); // yellow
-    color: $color_token_yellow; 
+    color: $color_text_token_yellow; 
 }
 
 span.token.green {
 
     border: 1px solid $color_border_token_green;
     background: $bg_token_green;
-    color: $color_token_green;
+    color: $color_text_token_green;
 }
 
 span.token.black {
 
     border: 1px solid $color_border_token_black;
     background: $bg_token_black;
-    color: $color_token_black;        
+    color: $color_text_token_black;        
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -2598,7 +2677,7 @@ TODO:            >>> Floating Labels
             border: 1px solid;
             border-radius: 1000px;
             font-weight: initial;
-            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+            // box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
             filter: initial;
         }
     }
@@ -2638,7 +2717,7 @@ TODO:            >>> Floating Labels
             border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on; 
             background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
             filter: initial;
-            box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24); 
+            // box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24); 
         } 
     }
 
@@ -2709,6 +2788,21 @@ a.button_full.blue, a.button_text.blue {
     }
 }
 
+@media (pointer: fine) {
+
+    .switch.button_icon.on, button.button_icon, a.button_icon,
+
+    .switch.button_icon.blue.on, button.button_icon.blue, a.button_icon.blue { 
+    
+        .piece_text {
+
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on;
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
+        } 
+    }
+}
+
 /*------ Red ------*/
 
 button.button_full.red, button.button_text.red, button.button_icon.red, 
@@ -2750,6 +2844,19 @@ a.button_full.red, a.button_text.red {
 
             filter: drop-shadow(0px 0px 1px hsl(0, 100%, 78%)); 
         }
+    }
+}
+
+@media (pointer: fine) {
+
+    .switch.button_icon.red.on, button.button_icon.red, a.button_icon.red {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+        } 
     }
 }
 
@@ -2816,6 +2923,19 @@ a.button_full.yellow, a.button_text.yellow {
     }
 }
 
+@media (pointer: fine) {
+
+    .switch.button_icon.yellow.on, button.button_icon.yellow, a.button_icon.yellow {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+        } 
+    }
+}
+
 /*------ Green ------*/
 
 button.button_full.green, button.button_text.green, button.button_icon.green, 
@@ -2861,6 +2981,19 @@ a.button_full.green, a.button_text.green {
     }
 }
 
+@media (pointer: fine) {
+
+    .switch.button_icon.green.on, button.button_icon.green, a.button_icon.green {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+        } 
+    }
+}
+
 /*------ Black ------*/
 
 button.button_full.black, button.button_text.black, button.button_icon.black, 
@@ -2903,6 +3036,19 @@ a.button_full.black, a.button_text.black {
             filter: drop-shadow(0px 0px 1px hsl(0, 0%, 64%)); 
         }
     } 
+}
+
+@media (pointer: fine) {
+
+    .switch.button_icon.black.on, button.button_icon.black, a.button_icon.black {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+        } 
+    }
 }
  
 /*  
@@ -3026,16 +3172,6 @@ TODO:            >>> Floating Labels
         box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_off; 
     }
 
-    button.image .piece_text, a.image .piece_text {
-
-        color: $color_text_button_type_image_piece_text_floating;
-        border-color: $color_border_button_type_image_piece_text_floating; 
-        background: $bg_button_type_image_piece_text_floating;
-        box-shadow:
-        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating, 
-        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating;  
-    }
-
     .switch.image .piece_label {
 
         display: inline-flex;
@@ -3059,9 +3195,6 @@ TODO:            >>> Floating Labels
 
     .switch.image.on .piece_text {
 
-        color: $color_text_switch_type_image_piece_text_floating_on;
-        border-color: $color_border_switch_type_image_piece_text_floating_on; 
-        background: $bg_switch_type_image_piece_text_floating_on;
         filter: initial;
         box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_on;  
     }
@@ -3072,6 +3205,109 @@ TODO:            >>> Floating Labels
 
             display: block !important;
         }
+    }
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── */
+
+@media (pointer: fine) {  
+
+    /*------ Default: Blue ------*/
+
+    .switch.image.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on;
+        border-color: $color_border_switch_type_image_piece_text_floating_on; 
+        background: $bg_switch_type_image_piece_text_floating_on;
+    }
+
+    button.image .piece_text, a.image .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating;
+        border-color: $color_border_button_type_image_piece_text_floating; 
+        background: $bg_button_type_image_piece_text_floating;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating;  
+    }
+
+    /*------ Red ------*/
+
+    .switch.image.red.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_red;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_red; 
+        background: $bg_switch_type_image_piece_text_floating_on_red;
+    }
+
+    button.image.red .piece_text, a.image.red .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_red;
+        border-color: $color_border_button_type_image_piece_text_floating_red; 
+        background: $bg_button_type_image_piece_text_floating_red;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_red, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_red;  
+    }
+    
+    /*------ Yellow ------*/ 
+
+    .switch.image.yellow.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_yellow;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_yellow; 
+        background: $bg_switch_type_image_piece_text_floating_on_yellow;
+    }
+
+    button.image.yellow .piece_text, a.image.yellow .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_yellow;
+        border-color: $color_border_button_type_image_piece_text_floating_yellow; 
+        background: $bg_button_type_image_piece_text_floating_yellow;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_yellow, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_yellow;  
+    }
+
+    /*------ Green ------*/
+
+    .switch.image.green.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_green;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_green; 
+        background: $bg_switch_type_image_piece_text_floating_on_green;
+    }
+
+    button.image.green .piece_text, a.image.green .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_green;
+        border-color: $color_border_button_type_image_piece_text_floating_green; 
+        background: $bg_button_type_image_piece_text_floating_green;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_green, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_green;  
+    }
+
+    /*------ Black ------*/
+
+    .switch.image.black.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_black;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_black; 
+        background: $bg_switch_type_image_piece_text_floating_on_black;
+    }
+
+    button.image.black .piece_text, a.image.black .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_black;
+        border-color: $color_border_button_type_image_piece_text_floating_black; 
+        background: $bg_button_type_image_piece_text_floating_black;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_black, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_black;  
     }
 }
 

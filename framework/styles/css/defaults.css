@@ -27,6 +27,20 @@ url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 2
 hsl(193, 100%, 83%);
 */
 /*  
+$bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+*/
+/*  
+$color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
+$color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
+$bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+*/
+/*  
 $color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
 $color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
 $color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
@@ -2314,13 +2328,12 @@ TODO:            >>> Floating Labels
     border: 1px solid;
     border-radius: 1000px;
     font-weight: initial;
-    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
     filter: initial;
   }
   .switch.button_icon .piece_text {
     border-color: #bdbdbd;
     color: #ababab;
-    background: linear-gradient(to bottom, white, #e8e8e8);
+    background: whitesmoke;
   }
   /*  
     button.button_icon .piece_text,
@@ -2340,11 +2353,10 @@ TODO:            >>> Floating Labels
     justify-content: center;
   }
   .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
-    color: #33d3ff;
-    border-color: #5cdcff;
-    background: linear-gradient(to bottom, white, #d6f6ff);
+    color: deepskyblue;
+    border-color: deepskyblue;
+    background: #f5fcff;
     filter: initial;
-    box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
   }
   .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text, a.button_icon:hover .piece_text {
     display: block !important;
@@ -2394,6 +2406,15 @@ a.button_full.blue .piece_text, a.button_text.blue .piece_text {
   }
 }
 
+@media (pointer: fine) {
+  .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text,
+  .switch.button_icon.blue.on .piece_text, button.button_icon.blue .piece_text, a.button_icon.blue .piece_text {
+    color: deepskyblue;
+    border-color: deepskyblue;
+    background: #f5fcff;
+  }
+}
+
 /*------ Red ------*/
 button.button_full.red, button.button_text.red, button.button_icon.red,
 a.button_full.red, a.button_text.red, a.button_icon.red {
@@ -2420,6 +2441,14 @@ a.button_full.red .piece_text, a.button_text.red .piece_text {
   button.button_full.red:not(.disabled):hover .piece_icon, button.button_text.red:not(.disabled):hover .piece_icon, button.button_icon.red:not(.disabled):hover .piece_icon,
   a.button_full.red:not(.disabled):hover .piece_icon, a.button_text.red:not(.disabled):hover .piece_icon, a.button_icon.red:not(.disabled):hover .piece_icon {
     filter: drop-shadow(0px 0px 1px #ff8f8f);
+  }
+}
+
+@media (pointer: fine) {
+  .switch.button_icon.red.on .piece_text, button.button_icon.red .piece_text, a.button_icon.red .piece_text {
+    border-color: red;
+    background: snow;
+    color: red;
   }
 }
 
@@ -2461,6 +2490,14 @@ a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
   filter: drop-shadow(0px 0px 2px #949400);
 }
 
+@media (pointer: fine) {
+  .switch.button_icon.yellow.on .piece_text, button.button_icon.yellow .piece_text, a.button_icon.yellow .piece_text {
+    border-color: #dcca04;
+    background: ivory;
+    color: #dcca04;
+  }
+}
+
 /*------ Green ------*/
 button.button_full.green, button.button_text.green, button.button_icon.green,
 a.button_full.green, a.button_text.green, a.button_icon.green {
@@ -2490,6 +2527,14 @@ a.button_full.green .piece_text, a.button_text.green .piece_text {
   }
 }
 
+@media (pointer: fine) {
+  .switch.button_icon.green.on .piece_text, button.button_icon.green .piece_text, a.button_icon.green .piece_text {
+    border-color: #00d600;
+    background: #f5fff5;
+    color: #00d600;
+  }
+}
+
 /*------ Black ------*/
 button.button_full.black, button.button_text.black, button.button_icon.black,
 a.button_full.black, a.button_text.black, a.button_icon.black {
@@ -2516,6 +2561,14 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   button.button_full.black:not(.disabled):hover .piece_icon, button.button_text.black:not(.disabled):hover .piece_icon, button.button_icon.black:not(.disabled):hover .piece_icon,
   a.button_full.black:not(.disabled):hover .piece_icon, a.button_text.black:not(.disabled):hover .piece_icon, a.button_icon.black:not(.disabled):hover .piece_icon {
     filter: drop-shadow(0px 0px 1px #a3a3a3);
+  }
+}
+
+@media (pointer: fine) {
+  .switch.button_icon.black.on .piece_text, button.button_icon.black .piece_text, a.button_icon.black .piece_text {
+    border-color: #8c8c8c;
+    background: #f7f7f7;
+    color: #8c8c8c;
   }
 }
 
@@ -2597,14 +2650,8 @@ TODO:            >>> Floating Labels
   .switch.image .piece_text {
     color: #ababab;
     border-color: #bdbdbd;
-    background: linear-gradient(to bottom, white, #e8e8e8);
-    box-shadow: 0px 7px 4px -2px rgba(0, 0, 0, 0.09);
-  }
-  button.image .piece_text, a.image .piece_text {
-    color: #33d3ff;
-    border-color: #5cdcff;
-    background: linear-gradient(to bottom, white, #d6f6ff);
-    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
+    background: whitesmoke;
+    box-shadow: 0px 7px 4px -2px transparent;
   }
   .switch.image .piece_label {
     display: inline-flex;
@@ -2623,14 +2670,78 @@ TODO:            >>> Floating Labels
     filter: initial;
   }
   .switch.image.on .piece_text {
-    color: #33d3ff;
-    border-color: #5cdcff;
-    background: linear-gradient(to bottom, white, #d6f6ff);
     filter: initial;
-    box-shadow: 0px 7px 4px -2px rgba(51, 211, 255, 0.24);
+    box-shadow: 0px 7px 4px -2px transparent;
   }
   .switch.image:hover .piece_text, button.image:hover .piece_text, a.image:hover .piece_text {
     display: block !important;
+  }
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── */
+@media (pointer: fine) {
+  /*------ Default: Blue ------*/
+  .switch.image.on .piece_text {
+    color: deepskyblue;
+    border-color: deepskyblue;
+    background: #f5fcff;
+  }
+  button.image .piece_text, a.image .piece_text {
+    color: deepskyblue;
+    border-color: deepskyblue;
+    background: #f5fcff;
+    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
+  }
+  /*------ Red ------*/
+  .switch.image.red.on .piece_text {
+    color: red;
+    border-color: red;
+    background: snow;
+  }
+  button.image.red .piece_text, a.image.red .piece_text {
+    color: red;
+    border-color: red;
+    background: snow;
+    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
+  }
+  /*------ Yellow ------*/
+  .switch.image.yellow.on .piece_text {
+    color: #dcca04;
+    border-color: #dcca04;
+    background: ivory;
+  }
+  button.image.yellow .piece_text, a.image.yellow .piece_text {
+    color: #dcca04;
+    border-color: #dcca04;
+    background: ivory;
+    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
+  }
+  /*------ Green ------*/
+  .switch.image.green.on .piece_text {
+    color: #00d600;
+    border-color: #00d600;
+    background: #f5fff5;
+  }
+  button.image.green .piece_text, a.image.green .piece_text {
+    color: #00d600;
+    border-color: #00d600;
+    background: #f5fff5;
+    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
+  }
+  /*------ Black ------*/
+  .switch.image.black.on .piece_text {
+    color: #8c8c8c;
+    border-color: #8c8c8c;
+    background: #f7f7f7;
+  }
+  button.image.black .piece_text, a.image.black .piece_text {
+    color: #8c8c8c;
+    border-color: #8c8c8c;
+    background: #f7f7f7;
+    box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
 }
 
