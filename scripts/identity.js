@@ -8,7 +8,11 @@ gmes-identity.js
 TODO: Framework Demos
 ────────────────────────────────────────────────────── */
 
-{
+/*  
+────────────────────────────
+TODO:    Choices
+──────────────────────────── */
+
 // Choice - Sample functions:
 
 function choice_option_1(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(1) }
@@ -93,14 +97,104 @@ function choice_example_2_Action_3() {
     document.querySelector('.choice_divsExample_2_div_3').style = 'display: block'
 }
 
-// Switch - Sample functions:
+/*  
+────────────────────────────
+TODO:    Switches
+──────────────────────────── */
 
-function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) }
+// Switches & Buttons - Sample functions:
+
+function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) /*console.log(arg.className) */ } 
 function switch_2(arg){ if(arg.classList.contains('disabled')) { return }; console.log(2) }
 function switch_3(arg){ if(arg.classList.contains('disabled')) { return }; console.log(3) }
 function switch_4(arg){ if(arg.classList.contains('disabled')) { return }; console.log(4) }
 function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; console.log(5) }
+
+// Tests Switches - No Unnecessary Pieces - Turn ON/OFF:
+
+var switches_group_2 = document.querySelector('.tests_toggle_switches_no_unnecessary_pieces')
+
+if (switches_group_2 !== null) {
+
+    switches_group_2.addEventListener('click', function() {
+        
+        var switches = document.querySelectorAll('.test_switches_group_2 .switch')
+        
+        switches.forEach(function ($switch) { 
+
+            switch_event($switch) 
+        })
+    })
 }
+
+// Tests Switches - Change Styles - Turn ON/OFF:
+
+var switches_group = document.querySelector('.tests_toggle_switches_change_styles')
+
+if (switches_group !== null) {
+        
+    switches_group.addEventListener('click', function() { 
+        
+        var switches = document.querySelectorAll('.test_switches_group .switch')
+        
+        switches.forEach(function ($switch) { 
+
+            switch_event($switch) 
+        })
+    })
+}
+
+// Switches Change Color:
+
+token_clickable_for_switches_blue = document.querySelector('.switches_change_color .blue').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_red = document.querySelector('.switches_change_color .red').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_yellow = document.querySelector('.switches_change_color .yellow').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_green = document.querySelector('.switches_change_color .green').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_black = document.querySelector('.switches_change_color .black').addEventListener('click', func_change_swts_color)
+ 
+function func_change_swts_color() { 
+
+    var new_color = this.classList[1]
+
+    var switches = document.querySelectorAll('.test_switches_group .switch')
+ 
+    switches.forEach(function (swt) {
+
+        swt.classList.remove('blue')
+        swt.classList.remove('red')
+        swt.classList.remove('green')
+        swt.classList.remove('yellow')
+        swt.classList.remove('black')
+    
+        swt.classList.add(new_color)
+    })
+}  
+
+// <button>/<a> Change Color:
+
+token_clickable_for_buttons_blue = document.querySelector('.button_or_a__change_color .blue').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_red = document.querySelector('.button_or_a__change_color .red').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_yellow = document.querySelector('.button_or_a__change_color .yellow').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_green = document.querySelector('.button_or_a__change_color .green').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_black = document.querySelector('.button_or_a__change_color .black').addEventListener('click', func_change_btns_color)
+ 
+function func_change_btns_color() { 
+
+    var new_color = this.classList[1]
+
+    var buttons = document.querySelectorAll('.test_buttons_group button')
+ 
+    buttons.forEach(function (button) {
+
+        button.classList.remove('blue')
+        button.classList.remove('red')
+        button.classList.remove('green')
+        button.classList.remove('yellow')
+        button.classList.remove('black')
+    
+        button.classList.add(new_color)
+    })
+} 
 
 /*  
 ──────────────────────────────────────────────────────
@@ -117,32 +211,6 @@ TODO:    >  Nav - Menu - HTML
 
 document.querySelector('.nav-menu').innerHTML = `
 
-<ul>
-
-<li><a href="../framework/pages/index.html"><span>Home</span></a><div><ul></ul></div></li>
-
-<li><a href="#"><span>News</span></a><div><ul></ul></div></li><!---->
-
-<li><a onclick="nav_menu_options(this)"><span>Gameplay</span></a>
-
-    <div>
-        <ul>
-            <li><a href="#"><span>History</span></a></li>
-            <li><a href="#"><span>Characters</span></a></li>
-            <li><a href="types.html"><span>Types</span></a></li>
-            <li><a href="skills.html"><span>Skills</span></a></li>
-        </ul>
-    </div>
-
-</li> 
-
-<!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
-
-<li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
-</ul>
-`
-
-/*
 <ul>
 <li><a onclick="nav_menu_options(this)"><span>Link 1</span></a>
 
@@ -234,7 +302,7 @@ document.querySelector('.nav-menu').innerHTML = `
 <li><a href="page.html"><span>P</span></a><div><ul></ul></div></li>
 <li><a aria-label="Hide bar"><img src="../images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
-*/
+`
 
 /*  
 ────────────────────────────
@@ -245,7 +313,7 @@ var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
 var nav_options_anchorClicked_index = 'none'
-// var bg_nav_selector = 'url(../../../framework/images/bgs/nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
+// var bg_nav_selector = 'url(../../../images/bgs/nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
 
 var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
                                                                                         do <html> apareça em momentos em que não se deseja 
@@ -467,7 +535,7 @@ document.querySelector('.headerNav-button').onclick = function() { // <- Show He
 /*  
 ──────────────────────────────────────────────────────
 TODO: Footer - HTML
-────────────────────────────────────────────────────── */
+────────────────────────────────────────────────────── 
 
 document.querySelector('footer').innerHTML = `
 
@@ -484,478 +552,26 @@ document.querySelector('footer').innerHTML = `
     <!--<p>Follow us on:</p>-->
 
         <ul class="footer-icons">
-            <li><a href="mailto:support@company.com.br"><img src="../framework/images/icons/mail.svg" alt="" width="38px" height="38px"></a></li>  
-            <li><a href="#"><img src="../framework/images/icons/youtube.svg" alt="" width="38px" height="38px"></a></li> 
-            <li><a href="#"><img src="../framework/images/icons/twitch.svg" alt="" width="38px" height="38px"></a></li>
-            <li><a href="#"><img src="../framework/images/icons/instagram.svg" alt="" width="38px" height="38px"></a></li>
-            <li><a href="#"><img src="../framework/images/icons/facebook.svg" alt="" width="38px" height="38px"></a></li>  
-            <li><a href="#"><img src="../framework/images/icons/twitter.svg" alt="" width="38px" height="38px"></a></li> 
+            <li><a href="mailto:support@company.com.br"><img src="../images/icons/mail.svg" alt=""></a></li>  
+            <li><a href="#"><img src="../images/icons/youtube.svg" alt=""></a></li> 
+            <li><a href="#"><img src="../images/icons/twitch.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/icons/instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="../images/icons/facebook.svg" alt=""></a></li>  
+            <li><a href="#"><img src="../images/icons/twitter.svg" alt=""></a></li> 
         </ul>
 
     <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
 
 </address> 
 
-<p class="copyright">© Copyright 2024 <!--by nobody./-->Tec OP Inc. All rights reversed.</p>
+<p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
 
-    </div>
+</div>
+
 `
-
-/* 
-──────────────────────────────────────────────────────
-TODO: Table - Skills
-────────────────────────────────────────────────────── */
-
-var type_icon_imgs = document.querySelectorAll('img.type_icon')
-
-imgsNamesAsAlts(type_icon_imgs)
-
-/*  
-────────────────────────────
-TODO:    > Variables Used In 2+ Topics
-──────────────────────────── */
-
-var skills_table_box = document.querySelector('.skills_table_box')
-
-var skills_table_rows = document.querySelectorAll('.skills_table tr')
-
-var skills_table_ths = document.querySelectorAll('.skills_table th')
-
-var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch')
-
-var SDSB_switchs = document.querySelectorAll('.skills_data_switchs_box .switch')
-
-/*  
-────────────────────────────
-TODO:    > Add Classes Of <th> names
-                    In Table Cells
-──────────────────────────── */
-
-for (i = 0; i < skills_table_ths.length; i++) {
-
-    var skills_table_th_content = skills_table_ths[i].textContent
-    
-    skills_table_ths[i].classList.add(skills_table_th_content)
-
-    for (i2 = 1; i2 < skills_table_rows.length; i2++) {
-
-        if(skills_table_rows[i2]) {
-
-            var tds = skills_table_rows[i2].querySelectorAll(':scope td')
-
-            tds[i].classList.add(skills_table_th_content)
-        }
-    }
-}
-
-/*  
-────────────────────────────
-TODO:    > Skills Choice
-──────────────────────────── */
-
-imgsNamesAsAlts(document.querySelectorAll('.skills_types_choice img'))
-
-function func_skills_types_choices(el) {
-
-    var skills_quantity = 0
-
-    skills_table_rows.forEach(function (skill_row) {
-    
-        var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
-
-        if (el.querySelector('img') === null) {
-
-            skill_row.style.display = 'table-row'
-            skills_quantity++
-            
-        } else {
-            
-            var this_type_img = getImgName(el.querySelector('img'))
-
-            for (i = 0; i < skill_types_imgs.length; i++) {
-
-                if(getImgName(skill_types_imgs[i]) === this_type_img) {
-
-                    skill_row.style.display = 'table-row'
-                    skills_quantity++
-
-                    break
-
-                } else {
-
-                    skill_row.style.display = 'none'
-                }
-            }
-        }
-    })
-
-    document.querySelector('.skills_table_box').style.display = 'block'
-    document.querySelector('.skills_quantity').style.display = 'block'
-
-    document.querySelector('.skills_quantity span').textContent = skills_quantity
-} 
-
-/*  
-────────────────────────────
-OUT:    > Skills Types Switchs
-──────────────────────────── */
-
-/*  
-────────────────────────────
-OUT:        >> Initial Settings
-──────────────────────────── 
-
-var quantity_of_types_activated = 0
-
-for (i = 0; i < skills_table_rows.length; i++) {
-
-    skills_table_rows[i].activated_skill_counter = 0
-}
-
-imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
 */
-
-/*  
-────────────────────────────
-OUT:        >> Skills Types Switchs Function
-──────────────────────────── 
-
-function F_skills_types_switchs(el) {
-
-    for (i = 1; i < skills_table_rows.length; i++) {
-        
-        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Types img') 
-
-        var this_type = getImgName(el.querySelector('.piece_icon'))
-
-        for (i2 = 0; i2 < imgs_type.length; i2++) {
-
-            if(getImgName(imgs_type[i2]) === this_type) {
-
-                if(el.classList.contains('on')) {
-
-                    quantity_of_types_activated--
-                    skills_table_rows[i].activated_skill_counter--
-                } else {
-                    quantity_of_types_activated++
-                    skills_table_rows[i].activated_skill_counter++
-                }
-
-                if(skills_table_rows[i].activated_skill_counter >= 1) {
-
-                    skills_table_rows[i].style.display = 'table-row'
-                } else {
-                    skills_table_rows[i].style.display = 'none'
-                }
-
-                if(quantity_of_types_activated >= 1) {
-
-                    document.querySelector('.skills_table_box').style.display = 'block'
-                } else {
-                    document.querySelector('.skills_table_box').style.display = 'none'
-                }
-            }
-        }            
-    }
-}*/
-
-/*  
-────────────────────────────
-OUT:            >> 'All' Switch
-──────────────────────────── 
-
-function F_skills_types_all_switch(el) {
-
-    if (el.classList.contains('on')) {
-        
-        for (ix = 1; ix < STSB_switchs.length; ix++) {
-
-            if (STSB_switchs[ix].classList.contains('on')) {
-                
-                F_skills_types_switchs(STSB_switchs[ix])
-                switch_event(STSB_switchs[ix]) 
-            }
-        }
-    } else {
-        
-        for (ix = 1; ix < STSB_switchs.length; ix++) {
-
-            if (!STSB_switchs[ix].classList.contains('on')) {
-                
-                F_skills_types_switchs(STSB_switchs[ix])
-                switch_event(STSB_switchs[ix]) 
-            }
-        }
-    }
-}*/
-
-/*  
-────────────────────────────
-OUT:            >> Switch - hide skill names
-──────────────────────────── 
-
-function F_hide_skills_names(el) {
-    
-    STSB_switchs.forEach(function (current_switch) {
-    
-        if (el.classList.contains('on')) {
-            
-            //current_switch.querySelector('.piece_text').style.display = 'inline'
-            current_switch.classList.remove('hide_skills_names')
-            document.querySelector('.skills_types_switchs_box').classList.remove('hide_skills_names__justifyContent_center')
-        } else {
-            //current_switch.querySelector('.piece_text').style.display = 'none'
-            current_switch.classList.add('hide_skills_names')
-            document.querySelector('.skills_types_switchs_box').classList.add('hide_skills_names__justifyContent_center')
-        }
-    })
-}*/
-
-/*  
-────────────────────────────
-TODO:    > Skills Data Switchs
-──────────────────────────── */
-
-/*  
-────────────────────────────
-TODO:      >> Decrease Size Of Buttons 
-                                On Highest Screen Width
-──────────────────────────── 
-
-var larger_screen_minWidth_setting = 1366 // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
-
-onresize = function() {
-
-    if(window.innerWidth >= larger_screen_minWidth_setting) {
-
-        SDSB_switchs.forEach(function (current_switch) {
-        
-            current_switch.classList.add('small')
-        })
-    } else {
-
-        SDSB_switchs.forEach(function (current_switch) {
-        
-            current_switch.classList.remove('small')
-        })
-    }
-}*/
- 
-/*  
-────────────────────────────
-TODO:      >> Labels
-──────────────────────────── */
-
-for (i = 1; i < SDSB_switchs.length; i++) {
-
-    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = skills_table_ths[i - 1].textContent
-}
-  
-/*  
-────────────────────────────
-TODO:      >> Logic
-──────────────────────────── */
-
-function F_skills_data_switchs(el) {
-
-    if(!el.classList.contains('disabled')) {
-
-                for (i = 0; i < SDSB_switchs.length; i++) {
-
-            if (el === SDSB_switchs[i]) {
-                    
-                var SDSB_switchs_indexSwitch = i - 1
-            }
-        }
-
-        if (el.classList.contains('on')) {
-            
-            skills_table_ths[SDSB_switchs_indexSwitch].style.display = 'none'
-
-            for (i = 1; i < skills_table_rows.length; i++) {
-            
-                skills_table_rows[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'none'
-            }
-        } else {
-            skills_table_ths[SDSB_switchs_indexSwitch].style.display = 'table-cell'
-
-            for (i = 1; i < skills_table_rows.length; i++) {
-            
-                skills_table_rows[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'table-cell'
-            }
-        }
-    }
-}
-
-/*  
-────────────────────────────
-TODO:          >>> 'All' Switch
-──────────────────────────── */
-
-function F_skills_data_all_switch(el) {
-
-    if (el.classList.contains('on')) {
-        
-        for (ix = 1; ix < SDSB_switchs.length; ix++) {
-
-            if (SDSB_switchs[ix].classList.contains('on')) {
-                
-                if (!hidden_data_indexes.some(function(item) { return item === ix })) {
-                    
-                    F_skills_data_switchs(SDSB_switchs[ix])
-                    switch_event(SDSB_switchs[ix]) 
-                }
-            }
-        }
-    } else {
-        
-        for (ix = 1; ix < SDSB_switchs.length; ix++) {
-
-            if (!SDSB_switchs[ix].classList.contains('on')) {
-                
-                if (!hidden_data_indexes.some(function(item) { return item === ix })) {
-                    
-                    F_skills_data_switchs(SDSB_switchs[ix])
-                    switch_event(SDSB_switchs[ix]) 
-                }
-            }
-        }
-    }
-}
-
-/*  
-────────────────────────────
-TODO:      >> Initial Setting
-──────────────────────────── */
-
-/*  
-────────────────────────────
-TODO:          >>> Activate 'All'
-                                        Type switch
-──────────────────────────── */
-
-STSB_switchs.forEach(function (current_switch) {
-
-    if (current_switch.querySelector(':scope .piece_text').textContent === 'All') {
-
-        F_skills_types_all_switch(current_switch)
-        switch_event(current_switch)
-    }
-})
-
-/*  
-────────────────────────────
-TODO:          >>> Activateds Data
-──────────────────────────── */
-
-var activated_data = ['Name', 'Types', 'Effect', 'Notes']
-
-var activated_data_indexes = [ ]
-
-for (i = 0; i < activated_data.length; i++) {
-
-    for (i2 = 0; i2 < SDSB_switchs.length; i2++) { 
-
-        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope .piece_text').textContent) {
-
-            activated_data_indexes.push(i2)
-        }
-    }
-}
-
-for (ix = 0; ix < activated_data_indexes.length; ix++) {
-
-    F_skills_data_switchs(SDSB_switchs[activated_data_indexes[ix]])
-    switch_event(SDSB_switchs[activated_data_indexes[ix]])
-}
-
-/*  
-────────────────────────────
-TODO:          >>> 'Name' Data disabled
-──────────────────────────── */
-
-for (i = 0; i < SDSB_switchs.length; i++) {
-
-    if (SDSB_switchs[i].querySelector(':scope .piece_text').textContent === 'Name') {
-
-        SDSB_switchs[i].classList.add('disabled')
-    }
-}
-
-/*  
-────────────────────────────
-TODO:          >>> Hidden Data Switchs
-──────────────────────────── */
-
-var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
-
-var hidden_data_indexes = [ ]
-
-for (i = 0; i < hidden_data_switchs.length; i++) {
-
-    for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
-
-        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope .piece_text').textContent) {
-
-            SDSB_switchs[i2].style.display = 'none'
-
-            hidden_data_indexes.push(i2)
-        }
-    }
-}
- 
-/*  
-────────────────────────────
-TODO:    > Replace Table Header 
-                'plusTP' With '+TP'
-──────────────────────────── */
-
-// Replace In Table Header:
-
-for (i = 0; i < skills_table_ths.length; i++) {
-
-    if(skills_table_ths[i].textContent.slice(0, 4) === 'plus') {
-
-        skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('plus', '+')
-    }
-}
-
-// Replace In Data Switchs Labels:
-
-for (i = 0; i < SDSB_switchs.length; i++) {
-
-    if(SDSB_switchs[i].querySelector(':scope .piece_text').textContent.slice(0, 4) === 'plus') {
-
-        SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('plus', '+')
-    }
-}
-
-/*  
-────────────────────────────
-TODO:    > Table Full Screen
-──────────────────────────── */
-
-// console.log(skills_table_box.getBoundingClientRect())
-
-skills_table_box.addEventListener('click', function() { 
-    
-    //scroll({ top: skills_table_box.getBoundingClientRect().y  - 72, left: 0, behavior: 'smooth' })
-
-    skills_table_box.classList.toggle('skills_table_box_full')
-    document.body.classList.toggle('overflow_hidden')
-})
-
-
 
 /* 
 ──────────────────────────────────────────────────────
 TODO: ...
 ────────────────────────────────────────────────────── */
-
-/*  
-────────────────────────────
-TODO:    > ...
-──────────────────────────── */
-
-

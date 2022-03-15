@@ -10,9 +10,21 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <link href='../styles/css/normalize.css' rel='stylesheet'>  
     <link href='../styles/css/gmes-normalize.css' rel='stylesheet'>
-    <!----><link href='../styles/css/defaults.css' rel='stylesheet'>
+    <link href='../styles/css/defaults.css' rel='stylesheet'>
     <link href='../styles/css/fw_identity.css' rel='stylesheet'>
-    
+<style>
+
+    button + button {
+
+        margin-top: 16px; 
+    }
+
+    .switch + .switch {
+
+        margin-top: 16px;
+    }
+
+</style>
 </head>
 <body>
     
@@ -28,7 +40,11 @@
                 
                     <h1><a href="index.html" class="logo"><img src="../images/icons/logo.svg" alt="Logo">Site</a></h1>
                     
-                    <a class="nav-menu-button"><img src="../images/icons/menu.svg" alt="Menu button"><span>×</span></a>
+                    <a class="nav-menu-button">   
+                        <img src="../images/icons/menu.svg" alt="Menu button">
+                        <img src="../images/icons/menu_close.svg" alt="Menu button">
+                        <!-- <span>×</span> -->
+                    </a>
 
                     <div class="nav-menu">
                         <!-- Conteúdo no JS! -->
@@ -47,7 +63,7 @@
     <main>
 
         <div class="central">
-
+<!--  
             <h1>Outra Página</h1>
 
             <p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd></p>
@@ -83,7 +99,7 @@
             <div class="lb2"></div>
 
             <hr>
-
+-->
             <section>
 
                 <h2 class="hidden">Slider</h2>
@@ -137,7 +153,7 @@
                 </div>
 
             </section>
-
+<!--  
             <div class="lb2"></div>
 
             <hr>
@@ -186,9 +202,90 @@
 
             <hr>
 
+            <div class="lb2"></div>-->
+<!--  
+            <div class="switch button_icon on center" onclick="switch_1(this); switch_event(this)">
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div>
+
+            <div class="switch button_full pill center" onclick="switch_1(this); switch_event(this)">  
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div> 
+
+            <div class="switch button_text pill center" onclick="switch_1(this); switch_event(this)">  
+                <span class="piece_text">Etiqueta</span>
+            </div>
+    
+            <div class="switch button_icon rounded on center" onclick="switch_1(this); switch_event(this)"> 
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div>
+
             <div class="lb2"></div>
 
-            <ul class="choice_h center" onclick="choice(this)">
+            <div class="switch image pill on center" onclick="switch_1(this); switch_event(this)">
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div>
+
+            <div class="lb2"></div>
+
+            <div class="switch key_full on" onclick="switch_1(this); switch_event(this)"> 
+                <div class="piece_key"></div>
+                <div class="piece_label">
+                    <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                    <span class="piece_text">Etiqueta</span>
+                </div>
+            </div>
+
+            <div class="lb2"></div>
+
+            <hr>-->
+
+            <div class="lb2"></div>
+
+            <button class="button_full text_below center">     
+                <img class="piece_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px;"> 
+                <span class="piece_text">Etiqueta</span> 
+            </button>
+
+            <button class="button_icon center">  
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt=""> 
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <button class="button_full pill center">  
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </button> 
+
+            <button class="button_text pill center">  
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <button class="button_full text_below rounded center">
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="" style="width: 64px;"> 
+                <span class="piece_text">Etiqueta</span> 
+            </button>
+
+            <button class="button_text rounded center">  
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <button class="button_icon rounded center"> 
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <div class="lb2"></div>
+
+            <hr>
+
+            <div class="lb2"></div>
+
+            <ul class="choice horizontal center" onclick="choice(this)">
                 <li><span>Escolher</span></li>
                 <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1</span></a></li>
                 <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
@@ -197,7 +294,7 @@
 
             <div class="lb2"></div>
 
-            <ul class="choice_v center" onclick="choice(this)">
+            <ul class="choice vertical center" onclick="choice(this)">
                 <li><span>Escolher</span></li>
                 <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1 - Vertical choice</span></a></li>
                 <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
@@ -206,7 +303,7 @@
 
             <div class="lb2"></div>
             
-            <ul class="choice_d center" onclick="choice(this)">
+            <ul class="choice dropdown center" onclick="choice(this)">
                 <li><span>Escolher</span></li>
                 <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
                 <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
@@ -215,7 +312,7 @@
 
             <div class="lb2"></div>
 
-            <ul class="choice_d noLabel center" onclick="choice(this)">
+            <ul class="choice dropdown no_label center" onclick="choice(this)">
                 <li><img src="../images/exs/choice_label.svg" alt=" " style="width: 150px; height: 40px;"></li>
                 <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../images/exs/choice_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
                 <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../images/exs/choice_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
@@ -225,25 +322,7 @@
             <div class="lb2"></div>
 
             <hr>
-
-            <div class="lb2"></div>
-
-            <div class="switch" onclick="switch_event(this); switch_1(this)">
-                <div></div>
-                <p>Etiqueta</p>
-            </div>
-
-            <div class="lb2"></div>
-
-            <div class="switch on inverted" onclick="switch_event(this); switch_1(this)"> 
-                <div></div>
-                <p><img src="../images/exs/icon_switch_label_x3.png" alt="">Etiqueta</p>
-            </div>
-
-            <div class="lb2"></div>
-
-            <hr>
-
+<!--  
             <a href="" class="card h1">
                 <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
 
@@ -285,7 +364,7 @@
                 </a>
                 
             </div>
-
+-->
             <div class="lb2"></div>
 
             <div class="group c_2">
@@ -375,7 +454,7 @@
                 </a>
 
             </div>
-
+<!--  
             <hr>
 
             <div class="lb2"></div>
@@ -388,22 +467,80 @@
                 <a onclick="lightbox(`<div class='font_size' style='text-align: center;'>Alert!</div>`, '../images/exs/alert.png', '75px')">Lightbox 3</a>  
             </p>   
 
-            <div class="lb3"></div>
+            <div class="lb2"></div>
 
+            <hr>
+
+            <div class="lb21"></div>
+
+            <button class="button_text pill center" style="width: 116px">
+                <span class="piece_text">New Game</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 116px">
+                <span class="piece_text">Continue</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 116px">
+                <span class="piece_text">Options</span>
+            </button>
+        
+            <div class="lb21"></div>
+
+            <hr>
+
+            <div class="lb21"></div>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Itens</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Skills</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Equips</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Scan</span> 
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Formation</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Save</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Options</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Exit</span>
+            </button>
+        
+            <div class="lb21"></div>
+-->
         </div>
 
     </main>
 
-    <footer>
-
-
-        
-    </footer>
+    <footer></footer>
 
     <!-- TODO: Fim -->
 
-<script src="../scripts/defaults.js"></script>
-<script src="../scripts/identity.js"></script>
+    <!-- 
+        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
+        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
+        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+    -->
+
+    <script defer src="../scripts/defaults.js"></script> 
+    <script defer src="../scripts/identity.js"></script>
     
 </body>
 </html>

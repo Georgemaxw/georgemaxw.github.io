@@ -75,7 +75,7 @@ $color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
 
 $bg_header: url(../../images/bgs/header.png) center /100% 100%;
 // $bg_nav: url(../../images/bgs/nav.png)  center /100% 100%;
-$bg_nav: linear-gradient(to right, rgb(41, 152, 244), rgb(115, 218, 247), rgb(41, 152, 244)); 
+$bg_nav: linear-gradient(to right, hsl(201, 100%, 50%), hsl(193, 100%, 78%), hsl(201, 100%, 50%)); 
 // $bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
 // $bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
 $bg_nav_selector: hsla(0, 0%, 0%, 0.12); // VÍNCULO: Váriável JS
@@ -96,13 +96,39 @@ $bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
 
 // ─────────── Texts ───────────
 
-$color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%;
+// $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%; 199
+$color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 50%), hsl(201, 100%, 50%), hsl(193, 100%, 82%), hsl(230, 100%, 40%)); // hsl(246, 100%, 50%)
+$color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(201, 100%, 64%), hsl(193, 100%, 88%), hsl(200, 100%, 50%));
+$color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 90%), hsl(201, 100%, 50%), hsl(193, 100%, 90%), hsl(210, 100%, 50%));
+$color_text_hx: linear-gradient(to bottom, hsl(199, 100%, 90%), hsl(199, 100%, 50%), hsl(187, 100%, 87%), hsl(201, 100%, 50%)); 
 $color_border_kbd: hsl(0, 0%, 95%);
-$color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%;
-$color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+$color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%; 
+// $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
 $color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 
 $bg_kbd: hsl(0, 0%, 86%);
+
+// Tokens:
+
+$color_border_token_blue: hsl(195, 100%, 50%);
+$bg_token_blue: hsl(195, 100%, 98%);
+$color_text_token_blue: deepskyblue;
+
+$color_border_token_red: red;
+$bg_token_red: hsl(0, 100%, 99%);
+$color_text_token_red: red;
+
+$color_border_token_yellow: hsl(55, 96%, 44%);
+$bg_token_yellow: hsl(60, 100%, 97%);
+$color_text_token_yellow: hsl(55, 96%, 44%);
+
+$color_border_token_green: hsl(120, 100%, 42%);
+$bg_token_green: hsl(120, 100%, 98%);
+$color_text_token_green: hsl(120, 100%, 42%);
+
+$color_border_token_black: hsl(0, 0%, 55%);
+$bg_token_black: hsl(0, 0%, 97%); 
+$color_text_token_black: hsl(0, 0%, 55%);
 
 // ─────────── Signs ───────────
 
@@ -151,24 +177,37 @@ $bg_select: linear-gradient(to bottom, hsl(0, 0%, 91%), white);
 
 $color_text_switch_type_button_off: hsl(0, 0%, 50%);
 $color_text_switch_type_button_on: white;
-$color_text_switch_type_button_shadow_outline_on: hsl(193, 100%, 40%);
 
 $color_icon_outline_switch_type_button_off: hsla(0, 0%, 0%, 0.45);
-$color_icon_outline_switch_type_button_on: hsl(187, 100%, 47%);
 
 $color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
-$color_shadow_box_inset_button_type_normal_and_switch_type_button_clear: white; // VÍNCULO: Váriável JS
+$color_shadow_box_inset_element_type_button_clear: white; // VÍNCULO: Váriável JS
 
 $bg_switch_type_button_off: 
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
-linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white),
 hsl(193, 0%,94%); // hsl(193, 0%,88%); 
 //$bg_switch_type_button_off: hsl(193, 0%,96%); 
 
-$bg_button_type_normal_hover_and_switch_type_button_on:  // VÍNCULO: Váriável JS
+$bg_element_type_button_clear_blue:  // VÍNCULO: Váriável JS
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
-linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%),
-hsl(193, 100%, 83%); 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),
+hsl(193, 100%, 80%); // hsl(193, 100%, 83%); 
+
+$bg_element_type_button_clear_red: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 100%, 87%);
+
+$bg_element_type_button_clear_yellow:
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 52%);
+
+$bg_element_type_button_icon_clear_yellow: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 48%);
+
+$bg_element_type_button_clear_green: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(120, 100%, 77%); 
+
+$bg_element_type_button_clear_black: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 0%, 76%);
 
 /*      
 //$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
@@ -186,12 +225,38 @@ $bg_button_type_normal_and_switch_type_button_rounded_shine: url(../../images/bg
 
 // (Text floating):
 
+/*  
 $bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
 $color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
 $color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
 $bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
 $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
 $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+*/
+
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$bg_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 96%); //linear-gradient(to bottom, white, hsl(193, 0%, 91%));
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_token_blue;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_token_blue;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_token_blue; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_token_red;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_token_red;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_token_red; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_token_yellow;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_token_yellow;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_token_yellow; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_token_green;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_token_green;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_token_green; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_token_black;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_token_black;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_token_black; 
 
 // --- Type Image ---
 
@@ -200,15 +265,42 @@ $color_outline_button_and_switch_both_type_image: hsla(0, 0%, 0%, 0.2);
 
 // (Text floating):
 
-$color_text_switch_type_image_piece_text_floating_off: hsl(0, 0%, 67%); 
-$color_border_switch_type_image_piece_text_floating_off: hsl(0, 0%, 74%); 
-$color_box_shadow_switch_type_image_piece_text_floating_off: hsla(0, 0%, 0%, 0.09);
-$bg_switch_type_image_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_image_piece_text_floating_off: $color_border_switch_type_button_icon_piece_text_floating_off; 
+$bg_switch_type_image_piece_text_floating_off:  $bg_switch_type_button_icon_piece_text_floating_off;
+$color_text_switch_type_image_piece_text_floating_off: $color_text_switch_type_button_icon_piece_text_floating_off; 
+$color_box_shadow_switch_type_image_piece_text_floating_off: transparent; // hsla(0, 0%, 0%, 0.09);
 
+/*  
 $color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
 $color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
-$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
 $bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+*/
+
+$color_border_switch_type_image_piece_text_floating_on: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on;  
+$bg_switch_type_image_piece_text_floating_on: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
+$color_text_switch_type_image_piece_text_floating_on: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on; 
+$color_box_shadow_switch_type_image_piece_text_floating_on: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_red: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red;  
+$bg_switch_type_image_piece_text_floating_on_red: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+$color_text_switch_type_image_piece_text_floating_on_red: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_red: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_yellow: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;  
+$bg_switch_type_image_piece_text_floating_on_yellow: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+$color_text_switch_type_image_piece_text_floating_on_yellow: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_yellow: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_green: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green;  
+$bg_switch_type_image_piece_text_floating_on_green: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+$color_text_switch_type_image_piece_text_floating_on_green: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_green: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_black: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black;  
+$bg_switch_type_image_piece_text_floating_on_black: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+$color_text_switch_type_image_piece_text_floating_on_black: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_black: transparent;
 
 // --- Type Key ---
 
@@ -240,11 +332,35 @@ $color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%
 $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
 */
 
-$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
 $color_border_button_type_image_piece_text_floating: $color_border_switch_type_image_piece_text_floating_on;
-$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
-$color_box_shadow_out_button_type_image_piece_text_floating: $color_box_shadow_switch_type_image_piece_text_floating_on;
 $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floating_on; 
+$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
+$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating: transparent; // $color_box_shadow_switch_type_image_piece_text_floating_on;
+
+$color_border_button_type_image_piece_text_floating_red: $color_border_switch_type_image_piece_text_floating_on_red;
+$bg_button_type_image_piece_text_floating_red: $bg_switch_type_image_piece_text_floating_on_red; 
+$color_text_button_type_image_piece_text_floating_red: $color_text_switch_type_image_piece_text_floating_on_red; 
+$color_box_shadow_in_button_type_image_piece_text_floating_red: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_red: transparent;
+
+$color_border_button_type_image_piece_text_floating_yellow: $color_border_switch_type_image_piece_text_floating_on_yellow;
+$bg_button_type_image_piece_text_floating_yellow: $bg_switch_type_image_piece_text_floating_on_yellow; 
+$color_text_button_type_image_piece_text_floating_yellow: $color_text_switch_type_image_piece_text_floating_on_yellow; 
+$color_box_shadow_in_button_type_image_piece_text_floating_yellow: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_yellow: transparent;
+
+$color_border_button_type_image_piece_text_floating_green: $color_border_switch_type_image_piece_text_floating_on_green;
+$bg_button_type_image_piece_text_floating_green: $bg_switch_type_image_piece_text_floating_on_green; 
+$color_text_button_type_image_piece_text_floating_green: $color_text_switch_type_image_piece_text_floating_on_green; 
+$color_box_shadow_in_button_type_image_piece_text_floating_green: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_green: transparent;
+
+$color_border_button_type_image_piece_text_floating_black: $color_border_switch_type_image_piece_text_floating_on_black;
+$bg_button_type_image_piece_text_floating_black: $bg_switch_type_image_piece_text_floating_on_black; 
+$color_text_button_type_image_piece_text_floating_black: $color_text_switch_type_image_piece_text_floating_on_black; 
+$color_box_shadow_in_button_type_image_piece_text_floating_black: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_black: transparent;
 
 // ─────────── Choices ───────────
 
@@ -258,39 +374,36 @@ $bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floa
 $color_shadow_lightbox: black; 
 $color_shadow_lightbox_button: black; 
 
-$bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
-$bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+// $bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
+// $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 
 // ─────────── Scrollbars ───────────
- 
-$color_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);
-$color_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14);
-$color_scrollbar_track: hsla(0, 0%, 100%, 0.4);
+
+// Header-nav, choice dropdown, lightbox, <textarea>
+
+// $color_1_scrollbar: hsla(0, 0%, 0%, 0.14);
+$color_1_scrollbar: linear-gradient(to bottom, hsl(180, 100%, 85%), hsl(195, 100%, 55%)); // hsl(188, 100%, 85%);
+$color_2_scrollbar: hsla(0, 0%, 100%, 0.4);
+
+$color_scrollbar_thumb: $color_1_scrollbar;
+$color_scrollbar_thumb_firefox: $color_1_scrollbar;
+$color_scrollbar_track: $color_2_scrollbar;
 $color_scrollbar_track_firefox: transparent;
-$color_menu_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
-$color_menu_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+
+$color_menu_scrollbar_thumb: $color_1_scrollbar;  
+$color_menu_scrollbar_thumb_firefox: $color_1_scrollbar; 
 $color_menu_scrollbar_track: transparent;
 $color_menu_scrollbar_track_firefox: transparent;
-$color_menuRounded_scrollbar_thumb: hsla(0, 0%, 0%, 0.14);  
-$color_menuRounded_scrollbar_thumb_firefox: hsla(0, 0%, 0%, 0.14); 
+
+$color_menuRounded_scrollbar_thumb: $color_1_scrollbar;  
+$color_menuRounded_scrollbar_thumb_firefox: $color_1_scrollbar; 
 $color_menuRounded_scrollbar_track: transparent;
-$color_menuRounded_scrollbar_track_firefox: hsla(0, 0%, 100%, 0.4);
+$color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
 
 // ─────────── Others ───────────
 
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Classes JS
-────────────────────────────────────────────────────── */
-
-// Classes Genéricas Pra Serem Aplicadas Somente Via JS:
-
-.overflow_hidden {
-    overflow: hidden;
-}
 
 /*  
 ──────────────────────────────────────────────────────
@@ -303,6 +416,91 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: <html> & <body> 
+────────────────────────────────────────────────────── */
+
+html {
+
+    background: $bg_html;
+}
+
+html::-webkit-scrollbar { // Entire bar
+
+    width: 14px;
+    height: 14px;
+}
+
+html::-webkit-scrollbar-thumb { // Bar pointer  
+
+    border-radius: 1000px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+
+
+
+    // $delta_deg: 116deg; 
+    // $delta_deg: 140deg; 
+    // $delta_deg: 231deg; 
+    // $delta_deg: 295deg; 
+
+    // background:
+    // linear-gradient(calc(217deg + #{$delta_deg}), hsla(190, 100%, 80%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    // linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    // linear-gradient(calc(336deg + #{$delta_deg}), hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    // hsla(0, 0%, 100%, 0);
+
+
+
+    // $delta_deg: 320deg;
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 83%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    hsla(0, 0%, 100%, 0);
+}
+
+html::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 78%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.85), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 92%, 0.8), hsla(190, 100%, 80%, 0) 71%);
+
+    box-shadow: 
+    inset 0px 0px 0px 1px hsla(195, 100%, 50%, 0.15),
+    0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar-track {   // Bar background
+
+    border-top: 1px solid $color_theme;
+    border-left: 1px solid $color_theme;
+    background: radial-gradient(white, hsl(195, 100%, 95%));
+}
+
+// html::-webkit-scrollbar-track:hover {   // Bar background hover
+
+//     background: hsla(195, 100%, 50%, 0.1);
+// }
+
+html { // Regra para o Firefox
+        
+    scrollbar-width: auto;
+    scrollbar-color: hsl(195, 100%, 50%) hsla(195, 100%, 50%, 0.06);
+}
+
+body {
+
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
        
 /*  
@@ -369,15 +567,16 @@ a[href^="http"] {
     padding-right: 20px; 
 }
 
-@for $i from 1 through 6 { 
+@for $i from 2 through 6 {
+
 	h#{$i} {
-        font-size: calc(50rem - (5 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
+
+        font-size: calc(58rem - (6 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
         margin-right: $margin_horizontal;
-        text-align: center; 
-        // color: $color_theme;
+        text-align: center;
         background: $color_text_hx;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -481,6 +680,11 @@ abbr[title] {
     cursor: pointer;
 }
 
+address {
+
+    line-height: 1.5;
+}
+
 dfn, var, address, cite {
     font-style: normal;
 }
@@ -551,24 +755,33 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     padding: 5px 13px 5px;
 }
 
-.highlight, .hl {
+// .highlight {
     /*background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;*/
 
-    color: $color_theme;
-}
+//     color: $color_theme;
+// }
 
-.highlight_menu, .hlm {
+// .highlight_menu {
     /*background: $color_text_highlight_menu;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;*/ 
 
-    color: yellow;
+//     color: yellow;
+// }
+
+.highlight {
+
+    background: $color_text_highlight;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .click { 
@@ -601,6 +814,48 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-decoration: none !important;
     cursor: pointer;
     */
+}
+
+span.token {
+
+    padding: 6px 8px;
+    border-radius: 1000px;
+}
+
+span.token, span.token.blue {
+
+    border: 1px solid $color_border_token_blue;
+    background: $bg_token_blue;
+    color: $color_text_token_blue;
+}
+
+span.token.red {
+
+    border: 1px solid $color_border_token_red;
+    background: $bg_token_red;
+    color: $color_text_token_red;        
+} 
+
+span.token.yellow {
+
+    border: 1px solid $color_border_token_yellow;
+    background: $bg_token_yellow;
+    color: hsl(60, 100%, 50%); // yellow
+    color: $color_text_token_yellow; 
+}
+
+span.token.green {
+
+    border: 1px solid $color_border_token_green;
+    background: $bg_token_green;
+    color: $color_text_token_green;
+}
+
+span.token.black {
+
+    border: 1px solid $color_border_token_black;
+    background: $bg_token_black;
+    color: $color_text_token_black;        
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -916,6 +1171,11 @@ TODO:        >> Menu
             li {
                 border-top: 1px solid $color_text_menu;
 
+                        span { 
+
+                            filter: drop-shadow(0px 0px 2px hsl(195, 100%, 44%));  
+                        }
+
                 div { // <- Sub opções
                     display: none;
 
@@ -978,22 +1238,29 @@ TODO:        >> Menu
     // Scrollbars:
 
     .nav-menu ul::-webkit-scrollbar { // Entire bar
-        width: 10px;
-        height: 11px;
+
+        width: 11px;
+        height: 12px;
     }
     
     .nav-menu ul::-webkit-scrollbar-thumb { // Bar pointer
-        background: $color_menuRounded_scrollbar_thumb;    
-        border-radius: 10px; 
+        
+        // background: linear-gradient(to bottom, hsl(195, 100%, 93%), white, hsl(195, 100%, 93%));
+        background: white;
+        border-radius: 1000px; 
+        box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 72%, 1);
     }
     
     .nav-menu ul::-webkit-scrollbar-track {   // Bar background
-        background: $color_menuRounded_scrollbar_track;
+
+        background: hsla(195, 100%, 85%, 0.5);
+        border-radius: 1000px; 
     }
 
-    .nav-menu ul {
+    .nav-menu ul { // Regra para o Firefox
+
         scrollbar-width: thin;
-        scrollbar-color: $color_menuRounded_scrollbar_thumb_firefox $color_menuRounded_scrollbar_track_firefox;
+        scrollbar-color: white hsla(0, 0%, 100%, 0.22);
     }
 
     @media (pointer: fine) {
@@ -1199,47 +1466,51 @@ TODO:    > Footer
 ──────────────────────────── */
 
 .footer-content {
+
     width: 100%;
     margin-top: calc(2 * #{$margin_vertical});
 
     address {
+
         width: 100%;
     }
 
     .footer-icons {
-        width: calc(100% - (2 * #{$margin_horizontal}));
-        height: 48px;
-        border-radius: 50px;
-        background-color: $color_theme;
-        background: $bg_footer_icons;
-        //padding: 6px 0 0px;
-        padding-top: 2px;
-        margin-left: auto;
-        margin-right: auto; 
-        //box-shadow: 4px 6px 9px 0px hsla(0, 0%, 0%, 0.22);
-        box-shadow: 3px 3px 6px 0px $color_shadow_footer;
 
-        list-style-type: none;
+        /* footer anterior.
+
         display: flex;
         justify-content: space-evenly;
         align-items: center; 
+        
+        width: calc(100% - (2 * #{$margin_horizontal}));
+        height: 48px;
+        border-radius: 50px;
+        padding-top: 2px;
+        margin-left: auto;
+        margin-right: auto; 
+        background: $bg_footer_icons;
+        box-shadow: 3px 3px 6px 0px $color_shadow_footer;
+        list-style-type: none;
  
         li, a {
+        
             height: 40px !important;
         }
-
+        
         img {
+        
             padding: 5px;
             border: 2px solid $color_text_menu;
             border-radius: 50%;
             filter: drop-shadow(1px 1px 1px $color_shadow_footer_icons); 
-        }
+        } 
 
         // Não apage esta regra comentada:
-        /*@media (min-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) { 
+        // @media (min-width: calc(#{$central_maxWidth} + (2 * #{$margin_horizontal}))) { 
 
-            width: 100%;
-        }*/
+        //     width: 100%;
+        // }
 
         // Footer-icons em smartphone - paisagem:
 
@@ -1247,22 +1518,73 @@ TODO:    > Footer
 
             width: calc(100% - 16px);
         }
+        */
+        
+        // footer novo:
+
+        width: calc(100% - (2 * #{$margin_horizontal})); 
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 0; 
+        list-style-type: none;
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+
+            width: 58px;
+            height: 58px;
+            color: #000000; 
+            margin: 0;
+            margin-bottom: $margin_vertical; 
+        }
+
+        // Configuração para 5 ícones:
+
+        @media (min-width: 0px) { 
+            
+            $li_margin_horizontal: 20px;
+
+            li + li { margin-left: $li_margin_horizontal; } 
+            li:nth-last-of-type(1) { margin-right: $li_margin_horizontal; } 
+        } 
+
+        @media (min-width: 362px) {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            max-width: 370px; // 5 * 58 + 4 * 20
+
+            li + li { margin-left: 0; } 
+            li:nth-last-of-type(1) { margin-right: 0; } 
+        }
     }
+
+    /* footer anterior.
 
     @media (max-height: $screen_small_widthLimit) {
 
         max-width: none !important; 
     }
+    */
 
     .copyright {
+
+        margin-top: 0; // Retirar para o footer anterior. 
         font-size: $font_smaller;
         text-indent: 0;
         text-align: center;
 
-        /*padding: 6px 0;
-        margin: 14px 0 0;
-        color: $color_text_menu;
-        background-color: black;*/
+        // padding: 6px 0;
+        // margin: 14px 0 0;
+        // color: $color_text_menu;
+        // background-color: black;
     }
 }
 
@@ -1628,25 +1950,35 @@ textarea {
 // Scrollbar:
 
 textarea::-webkit-scrollbar { // Entire bar
+
     width: 10px;
     height: 11px;
 }
 
 textarea::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_scrollbar_thumb;    
-    border-radius: 10px;
+
+    background: hsla(0, 0%, 0%, 0.14);    
+    border-radius: 1000px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    background: hsla(0, 0%, 35%, 0.14);    
 }
 
 textarea::-webkit-scrollbar-track {   // Bar background
-    background: $color_scrollbar_track;
+
+    background: transparent;
 }
 
-textarea {
+textarea { // Regra para o Firefox
+        
     scrollbar-width: auto;
-    scrollbar-color: $color_scrollbar_thumb_firefox $color_scrollbar_track_firefox;
+    scrollbar-color: hsla(0, 0%, 0%, 0.14) transparent;
 } 
 
 input[type="file"] {
+
     color: transparent;
     border-radius: 0;
     filter: none;
@@ -1655,6 +1987,7 @@ input[type="file"] {
 }
 
 input[type="radio"], input[type="checkbox"] {
+
     width: auto;
     margin-top: 0;
     margin-left: 20px;
@@ -1791,7 +2124,9 @@ TODO:    > Class
 TODO:    > Switches & Buttons
 ────────────────────────────────────────────────────── */
 
-.switch, button {
+.switch, 
+button, 
+a.button_full, a.button_text, a.button_icon, a.image {
 
     align-items: center;
 
@@ -1808,7 +2143,7 @@ TODO:    > Switches & Buttons
     }
 }
 
-.switch.disabled, button.disabled {
+.switch.disabled, button.disabled, a.disabled {
 
     opacity: 0.5;
     cursor: default;
@@ -1824,7 +2159,9 @@ button {
 TODO:        >> Button
 ──────────────────────────── */
 
-.switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon {
+.switch.button_full, .switch.button_text, .switch.button_icon, 
+button.button_full, button.button_text, button.button_icon, 
+a.button_full, a.button_text, a.button_icon {
 
     display: inline-flex;
     justify-content: center;
@@ -1846,12 +2183,11 @@ TODO:        >> Button
           
         $offset: 2px;
         $left:  $offset;
-        $height: 49.8%; //calc(24px + #{$offset});
 
-        top: $offset;  
+        top: 2px;
         left:  $left;
         width: calc(100% - 2 * #{$left});
-        height: $height; 
+        height: 49.8%;
     }
 
     .piece_text {
@@ -1898,44 +2234,26 @@ TODO:        >> Button
     }
 }
 
-button.button_full, button.button_text, button.button_icon {
+button.button_full, button.button_text, button.button_icon, 
+a.button_full, a.button_text, a.button_icon {
 
+    /* 
     background: 
     linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
     linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.     
-
-    /* 
-    .button_shine_top {
-
-        opacity: 1;
-    } 
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.
     */
 
     .piece_text {
 
         color: $color_text_menu;
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%));
+        // filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%));
     }
 
     .piece_icon {
 
-        filter: drop-shadow(0px 0px 1px hsla(195, 100%, 67%, 0.7));
-    }
-}
-
-@media not all and (pointer: coarse) {
-
-    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover {
-    //button.button_full, button.button_text, button.button_icon {
-
-        background: $bg_button_type_normal_hover_and_switch_type_button_on; // <- Propriedade aplicada aprimorada via JS.
-        
-        box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;  
-        // filter: drop-shadow(0px 0px 5px adjust-color($color_theme, $lightness: 7%)); 
-
-        // filter: drop-shadow(0px 0px 5px hsl(195, 100%, 57%));
+        // filter: drop-shadow(0px 0px 1px hsla(195, 100%, 67%, 0.7));
     }
 }
 
@@ -1960,7 +2278,7 @@ button.estilo_3 {
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------
 
-.switch.button_full, button.button_full {
+.switch.button_full, button.button_full, a.button_full {
 
     padding: 11px; 
     padding-right: 12px;
@@ -1972,7 +2290,7 @@ button.estilo_3 {
     }
 }
  
-.switch.button_text, button.button_text {
+.switch.button_text, button.button_text, a.button_text {
 
     padding: 10px; 
     padding-right: 11px;
@@ -1988,7 +2306,7 @@ button.estilo_3 {
     }
 }
       
-.switch.button_icon, button.button_icon {
+.switch.button_icon, button.button_icon, a.button_icon {
 
     // justify-content: center;
     padding: 9px; // Propriedade aplicada aprimorada via JS.
@@ -2013,7 +2331,7 @@ button.estilo_3 {
     }
 }
       
-.switch.button_icon:not(.disabled), button.button_icon:not(.disabled) {
+.switch.button_icon:not(.disabled), button.button_icon:not(.disabled), a.button_icon:not(.disabled) {
 
     .piece_text {
 
@@ -2028,12 +2346,13 @@ button.estilo_3 {
     }
 }
 
-button.button_full.disabled, button.button_text.disabled {
+button.button_full.disabled, button.button_text.disabled, 
+a.button_full.disabled, a.button_text.disabled {
 
     color: adjust-color($color_text, $alpha: -0.5);
 }
 
-.switch.button_icon.disabled, button.button_icon.disabled {
+.switch.button_icon.disabled, button.button_icon.disabled, a.button_icon.disabled {
     
     .piece_text {
 
@@ -2043,7 +2362,9 @@ button.button_full.disabled, button.button_text.disabled {
 
 // ─────────── Pill ───────────
 
-.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, button.button_full.pill, button.button_text.pill, button.button_icon.pill {
+.switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, 
+button.button_full.pill, button.button_text.pill, button.button_icon.pill, 
+a.button_full.pill, a.button_text.pill, a.button_icon.pill {
 
     border-radius: 1000px; 
     // background: $bg_switch_type_button_pill_and_rounded_off;
@@ -2061,7 +2382,7 @@ button.button_full.disabled, button.button_text.disabled {
     box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 }
 
-.switch.button_full.pill, button.button_full.pill {
+.switch.button_full.pill, button.button_full.pill, a.button_full.pill {
 
     padding-left: 18px; // Propriedade aplicada aprimorada via JS.
     padding-right: 20px; // Propriedade aplicada aprimorada via JS.
@@ -2075,7 +2396,7 @@ button.button_full.disabled, button.button_text.disabled {
     }  
 }
 
-.switch.button_text.pill, button.button_text.pill {
+.switch.button_text.pill, button.button_text.pill, a.button_text.pill {
 
     padding-left: 13px; // Propriedade aplicada aprimorada via JS.
     padding-right: 13px; // Propriedade aplicada aprimorada via JS.
@@ -2089,7 +2410,7 @@ button.button_full.disabled, button.button_text.disabled {
     }
 }
 
-.switch.button_icon.pill, button.button_icon.pill {
+.switch.button_icon.pill, button.button_icon.pill, a.button_icon.pill {
 
     padding: 12px; // Propriedade aplicada aprimorada via JS.
 
@@ -2105,7 +2426,9 @@ button.button_full.disabled, button.button_text.disabled {
 
 // ─────────── Rounded ─────────── (A menor dimensão de um switch rounded é configurado via JS!)
 
-.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, 
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
 
     // justify-content: center;
     border-radius: 1000px; 
@@ -2116,11 +2439,7 @@ button.button_full.disabled, button.button_text.disabled {
         border-radius: 1000px; 
         background: $bg_button_type_normal_and_switch_type_button_rounded_shine;
            
-        $top: 3px;
         $left:  3px; 
-        $height: calc(100% - 2 * #{$top}); 
-
-        height: $height;
 
         left:  $left;
         width: calc(100% - 2 * #{$left});
@@ -2129,10 +2448,32 @@ button.button_full.disabled, button.button_text.disabled {
 
 .switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
 
+    .button_shine_top {
+ 
+        $top: 3px;
+
+        height: calc(100% - 2 * #{$top});
+    }
+}
+
+// Regra necessária para o brilho se ajustar direito no botão (mais precisamente, o 'x.button_icon.rounded'):
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded { 
+
+    .button_shine_top {
+
+        top: 1px;
+        height: 91.1%; 
+    }
+}
+
+.switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded {
+
     box-shadow: inset 0px 0px 10px 1px $color_shadow_box_inset_switch_type_button_dark; // Propriedade aplicada aprimorada via JS. 
 }
 
-button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded {
+button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded,
+a.button_full.rounded, a.button_text.rounded, a.button_icon.rounded {
 
     .button_shine_top {
 
@@ -2140,12 +2481,12 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
     }
 }
 
-.switch.button_full.rounded, button.button_full.rounded {
+.switch.button_full.rounded, button.button_full.rounded, a.button_full.rounded {
 
     padding: 18px;  
 }
 
-.switch.button_text.rounded, button.button_text.rounded {
+.switch.button_text.rounded, button.button_text.rounded, a.button_text.rounded {
 
     padding: 14px; 
 
@@ -2155,7 +2496,7 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
     }
 }
 
-.switch.button_icon.rounded, button.button_icon.rounded {
+.switch.button_icon.rounded, button.button_icon.rounded, a.button_icon.rounded {
 
     padding: 12px; // Propriedade aplicada aprimorada via JS.
 }
@@ -2170,7 +2511,7 @@ button.button_full.rounded, button.button_text.rounded, button.button_icon.round
 TODO:            >>> Text Below
 ──────────────────────────── */
 
-.switch.button_full.text_below, button.button_full.text_below { 
+.switch.button_full.text_below, button.button_full.text_below, a.button_full.text_below { 
 
     // justify-content: center;
     flex-direction: column; // Necessário caso o switch não tenha 'piece_label'.
@@ -2187,17 +2528,21 @@ TODO:            >>> Text Below
     }
 }
 
-.switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded) {
+.switch.button_full.text_below:not(.pill, .rounded), 
+button.button_full.text_below:not(.pill, .rounded), 
+a.button_full.text_below:not(.pill, .rounded) {
 
     border-radius: 24px; // Propriedade aplicada aprimorada via JS.
 }
 
-.switch.button_full.text_below:not(.pill, .rounded) .button_shine_top, button.button_full.text_below:not(.pill, .rounded) .button_shine_top {
+.switch.button_full.text_below:not(.pill, .rounded) .button_shine_top, 
+button.button_full.text_below:not(.pill, .rounded) .button_shine_top, 
+a.button_full.text_below:not(.pill, .rounded) .button_shine_top {
 
     border-radius: 22px; // Propriedade aplicada aprimorada via JS. // Obs.: Esta propriedade buga se for colocada na regra com o seletor ".switch.button_full.text_below:not(.pill, .rounded), button.button_full.text_below:not(.pill, .rounded)".
 }
 
-.switch.button_full.text_below.pill, button.button_full.text_below.pill {
+.switch.button_full.text_below.pill, button.button_full.text_below.pill, a.button_full.text_below.pill {
 
     padding-left: 18px; // Propriedade aplicada aprimorada via JS.
     padding-right: 18px; // Propriedade aplicada aprimorada via JS.
@@ -2223,7 +2568,7 @@ TODO:            >>> Text Below
     }
 }
 
-.switch.button_full.text_below.rounded, button.button_full.text_below.rounded {
+.switch.button_full.text_below.rounded, button.button_full.text_below.rounded, a.button_full.text_below.rounded {
 
     padding-bottom: 10px; // Propriedade aplicada aprimorada via JS.
 
@@ -2239,7 +2584,8 @@ TODO:            >>> Text Below
     }
 }
 
-button.button_full.text_below {  
+button.button_full.text_below,
+a.button_full.text_below {  
 
     flex-direction: column; 
 }
@@ -2257,24 +2603,28 @@ TODO:            >>> Option ON
 
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
 
-    background: $bg_button_type_normal_hover_and_switch_type_button_on;
-    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
- 
     .piece_text {
 
         color: $color_text_switch_type_button_on;
-        filter: drop-shadow(0px 0px 2px $color_text_switch_type_button_shadow_outline_on); 
-    }
-
-    .piece_icon {
-
-        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_type_button_on); 
     }
 }
 
+/*  
+// Regra necessária para o brilho se ajustar direito no botão:
+.switch.button_full.rounded.on, .switch.button_text.rounded.on, .switch.button_icon.rounded.on {
+
+    .button_shine_top {
+
+        top: 1px;
+        height: 91.1%; 
+    }
+}
+*/
+
+/*  
 .switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
     
-    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear !important;
+    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_element_type_button_clear !important;
     // border: 1px solid adjust-color($color_theme, $lightness: 30%);
  
     .piece_text {
@@ -2282,20 +2632,25 @@ TODO:            >>> Option ON
         filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
     }
 }
+*/
 
 // ─────────── Pill ───────────
 
+/*
 .switch.button_icon.on.pill {
 
-    // background: $bg_switch_type_button_pill_and_rounded_on;
+    background: $bg_switch_type_button_pill_and_rounded_on;
 }
+*/
 
 // ─────────── Rounded ───────────
 
+/*
 .switch.button_full.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
  
     // background: $bg_switch_type_button_pill_and_rounded_on;
 }
+*/
  
 /*  
 ────────────────────────────
@@ -2304,7 +2659,7 @@ TODO:            >>> Floating Labels
 
 @media (pointer: fine) {
 
-    .switch.button_icon, button.button_icon {
+    .switch.button_icon, button.button_icon, a.button_icon {
 
         .piece_text {
 
@@ -2317,7 +2672,7 @@ TODO:            >>> Floating Labels
             border: 1px solid;
             border-radius: 1000px;
             font-weight: initial;
-            box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
+            // box-shadow: 0px 7px 4px -2px hsla(0, 0%, 0%, 0.09); 
             filter: initial;
         }
     }
@@ -2330,7 +2685,8 @@ TODO:            >>> Floating Labels
     }
 
     /*  
-    button.button_icon .piece_text {
+    button.button_icon .piece_text,
+    a.button_icon .piece_text {
 
         $color_border_element_button_icon_piece_text_floating_off: hsl(195, 100%, 50%); 
         $color_text_element_button_icon_piece_text_floating_off: white; 
@@ -2348,7 +2704,7 @@ TODO:            >>> Floating Labels
         justify-content: center; 
     }
 
-    .switch.button_icon.on, button.button_icon { 
+    .switch.button_icon.on, button.button_icon, a.button_icon { 
     
         .piece_text { 
 
@@ -2356,11 +2712,11 @@ TODO:            >>> Floating Labels
             border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on; 
             background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
             filter: initial;
-            box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24); 
+            // box-shadow: 0px 7px 4px -2px hsla(193, 100%, 60%, 0.24); 
         } 
     }
 
-    .switch.button_icon:hover, button.button_icon:hover {
+    .switch.button_icon:hover, button.button_icon:hover, a.button_icon:hover {
     
         .piece_text {
 
@@ -2368,13 +2724,507 @@ TODO:            >>> Floating Labels
         }
     }
 }
+ 
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── */
 
+$box_shadow_element_type_button_clear_blue: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(195, 100%, 50%); // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
+$filter_element_type_button_piece_text_clear_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+$filter_element_type_button_piece_icon_clear_blue: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
+$filter_switch_type_button_piece_text_clear_disabled_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
+
+$box_shadow_element_type_button_clear_red: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 100%, 62%);
+$filter_element_type_button_piece_text_clear_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+$filter_element_type_button_piece_icon_clear_red: drop-shadow(0px 0px 1px hsl(0, 100%, 78%));
+$filter_switch_type_button_piece_text_clear_disabled_red: drop-shadow(0px 0px 2px hsl(0, 100%, 38%)); 
+
+$box_shadow_element_type_button_clear_yellow: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(60, 100%, 48%), 0px 0px 4px 1px hsl(60, 100%, 48%), 0px 0px 11px 1px hsl(60, 100%, 50%);
+$filter_element_type_button_piece_text_clear_yellow: drop-shadow(0px 0px 2px hsl(60, 100%, 29%));
+$filter_element_type_button_piece_icon_clear_yellow: drop-shadow(0px 0px 1px hsl(60, 100%, 40%));
+$filter_switch_type_button_piece_text_clear_disabled_yellow: drop-shadow(0px 0px 2px hsl(60, 100%, 23%)); 
+
+$box_shadow_element_type_button_clear_green: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(120, 100%, 72%), 0px 0px 12px 0px hsl(120, 100%, 50%);
+$filter_element_type_button_piece_text_clear_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
+$filter_element_type_button_piece_icon_clear_green: drop-shadow(0px 0px 1px hsl(120, 100%, 48%));
+$filter_switch_type_button_piece_text_clear_disabled_green: drop-shadow(0px 0px 2px hsl(120, 100%, 28%)); 
+
+$box_shadow_element_type_button_clear_black: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 0%, 40%);
+$filter_element_type_button_piece_text_clear_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+$filter_element_type_button_piece_icon_clear_black: drop-shadow(0px 0px 1px hsl(0, 0%, 64%));
+$filter_switch_type_button_piece_text_clear_disabled_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%)); 
+
+/*------ Default: Blue ------*/
+
+button.button_full, button.button_text, button.button_icon, 
+a.button_full, a.button_text, a.button_icon,
+button.button_full.blue, button.button_text.blue, button.button_icon.blue, 
+a.button_full.blue, a.button_text.blue, a.button_icon.blue { 
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(195, 100%, 48%), hsl(195, 100%, 50%));
+
+    box-shadow: 0px 0px 0px 1px hsl(195, 100%, 66%), inset 0px 0px 9px 7px white;
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(195, 100%, 55%));
+    }
+}
+
+button.button_full, button.button_text,
+a.button_full, a.button_text, 
+button.button_full.blue, button.button_text.blue, 
+a.button_full.blue, a.button_text.blue { 
+
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_blue;
+    }
+}
+
+@media not all and (pointer: coarse) { // Hover
+
+    button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
+    a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover,
+    button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
+    a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_blue; // <- Propriedade aplicada aprimorada via JS.
+        
+        box-shadow:$box_shadow_element_type_button_clear_blue; // <- Propriedade aplicada aprimorada via JS.
+
+        .piece_icon {
+
+            filter: $filter_element_type_button_piece_icon_clear_blue; 
+        }
+    }
+}
+
+.switch.button_full.on, .switch.button_text.on, .switch.button_icon.on,
+.switch.button_full.blue.on, .switch.button_text.blue.on, .switch.button_icon.blue.on { // Switch ON
+
+    background: $bg_element_type_button_clear_blue;
+    box-shadow: $box_shadow_element_type_button_clear_blue;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_blue; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_blue; 
+    }
+}
+
+.switch.button_icon.on,
+.switch.button_icon.blue.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled,
+.switch.button_full.blue.on.disabled, .switch.button_text.blue.on.disabled, .switch.button_icon.blue.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_blue; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
+
+    .switch.button_icon.on, button.button_icon, a.button_icon,
+    .switch.button_icon.blue.on, button.button_icon.blue, a.button_icon.blue { 
+    
+        .piece_text {
+
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on;
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
+        } 
+    }
+}
+
+/*------ Red ------*/
+
+button.button_full.red, button.button_text.red, button.button_icon.red, 
+a.button_full.red, a.button_text.red, a.button_icon.red {
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(0, 100%, 94%), hsl(0, 100%, 67%), hsl(0, 100%, 67%));
+
+    box-shadow: 0px 0px 0px 1px hsl(0, 100%, 84%), inset 0px 0px 9px 6px white;
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(0, 100%, 65%));
+    }
+}
+
+button.button_full.red, button.button_text.red, 
+a.button_full.red, a.button_text.red {
+
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_red;
+    }
+}
+
+@media not all and (pointer: coarse) { // Hover
+    
+    button.button_full.red:not(.disabled):hover, button.button_text.red:not(.disabled):hover, button.button_icon.red:not(.disabled):hover,
+    a.button_full.red:not(.disabled):hover, a.button_text.red:not(.disabled):hover, a.button_icon.red:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_red;
+        
+        box-shadow: $box_shadow_element_type_button_clear_red; 
+
+        .piece_icon {
+
+            filter: $filter_element_type_button_piece_icon_clear_red; 
+        }
+    }
+}
+
+.switch.button_full.red.on, .switch.button_text.red.on, .switch.button_icon.red.on { // Switch ON
+
+    background: $bg_element_type_button_clear_red;
+    box-shadow: $box_shadow_element_type_button_clear_red;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_red; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_red; 
+    }
+}
+
+.switch.button_icon.red.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.red.on.disabled, .switch.button_text.red.on.disabled, .switch.button_icon.red.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_red; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
+
+    .switch.button_icon.red.on, button.button_icon.red, a.button_icon.red {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+        } 
+    }
+}
+
+/*------ Yellow ------*/
+
+button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow, 
+a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 46%), hsl(60, 100%, 46%)); // linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
+
+    box-shadow: 0px 0px 0px 1px hsl(60, 100%, 43%), inset 0px 0px 9px 6px white;
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
+    }
+}
+
+button.button_icon.yellow, 
+a.button_icon.yellow {
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
+} 
+
+button.button_full.yellow, button.button_text.yellow,
+a.button_full.yellow, a.button_text.yellow {
+
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_yellow;
+    }
+}
+
+@media not all and (pointer: coarse) { // Hover
+    
+    button.button_full.yellow:not(.disabled):hover, button.button_text.yellow:not(.disabled):hover, button.button_icon.yellow:not(.disabled):hover,
+    a.button_full.yellow:not(.disabled):hover, a.button_text.yellow:not(.disabled):hover, a.button_icon.yellow:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_yellow;
+        
+        box-shadow: $box_shadow_element_type_button_clear_yellow;
+
+        .piece_icon {
+
+            filter: $filter_element_type_button_piece_icon_clear_yellow; 
+        }
+    }
+    
+    button.button_icon.yellow:not(.disabled):hover,
+    a.button_icon.yellow:not(.disabled):hover {
+
+        background: $bg_element_type_button_icon_clear_yellow; 
+    }
+}
+
+.switch.button_full.yellow.on, .switch.button_text.yellow.on, .switch.button_icon.yellow.on { // Switch ON
+
+    background: $bg_element_type_button_clear_yellow;
+    box-shadow: $box_shadow_element_type_button_clear_yellow;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_yellow; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_yellow; 
+    }
+}
+
+.switch.button_icon.yellow.on { // Switch ON 
+
+    background: $bg_element_type_button_icon_clear_yellow; 
+}
+
+.switch.button_icon.yellow.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.yellow.on.disabled, .switch.button_text.yellow.on.disabled, .switch.button_icon.yellow.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_yellow; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
+
+    .switch.button_icon.yellow.on, button.button_icon.yellow, a.button_icon.yellow {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+        } 
+    }
+}
+
+/*------ Green ------*/
+
+button.button_full.green, button.button_text.green, button.button_icon.green, 
+a.button_full.green, a.button_text.green, a.button_icon.green {
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(120, 100%, 70%), hsl(120, 100%, 44%), hsl(120, 100%, 54%));
+
+    box-shadow: 0px 0px 0px 1px hsl(120, 100%, 46%), inset 0px 0px 9px 6px white;
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(120, 100%, 38%));
+    }
+}
+
+button.button_full.green, button.button_text.green, 
+a.button_full.green, a.button_text.green {
+
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_green;
+    }
+}
+
+@media not all and (pointer: coarse) { // Hover
+    
+    button.button_full.green:not(.disabled):hover, button.button_text.green:not(.disabled):hover, button.button_icon.green:not(.disabled):hover,
+    a.button_full.green:not(.disabled):hover, a.button_text.green:not(.disabled):hover, a.button_icon.green:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_green;
+        
+        box-shadow: $box_shadow_element_type_button_clear_green; 
+
+        .piece_icon {
+
+            filter: $filter_element_type_button_piece_icon_clear_green; 
+        }
+    }
+}
+
+.switch.button_full.green.on, .switch.button_text.green.on, .switch.button_icon.green.on { // Switch ON
+
+    background: $bg_element_type_button_clear_green;
+    box-shadow: $box_shadow_element_type_button_clear_green;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_green; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_green; 
+    }
+}
+
+.switch.button_icon.green.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.green.on.disabled, .switch.button_text.green.on.disabled, .switch.button_icon.green.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_green; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
+
+    .switch.button_icon.green.on, button.button_icon.green, a.button_icon.green {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+        } 
+    }
+}
+
+/*------ Black ------*/
+
+button.button_full.black, button.button_text.black, button.button_icon.black, 
+a.button_full.black, a.button_text.black, a.button_icon.black {
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(195, 0%, 90%), hsl(195, 0%, 44%), hsl(195, 0%, 44%));
+
+    box-shadow: 0px 0px 0px 1px hsl(195, 0%, 68%), inset 0px 0px 9px 6px white;
+
+    .piece_icon {
+
+        filter: drop-shadow(0px 0px 1px hsl(0, 0%, 46%));
+    }
+}
+
+button.button_full.black, button.button_text.black,
+a.button_full.black, a.button_text.black {
+
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_black;
+    }
+}
+
+@media not all and (pointer: coarse) { // Hover
+    
+    button.button_full.black:not(.disabled):hover, button.button_text.black:not(.disabled):hover, button.button_icon.black:not(.disabled):hover,
+    a.button_full.black:not(.disabled):hover, a.button_text.black:not(.disabled):hover, a.button_icon.black:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_black;
+        
+        box-shadow: $box_shadow_element_type_button_clear_black; 
+
+        .piece_icon {
+
+            filter: $filter_element_type_button_piece_icon_clear_black; 
+        }
+    } 
+}
+
+.switch.button_full.black.on, .switch.button_text.black.on, .switch.button_icon.black.on { // Switch ON
+
+    background: $bg_element_type_button_clear_black;
+    box-shadow: $box_shadow_element_type_button_clear_black;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_black; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_black; 
+    }
+}
+
+.switch.button_icon.black.on { // Switch ON 
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.black.on.disabled, .switch.button_text.black.on.disabled, .switch.button_icon.black.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_black; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
+
+    .switch.button_icon.black.on, button.button_icon.black, a.button_icon.black {  
+    
+        .piece_text {
+
+            border-color: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black; 
+            background: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+            color: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+        } 
+    }
+}
+ 
 /*  
 ────────────────────────────
 TODO:        >> Image
 ──────────────────────────── */
       
-.switch.image, button.image {
+.switch.image, button.image, a.image {
 
     display: inline-flex;
 
@@ -2420,7 +3270,7 @@ TODO:        >> Image
     display: none;
 }
       
-.switch.image:not(.disabled), button.image:not(.disabled) {
+.switch.image:not(.disabled), button.image:not(.disabled), a.image:not(.disabled) {
 
     .piece_text {
 
@@ -2430,7 +3280,7 @@ TODO:        >> Image
 
 // ─────────── pill ───────────
 
-.switch.image.pill, button.image.pill {
+.switch.image.pill, button.image.pill, a.image.pill {
 
     border-radius: 1000px !important; // Declaração necessária apenas para 'button:focus'.
     
@@ -2461,7 +3311,7 @@ TODO:            >>> Floating Labels
 
 @media (pointer: fine) {  
 
-    .switch.image, button.image {
+    .switch.image, button.image, a.image {
         
         justify-content: center;
         position: relative;
@@ -2490,16 +3340,6 @@ TODO:            >>> Floating Labels
         box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_off; 
     }
 
-    button.image .piece_text {
-
-        color: $color_text_button_type_image_piece_text_floating;
-        border-color: $color_border_button_type_image_piece_text_floating; 
-        background: $bg_button_type_image_piece_text_floating;
-        box-shadow:
-        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating, 
-        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating;  
-    }
-
     .switch.image .piece_label {
 
         display: inline-flex;
@@ -2509,7 +3349,7 @@ TODO:            >>> Floating Labels
     }
 
     /*
-    button.image {
+    button.image, a.image {
 
         justify-content: center;
         position: relative;
@@ -2523,19 +3363,123 @@ TODO:            >>> Floating Labels
 
     .switch.image.on .piece_text {
 
-        color: $color_text_switch_type_image_piece_text_floating_on;
-        border-color: $color_border_switch_type_image_piece_text_floating_on; 
-        background: $bg_switch_type_image_piece_text_floating_on;
         filter: initial;
         box-shadow: 0px 7px 4px -2px $color_box_shadow_switch_type_image_piece_text_floating_on;  
     }
 
-    .switch.image:hover, button.image:hover {
+    .switch.image:hover, button.image:hover, a.image:hover { 
         
         .piece_text {
 
             display: block !important;
         }
+    }
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Colors
+──────────────────────────── */
+
+@media (pointer: fine) {  
+
+    /*------ Default: Blue ------*/
+
+    .switch.image.on .piece_text,
+
+    .switch.image.blue.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on;
+        border-color: $color_border_switch_type_image_piece_text_floating_on; 
+        background: $bg_switch_type_image_piece_text_floating_on;
+    }
+
+    button.image .piece_text, a.image .piece_text,
+
+    button.image.blue .piece_text, a.image.blue .piece_text { 
+
+        color: $color_text_button_type_image_piece_text_floating;
+        border-color: $color_border_button_type_image_piece_text_floating; 
+        background: $bg_button_type_image_piece_text_floating;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating;  
+    }
+
+    /*------ Red ------*/
+
+    .switch.image.red.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_red;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_red; 
+        background: $bg_switch_type_image_piece_text_floating_on_red;
+    }
+
+    button.image.red .piece_text, a.image.red .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_red;
+        border-color: $color_border_button_type_image_piece_text_floating_red; 
+        background: $bg_button_type_image_piece_text_floating_red;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_red, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_red;  
+    }
+    
+    /*------ Yellow ------*/ 
+
+    .switch.image.yellow.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_yellow;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_yellow; 
+        background: $bg_switch_type_image_piece_text_floating_on_yellow;
+    }
+
+    button.image.yellow .piece_text, a.image.yellow .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_yellow;
+        border-color: $color_border_button_type_image_piece_text_floating_yellow; 
+        background: $bg_button_type_image_piece_text_floating_yellow;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_yellow, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_yellow;  
+    }
+
+    /*------ Green ------*/
+
+    .switch.image.green.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_green;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_green; 
+        background: $bg_switch_type_image_piece_text_floating_on_green;
+    }
+
+    button.image.green .piece_text, a.image.green .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_green;
+        border-color: $color_border_button_type_image_piece_text_floating_green; 
+        background: $bg_button_type_image_piece_text_floating_green;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_green, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_green;  
+    }
+
+    /*------ Black ------*/
+
+    .switch.image.black.on .piece_text {
+
+        color: $color_text_switch_type_image_piece_text_floating_on_black;
+        border-color: $color_border_switch_type_image_piece_text_floating_on_black; 
+        background: $bg_switch_type_image_piece_text_floating_on_black;
+    }
+
+    button.image.black .piece_text, a.image.black .piece_text {
+
+        color: $color_text_button_type_image_piece_text_floating_black;
+        border-color: $color_border_button_type_image_piece_text_floating_black; 
+        background: $bg_button_type_image_piece_text_floating_black;
+        box-shadow:
+        inset 0px 0px 7px 1px $color_box_shadow_in_button_type_image_piece_text_floating_black, 
+        0px 7px 4px -2px $color_box_shadow_out_button_type_image_piece_text_floating_black;  
     }
 }
 
@@ -2889,7 +3833,7 @@ TODO:        >> Horizontal
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
             
         span {
             padding-left: 15px;
@@ -2917,22 +3861,22 @@ TODO:        >> Horizontal
         }
     }
 
-    > li a:hover {
+    // > li a:hover {
 
-        background: hsla(0, 0%, 100%, 0.25); 
-        // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
-    }
+    //     background: hsla(0, 0%, 100%, 0.25); 
+    //     // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
+    // }
 
-    > li:nth-of-type(1) a:hover {
-        background: 0;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-    }
+    // > li:nth-of-type(1) a:hover {
+    //     background: 0;
+    //     text-shadow: 1px 1px 1px $color_shadow_text;
+    // }
 
     > li + li {
         border-left: 1px solid $color_text_menu;
     }
 }
-
+ 
 /*  
 ────────────────────────────
 TODO:        >> Vertical
@@ -2966,16 +3910,16 @@ TODO:        >> Vertical
         }
     }
 
-    > li a:hover {
+    // > li a:hover {
         // background: $bg_choice_selector; // <- Parte do estilo de choice anterior!
-        background: hsla(0, 0%, 100%, 0.3);
+        // background: hsla(0, 0%, 100%, 0.3);
         // text-shadow: 1px 1px 1px $color_shadow_text_strong; // <- Parte do estilo de choice anterior!
-    }
+    // }
 
-    > li:nth-of-type(1) a:hover {
-        background: 0;
-        text-shadow: 1px 1px 1px $color_shadow_text;
-    }
+    // > li:nth-of-type(1) a:hover {
+    //     background: 0;
+    //     text-shadow: 1px 1px 1px $color_shadow_text;
+    // }
 
     > li:nth-of-type(1) {
 
@@ -2993,7 +3937,7 @@ TODO:        >> Vertical
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 43%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
         a {
             display: flex;
@@ -3039,7 +3983,7 @@ TODO:        >> Dropdown
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
     > li {
         display: inline-flex;
@@ -3081,7 +4025,7 @@ TODO:        >> Dropdown
 
     .choice.dropdown:not(.disabled, .dropdown_open):hover {
 
-        background: linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), hsl(193, 100%, 83%);
+        background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white), hsl(193, 100%, 83%);
         
         box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px $color_theme;
     }
@@ -3104,10 +4048,10 @@ TODO:        >> Dropdown
     // white;
 
     linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
-    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 88%, 0) 71%),
     linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
     white;
-      
+
     overflow-y: auto;
 
     > li {
@@ -3153,7 +4097,7 @@ TODO:        >> Dropdown
     }
 
     li span {
-        padding: 0 12px 0 12px;
+        padding: 0 11px 0 11px;
     }
 
     > li:nth-of-type(2) > a > img[src] {
@@ -3170,22 +4114,32 @@ TODO:        >> Dropdown
 // Dropdown - Open - Scrollbars:
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar { // Entire bar
-    width: 10px;
-    height: 11px;
+
+    width: 12px;
+    height: 13px;
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_menu_scrollbar_thumb;    
-    border-radius: 10px;
+
+    background: linear-gradient(to bottom, hsl(180, 100%, 85%), hsl(195, 100%, 55%));    
+    border-radius: 1000px;
+    box-shadow: inset 0px 0px 0px 1px hsl(195, 100%, 100%);
+}
+
+.choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    background: linear-gradient(to bottom, hsl(180, 100%, 91%), hsl(195, 100%, 71%));    
 }
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-track {   // Bar background
-    background: $color_menu_scrollbar_track; 
+
+    background: transparent; 
 }
 
-.choice.dropdown.choice.dropdown_open {
+.choice.dropdown.choice.dropdown_open { // Regra para o Firefox
+        
     scrollbar-width: auto;
-    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+    scrollbar-color: hsl(195, 100%, 94%) transparent;
 }
 
 /* @media (pointer: fine) {
@@ -3539,18 +4493,34 @@ TODO:    > Sliders
 ──────────────────────────── */
 
 .slider {
+
+    white-space: nowrap;
+
+    border-top: 2px solid $color_theme;
+    border-bottom: 2px solid $color_theme;
     overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
+
+    img +  img {
+
+        border-left: 2px solid $color_theme; 
+    }
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        border: 2px solid $color_theme;
+    }
 }
  
 .slider img, .slider picture {
+
     max-width: 94%;   
 }
 
 @media (max-height: $screen_small_widthLimit) {
 
     .slider img, .slider picture {
+
         max-height: 100vh;
     }
 }
@@ -3558,6 +4528,7 @@ TODO:    > Sliders
 @media (min-width: $screen_small_widthLimit) {  
 
     .slider { 
+
         margin-left: $margin_horizontal;
         margin-right: $margin_horizontal;
     }
@@ -3566,30 +4537,99 @@ TODO:    > Sliders
 @media (pointer: fine) {
 
     .slider {
+
         overflow-x: hidden;
     }
     
     .slider:hover {
+
         overflow-x: auto;
     }
 }
 
 // Slider scrollbar:
 
+/* // Scrollbar anterior do slider
+
 .slider::-webkit-scrollbar { // Entire bar
-    height: 12px; /* 15 */ 
+
+    height: 12px;
 }
 
 .slider::-webkit-scrollbar-thumb { // Bar pointer
+
     background: hsl(0, 0%, 74%);
-    border-radius: 10px;
-    /* border: 3px outset adjust-color($color_theme, $lightness: 25%); */
+    border-radius: 1000px;
 }
    
 .slider::-webkit-scrollbar-track { // Bar background
+
     background: hsl(0, 0%, 98%); 
     border: 1px solid hsl(0, 0%, 86%);
-    border-radius: 10px; /* */ 
+    border-radius: 1000px; 
+}
+*/
+
+.slider::-webkit-scrollbar { // Entire bar
+
+    width: 14px;
+    height: 14px;
+}
+
+.slider::-webkit-scrollbar-thumb { // Bar pointer  
+
+    border-radius: 1000px;
+    
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 83%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    white;
+
+    box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 50%, 0.18);
+}
+
+.slider::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+    $delta_deg: 51deg;
+
+    background:
+    linear-gradient(calc(217deg + #{$delta_deg}), hsla(195, 100%, 78%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(calc(127deg + #{$delta_deg}), hsla(0, 0%, 100%, 0.85), hsla(0, 0%, 100%, 0) 71%),
+    linear-gradient(calc(336deg + #{$delta_deg}), hsla(190, 100%, 92%, 0.8), hsla(190, 100%, 80%, 0) 71%),
+    white;
+
+    box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 50%, 0.25);
+} 
+
+.slider::-webkit-scrollbar-track {   // Bar background
+
+    border-top: 2px solid $color_theme;
+    // background: radial-gradient(white, hsl(195, 100%, 94%));
+    background: white;
+}
+
+@media (min-width: $screen_small_widthLimit) {  
+
+    .slider.border_radius_big::-webkit-scrollbar-thumb { // Bar pointer  
+
+        border-left-width: 1px;
+        border-right-width: 1px;
+    }
+
+    .slider.border_radius_big::-webkit-scrollbar-track { // Bar background
+        
+        border: 1px solid $color_theme;
+        border-radius: 1000px;
+    }
+}
+
+.slider { // Regra para o Firefox
+        
+    scrollbar-width: auto;
+    scrollbar-color: $color_theme hsl(195, 100%, 100%);
 }
 
 /*
@@ -3834,6 +4874,7 @@ TODO:    > Lightbox
   /* Lightbox Layout */
 
 .lightbox_layout {
+
     position: relative;
     padding: 24px;
     overflow-x: hidden;
@@ -3841,26 +4882,29 @@ TODO:    > Lightbox
 
     max-width: calc(100vw - (2 * #{$button_height_small}));
     max-height: calc(100vh - (3 * #{$button_height}));
-    // border-radius: $border_radius_default;
     color: $color_text_menu;
-    background: $bg_lightbox;
+    /* border-radius: $border_radius_default;  // Lightbox anterior 
+    background: $bg_lightbox;  // Lightbox anterior 
+
+    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,  // Lightbox anterior 
+    inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
+    inset 5px 5px 5px 0px $color_shadow_box_inset_clear; */
+
+     // Lightbox novo:
 
     $lightbox_border_width: 5px;
     border: $lightbox_border_width solid rgba(0, 0, 0, 0);
     $bg_lightbox_border_1: hsl(198, 100%, 74%);
     $bg_lightbox_border_2: white;
     background: 
-    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.8), hsla(198, 100%, 74%, 0.8), hsla(0, 0%, 100%, 0.8)) padding-box, 
+    linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.85), hsla(198, 100%, 74%, 0.85), hsla(0, 0%, 100%, 0.85)) padding-box, 
 
     linear-gradient(to right, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box top/100% $lightbox_border_width no-repeat,
     linear-gradient(to bottom, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box right/$lightbox_border_width 100% no-repeat,
     linear-gradient(to left, $bg_lightbox_border_1, $bg_lightbox_border_2) border-box bottom/100% $lightbox_border_width no-repeat,
     linear-gradient(to top, $bg_lightbox_border_2, $bg_lightbox_border_1) border-box left/$lightbox_border_width 100% no-repeat;
     
-    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox,
-    // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
-    // inset 5px 5px 5px 0px $color_shadow_box_inset_clear
-    ;
+    box-shadow: 6px 6px 24px -14px $color_shadow_lightbox;
 }
 
 .lightbox_img {
@@ -3880,19 +4924,22 @@ TODO:    > Lightbox
 }
 
 .lightbox_text {
-    //display: block; 
+
     font-size: $font_size; 
-    //text-shadow: 1px 1px 1px $color_shadow_text;
-    filter: drop-shadow(0px 0px 1px hsl(193, 100%, 0%));
+    font-weight: bold;  // Lightbox novo
+    // text-shadow: 1px 1px 1px $color_shadow_text;  // Lightbox anterior 
+    filter: drop-shadow(0px 0px 2px hsl(193, 100%, 30%));  // Lightbox novo
+    line-height: 1.5; 
 
     .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
     }
 }
   
-/* Close Button 
+/* Close Button   // Lightbox anterior 
 
 .lightbox_closeArea::after {
+
     content: "";
     position: absolute;
     top: -19px;
@@ -3908,27 +4955,44 @@ TODO:    > Lightbox
     inset 4px 4px 5px 0px hsla(0, 0%, 100%, 0.5), 
     inset -3px -4px 5px 3px hsla(0, 0%, 0%, 0.4);
     //content: "×"; font-size: 31rem; color: white; display: flex; align-items: center; justify-content: center; 
-}
-*/
+}*/
+
 // Lightbox Layout - Scrollbars:
 
 .lightbox_layout::-webkit-scrollbar { // Entire bar
-    width: 10px;
+
+    width: 11px;
     height: 11px;
 }
 
 .lightbox_layout::-webkit-scrollbar-thumb { // Bar pointer
-    background: $color_menu_scrollbar_thumb;    
-    border-radius: 10px;
+
+    border-radius: 1000px;
+    
+    // background: linear-gradient(to bottom, hsl(198, 100%, 100%), hsl(198, 100%, 74%));
+    // box-shadow: inset 0px 0px 0px 1px hsl(198, 100%, 87%);   
+
+    background: hsl(198, 100%, 89%);
+    box-shadow: inset 0px 0px 0px 1px white;
+}
+
+.lightbox_layout::-webkit-scrollbar-thumb:hover { // Bar pointer
+
+    // background: linear-gradient(to bottom, hsl(198, 100%, 74%), hsl(198, 100%, 100%));
+    // background: linear-gradient(to bottom, hsl(198, 100%, 90%), hsl(198, 100%, 94%));
+    background: hsl(198, 100%, 91%); 
+    box-shadow: inset 0px 0px 0px 1px white;
 }
 
 .lightbox_layout::-webkit-scrollbar-track {   // Bar background
-    background: $color_menu_scrollbar_track; 
+
+    background: transparent; 
 }
 
-.lightbox_layout {
+.lightbox_layout { // Regra para o Firefox
+
     scrollbar-width: auto;
-    scrollbar-color: $color_menu_scrollbar_thumb_firefox $color_menu_scrollbar_track_firefox;
+    scrollbar-color: hsl(195, 100%, 100%) hsla(194, 100%, 50%, 0.1);  
 }
 
 /*  
@@ -3936,17 +5000,8 @@ TODO:    > Lightbox
 TODO: Others
 ────────────────────────────────────────────────────── */
 
-html {
-    background: $bg_html;
-}
-
-body {
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 hr {
+
     border-top: 1px solid $color_theme;
     border-bottom: 0; 
     background: $color_theme;
@@ -4003,31 +5058,37 @@ a, button:not(button[disabled], .disabled), input[type="radio"]:not(fieldset[dis
 // ------ center ------
 
 .center {
+    
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
 .center.offset {
+    
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: calc(100% - (2 * #{$margin_horizontal}));
 }
 
 figure.center {
+    
     text-align: center;
 } 
 
 .center.choice.horizontal {
+    
     display: flex !important;
 }
 
 .center.offset.choice.dropdown_open {
+    
     max-width: none;
 }
 
-.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, 
-.switch.key_text.center, button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center {
+.switch.button_full.center, .switch.button_text.center, .switch.button_icon.center, .switch.image.center, .switch.key_full.center, .switch.key_text.center, 
+button.button_full.center, button.button_text.center, button.button_icon.center, button.image.center, 
+a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center {
     
     display: flex !important;
 }
@@ -4157,4 +5218,21 @@ figure.center {
         margin-right: $margin_horizontal;
         padding-right: calc((#{$button_height_smaller})/2);
     }
+}
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Classes JS
+────────────────────────────────────────────────────── */
+
+// Classes Genéricas Pra Serem Aplicadas Somente Via JS:
+
+.display_none {
+    
+    display: none;
+}
+
+.overflow_hidden {
+    
+    overflow: hidden;
 }
