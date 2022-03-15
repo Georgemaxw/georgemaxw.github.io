@@ -2013,7 +2013,7 @@ a.button_full, a.button_text, a.button_icon {
     linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
     linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.
     */
 }
 
@@ -2274,7 +2274,7 @@ a.button_full.text_below {
 TODO:            >>> Option ON
 ──────────────────────────── */
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
   box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px DeepSkyBlue;
 }
 
@@ -2383,8 +2383,14 @@ a.button_full.blue .piece_text, a.button_text.blue .piece_text {
   a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover,
   button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
   a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #99e9ff;
     box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px DeepSkyBlue;
+  }
+  button.button_full:not(.disabled):hover .piece_icon, button.button_text:not(.disabled):hover .piece_icon, button.button_icon:not(.disabled):hover .piece_icon,
+  a.button_full:not(.disabled):hover .piece_icon, a.button_text:not(.disabled):hover .piece_icon, a.button_icon:not(.disabled):hover .piece_icon,
+  button.button_full.blue:not(.disabled):hover .piece_icon, button.button_text.blue:not(.disabled):hover .piece_icon, button.button_icon.blue:not(.disabled):hover .piece_icon,
+  a.button_full.blue:not(.disabled):hover .piece_icon, a.button_text.blue:not(.disabled):hover .piece_icon, a.button_icon.blue:not(.disabled):hover .piece_icon {
+    filter: drop-shadow(0px 0px 1px #33ccff);
   }
 }
 
@@ -2405,16 +2411,49 @@ a.button_full.red .piece_text, a.button_text.red .piece_text {
   filter: drop-shadow(0px 0px 2px #e00000);
 }
 
+@media not all and (pointer: coarse) {
+  button.button_full.red:not(.disabled):hover, button.button_text.red:not(.disabled):hover, button.button_icon.red:not(.disabled):hover,
+  a.button_full.red:not(.disabled):hover, a.button_text.red:not(.disabled):hover, a.button_icon.red:not(.disabled):hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #ffbdbd;
+    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px #ff3d3d;
+  }
+  button.button_full.red:not(.disabled):hover .piece_icon, button.button_text.red:not(.disabled):hover .piece_icon, button.button_icon.red:not(.disabled):hover .piece_icon,
+  a.button_full.red:not(.disabled):hover .piece_icon, a.button_text.red:not(.disabled):hover .piece_icon, a.button_icon.red:not(.disabled):hover .piece_icon {
+    filter: drop-shadow(0px 0px 1px #ff8f8f);
+  }
+}
+
 /*------ Yellow ------*/
 button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow,
 a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #ffff14, #dbdb00, #ebeb00);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #ffff14, #ebeb00, #ebeb00);
   box-shadow: 0px 0px 0px 1px #dbdb00, inset 0px 0px 9px 6px white;
 }
 
 button.button_full.yellow .piece_icon, button.button_text.yellow .piece_icon, button.button_icon.yellow .piece_icon,
 a.button_full.yellow .piece_icon, a.button_text.yellow .piece_icon, a.button_icon.yellow .piece_icon {
   filter: drop-shadow(0px 0px 1px #b8b800);
+}
+
+button.button_icon.yellow,
+a.button_icon.yellow {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #ffff14, #dbdb00, #ebeb00);
+}
+
+@media not all and (pointer: coarse) {
+  button.button_full.yellow:not(.disabled):hover, button.button_text.yellow:not(.disabled):hover, button.button_icon.yellow:not(.disabled):hover,
+  a.button_full.yellow:not(.disabled):hover, a.button_text.yellow:not(.disabled):hover, a.button_icon.yellow:not(.disabled):hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #ffff0a;
+    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 0px 1px #f5f500, 0px 0px 4px 1px #f5f500, 0px 0px 11px 1px yellow;
+  }
+  button.button_full.yellow:not(.disabled):hover .piece_icon, button.button_text.yellow:not(.disabled):hover .piece_icon, button.button_icon.yellow:not(.disabled):hover .piece_icon,
+  a.button_full.yellow:not(.disabled):hover .piece_icon, a.button_text.yellow:not(.disabled):hover .piece_icon, a.button_icon.yellow:not(.disabled):hover .piece_icon {
+    filter: drop-shadow(0px 0px 1px #cccc00);
+  }
+  button.button_icon.yellow:not(.disabled):hover,
+  a.button_icon.yellow:not(.disabled):hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #f5f500;
+  }
 }
 
 button.button_full.yellow .piece_text, button.button_text.yellow .piece_text,
@@ -2439,6 +2478,18 @@ a.button_full.green .piece_text, a.button_text.green .piece_text {
   filter: drop-shadow(0px 0px 2px #00ad00);
 }
 
+@media not all and (pointer: coarse) {
+  button.button_full.green:not(.disabled):hover, button.button_text.green:not(.disabled):hover, button.button_icon.green:not(.disabled):hover,
+  a.button_full.green:not(.disabled):hover, a.button_text.green:not(.disabled):hover, a.button_icon.green:not(.disabled):hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #8aff8a;
+    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 0px 1px #70ff70, 0px 0px 12px 0px lime;
+  }
+  button.button_full.green:not(.disabled):hover .piece_icon, button.button_text.green:not(.disabled):hover .piece_icon, button.button_icon.green:not(.disabled):hover .piece_icon,
+  a.button_full.green:not(.disabled):hover .piece_icon, a.button_text.green:not(.disabled):hover .piece_icon, a.button_icon.green:not(.disabled):hover .piece_icon {
+    filter: drop-shadow(0px 0px 1px #00f500);
+  }
+}
+
 /*------ Black ------*/
 button.button_full.black, button.button_text.black, button.button_icon.black,
 a.button_full.black, a.button_text.black, a.button_icon.black {
@@ -2454,6 +2505,18 @@ a.button_full.black .piece_icon, a.button_text.black .piece_icon, a.button_icon.
 button.button_full.black .piece_text, button.button_text.black .piece_text,
 a.button_full.black .piece_text, a.button_text.black .piece_text {
   filter: drop-shadow(0px 0px 2px #4d4d4d);
+}
+
+@media not all and (pointer: coarse) {
+  button.button_full.black:not(.disabled):hover, button.button_text.black:not(.disabled):hover, button.button_icon.black:not(.disabled):hover,
+  a.button_full.black:not(.disabled):hover, a.button_text.black:not(.disabled):hover, a.button_icon.black:not(.disabled):hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 46%, rgba(255, 255, 255, 0.64), white), #c2c2c2;
+    box-shadow: inset 0px 0px 9px 5px white, 0px 0px 12px 0px #666666;
+  }
+  button.button_full.black:not(.disabled):hover .piece_icon, button.button_text.black:not(.disabled):hover .piece_icon, button.button_icon.black:not(.disabled):hover .piece_icon,
+  a.button_full.black:not(.disabled):hover .piece_icon, a.button_text.black:not(.disabled):hover .piece_icon, a.button_icon.black:not(.disabled):hover .piece_icon {
+    filter: drop-shadow(0px 0px 1px #a3a3a3);
+  }
 }
 
 /*  

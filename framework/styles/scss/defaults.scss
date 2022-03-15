@@ -161,7 +161,7 @@ $color_icon_outline_switch_type_button_off: hsla(0, 0%, 0%, 0.45);
 $color_icon_outline_switch_type_button_on: hsl(187, 100%, 47%);
 
 $color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
-$color_shadow_box_inset_button_type_normal_and_switch_type_button_clear: white; // VÍNCULO: Váriável JS
+$color_shadow_box_inset_element_type_button_clear: white; // VÍNCULO: Váriável JS
 
 $bg_switch_type_button_off: 
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
@@ -169,10 +169,25 @@ linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), wh
 hsl(193, 0%,94%); // hsl(193, 0%,88%); 
 //$bg_switch_type_button_off: hsl(193, 0%,96%); 
 
-$bg_element_type_button_clear:  // VÍNCULO: Váriável JS
+$bg_element_type_button_clear_blue:  // VÍNCULO: Váriável JS
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.1) 46%, hsla(0, 0%, 100%, 0.64), white),
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),
 hsl(193, 100%, 80%); // hsl(193, 100%, 83%); 
+
+$bg_element_type_button_clear_red: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 100%, 87%);
+
+$bg_element_type_button_clear_yellow:
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 52%);
+
+$bg_element_type_button_icon_clear_yellow: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 48%);
+
+$bg_element_type_button_clear_green: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(120, 100%, 77%); 
+
+$bg_element_type_button_clear_black: 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 0%, 76%);
 
 /*      
 //$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
@@ -2150,7 +2165,7 @@ a.button_full, a.button_text, a.button_icon {
     linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
     linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
 
-    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // Propriedade aplicada aprimorada via JS.
     */
 
     .piece_text {
@@ -2511,8 +2526,8 @@ TODO:            >>> Option ON
 
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
 
-    background: $bg_element_type_button_clear;
-    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
+    background: $bg_element_type_button_clear_blue;
+    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
  
     .piece_text {
 
@@ -2540,7 +2555,7 @@ TODO:            >>> Option ON
 
 .switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
     
-    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear !important;
+    // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_element_type_button_clear !important;
     // border: 1px solid adjust-color($color_theme, $lightness: 30%);
  
     .piece_text {
@@ -2681,9 +2696,16 @@ a.button_full.blue, a.button_text.blue {
     button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
     a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
 
-        background: $bg_element_type_button_clear; // <- Propriedade aplicada aprimorada via JS.
+        background: $bg_element_type_button_clear_blue; // <- Propriedade aplicada aprimorada via JS.
         
-        box-shadow: inset 0px 0px 9px 5px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 12px 0px $color_theme; // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
+        box-shadow: // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
+        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
+        0px 0px 12px 0px $color_theme;
+
+        .piece_icon {
+
+            filter: drop-shadow(0px 0px 1px hsl(195, 100%, 60%)); 
+        }
     }
 }
 
@@ -2713,6 +2735,24 @@ a.button_full.red, a.button_text.red {
     }
 }
 
+@media not all and (pointer: coarse) {
+    
+    button.button_full.red:not(.disabled):hover, button.button_text.red:not(.disabled):hover, button.button_icon.red:not(.disabled):hover,
+    a.button_full.red:not(.disabled):hover, a.button_text.red:not(.disabled):hover, a.button_icon.red:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_red;
+        
+        box-shadow:
+        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
+        0px 0px 12px 0px hsl(0, 100%, 62%); 
+
+        .piece_icon {
+
+            filter: drop-shadow(0px 0px 1px hsl(0, 100%, 78%)); 
+        }
+    }
+}
+
 /*------ Yellow ------*/
 
 button.button_full.yellow, button.button_text.yellow, button.button_icon.yellow, 
@@ -2720,13 +2760,50 @@ a.button_full.yellow, a.button_text.yellow, a.button_icon.yellow {
 
     background: 
     linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
+    linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 46%), hsl(60, 100%, 46%)); // linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
 
     box-shadow: 0px 0px 0px 1px hsl(60, 100%, 43%), inset 0px 0px 9px 6px white;
 
     .piece_icon {
 
         filter: drop-shadow(0px 0px 1px hsl(60, 100%, 36%))
+    }
+}
+
+button.button_icon.yellow, 
+a.button_icon.yellow {
+
+    background: 
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
+    linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
+} 
+
+@media not all and (pointer: coarse) {
+    
+    button.button_full.yellow:not(.disabled):hover, button.button_text.yellow:not(.disabled):hover, button.button_icon.yellow:not(.disabled):hover,
+    a.button_full.yellow:not(.disabled):hover, a.button_text.yellow:not(.disabled):hover, a.button_icon.yellow:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_yellow;
+        
+        box-shadow:
+        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
+        //0px 0px 0px 1px hsl(60, 100%, 48%),
+        //0px 0px 12px 0px hsl(60, 100%, 40%);
+
+        0px 0px 0px 1px hsl(60, 100%, 48%),
+        0px 0px 4px 1px hsl(60, 100%, 48%),
+        0px 0px 11px 1px hsl(60, 100%, 50%);
+
+        .piece_icon {
+
+            filter: drop-shadow(0px 0px 1px hsl(60, 100%, 40%)); 
+        }
+    }
+    
+    button.button_icon.yellow:not(.disabled):hover,
+    a.button_icon.yellow:not(.disabled):hover {
+
+        background: $bg_element_type_button_icon_clear_yellow; 
     }
 }
 
@@ -2765,6 +2842,25 @@ a.button_full.green, a.button_text.green {
     }
 }
 
+@media not all and (pointer: coarse) {
+    
+    button.button_full.green:not(.disabled):hover, button.button_text.green:not(.disabled):hover, button.button_icon.green:not(.disabled):hover,
+    a.button_full.green:not(.disabled):hover, a.button_text.green:not(.disabled):hover, a.button_icon.green:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_green;
+        
+        box-shadow:
+        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
+        0px 0px 0px 1px hsl(120, 100%, 72%), 
+        0px 0px 12px 0px hsl(120, 100%, 50%); 
+
+        .piece_icon {
+
+            filter: drop-shadow(0px 0px 1px hsl(120, 100%, 48%)); 
+        }
+    }
+}
+
 /*------ Black ------*/
 
 button.button_full.black, button.button_text.black, button.button_icon.black, 
@@ -2789,6 +2885,24 @@ a.button_full.black, a.button_text.black {
 
         filter: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
     }
+}
+
+@media not all and (pointer: coarse) {
+    
+    button.button_full.black:not(.disabled):hover, button.button_text.black:not(.disabled):hover, button.button_icon.black:not(.disabled):hover,
+    a.button_full.black:not(.disabled):hover, a.button_text.black:not(.disabled):hover, a.button_icon.black:not(.disabled):hover {
+
+        background: $bg_element_type_button_clear_black;
+        
+        box-shadow:
+        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
+        0px 0px 12px 0px hsl(0, 0%, 40%); 
+
+        .piece_icon {
+
+            filter: drop-shadow(0px 0px 1px hsl(0, 0%, 64%)); 
+        }
+    } 
 }
  
 /*  
@@ -3461,7 +3575,7 @@ TODO:        >> Dropdown
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
     > li {
         display: inline-flex;
