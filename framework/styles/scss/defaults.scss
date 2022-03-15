@@ -177,10 +177,8 @@ $bg_select: linear-gradient(to bottom, hsl(0, 0%, 91%), white);
 
 $color_text_switch_type_button_off: hsl(0, 0%, 50%);
 $color_text_switch_type_button_on: white;
-$color_text_switch_type_button_shadow_outline_on: hsl(193, 100%, 40%);
 
 $color_icon_outline_switch_type_button_off: hsla(0, 0%, 0%, 0.45);
-$color_icon_outline_switch_type_button_on: hsl(187, 100%, 47%);
 
 $color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
 $color_shadow_box_inset_element_type_button_clear: white; // VÍNCULO: Váriável JS
@@ -2605,18 +2603,9 @@ TODO:            >>> Option ON
 
 .switch.button_full.on, .switch.button_text.on, .switch.button_icon.on {
 
-    background: $bg_element_type_button_clear_blue;
-    box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px $color_theme; // Propriedade aplicada aprimorada via JS. 
- 
     .piece_text {
 
         color: $color_text_switch_type_button_on;
-        filter: drop-shadow(0px 0px 2px $color_text_switch_type_button_shadow_outline_on); 
-    }
-
-    .piece_icon {
-
-        filter: drop-shadow(0px 0px 1px $color_icon_outline_switch_type_button_on); 
     }
 }
 
@@ -2632,6 +2621,7 @@ TODO:            >>> Option ON
 }
 */
 
+/*  
 .switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled { 
     
     // box-shadow: inset 0px 0px 9px 4px $color_shadow_box_inset_element_type_button_clear !important;
@@ -2642,20 +2632,25 @@ TODO:            >>> Option ON
         filter: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
     }
 }
+*/
 
 // ─────────── Pill ───────────
 
+/*
 .switch.button_icon.on.pill {
 
-    // background: $bg_switch_type_button_pill_and_rounded_on;
+    background: $bg_switch_type_button_pill_and_rounded_on;
 }
+*/
 
 // ─────────── Rounded ───────────
 
+/*
 .switch.button_full.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
  
     // background: $bg_switch_type_button_pill_and_rounded_on;
 }
+*/
  
 /*  
 ────────────────────────────
@@ -2735,11 +2730,35 @@ TODO:            >>> Floating Labels
 TODO:            >>> Colors
 ──────────────────────────── */
 
+$box_shadow_element_type_button_clear_blue: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(195, 100%, 50%); // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
+$filter_element_type_button_piece_text_clear_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+$filter_element_type_button_piece_icon_clear_blue: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
+$filter_switch_type_button_piece_text_clear_disabled_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
+
+$box_shadow_element_type_button_clear_red: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 100%, 62%);
+$filter_element_type_button_piece_text_clear_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+$filter_element_type_button_piece_icon_clear_red: drop-shadow(0px 0px 1px hsl(0, 100%, 78%));
+$filter_switch_type_button_piece_text_clear_disabled_red: drop-shadow(0px 0px 2px hsl(0, 100%, 38%)); 
+
+$box_shadow_element_type_button_clear_yellow: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(60, 100%, 48%), 0px 0px 4px 1px hsl(60, 100%, 48%), 0px 0px 11px 1px hsl(60, 100%, 50%);
+$filter_element_type_button_piece_text_clear_yellow: drop-shadow(0px 0px 2px hsl(60, 100%, 29%));
+$filter_element_type_button_piece_icon_clear_yellow: drop-shadow(0px 0px 1px hsl(60, 100%, 40%));
+$filter_switch_type_button_piece_text_clear_disabled_yellow: drop-shadow(0px 0px 2px hsl(60, 100%, 23%)); 
+
+$box_shadow_element_type_button_clear_green: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(120, 100%, 72%), 0px 0px 12px 0px hsl(120, 100%, 50%);
+$filter_element_type_button_piece_text_clear_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
+$filter_element_type_button_piece_icon_clear_green: drop-shadow(0px 0px 1px hsl(120, 100%, 48%));
+$filter_switch_type_button_piece_text_clear_disabled_green: drop-shadow(0px 0px 2px hsl(120, 100%, 28%)); 
+
+$box_shadow_element_type_button_clear_black: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 0%, 40%);
+$filter_element_type_button_piece_text_clear_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+$filter_element_type_button_piece_icon_clear_black: drop-shadow(0px 0px 1px hsl(0, 0%, 64%));
+$filter_switch_type_button_piece_text_clear_disabled_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%)); 
+
 /*------ Default: Blue ------*/
 
 button.button_full, button.button_text, button.button_icon, 
 a.button_full, a.button_text, a.button_icon,
-
 button.button_full.blue, button.button_text.blue, button.button_icon.blue, 
 a.button_full.blue, a.button_text.blue, a.button_icon.blue { 
 
@@ -2757,41 +2776,71 @@ a.button_full.blue, a.button_text.blue, a.button_icon.blue {
 
 button.button_full, button.button_text,
 a.button_full, a.button_text, 
-
 button.button_full.blue, button.button_text.blue, 
 a.button_full.blue, a.button_text.blue { 
 
     .piece_text {
 
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+        filter: $filter_element_type_button_piece_text_clear_blue;
     }
 }
 
-@media not all and (pointer: coarse) {
+@media not all and (pointer: coarse) { // Hover
 
     button.button_full:not(.disabled):hover, button.button_text:not(.disabled):hover, button.button_icon:not(.disabled):hover,
     a.button_full:not(.disabled):hover, a.button_text:not(.disabled):hover, a.button_icon:not(.disabled):hover,
-
     button.button_full.blue:not(.disabled):hover, button.button_text.blue:not(.disabled):hover, button.button_icon.blue:not(.disabled):hover,
     a.button_full.blue:not(.disabled):hover, a.button_text.blue:not(.disabled):hover, a.button_icon.blue:not(.disabled):hover {
 
         background: $bg_element_type_button_clear_blue; // <- Propriedade aplicada aprimorada via JS.
         
-        box-shadow: // <- Propriedade aplicada aprimorada via JS. // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
-        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
-        0px 0px 12px 0px $color_theme;
+        box-shadow:$box_shadow_element_type_button_clear_blue; // <- Propriedade aplicada aprimorada via JS.
 
         .piece_icon {
 
-            filter: drop-shadow(0px 0px 1px hsl(195, 100%, 60%)); 
+            filter: $filter_element_type_button_piece_icon_clear_blue; 
         }
     }
 }
 
-@media (pointer: fine) {
+.switch.button_full.on, .switch.button_text.on, .switch.button_icon.on,
+.switch.button_full.blue.on, .switch.button_text.blue.on, .switch.button_icon.blue.on { // Switch ON
+
+    background: $bg_element_type_button_clear_blue;
+    box-shadow: $box_shadow_element_type_button_clear_blue;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_blue; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_blue; 
+    }
+}
+
+.switch.button_icon.on,
+.switch.button_icon.blue.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.on.disabled, .switch.button_text.on.disabled, .switch.button_icon.on.disabled,
+.switch.button_full.blue.on.disabled, .switch.button_text.blue.on.disabled, .switch.button_icon.blue.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_blue; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
 
     .switch.button_icon.on, button.button_icon, a.button_icon,
-
     .switch.button_icon.blue.on, button.button_icon.blue, a.button_icon.blue { 
     
         .piece_text {
@@ -2825,29 +2874,59 @@ a.button_full.red, a.button_text.red {
 
     .piece_text {
 
-        filter: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+        filter: $filter_element_type_button_piece_text_clear_red;
     }
 }
 
-@media not all and (pointer: coarse) {
+@media not all and (pointer: coarse) { // Hover
     
     button.button_full.red:not(.disabled):hover, button.button_text.red:not(.disabled):hover, button.button_icon.red:not(.disabled):hover,
     a.button_full.red:not(.disabled):hover, a.button_text.red:not(.disabled):hover, a.button_icon.red:not(.disabled):hover {
 
         background: $bg_element_type_button_clear_red;
         
-        box-shadow:
-        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
-        0px 0px 12px 0px hsl(0, 100%, 62%); 
+        box-shadow: $box_shadow_element_type_button_clear_red; 
 
         .piece_icon {
 
-            filter: drop-shadow(0px 0px 1px hsl(0, 100%, 78%)); 
+            filter: $filter_element_type_button_piece_icon_clear_red; 
         }
     }
 }
 
-@media (pointer: fine) {
+.switch.button_full.red.on, .switch.button_text.red.on, .switch.button_icon.red.on { // Switch ON
+
+    background: $bg_element_type_button_clear_red;
+    box-shadow: $box_shadow_element_type_button_clear_red;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_red; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_red; 
+    }
+}
+
+.switch.button_icon.red.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.red.on.disabled, .switch.button_text.red.on.disabled, .switch.button_icon.red.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_red; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
 
     .switch.button_icon.red.on, button.button_icon.red, a.button_icon.red {  
     
@@ -2885,25 +2964,27 @@ a.button_icon.yellow {
     linear-gradient(to bottom, hsl(60, 100%, 54%), hsl(60, 100%, 43%), hsl(60, 100%, 46%));
 } 
 
-@media not all and (pointer: coarse) {
+button.button_full.yellow, button.button_text.yellow,
+a.button_full.yellow, a.button_text.yellow {
+
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_yellow;
+    }
+}
+
+@media not all and (pointer: coarse) { // Hover
     
     button.button_full.yellow:not(.disabled):hover, button.button_text.yellow:not(.disabled):hover, button.button_icon.yellow:not(.disabled):hover,
     a.button_full.yellow:not(.disabled):hover, a.button_text.yellow:not(.disabled):hover, a.button_icon.yellow:not(.disabled):hover {
 
         background: $bg_element_type_button_clear_yellow;
         
-        box-shadow:
-        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
-        //0px 0px 0px 1px hsl(60, 100%, 48%),
-        //0px 0px 12px 0px hsl(60, 100%, 40%);
-
-        0px 0px 0px 1px hsl(60, 100%, 48%),
-        0px 0px 4px 1px hsl(60, 100%, 48%),
-        0px 0px 11px 1px hsl(60, 100%, 50%);
+        box-shadow: $box_shadow_element_type_button_clear_yellow;
 
         .piece_icon {
 
-            filter: drop-shadow(0px 0px 1px hsl(60, 100%, 40%)); 
+            filter: $filter_element_type_button_piece_icon_clear_yellow; 
         }
     }
     
@@ -2914,16 +2995,44 @@ a.button_icon.yellow {
     }
 }
 
-button.button_full.yellow, button.button_text.yellow,
-a.button_full.yellow, a.button_text.yellow {
+.switch.button_full.yellow.on, .switch.button_text.yellow.on, .switch.button_icon.yellow.on { // Switch ON
 
+    background: $bg_element_type_button_clear_yellow;
+    box-shadow: $box_shadow_element_type_button_clear_yellow;
+ 
     .piece_text {
 
-        filter: drop-shadow(0px 0px 2px hsl(60, 100%, 29%));
+        filter: $filter_element_type_button_piece_text_clear_yellow; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_yellow; 
     }
 }
 
-@media (pointer: fine) {
+.switch.button_icon.yellow.on { // Switch ON 
+
+    background: $bg_element_type_button_icon_clear_yellow; 
+}
+
+.switch.button_icon.yellow.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.yellow.on.disabled, .switch.button_text.yellow.on.disabled, .switch.button_icon.yellow.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_yellow; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
 
     .switch.button_icon.yellow.on, button.button_icon.yellow, a.button_icon.yellow {  
     
@@ -2958,30 +3067,59 @@ a.button_full.green, a.button_text.green {
 
     .piece_text {
 
-        filter: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
+        filter: $filter_element_type_button_piece_text_clear_green;
     }
 }
 
-@media not all and (pointer: coarse) {
+@media not all and (pointer: coarse) { // Hover
     
     button.button_full.green:not(.disabled):hover, button.button_text.green:not(.disabled):hover, button.button_icon.green:not(.disabled):hover,
     a.button_full.green:not(.disabled):hover, a.button_text.green:not(.disabled):hover, a.button_icon.green:not(.disabled):hover {
 
         background: $bg_element_type_button_clear_green;
         
-        box-shadow:
-        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
-        0px 0px 0px 1px hsl(120, 100%, 72%), 
-        0px 0px 12px 0px hsl(120, 100%, 50%); 
+        box-shadow: $box_shadow_element_type_button_clear_green; 
 
         .piece_icon {
 
-            filter: drop-shadow(0px 0px 1px hsl(120, 100%, 48%)); 
+            filter: $filter_element_type_button_piece_icon_clear_green; 
         }
     }
 }
 
-@media (pointer: fine) {
+.switch.button_full.green.on, .switch.button_text.green.on, .switch.button_icon.green.on { // Switch ON
+
+    background: $bg_element_type_button_clear_green;
+    box-shadow: $box_shadow_element_type_button_clear_green;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_green; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_green; 
+    }
+}
+
+.switch.button_icon.green.on { // Switch ON
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.green.on.disabled, .switch.button_text.green.on.disabled, .switch.button_icon.green.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_green; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
 
     .switch.button_icon.green.on, button.button_icon.green, a.button_icon.green {  
     
@@ -3016,29 +3154,59 @@ a.button_full.black, a.button_text.black {
 
     .piece_text {
 
-        filter: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+        filter: $filter_element_type_button_piece_text_clear_black;
     }
 }
 
-@media not all and (pointer: coarse) {
+@media not all and (pointer: coarse) { // Hover
     
     button.button_full.black:not(.disabled):hover, button.button_text.black:not(.disabled):hover, button.button_icon.black:not(.disabled):hover,
     a.button_full.black:not(.disabled):hover, a.button_text.black:not(.disabled):hover, a.button_icon.black:not(.disabled):hover {
 
         background: $bg_element_type_button_clear_black;
         
-        box-shadow:
-        inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 
-        0px 0px 12px 0px hsl(0, 0%, 40%); 
+        box-shadow: $box_shadow_element_type_button_clear_black; 
 
         .piece_icon {
 
-            filter: drop-shadow(0px 0px 1px hsl(0, 0%, 64%)); 
+            filter: $filter_element_type_button_piece_icon_clear_black; 
         }
     } 
 }
 
-@media (pointer: fine) {
+.switch.button_full.black.on, .switch.button_text.black.on, .switch.button_icon.black.on { // Switch ON
+
+    background: $bg_element_type_button_clear_black;
+    box-shadow: $box_shadow_element_type_button_clear_black;
+ 
+    .piece_text {
+
+        filter: $filter_element_type_button_piece_text_clear_black; 
+    }
+
+    .piece_icon {
+
+        filter: $filter_element_type_button_piece_icon_clear_black; 
+    }
+}
+
+.switch.button_icon.black.on { // Switch ON 
+ 
+    .piece_text {
+
+        filter: initial;  
+    }
+}
+
+.switch.button_full.black.on.disabled, .switch.button_text.black.on.disabled, .switch.button_icon.black.on.disabled { // Switch ON Disabled
+ 
+    .piece_text {
+
+        filter: $filter_switch_type_button_piece_text_clear_disabled_black; 
+    }  
+}
+
+@media (pointer: fine) { // Floating Labels
 
     .switch.button_icon.black.on, button.button_icon.black, a.button_icon.black {  
     
@@ -3217,14 +3385,18 @@ TODO:            >>> Colors
 
     /*------ Default: Blue ------*/
 
-    .switch.image.on .piece_text {
+    .switch.image.on .piece_text,
+
+    .switch.image.blue.on .piece_text {
 
         color: $color_text_switch_type_image_piece_text_floating_on;
         border-color: $color_border_switch_type_image_piece_text_floating_on; 
         background: $bg_switch_type_image_piece_text_floating_on;
     }
 
-    button.image .piece_text, a.image .piece_text {
+    button.image .piece_text, a.image .piece_text,
+
+    button.image.blue .piece_text, a.image.blue .piece_text { 
 
         color: $color_text_button_type_image_piece_text_floating;
         border-color: $color_border_button_type_image_piece_text_floating; 

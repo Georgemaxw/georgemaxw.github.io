@@ -71,8 +71,8 @@ function switches_buttons_and_anchors__type_button($switches_or_buttons_or_ancho
 
     /*
     var $color_shadow_box_inset_switch_type_button_dark = 'hsla(0, 0%, 0%, 0.33)' // VÍNCULO: Váriável SCSS
-    var $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear = 'white' // VÍNCULO: Váriável SCSS
-    var $bg_button_type_normal_hover_and_switch_type_button_on = 'linear-gradient(to top, white, hsla(0, 0%, 100%, 0.64), hsla(0, 0%, 100%, 0) 46%), hsl(193, 100%, 83%)' // VÍNCULO: Váriável SCSS
+    var $color_shadow_box_inset_element_type_button_clear = 'white' // VÍNCULO: Váriável SCSS
+    var $bg_element_type_button_clear_blue = 'linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white), hsl(193, 100%, 80%)' // VÍNCULO: Váriável SCSS
     */
     
     $switches_or_buttons_or_anchors.forEach(function ($swt_or_btn_or_a) {
@@ -508,11 +508,11 @@ function switches_buttons_and_anchors__type_button($switches_or_buttons_or_ancho
 
                             if($swt_or_btn_or_a_is_square) {
 
-                                $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (4 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', '+ $box_shadow_out_clear_square
+                                $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (4 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_element_type_button_clear +', '+ $box_shadow_out_clear_square
 
                             } else {
 
-                                $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (4 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', '+ $box_shadow_out_clear_no_square
+                                $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (4 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_element_type_button_clear +', '+ $box_shadow_out_clear_no_square
                             }
                         }
 
@@ -553,15 +553,15 @@ function switches_buttons_and_anchors__type_button($switches_or_buttons_or_ancho
                             // 'if' necessário para que caso o botão mude para o tipo 'image', não apareça o efeito de hover nele:
                             if($swt_or_btn_or_a.classList.contains('button_full') || $swt_or_btn_or_a.classList.contains('button_text') || $swt_or_btn_or_a.classList.contains('button_icon')) {
 
-                                $swt_or_btn_or_a.style.background = $bg_button_type_normal_hover_and_switch_type_button_on
+                                $swt_or_btn_or_a.style.background = $bg_element_type_button_clear_blue
 
                                 if($swt_or_btn_or_a_is_square) {
 
-                                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (5 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', '+ $box_shadow_out_clear_square
+                                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (5 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_element_type_button_clear +', '+ $box_shadow_out_clear_square
 
                                 } else {
 
-                                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (5 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', '+ $box_shadow_out_clear_no_square
+                                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (5 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_element_type_button_clear +', '+ $box_shadow_out_clear_no_square
                                 }
                             }
                         }    
@@ -587,11 +587,11 @@ function switches_buttons_and_anchors__type_button($switches_or_buttons_or_ancho
 
                 if($swt_or_btn_or_a_is_square) {
 
-                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (6 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
+                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_square_delta_blur) +'px '+ (6 + $ON_square_delta_spread) +'px '+ $color_shadow_box_inset_element_type_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
 
                 } else { 
 
-                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (6 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_button_type_normal_and_switch_type_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
+                    $swt_or_btn_or_a.style.boxShadow = 'inset 0px 0px '+ (9 + $ON_pill_and_rounded_delta_blur) +'px '+ (6 + $ON_pill_and_rounded_delta_spread) +'px '+ $color_shadow_box_inset_element_type_button_clear +', 0px 0px 0px 1px hsl(195, 100%, 77%)'
                 }
             }
             */

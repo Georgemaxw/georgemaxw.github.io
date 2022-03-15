@@ -8,7 +8,11 @@ gmes-identity.js
 TODO: Framework Demos
 ────────────────────────────────────────────────────── */
 
-{
+/*  
+────────────────────────────
+TODO:    Choices
+──────────────────────────── */
+
 // Choice - Sample functions:
 
 function choice_option_1(arg){ if(arg.parentNode.parentNode.classList.contains('disabled') || arg.classList.contains('disabled')) { return }; console.log(1) }
@@ -93,6 +97,11 @@ function choice_example_2_Action_3() {
     document.querySelector('.choice_divsExample_2_div_3').style = 'display: block'
 }
 
+/*  
+────────────────────────────
+TODO:    Switches
+──────────────────────────── */
+
 // Switches & Buttons - Sample functions:
 
 function switch_1(arg){ if(arg.classList.contains('disabled')) { return }; console.log(1) /*console.log(arg.className) */ } 
@@ -101,27 +110,9 @@ function switch_3(arg){ if(arg.classList.contains('disabled')) { return }; conso
 function switch_4(arg){ if(arg.classList.contains('disabled')) { return }; console.log(4) }
 function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; console.log(5) }
 
-// Switches - Turn ON/OFF tests switches:
+// Tests Switches - No Unnecessary Pieces - Turn ON/OFF:
 
-var switches_group = document.querySelector('.toggle_tests_switches')
-
-if (switches_group !== null) {
-        
-    switches_group.addEventListener('click', function() { 
-        
-        var switches = document.querySelectorAll('.test_switches_group .switch')
-        
-        switches.forEach(function ($switch) { 
-
-            switch_event($switch) 
-        })
-    })
-}
-
-
-// Switches - Turn ON/OFF tests switches 2:
-
-var switches_group_2 = document.querySelector('.toggle_tests_switches_2')
+var switches_group_2 = document.querySelector('.tests_toggle_switches_no_unnecessary_pieces')
 
 if (switches_group_2 !== null) {
 
@@ -136,7 +127,74 @@ if (switches_group_2 !== null) {
     })
 }
 
+// Tests Switches - Change Styles - Turn ON/OFF:
+
+var switches_group = document.querySelector('.tests_toggle_switches_change_styles')
+
+if (switches_group !== null) {
+        
+    switches_group.addEventListener('click', function() { 
+        
+        var switches = document.querySelectorAll('.test_switches_group .switch')
+        
+        switches.forEach(function ($switch) { 
+
+            switch_event($switch) 
+        })
+    })
 }
+
+// Switches Change Color:
+
+token_clickable_for_switches_blue = document.querySelector('.switches_change_color .blue').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_red = document.querySelector('.switches_change_color .red').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_yellow = document.querySelector('.switches_change_color .yellow').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_green = document.querySelector('.switches_change_color .green').addEventListener('click', func_change_swts_color)
+token_clickable_for_switches_black = document.querySelector('.switches_change_color .black').addEventListener('click', func_change_swts_color)
+ 
+function func_change_swts_color() { 
+
+    var new_color = this.classList[1]
+
+    var switches = document.querySelectorAll('.test_switches_group .switch')
+ 
+    switches.forEach(function (swt) {
+
+        swt.classList.remove('blue')
+        swt.classList.remove('red')
+        swt.classList.remove('green')
+        swt.classList.remove('yellow')
+        swt.classList.remove('black')
+    
+        swt.classList.add(new_color)
+    })
+}  
+
+// <button>/<a> Change Color:
+
+token_clickable_for_buttons_blue = document.querySelector('.button_or_a__change_color .blue').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_red = document.querySelector('.button_or_a__change_color .red').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_yellow = document.querySelector('.button_or_a__change_color .yellow').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_green = document.querySelector('.button_or_a__change_color .green').addEventListener('click', func_change_btns_color)
+token_clickable_for_buttons_black = document.querySelector('.button_or_a__change_color .black').addEventListener('click', func_change_btns_color)
+ 
+function func_change_btns_color() { 
+
+    var new_color = this.classList[1]
+
+    var buttons = document.querySelectorAll('.test_buttons_group button')
+ 
+    buttons.forEach(function (button) {
+
+        button.classList.remove('blue')
+        button.classList.remove('red')
+        button.classList.remove('green')
+        button.classList.remove('yellow')
+        button.classList.remove('black')
+    
+        button.classList.add(new_color)
+    })
+} 
 
 /*  
 ──────────────────────────────────────────────────────
@@ -154,19 +212,19 @@ TODO:    >  Nav - Menu - HTML
 document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
-<li><a onclick="nav_menu_options(this)">Link 1</a>
+<li><a onclick="nav_menu_options(this)"><span>Link 1</span></a>
 
     <div>
         <ul>
-            <li><a href="#">Link 1.1</a></li>
-            <li><a href="#">Link 1.2</a></li>
-            <li><a href="#">Link 1.3</a></li>
+            <li><a href="#"><span>Link 1.1</span></a></li>
+            <li><a href="#"><span>Link 1.2</span></a></li>
+            <li><a href="#"><span>Link 1.3</span></a></li>
         </ul>
     </div>
 
 </li> 
 
-<li><a onclick="nav_menu_options(this)">Link 2</a>
+<li><a onclick="nav_menu_options(this)"><span>Link 2</span></a>
 
     <div>
         <ul>
@@ -180,7 +238,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L3</a>
+<li><a onclick="nav_menu_options(this)"><span>L3</span></a>
 
     <div>
         <ul class="nav_compact_sub_options_text_below">
@@ -194,7 +252,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L4</a>
+<li><a onclick="nav_menu_options(this)"><span>L4</span></a>
 
     <div>
         <ul class="nav_expanded_sub_options_h nav_expanded_sub_options_text_below">
@@ -209,7 +267,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L5</a> 
+<li><a onclick="nav_menu_options(this)"><span>L5</span></a> 
 
     <div>
         <ul class="nav_expanded_sub_options_h nav_sub_options_text_below">
@@ -224,9 +282,9 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a href="">∅</a><div><ul></ul></div></li><!---->
+<li><a href=""><span>∅</span></a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</a>
+<li><a onclick="nav_menu_options(this)"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</span></a>
 
     <div>
         <ul>
@@ -241,7 +299,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a href="page.html">P</a><div><ul></ul></div></li>
+<li><a href="page.html"><span>P</span></a><div><ul></ul></div></li>
 <li><a aria-label="Hide bar"><img src="../images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
@@ -512,35 +570,6 @@ document.querySelector('footer').innerHTML = `
 
 `
 */
-
-/* 
-──────────────────────────────────────────────────────
-TODO: <button>/<a> Change Color
-────────────────────────────────────────────────────── */
-
-btn_blue = document.querySelector('.button_or_a__change_color .blue').addEventListener('click', func_change_btns_color)
-btn_red = document.querySelector('.button_or_a__change_color .red').addEventListener('click', func_change_btns_color)
-btn_yellow = document.querySelector('.button_or_a__change_color .yellow').addEventListener('click', func_change_btns_color)
-btn_green = document.querySelector('.button_or_a__change_color .green').addEventListener('click', func_change_btns_color)
-btn_black = document.querySelector('.button_or_a__change_color .black').addEventListener('click', func_change_btns_color)
- 
-function func_change_btns_color() { 
-
-    var new_color = this.classList[1]
-
-    var buttons = document.querySelectorAll('.test_buttons_group button')
- 
-    buttons.forEach(function (button) {
-
-        button.classList.remove('blue')
-        button.classList.remove('red')
-        button.classList.remove('green')
-        button.classList.remove('yellow')
-        button.classList.remove('black')
-    
-        button.classList.add(new_color)
-    })
-} 
 
 /* 
 ──────────────────────────────────────────────────────
