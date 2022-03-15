@@ -731,13 +731,13 @@ $color_border_token_yellow: hsl(55, 96%, 44%);
 $bg_token_yellow: hsl(60, 100%, 97%);
 $color_token_yellow: hsl(55, 96%, 44%);
 
-$color_border_token_green: hsl(120, 100%, 44%);
+$color_border_token_green: hsl(120, 100%, 42%);
 $bg_token_green: hsl(120, 100%, 98%);
-$color_token_green: hsl(120, 100%, 44%);
+$color_token_green: hsl(120, 100%, 42%);
 
-$color_border_token_black: black;
-$bg_token_black: hsl(0, 0%, 97%);
-$color_token_black: black;
+$color_border_token_black: hsl(0, 0%, 55%);
+$bg_token_black: hsl(0, 0%, 97%); 
+$color_token_black: hsl(0, 0%, 55%);
 
 span.token {
 

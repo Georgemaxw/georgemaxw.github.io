@@ -646,15 +646,15 @@ span.token.yellow {
 }
 
 span.token.green {
-  border: 1px solid #00e000;
+  border: 1px solid #00d600;
   background: #f5fff5;
-  color: #00e000;
+  color: #00d600;
 }
 
 span.token.black {
-  border: 1px solid black;
+  border: 1px solid #8c8c8c;
   background: #f7f7f7;
-  color: black;
+  color: #8c8c8c;
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
