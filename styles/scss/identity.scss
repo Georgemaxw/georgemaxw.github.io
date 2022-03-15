@@ -252,22 +252,14 @@ table {
 TODO: Slider
 ────────────────────────────────────────────────────── */
 
-.slider {
-
-    border-top: 2px solid $color_theme;
-    border-bottom: 2px solid $color_theme;
+.slider { 
 
     img, picture { 
         max-width: 94.4%;
     }
 
-    img +  img {
-        border-left: 2px solid $color_theme; 
-    }
-
     @media (min-width: $screen_small_widthLimit) {
 
-        border: 2px solid $color_theme;
         max-width: calc(100% - (2 * #{$margin_horizontal}));  
 
         .slider img, .slider picture {
