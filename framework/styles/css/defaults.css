@@ -1220,7 +1220,7 @@ TODO:    > Footer
 .footer-content {
   width: 100%;
   margin-top: calc(2 * 16rem);
-  /* footer anterior.
+  /* footer anterior:
 
     @media (max-height: $screen_small_widthLimit) {
 
@@ -1234,7 +1234,7 @@ TODO:    > Footer
 }
 
 .footer-content .footer-icons {
-  /* footer anterior.
+  /* footer anterior:
 
         display: flex;
         justify-content: space-evenly;

@@ -535,41 +535,78 @@ document.querySelector('.headerNav-button').onclick = function() { // <- Show He
 /*  
 ──────────────────────────────────────────────────────
 TODO: Footer - HTML
-────────────────────────────────────────────────────── 
+────────────────────────────────────────────────────── */
 
 document.querySelector('footer').innerHTML = `
 
-<div class="central footer-content">
+    <div class="central footer-content">
 
-<address>
+        <address>
+        
+            <!--<p>Contactthe author of this page:</p>-->
+            <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
+            <!--  <ul>
+                    <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
+                    <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
+                    </ul>-->
+            <!--<p>Follow us on:</p>-->
+        
+                <ul class="footer-icons">
 
-    <!--<p>Contactthe author of this page:</p>-->
-    <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
-    <!--  <ul>
-            <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
-            <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
-            </ul>-->
-    <!--<p>Follow us on:</p>-->
+                    <!-- Footer anterior: -->
+                    <!--  
+                    <li><a href="mailto:support@company.com.br"><img src="../images/icons/mail.svg" alt=""></a></li>  
+                    <li><a href="#"><img src="../images/icons/youtube.svg" alt=""></a></li> 
+                    <li><a href="#"><img src="../images/icons/twitch.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../images/icons/instagram.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../images/icons/facebook.svg" alt=""></a></li>  
+                    <li><a href="#"><img src="../images/icons/twitter.svg" alt=""></a></li> 
+                    -->
 
-        <ul class="footer-icons">
-            <li><a href="mailto:support@company.com.br"><img src="../images/icons/mail.svg" alt=""></a></li>  
-            <li><a href="#"><img src="../images/icons/youtube.svg" alt=""></a></li> 
-            <li><a href="#"><img src="../images/icons/twitch.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/icons/instagram.svg" alt=""></a></li>
-            <li><a href="#"><img src="../images/icons/facebook.svg" alt=""></a></li>  
-            <li><a href="#"><img src="../images/icons/twitter.svg" alt=""></a></li> 
-        </ul>
+                    <!-- Footer novo: -->
 
-    <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+                    <li>
+                        <a href="mailto:support@company.com.br" class="button_icon rounded black"> 
+                            <img class="piece_icon" src="../images/icons/email.svg" alt=""> 
+                        </a> 
+                    </li> 
 
-</address> 
+                    <li>
+                        <a class="button_icon rounded green" onclick="lightbox('(68) 2425-8804')"> 
+                            <img class="piece_icon" src="../images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
+                        </a> 
+                    </li> 
 
-<p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
+                    <li>
+                        <a href="#" class="button_icon rounded red"> 
+                            <img class="piece_icon" src="../images/icons/youtube.svg" alt="">
+                        </a> 
+                    </li> 
 
-</div>
+                    <li>
+                        <a href="#" class="button_icon rounded"> 
+                            <img class="piece_icon" src="../images/icons/facebook.svg" alt="">
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="#" class="button_icon rounded yellow"> 
+                            <img class="piece_icon" src="../images/icons/instagram.svg" alt="">
+                        </a> 
+                    </li> 
+                </ul>
+        
+            <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+        
+        </address> 
+        
+        <p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
+        
+    </div>
+ 
 `
-*/
+
+update_switches_buttons_and_anchors(document.querySelectorAll('footer a')) 
 
 /* 
 ──────────────────────────────────────────────────────
