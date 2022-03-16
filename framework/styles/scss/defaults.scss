@@ -189,38 +189,47 @@ linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), wh
 hsl(193, 0%,94%); // hsl(193, 0%,88%); 
 //$bg_switch_type_button_off: hsl(193, 0%,96%); 
 
+
+
+$bg_element_type_button_blue: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(195, 100%, 48%), hsl(195, 100%, 50%));
+$box_shadow_element_type_button_blue: 0px 0px 0px 1px hsl(195, 100%, 66%), inset 0px 0px 9px 7px white;
+$filter_element_type_button_piece_text_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+
+$filter_element_type_button_piece_text_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+
+$filter_element_type_button_piece_text_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 33%)); // hsl(60, 100%, 29%)
+
+$filter_element_type_button_piece_text_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
  
+$filter_element_type_button_piece_text_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+
+
 
 $bg_element_type_button_clear_blue:  // VÍNCULO: Váriável JS
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
 linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white), hsl(193, 100%, 80%);
 $box_shadow_element_type_button_clear_blue: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(195, 100%, 50%); // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
-$filter_element_type_button_piece_text_clear_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
 $filter_element_type_button_piece_icon_clear_blue: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
 $filter_switch_type_button_piece_text_clear_disabled_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
 
 $bg_element_type_button_clear_red: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 100%, 87%);
 $box_shadow_element_type_button_clear_red: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 100%, 62%);
-$filter_element_type_button_piece_text_clear_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
 $filter_element_type_button_piece_icon_clear_red: drop-shadow(0px 0px 1px hsl(0, 100%, 78%));
 $filter_switch_type_button_piece_text_clear_disabled_red: drop-shadow(0px 0px 2px hsl(0, 100%, 38%)); 
 
 $bg_element_type_button_clear_yellow:linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 52%);
 $bg_element_type_button_icon_clear_yellow: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 48%);
 $box_shadow_element_type_button_clear_yellow: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(60, 100%, 48%), 0px 0px 4px 1px hsl(60, 100%, 48%), 0px 0px 11px 1px hsl(60, 100%, 50%);
-$filter_element_type_button_piece_text_clear_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 33%)); // hsl(60, 100%, 29%)
 $filter_element_type_button_piece_icon_clear_yellow: drop-shadow(0px 0px 1px hsl(60, 100%, 40%));
 $filter_switch_type_button_piece_text_clear_disabled_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 28%)); 
 
 $bg_element_type_button_clear_green: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(120, 100%, 77%); 
 $box_shadow_element_type_button_clear_green: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(120, 100%, 72%), 0px 0px 12px 0px hsl(120, 100%, 50%);
-$filter_element_type_button_piece_text_clear_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
 $filter_element_type_button_piece_icon_clear_green: drop-shadow(0px 0px 1px hsl(120, 100%, 48%));
 $filter_switch_type_button_piece_text_clear_disabled_green: drop-shadow(0px 0px 2px hsl(120, 100%, 28%)); 
 
 $bg_element_type_button_clear_black: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 0%, 76%);
 $box_shadow_element_type_button_clear_black: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 0%, 40%);
-$filter_element_type_button_piece_text_clear_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
 $filter_element_type_button_piece_icon_clear_black: drop-shadow(0px 0px 1px hsl(0, 0%, 64%));
 $filter_switch_type_button_piece_text_clear_disabled_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%)); 
 
@@ -428,30 +437,27 @@ Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 
 html {
+    
     box-sizing: border-box;
 } 
 
 *, *::before, *::after {
+    
     box-sizing: inherit;
 }
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: <html> & <body> 
+TODO: Scrollbars
 ────────────────────────────────────────────────────── */
 
-html {
-
-    background: $bg_html;
-}
-
-html::-webkit-scrollbar { // Entire bar
+*::-webkit-scrollbar { // Entire bar
 
     width: 14px;
     height: 14px;
 }
 
-html::-webkit-scrollbar-thumb { // Bar pointer  
+*::-webkit-scrollbar-thumb { // Bar pointer  
 
     border-radius: 1000px;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
@@ -481,7 +487,7 @@ html::-webkit-scrollbar-thumb { // Bar pointer
     hsla(0, 0%, 100%, 0);
 }
 
-html::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+*::-webkit-scrollbar-thumb:hover { // Bar pointer hover
 
     $delta_deg: 51deg;
 
@@ -495,11 +501,11 @@ html::-webkit-scrollbar-thumb:hover { // Bar pointer hover
     0px 3px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
-html::-webkit-scrollbar-track {   // Bar background
+*::-webkit-scrollbar-track {   // Bar background
 
     border-top: 1px solid $color_theme;
     border-left: 1px solid $color_theme;
-    background: radial-gradient(white, hsl(195, 100%, 95%));
+    // background: radial-gradient(white, hsl(195, 100%, 95%));
 }
 
 // html::-webkit-scrollbar-track:hover {   // Bar background hover
@@ -507,11 +513,47 @@ html::-webkit-scrollbar-track {   // Bar background
 //     background: hsla(195, 100%, 50%, 0.1);
 // }
 
-html { // Regra para o Firefox
+* { // Regra para o Firefox
         
     scrollbar-width: auto;
     scrollbar-color: hsl(195, 100%, 50%) hsla(195, 100%, 50%, 0.06);
 }
+
+/*  
+──────────────────────────────────────────────────────
+TODO: <html> & <body> 
+────────────────────────────────────────────────────── */
+
+html {
+
+    background: $bg_html;
+}
+
+html::-webkit-scrollbar { // Entire bar
+
+    width: 14px;
+    height: 14px;
+}
+
+/*  
+html::-webkit-scrollbar-thumb { // Bar pointer  
+
+}
+
+html::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+
+}
+
+html::-webkit-scrollbar-track {   // Bar background
+
+}
+ 
+html { // Regra para o Firefox
+
+    scrollbar-width: ;
+    scrollbar-color: ;
+}
+*/
 
 body {
 
@@ -1264,12 +1306,12 @@ TODO:        >> Menu
         
         // background: linear-gradient(to bottom, hsl(195, 100%, 93%), white, hsl(195, 100%, 93%));
         background: white;
-        border-radius: 1000px; 
         box-shadow: inset 0px 0px 0px 1px hsla(195, 100%, 72%, 1);
     }
     
     .nav-menu ul::-webkit-scrollbar-track {   // Bar background
 
+        border: 0;
         background: hsla(195, 100%, 85%, 0.5);
         border-radius: 1000px; 
     }
@@ -1989,16 +2031,18 @@ textarea::-webkit-scrollbar { // Entire bar
 textarea::-webkit-scrollbar-thumb { // Bar pointer
 
     background: hsla(0, 0%, 0%, 0.14);    
-    border-radius: 1000px;
+    box-shadow: none;
 }
 
 textarea::-webkit-scrollbar-thumb:hover { // Bar pointer hover
 
-    background: hsla(0, 0%, 35%, 0.14);    
+    background: hsla(0, 0%, 35%, 0.14);     
+    box-shadow: none;
 }
 
 textarea::-webkit-scrollbar-track {   // Bar background
 
+    border: 0;
     background: transparent;
 }
 
@@ -2768,11 +2812,9 @@ a.button_full, a.button_text, a.button_icon,
 button.button_full.blue, button.button_text.blue, button.button_icon.blue, 
 a.button_full.blue, a.button_text.blue, a.button_icon.blue { 
 
-    background: 
-    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(195, 100%, 48%), hsl(195, 100%, 50%));
+    background: $bg_element_type_button_blue;
 
-    box-shadow: 0px 0px 0px 1px hsl(195, 100%, 66%), inset 0px 0px 9px 7px white;
+    box-shadow: $box_shadow_element_type_button_blue;
 
     .piece_icon {
 
@@ -2787,7 +2829,7 @@ a.button_full.blue, a.button_text.blue {
 
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_blue;
+        filter: $filter_element_type_button_piece_text_blue;
     }
 }
 
@@ -2817,7 +2859,7 @@ a.button_full.blue, a.button_text.blue {
  
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_blue; 
+        filter: $filter_element_type_button_piece_text_blue; 
     }
 
     .piece_icon {
@@ -2880,7 +2922,7 @@ a.button_full.red, a.button_text.red {
 
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_red;
+        filter: $filter_element_type_button_piece_text_red;
     }
 }
 
@@ -2907,7 +2949,7 @@ a.button_full.red, a.button_text.red {
  
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_red; 
+        filter: $filter_element_type_button_piece_text_red; 
     }
 
     .piece_icon {
@@ -2975,7 +3017,7 @@ a.button_full.yellow, a.button_text.yellow {
 
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_yellow;
+        filter: $filter_element_type_button_piece_text_yellow;
     }
 }
 
@@ -3008,7 +3050,7 @@ a.button_full.yellow, a.button_text.yellow {
  
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_yellow; 
+        filter: $filter_element_type_button_piece_text_yellow; 
     }
 
     .piece_icon {
@@ -3073,7 +3115,7 @@ a.button_full.green, a.button_text.green {
 
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_green;
+        filter: $filter_element_type_button_piece_text_green;
     }
 }
 
@@ -3100,7 +3142,7 @@ a.button_full.green, a.button_text.green {
  
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_green; 
+        filter: $filter_element_type_button_piece_text_green; 
     }
 
     .piece_icon {
@@ -3160,7 +3202,7 @@ a.button_full.black, a.button_text.black {
 
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_black;
+        filter: $filter_element_type_button_piece_text_black;
     }
 }
 
@@ -3187,7 +3229,7 @@ a.button_full.black, a.button_text.black {
  
     .piece_text {
 
-        filter: $filter_element_type_button_piece_text_clear_black; 
+        filter: $filter_element_type_button_piece_text_black; 
     }
 
     .piece_icon {
@@ -3736,7 +3778,11 @@ TODO:            >>> Sizes & Positions
 /*  
 ────────────────────────────
 TODO:    > Choices
-──────────────────────────── */
+──────────────────────────── 
+
+$bg_element_type_button_blue
+$box_shadow_element_type_button_blue
+*/
 
 .choice.horizontal, .choice.vertical, .choice.dropdown {
 
@@ -3770,7 +3816,7 @@ TODO:    > Choices
         align-items: center; 
         color: $color_text_menu;
         font-weight: bold;
-        filter: drop-shadow(0px 0px 2px hsl(193, 100%, 42%)); // <- Parte do estilo de choice novo! 
+        filter: $filter_element_type_button_piece_text_blue; // <- Parte do estilo de choice novo! 
 
         .text_img, .text_img_size {
             
@@ -3803,11 +3849,14 @@ TODO:        >> Horizontal
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    background: // <- Parte do estilo de choice novo!
-    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
-    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    // background: ; // <- Parte do estilo de choice novo!
+    // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    
+    background: $bg_element_type_button_blue; // <- Parte do estilo de choice novo!
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    // box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    box-shadow: $box_shadow_element_type_button_blue; // <- Parte do estilo de choice novo!
 
     > li {
         display: inline-flex;
@@ -3839,7 +3888,7 @@ TODO:        >> Horizontal
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        box-shadow: inset 2px 0px 9px 4px hsl(195, 100%, 41%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
             
         span {
             padding-left: 15px;
@@ -3896,11 +3945,15 @@ TODO:        >> Vertical
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    background: // <- Parte do estilo de choice novo!
-    linear-gradient(to top, hsla(195, 100%, 100%, 0.9), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%), 
-    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    // background: // <- Parte do estilo de choice novo!
+    // linear-gradient(to bottom, hsla(195, 100%, 100%, 0) 46%, hsla(195, 100%, 100%, 0.64), hsla(0, 0%, 100%, 0.9)), 
+    // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    
+    background: $bg_element_type_button_blue; // <- Parte do estilo de choice novo!
 
-    box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+    // box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+
+    box-shadow: $box_shadow_element_type_button_blue; // <- Parte do estilo de choice novo!
 
     > li {
         display: flex;
@@ -3943,7 +3996,7 @@ TODO:        >> Vertical
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 46%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
+        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 41%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
         a {
             display: flex;
@@ -3981,16 +4034,18 @@ TODO:        >> Dropdown
     border-radius: 1000px;
     // background: $bg_choice; // <- Parte do estilo de choice anterior!
 
-    background: // <- Parte do estilo de choice novo!
-    linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
-    linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    // background: // <- Parte do estilo de choice novo!
+    // linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
+    // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
+    
+    background: $bg_element_type_button_blue; // <- Parte do estilo de choice novo!
 
     // box-shadow: // <- Parte do estilo de choice anterior!
     // inset 0px -4px 5px 3px $color_shadow_box_inset_dark,
     // inset 5px 5px 5px 0px $color_shadow_box_inset_clear;
 
-    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
-
+    box-shadow: inset 0px 0px 9px 6px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(195, 100%, 66%); // <- Parte do estilo de choice novo!
+    
     > li {
         display: inline-flex;
         justify-content: center;
@@ -4128,7 +4183,6 @@ TODO:        >> Dropdown
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-thumb { // Bar pointer
 
     background: linear-gradient(to bottom, hsl(180, 100%, 85%), hsl(195, 100%, 55%));    
-    border-radius: 1000px;
     box-shadow: inset 0px 0px 0px 1px hsl(195, 100%, 100%);
 }
 
@@ -4139,6 +4193,7 @@ TODO:        >> Dropdown
 
 .choice.dropdown.choice.dropdown_open::-webkit-scrollbar-track {   // Bar background
 
+    border: 0;
     background: transparent; 
 }
 
@@ -4565,7 +4620,7 @@ TODO:    > Sliders
 .slider::-webkit-scrollbar-thumb { // Bar pointer
 
     background: hsl(0, 0%, 74%);
-    border-radius: 1000px;
+    box-shadow: none;
 }
    
 .slider::-webkit-scrollbar-track { // Bar background
@@ -4583,8 +4638,6 @@ TODO:    > Sliders
 }
 
 .slider::-webkit-scrollbar-thumb { // Bar pointer  
-
-    border-radius: 1000px;
     
     $delta_deg: 51deg;
 
@@ -4612,9 +4665,10 @@ TODO:    > Sliders
 
 .slider::-webkit-scrollbar-track {   // Bar background
 
+    border: 0;
     border-top: 2px solid $color_theme;
     // background: radial-gradient(white, hsl(195, 100%, 94%));
-    background: white;
+    background: white; 
 }
 
 @media (min-width: $screen_small_widthLimit) {  
@@ -4972,8 +5026,6 @@ TODO:    > Lightbox
 }
 
 .lightbox_layout::-webkit-scrollbar-thumb { // Bar pointer
-
-    border-radius: 1000px;
     
     // background: linear-gradient(to bottom, hsl(198, 100%, 100%), hsl(198, 100%, 74%));
     // box-shadow: inset 0px 0px 0px 1px hsl(198, 100%, 87%);   
@@ -4987,11 +5039,11 @@ TODO:    > Lightbox
     // background: linear-gradient(to bottom, hsl(198, 100%, 74%), hsl(198, 100%, 100%));
     // background: linear-gradient(to bottom, hsl(198, 100%, 90%), hsl(198, 100%, 94%));
     background: hsl(198, 100%, 91%); 
-    box-shadow: inset 0px 0px 0px 1px white;
 }
 
 .lightbox_layout::-webkit-scrollbar-track {   // Bar background
 
+    border: 0;
     background: transparent; 
 }
 
