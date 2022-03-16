@@ -3950,8 +3950,7 @@ TODO:        >> Vertical
     // linear-gradient(to bottom, hsl(195, 100%, 80%), hsl(195, 100%, 67%), hsl(195, 100%, 60%)); 
     
     background: // <- Parte do estilo de choice novo!
-    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), 
-    linear-gradient(to bottom, hsl(195, 100%, 68%), hsl(195, 100%, 50%), hsl(195, 100%, 50%));
+    linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), hsl(195, 100%, 54%);
 
     // box-shadow: inset 0px 0px 9px 6px white, 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
 
