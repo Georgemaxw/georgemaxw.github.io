@@ -2528,7 +2528,7 @@ a.button_icon.yellow {
 
 button.button_full.yellow .piece_text, button.button_text.yellow .piece_text,
 a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
-  filter: drop-shadow(0px 0px 2px #999900);
+  filter: drop-shadow(0px 0px 2px #a3a300);
 }
 
 @media not all and (pointer: coarse) {
@@ -2553,7 +2553,7 @@ a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
 }
 
 .switch.button_full.yellow.on .piece_text, .switch.button_text.yellow.on .piece_text, .switch.button_icon.yellow.on .piece_text {
-  filter: drop-shadow(0px 0px 2px #999900);
+  filter: drop-shadow(0px 0px 2px #a3a300);
 }
 
 .switch.button_full.yellow.on .piece_icon, .switch.button_text.yellow.on .piece_icon, .switch.button_icon.yellow.on .piece_icon {
