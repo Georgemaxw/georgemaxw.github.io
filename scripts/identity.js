@@ -498,7 +498,7 @@ document.querySelector('footer').innerHTML = `
                     <!-- Footer novo: -->
 
                     <li>
-                        <a href="mailto:support@company.com.br" class="button_icon rounded black"> 
+                        <a href="mailto:support@company.com.br" class="button_icon rounded"> 
                             <img class="piece_icon" src="../framework/images/icons/email.svg" alt=""> 
                         </a> 
                     </li> 
@@ -515,11 +515,13 @@ document.querySelector('footer').innerHTML = `
                         </a> 
                     </li> 
 
+                    <!--
                     <li>
                         <a href="#" class="button_icon rounded"> 
                             <img class="piece_icon" src="../framework/images/icons/facebook.svg" alt="">
                         </a>
                     </li>
+                    --> 
 
                     <li>
                         <a href="#" class="button_icon rounded yellow"> 
@@ -789,6 +791,27 @@ for (i = 1; i < SDSB_switchs.length; i++) {
 
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = skills_table_ths[i - 1].textContent
 }
+
+/*  
+────────────────────────────
+TODO:      >> Set Switches Widths
+──────────────────────────── */
+
+function skills_data_switchs_width() {  
+
+    SDSB_switchs.forEach(function (swt) {
+
+        var dad = swt.parentElement
+    
+        var dad_width = Number(getComputedStyle(dad).getPropertyValue('width').slice(0,-2)) 
+    
+        swt.style.width = dad_width +'px'
+    })
+}
+ 
+skills_data_switchs_width()
+
+window.addEventListener('resize', skills_data_switchs_width)
   
 /*  
 ────────────────────────────
@@ -989,22 +1012,6 @@ skills_table_box.addEventListener('click', function() {
 
 
 
-
-function skills_data_switchs_width() {  
-
-    SDSB_switchs.forEach(function (swt) {
-
-        var dad = swt.parentElement
-    
-        var dad_width = Number(getComputedStyle(dad).getPropertyValue('width').slice(0,-2)) 
-    
-        swt.style.width = dad_width +'px'
-    })
-}
- 
-skills_data_switchs_width()
-
-window.addEventListener('resize', skills_data_switchs_width)
 
 
 
