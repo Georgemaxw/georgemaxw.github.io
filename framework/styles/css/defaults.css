@@ -653,10 +653,10 @@ span.token.red {
 }
 
 span.token.yellow {
-  border: 1px solid #d7c504;
+  border: 1px solid #d2c104;
   background: ivory;
   color: yellow;
-  color: #d7c504;
+  color: #d2c104;
 }
 
 span.token.green {
@@ -2574,9 +2574,9 @@ a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.yellow.on .piece_text, button.button_icon.yellow .piece_text, a.button_icon.yellow .piece_text {
-    border-color: #d7c504;
+    border-color: #d2c104;
     background: ivory;
-    color: #d7c504;
+    color: #d2c104;
   }
 }
 
@@ -2835,13 +2835,13 @@ TODO:            >>> Colors
   }
   /*------ Yellow ------*/
   .switch.image.yellow.on .piece_text {
-    color: #d7c504;
-    border-color: #d7c504;
+    color: #d2c104;
+    border-color: #d2c104;
     background: ivory;
   }
   button.image.yellow .piece_text, a.image.yellow .piece_text {
-    color: #d7c504;
-    border-color: #d7c504;
+    color: #d2c104;
+    border-color: #d2c104;
     background: ivory;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
