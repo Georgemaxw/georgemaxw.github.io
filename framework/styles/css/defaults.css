@@ -653,10 +653,10 @@ span.token.red {
 }
 
 span.token.yellow {
-  border: 1px solid #dcca04;
-  background: ivory;
+  border: 1px solid #d2c104;
+  background: #ffffeb;
   color: yellow;
-  color: #dcca04;
+  color: #d2c104;
 }
 
 span.token.green {
@@ -666,9 +666,9 @@ span.token.green {
 }
 
 span.token.black {
-  border: 1px solid #8c8c8c;
+  border: 1px solid #858585;
   background: #f7f7f7;
-  color: #8c8c8c;
+  color: #858585;
 }
 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -2528,7 +2528,7 @@ a.button_icon.yellow {
 
 button.button_full.yellow .piece_text, button.button_text.yellow .piece_text,
 a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
-  filter: drop-shadow(0px 0px 2px #949400);
+  filter: drop-shadow(0px 0px 2px #999900);
 }
 
 @media not all and (pointer: coarse) {
@@ -2553,7 +2553,7 @@ a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
 }
 
 .switch.button_full.yellow.on .piece_text, .switch.button_text.yellow.on .piece_text, .switch.button_icon.yellow.on .piece_text {
-  filter: drop-shadow(0px 0px 2px #949400);
+  filter: drop-shadow(0px 0px 2px #999900);
 }
 
 .switch.button_full.yellow.on .piece_icon, .switch.button_text.yellow.on .piece_icon, .switch.button_icon.yellow.on .piece_icon {
@@ -2569,14 +2569,14 @@ a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
 }
 
 .switch.button_full.yellow.on.disabled .piece_text, .switch.button_text.yellow.on.disabled .piece_text, .switch.button_icon.yellow.on.disabled .piece_text {
-  filter: drop-shadow(0px 0px 2px #757500);
+  filter: drop-shadow(0px 0px 2px olive);
 }
 
 @media (pointer: fine) {
   .switch.button_icon.yellow.on .piece_text, button.button_icon.yellow .piece_text, a.button_icon.yellow .piece_text {
-    border-color: #dcca04;
-    background: ivory;
-    color: #dcca04;
+    border-color: #d2c104;
+    background: #ffffeb;
+    color: #d2c104;
   }
 }
 
@@ -2690,9 +2690,9 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.black.on .piece_text, button.button_icon.black .piece_text, a.button_icon.black .piece_text {
-    border-color: #8c8c8c;
+    border-color: #858585;
     background: #f7f7f7;
-    color: #8c8c8c;
+    color: #858585;
   }
 }
 
@@ -2835,14 +2835,14 @@ TODO:            >>> Colors
   }
   /*------ Yellow ------*/
   .switch.image.yellow.on .piece_text {
-    color: #dcca04;
-    border-color: #dcca04;
-    background: ivory;
+    color: #d2c104;
+    border-color: #d2c104;
+    background: #ffffeb;
   }
   button.image.yellow .piece_text, a.image.yellow .piece_text {
-    color: #dcca04;
-    border-color: #dcca04;
-    background: ivory;
+    color: #d2c104;
+    border-color: #d2c104;
+    background: #ffffeb;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Green ------*/
@@ -2859,13 +2859,13 @@ TODO:            >>> Colors
   }
   /*------ Black ------*/
   .switch.image.black.on .piece_text {
-    color: #8c8c8c;
-    border-color: #8c8c8c;
+    color: #858585;
+    border-color: #858585;
     background: #f7f7f7;
   }
   button.image.black .piece_text, a.image.black .piece_text {
-    color: #8c8c8c;
-    border-color: #8c8c8c;
+    color: #858585;
+    border-color: #858585;
     background: #f7f7f7;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
