@@ -531,38 +531,101 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     @media (min-width: 1600px) { li:not(:nth-of-type(2)) { width: 12.5%; } }
 }
 
+// .skills_data_switchs_box {
+// 
+//     margin-left: calc(0.5 * #{$margin_horizontal});   
+//     margin-right: calc(0.5 * #{$margin_horizontal});
+// 
+//     $switchs_margin_horizontal: 10px;
+// 
+//     .switch {
+//         
+//         width: calc((100% - 4 * #{$switchs_margin_horizontal})/2); 
+//         height: 42px;
+//         margin-left: $switchs_margin_horizontal;
+//         margin-right: $switchs_margin_horizontal;
+//     }
+// 
+//     .switch + .switch {
+//         
+//         margin-top: $margin_vertical;
+//     }
+// 
+//     @media (min-width: 410px) { .switch { width: calc((100% - 6 * #{$switchs_margin_horizontal})/3); } }
+// 
+//     @media (min-width: 550px) { .switch { width: calc((100% - 8 * #{$switchs_margin_horizontal})/4); } }
+// 
+//     @media (min-width: 690px) { .switch { width: calc((100% - 10 * #{$switchs_margin_horizontal})/5); } }
+// 
+//     @media (min-width: 830px) { .switch { width: calc((100% - 12 * #{$switchs_margin_horizontal})/6); } }
+// 
+//     @media (min-width: 970px) { .switch { width: calc((100% - 14 * #{$switchs_margin_horizontal})/7); } }
+// 
+//     @media (min-width: 1110px) { .switch { width: calc((100% - 16 * #{$switchs_margin_horizontal})/8); } }
+// 
+//     @media (min-width: 1250px) { .switch { width: calc((100% - 18 * #{$switchs_margin_horizontal})/9); } }
+// 
+//     @media (min-width: 1920px) { 
+//         
+//         $switch_width: 130px;
+//         $width: calc((2 * #{$switch_width} + 4 * #{$switchs_margin_horizontal}));
+// 
+//         position: fixed;
+//         right: 0;
+//         z-index: 1;
+//         width: $width;
+//         margin-left: $STC_and_SDSB_FULLHD_margin_horizontal;
+//         margin-right: $STC_and_SDSB_FULLHD_margin_horizontal;
+// 
+//         .switch { 
+//             
+//             width: 130px; 
+//         }
+//     }
+// } 
+
 .skills_data_switchs_box {
 
+    font-size: 0;
     margin-left: calc(0.5 * #{$margin_horizontal});   
     margin-right: calc(0.5 * #{$margin_horizontal});
 
     $switchs_margin_horizontal: 10px;
 
-    .switch {
+    li {
+        display: inline-block;
+    }
+
+    li {
         width: calc((100% - 4 * #{$switchs_margin_horizontal})/2); 
-        height: 42px;
         margin-left: $switchs_margin_horizontal;
         margin-right: $switchs_margin_horizontal;
     }
 
-    .switch + .switch {
+    li + li {
         
         margin-top: $margin_vertical;
     }
 
-    @media (min-width: 410px) { .switch { width: calc((100% - 6 * #{$switchs_margin_horizontal})/3); } }
+    .switch {
+        
+        height: 42px;
+        margin: 0;
+    }
 
-    @media (min-width: 550px) { .switch { width: calc((100% - 8 * #{$switchs_margin_horizontal})/4); } }
+    @media (min-width: 410px) { li { width: calc((100% - 6 * #{$switchs_margin_horizontal})/3); } }
 
-    @media (min-width: 690px) { .switch { width: calc((100% - 10 * #{$switchs_margin_horizontal})/5); } }
+    @media (min-width: 550px) { li { width: calc((100% - 8 * #{$switchs_margin_horizontal})/4); } }
 
-    @media (min-width: 830px) { .switch { width: calc((100% - 12 * #{$switchs_margin_horizontal})/6); } }
+    @media (min-width: 690px) { li { width: calc((100% - 10 * #{$switchs_margin_horizontal})/5); } }
 
-    @media (min-width: 970px) { .switch { width: calc((100% - 14 * #{$switchs_margin_horizontal})/7); } }
+    @media (min-width: 830px) { li { width: calc((100% - 12 * #{$switchs_margin_horizontal})/6); } }
 
-    @media (min-width: 1110px) { .switch { width: calc((100% - 16 * #{$switchs_margin_horizontal})/8); } }
+    @media (min-width: 970px) { li { width: calc((100% - 14 * #{$switchs_margin_horizontal})/7); } }
 
-    @media (min-width: 1250px) { .switch { width: calc((100% - 18 * #{$switchs_margin_horizontal})/9); } }
+    @media (min-width: 1110px) { li { width: calc((100% - 16 * #{$switchs_margin_horizontal})/8); } }
+
+    @media (min-width: 1250px) { li { width: calc((100% - 18 * #{$switchs_margin_horizontal})/9); } }
 
     @media (min-width: 1920px) { 
         
@@ -577,7 +640,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
         margin-left: $STC_and_SDSB_FULLHD_margin_horizontal;
         margin-right: $STC_and_SDSB_FULLHD_margin_horizontal;
 
-        .switch { 
+        li { 
             
             width: 130px; 
         }
@@ -586,7 +649,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 
 .skills_table_box {
 
-    display: none;
+    // display: none;
     
     width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
@@ -740,7 +803,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 
 .skills_quantity {
 
-    display: none;
+    // display: none;
     text-align: center;
 }
 
