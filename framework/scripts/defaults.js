@@ -48,17 +48,6 @@ for (i = 0; i < switches.length; i++) {
 }
 */
 
-
-
-
-
-
-
-
-
-
-
-
 /*  
 ────────────────────────────
 TODO:    > Switches, Buttons, And Anchors All Type Button
@@ -358,7 +347,7 @@ function switches_buttons_and_anchors__type_button($switches_or_buttons_or_ancho
 
                         if ($swt_or_btn_or_a_height >= $swt_or_btn_or_a__type_button_icon_min_size) {
 
-                            var $y0 = 50 + Math.max(0, $piece_text_height - $piece_text_height_of_1_line) 
+                            var $y0 = 45 + Math.max(0, $piece_text_height - $piece_text_height_of_1_line) 
                             var $y_offset = Math.max(0, Math.min(15, 0.00028 * (($swt_or_btn_or_a_width * $swt_or_btn_or_a_height) - ($swt_or_btn_or_a__type_button_icon_min_size * $swt_or_btn_or_a__type_button_icon_min_size))))
 
                             $piece_text.style.top = -1 * ($y0 + $y_offset) + 'px'  
@@ -644,7 +633,7 @@ function switches_buttons_and_anchors__type_image($switches_or_buttons_or_anchor
 
                 if (!$swt_or_btn_or_a.classList.contains('disabled')) {
 
-                    var $y0 = 49 + Math.max(0, $piece_text_height - $piece_text_height_of_1_line)
+                    var $y0 = 45 + Math.max(0, $piece_text_height - $piece_text_height_of_1_line)
                     var $y_offset = Math.min(15, 0.00028 * ($piece_icon_area - ($piece_icon_min_size * $piece_icon_min_size)))
 
                     $piece_text.style.top = -1 * ($y0 + $y_offset) + 'px'
@@ -772,20 +761,6 @@ window.addEventListener('resize', update_switches_buttons_and_anchors_resize)
 TODO: Choices 
 ────────────────────────────────────────────────────── */
 
-
-
-/*
-var $shine = $swt_or_btn_or_a.querySelector(':scope .button_shine_top') 
-
-if ($shine === null) {
-
-
-}
-*/
-
-
-
-
 var choice_anchorClicked = null
 var choice_anchorClickedBefore = null /* <- Variável necessária para 
 salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
@@ -911,7 +886,7 @@ function choice_option(arg) {
     }
 }
 
-// Espaço no final ('li' invisível) do menu dos dropdowns:
+/* Espaço no final ('li' invisível) do menu dos dropdowns: */
 
 var allChoicesD = document.querySelectorAll('.dropdown')
 

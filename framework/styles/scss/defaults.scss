@@ -189,25 +189,42 @@ linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), wh
 hsl(193, 0%,94%); // hsl(193, 0%,88%); 
 //$bg_switch_type_button_off: hsl(193, 0%,96%); 
 
+ 
+
 $bg_element_type_button_clear_blue:  // VÍNCULO: Váriável JS
 // url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),
-hsl(193, 100%, 80%); // hsl(193, 100%, 83%); 
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white), hsl(193, 100%, 80%);
+$box_shadow_element_type_button_clear_blue: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(195, 100%, 50%); // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
+$filter_element_type_button_piece_text_clear_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+$filter_element_type_button_piece_icon_clear_blue: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
+$filter_switch_type_button_piece_text_clear_disabled_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
 
-$bg_element_type_button_clear_red: 
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 100%, 87%);
+$bg_element_type_button_clear_red: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 100%, 87%);
+$box_shadow_element_type_button_clear_red: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 100%, 62%);
+$filter_element_type_button_piece_text_clear_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+$filter_element_type_button_piece_icon_clear_red: drop-shadow(0px 0px 1px hsl(0, 100%, 78%));
+$filter_switch_type_button_piece_text_clear_disabled_red: drop-shadow(0px 0px 2px hsl(0, 100%, 38%)); 
 
-$bg_element_type_button_clear_yellow:
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 52%);
+$bg_element_type_button_clear_yellow:linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 52%);
+$bg_element_type_button_icon_clear_yellow: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 48%);
+$box_shadow_element_type_button_clear_yellow: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(60, 100%, 48%), 0px 0px 4px 1px hsl(60, 100%, 48%), 0px 0px 11px 1px hsl(60, 100%, 50%);
+$filter_element_type_button_piece_text_clear_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 33%)); // hsl(60, 100%, 29%)
+$filter_element_type_button_piece_icon_clear_yellow: drop-shadow(0px 0px 1px hsl(60, 100%, 40%));
+$filter_switch_type_button_piece_text_clear_disabled_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 28%)); 
 
-$bg_element_type_button_icon_clear_yellow: 
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 48%);
+$bg_element_type_button_clear_green: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(120, 100%, 77%); 
+$box_shadow_element_type_button_clear_green: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(120, 100%, 72%), 0px 0px 12px 0px hsl(120, 100%, 50%);
+$filter_element_type_button_piece_text_clear_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
+$filter_element_type_button_piece_icon_clear_green: drop-shadow(0px 0px 1px hsl(120, 100%, 48%));
+$filter_switch_type_button_piece_text_clear_disabled_green: drop-shadow(0px 0px 2px hsl(120, 100%, 28%)); 
 
-$bg_element_type_button_clear_green: 
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(120, 100%, 77%); 
+$bg_element_type_button_clear_black: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 0%, 76%);
+$box_shadow_element_type_button_clear_black: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 0%, 40%);
+$filter_element_type_button_piece_text_clear_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+$filter_element_type_button_piece_icon_clear_black: drop-shadow(0px 0px 1px hsl(0, 0%, 64%));
+$filter_switch_type_button_piece_text_clear_disabled_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%)); 
 
-$bg_element_type_button_clear_black: 
-linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 0%, 76%);
+
 
 /*      
 //$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
@@ -1543,7 +1560,20 @@ TODO:    > Footer
             margin-bottom: $margin_vertical; 
         }
 
-        // Configuração para 5 ícones:
+        /* Configuração para 4 ícones: */
+
+        @media (min-width: 0px) {
+
+            display: flex;
+            justify-content: space-between;
+
+            max-width: 292px; // 4 * 58 + 3 * 20
+
+            li + li { margin-left: 0; } 
+            li:nth-last-of-type(1) { margin-right: 0; } 
+        }
+         
+        /* Configuração para 5 ícones:
 
         @media (min-width: 0px) { 
             
@@ -1564,6 +1594,7 @@ TODO:    > Footer
             li + li { margin-left: 0; } 
             li:nth-last-of-type(1) { margin-right: 0; } 
         }
+        */
     }
 
     /* footer anterior:
@@ -2664,7 +2695,7 @@ TODO:            >>> Floating Labels
         .piece_text {
 
             position: absolute;  
-            // top: -50px; // Propriedade aplicada aprimorada via JS. 
+            // top: -45px; // Propriedade aplicada aprimorada via JS. 
             //left: -15px; // Propriedade aplicada aprimorada via JS. 
             z-index: 1;
 
@@ -2729,31 +2760,6 @@ TODO:            >>> Floating Labels
 ────────────────────────────
 TODO:            >>> Colors
 ──────────────────────────── */
-
-$box_shadow_element_type_button_clear_blue: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(195, 100%, 50%); // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
-$filter_element_type_button_piece_text_clear_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
-$filter_element_type_button_piece_icon_clear_blue: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
-$filter_switch_type_button_piece_text_clear_disabled_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
-
-$box_shadow_element_type_button_clear_red: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 100%, 62%);
-$filter_element_type_button_piece_text_clear_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
-$filter_element_type_button_piece_icon_clear_red: drop-shadow(0px 0px 1px hsl(0, 100%, 78%));
-$filter_switch_type_button_piece_text_clear_disabled_red: drop-shadow(0px 0px 2px hsl(0, 100%, 38%)); 
-
-$box_shadow_element_type_button_clear_yellow: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(60, 100%, 48%), 0px 0px 4px 1px hsl(60, 100%, 48%), 0px 0px 11px 1px hsl(60, 100%, 50%);
-$filter_element_type_button_piece_text_clear_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 33%)); // hsl(60, 100%, 29%)
-$filter_element_type_button_piece_icon_clear_yellow: drop-shadow(0px 0px 1px hsl(60, 100%, 40%));
-$filter_switch_type_button_piece_text_clear_disabled_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 28%)); 
-
-$box_shadow_element_type_button_clear_green: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(120, 100%, 72%), 0px 0px 12px 0px hsl(120, 100%, 50%);
-$filter_element_type_button_piece_text_clear_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
-$filter_element_type_button_piece_icon_clear_green: drop-shadow(0px 0px 1px hsl(120, 100%, 48%));
-$filter_switch_type_button_piece_text_clear_disabled_green: drop-shadow(0px 0px 2px hsl(120, 100%, 28%)); 
-
-$box_shadow_element_type_button_clear_black: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 0%, 40%);
-$filter_element_type_button_piece_text_clear_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
-$filter_element_type_button_piece_icon_clear_black: drop-shadow(0px 0px 1px hsl(0, 0%, 64%));
-$filter_switch_type_button_piece_text_clear_disabled_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%)); 
 
 /*------ Default: Blue ------*/
 
@@ -3319,7 +3325,7 @@ TODO:            >>> Floating Labels
         .piece_text {
 
             position: absolute;  
-            // top: -49px; // Propriedade aplicada aprimorada via JS.  
+            // top: -45px; // Propriedade aplicada aprimorada via JS.  
             // left: -15px; // Propriedade aplicada aprimorada via JS. 
             z-index: 1;
             padding-top: 6px; 

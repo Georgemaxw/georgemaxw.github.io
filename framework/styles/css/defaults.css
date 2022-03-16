@@ -1283,6 +1283,29 @@ TODO:    > Footer
   margin-bottom: 0;
   list-style-type: none;
   text-align: center;
+  /* Configuração para 4 ícones: */
+  /* Configuração para 5 ícones:
+
+        @media (min-width: 0px) { 
+            
+            $li_margin_horizontal: 20px;
+
+            li + li { margin-left: $li_margin_horizontal; } 
+            li:nth-last-of-type(1) { margin-right: $li_margin_horizontal; } 
+        } 
+
+        @media (min-width: 362px) {
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            max-width: 370px; // 5 * 58 + 4 * 20
+
+            li + li { margin-left: 0; } 
+            li:nth-last-of-type(1) { margin-right: 0; } 
+        }
+        */
 }
 
 .footer-content .footer-icons li {
@@ -1298,20 +1321,10 @@ TODO:    > Footer
 }
 
 @media (min-width: 0px) {
-  .footer-content .footer-icons li + li {
-    margin-left: 20px;
-  }
-  .footer-content .footer-icons li:nth-last-of-type(1) {
-    margin-right: 20px;
-  }
-}
-
-@media (min-width: 362px) {
   .footer-content .footer-icons {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 370px;
+    max-width: 292px;
   }
   .footer-content .footer-icons li + li {
     margin-left: 0;

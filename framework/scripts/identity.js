@@ -566,7 +566,7 @@ document.querySelector('footer').innerHTML = `
                     <!-- Footer novo: -->
 
                     <li>
-                        <a href="mailto:support@company.com.br" class="button_icon rounded black"> 
+                        <a href="mailto:support@company.com.br" class="button_icon rounded"> 
                             <img class="piece_icon" src="../images/icons/email.svg" alt=""> 
                         </a> 
                     </li> 
@@ -583,11 +583,13 @@ document.querySelector('footer').innerHTML = `
                         </a> 
                     </li> 
 
+                    <!-- 
                     <li>
                         <a href="#" class="button_icon rounded"> 
                             <img class="piece_icon" src="../images/icons/facebook.svg" alt="">
                         </a>
                     </li>
+                    -->
 
                     <li>
                         <a href="#" class="button_icon rounded yellow"> 
