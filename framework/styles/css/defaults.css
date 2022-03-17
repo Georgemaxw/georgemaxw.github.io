@@ -3206,7 +3206,7 @@ TODO:        >> Vertical
 ──────────────────────────── */
 .choice.vertical {
   border-radius: 20px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), #14c4ff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), #1ac6ff;
   box-shadow: 0px 0px 0px 1px #52d4ff, inset 0px 0px 9px 7px white;
 }
 
@@ -3230,7 +3230,7 @@ TODO:        >> Vertical
   justify-content: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
-  box-shadow: inset 2px -2px 9px 4px #009dd1, 0px 0px 0px 1px #8ae2ff;
+  box-shadow: inset 0px 2px 2px 0px #0082ad;
 }
 
 .choice.vertical > li:nth-of-type(1) a {
