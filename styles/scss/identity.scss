@@ -15,7 +15,7 @@ $font_monospace: 'Courier New', Courier, monospace;
 $font_size: 19rem; 
 $font_small: 16rem;
 $font_smaller: 14rem;
-$central_maxWidth: 800px; /* Padrão: 600-700px. */
+$central_maxWidth: 960px; 
 $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
@@ -88,10 +88,8 @@ html {
 }
 
 .header-content {
-    max-width: 850px;
+    max-width: $central_maxWidth;
 }
- 
-$central_maxWidth: 1250px; 
 
 .central {
     max-width: $central_maxWidth;
@@ -177,6 +175,7 @@ TODO: Slider
 
 .slider { 
 
+    /*  
     img, picture { 
         max-width: 94.4%;
     }
@@ -195,6 +194,7 @@ TODO: Slider
         max-width: 1000px;
 
     }
+    */
 }
 
 /* 
@@ -382,7 +382,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     @media (min-width: 1920px) { 
 
         position: fixed;
-        top: 151px;
+        top: 174px;
         left: 0;
         z-index: 1000; 
         width: 300px; 
