@@ -119,7 +119,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
 
-<li><a href="../framework/pages/index.html"><span>Home</span></a><div><ul></ul></div></li>
+<!--<li><a href="../pages/index.html"><span>Home</span></a><div><ul></ul></div></li>-->
 
 <li><a href="#"><span>News</span></a><div><ul></ul></div></li><!---->
 
@@ -135,6 +135,8 @@ document.querySelector('.nav-menu').innerHTML = `
     </div>
 
 </li> 
+
+<li><a href="../framework/pages/index.html"><span>Framework</span></a><div><ul></ul></div></li>
 
 <!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 
