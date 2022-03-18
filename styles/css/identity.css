@@ -486,6 +486,7 @@ TODO: Skills - Table
         display: inline-block;
         min-width: max-content; 
     }  */
+  /*  */
 }
 
 .skills_table tr {
@@ -523,14 +524,31 @@ TODO: Skills - Table
   outline: 1px solid DeepSkyBlue;
 }
 
-.skills_table .type_icon {
+.skills_table td > span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.skills_table .icon_type {
   width: 32px;
   height: 32px;
   margin-top: 4px;
 }
 
-.skills_table .type_icon + .type_icon {
+.skills_table .icon_type + .icon_type {
   margin-left: 4px;
+}
+
+.skills_table .icon_state {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.skills_table .icon_state_effect {
+  width: 25px;
+  height: 25px;
 }
 
 .skills_table .cost + .cost {

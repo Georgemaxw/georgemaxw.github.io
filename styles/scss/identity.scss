@@ -671,18 +671,38 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
         display: inline-block;
         min-width: max-content; 
     }  */
+/*  */
+    td > span { 
 
-    .type_icon {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .icon_type {
 
         width: 32px;
         height: 32px;
         margin-top: 4px;
-        // filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.24));
+        // filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.24)); // Isso buga o recurso 'position: sticky' da tabela!
     }
 
-    .type_icon + .type_icon {
+    .icon_type + .icon_type {
 
         margin-left: 4px;
+    }
+
+    .icon_state {
+
+        width: 32px;
+        height: 32px;
+        margin-left: 8px;
+        margin-right: 8px; 
+    }
+
+    .icon_state_effect {
+
+        width: 25px;
+        height: 25px;
     }
 
     .cost {

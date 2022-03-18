@@ -13,7 +13,43 @@
     <link href='../framework/styles/css/defaults.css' rel='stylesheet'><!---->
     <link href='../styles/css/identity.css' rel='stylesheet'>
 <style>
- 
+
+/* --------------- Elemento <tr> de modelo: ---------------  
+
+<tr>
+    <td><span>Skill name</span></td>
+    <td><span>  <img class="icon_type" src="../images/game/icons/types/.png" alt="">
+                            <img class="icon_type" src="../images/game/icons/types/.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+                                <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+*/
+
+
+
     .central {
         
         max-width: 1250px;
@@ -554,784 +590,366 @@
 
                 <div class="lb2"></div>
 
-                <div class="skills_table_box"> <!-- -->
+                <div class="skills_table_box"> <!---->
                     
                     <table class="skills_table">
-    <!--  
-                        <colgroup>
-                            <col><col style="width: 123px;"><col><col><col>
-                            <col><col><col><col><col>
-                            <col><col><col><col><col> 
-                            <col><col><col><col>
-                        </colgroup>
-    -->
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Types</th>
-
-                            <th scope="col">Physical</th> <!-- Category -->
-                            <th scope="col">Intensity</th>
-                            <th scope="col">Critical</th>
-                            <th scope="col">Effect</th>
-                            <th scope="col">Scope</th>
-
-                            <th scope="col">ACC</th>
-                            <th scope="col">plusTP</th>
-                            <th scope="col">plusSPD</th>
-                            <th scope="col">Costs</th>
-                            <th scope="col">Equips</th>
-
-                            <th scope="col">Extra1</th>
-                            <th scope="col">Extra2</th>
-                            <th scope="col">Extra3</th>
-                            <th scope="col">Extra4</th>
-                            <th scope="col">Extra5</th>
-                            <th scope="col">Extra6</th>
-
-                            <th scope="col">Description</th>
-                            <th scope="col">Notes</th>
-                        </tr>
-
-                        <tr>
-                            <td><span>Backup</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Bio Generator</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp">20</span><span class="cost mp">10</span><span class="cost tp">10</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Blocking Filter</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span>Activates a filter on the visor that blocks the opponent's appearance and sounds.</span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Mainframe</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>+TEC</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Scan</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">20</span><span class="cost tp">20</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Self Destruction</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Machine.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">25</span><span class="cost tp">10</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Shortware</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt="">
-                                                <img class="type_icon" src="../images/game/icons/types/Electric.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp">20</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Update</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>+TEC</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp">55</span><!-- <span class="cost mp"></span><span class="cost tp"></span> --></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Backup</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Bio Generator</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp">20</span><span class="cost mp">10</span><span class="cost tp">10</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Blocking Filter</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span>Activates a filter on the visor that blocks the opponent's appearance and sounds.</span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Mainframe</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>+TEC</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Scan</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">20</span><span class="cost tp">20</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Self Destruction</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Machine.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">25</span><span class="cost tp">10</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Shortware</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt="">
-                                                <img class="type_icon" src="../images/game/icons/types/Electric.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp">20</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Update</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>+TEC</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp">55</span><!-- <span class="cost mp"></span><span class="cost tp"></span> --></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Backup</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Bio Generator</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp">20</span><span class="cost mp">10</span><span class="cost tp">10</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Blocking Filter</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span>Activates a filter on the visor that blocks the opponent's appearance and sounds.</span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Mainframe</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>+TEC</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Scan</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">20</span><span class="cost tp">20</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Self Destruction</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Machine.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp">25</span><span class="cost tp">10</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Thunder</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Electric.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp">20</span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-
-                        <tr>
-                            <td><span>Update</span></td>
-                            <td><span><img class="type_icon" src="../images/game/icons/types/Digital.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span>+TEC</span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <span class="cost hp">55</span><!-- <span class="cost mp"></span><span class="cost tp"></span> --></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
+<!--  
+<colgroup>
+    <col><col style="width: 123px;"><col><col><col>
+    <col><col><col><col><col>
+    <col><col><col><col><col> 
+    <col><col><col><col>
+</colgroup>
+-->
+<tr>
+    <th scope="col">Name</th>
+    <th scope="col">Types</th>
+
+    <th scope="col">Physical</th> <!-- Category -->
+    <th scope="col">Intensity</th>
+    <th scope="col">Critical</th>
+    <th scope="col">Effect</th>
+    <th scope="col">Scope</th>
+
+    <th scope="col">ACC</th>
+    <th scope="col">plusTP</th>
+    <th scope="col">plusSPD</th>
+    <th scope="col">Costs</th>
+    <th scope="col">Equips</th>
+
+    <th scope="col">Extra1</th>
+    <th scope="col">Extra2</th>
+    <th scope="col">Extra3</th>
+    <th scope="col">Extra4</th>
+    <th scope="col">Extra5</th>
+    <th scope="col">Extra6</th>
+
+    <th scope="col">Description</th>
+    <th scope="col">Notes</th>
+</tr>
+
+<!--A-->
+
+<!--B-->
+
+<tr>
+    <td><span>Backup</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<tr>
+    <td><span>Bio Generator</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <span class="cost hp">20</span><span class="cost mp">10</span><span class="cost tp">10</span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<tr>
+    <td><span>Blocking Filter</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Cybernetic.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span>Activates a filter on the visor that blocks the opponent's appearance and sounds.</span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<!--C-->
+
+<!--D-->
+
+<!--E-->
+
+<!--F-->
+
+<tr>
+    <td><span>Firewall</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect -->
+    <td><span>
+        <!-- <img class="icon_state_effect" src="../images/game/icons/states/effects/+.svg" alt="">:   -->
+        Add: 
+        <img class="icon_state" src="../images/game/icons/states/Firewall.png" alt=""> Firewall
+    </span></td>
+
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<!--G-->
+
+<!--H-->
+
+<!--I-->
+
+<!--J-->
+
+<!--K-->
+
+<!--L-->
+
+<!--M-->
+
+<tr>
+    <td><span>Mainframe</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span>+TEC</span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<!--N-->
+
+<!--O-->
+
+<!--P-->
+
+<!--Q-->
+
+<!--R-->
+
+<!--S-->
+
+<tr>
+    <td><span>Scan</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class="cost hp"></span> --><span class="cost mp">20</span><span class="cost tp">20</span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<tr>
+    <td><span>Self Destruction</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Machine.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class="cost hp"></span> --><span class="cost mp">25</span><span class="cost tp">10</span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<tr>
+    <td><span>Shortware</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Digital.png" alt="">
+                        <img class="icon_type" src="../images/game/icons/types/Electric.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp">20</span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<!--T-->
+
+<!--U-->
+
+<tr>
+    <td><span>Update</span></td>
+    <td><span><img class="icon_type" src="../images/game/icons/types/Digital.png" alt=""></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span>+TEC</span></td>
+    <!-- Scope --><td><span></span></td>
+
+    <!-- ACC --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <span class="cost hp">55</span><!-- <span class="cost mp"></span><span class="cost tp"></span> --></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+    
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<!--V-->
+
+<!--W-->
+
+<!--X-->
+
+<!--Y-->
+
+<!--Z-->
 
                     </table>
 
-
-
-                    <div style="display: none;"> 
-
-                        <!-- --------------- Elemento <tr> de modelo: --------------- --> 
-
-                        <tr>
-                            <td><span>Skill name</span></td>
-                            <td><span>  <img class="type_icon" src="../images/game/icons/types/.png" alt="">
-                                                    <img class="type_icon" src="../images/game/icons/types/.png" alt=""></span></td>
-
-                            <!-- Physical --><td><span></span></td>
-                            <!-- Intensity --><td><span></span></td>
-                            <!-- Critical --><td><span></span></td>
-                            <!-- Effect --><td><span></span></td>
-                            <!-- Scope --><td><span></span></td>
-
-                            <!-- ACC --><td><span></span></td>
-                            <!-- +TP --><td><span></span></td>
-                            <!-- SPD --><td><span></span></td>
-                            <!-- Costs --><td><span>
-                                                        <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
-
-                            <!-- Equips --><td><span></span></td>
-
-                            <!-- Extra1 --><td><span></span></td>
-                            <!-- Extra2 --><td><span></span></td>
-                            <!-- Extra3 --><td><span></span></td>
-                            <!-- Extra4 --><td><span></span></td>
-                            <!-- Extra5 --><td><span></span></td>
-                            <!-- Extra6 --><td><span></span></td>
-                            
-                            <!-- Description --><td><span></span></td>
-                            <!-- Notes --><td><span></span></td>
-                        </tr>
-                        
-                    </div>
-
-
-                
                 </div> 
 
                 <p class="skills_quantity">Quantity of skills on the table: <span>0</span></p> 
