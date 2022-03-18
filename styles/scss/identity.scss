@@ -417,6 +417,11 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 
     li { 
         border-right: 1px solid white;
+
+        span {
+
+            padding-left: 10px;
+        } 
     }
 
     li:nth-last-of-type(1) { 

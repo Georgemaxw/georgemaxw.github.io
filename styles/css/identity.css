@@ -304,6 +304,10 @@ TODO: Skills - Table
   border-right: 1px solid white;
 }
 
+.skills_types_choice.choice.dropdown.dropdown_open li span {
+  padding-left: 10px;
+}
+
 .skills_types_choice.choice.dropdown.dropdown_open li:nth-last-of-type(1) {
   display: none !important;
 }
