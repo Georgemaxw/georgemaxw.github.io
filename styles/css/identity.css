@@ -527,7 +527,6 @@ TODO: Skills - Table
   width: 32px;
   height: 32px;
   margin-top: 4px;
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.24));
 }
 
 .skills_table .type_icon + .type_icon {
