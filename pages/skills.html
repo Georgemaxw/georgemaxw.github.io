@@ -23,8 +23,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span></span></td>
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -33,9 +33,9 @@
     <!-- Costs --><td><span>
                                 <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -55,8 +55,8 @@
         max-width: 1250px;
     }
 
-    .Name, .Types, .Physical, .Intensity, .Critical, .Effect, .Scope, .Success, .plusTP, .SPD, .Costs, .Equips, 
-    .Extra1, .Extra2, .Extra3, .Extra4, .Extra5, .Extra6, .Description, .Notes {
+    .Name, .Types, .Physical, .Intensity, .Effect, .States, .Scope, .Success, .plusTP, .SPD, .Costs, .Critical, 
+    .Requires, .Extra2, .Extra3, .Extra4, .Extra5, .Extra6, .Description, .Notes {
         
         display: none; 
     }
@@ -607,17 +607,17 @@
 
     <th scope="col">Physical</th> <!-- Category -->
     <th scope="col">Intensity</th>
-    <th scope="col">Critical</th>
     <th scope="col">Effect</th>
+    <th scope="col">States</th>
     <th scope="col">Scope</th>
 
     <th scope="col">Success</th>
     <th scope="col">plusTP</th>
     <th scope="col">SPD</th> // plusSPD
     <th scope="col">Costs</th>
-    <th scope="col">Equips</th>
+    <th scope="col">Critical</th>
 
-    <th scope="col">Extra1</th>
+    <th scope="col">Requires</th>
     <th scope="col">Extra2</th>
     <th scope="col">Extra3</th>
     <th scope="col">Extra4</th>
@@ -636,8 +636,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td> 
-    <!-- Effect --><td><span>+Zip, -Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td> 
+    <!-- States --><td><span>+Zip, -Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -646,9 +646,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -665,8 +665,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+ACC</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+ACC</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -675,9 +675,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -696,8 +696,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span></span></td>
     <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -706,9 +706,9 @@
     <!-- Costs --><td><span>
         <span class='cost hp'>20</span><span class='cost mp'>10</span><span class='cost tp'>10</span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -725,8 +725,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
     <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -735,9 +735,9 @@
     <!-- Costs --><td><span>
         <span class='cost hp'></span><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -756,8 +756,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Overload, -Burn</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Overload, -Burn</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -766,9 +766,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -785,8 +785,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -795,9 +795,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -814,8 +814,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+SPD</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+SPD</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -824,9 +824,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -845,8 +845,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+Encrypt</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+Encrypt</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -855,9 +855,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -874,8 +874,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -884,9 +884,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -903,19 +903,19 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+Bug</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+Bug</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span>1 Enemy</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- Success --><td><span>50%</span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -932,8 +932,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-CRI EVA</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-CRI EVA</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -942,9 +942,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -961,8 +961,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+Lag or +Crash</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+Lag or +Crash</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -971,9 +971,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -995,8 +995,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Encrypt</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Encrypt</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1005,9 +1005,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1026,19 +1026,19 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+Firewall</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+Firewall</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- Success --><!-- 100% --><td><span>100%</span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span>Fast</span></td>
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1061,8 +1061,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+Crash</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+Crash</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1071,9 +1071,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1096,8 +1096,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>2 Moves per turn, +Burn</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>2 Moves per turn, +Burn</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1106,9 +1106,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1125,8 +1125,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+Lag</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1135,9 +1135,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1156,8 +1156,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+INT</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+INT</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1166,9 +1166,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1185,19 +1185,19 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+TEC</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+TEC</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- Success --><!-- 100% --><td><span>100%</span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class='cost hp'></span><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1218,19 +1218,19 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>2 Moves per turn, +Overload</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>2 Moves per turn, +Overload</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
  
-    <!-- Success --><td><span>100%</span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1253,19 +1253,19 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Bug, -Lag, -Crash, -Hack</span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Bug, -Lag, -Crash, -Hack</span></td>
     <!-- Scope --><td><span>1 Ally</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- Success --><!-- 100% --><td><span>100%</span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class='cost hp'></span><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1282,8 +1282,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Bug</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Bug</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1292,9 +1292,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1311,8 +1311,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span></span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span></span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1321,9 +1321,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1340,8 +1340,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Bug, -Crash</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Bug, -Crash</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1350,9 +1350,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1371,8 +1371,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span></span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span></span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1381,9 +1381,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'>20</span><span class='cost tp'>20</span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1400,8 +1400,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span></span></td>
     <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1410,9 +1410,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'>25</span><span class='cost tp'>10</span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1429,8 +1429,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span></span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span></span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1439,9 +1439,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'>20</span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1458,8 +1458,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>Counter</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>Counter</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1468,9 +1468,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1487,8 +1487,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+AP</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+AP</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1497,9 +1497,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1516,8 +1516,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-CRI EVA</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-CRI EVA</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1526,9 +1526,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1545,8 +1545,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Overload</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-Overload</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1555,9 +1555,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1574,8 +1574,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-TEC, -AP Cost, -Overload</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>-TEC, -AP Cost, -Overload</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1584,9 +1584,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1607,19 +1607,19 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+TEC</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+TEC</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- Success --><!--  --><td><span>100%</span></td>
+    <!-- Success --><!--  --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class='cost hp'>55</span><!-- <span class='cost mp'></span><span class='cost tp'></span> --></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>
@@ -1638,8 +1638,8 @@
 
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
-    <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>+EVA</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
+    <!-- Effect --><td><span></span></td>
+    <!-- States --><td><span>+EVA</span></td><!-- Firewall, Zip, Encrypt, Bug, Lag, Crash, Malware, Hack, Overload, Burn -->
     <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
     <!-- Success --><td><span></span></td>
@@ -1648,9 +1648,9 @@
     <!-- Costs --><td><span>
         <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
 
-    <!-- Equips --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
 
-    <!-- Extra1 --><td><span></span></td>
+    <!-- Requires --><td><span></span></td>
     <!-- Extra2 --><td><span></span></td>
     <!-- Extra3 --><td><span></span></td>
     <!-- Extra4 --><td><span></span></td>

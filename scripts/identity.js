@@ -914,7 +914,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Effect']
+var activated_data = ['Name', 'States']
 
 var activated_data_indexes = [ ]
 
@@ -954,7 +954,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
+var hidden_data_switchs = ['Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
 
 var hidden_data_indexes = [ ]
 
