@@ -562,6 +562,8 @@ var skills_table_box = document.querySelector('.skills_table_box')
 
 var skills_table_rows = document.querySelectorAll('.skills_table tr')
 
+var skills_table_rows_onlySkills = document.querySelectorAll('.skills_table tr:not(:nth-of-Type(1))')
+
 var skills_table_ths = document.querySelectorAll('.skills_table th')
 
 var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch')
@@ -602,11 +604,11 @@ function func_skills_types_choices(el) {
 
     var skills_quantity = 0
 
-    skills_table_rows.forEach(function (skill_row) {
+    skills_table_rows_onlySkills.forEach(function (skill_row) {
     
         var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
 
-        if (el.querySelector('img') === null) {
+        if (el.querySelector('img') === null) { // Quando selecionar para mostrar todas as habilidades.
 
             skill_row.style.display = 'table-row'
             skills_quantity++
@@ -912,7 +914,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Types', 'Effect', 'Scope', 'Success', 'SPD']
+var activated_data = ['Name', 'Types', 'Effect', 'Scope', 'SPD']
 
 var activated_data_indexes = [ ]
 
