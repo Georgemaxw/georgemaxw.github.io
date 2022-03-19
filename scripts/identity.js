@@ -975,7 +975,7 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 /*  
 ────────────────────────────
 TODO:    > Initial Type & Auto Table Full Screen
-──────────────────────────── 
+──────────────────────────── */
 
 var skills_choice_initial_type = 'Digital'
 
@@ -997,7 +997,7 @@ skills_choice_options_anchor.forEach(function (option) {
 choice(skills_choice)
 
 skills_table_box.classList.toggle('skills_table_box_full')
-document.body.classList.toggle('overflow_hidden')*/
+document.body.classList.toggle('overflow_hidden')
  
 /*  
 ────────────────────────────
