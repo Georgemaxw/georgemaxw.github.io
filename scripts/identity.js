@@ -914,7 +914,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Types', 'Effect', 'Scope', 'SPD']
+var activated_data = ['Name', 'Effect']
 
 var activated_data_indexes = [ ]
 
@@ -971,6 +971,33 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
         }
     }
 }
+
+/*  
+────────────────────────────
+TODO:    > Initial Type & Auto Table Full Screen
+──────────────────────────── 
+
+var skills_choice_initial_type = 'Digital'
+
+var skills_choice = document.querySelector('.skills_types_choice')
+var skills_choice_options = document.querySelectorAll('.skills_types_choice > li')
+var skills_choice_options_anchor = document.querySelectorAll('.skills_types_choice > li a')
+ 
+choice(skills_choice)
+
+skills_choice_options_anchor.forEach(function (option) {
+
+    if (option.querySelector(':scope span').textContent === skills_choice_initial_type) {
+        
+        func_skills_types_choices(option)
+        choice_option(option)
+    }
+})
+ 
+choice(skills_choice)
+
+skills_table_box.classList.toggle('skills_table_box_full')
+document.body.classList.toggle('overflow_hidden')*/
  
 /*  
 ────────────────────────────
