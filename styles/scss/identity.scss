@@ -672,9 +672,10 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
         min-width: max-content; 
     }  */
 
-    .Fast:not(th) {
+    // .Description:not(th), .Notes:not(th) { 
+    .Description, .Notes { 
 
-        color: hsl(120, 100%, 47%);
+        text-align: left;
     }
 
     .icon_type {

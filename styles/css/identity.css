@@ -544,8 +544,8 @@ TODO: Skills - Table
   outline: 1px solid DeepSkyBlue;
 }
 
-.skills_table .Fast:not(th) {
-  color: #00f000;
+.skills_table .Description, .skills_table .Notes {
+  text-align: left;
 }
 
 .skills_table .icon_type {

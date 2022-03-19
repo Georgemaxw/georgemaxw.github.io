@@ -25,11 +25,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span></span></td>
+    <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span></span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
                                 <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
 
@@ -55,7 +55,7 @@
         max-width: 1250px;
     }
 
-    .Name, .Types, .Physical, .Intensity, .Critical, .Effect, .Scope, .ACC, .plusTP, .plusFast, .Costs, .Equips, 
+    .Name, .Types, .Physical, .Intensity, .Critical, .Effect, .Scope, .Success, .plusTP, .plusSPD, .Costs, .Equips, 
     .Extra1, .Extra2, .Extra3, .Extra4, .Extra5, .Extra6, .Description, .Notes {
         
         display: none; 
@@ -611,9 +611,9 @@
     <th scope="col">Effect</th>
     <th scope="col">Scope</th>
 
-    <th scope="col">ACC</th>
+    <th scope="col">Success</th>
     <th scope="col">plusTP</th>
-    <th scope="col">Fast</th> // plusSPD
+    <th scope="col">SPD</th> // plusSPD
     <th scope="col">Costs</th>
     <th scope="col">Equips</th>
 
@@ -639,12 +639,12 @@
     <!-- Physical --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
-    <!-- Effect --><td><span>-Bug, -Malware, -Overload, -Crash</span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span>1 Ally</span></td>
+    <!-- Effect --><td><span>-Bug, -Malware, -Crash, -1 Turn?</span></td>
+    <!-- Scope --><td><span>1 Ally</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span>100%</span></td>
+    <!-- Success --><!-- 100% --><td><span>100%</span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
 
@@ -669,11 +669,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span></span></td>
+    <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span></span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class="cost hp">20</span><span class="cost mp">10</span><span class="cost tp">10</span></span></td>
 
@@ -698,11 +698,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span>Immune to sound-type attacks, -Fascination, -Rage, -Fear</span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span></span></td>
+    <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span></span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
 
@@ -723,6 +723,64 @@
 
 <!--D-->
 
+<tr>
+    <td><span>Delete</span></td>
+    <td><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span>+Bug</span></td>
+    <!-- Scope --><td><span>1 Enemy</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
+
+    <!-- Success --><td><span>50%</span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
+<tr>
+    <td><span>Delete</span></td>
+    <td><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span></span></td>
+    <!-- Scope --><td><span>1 Enemy</span></td><!-- 1 Ally, All Allies, All Enemies -->
+
+    <!-- Success --><td><span></span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span></span></td>
+</tr>
+
 <!--E-->
 
 <!--F-->
@@ -735,11 +793,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span>+Firewall</span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span>User</span></td>
+    <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span>100%</span></td>
+    <!-- Success --><!-- 100% --><td><span>100%</span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><td><span>✔</span></td>
+    <!-- SPD --><td><span>Fast</span></td>
     <!-- Costs --><td><span>
         <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp"></span></span></td>
 
@@ -778,11 +836,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span>+TEC</span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span>User</span></td>
+    <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span>100%</span></td>
+    <!-- Success --><!-- 100% --><td><span>100%</span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class="cost hp"></span><span class="cost mp"></span><span class="cost tp"></span></span></td>
 
@@ -803,6 +861,35 @@
 
 <!--O-->
 
+<tr>
+    <td><span>Overclock</span></td>
+    <td><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+
+    <!-- Physical --><td><span></span></td>
+    <!-- Intensity --><td><span></span></td>
+    <!-- Critical --><td><span></span></td>
+    <!-- Effect --><td><span>+SPD?, +Overload</span></td>
+    <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
+
+    <!-- Success --><td><span>100%</span></td>
+    <!-- +TP --><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
+    <!-- Costs --><td><span>
+        <!-- <span class='cost hp'></span> --><span class='cost mp'></span><span class='cost tp'></span></span></td>
+
+    <!-- Equips --><td><span></span></td>
+
+    <!-- Extra1 --><td><span></span></td>
+    <!-- Extra2 --><td><span></span></td>
+    <!-- Extra3 --><td><span></span></td>
+    <!-- Extra4 --><td><span></span></td>
+    <!-- Extra5 --><td><span></span></td>
+    <!-- Extra6 --><td><span></span></td>
+
+    <!-- Description --><td><span></span></td>
+    <!-- Notes --><td><span>O clock rate indica a frequência com que o processador de um computador funciona. Seu sistema de medidas é em Hertz (MHz ou GHz, por exemplo).</span></td>
+</tr> 
+
 <!--P-->
 
 <!--Q-->
@@ -819,11 +906,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span></span></td>
+    <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span></span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <!-- <span class="cost hp"></span> --><span class="cost mp">20</span><span class="cost tp">20</span></span></td>
 
@@ -848,11 +935,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span></span></td>
+    <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span></span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <!-- <span class="cost hp"></span> --><span class="cost mp">25</span><span class="cost tp">10</span></span></td>
 
@@ -878,11 +965,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span></span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span></span></td>
+    <!-- Scope --><td><span></span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!-- 100% --><td><span></span></td>
+    <!-- Success --><td><span></span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <!-- <span class="cost hp"></span> --><span class="cost mp"></span><span class="cost tp">20</span></span></td>
 
@@ -911,11 +998,11 @@
     <!-- Intensity --><td><span></span></td>
     <!-- Critical --><td><span></span></td>
     <!-- Effect --><td><span>+TEC</span></td>
-    <!-- Scope --><!-- 1 ally, All allies, All enemies --><td><span>User</span></td>
+    <!-- Scope --><td><span>User</span></td><!-- 1 Ally, All Allies, 1 Enemy, All Enemies -->
 
-    <!-- ACC --><!--  --><td><span>100%</span></td>
+    <!-- Success --><!--  --><td><span>100%</span></td>
     <!-- +TP --><td><span></span></td>
-    <!-- Fast --><!-- ✔--><td><span></span></td>
+    <!-- SPD --><td><span></span></td>
     <!-- Costs --><td><span>
         <span class="cost hp">55</span><!-- <span class="cost mp"></span><span class="cost tp"></span> --></span></td>
 
