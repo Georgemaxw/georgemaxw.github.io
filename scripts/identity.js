@@ -954,7 +954,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
+var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
