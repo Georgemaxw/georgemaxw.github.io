@@ -74,24 +74,27 @@
                         
                         <div class="lb2"></div>
 
+                        <div class="slider border_radius_big">  
+
+                                <img src="../images/game/screenshots_battle_city.png" alt="">
+                                <img src="../images/game/screenshots_menu.png" alt=""> 
+                                <img src="../images/game/screenshots_map.png" alt="">
+                                <img src="../images/game/screenshots_battle_net_cyber_girl.png" alt="">
+                                <img src="../images/game/screenshots_battle_menu_net_cyber_girl.png" alt="">
+                                <img src="../images/game/screenshots_battle_city_cyber_girl.png" alt="">
+
+                        </div>  
+
                     </div>
 
-                    <div class="slider border_radius_big center">  
-
-                            <img src="../images/game/screenshots_1.svg" alt="" width="94.4%">
-                            <img src="../images/game/screenshots_2.svg" alt="" width="94.4%"> 
-                            <img src="../images/game/screenshots_3.svg" alt="" width="94.4%">
-
-                    </div>  
-
-                        <div class="lb2"></div>
-
+                        <!-- <div class="lb2"></div>
+                        
                         <div id="msg_seeBigImages_9" class="button_hide_container screen_small_portrait container_organize">   
                             <div class="button_hide"></div> 
-                            <p class="attention"><!--To see the big images, put the cell phone in landscape mode.-->
+                            <p class="attention">
                             <img src="../images/icons/rotate_device_to_max_img.svg" alt="" class="rotate_device_to_max_img">
                             </p>
-                        </div>
+                        </div> --><!--To see the big images, put the cell phone in landscape mode.-->
                         
                 </section>
 
@@ -134,10 +137,17 @@
 
                     <h3 class="hidden">Download</h3>
 
+                    <div class="lb"></div>
+                    
                     <div class="download_buttons">
-                        <button style="width: 155px;">Free Demo</button>
-                        <!--<button>Download the Free Demo</button>-->
-                        <button>Buy it on Steam</button> 
+                        <!-- <button>Free Demo</button> -->
+                        <button class="button_text pill" style="width: 155px;">
+                            <span class="piece_text"><!-- Download --> Free Demo</span>
+                        </button>
+                        
+                        <button class="button_text pill">
+                            <span class="piece_text">Buy it on Steam</span>
+                        </button>
                         <!--<button>Buy for $14.99</button>-->
                     </div>
 
@@ -207,8 +217,14 @@
 
     <footer></footer>
 
-    <script src="../framework/scripts/defaults.js"></script>
-    <script src="../scripts/identity.js"></script>
+    <!-- 
+        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
+        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
+        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+    -->
+
+    <script defer src="../framework/scripts/defaults.js"></script>
+    <script defer src="../scripts/identity.js"></script>
 
 </body> 
 </html>

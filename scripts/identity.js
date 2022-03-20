@@ -119,24 +119,26 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
 
-<li><a href="../framework/pages/index.html">Home</a><div><ul></ul></div></li>
+<!--<li><a href="../pages/index.html"><span>Home</span></a><div><ul></ul></div></li>-->
 
-<li><a href="#">News</a><div><ul></ul></div></li><!---->
+<li><a href="#"><span>News</span></a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)">Gameplay</a>
+<li><a onclick="nav_menu_options(this)"><span>Game</span></a>
 
     <div>
         <ul>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Characters</a></li>
-            <li><a href="types.html">Types</a></li>
-            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#"><span>History</span></a></li>
+            <li><a href="#"><span>Characters</span></a></li>
+            <li><a href="types.html"><span>Types</span></a></li>
+            <li><a href="skills.html"><span>Skills</span></a></li>
         </ul>
     </div>
 
 </li> 
 
-<!--<li><a href="download.html">Download</a><div><ul></ul></div></li>-->
+<li><a href="../framework/pages/index.html"><span>Framework</span></a><div><ul></ul></div></li>
+
+<!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 
 <li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
@@ -144,95 +146,95 @@ document.querySelector('.nav-menu').innerHTML = `
 
 /*
 <ul>
-<li><a onclick="nav_menu_options(this)">Link 1</a>
+<li><a onclick="nav_menu_options(this)"><span>Link 1</span></a>
 
     <div>
         <ul>
-            <li><a href="#">Link 1.1</a></li>
-            <li><a href="#">Link 1.2</a></li>
-            <li><a href="#">Link 1.3</a></li>
+            <li><a href="#"><span>Link 1.1</span></a></li>
+            <li><a href="#"><span>Link 1.2</span></a></li>
+            <li><a href="#"><span>Link 1.3</span></a></li>
         </ul>
     </div>
 
 </li> 
 
-<li><a onclick="nav_menu_options(this)">Link 2</a>
+<li><a onclick="nav_menu_options(this)"><span>Link 2</span></a>
 
     <div>
         <ul>
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 2.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 2.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.3</span></a></li>
             <!--<li><a href="#">Link 2.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 2.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 2.5</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L3</a>
+<li><a onclick="nav_menu_options(this)"><span>L3</span></a>
 
     <div>
         <ul class="nav_compact_sub_options_text_below">
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 3.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 3.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.3</span></a></li>
             <!--<li><a href="#">Link 3.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt=" "><span>Link 3.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/landscape.png" alt=" "><span>Link 3.5</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L4</a>
+<li><a onclick="nav_menu_options(this)"><span>L4</span></a>
 
     <div>
         <ul class="nav_expanded_sub_options_h nav_expanded_sub_options_text_below">
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 4.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 4.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.3</span></a></li>
            <!-- <li><a href="#">Link 4.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.5</span></a></li>
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 4.6</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 4.6</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a onclick="nav_menu_options(this)">L5</a> 
+<li><a onclick="nav_menu_options(this)"><span>L5</span></a> 
 
     <div>
         <ul class="nav_expanded_sub_options_h nav_sub_options_text_below">
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.1</span></a></li>
-            <!--<li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 5.2</span></a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.3</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.1</span></a></li>
+            <!--<li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 5.2</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.3</span></a></li>
            <!-- <li><a href="#">Link 5.4</a></li>-->
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.5</span></a></li>
-            <li><a href="#"><img src="../framework/images/exs/portrait.png" alt=" "><span>Link 5.6</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.5</span></a></li>
+            <li><a href="#"><img src="../images/exs/portrait.png" alt=" "><span>Link 5.6</span></a></li>
         </ul>
     </div>
 
 </li>
 
-<li><a href="">∅</a><div><ul></ul></div></li><!---->
+<li><a href=""><span>∅</span></a><div><ul></ul></div></li><!---->
 
-<li><a onclick="nav_menu_options(this)"><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</a>
+<li><a onclick="nav_menu_options(this)"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">L7</span></a>
 
     <div>
         <ul>
-            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
-            <li><a href="#"><span><img src="../framework/images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
+            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
-            <li><a href="#"><img src="../framework/images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
+            <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 
+            <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.6</span></a></li>-->
         </ul>
     </div>
 
 </li>
 
-<li><a href="page.html">P</a><div><ul></ul></div></li>
-<li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
+<li><a href="page.html"><span>P</span></a><div><ul></ul></div></li>
+<li><a aria-label="Hide bar"><img src="../images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 */
 
@@ -471,35 +473,76 @@ TODO: Footer - HTML
 
 document.querySelector('footer').innerHTML = `
 
-<div class="central footer-content">
+    <div class="central footer-content">
 
-<address>
+        <address>
+        
+            <!--<p>Contactthe author of this page:</p>-->
+            <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
+            <!--  <ul>
+                    <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
+                    <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
+                    </ul>-->
+            <!--<p>Follow us on:</p>-->
+        
+                <ul class="footer-icons">
 
-    <!--<p>Contactthe author of this page:</p>-->
-    <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
-    <!--  <ul>
-            <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
-            <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
-            </ul>-->
-    <!--<p>Follow us on:</p>-->
+                    <!-- Footer anterior: -->
+                    <!--  
+                    <li><a href="mailto:support@company.com.br"><img src="../images/icons/mail.svg" alt=""></a></li>  
+                    <li><a href="#"><img src="../images/icons/youtube.svg" alt=""></a></li> 
+                    <li><a href="#"><img src="../images/icons/twitch.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../images/icons/instagram.svg" alt=""></a></li>
+                    <li><a href="#"><img src="../images/icons/facebook.svg" alt=""></a></li>  
+                    <li><a href="#"><img src="../images/icons/twitter.svg" alt=""></a></li> 
+                    -->
 
-        <ul class="footer-icons">
-            <li><a href="mailto:support@company.com.br"><img src="../framework/images/icons/mail.svg" alt="" width="38px" height="38px"></a></li>  
-            <li><a href="#"><img src="../framework/images/icons/youtube.svg" alt="" width="38px" height="38px"></a></li> 
-            <li><a href="#"><img src="../framework/images/icons/twitch.svg" alt="" width="38px" height="38px"></a></li>
-            <li><a href="#"><img src="../framework/images/icons/instagram.svg" alt="" width="38px" height="38px"></a></li>
-            <li><a href="#"><img src="../framework/images/icons/facebook.svg" alt="" width="38px" height="38px"></a></li>  
-            <li><a href="#"><img src="../framework/images/icons/twitter.svg" alt="" width="38px" height="38px"></a></li> 
-        </ul>
+                    <!-- Footer novo: -->
 
-    <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+                    <li>
+                        <a href="mailto:support@company.com.br" class="button_icon rounded"> 
+                            <img class="piece_icon" src="../framework/images/icons/email.svg" alt=""> 
+                        </a> 
+                    </li> 
 
-</address> 
+                    <li>
+                        <a class="button_icon rounded green" onclick="lightbox('(68) 2425-8804')"> 
+                            <img class="piece_icon" src="../framework/images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
+                        </a> 
+                    </li> 
 
-<p class="copyright">© Copyright 2024 <!--by nobody./-->Tec OP Inc. All rights reversed.</p>
+                    <li>
+                        <a href="#" class="button_icon rounded red"> 
+                            <img class="piece_icon" src="../framework/images/icons/youtube.svg" alt="">
+                        </a> 
+                    </li> 
 
-    </div>
+                    <!--
+                    <li>
+                        <a href="#" class="button_icon rounded"> 
+                            <img class="piece_icon" src="../framework/images/icons/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    --> 
+
+                    <li>
+                        <a href="#" class="button_icon rounded yellow"> 
+                            <img class="piece_icon" src="../framework/images/icons/instagram.svg" alt="">
+                        </a> 
+                    </li> 
+                </ul>
+        
+            <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+        
+        </address> 
+        
+        <p class="copyright">© Copyright 2024 <!--by nobody./-->Tec OP Inc. All rights reversed.</p>
+        
+    </div>
+ 
 `
+
+update_switches_buttons_and_anchors(document.querySelectorAll('footer a')) 
 
 /* 
 ──────────────────────────────────────────────────────
@@ -517,9 +560,11 @@ TODO:    > Variables Used In 2+ Topics
 
 var skills_table_box = document.querySelector('.skills_table_box')
 
-var table_skills_lines = document.querySelectorAll('.table_skills tr')
+var skills_table_rows = document.querySelectorAll('.skills_table tr')
 
-var table_skills_ths = document.querySelectorAll('.table_skills th')
+var skills_table_rows_onlySkills = document.querySelectorAll('.skills_table tr:not(:nth-of-Type(1))')
+
+var skills_table_ths = document.querySelectorAll('.skills_table th')
 
 var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch')
 
@@ -531,54 +576,102 @@ TODO:    > Add Classes Of <th> names
                     In Table Cells
 ──────────────────────────── */
 
-for (i = 0; i < table_skills_ths.length; i++) {
+for (i = 0; i < skills_table_ths.length; i++) {
 
-    var table_skills_th_content = table_skills_ths[i].textContent
+    var skills_table_th_content = skills_table_ths[i].textContent
     
-    table_skills_ths[i].classList.add(table_skills_th_content)
+    skills_table_ths[i].classList.add(skills_table_th_content)
 
-    for (i2 = 1; i2 < table_skills_lines.length; i2++) {
+    for (i2 = 1; i2 < skills_table_rows.length; i2++) {
 
-        if(table_skills_lines[i2]) {
+        if(skills_table_rows[i2]) {
 
-            var tds = table_skills_lines[i2].querySelectorAll(':scope td')
+            var tds = skills_table_rows[i2].querySelectorAll(':scope td')
 
-            tds[i].classList.add(table_skills_th_content)
+            tds[i].classList.add(skills_table_th_content)
         }
     }
 }
 
 /*  
 ────────────────────────────
-TODO:    > Skills Switchs
+TODO:    > Skills Choice
+──────────────────────────── */
+
+imgsNamesAsAlts(document.querySelectorAll('.skills_types_choice img'))
+
+function func_skills_types_choices(el) {
+
+    var skills_quantity = 0
+
+    skills_table_rows_onlySkills.forEach(function (skill_row) {
+    
+        var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
+
+        if (el.querySelector('img') === null) { // Quando selecionar para mostrar todas as habilidades.
+
+            skill_row.style.display = 'table-row'
+            skills_quantity++
+            
+        } else {
+            
+            var this_type_img = getImgName(el.querySelector('img'))
+
+            for (i = 0; i < skill_types_imgs.length; i++) {
+
+                if(getImgName(skill_types_imgs[i]) === this_type_img) {
+
+                    skill_row.style.display = 'table-row'
+                    skills_quantity++
+
+                    break
+
+                } else {
+
+                    skill_row.style.display = 'none'
+                }
+            }
+        }
+    })
+
+    // document.querySelector('.skills_table_box').style.display = 'block'
+    // document.querySelector('.skills_quantity').style.display = 'block'
+
+    document.querySelector('.skills_quantity span').textContent = skills_quantity
+} 
+
+/*  
+────────────────────────────
+OUT:    > Skills Types Switchs
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:        >> Initial Settings
-──────────────────────────── */
+OUT:        >> Initial Settings
+──────────────────────────── 
 
 var quantity_of_types_activated = 0
 
-for (i = 0; i < table_skills_lines.length; i++) {
+for (i = 0; i < skills_table_rows.length; i++) {
 
-    table_skills_lines[i].activated_skill_counter = 0
+    skills_table_rows[i].activated_skill_counter = 0
 }
 
 imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
+*/
 
 /*  
 ────────────────────────────
-TODO:        >> Skills Types Switchs
-──────────────────────────── */
+OUT:        >> Skills Types Switchs Function
+──────────────────────────── 
 
 function F_skills_types_switchs(el) {
 
-    for (i = 1; i < table_skills_lines.length; i++) {
+    for (i = 1; i < skills_table_rows.length; i++) {
         
-        var imgs_type = table_skills_lines[i].querySelectorAll(':scope .Types img') 
+        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Types img') 
 
-        var this_type = getImgName(el.querySelector('.switch_icon'))
+        var this_type = getImgName(el.querySelector('.piece_icon'))
 
         for (i2 = 0; i2 < imgs_type.length; i2++) {
 
@@ -587,17 +680,17 @@ function F_skills_types_switchs(el) {
                 if(el.classList.contains('on')) {
 
                     quantity_of_types_activated--
-                    table_skills_lines[i].activated_skill_counter--
+                    skills_table_rows[i].activated_skill_counter--
                 } else {
                     quantity_of_types_activated++
-                    table_skills_lines[i].activated_skill_counter++
+                    skills_table_rows[i].activated_skill_counter++
                 }
 
-                if(table_skills_lines[i].activated_skill_counter >= 1) {
+                if(skills_table_rows[i].activated_skill_counter >= 1) {
 
-                    table_skills_lines[i].style.display = 'table-row'
+                    skills_table_rows[i].style.display = 'table-row'
                 } else {
-                    table_skills_lines[i].style.display = 'none'
+                    skills_table_rows[i].style.display = 'none'
                 }
 
                 if(quantity_of_types_activated >= 1) {
@@ -605,16 +698,16 @@ function F_skills_types_switchs(el) {
                     document.querySelector('.skills_table_box').style.display = 'block'
                 } else {
                     document.querySelector('.skills_table_box').style.display = 'none'
-                }/**/
+                }
             }
         }            
     }
-}
+}*/
 
 /*  
 ────────────────────────────
-TODO:            >>> 'All' Switch
-──────────────────────────── */
+OUT:            >> 'All' Switch
+──────────────────────────── 
 
 function F_skills_types_all_switch(el) {
 
@@ -639,12 +732,12 @@ function F_skills_types_all_switch(el) {
             }
         }
     }
-}
+}*/
 
 /*  
 ────────────────────────────
-TODO:            >>> Switch - hide skill names
-──────────────────────────── */
+OUT:            >> Switch - hide skill names
+──────────────────────────── 
 
 function F_hide_skills_names(el) {
     
@@ -652,27 +745,27 @@ function F_hide_skills_names(el) {
     
         if (el.classList.contains('on')) {
             
-            //current_switch.querySelector('.switch_text').style.display = 'inline'
+            //current_switch.querySelector('.piece_text').style.display = 'inline'
             current_switch.classList.remove('hide_skills_names')
             document.querySelector('.skills_types_switchs_box').classList.remove('hide_skills_names__justifyContent_center')
         } else {
-            //current_switch.querySelector('.switch_text').style.display = 'none'
+            //current_switch.querySelector('.piece_text').style.display = 'none'
             current_switch.classList.add('hide_skills_names')
             document.querySelector('.skills_types_switchs_box').classList.add('hide_skills_names__justifyContent_center')
         }
     })
-}
+}*/
 
 /*  
 ────────────────────────────
-TODO:        >> Skills Data Switchs
+TODO:    > Skills Data Switchs
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:            >>> Decrease Size Of Buttons 
+TODO:      >> Decrease Size Of Buttons 
                                 On Highest Screen Width
-──────────────────────────── */
+──────────────────────────── 
 
 var larger_screen_minWidth_setting = 1366 // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
 
@@ -691,21 +784,42 @@ onresize = function() {
             current_switch.classList.remove('small')
         })
     }
-}
+}*/
  
 /*  
 ────────────────────────────
-TODO:            >>> Labels
+TODO:      >> Labels
 ──────────────────────────── */
 
 for (i = 1; i < SDSB_switchs.length; i++) {
 
-    SDSB_switchs[i].querySelector(':scope .switch_text').textContent = table_skills_ths[i - 1].textContent
+    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = skills_table_ths[i - 1].textContent
 }
+
+/*  
+────────────────────────────
+TODO:      >> Set Switches Widths
+──────────────────────────── */
+
+function skills_data_switchs_width() {  
+
+    SDSB_switchs.forEach(function (swt) {
+
+        var dad = swt.parentElement
+    
+        var dad_width = Number(getComputedStyle(dad).getPropertyValue('width').slice(0,-2)) 
+    
+        swt.style.width = dad_width +'px'
+    })
+}
+ 
+skills_data_switchs_width()
+
+window.addEventListener('resize', skills_data_switchs_width)
   
 /*  
 ────────────────────────────
-TODO:            >>> Logic
+TODO:      >> Logic
 ──────────────────────────── */
 
 function F_skills_data_switchs(el) {
@@ -722,18 +836,18 @@ function F_skills_data_switchs(el) {
 
         if (el.classList.contains('on')) {
             
-            table_skills_ths[SDSB_switchs_indexSwitch].style.display = 'none'
+            skills_table_ths[SDSB_switchs_indexSwitch].style.display = 'none'
 
-            for (i = 1; i < table_skills_lines.length; i++) {
+            for (i = 1; i < skills_table_rows.length; i++) {
             
-                table_skills_lines[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'none'
+                skills_table_rows[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'none'
             }
         } else {
-            table_skills_ths[SDSB_switchs_indexSwitch].style.display = 'table-cell'
+            skills_table_ths[SDSB_switchs_indexSwitch].style.display = 'table-cell'
 
-            for (i = 1; i < table_skills_lines.length; i++) {
+            for (i = 1; i < skills_table_rows.length; i++) {
             
-                table_skills_lines[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'table-cell'
+                skills_table_rows[i].querySelectorAll(':scope td')[SDSB_switchs_indexSwitch].style.display = 'table-cell'
             }
         }
     }
@@ -741,7 +855,7 @@ function F_skills_data_switchs(el) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> 'All' Switch
+TODO:          >>> 'All' Switch
 ──────────────────────────── */
 
 function F_skills_data_all_switch(el) {
@@ -777,18 +891,18 @@ function F_skills_data_all_switch(el) {
 
 /*  
 ────────────────────────────
-TODO:            >>> Initial Setting
+TODO:      >> Initial Setting
 ──────────────────────────── */
 
 /*  
 ────────────────────────────
-TODO:                >>>> Activate 'All'
+TODO:          >>> Activate 'All'
                                         Type switch
 ──────────────────────────── */
 
 STSB_switchs.forEach(function (current_switch) {
 
-    if (current_switch.querySelector(':scope .switch_text').textContent === 'All') {
+    if (current_switch.querySelector(':scope .piece_text').textContent === 'All') {
 
         F_skills_types_all_switch(current_switch)
         switch_event(current_switch)
@@ -797,10 +911,10 @@ STSB_switchs.forEach(function (current_switch) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> Activateds Data
+TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Types', 'Effect', 'Notes']
+var activated_data = ['Name', 'States']
 
 var activated_data_indexes = [ ]
 
@@ -808,7 +922,7 @@ for (i = 0; i < activated_data.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) { 
 
-        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope .switch_text').textContent) {
+        if (activated_data[i] === SDSB_switchs[i2].querySelector(':scope .piece_text').textContent) {
 
             activated_data_indexes.push(i2)
         }
@@ -823,12 +937,12 @@ for (ix = 0; ix < activated_data_indexes.length; ix++) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> Name Data disabled
+TODO:          >>> 'Name' Data disabled
 ──────────────────────────── */
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if (SDSB_switchs[i].querySelector(':scope .switch_text').textContent === 'Name') {
+    if (SDSB_switchs[i].querySelector(':scope .piece_text').textContent === 'Name') {
 
         SDSB_switchs[i].classList.add('disabled')
     }
@@ -836,11 +950,11 @@ for (i = 0; i < SDSB_switchs.length; i++) {
 
 /*  
 ────────────────────────────
-TODO:                >>>> Hidden Data Switchs
+TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6']
+var hidden_data_switchs = ['Extra1', 'Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
@@ -848,14 +962,42 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 
     for (i2 = 0; i2 < SDSB_switchs.length; i2++) {
 
-        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope .switch_text').textContent) {
+        if (hidden_data_switchs[i] === SDSB_switchs[i2].querySelector(':scope .piece_text').textContent) {
 
-            SDSB_switchs[i2].style.display = 'none'
+            // SDSB_switchs[i2].style.display = 'none'
+            SDSB_switchs[i2].parentElement.style.display = 'none'
 
             hidden_data_indexes.push(i2)
         }
     }
 }
+
+/*  
+────────────────────────────
+TODO:    > Initial Type & Auto Table Full Screen
+──────────────────────────── */
+
+var skills_choice_initial_type = 'Digital'
+
+var skills_choice = document.querySelector('.skills_types_choice')
+var skills_choice_options = document.querySelectorAll('.skills_types_choice > li')
+var skills_choice_options_anchor = document.querySelectorAll('.skills_types_choice > li a')
+ 
+choice(skills_choice)
+
+skills_choice_options_anchor.forEach(function (option) {
+
+    if (option.querySelector(':scope span').textContent === skills_choice_initial_type) {
+        
+        func_skills_types_choices(option)
+        choice_option(option)
+    }
+})
+ 
+choice(skills_choice)
+
+skills_table_box.classList.toggle('skills_table_box_full')
+document.body.classList.toggle('overflow_hidden')
  
 /*  
 ────────────────────────────
@@ -865,11 +1007,11 @@ TODO:    > Replace Table Header
 
 // Replace In Table Header:
 
-for (i = 0; i < table_skills_ths.length; i++) {
+for (i = 0; i < skills_table_ths.length; i++) {
 
-    if(table_skills_ths[i].textContent.slice(0, 4) === 'plus') {
+    if(skills_table_ths[i].textContent.slice(0, 4) === 'plus') {
 
-        table_skills_ths[i].textContent = table_skills_ths[i].textContent.replace('plus', '+')
+        skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('plus', '+')
     }
 }
 
@@ -877,9 +1019,9 @@ for (i = 0; i < table_skills_ths.length; i++) {
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
-    if(SDSB_switchs[i].querySelector(':scope .switch_text').textContent.slice(0, 4) === 'plus') {
+    if(SDSB_switchs[i].querySelector(':scope .piece_text').textContent.slice(0, 4) === 'plus') {
 
-        SDSB_switchs[i].querySelector(':scope .switch_text').textContent = SDSB_switchs[i].querySelector(':scope .switch_text').textContent.replace('plus', '+')
+        SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('plus', '+')
     }
 }
 
@@ -897,6 +1039,14 @@ skills_table_box.addEventListener('click', function() {
     skills_table_box.classList.toggle('skills_table_box_full')
     document.body.classList.toggle('overflow_hidden')
 })
+
+
+
+
+
+
+
+
 
 
 

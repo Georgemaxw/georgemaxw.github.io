@@ -95,8 +95,14 @@
 
     <footer></footer>
 
-    <script src="../framework/scripts/defaults.js"></script>
-    <script src="../scripts/identity.js"></script>
+    <!-- 
+        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
+        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
+        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+    -->
+
+    <script defer src="../framework/scripts/defaults.js"></script>
+    <script defer src="../scripts/identity.js"></script>
 
 </body> 
 </html>
