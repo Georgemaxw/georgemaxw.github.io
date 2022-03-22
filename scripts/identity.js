@@ -605,21 +605,39 @@ function func_skills_types_choices(el) {
     var skills_quantity = 0
 
     skills_table_rows_onlySkills.forEach(function (skill_row) {
+
+        skill_row.style.display = 'none'
     
         var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
 
-        if (el.querySelector('img') === null) { // Quando selecionar para mostrar todas as habilidades.
 
+        var switch_show_only_internet_skills_on = 
+        document.querySelector('.skills_switch_show_only_internet_skills').classList.contains('on')
+    
+        var skill_not_available_on_internet = 
+        skill_row.querySelector(':scope .Available span').textContent !== 'IRL and Net'
+
+        var always_show_skill_regarding_internet_availability = 
+        !(switch_show_only_internet_skills_on && skill_not_available_on_internet)
+
+        if (!(switch_show_only_internet_skills_on && skill_not_available_on_internet)) {
+            
+        if (el.querySelector('img') === null) { // Quando selecionar para mostrar todas as habilidades.
+                
             skill_row.style.display = 'table-row'
             skills_quantity++
             
-        } else {
-            
+        } else { // Quando selecionar algum tipo.
+
+            console.log(always_show_skill_regarding_internet_availability)
+        
             var this_type_img = getImgName(el.querySelector('img'))
 
             for (i = 0; i < skill_types_imgs.length; i++) {
 
                 if(getImgName(skill_types_imgs[i]) === this_type_img) {
+
+                    console.log(1)
 
                     skill_row.style.display = 'table-row'
                     skills_quantity++
@@ -628,10 +646,15 @@ function func_skills_types_choices(el) {
 
                 } else {
 
+                    console.log(0)
+
                     skill_row.style.display = 'none'
                 }
             }
         }
+
+        }
+
     })
 
     // document.querySelector('.skills_table_box').style.display = 'block'
@@ -639,6 +662,76 @@ function func_skills_types_choices(el) {
 
     document.querySelector('.skills_quantity span').textContent = skills_quantity
 } 
+
+document.querySelector('.skills_switch_show_only_internet_skills').addEventListener('click', function() { 
+
+    var skills_choice = document.querySelector('.skills_types_choice')
+    // var skills_choice_options = document.querySelectorAll('.skills_types_choice > li')
+    var skills_choice_options_anchor = document.querySelectorAll('.skills_types_choice > li a')
+    
+    // var skills_choice_actual_type = document.querySelector('.skills_types_choice > li > a span').textContent
+
+    // console.log(skills_choice_actual_type)
+    
+    choice(skills_choice)
+
+/*  */
+    skills_choice_options_anchor.forEach(function (option) {
+    
+        if (option.classList.contains('on')) {
+
+            func_skills_types_choices(option)
+            choice_option(option)
+        }
+    })
+
+    choice(skills_choice)  
+
+/* 
+    skills_choice_options_anchor.forEach(function (option) {
+
+        if (option.querySelector(':scope span').textContent === skills_choice_actual_type) {
+            
+            func_skills_types_choices(option)
+            choice_option(option)
+        }
+    })
+
+    choice(skills_choice)
+    */    
+ })
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+/*  
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*  
 ────────────────────────────
@@ -914,7 +1007,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Types', 'Effect', 'States', 'Condition', 'Requires']
+var activated_data = ['Name', 'Types', 'Effect', 'States', 'Condition', 'Item']
 
 var activated_data_indexes = [ ]
 
@@ -954,7 +1047,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra2', 'Extra3', 'Extra4', 'Extra5', 'Extra6'] 
+var hidden_data_switchs = ['Extra3', 'Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
@@ -975,7 +1068,7 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 /*  
 ────────────────────────────
 TODO:    > Initial Type & Auto Table Full Screen
-──────────────────────────── */
+──────────────────────────── 
 
 var skills_choice_initial_type = 'Digital'
 
@@ -998,7 +1091,7 @@ choice(skills_choice)
 
 skills_table_box.classList.toggle('skills_table_box_full')
 document.body.classList.toggle('overflow_hidden')
- 
+*/
 /*  
 ────────────────────────────
 TODO:    > Replace Table Header 
