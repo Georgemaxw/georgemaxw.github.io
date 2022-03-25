@@ -27,7 +27,7 @@
     }
 
     .Name, .Types, .Intensity, .Effect, .States, .Scope, .Success, .plusTP, .SPD, .Costs, .Critical, 
-    .Item, .Condition, .Available, .Extra3, .Extra4, .Extra5, .Extra6, .Description, .Notes {
+    .Item, .Condition, .Available, .Hit, .Extra4, .Extra5, .Extra6, .Description, .Notes {
          
         display: none; 
     }
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
-                        <img class="piece_icon" src="../images/game/icons/types/Cybernetic.png" alt=""><span class="piece_text">Cybernetic</span> 
+                        <img class="piece_icon" src="../images/game/icons/types/Cyber.png" alt=""><span class="piece_text">Cyber</span> 
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
@@ -158,7 +158,7 @@
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
-                        <img class="piece_icon" src="../images/game/icons/types/Cybernetic.png" alt=""><span class="piece_text">Cybernetic</span> 
+                        <img class="piece_icon" src="../images/game/icons/types/Cyber.png" alt=""><span class="piece_text">Cyber</span> 
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
-                        <img class="piece_icon" src="../images/game/icons/types/Cybernetic.png" alt=""><span class="piece_text">Cybernetic</span> 
+                        <img class="piece_icon" src="../images/game/icons/types/Cyber.png" alt=""><span class="piece_text">Cyber</span> 
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
@@ -280,14 +280,14 @@
                     <ul class="choice dropdown center skills_types_choice" onclick="choice(this)">
                         <li><span>Choose Skills Type(s)</span></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><span>All Types</span></a></li>
-                        <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Assist.png" alt=" "><span>Assist</span></a></li>
+                        <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Normal.png" alt=" "><span>Normal</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Beast.png" alt=" "><span>Beast</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Bug.png" alt=" "><span>Bug</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Chemical.png" alt=" "><span>Chemical</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cosmic.png" alt=" "><span>Cosmic</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Crystal.png" alt=" "><span>Crystal</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cut.png" alt=" "><span>Cut</span></a></li>
-                        <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cybernetic.png" alt=" "><span>Cybernetic</span></a></li>
+                        <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cyber.png" alt=" "><span>Cyber</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Dark.png" alt=" "><span>Dark</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Digital.png" alt=" "><span>Digital</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Dinosaur.png" alt=" "><span>Dinosaur</span></a></li>
@@ -599,7 +599,7 @@
     <th scope="col">Item</th> <!--  -->
 
     <th scope="col">Available</th>
-    <th scope="col">Extra3</th>
+    <th scope="col">Hit</th>
     <th scope="col">Extra4</th>
     <th scope="col">Extra5</th>
     <th scope="col">Extra6</th>
@@ -632,7 +632,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -663,7 +663,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -674,7 +674,7 @@
 
 <tr>
     <!-- Name --><td><span>Auto Aim</span></td>
-    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''></span></td>
+    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
     <!-- Effect --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
@@ -694,7 +694,7 @@
     <!-- Item --><td><span>Visor, Brain Chip</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -706,8 +706,8 @@
 <!--B-->
 
 <tr>
-    <!-- Name --><td><span>Bio Generator</span></td>
-    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''></span></td>
+    <!-- Name --><td><span>Bio Recharge</span></td>
+    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
     <!-- Effect --><td><span>-AP, +TP</span></td>
     <!-- Intensity --><td><span></span></td>
@@ -721,16 +721,16 @@
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td><!-- Fast, Slow -->
     <!-- Critical --><td><span></span></td>
-    <!-- Item --><td><span></span></td>
+    <!-- Item --><td><span>Bio Converter</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
     
     <!-- Description --><td><span></span></td>
-    <!-- Notes --><td><span>Organic Battery - converte energia vital em energia elétrica.</span></td>
+    <!-- Notes --><td><span>Bio Generator. Organic Battery - converte energia vital em energia elétrica.</span></td>
 </tr>
 
 <tr>
@@ -752,7 +752,7 @@
     <!-- Item --><td><span>Visor</span></td>
 
     <!-- Available --><td><span>In Real Life</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -785,7 +785,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -816,7 +816,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -847,7 +847,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -858,7 +858,7 @@
  
 <tr>
     <!-- Name --><td><span>Crunch Time</span></td>
-    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Assist.png' alt=''></span></td>
+    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Normal.png' alt=''></span></td>
 
     <!-- Effect --><td><span></span></td>
     <!-- Intensity --><td><span></span></td>
@@ -878,7 +878,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -911,7 +911,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -942,7 +942,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -973,7 +973,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1004,7 +1004,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1035,7 +1035,7 @@
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1069,7 +1069,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1100,7 +1100,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1131,7 +1131,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1162,7 +1162,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1198,7 +1198,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1231,7 +1231,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1266,7 +1266,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Visor</span></td>
 
     <!-- Available --><td><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1299,7 +1299,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1330,7 +1330,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1367,7 +1367,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Visor</span></td>
 
     <!-- Available --><td><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1398,7 +1398,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1429,7 +1429,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1462,7 +1462,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Visor</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1493,7 +1493,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1524,7 +1524,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Visor</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1557,7 +1557,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Nano Robots</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1590,7 +1590,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1603,7 +1603,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <!-- Name --><td><span>Psionic Boom</span></td>
-    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
+    <!-- Types --><td><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
 
     <!-- Effect --><td><span>-LP</span></td>
     <!-- Intensity --><td><span></span></td>
@@ -1623,7 +1623,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Electronic Helmet</span></td>
 
     <!-- Available --><td><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1658,7 +1658,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1689,7 +1689,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1720,7 +1720,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Repair Kit</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1751,7 +1751,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1784,7 +1784,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span>Visor</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1815,7 +1815,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1846,7 +1846,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1874,10 +1874,10 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- +TP --><td><span></span></td>
     <!-- SPD --><td><span></span></td><!-- Fast, Slow -->
     <!-- Critical --><td><span></span></td>
-    <!-- Item --><td><span></span></td>
+    <!-- Item --><td><span>Solar Converter</span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td><!-- IRL and Net, IRL -->
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1908,7 +1908,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1939,7 +1939,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -1972,7 +1972,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -2003,7 +2003,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -2036,7 +2036,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
@@ -2069,7 +2069,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- Item --><td><span></span></td>
 
     <!-- Available --><td><span>IRL and Net</span></td>
-    <!-- Extra3 --><td><span></span></td>
+    <!-- Hit --><td><span></span></td><!-- Physical, Certain Physical, Digital -->
     <!-- Extra4 --><td><span></span></td>
     <!-- Extra5 --><td><span></span></td>
     <!-- Extra6 --><td><span></span></td>
