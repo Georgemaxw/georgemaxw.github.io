@@ -509,6 +509,11 @@ TODO: Skills - Table
     */
 }
 
+.skills_table td.Hit {
+  color: red;
+  text-decoration: line-through red;
+}
+
 .skills_table tr {
   display: none;
 }

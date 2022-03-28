@@ -582,6 +582,7 @@ for (i = 0; i < skills_table_ths.length; i++) {
     
     skills_table_ths[i].classList.add(skills_table_th_content)
 
+    /*
     for (i2 = 1; i2 < skills_table_rows.length; i2++) {
 
         if(skills_table_rows[i2]) {
@@ -591,6 +592,7 @@ for (i = 0; i < skills_table_ths.length; i++) {
             tds[i].classList.add(skills_table_th_content)
         }
     }
+    */
 }
 
 /*  
@@ -1047,7 +1049,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra3', 'Extra4', 'Extra5', 'Extra6'] 
+var hidden_data_switchs = ['Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
