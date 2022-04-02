@@ -1009,7 +1009,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Types', 'Effect', 'States', 'Condition', 'Item']
+var activated_data = ['Name', 'Types', 'HP_or_AP_or_TP', 'States', 'Condition', 'Item']
 
 var activated_data_indexes = [ ]
 
@@ -1118,6 +1118,28 @@ for (i = 0; i < SDSB_switchs.length; i++) {
 
         SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('plus', '+')
     }
+}
+
+/*  
+────────────────────────────
+TODO:    > Replace Table Header 
+                'HP_or_AP_or_TP' With 'HP/AP/TP'
+──────────────────────────── */
+
+// Replace In Table Header:
+
+for (i = 0; i < skills_table_ths.length; i++) {
+
+    skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('_or_', '/')
+    skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('_or_', '/')
+}
+
+// Replace In Data Switchs Labels:
+
+for (i = 0; i < SDSB_switchs.length; i++) {
+
+    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
+    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
 }
 
 /*  
