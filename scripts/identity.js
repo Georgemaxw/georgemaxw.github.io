@@ -1127,12 +1127,18 @@ TODO:    > Replace Table Header
 ──────────────────────────── */
 
 // Replace In Table Header:
-
+/*  
 for (i = 0; i < skills_table_ths.length; i++) {
 
     skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('_or_', '/')
     skills_table_ths[i].textContent = skills_table_ths[i].textContent.replace('_or_', '/')
 }
+*/
+
+var skills_table_th__HP_or_AP_or_TP = document.querySelector('.skills_table th.HP_or_AP_or_TP')
+
+skills_table_th__HP_or_AP_or_TP.textContent = 
+skills_table_th__HP_or_AP_or_TP.textContent.replace('_or_', '/').replace('_or_', '/')
 
 // Replace In Data Switchs Labels:
 
@@ -1141,6 +1147,13 @@ for (i = 0; i < SDSB_switchs.length; i++) {
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
 }
+
+/*  
+var SDSB__HP_or_AP_or_TP = document.querySelector('.skills_data_switchs_box .HP_or_AP_or_TP')
+
+SDSB__HP_or_AP_or_TP.textContent = 
+SDSB__HP_or_AP_or_TP.textContent.replace('_or_', '/').replace('_or_', '/')
+*/
 
 /*  
 ────────────────────────────
