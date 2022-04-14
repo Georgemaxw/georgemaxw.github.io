@@ -563,6 +563,10 @@ TODO: Skills - Table
   margin-left: 9px;
 }
 
+.skills_table .NoState {
+  color: #b3b3b3;
+}
+
 .skills_table .cost + .cost {
   margin-left: 6px;
 }

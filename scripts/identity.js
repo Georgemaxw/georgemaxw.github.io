@@ -610,7 +610,7 @@ function func_skills_types_choices(el) {
 
         skill_row.style.display = 'none'
     
-        var skill_types_imgs = skill_row.querySelectorAll(':scope .Types img') 
+        var skill_types_imgs = skill_row.querySelectorAll(':scope .Type img') 
 
 
         var switch_show_only_internet_skills_on = 
@@ -764,7 +764,7 @@ function F_skills_types_switchs(el) {
 
     for (i = 1; i < skills_table_rows.length; i++) {
         
-        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Types img') 
+        var imgs_type = skills_table_rows[i].querySelectorAll(':scope .Type img') 
 
         var this_type = getImgName(el.querySelector('.piece_icon'))
 
@@ -1009,7 +1009,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Types', 'HP_or_AP_or_TP', 'States', 'Condition', 'Item']
+var activated_data = ['Name', 'Type', 'Damage', 'Recover', 'Effect', 'Cost', 'Item']
 
 var activated_data_indexes = [ ]
 
@@ -1049,7 +1049,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Extra4', 'Extra5', 'Extra6'] 
+var hidden_data_switchs = ['plusTP', 'Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
@@ -1135,6 +1135,11 @@ for (i = 0; i < skills_table_ths.length; i++) {
 }
 */
 
+
+
+/* Se for utilizar " Replace Table Header 'HP_or_AP_or_TP' With 'HP/AP/TP' ", 
+desbloqueei apenas os códigos desse comentário.
+
 var skills_table_th__HP_or_AP_or_TP = document.querySelector('.skills_table th.HP_or_AP_or_TP')
 
 skills_table_th__HP_or_AP_or_TP.textContent = 
@@ -1147,6 +1152,9 @@ for (i = 0; i < SDSB_switchs.length; i++) {
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
 }
+*/
+
+
 
 /*  
 var SDSB__HP_or_AP_or_TP = document.querySelector('.skills_data_switchs_box .HP_or_AP_or_TP')

@@ -19,7 +19,7 @@
         max-width: 1250px;
     }
 
-    .Name, .Types, .Effect, .HP_or_AP_or_TP, .States, .Scope, .Success, .plusTP, .SPD, .Costs, .Critical, 
+    .Name, .Type, .Recover, .Damage, .Effect, .Target, .Success, .plusTP, .SPD, .Cost, .Critical, 
     .Item, .Condition, .Available, .Hit, .Extra4, .Extra5, .Extra6, .Description, .Notes {
          
         display: none; 
@@ -576,15 +576,15 @@
 -->
 <tr>
     <th scope="col">Name</th>
-    <th scope="col">Types</th>
+    <th scope="col">Type</th>
 
-    <th scope="col">HP_or_AP_or_TP</th>
+    <th scope="col">Damage</th>
+    <th scope="col">Recover</th>
     <th scope="col">Effect</th>
-    <th scope="col">States</th>
     <th scope="col">Success</th>
-    <th scope="col">Costs</th>
+    <th scope="col">Cost</th>
 
-    <th scope="col">Scope</th>
+    <th scope="col">Target</th>
     <th scope="col">Condition</th>
     <th scope="col">plusTP</th>
     <th scope="col">SPD</th> <!-- plusSPD --> 
@@ -605,19 +605,19 @@
 
 <tr>
     <td class='Name'><span>Archive Files</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td> 
-    <td class='States'><span>+Zip</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td> 
+    <td class='Effect'><span class='State'>+Zip</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -636,19 +636,19 @@
 
 <tr>
     <td class='Name'><span>Authorities Advertence</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-INT</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-INT</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Only works once on each enemy</span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -667,19 +667,19 @@
 
 <tr>
     <td class='Name'><span>Auto Aim</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+ACC</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+ACC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -700,16 +700,17 @@
 
 <tr>
     <td class='Name'><span>Bio Recharge</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span>-AP, +TP</span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span>TP</span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+        <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span>AP</span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -728,16 +729,17 @@
 
 <tr>
     <td class='Name'><span>Blocking Filter</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Blocking Filter</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Blocking Filter</span><span class='NoState'></span></td>
+        <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -758,19 +760,19 @@
 
 <tr>
     <td class='Name'><span>Boost Cooler</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Overload</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Overload</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -789,19 +791,19 @@
 
 <tr>
     <td class='Name'><span>Bug Fix</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Bug, -Vulnerable</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Bug, -Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -820,19 +822,19 @@
 
 <tr>
     <td class='Name'><span>Cleaner</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Lag</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Lag</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -851,19 +853,19 @@
  
 <tr>
     <td class='Name'><span>Crunch Time</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Generic.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Generic.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+SPD or +Double Action</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+SPD or +Double Action</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span>User or All Allies</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span>User or All Allies</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -884,19 +886,19 @@
 
 <tr>
     <td class='Name'><span>Dark Web Business</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Vulnerable</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span>Money</span></td>
+    <td class='Cost'><span>Money</span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -915,19 +917,19 @@
 
 <tr>
     <td class='Name'><span>Decode</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Encrypt</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Encrypt</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -946,19 +948,19 @@
 
 <tr>
     <td class='Name'><span>Deepfake</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Confusion</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Confusion</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>2+ Enemies</span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -977,19 +979,19 @@
 
 <tr>
     <td class='Name'><span>Deep Web</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Anonymous</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Anonymous</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1008,19 +1010,19 @@
 
 <tr>
     <td class='Name'><span>Defragment</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Lag</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Lag</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1042,19 +1044,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Delete</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Bug</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Bug</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1073,19 +1075,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Detect Vulnerability</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Vulnerable</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1104,19 +1106,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Device Control</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Hack</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Hack</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1135,19 +1137,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>DoS</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Lag or +Crash</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Lag or +Crash</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1171,19 +1173,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Encode</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Encrypt</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Encrypt</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1204,19 +1206,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Firewall</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Firewall</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Firewall</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1239,19 +1241,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Heat Vision</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+ACC</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+ACC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>+ACC only works in the dark</span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1265,26 +1267,26 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Extra6'><span></span></td>
 
     <td class='Description'><span></span></td>
-    <td class='Notes'><span>-REV at enemy, +ACC at user. Thermal Vision (visão térmica). Permite enxergar o oponente através das paredes e enxergar o oponente melhor durante a noite. Também funciona contra máquinas.</span></td>
+    <td class='Notes'><span>-FEV at enemy, +ACC at user. Thermal Vision (visão térmica). Permite enxergar o oponente através das paredes e enxergar o oponente melhor durante a noite. Também funciona contra máquinas.</span></td>
 </tr>
 
 <!--I-->
 
 <tr>
     <td class='Name'><span>Infinite Loop</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Crash</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Crash</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1303,19 +1305,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Intimidate Zap</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Fear</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Fear</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1340,19 +1342,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Light Filter</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+ACC, +REV</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+ACC, +FEV</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Only works in the dark</span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1371,19 +1373,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Lorem Ipsum</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Lag</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Lag</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1402,19 +1404,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Low Power Mode</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Low Power Mode</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Low Power Mode</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1435,19 +1437,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Machine Learning</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+INT</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+INT</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1461,24 +1463,24 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Extra6'><span></span></td>
  
     <td class='Description'><span></span></td>
-    <td class='Notes'><span>Detect Atk Patterns - Contra-Atk ou INT ou REV</span></td>
+    <td class='Notes'><span>Detect Atk Patterns - Contra-Atk ou INT ou FEV</span></td>
 </tr>
 
 <tr>
     <td class='Name'><span>Mainframe</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+TEC</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+TEC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1496,20 +1498,20 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 </tr>
 
 <tr>
-    <td class='Name'><span>Judgment Day</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Name'><span>Machine Revolution</span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Physical and Digital Counter</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Physical and Digital Counter</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1523,26 +1525,26 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Extra6'><span></span></td>
 
     <td class='Description'><span></span></td>
-    <td class='Notes'><span>Smart Counter. Machine Revolution</span></td>
+    <td class='Notes'><span>Smart Counter. Judgment Day</span></td>
 </tr>
 
 <!--N-->
 
 <tr>
     <td class='Name'><span>Nano Repair</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span>+HP</span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span>HP</span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1563,19 +1565,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Overclock</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+TEC, +Overload</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+TEC, +Overload</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1596,19 +1598,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Psionic Boom</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span>-HP</span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span>HP</span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1631,19 +1633,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Reformat</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Bug, -Lag, -Crash, -Hack</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Bug, -Lag, -Crash, -Hack</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1662,19 +1664,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Reload</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Bug</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Bug</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1693,19 +1695,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Repair</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span>+(INT)HP</span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span>INT•HP</span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1724,19 +1726,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Reset</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Bug, -Crash</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Bug, -Crash</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1757,19 +1759,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Scan</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span>Show Status and Weaknesses</span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'>Show Status and Weaknesses</span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1788,19 +1790,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Security Update</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>-Vulnerable</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>-Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Can only be used once per battle</span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1819,19 +1821,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Shortware</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Burn</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Burn</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1850,19 +1852,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Solar Recharge</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Regenerate AP</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Regenerate AP</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1881,19 +1883,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Steel Bond</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Fire.png' alt=''><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Fire.png' alt=''><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span>+HP</span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span>HP</span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1912,19 +1914,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Super Like</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Fascination</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Fascination</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1945,19 +1947,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Testa Recharge</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span>+AP</span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span>AP</span></td>
+    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -1976,19 +1978,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Troll Face</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Rage</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Rage</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -2009,19 +2011,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Update</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+TEC</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+TEC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Can only be used once per battle</span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
@@ -2042,19 +2044,19 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>VPN</span></td>
-    <td class='Types'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span></span></td>
-    <td class='States'><span>+Anonymous</span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Recover'><span></span></td>
+    <td class='Effect'><span class='State'>+Anonymous</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Costs'><span></span></td>
+    <td class='Cost'><span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
-    <td class='Scope'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='SPD'><span></span></td><!-- Fast, Slow -->
