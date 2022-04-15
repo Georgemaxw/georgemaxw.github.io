@@ -1,0 +1,71 @@
+/* gmes-normalize.css */
+/*  
+──────────────────────────────────────────────────────
+Spaces
+────────────────────────────────────────────────────── */
+
+* { /* <- Talvez prejudique a performance. */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0.5rem;
+}
+
+h1 {
+  margin: 1.34rem 0;
+}
+
+h2 {
+  margin: 1.245rem 0;
+}
+
+h3 {
+  margin: 1.17rem 0;
+}
+
+h4 {
+  margin: 1.33rem 0;
+}
+
+h5 {
+  margin: 1.386rem 0;
+}
+
+h6 {
+  margin: 1.561rem 0;
+}
+
+p {
+  margin: 0.95rem 0;
+}
+
+ul, ol {
+  margin: 1rem 0px;
+  padding-left: 2.5rem;
+}
+
+/*  
+──────────────────────────────────────────────────────
+Medias
+────────────────────────────────────────────────────── */
+
+img, video {
+  width: auto;
+}
+
+/*
+──────────────────────────────────────────────────────
+Forms
+────────────────────────────────────────────────────── */
+
+button, input, select, textarea { 
+  font-family : inherit; 
+  font-size : 100%; 
+  box-sizing: border-box; 
+} 
+
+textarea { 
+  overflow: auto; 
+}

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- en -->
+<head>
+    <meta charset="utf-8">
+    <title>Site Title</title>
+    <meta name = "apple-mobile-web-app-title" content = "App Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="George Maxwell">
+    <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href='../styles/css/normalize.css' rel='stylesheet'>  
+    <link href='../styles/css/gmes-normalize.css' rel='stylesheet'>
+    <link href='../styles/css/defaults.css' rel='stylesheet'>
+    <link href='../styles/css/fw_identity.css' rel='stylesheet'>
+<style>
+
+    button + button {
+
+        margin-top: 16px; 
+    }
+
+    .switch + .switch {
+
+        margin-top: 16px;
+    }
+
+</style>
+</head>
+<body>
+    
+    <header>
+
+        <div class="block-hack"></div> <!-- Hack necessário pois o Safari não aceita 'position: sticky'. -->
+
+        <div class="header-nav">
+            <div class="header-content">
+                <!-- <a href="" class="button-left"><img src="../images/icons/search.svg" alt="button"></a> -->
+
+                <nav class="nav">
+                
+                    <h1><a href="index.html" class="logo"><img src="../images/icons/logo.svg" alt="Logo">Site</a></h1>
+                    
+                    <a class="nav-menu-button">   
+                        <img src="../images/icons/menu.svg" alt="Menu button">
+                        <img src="../images/icons/menu_close.svg" alt="Menu button">
+                        <!-- <span>×</span> -->
+                    </a>
+
+                    <div class="nav-menu">
+                        <!-- Conteúdo no JS! -->
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+
+        <a class="headerNav-button">
+            <img src="../images/icons/headerNav.svg" alt="Header-nav button">  
+        </a>
+
+    </header>
+
+    <main>
+
+        <div class="central">
+<!--  
+            <h1>Outra Página</h1>
+
+            <p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd></p>
+
+            <div class="lb2"></div>
+
+            <p class="success">Parágrafo com a classe 'success'.</p>
+
+            <p class="attention">Parágrafo com a classe 'attention'.</p>
+
+            <p class="fail">Parágrafo com a classe 'fail'.</p>
+
+            <p class="danger">Parágrafo com a classe 'danger'.</p>
+
+            <div class="lb2"></div>
+
+            <hr>
+
+            <p>Galeria:</p>
+            
+            <div class="gallery">
+                <img src="../images/exs/landscape.png" alt=" ">
+                <img src="../images/exs/landscape.png" alt=" ">
+                <img src="../images/exs/landscape.png" alt=" ">
+                <img src="../images/exs/landscape.png" alt=" ">
+
+                <img src="../images/exs/landscape.png" alt=" ">
+                <img src="../images/exs/landscape.png" alt=" ">
+                <img src="../images/exs/landscape.png" alt=" ">
+                <img src="../images/exs/landscape.png" alt=" ">
+            </div>
+
+            <div class="lb2"></div>
+
+            <hr>
+-->
+            <section>
+
+                <h2 class="hidden">Slider</h2>
+
+                <p>Slider:</p>
+
+                <div class="slider"> 
+
+                        <img src="../images/exs/1920×1080.png" alt="">
+                        <img src="../images/exs/1920×1080.png" alt="">
+                        <img src="../images/exs/1920×1080.png" alt="">
+
+<!--            
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="../images/slider-img-01-mobile.png">
+                            <source media="(min-width: 376px)" srcset="../images/exs/1920×1080.png">
+                            <img src="../images/exs/1920×1080.png" alt="">
+                        </picture>
+            
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="../images/slider-img-02-mobile.png">
+                            <source media="(min-width: 376px)" srcset="../images/exs/1920×1080.png">
+                            <img src="../images/exs/1920×1080.png" alt="">
+                        </picture>
+            
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="../images/slider-img-03-mobile.png">
+                            <source media="(min-width: 376px)" srcset="../images/exs/1920×1080.png">
+                            <img src="../images/exs/1920×1080.png" alt="">
+                        </picture>
+            
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="../images/slider-img-04-mobile.png">
+                            <source media="(min-width: 376px)" srcset="../images/slider-img-04-pc.png">
+                            <img src="../images/slider-img-04-pc.png" alt="">
+                        </picture>
+            
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="../images/slider-img-05-mobile.png">
+                            <source media="(min-width: 376px)" srcset="../images/slider-img-05-pc.png">
+                            <img src="../images/slider-img-05-pc.png" alt="">
+                        </picture>
+            
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="../images/slider-img-06-mobile.png">
+                            <source media="(min-width: 376px)" srcset="../images/slider-img-06-pc.png">
+                            <img src="../images/slider-img-06-pc.png" alt="">
+                        </picture>
+    -->        
+
+                </div>
+
+            </section>
+<!--  
+            <div class="lb2"></div>
+
+            <hr>
+
+            <div class="lb2"></div>
+
+            <table class="table_style_2">
+                <caption>&lt;table> com a classe 'table_style_2'.</caption>
+                <tr>
+                    <td style="width: 33.33%;"></td>
+                    <th style="width: 33.33%;" scope="col">Cab.-C1</th>
+                    <th style="width: 33.33%;" scope="col">Cab.-C2</th>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>1-1</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>2-1</td>
+                    <td>2-2</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L3</th> 
+                    <td>3-1</td>
+                    <td>3-2</td>
+                </tr>
+            </table>
+
+            <div class="lb2"></div>
+
+            <table class="table_style_4">
+                <caption>&lt;table> com a classe 'table_style_4'.</caption>
+                <tr>
+                    <th scope="row">Cab.-L1</th> 
+                    <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cab.-L2</th> 
+                    <td>Accusam diam ipsum at clita dolor. Stet et amet voluptua lorem stet.</td>
+                </tr>
+            </table>
+
+            <div class="lb2"></div>
+
+            <hr>
+
+            <div class="lb2"></div>-->
+<!--  
+            <div class="switch button_icon on center" onclick="switch_1(this); switch_event(this)">
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div>
+
+            <div class="switch button_full pill center" onclick="switch_1(this); switch_event(this)">  
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div> 
+
+            <div class="switch button_text pill center" onclick="switch_1(this); switch_event(this)">  
+                <span class="piece_text">Etiqueta</span>
+            </div>
+    
+            <div class="switch button_icon rounded on center" onclick="switch_1(this); switch_event(this)"> 
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div>
+
+            <div class="lb2"></div>
+
+            <div class="switch image pill on center" onclick="switch_1(this); switch_event(this)">
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </div>
+
+            <div class="lb2"></div>
+
+            <div class="switch key_full on" onclick="switch_1(this); switch_event(this)"> 
+                <div class="piece_key"></div>
+                <div class="piece_label">
+                    <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                    <span class="piece_text">Etiqueta</span>
+                </div>
+            </div>
+
+            <div class="lb2"></div>
+
+            <hr>-->
+
+            <div class="lb2"></div>
+
+            <button class="button_full text_below center">     
+                <img class="piece_icon" src="../images/exs/grassland_(960×580).png" alt="" style="width: 250px;"> 
+                <span class="piece_text">Etiqueta</span> 
+            </button>
+
+            <button class="button_icon center">  
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt=""> 
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <button class="button_full pill center">  
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_3.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </button> 
+
+            <button class="button_text pill center">  
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <button class="button_full text_below rounded center">
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="" style="width: 64px;"> 
+                <span class="piece_text">Etiqueta</span> 
+            </button>
+
+            <button class="button_text rounded center">  
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <button class="button_icon rounded center"> 
+                <img class="piece_icon" src="../images/exs/icon_swt_&_btn_4.png" alt="">
+                <span class="piece_text">Etiqueta</span>
+            </button>
+
+            <div class="lb2"></div>
+
+            <hr>
+
+            <div class="lb2"></div>
+
+            <ul class="choice horizontal center" onclick="choice(this)">
+                <li><span>Escolher</span></li>
+                <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1</span></a></li>
+                <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+            </ul>
+
+            <div class="lb2"></div>
+
+            <ul class="choice vertical center" onclick="choice(this)">
+                <li><span>Escolher</span></li>
+                <li><a onclick="choice_option(this); choice_option_1(this)" class="on"><span>Opção 1 - Vertical choice</span></a></li>
+                <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+            </ul>
+
+            <div class="lb2"></div>
+            
+            <ul class="choice dropdown center" onclick="choice(this)">
+                <li><span>Escolher</span></li>
+                <li><a onclick="choice_option(this); choice_option_1(this)"><span>Opção 1</span></a></li>
+                <li><a onclick="choice_option(this); choice_option_2(this)"><span>Opção 2</span></a></li>
+                <li><a onclick="choice_option(this); choice_option_3(this)"><span>Opção 3</span></a></li>
+            </ul>
+
+            <div class="lb2"></div>
+
+            <ul class="choice dropdown no_label center" onclick="choice(this)">
+                <li><img src="../images/exs/choice_label.svg" alt=" " style="width: 150px; height: 40px;"></li>
+                <li><a onclick="choice_option(this); choice_option_1(this)"><img src="../images/exs/choice_1.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                <li><a onclick="choice_option(this); choice_option_2(this)"><img src="../images/exs/choice_2.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+                <li><a onclick="choice_option(this); choice_option_3(this)"><img src="../images/exs/choice_3.svg" alt=" " style="width: 150px; height: 40px;"></a></li>
+            </ul>
+
+            <div class="lb2"></div>
+
+            <hr>
+<!--  
+            <a href="" class="card h1">
+                <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                <div class="card_text">
+                        <h5>Card Title</h5>
+                        <p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>
+                </div>
+            </a>
+
+            <div class="lb2"></div>
+
+            <div class="group c_3">
+
+                <a href="" class="card">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <a href="" class="card">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+
+                <a href="" class="card">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <p>Abcde fghij klmno pqrst uvwxyz.</p>
+                    </div>
+                </a>
+                
+            </div>
+-->
+            <div class="lb2"></div>
+
+            <div class="group c_2">
+
+                <a href="" class="card h2">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <!--<p>Abcde fghij klmno pqrst uvwxyz.</p>-->
+                    </div>
+                </a>
+
+                <a href="" class="card h2">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <!--<p>Abcde fghij klmno pqrst uvwxyz.</p>-->
+                    </div>
+                </a>
+
+                <a href="" class="card h2">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <!--<p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>-->
+                    </div>
+                </a>
+
+                <a href="" class="card h2">
+                    <img src="../images/exs/1920×1080.png" alt="" class="card_img">  
+
+                    <div class="card_text">
+                            <h5>Card Title</h5>
+                            <!--<p>Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz. Abcde fghij klmno pqrst uvwxyz.</p>-->
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="lb2"></div>
+
+            <div class="group c_3">
+
+                <a href="" class="poster">
+
+                    <img src="../images/exs/dark_1000×1000.png" alt="" class="poster_img"> 
+
+                    <div class="poster_header">
+                        <p>Poster Header</p>
+                    </div><!---->
+
+                    <div class="poster_body">
+                        <p>Here is the poster body!</p>
+                        <p>Last updated X mins ago</p>
+                    </div>     
+                </a>
+
+                <a href="" class="poster">
+
+                    <img src="../images/exs/dark_1000×1000.png" alt="" class="poster_img"> 
+
+                    <div class="poster_header">
+                        <p>Poster Header</p>
+                    </div><!---->
+
+                    <div class="poster_body">
+                        <p>Here is the poster body!</p>
+                        <p>Last updated X mins ago</p>
+                    </div>     
+                </a>
+
+                <a href="" class="poster">
+
+                    <img src="../images/exs/dark_1000×1000.png" alt="" class="poster_img"> 
+
+                    <div class="poster_header">
+                        <p>Poster Header</p>
+                    </div><!---->
+
+                    <div class="poster_body">
+                        <p>Here is the poster body!</p>
+                        <p>Last updated X mins ago</p>
+                    </div>     
+                </a>
+
+            </div>
+<!--  
+            <hr>
+
+            <div class="lb2"></div>
+
+            <p>
+                <a onclick="lightbox('This is a very beautiful lightbox!')">Lightbox 1</a>
+            </p>
+
+            <p>
+                <a onclick="lightbox(`<div class='font_size' style='text-align: center;'>Alert!</div>`, '../images/exs/alert.png', '75px')">Lightbox 3</a>  
+            </p>   
+
+            <div class="lb2"></div>
+
+            <hr>
+
+            <div class="lb21"></div>
+
+            <button class="button_text pill center" style="width: 116px">
+                <span class="piece_text">New Game</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 116px">
+                <span class="piece_text">Continue</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 116px">
+                <span class="piece_text">Options</span>
+            </button>
+        
+            <div class="lb21"></div>
+
+            <hr>
+
+            <div class="lb21"></div>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Itens</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Skills</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Equips</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Scan</span> 
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Formation</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Save</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Options</span>
+            </button>
+
+            <button class="button_text pill center" style="width: 140px">
+                <span class="piece_text">Exit</span>
+            </button>
+        
+            <div class="lb21"></div>
+-->
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- TODO: Fim -->
+
+    <!-- 
+        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
+        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
+        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+    -->
+
+    <script defer src="../scripts/defaults.js"></script> 
+    <script defer src="../scripts/identity.js"></script>
+    
+</body>
+</html>
+
+<!-- 
+
+    Emmets: Element#ID_$@I.Class_1.Class_2[Atrib_1=... Atrib_2]{Content $}*N 
+    
+    hsla(0, 100%, 50%, 0.)
+    
+    Referências De Entidade de Caracteres: 
+    Espaço: &nbsp; | <: &lt;
+    
+    Fontes Seguras da Web: 
+    font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
+    
+    ABCDE FGHIJ KLMNO PQRST UVWXYZ  Texto genérico de demonstração.  
+    
+    Configuração Do Aplicativo Textastic:
+    Font: Menlo; Font Size: 11 pt 
+
+    .carousel:hover { 
+    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
+    padding-top: 40px; padding-bottom: 40px; 
+    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
+    background-color: rgb(243, 243, 243); }
+
+--> 
+
+<!--
+            <h3>Imagens Responsivas Semânticas</h3> 
+
+            <h4>1 - Alternância de Resolução</h4> 
+
+            <h5>1.1 - 1ª Maneira: Tamanhos e Resoluções Diferentes</h5> 
+
+
+
+            <h5>1.2 - 2ª Maneira: Mesmo Tamanho, Resoluções Diferentes</h5>
+
+
+
+            <h4>2 - Direção de Arte</h4>
+
+            <h5>2.1 - Direção de Arte Junto com Alternância de Resolução de Mesmo Tamanho, mas Resoluções Diferentes</h5>
+
+
+
+            <h5>2.2 - Usando Formatos de Imagem Modernos</h5>
+
+
+
+            <h3>Imagens Responsivas Decorativas</h3>
+
+
+-->
