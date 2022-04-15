@@ -136,11 +136,11 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<li><a href="../framework/pages/index.html"><span>Framework</span></a><div><ul></ul></div></li>
+<li><a href="../blutanium/pages/index.html"><span>Blutanium</span></a><div><ul></ul></div></li>
 
 <!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 
-<li><a aria-label="Hide bar"><img src="../framework/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
+<li><a aria-label="Hide bar"><img src="../blutanium/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
 
@@ -247,7 +247,7 @@ var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
 var nav_options_anchorClicked_index = 'none'
-// var bg_nav_selector = 'url(../../../framework/images/bgs/nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
+// var bg_nav_selector = 'url(../../../blutanium/images/bgs/nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
 
 var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
                                                                                         do <html> apareça em momentos em que não se deseja 
@@ -501,33 +501,33 @@ document.querySelector('footer').innerHTML = `
 
                     <li>
                         <a href="mailto:support@company.com.br" class="button_icon rounded"> 
-                            <img class="piece_icon" src="../framework/images/icons/email.svg" alt=""> 
+                            <img class="piece_icon" src="../blutanium/images/icons/email.svg" alt=""> 
                         </a> 
                     </li> 
 
                     <li>
                         <a class="button_icon rounded green" onclick="lightbox('(68) 2425-8804')"> 
-                            <img class="piece_icon" src="../framework/images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
+                            <img class="piece_icon" src="../blutanium/images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
                         </a> 
                     </li> 
 
                     <li>
                         <a href="#" class="button_icon rounded red"> 
-                            <img class="piece_icon" src="../framework/images/icons/youtube.svg" alt="">
+                            <img class="piece_icon" src="../blutanium/images/icons/youtube.svg" alt="">
                         </a> 
                     </li> 
 
                     <!--
                     <li>
                         <a href="#" class="button_icon rounded"> 
-                            <img class="piece_icon" src="../framework/images/icons/facebook.svg" alt="">
+                            <img class="piece_icon" src="../blutanium/images/icons/facebook.svg" alt="">
                         </a>
                     </li>
                     --> 
 
                     <li>
                         <a href="#" class="button_icon rounded yellow"> 
-                            <img class="piece_icon" src="../framework/images/icons/instagram.svg" alt="">
+                            <img class="piece_icon" src="../blutanium/images/icons/instagram.svg" alt="">
                         </a> 
                     </li> 
                 </ul>
@@ -1009,7 +1009,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Type', 'Damage', 'Recover', 'Effect', 'Cost', 'Item']
+var activated_data = ['Name', 'Type', 'HP_or_AP_or_TP', 'Effect', 'Cost', 'Item']
 
 var activated_data_indexes = [ ]
 
@@ -1049,7 +1049,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['plusTP', 'Extra4', 'Extra5', 'Extra6'] 
+var hidden_data_switchs = ['Damage', 'plusTP', 'Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
@@ -1138,7 +1138,7 @@ for (i = 0; i < skills_table_ths.length; i++) {
 
 
 /* Se for utilizar " Replace Table Header 'HP_or_AP_or_TP' With 'HP/AP/TP' ", 
-desbloqueei apenas os códigos desse comentário.
+desbloqueei apenas os códigos desse comentário.*/
 
 var skills_table_th__HP_or_AP_or_TP = document.querySelector('.skills_table th.HP_or_AP_or_TP')
 
@@ -1152,7 +1152,7 @@ for (i = 0; i < SDSB_switchs.length; i++) {
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
 }
-*/
+
 
 
 

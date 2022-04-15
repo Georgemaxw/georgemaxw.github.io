@@ -8,9 +8,9 @@
     <meta name="author" content="George Maxwell">
     <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
     <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
-    <link href='../framework/styles/css/normalize.css' rel='stylesheet'>  
-    <link href='../framework/styles/css/gmes-normalize.css' rel='stylesheet'>
-    <link href='../framework/styles/css/defaults.css' rel='stylesheet'><!---->
+    <link href='../blutanium/styles/css/normalize.css' rel='stylesheet'>  
+    <link href='../blutanium/styles/css/gmes-normalize.css' rel='stylesheet'>
+    <link href='../blutanium/styles/css/defaults.css' rel='stylesheet'><!---->
     <link href='../styles/css/identity.css' rel='stylesheet'>
 <style>
 
@@ -19,7 +19,7 @@
         max-width: 1250px;
     }
 
-    .Name, .Type, .Recover, .Damage, .Effect, .Target, .Success, .plusTP, .SPD, .Cost, .Critical, 
+    .Name, .Type, .HP_or_AP_or_TP, .Damage, .Effect, .Target, .Success, .plusTP, .SPD, .Cost, .Critical, 
     .Item, .Condition, .Available, .Hit, .Extra4, .Extra5, .Extra6, .Description, .Notes {
          
         display: none; 
@@ -65,8 +65,8 @@
                     <h1><a href="index.html" class="logo"><img src="../images/icons/logo.png" alt="Logo" width="22px" height="22px">Tec OP</a></h1>
                      
                     <a class="nav-menu-button">
-                        <img src="../framework/images/icons/menu.svg" alt="Menu button" width="48px" height="48px">
-                        <img src="../framework/images/icons/menu_close.svg" alt="Menu button" width="48px" height="48px">
+                        <img src="../blutanium/images/icons/menu.svg" alt="Menu button" width="48px" height="48px">
+                        <img src="../blutanium/images/icons/menu_close.svg" alt="Menu button" width="48px" height="48px">
                         <!-- <span>×</span> -->
                     </a>
 
@@ -79,7 +79,7 @@
         </div>
  
         <a class="headerNav-button">
-            <img src="../framework/images/icons/headerNav.svg" alt="Header-nav button">  
+            <img src="../blutanium/images/icons/headerNav.svg" alt="Header-nav button">  
         </a>
 
     </header>
@@ -579,7 +579,7 @@
     <th scope="col">Type</th>
 
     <th scope="col">Damage</th>
-    <th scope="col">Recover</th>
+    <th scope="col">HP_or_AP_or_TP</th>
     <th scope="col">Effect</th>
     <th scope="col">Success</th>
     <th scope="col">Cost</th>
@@ -608,7 +608,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td> 
+    <td class='HP_or_AP_or_TP'><span></span></td> 
     <td class='Effect'><span class='State'>+Zip</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -639,7 +639,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-INT</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -670,7 +670,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+ACC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -703,7 +703,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span>TP</span></td>
+    <td class='HP_or_AP_or_TP'><span>+TP</span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
     <td class='Success'><span></span></td>
@@ -732,7 +732,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Blocking Filter</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
     <td class='Success'><span></span></td>
@@ -763,7 +763,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Overload</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -794,7 +794,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Bug, -Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -825,7 +825,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Lag</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -856,7 +856,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Generic.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+SPD or +Double Action</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -889,7 +889,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -920,7 +920,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Encrypt</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -951,7 +951,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Confusion</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -982,7 +982,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Anonymous</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1013,7 +1013,7 @@
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Lag</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1047,7 +1047,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Bug</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1078,7 +1078,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1109,7 +1109,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Hack</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1140,7 +1140,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Lag or +Crash</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1176,7 +1176,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Encrypt</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1209,7 +1209,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Firewall</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1244,7 +1244,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+ACC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1277,7 +1277,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Crash</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1308,7 +1308,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Fear</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1345,7 +1345,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+ACC, +FEV</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1376,7 +1376,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Lag</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1407,7 +1407,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Low Power Mode</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1440,7 +1440,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+INT</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1471,7 +1471,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+TEC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1502,7 +1502,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Physical and Digital Counter</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1535,7 +1535,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span>HP</span></td>
+    <td class='HP_or_AP_or_TP'><span>+HP</span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1568,7 +1568,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+TEC, +Overload</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1600,8 +1600,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Psionic Boom</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
 
-    <td class='Damage'><span>HP</span></td>
-    <td class='Recover'><span></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span>-HP</span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1636,7 +1636,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Bug, -Lag, -Crash, -Hack</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1667,7 +1667,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Bug</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1698,7 +1698,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span>INT•HP</span></td>
+    <td class='HP_or_AP_or_TP'><span>+INT•HP</span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1729,7 +1729,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Bug, -Crash</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1762,7 +1762,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'>Show Status and Weaknesses</span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1793,7 +1793,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>-Vulnerable</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1824,7 +1824,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Burn</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1855,7 +1855,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Regenerate AP</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1886,7 +1886,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Fire.png' alt=''><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span>HP</span></td>
+    <td class='HP_or_AP_or_TP'><span>+HP</span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1917,7 +1917,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Fascination</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1950,7 +1950,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span>AP</span></td>
+    <td class='HP_or_AP_or_TP'><span>+AP</span></td>
     <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -1981,7 +1981,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Rage</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -2014,7 +2014,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+TEC</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -2047,7 +2047,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
     <td class='Damage'><span></span></td>
-    <td class='Recover'><span></span></td>
+    <td class='HP_or_AP_or_TP'><span></span></td>
     <td class='Effect'><span class='State'>+Anonymous</span><span class='NoState'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
@@ -2118,7 +2118,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
         do arquivo HTML para garantir que a página seja renderizada corretamente.)
     -->
 
-    <script defer src="../framework/scripts/defaults.js"></script>
+    <script defer src="../blutanium/scripts/defaults.js"></script>
     <script defer src="../scripts/identity.js"></script>
     
 </body> 
