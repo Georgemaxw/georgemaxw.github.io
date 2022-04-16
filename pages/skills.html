@@ -20,7 +20,7 @@
     }
 
     .Name, .Type, .Points, .Extra0, .Effect, .Target, .Success, .plusTP, .Extra1, .Cost, .Extra2, 
-    .Item, .Condition, .Available, .Hit, .Extra4, .Extra5, .Extra6, .Description, .Notes {
+    .Condition, .Extra3, .Available, .Hit, .Extra4, .Extra5, .Extra6, .Description, .Notes {
          
         display: none; 
     }
@@ -585,11 +585,11 @@
     <th scope="col">Cost</th>
 
     <th scope="col">Target</th>
-    <th scope="col">Condition</th>
+    <th scope="col">Extra3</th>
     <th scope="col">plusTP</th>
     <th scope="col">Extra1</th>
     <th scope="col">Extra2</th>
-    <th scope="col">Item</th> <!--  -->
+    <th scope="col">Condition</th> <!--  -->
 
     <th scope="col">Available</th>
     <th scope="col">Hit</th>
@@ -618,11 +618,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span></span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span></span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -653,11 +653,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -686,11 +686,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span>Only works once on each enemy</span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond">Only works once on each enemy</span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -719,11 +719,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor, Brain Chip</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -752,11 +752,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Bio Converter</span></td>
+    <td class='Condition'><span><span class="Equip">Bio Converter</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Physical</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -783,11 +783,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -818,11 +818,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -851,11 +851,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -884,11 +884,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -917,11 +917,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span>User or All Allies</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Physical</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -952,11 +952,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -985,11 +985,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1018,11 +1018,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span>2+ Enemies</span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond">2+ Enemies</span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Physical And Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1051,11 +1051,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1084,11 +1084,11 @@
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1120,11 +1120,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1153,11 +1153,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1186,11 +1186,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1219,11 +1219,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1257,11 +1257,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1292,11 +1292,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1329,11 +1329,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span>+ACC only works in the dark</span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond">Only works in the dark</span></span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1364,11 +1364,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1397,11 +1397,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1436,11 +1436,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span>Only works in the dark</span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond">Only works in the dark</span></span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1469,11 +1469,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1502,11 +1502,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1537,11 +1537,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1570,11 +1570,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1603,11 +1603,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span></span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1638,11 +1638,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Nano Robots</span></td>
+    <td class='Condition'><span><span class="Equip">Nano Robots</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1673,11 +1673,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1708,11 +1708,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Electronic Helmet</span></td>
+    <td class='Condition'><span><span class="Equip">Electronic Helmet</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
     <td class='Hit'><span>Physical</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1745,11 +1745,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1778,11 +1778,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1811,11 +1811,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Repair Kit</span></td>
+    <td class='Condition'><span><span class="Equip">Repair Kit</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1844,11 +1844,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1879,11 +1879,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Visor</span></td>
+    <td class='Condition'><span><span class="Equip">Visor</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Physical And Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1912,11 +1912,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span>Can only be used once per battle</span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond">Can only be used once per battle</span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1945,11 +1945,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -1978,11 +1978,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Solar Converter</span></td>
+    <td class='Condition'><span><span class="Equip">Solar Converter</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- IRL and Net, IRL -->
     <td class='Hit'><span>Certain Physical</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -2011,11 +2011,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span>Flamethrower</span></td>
+    <td class='Condition'><span><span class="Equip">Flamethrower</span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -2044,11 +2044,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -2079,11 +2079,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Physical</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -2112,11 +2112,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -2147,11 +2147,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span>Can only be used once per battle</span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond">Can only be used once per battle</span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
@@ -2182,11 +2182,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
-    <td class='Condition'><span></span></td>
+    <td class='Extra3'><span></span></td>
     <td class='plusTP'><span></span></td>
     <td class='Extra1'><span></span></td>
     <td class='Extra2'><span></span></td>
-    <td class='Item'><span></span></td>
+    <td class='Condition'><span><span class="Equip"></span><span class="OtherCond"></span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
     <td class='Hit'><span>Certain Digital</span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->

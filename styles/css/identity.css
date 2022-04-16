@@ -616,6 +616,14 @@ TODO: Skills - Table
   color: red;
 }
 
+.skills_table .Condition .Equip:not(:empty):after {
+  content: " equiped";
+}
+
+.skills_table .Condition .Equip:not(:empty) + .OtherCond:not(:empty)::before {
+  content: ", ";
+}
+
 .skills_table_box_full {
   position: fixed;
   top: 0;

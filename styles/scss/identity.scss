@@ -763,8 +763,6 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
         } 
     }
 
-
-
     .cost {
 
         //filter: drop-shadow(0px 0px 1px black);
@@ -790,6 +788,19 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     .cost.tp {
 
         color: red;
+    }
+
+    .Condition {
+
+        .Equip:not(:empty):after {
+
+            content: " equiped"
+        }
+
+        .Equip:not(:empty) + .OtherCond:not(:empty)::before {
+
+            content: ", "
+        }
     }
 }
 
