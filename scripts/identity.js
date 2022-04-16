@@ -1009,7 +1009,7 @@ STSB_switchs.forEach(function (current_switch) {
 TODO:          >>> Activateds Data
 ──────────────────────────── */
 
-var activated_data = ['Name', 'Type', 'HP_or_AP_or_TP', 'Effect', 'Cost', 'Item']
+var activated_data = ['Name', 'Type', 'Points', 'Effect', 'Cost', 'Item']
 
 var activated_data_indexes = [ ]
 
@@ -1049,7 +1049,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Damage', 'plusTP', 'Extra4', 'Extra5', 'Extra6'] 
+var hidden_data_switchs = ['plusTP', 'Notes', 'Extra0', 'Extra1', 'Extra2', 'Extra4', 'Extra5', 'Extra6'] 
 
 var hidden_data_indexes = [ ]
 
@@ -1070,9 +1070,9 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
 /*  
 ────────────────────────────
 TODO:    > Initial Type & Auto Table Full Screen
-──────────────────────────── 
+──────────────────────────── */
 
-var skills_choice_initial_type = 'Digital'
+var skills_choice_initial_type = 'All Types'
 
 var skills_choice = document.querySelector('.skills_types_choice')
 var skills_choice_options = document.querySelectorAll('.skills_types_choice > li')
@@ -1091,9 +1091,8 @@ skills_choice_options_anchor.forEach(function (option) {
  
 choice(skills_choice)
 
-skills_table_box.classList.toggle('skills_table_box_full')
-document.body.classList.toggle('overflow_hidden')
-*/
+// skills_table_box.classList.toggle('skills_table_box_full'); document.body.classList.toggle('overflow_hidden')
+
 /*  
 ────────────────────────────
 TODO:    > Replace Table Header 
@@ -1142,16 +1141,20 @@ desbloqueei apenas os códigos desse comentário.*/
 
 var skills_table_th__HP_or_AP_or_TP = document.querySelector('.skills_table th.HP_or_AP_or_TP')
 
-skills_table_th__HP_or_AP_or_TP.textContent = 
-skills_table_th__HP_or_AP_or_TP.textContent.replace('_or_', '/').replace('_or_', '/')
+if (skills_table_th__HP_or_AP_or_TP !== null) {
+        
+    skills_table_th__HP_or_AP_or_TP.textContent = 
+    skills_table_th__HP_or_AP_or_TP.textContent.replace('_or_', '/').replace('_or_', '/')
 
-// Replace In Data Switchs Labels:
+    // Replace In Data Switchs Labels:
 
-for (i = 0; i < SDSB_switchs.length; i++) {
+    for (i = 0; i < SDSB_switchs.length; i++) {
 
-    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
-    SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
+        SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
+        SDSB_switchs[i].querySelector(':scope .piece_text').textContent = SDSB_switchs[i].querySelector(':scope .piece_text').textContent.replace('_or_', '/')
+    }
 }
+
 
 
 

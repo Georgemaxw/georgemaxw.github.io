@@ -719,11 +719,51 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
     */
 
-    .NoState {
+    .Effect {
 
-        color: hsl(0, 0%, 70%);
-        //background-color: hsl(195, 100%, 97%);
-    } 
+        font-size: 0;
+
+        > span:not(:empty) {
+
+            padding: 4px 8px;
+            border-radius: 1000px;
+        }
+
+        > span + span {
+
+            margin-left: 9px;
+        }
+
+        .SPD:not(:empty) {
+
+            color: hsl(54, 100%, 42%);
+            border: 1px solid hsl(55, 100%, 43%);
+            background-color: hsl(60, 100%, 95%);
+        }
+
+        .Critical:not(:empty) {
+
+            color: hsl(0, 100%, 46%); 
+            border: 1px solid hsl(0, 100%, 74%);
+            background-color: hsl(0, 100%, 98%);
+        }
+
+        .State:not(:empty) {
+
+            color: hsl(195, 100%, 46%);
+            border: 1px solid hsl(195, 100%, 58%);
+            background-color: hsl(195, 100%, 99%);
+        }
+
+        .Special:not(:empty) {
+
+            color: hsl(120, 100%, 43%);
+            border: 1px solid hsl(120, 100%, 46%);
+            background-color: hsl(120, 100%, 98%);
+        } 
+    }
+
+
 
     .cost {
 

@@ -563,8 +563,41 @@ TODO: Skills - Table
   margin-left: 9px;
 }
 
-.skills_table .NoState {
-  color: #b3b3b3;
+.skills_table .Effect {
+  font-size: 0;
+}
+
+.skills_table .Effect > span:not(:empty) {
+  padding: 4px 8px;
+  border-radius: 1000px;
+}
+
+.skills_table .Effect > span + span {
+  margin-left: 9px;
+}
+
+.skills_table .Effect .SPD:not(:empty) {
+  color: #d6c100;
+  border: 1px solid #dbc900;
+  background-color: #ffffe6;
+}
+
+.skills_table .Effect .Critical:not(:empty) {
+  color: #eb0000;
+  border: 1px solid #ff7a7a;
+  background-color: #fff5f5;
+}
+
+.skills_table .Effect .State:not(:empty) {
+  color: #00b0eb;
+  border: 1px solid #29c9ff;
+  background-color: #fafeff;
+}
+
+.skills_table .Effect .Special:not(:empty) {
+  color: #00db00;
+  border: 1px solid #00eb00;
+  background-color: #f5fff5;
 }
 
 .skills_table .cost + .cost {

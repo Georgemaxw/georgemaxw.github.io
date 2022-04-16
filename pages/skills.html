@@ -19,7 +19,7 @@
         max-width: 1250px;
     }
 
-    .Name, .Type, .HP_or_AP_or_TP, .Damage, .Effect, .Target, .Success, .plusTP, .SPD, .Cost, .Critical, 
+    .Name, .Type, .Points, .Extra0, .Effect, .Target, .Success, .plusTP, .Extra1, .Cost, .Extra2, 
     .Item, .Condition, .Available, .Hit, .Extra4, .Extra5, .Extra6, .Description, .Notes {
          
         display: none; 
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
-                        <img class="piece_icon" src="../images/game/icons/types/Cyber.png" alt=""><span class="piece_text">Cyber</span> 
+                        <img class="piece_icon" src="../images/game/icons/types/Cybernetic.png" alt=""><span class="piece_text">Cybernetic</span> 
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
@@ -151,7 +151,7 @@
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
-                        <img class="piece_icon" src="../images/game/icons/types/Cyber.png" alt=""><span class="piece_text">Cyber</span> 
+                        <img class="piece_icon" src="../images/game/icons/types/Cybernetic.png" alt=""><span class="piece_text">Cybernetic</span> 
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
@@ -195,7 +195,7 @@
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
-                        <img class="piece_icon" src="../images/game/icons/types/Cyber.png" alt=""><span class="piece_text">Cyber</span> 
+                        <img class="piece_icon" src="../images/game/icons/types/Cybernetic.png" alt=""><span class="piece_text">Cybernetic</span> 
                     </div>
 
                     <div class="switch button_full pill" onclick="F_skills_types_switchs(this); switch_event(this)"> 
@@ -279,7 +279,7 @@
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cosmic.png" alt=" "><span>Cosmic</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Crystal.png" alt=" "><span>Crystal</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cut.png" alt=" "><span>Cut</span></a></li>
-                        <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cyber.png" alt=" "><span>Cyber</span></a></li>
+                        <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Cybernetic.png" alt=" "><span>Cybernetic</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Dark.png" alt=" "><span>Dark</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Digital.png" alt=" "><span>Digital</span></a></li>
                         <li><a onclick="choice_option(this); func_skills_types_choices(this)"><img src="../images/game/icons/types/Dinosaur.png" alt=" "><span>Dinosaur</span></a></li>
@@ -578,8 +578,8 @@
     <th scope="col">Name</th>
     <th scope="col">Type</th>
 
-    <th scope="col">Damage</th>
-    <th scope="col">HP_or_AP_or_TP</th>
+    <th scope="col">Extra0</th>
+    <th scope="col">Points</th>
     <th scope="col">Effect</th>
     <th scope="col">Success</th>
     <th scope="col">Cost</th>
@@ -587,8 +587,8 @@
     <th scope="col">Target</th>
     <th scope="col">Condition</th>
     <th scope="col">plusTP</th>
-    <th scope="col">SPD</th> <!-- plusSPD --> 
-    <th scope="col">Critical</th>
+    <th scope="col">Extra1</th>
+    <th scope="col">Extra2</th>
     <th scope="col">Item</th> <!--  -->
 
     <th scope="col">Available</th>
@@ -601,15 +601,50 @@
     <th scope="col">Notes</th>
 </tr>
 
+<tr>
+    <td class='Name'><span>?</span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Dragon.png' alt=''><img class='icon_type' src='../images/game/icons/types/Vital Energy.png' alt=''></span></td>
+
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'>Act first<!-- , Act last --></span><span class='Critical'>Critical chance: 50%</span>
+        <span class='State'>+STR</span><span class='Special'>Call ally</span></td>
+        <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
+        <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
+
+    <td class='Success'><span></span></td>
+    <td class='Cost'><span><span class='cost hp'>50</span><span class='cost mp'>25</span><span class='cost tp'>10</span></span></td>
+    <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
+
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='Condition'><span></span></td>
+    <td class='plusTP'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
+    <td class='Item'><span></span></td>
+
+    <td class='Available'><span></span></td><!-- In Real Life, IRL and Net -->
+    <td class='Hit'><span></span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
+    <td class='Extra4'><span></span></td>
+    <td class='Extra5'><span></span></td>
+    <td class='Extra6'><span></span></td>
+
+    <td class='Description'><span></span></td>
+    <td class='Notes'><span></span></td>
+</tr>
+
 <!--A-->
 
 <tr>
     <td class='Name'><span>Archive Files</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td> 
-    <td class='Effect'><span class='State'>+Zip</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td> 
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Zip</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -620,8 +655,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -638,9 +673,11 @@
     <td class='Name'><span>Authorities Advertence</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-INT</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-INT</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -651,8 +688,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Only works once on each enemy</span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -667,11 +704,13 @@
 
 <tr>
     <td class='Name'><span>Auto Aim</span></td>
-    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+ACC</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+ACC</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -682,8 +721,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor, Brain Chip</span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- In Real Life, IRL and Net -->
@@ -700,21 +739,23 @@
 
 <tr>
     <td class='Name'><span>Bio Recharge</span></td>
-    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span>+TP</span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span>+TP</span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
     <td class='Success'><span></span></td>
-    <td class='Cost'><span>AP</span></td>
+    <td class='Cost'><span><span class='cost mp'>AP</span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Bio Converter</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -729,11 +770,13 @@
 
 <tr>
     <td class='Name'><span>Blocking Filter</span></td>
-    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Blocking Filter</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Blocking Filter</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
     <td class='Success'><span></span></td>
     <td class='Cost'><span></span></td>
@@ -742,8 +785,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor</span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- In Real Life, IRL and Net -->
@@ -762,9 +805,11 @@
     <td class='Name'><span>Boost Cooler</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Overload</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Overload</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -775,8 +820,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -793,9 +838,11 @@
     <td class='Name'><span>Bug Fix</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Bug, -Vulnerable</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Bug, -Vulnerable</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -806,8 +853,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -824,9 +871,11 @@
     <td class='Name'><span>Cleaner</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Lag</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Lag</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -837,8 +886,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -855,9 +904,11 @@
     <td class='Name'><span>Crunch Time</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Generic.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+SPD or +Double Action</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+SPD or +Double Action</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -868,8 +919,8 @@
     <td class='Target'><span>User or All Allies</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -888,21 +939,23 @@
     <td class='Name'><span>Dark Web Business</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Vulnerable</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Vulnerable</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
     <td class='Success'><span></span></td>
-    <td class='Cost'><span>Money</span></td>
+    <td class='Cost'><span><span class='money'>Money</span></span></td>
     <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -919,9 +972,11 @@
     <td class='Name'><span>Decode</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Encrypt</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Encrypt</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -932,8 +987,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -950,9 +1005,11 @@
     <td class='Name'><span>Deepfake</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Confusion</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Confusion</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -963,8 +1020,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>2+ Enemies</span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -981,9 +1038,11 @@
     <td class='Name'><span>Deep Web</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Anonymous</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Anonymous</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -994,8 +1053,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1012,9 +1071,11 @@
     <td class='Name'><span>Defragment</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Lag</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Lag</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1025,8 +1086,8 @@
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1046,9 +1107,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Delete</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Bug</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Bug</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1059,8 +1122,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1077,9 +1140,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Detect Vulnerability</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Vulnerable</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Vulnerable</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1090,8 +1155,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1108,9 +1173,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Device Control</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Hack</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Hack</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1121,8 +1188,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1139,9 +1206,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>DoS</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Lag or +Crash</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Lag or +Crash</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1152,8 +1221,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1175,9 +1244,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Encode</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Encrypt</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Encrypt</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1188,8 +1259,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1208,9 +1279,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Firewall</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Firewall</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Firewall</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1221,8 +1294,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1243,9 +1316,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Heat Vision</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+ACC</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+ACC</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1256,8 +1331,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>+ACC only works in the dark</span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor</span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
@@ -1276,9 +1351,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Infinite Loop</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Crash</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Crash</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1289,8 +1366,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1307,9 +1384,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Intimidate Zap</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Fear</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Fear</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1320,8 +1399,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1344,9 +1423,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Light Filter</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+ACC, +FEV</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+ACC, +FEV</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1357,8 +1438,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Only works in the dark</span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor</span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
@@ -1375,9 +1456,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Lorem Ipsum</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Lag</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Lag</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1388,8 +1471,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1406,9 +1489,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Low Power Mode</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Low Power Mode</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Low Power Mode</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1419,8 +1504,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1439,9 +1524,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Machine Learning</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+INT</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+INT</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1452,8 +1539,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1470,9 +1557,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Mainframe</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+TEC</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+TEC</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1483,8 +1572,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1501,9 +1590,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Machine Revolution</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Physical and Digital Counter</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Physical and Digital Counter</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1514,8 +1605,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1534,9 +1625,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Nano Repair</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span>+HP</span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span>+HP</span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1547,8 +1640,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Nano Robots</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1567,9 +1660,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Overclock</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+TEC, +Overload</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+TEC, +Overload</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1580,8 +1675,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1598,11 +1693,13 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Psionic Boom</span></td>
-    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span>-HP</span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span>-HP</span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1613,8 +1710,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Electronic Helmet</span></td>
 
     <td class='Available'><span>In Real Life</span></td><!-- IRL and Net, In Real Life -->
@@ -1635,9 +1732,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Reformat</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Bug, -Lag, -Crash, -Hack</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Bug, -Lag, -Crash, -Hack</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1648,8 +1747,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1666,9 +1765,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Reload</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Bug</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Bug</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1679,8 +1780,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1695,11 +1796,13 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <tr>
     <td class='Name'><span>Repair</span></td>
-    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cyber.png' alt=''></span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span>+INT•HP</span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span>+INT•HP</span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1710,8 +1813,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Repair Kit</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1728,9 +1831,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Reset</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Bug, -Crash</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Bug, -Crash</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1741,8 +1846,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1761,9 +1866,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Scan</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'>Show Status and Weaknesses</span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'>Show status, resistances, and weaknesses</span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1774,8 +1881,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Visor</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1792,9 +1899,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Security Update</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>-Vulnerable</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>-Vulnerable</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1805,8 +1914,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Can only be used once per battle</span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1823,9 +1932,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Shortware</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Burn</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Burn</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1836,8 +1947,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1854,9 +1965,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Solar Recharge</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Regenerate AP</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Regenerate AP</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1867,8 +1980,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Solar Converter</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- IRL and Net, IRL -->
@@ -1885,9 +1998,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Steel Bond</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Fire.png' alt=''><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span>+HP</span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span>+HP</span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1898,8 +2013,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span>Flamethrower</span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1916,9 +2031,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Super Like</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Fascination</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Fascination</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1929,8 +2046,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1949,9 +2066,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Testa Recharge</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Machine.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span>+AP</span></td>
-    <td class='Effect'><span class='State'></span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span>+AP</span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'></span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1962,8 +2081,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -1980,9 +2099,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Troll Face</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Rage</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Rage</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -1993,8 +2114,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -2013,9 +2134,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>Update</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+TEC</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+TEC</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -2026,8 +2149,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span>User</span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span>Can only be used once per battle</span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
@@ -2046,9 +2169,11 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Name'><span>VPN</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
 
-    <td class='Damage'><span></span></td>
-    <td class='HP_or_AP_or_TP'><span></span></td>
-    <td class='Effect'><span class='State'>+Anonymous</span><span class='NoState'></span></td>
+    <td class='Extra0'><span></span></td>
+    <td class='Points'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span><span class='Critical'></span>
+        <span class='State'>+Anonymous</span><span class='Special'></span></td>
         <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
         <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
 
@@ -2059,8 +2184,8 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
     <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
     <td class='Condition'><span></span></td>
     <td class='plusTP'><span></span></td>
-    <td class='SPD'><span></span></td><!-- Fast, Slow -->
-    <td class='Critical'><span></span></td>
+    <td class='Extra1'><span></span></td>
+    <td class='Extra2'><span></span></td>
     <td class='Item'><span></span></td>
 
     <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
