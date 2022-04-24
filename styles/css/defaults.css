@@ -668,28 +668,64 @@ span.token {
 }
 
 span.token, span.token.blue {
-  border: 1px solid deepskyblue;
-  background: #f5fcff;
-  color: deepskyblue;
+  border: 1px solid #29c9ff;
+  background: #fafeff;
+  color: #00b0eb;
 }
 
 span.token.red {
-  border: 1px solid red;
-  background: snow;
-  color: red;
+  border: 1px solid #ff7a7a;
+  background: #fff5f5;
+  color: #eb0000;
 }
 
 span.token.yellow {
-  border: 1px solid #d2c104;
-  background: ivory;
+  border: 1px solid #dbc900;
+  background: #fefee7;
   color: yellow;
-  color: #d2c104;
+  color: #d6c100;
 }
 
 span.token.green {
-  border: 1px solid #00d600;
+  border: 1px solid #00eb00;
   background: #f5fff5;
   color: #00d600;
+}
+
+span.token.pink {
+  border: 1px solid magenta;
+  background: #fff5ff;
+  color: magenta;
+}
+
+span.token.purple {
+  border: 1px solid #990099;
+  background: #faf0ff;
+  color: #990099;
+}
+
+span.token.orange {
+  border: 1px solid #ffa600;
+  background: #fff8eb;
+  color: #f59f00;
+}
+
+span.token.brown {
+  border: 1px solid #c5621b;
+  background: #fdf4ed;
+  color: #c5621b;
+}
+
+span.token.cyan {
+  border: 1px solid #00e0e0;
+  background: azure;
+  color: #00cccc;
+}
+
+span.token.purple2 {
+  border: 1px solid #a495f3;
+  background: #f6f5ff;
+  color: #907ef1;
 }
 
 span.token.black {
@@ -2405,9 +2441,9 @@ TODO:            >>> Floating Labels
     justify-content: center;
   }
   .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
-    color: deepskyblue;
-    border-color: deepskyblue;
-    background: #f5fcff;
+    color: #00b0eb;
+    border-color: #29c9ff;
+    background: #fafeff;
     filter: initial;
   }
   .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text, a.button_icon:hover .piece_text {
@@ -2487,9 +2523,9 @@ a.button_full.blue .piece_text, a.button_text.blue .piece_text {
 @media (pointer: fine) {
   .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text,
   .switch.button_icon.blue.on .piece_text, button.button_icon.blue .piece_text, a.button_icon.blue .piece_text {
-    color: deepskyblue;
-    border-color: deepskyblue;
-    background: #f5fcff;
+    color: #00b0eb;
+    border-color: #29c9ff;
+    background: #fafeff;
   }
 }
 
@@ -2545,9 +2581,9 @@ a.button_full.red .piece_text, a.button_text.red .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.red.on .piece_text, button.button_icon.red .piece_text, a.button_icon.red .piece_text {
-    border-color: red;
-    background: snow;
-    color: red;
+    border-color: #ff7a7a;
+    background: #fff5f5;
+    color: #eb0000;
   }
 }
 
@@ -2616,9 +2652,9 @@ a.button_full.yellow .piece_text, a.button_text.yellow .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.yellow.on .piece_text, button.button_icon.yellow .piece_text, a.button_icon.yellow .piece_text {
-    border-color: #d2c104;
-    background: ivory;
-    color: #d2c104;
+    border-color: #dbc900;
+    background: #fefee7;
+    color: #d6c100;
   }
 }
 
@@ -2674,7 +2710,7 @@ a.button_full.green .piece_text, a.button_text.green .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.green.on .piece_text, button.button_icon.green .piece_text, a.button_icon.green .piece_text {
-    border-color: #00d600;
+    border-color: #00eb00;
     background: #f5fff5;
     color: #00d600;
   }
@@ -2852,50 +2888,50 @@ TODO:            >>> Colors
   /*------ Default: Blue ------*/
   .switch.image.on .piece_text,
   .switch.image.blue.on .piece_text {
-    color: deepskyblue;
-    border-color: deepskyblue;
-    background: #f5fcff;
+    color: #00b0eb;
+    border-color: #29c9ff;
+    background: #fafeff;
   }
   button.image .piece_text, a.image .piece_text,
   button.image.blue .piece_text, a.image.blue .piece_text {
-    color: deepskyblue;
-    border-color: deepskyblue;
-    background: #f5fcff;
+    color: #00b0eb;
+    border-color: #29c9ff;
+    background: #fafeff;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Red ------*/
   .switch.image.red.on .piece_text {
-    color: red;
-    border-color: red;
-    background: snow;
+    color: #eb0000;
+    border-color: #ff7a7a;
+    background: #fff5f5;
   }
   button.image.red .piece_text, a.image.red .piece_text {
-    color: red;
-    border-color: red;
-    background: snow;
+    color: #eb0000;
+    border-color: #ff7a7a;
+    background: #fff5f5;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Yellow ------*/
   .switch.image.yellow.on .piece_text {
-    color: #d2c104;
-    border-color: #d2c104;
-    background: ivory;
+    color: #d6c100;
+    border-color: #dbc900;
+    background: #fefee7;
   }
   button.image.yellow .piece_text, a.image.yellow .piece_text {
-    color: #d2c104;
-    border-color: #d2c104;
-    background: ivory;
+    color: #d6c100;
+    border-color: #dbc900;
+    background: #fefee7;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Green ------*/
   .switch.image.green.on .piece_text {
     color: #00d600;
-    border-color: #00d600;
+    border-color: #00eb00;
     background: #f5fff5;
   }
   button.image.green .piece_text, a.image.green .piece_text {
     color: #00d600;
-    border-color: #00d600;
+    border-color: #00eb00;
     background: #f5fff5;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
@@ -4165,6 +4201,11 @@ TODO:    > Lightbox
 ──────────────────────────────────────────────────────
 TODO: Others
 ────────────────────────────────────────────────────── */
+::selection {
+  color: #00bbfa;
+  background: #e6f9ff;
+}
+
 hr {
   border-top: 1px solid DeepSkyBlue;
   border-bottom: 0;

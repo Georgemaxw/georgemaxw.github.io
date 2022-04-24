@@ -7,7 +7,46 @@ gmes-identity.css
 ──────────────────────────────────────────────────────
 TODO: Framework - Variables
 ────────────────────────────────────────────────────── */
+/* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
+/*  
+────────────────────────────
+TODO:    > Specific Elements & Components
+──────────────────────────── */
+/*
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+*/
+/*      
+//$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
+$bg_switch_type_button_pill_and_rounded_off: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%, 88%);
+$bg_switch_type_button_pill_and_rounded_on: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%);
+*/
+/*  
+$bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+*/
+/*  
+$color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
+$color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
+$bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+*/
+/*  
+$color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
+$color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
+$color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
+$color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%, 0.24);
+$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
+*/
 /*  
 ──────────────────────────────────────────────────────
 TODO: Framework - Classes JS
@@ -25,11 +64,11 @@ TODO: Framework - Classes JS
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
 .header-content {
-  max-width: 960px;
+  max-width: 800px;
 }
 
 .central {
-  max-width: 960px;
+  max-width: 800px;
 }
 
 .presentation_float video {
@@ -567,8 +606,15 @@ TODO: Skills - Table
   font-size: 0;
 }
 
-.skills_table .Effect > span:not(:empty) {
+.skills_table .Effect > span:empty {
+  display: none;
+}
+
+.skills_table .Effect > span {
+  display: inline-block;
   padding: 4px 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   border-radius: 1000px;
 }
 
@@ -576,25 +622,43 @@ TODO: Skills - Table
   margin-left: 9px;
 }
 
-.skills_table .Effect .SPD:not(:empty) {
+.skills_table .Effect .SPD {
   color: #d6c100;
   border: 1px solid #dbc900;
   background-color: #ffffe6;
 }
 
-.skills_table .Effect .Critical:not(:empty) {
+.skills_table .Effect .Critical {
   color: #eb0000;
   border: 1px solid #ff7a7a;
   background-color: #fff5f5;
 }
 
-.skills_table .Effect .State:not(:empty) {
+.skills_table .Effect .State {
   color: #00b0eb;
   border: 1px solid #29c9ff;
   background-color: #fafeff;
 }
 
-.skills_table .Effect .Special:not(:empty) {
+.skills_table .Effect .Call {
+  color: #00db00;
+  border: 1px solid #00eb00;
+  background-color: #f5fff5;
+}
+
+.skills_table .Effect .Recover {
+  color: #fa00fa;
+  border: 1px solid magenta;
+  background-color: #fef6fe;
+}
+
+.skills_table .Effect .Drain {
+  color: #bd00bd;
+  border: 1px solid #bd00bd;
+  background-color: #fcf5ff;
+}
+
+.skills_table .Effect .Special {
   color: #00db00;
   border: 1px solid #00eb00;
   background-color: #f5fff5;
@@ -614,10 +678,6 @@ TODO: Skills - Table
 
 .skills_table .cost.tp {
   color: red;
-}
-
-.skills_table .Condition .Equip:not(:empty):after {
-  content: " equiped";
 }
 
 .skills_table .Condition .Equip:not(:empty) + .OtherCond:not(:empty)::before {

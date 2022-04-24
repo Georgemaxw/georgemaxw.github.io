@@ -15,7 +15,7 @@ $font_monospace: 'Courier New', Courier, monospace;
 $font_size: 19rem; 
 $font_small: 16rem;
 $font_smaller: 14rem;
-$central_maxWidth: 960px; 
+$central_maxWidth: 800px; /* Padrão: 600-700px. */
 $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
 $button_height: 48px;
@@ -60,6 +60,401 @@ $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15);
 $bg_html: white;
 //$bg_html: hsl(0, 0%, 36%);
 //$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
+ 
+/*  
+────────────────────────────
+TODO:    > Specific Elements & Components
+──────────────────────────── */
+
+// ─────────── Header-Nav ───────────
+
+$color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
+$color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
+$color_shadow_headerNav_button: hsla(0, 0%, 0%, 0.28);
+$color_shadow_nav_options: hsla(0, 0%, 0%, 0.5);
+$color_shadow_nav_subOptions: hsla(0, 0%, 0%, 0.26);
+
+$bg_header: url(../../images/bgs/header.png) center /100% 100%;
+// $bg_nav: url(../../images/bgs/nav.png)  center /100% 100%;
+$bg_nav: linear-gradient(to right, hsl(201, 100%, 50%), hsl(193, 100%, 78%), hsl(201, 100%, 50%)); 
+// $bg_nav_2: url(../../images/bgs/nav_2.png)  center /100% 100%;
+// $bg_nav_selector: url(../../images/bgs/nav_selector.png)  center /100% 100%; // VÍNCULO: Váriável JS
+$bg_nav_selector: hsla(0, 0%, 0%, 0.12); // VÍNCULO: Váriável JS
+
+/*
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+*/
+
+// ─────────── Footer ───────────
+
+$color_shadow_footer: $color_shadow_headerNav_rounded; 
+$color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);   
+
+$bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
+
+// $bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+
+// ─────────── Texts ───────────
+
+// $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%; 199
+$color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 50%), hsl(201, 100%, 50%), hsl(193, 100%, 82%), hsl(230, 100%, 40%)); // hsl(246, 100%, 50%)
+$color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(201, 100%, 64%), hsl(193, 100%, 88%), hsl(200, 100%, 50%));
+$color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 90%), hsl(201, 100%, 50%), hsl(193, 100%, 90%), hsl(210, 100%, 50%));
+$color_text_hx: linear-gradient(to bottom, hsl(199, 100%, 90%), hsl(199, 100%, 50%), hsl(187, 100%, 87%), hsl(201, 100%, 50%)); 
+$color_border_kbd: hsl(0, 0%, 95%);
+$color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%; 
+// $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+$color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
+
+$bg_kbd: hsl(0, 0%, 86%);
+
+// Tokens:
+
+$color_border_token_blue: hsl(195, 100%, 58%);
+$bg_token_blue: hsl(195, 100%, 99%);
+$color_text_token_blue: hsl(195, 100%, 46%);
+
+$color_border_token_red: hsl(0, 100%, 74%);
+$bg_token_red: hsl(0, 100%, 98%);
+$color_text_token_red: hsl(0, 100%, 46%); 
+
+$color_border_token_yellow: hsl(55, 100%, 43%);
+$bg_token_yellow: hsl(60, 90%, 95%);
+$color_text_token_yellow: hsl(54, 100%, 42%);
+
+$color_border_token_green: hsl(120, 100%, 46%);
+$bg_token_green: hsl(120, 100%, 98%);
+$color_text_token_green: hsl(120, 100%, 42%);
+
+$color_border_token_pink: hsl(300, 100%, 50%);
+$bg_token_pink: hsl(300, 85%, 98%);
+$color_text_token_pink: hsl(300, 100%, 49%);
+
+$color_border_token_purple: hsl(300, 100%, 37%);
+$bg_token_purple: hsl(280, 100%, 98%);
+$color_text_token_purple: hsl(300, 100%, 37%);
+
+$color_border_token_orange: hsl(39, 100%, 50%);
+$bg_token_orange: hsl(39, 100%, 96%);
+$color_text_token_orange: hsl(39, 100%, 48%);
+
+$color_border_token_brown: hsl(25, 76%, 44%);
+$bg_token_brown: hsl(25, 76%, 96%);
+$color_text_token_brown: hsl(25, 76%, 44%);
+
+$color_border_token_cyan: hsl(180, 100%, 44%);
+$bg_token_cyan: hsl(180, 100%, 97%);
+$color_text_token_cyan: hsl(180, 100%, 40%);
+
+$color_border_token_purple2: hsl(249, 80%, 77%);
+$bg_token_purple2: hsl(249, 100%, 98%);
+$color_text_token_purple2: hsl(249, 80%, 72%);
+
+$color_border_token_black: hsl(0, 0%, 52%);
+$bg_token_black: hsl(0, 0%, 97%); 
+$color_text_token_black: hsl(0, 0%, 52%);
+
+// ─────────── Signs ───────────
+
+$color_text_success: hsl(120, 100%, 35%);
+$color_text_attention: hsl(45, 74%, 45%);
+$color_text_fail: hsl(0, 100%, 50%);
+$color_text_danger: white;
+
+$color_border_success: hsl(120, 100%, 44%);
+$color_border_attention: hsl(43, 74%, 72%);
+$color_border_fail: hsl(0, 100%, 70%);
+$color_border_danger_clear: hsl(0, 100%, 76%);
+$color_border_danger_dark: hsl(0, 100%, 31%);
+
+$bg_success: hsl(120, 100%, 91%);
+$bg_attention: hsl(54, 100%, 93%);
+$bg_fail: hsl(0, 100%, 94%);
+$bg_danger: red;
+
+// ─────────── Tables ───────────
+
+$table_border1_width: 1px;
+$table_border2_width: 1px;
+
+$color_border_table: hsl(0, 0%, 85%);
+
+$bg_table_tr_hover: $color_theme_clear; 
+
+// ─────────── Forms ───────────
+
+$color_text_form: $color_text; 
+$color_text_form_placeholder: $color_text_clear;
+$color_text_form_select: $color_text_clear;
+
+$color_border_form: hsl(0, 0%, 80%); 
+
+// $bg_button: url(../../images/bgs/button.png)  center /100% 100%;
+// $bg_select: url(../../images/bgs/select.png)  center /100% 100%; // <- Precisa ser do tipo PNG! 
+$bg_select: linear-gradient(to bottom, hsl(0, 0%, 91%), white);  
+
+// $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
+
+// ─────────── Switches ───────────
+
+// --- Type Button ---
+
+$color_text_switch_type_button_off: hsl(0, 0%, 50%);
+$color_text_switch_type_button_on: white;
+
+$color_icon_outline_switch_type_button_off: hsla(0, 0%, 0%, 0.45);
+
+$color_shadow_box_inset_switch_type_button_dark: hsla(0, 0%, 0%, 0.33); // VÍNCULO: Váriável JS
+$color_shadow_box_inset_element_type_button_clear: white; // VÍNCULO: Váriável JS
+
+$bg_switch_type_button_off: 
+// url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.64), white),
+hsl(193, 0%,94%); // hsl(193, 0%,88%); 
+//$bg_switch_type_button_off: hsl(193, 0%,96%); 
+
+
+
+$bg_element_type_button_blue: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 46%, hsla(0, 0%, 100%, 0.7), white), linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(195, 100%, 48%), hsl(195, 100%, 50%));
+$box_shadow_element_type_button_blue: 0px 0px 0px 1px hsl(195, 100%, 66%), inset 0px 0px 9px 7px white;
+$filter_element_type_button_piece_text_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 40%));
+
+$filter_element_type_button_piece_text_red: drop-shadow(0px 0px 2px hsl(0, 100%, 44%));
+
+$filter_element_type_button_piece_text_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 33%)); // hsl(60, 100%, 29%)
+
+$filter_element_type_button_piece_text_green: drop-shadow(0px 0px 2px hsl(120, 100%, 34%));
+ 
+$filter_element_type_button_piece_text_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%));
+
+
+
+$bg_element_type_button_clear_blue:  // VÍNCULO: Váriável JS
+// url(../../images/bgs/switch_button_shine_under.webp) center center / 200% 100% no-repeat, // <- Isso buga no Safari desktop.
+linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white), hsl(193, 100%, 80%);
+$box_shadow_element_type_button_clear_blue: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(195, 100%, 50%); // box-shadow: inset 0px 0px 9px 4px white, 0px 0px 12px 0px $color_theme !important;
+$filter_element_type_button_piece_icon_clear_blue: drop-shadow(0px 0px 1px hsl(195, 100%, 60%));
+$filter_switch_type_button_piece_text_clear_disabled_blue: drop-shadow(0px 0px 2px hsl(193, 100%, 34%)); 
+
+$bg_element_type_button_clear_red: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 100%, 87%);
+$box_shadow_element_type_button_clear_red: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 100%, 62%);
+$filter_element_type_button_piece_icon_clear_red: drop-shadow(0px 0px 1px hsl(0, 100%, 78%));
+$filter_switch_type_button_piece_text_clear_disabled_red: drop-shadow(0px 0px 2px hsl(0, 100%, 38%)); 
+
+$bg_element_type_button_clear_yellow:linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 52%);
+$bg_element_type_button_icon_clear_yellow: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(60, 100%, 48%);
+$box_shadow_element_type_button_clear_yellow: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(60, 100%, 48%), 0px 0px 4px 1px hsl(60, 100%, 48%), 0px 0px 11px 1px hsl(60, 100%, 50%);
+$filter_element_type_button_piece_icon_clear_yellow: drop-shadow(0px 0px 1px hsl(60, 100%, 40%));
+$filter_switch_type_button_piece_text_clear_disabled_yellow: drop-shadow(0px 0px 2px hsl(54, 100%, 28%)); 
+
+$bg_element_type_button_clear_green: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(120, 100%, 77%); 
+$box_shadow_element_type_button_clear_green: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 0px 1px hsl(120, 100%, 72%), 0px 0px 12px 0px hsl(120, 100%, 50%);
+$filter_element_type_button_piece_icon_clear_green: drop-shadow(0px 0px 1px hsl(120, 100%, 48%));
+$filter_switch_type_button_piece_text_clear_disabled_green: drop-shadow(0px 0px 2px hsl(120, 100%, 28%)); 
+
+$bg_element_type_button_clear_black: linear-gradient(to bottom, hsla(0, 0%, 100%, 0.15) 46%, hsla(0, 0%, 100%, 0.64), white),hsl(0, 0%, 76%);
+$box_shadow_element_type_button_clear_black: inset 0px 0px 9px 5px $color_shadow_box_inset_element_type_button_clear, 0px 0px 12px 0px hsl(0, 0%, 40%);
+$filter_element_type_button_piece_icon_clear_black: drop-shadow(0px 0px 1px hsl(0, 0%, 64%));
+$filter_switch_type_button_piece_text_clear_disabled_black: drop-shadow(0px 0px 2px hsl(0, 0%, 30%)); 
+
+
+
+/*      
+//$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
+$bg_switch_type_button_pill_and_rounded_off: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%, 88%);
+$bg_switch_type_button_pill_and_rounded_on: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%);
+*/
+
+$bg_button_type_normal_and_switch_type_button_shine_top: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
+ 
+$bg_button_type_normal_and_switch_type_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
+
+// (Text floating):
+
+/*  
+$bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+*/
+
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$bg_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 96%); //linear-gradient(to bottom, white, hsl(193, 0%, 91%));
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_token_blue;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_token_blue;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_token_blue; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_token_red;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_token_red;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_token_red; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_token_yellow;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_token_yellow;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_token_yellow; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_token_green;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_token_green;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_token_green; 
+
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_token_black;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_token_black;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_token_black; 
+
+// --- Type Image ---
+
+$button_and_switch_both_type_image_icon_size: $button_height; 
+$color_outline_button_and_switch_both_type_image: hsla(0, 0%, 0%, 0.2); 
+
+// (Text floating):
+
+$color_border_switch_type_image_piece_text_floating_off: $color_border_switch_type_button_icon_piece_text_floating_off; 
+$bg_switch_type_image_piece_text_floating_off:  $bg_switch_type_button_icon_piece_text_floating_off;
+$color_text_switch_type_image_piece_text_floating_off: $color_text_switch_type_button_icon_piece_text_floating_off; 
+$color_box_shadow_switch_type_image_piece_text_floating_off: transparent; // hsla(0, 0%, 0%, 0.09);
+
+/*  
+$color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
+$color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
+$bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+*/
+
+$color_border_switch_type_image_piece_text_floating_on: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on;  
+$bg_switch_type_image_piece_text_floating_on: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on;
+$color_text_switch_type_image_piece_text_floating_on: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on; 
+$color_box_shadow_switch_type_image_piece_text_floating_on: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_red: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red;  
+$bg_switch_type_image_piece_text_floating_on_red: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red;
+$color_text_switch_type_image_piece_text_floating_on_red: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_red: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_yellow: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;  
+$bg_switch_type_image_piece_text_floating_on_yellow: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow;
+$color_text_switch_type_image_piece_text_floating_on_yellow: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_yellow: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_green: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green;  
+$bg_switch_type_image_piece_text_floating_on_green: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green;
+$color_text_switch_type_image_piece_text_floating_on_green: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_green: transparent;
+
+$color_border_switch_type_image_piece_text_floating_on_black: $color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black;  
+$bg_switch_type_image_piece_text_floating_on_black: $bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black;
+$color_text_switch_type_image_piece_text_floating_on_black: $color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black; 
+$color_box_shadow_switch_type_image_piece_text_floating_on_black: transparent;
+
+// --- Type Key ---
+
+$switch_type_key_ball_size: 24px;
+$switch_type_key_ball_size_SS: 28px;
+
+$bg_switch_type_key_ball: 
+linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsla(0, 0%, 0%, 0.45) 75%),
+hsl(0, 0%, 80%);
+$bg_switch_type_key_on_ball: 
+linear-gradient(to bottom, hsl(0, 0%, 100%), hsla(0, 0%, 100%, 0.5)),
+radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.6) 50%, hsl(0, 0%, 100%) 75%),
+cyan;
+$bg_switch_type_key_ball_shine: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
+$bg_switch_type_key_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 73%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+$bg_switch_type_key_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
+$bg_switch_type_key_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
+
+// ─────────── Buttons ───────────
+
+// Obs.: Algumas variáveis dos botões estão em Switches.
+
+/*  
+$color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
+$color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
+$color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
+$color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%, 0.24);
+$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
+*/
+
+$color_border_button_type_image_piece_text_floating: $color_border_switch_type_image_piece_text_floating_on;
+$bg_button_type_image_piece_text_floating: $bg_switch_type_image_piece_text_floating_on; 
+$color_text_button_type_image_piece_text_floating: $color_text_switch_type_image_piece_text_floating_on; 
+$color_box_shadow_in_button_type_image_piece_text_floating: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating: transparent; // $color_box_shadow_switch_type_image_piece_text_floating_on;
+
+$color_border_button_type_image_piece_text_floating_red: $color_border_switch_type_image_piece_text_floating_on_red;
+$bg_button_type_image_piece_text_floating_red: $bg_switch_type_image_piece_text_floating_on_red; 
+$color_text_button_type_image_piece_text_floating_red: $color_text_switch_type_image_piece_text_floating_on_red; 
+$color_box_shadow_in_button_type_image_piece_text_floating_red: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_red: transparent;
+
+$color_border_button_type_image_piece_text_floating_yellow: $color_border_switch_type_image_piece_text_floating_on_yellow;
+$bg_button_type_image_piece_text_floating_yellow: $bg_switch_type_image_piece_text_floating_on_yellow; 
+$color_text_button_type_image_piece_text_floating_yellow: $color_text_switch_type_image_piece_text_floating_on_yellow; 
+$color_box_shadow_in_button_type_image_piece_text_floating_yellow: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_yellow: transparent;
+
+$color_border_button_type_image_piece_text_floating_green: $color_border_switch_type_image_piece_text_floating_on_green;
+$bg_button_type_image_piece_text_floating_green: $bg_switch_type_image_piece_text_floating_on_green; 
+$color_text_button_type_image_piece_text_floating_green: $color_text_switch_type_image_piece_text_floating_on_green; 
+$color_box_shadow_in_button_type_image_piece_text_floating_green: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_green: transparent;
+
+$color_border_button_type_image_piece_text_floating_black: $color_border_switch_type_image_piece_text_floating_on_black;
+$bg_button_type_image_piece_text_floating_black: $bg_switch_type_image_piece_text_floating_on_black; 
+$color_text_button_type_image_piece_text_floating_black: $color_text_switch_type_image_piece_text_floating_on_black; 
+$color_box_shadow_in_button_type_image_piece_text_floating_black: transparent;
+$color_box_shadow_out_button_type_image_piece_text_floating_black: transparent;
+
+// ─────────── Choices ───────────
+
+// $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+// $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+// $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+// $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
+
+// ─────────── Lightboxs ───────────
+
+$color_shadow_lightbox: black; 
+$color_shadow_lightbox_button: black; 
+
+// $bg_lightbox: url(../../images/bgs/lightbox.png)  center /100% 100%;
+// $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
+$bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
+
+// ─────────── Scrollbars ───────────
+
+// Header-nav, choice dropdown, lightbox, <textarea>
+
+// $color_1_scrollbar: hsla(0, 0%, 0%, 0.14);
+$color_1_scrollbar: linear-gradient(to bottom, hsl(180, 100%, 85%), hsl(195, 100%, 55%)); // hsl(188, 100%, 85%);
+$color_2_scrollbar: hsla(0, 0%, 100%, 0.4);
+
+$color_scrollbar_thumb: $color_1_scrollbar;
+$color_scrollbar_thumb_firefox: $color_1_scrollbar;
+$color_scrollbar_track: $color_2_scrollbar;
+$color_scrollbar_track_firefox: transparent;
+
+$color_menu_scrollbar_thumb: $color_1_scrollbar;  
+$color_menu_scrollbar_thumb_firefox: $color_1_scrollbar; 
+$color_menu_scrollbar_track: transparent;
+$color_menu_scrollbar_track_firefox: transparent;
+
+$color_menuRounded_scrollbar_thumb: $color_1_scrollbar;  
+$color_menuRounded_scrollbar_thumb_firefox: $color_1_scrollbar; 
+$color_menuRounded_scrollbar_track: transparent;
+$color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
+
+// ─────────── Others ───────────
+
+$bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
 
 /*  
 ──────────────────────────────────────────────────────
@@ -723,9 +1118,19 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
 
         font-size: 0;
 
-        > span:not(:empty) {
+        > span:empty {
 
+            display: none;
+        }
+
+        > span {
+
+            $margin_v: 4px;
+
+            display: inline-block;
             padding: 4px 8px;
+            margin-top: $margin_v;
+            margin-bottom: $margin_v;
             border-radius: 1000px;
         }
 
@@ -734,28 +1139,85 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
             margin-left: 9px;
         }
 
-        .SPD:not(:empty) {
+$color_border_token_blue: hsl(195, 100%, 58%);
+$bg_token_blue: hsl(195, 100%, 99%);
+$color_text_token_blue: hsl(195, 100%, 46%);
+
+$color_border_token_red: hsl(0, 100%, 74%);
+$bg_token_red: hsl(0, 100%, 98%);
+$color_text_token_red: hsl(0, 100%, 46%); 
+
+$color_border_token_yellow: hsl(55, 100%, 43%);
+$bg_token_yellow: hsl(60, 90%, 95%);
+$color_text_token_yellow: hsl(54, 100%, 42%);
+
+$color_border_token_green: hsl(120, 100%, 46%);
+$bg_token_green: hsl(120, 100%, 98%);
+$color_text_token_green: hsl(120, 100%, 42%);
+
+$color_border_token_orange: hsl(39, 100%, 50%);
+$bg_token_orange: hsl(39, 100%, 96%);
+$color_text_token_orange: hsl(39, 100%, 48%);
+
+$color_border_token_brown: hsl(25, 76%, 44%);
+$bg_token_brown: hsl(25, 76%, 96%);
+$color_text_token_brown: hsl(25, 76%, 44%);
+
+$color_border_token_cyan: hsl(180, 100%, 44%);
+$bg_token_cyan: hsl(180, 100%, 97%);
+$color_text_token_cyan: hsl(180, 100%, 40%);
+
+$color_border_token_purple2: hsl(249, 80%, 77%);
+$bg_token_purple2: hsl(249, 100%, 98%);
+$color_text_token_purple2: hsl(249, 80%, 72%);
+
+$color_border_token_black: hsl(0, 0%, 52%);
+$bg_token_black: hsl(0, 0%, 97%); 
+$color_text_token_black: hsl(0, 0%, 52%);
+
+        .SPD {
 
             color: hsl(54, 100%, 42%);
             border: 1px solid hsl(55, 100%, 43%);
             background-color: hsl(60, 100%, 95%);
         }
 
-        .Critical:not(:empty) {
+        .Critical {
 
             color: hsl(0, 100%, 46%); 
             border: 1px solid hsl(0, 100%, 74%);
             background-color: hsl(0, 100%, 98%);
         }
 
-        .State:not(:empty) {
+        .State {
 
             color: hsl(195, 100%, 46%);
             border: 1px solid hsl(195, 100%, 58%);
             background-color: hsl(195, 100%, 99%);
         }
 
-        .Special:not(:empty) {
+        .Call {
+
+            color: hsl(120, 100%, 43%);
+            border: 1px solid hsl(120, 100%, 46%);
+            background-color: hsl(120, 100%, 98%);
+        } 
+
+        .Recover {
+
+            color: $color_text_token_pink;
+            border: 1px solid $color_border_token_pink;
+            background-color: $bg_token_pink;
+        }
+
+        .Drain {
+
+            color: $color_text_token_purple;
+            border: 1px solid $color_border_token_purple;
+            background-color: $bg_token_purple;
+        }
+
+        .Special {
 
             color: hsl(120, 100%, 43%);
             border: 1px solid hsl(120, 100%, 46%);
@@ -791,11 +1253,6 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
 
     .Condition {
-
-        .Equip:not(:empty):after {
-
-            content: " equiped"
-        }
 
         .Equip:not(:empty) + .OtherCond:not(:empty)::before {
 
