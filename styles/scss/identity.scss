@@ -125,7 +125,7 @@ $color_text_token_yellow: hsl(54, 100%, 42%);
 
 $color_border_token_green: hsl(120, 100%, 46%);
 $bg_token_green: hsl(120, 100%, 98%);
-$color_text_token_green: hsl(120, 100%, 42%);
+$color_text_token_green: hsl(120, 100%, 41%);
 
 $color_border_token_pink: hsl(300, 100%, 50%);
 $bg_token_pink: hsl(300, 85%, 98%);
@@ -145,15 +145,19 @@ $color_text_token_brown: hsl(25, 76%, 44%);
 
 $color_border_token_cyan: hsl(180, 100%, 44%);
 $bg_token_cyan: hsl(180, 100%, 97%);
-$color_text_token_cyan: hsl(180, 100%, 40%);
+$color_text_token_cyan: hsl(180, 100%, 38%);
 
 $color_border_token_purple2: hsl(249, 80%, 77%);
 $bg_token_purple2: hsl(249, 100%, 98%);
 $color_text_token_purple2: hsl(249, 80%, 72%);
 
-$color_border_token_black: hsl(0, 0%, 52%);
+$color_border_token_white: hsl(0, 0%, 66%); 
+$bg_token_white: hsl(0, 0%, 100%);
+$color_text_token_white: hsl(0, 0%, 64%); 
+
+$color_border_token_black: hsl(0, 0%, 4%);
 $bg_token_black: hsl(0, 0%, 97%); 
-$color_text_token_black: hsl(0, 0%, 52%);
+$color_text_token_black: hsl(0, 0%, 44%);
 
 // ─────────── Signs ───────────
 
@@ -1139,68 +1143,39 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
             margin-left: 9px;
         }
 
-$color_border_token_blue: hsl(195, 100%, 58%);
-$bg_token_blue: hsl(195, 100%, 99%);
-$color_text_token_blue: hsl(195, 100%, 46%);
-
-$color_border_token_red: hsl(0, 100%, 74%);
-$bg_token_red: hsl(0, 100%, 98%);
-$color_text_token_red: hsl(0, 100%, 46%); 
-
-$color_border_token_yellow: hsl(55, 100%, 43%);
-$bg_token_yellow: hsl(60, 90%, 95%);
-$color_text_token_yellow: hsl(54, 100%, 42%);
-
-$color_border_token_green: hsl(120, 100%, 46%);
-$bg_token_green: hsl(120, 100%, 98%);
-$color_text_token_green: hsl(120, 100%, 42%);
-
-$color_border_token_orange: hsl(39, 100%, 50%);
-$bg_token_orange: hsl(39, 100%, 96%);
-$color_text_token_orange: hsl(39, 100%, 48%);
-
-$color_border_token_brown: hsl(25, 76%, 44%);
-$bg_token_brown: hsl(25, 76%, 96%);
-$color_text_token_brown: hsl(25, 76%, 44%);
-
-$color_border_token_cyan: hsl(180, 100%, 44%);
-$bg_token_cyan: hsl(180, 100%, 97%);
-$color_text_token_cyan: hsl(180, 100%, 40%);
-
-$color_border_token_purple2: hsl(249, 80%, 77%);
-$bg_token_purple2: hsl(249, 100%, 98%);
-$color_text_token_purple2: hsl(249, 80%, 72%);
-
-$color_border_token_black: hsl(0, 0%, 52%);
-$bg_token_black: hsl(0, 0%, 97%); 
-$color_text_token_black: hsl(0, 0%, 52%);
-
         .SPD {
 
-            color: hsl(54, 100%, 42%);
-            border: 1px solid hsl(55, 100%, 43%);
-            background-color: hsl(60, 100%, 95%);
+            color: $color_text_token_yellow; 
+            border: 1px solid $color_border_token_yellow;
+            background-color: $bg_token_yellow;
+        }
+
+        .React {
+
+            color: $color_text_token_orange; 
+            border: 1px solid $color_border_token_orange;
+            background-color: $bg_token_orange;
         }
 
         .Critical {
 
-            color: hsl(0, 100%, 46%); 
-            border: 1px solid hsl(0, 100%, 74%);
-            background-color: hsl(0, 100%, 98%);
+            color: $color_text_token_red; 
+            border: 1px solid $color_border_token_red;
+            background-color: $bg_token_red;
         }
 
         .State {
 
-            color: hsl(195, 100%, 46%);
-            border: 1px solid hsl(195, 100%, 58%);
-            background-color: hsl(195, 100%, 99%);
+            color: $color_text_token_blue; 
+            border: 1px solid $color_border_token_blue;
+            background-color: $bg_token_blue;
         }
 
         .Call {
 
-            color: hsl(120, 100%, 43%);
-            border: 1px solid hsl(120, 100%, 46%);
-            background-color: hsl(120, 100%, 98%);
+            color: $color_text_token_green; 
+            border: 1px solid $color_border_token_green;
+            background-color: $bg_token_green;
         } 
 
         .Recover {
@@ -1217,11 +1192,39 @@ $color_text_token_black: hsl(0, 0%, 52%);
             background-color: $bg_token_purple;
         }
 
+        .Union {
+
+            color: $color_text_token_purple2;
+            border: 1px solid $color_border_token_purple2;
+            background-color: $bg_token_purple2;
+        }
+
+        .Assimilate {
+
+            color: $color_text_token_cyan;
+            border: 1px solid $color_border_token_cyan;
+            background-color: $bg_token_cyan;
+        }
+
+        .Field {
+
+            color: $color_text_token_brown;
+            border: 1px solid $color_border_token_brown;
+            background-color: $bg_token_brown;
+        } 
+
+        .Block {
+
+            color: $color_text_token_black;
+            border: 1px solid $color_border_token_black;
+            background-color: $bg_token_black;
+        } 
+
         .Special {
 
-            color: hsl(120, 100%, 43%);
-            border: 1px solid hsl(120, 100%, 46%);
-            background-color: hsl(120, 100%, 98%);
+            color: $color_text_token_white;
+            border: 1px solid $color_border_token_white;
+            background-color: $bg_token_white;
         } 
     }
 

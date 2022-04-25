@@ -625,7 +625,13 @@ TODO: Skills - Table
 .skills_table .Effect .SPD {
   color: #d6c100;
   border: 1px solid #dbc900;
-  background-color: #ffffe6;
+  background-color: #fefee7;
+}
+
+.skills_table .Effect .React {
+  color: #f59f00;
+  border: 1px solid #ffa600;
+  background-color: #fff8eb;
 }
 
 .skills_table .Effect .Critical {
@@ -641,7 +647,7 @@ TODO: Skills - Table
 }
 
 .skills_table .Effect .Call {
-  color: #00db00;
+  color: #00d100;
   border: 1px solid #00eb00;
   background-color: #f5fff5;
 }
@@ -658,10 +664,34 @@ TODO: Skills - Table
   background-color: #fcf5ff;
 }
 
+.skills_table .Effect .Union {
+  color: #907ef1;
+  border: 1px solid #a495f3;
+  background-color: #f6f5ff;
+}
+
+.skills_table .Effect .Assimilate {
+  color: #00c2c2;
+  border: 1px solid #00e0e0;
+  background-color: azure;
+}
+
+.skills_table .Effect .Field {
+  color: #c5621b;
+  border: 1px solid #c5621b;
+  background-color: #fdf4ed;
+}
+
+.skills_table .Effect .Block {
+  color: #707070;
+  border: 1px solid #0a0a0a;
+  background-color: #f7f7f7;
+}
+
 .skills_table .Effect .Special {
-  color: #00db00;
-  border: 1px solid #00eb00;
-  background-color: #f5fff5;
+  color: #a3a3a3;
+  border: 1px solid #a8a8a8;
+  background-color: white;
 }
 
 .skills_table .cost + .cost {
