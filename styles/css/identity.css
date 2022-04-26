@@ -602,15 +602,15 @@ TODO: Skills - Table
   margin-left: 9px;
 }
 
-.skills_table .Effect {
+.skills_table td.Effect {
   font-size: 0;
 }
 
-.skills_table .Effect > span:empty {
+.skills_table td.Effect > span:empty {
   display: none;
 }
 
-.skills_table .Effect > span {
+.skills_table td.Effect > span {
   display: inline-block;
   padding: 4px 8px;
   margin-top: 4px;
@@ -618,77 +618,77 @@ TODO: Skills - Table
   border-radius: 1000px;
 }
 
-.skills_table .Effect > span + span {
+.skills_table td.Effect > span + span {
   margin-left: 9px;
 }
 
-.skills_table .Effect .SPD {
+.skills_table td.Effect .SPD {
   color: #d6c100;
   border: 1px solid #dbc900;
   background-color: #fefee7;
 }
 
-.skills_table .Effect .React {
+.skills_table td.Effect .Interrupt {
   color: #f59f00;
   border: 1px solid #ffa600;
   background-color: #fff8eb;
 }
 
-.skills_table .Effect .Critical {
+.skills_table td.Effect .Critical {
   color: #eb0000;
   border: 1px solid #ff7a7a;
   background-color: #fff5f5;
 }
 
-.skills_table .Effect .State {
+.skills_table td.Effect .State {
   color: #00b0eb;
   border: 1px solid #29c9ff;
   background-color: #fafeff;
 }
 
-.skills_table .Effect .Call {
+.skills_table td.Effect .Call {
   color: #00d600;
   border: 1px solid #00d600;
   background-color: #f5fff5;
 }
 
-.skills_table .Effect .Recover {
+.skills_table td.Effect .Recover {
   color: #fa00fa;
   border: 1px solid magenta;
   background-color: #fef6fe;
 }
 
-.skills_table .Effect .Drain {
+.skills_table td.Effect .Drain {
   color: #bd00bd;
   border: 1px solid #bd00bd;
   background-color: #fcf5ff;
 }
 
-.skills_table .Effect .Union {
+.skills_table td.Effect .Union {
   color: #907ef1;
   border: 1px solid #a495f3;
   background-color: #f6f5ff;
 }
 
-.skills_table .Effect .Assimilate {
+.skills_table td.Effect .Assimilate {
   color: #00c2c2;
   border: 1px solid #00c2c2;
   background-color: azure;
 }
 
-.skills_table .Effect .Field {
+.skills_table td.Effect .Field {
   color: #c5621b;
   border: 1px solid #c5621b;
   background-color: #fdf4ed;
 }
 
-.skills_table .Effect .Block {
+.skills_table td.Effect .Block {
   color: #707070;
   border: 1px solid #0a0a0a;
   background-color: #f7f7f7;
 }
 
-.skills_table .Effect .Special {
+.skills_table td.Effect .Special {
   color: #a3a3a3;
   border: 1px solid #a8a8a8;
   background-color: white;

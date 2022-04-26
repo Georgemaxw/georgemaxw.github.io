@@ -1049,7 +1049,7 @@ TODO:          >>> Hidden Data Switchs
 ──────────────────────────── */
 
 var hidden_data_switchs = []
-var hidden_data_switchs = ['Name', 'plusTP', 'Notes', 'Extra0', 'Extra1', 'Extra2', 'Extra3', 'Extra5', 'Extra6'] 
+var hidden_data_switchs = ['Name', 'plusTP', 'Notes'] 
 
 var hidden_data_indexes = [ ]
 
