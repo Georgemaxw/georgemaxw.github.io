@@ -1,0 +1,50 @@
+
+/* Layout */
+/* 
+html { 
+    background: LightGrey;
+} 
+
+body { 
+    width: 482px; 
+    min-height: calc(100vh - 32px); 
+    background: white; 
+    padding: 16px 0px; 
+    padding: 16px 9px; 
+    margin: 0;
+    margin-left: auto; 
+}
+*/
+
+/* Texts */
+
+body, div, p, li, ul, ol, dl, dt, dd, pre, output, input, textarea, button { 
+    
+    font-size: 17px; 
+    font-family: Palatino, 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier;
+}
+
+div, p, li, ul, ol, dl, dt, dd, pre, output, textarea { 
+
+    line-height: 1.5; 
+}
+
+/* Others */
+
+button {
+
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 8px;
+    padding: 3px 5px;
+    background-color: hsl(0, 0%, 97%);
+}
+
+button:hover {
+
+    background-color: hsl(0, 0%, 94%);
+}
+
+button:active {
+
+    background-color: hsl(0, 0%, 92%);
+}
