@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="mouseRadar.js"></script><!--  Deve ficar antes de qualquer CSS -->
-<link href='style.css' rel='stylesheet'>
+<!-- <link href='style.css' rel='stylesheet'> -->
 <script src="console.js"></script>
 <style>
 
@@ -15,11 +15,7 @@
 
 @font-face { font-family: "Rektec"; src: url("Rektec.otf"); }
 
-p.p1 { font-family: Rektec; }
-
-@font-face { font-family: "_73A5E77"; src: url("_73A5E77.ttf"); }
-
-p._73A5E77 { font-family: _73A5E77; }
+p.Rektec { font-family: Rektec; }
 
 @font-face { font-family: "2015_Cruiser"; src: url("2015_Cruiser.otf"); }
 
@@ -88,22 +84,49 @@ p.p { font-family: Futuristic; }
 
 
 
-h1 {
+
+body {
+    margin: 16px 20px;
     font-family: "Times New Roman";
+    font-size: 19px;
+}
+
+h1, h2 {
+    text-align: center;
+    text-decoration: underline;
 }
 
 p, li {
-    font-family: "Times New Roman";
-    font-size: 19px;
     /* font-style: italic;
     font-weight: bold;/*  */
     line-height: 1.5;
+}
+
+ul, ol {
+    padding-left: 17px;
 }
 
 .fontName {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.price {
+    display: inline-block;
+    font-family: "Times New Roman";
+    font-size: 19px;
+    margin-left: 8px;
+}
+
+.price::before {
+    display: inline-block;
+    content: '(';
+}
+
+.price::after {
+    display: inline-block;
+    content: ')';
 }
 
 .good {
@@ -113,10 +136,6 @@ p, li {
 }
 
 .moreOrLess {
-    color: hsl(120, 100%, 40%);
-    border: 1px solid hsl(120, 100%, 40%);
-    background-color: hsl(120, 100%, 97%);
-
     color: #d6c100;
     border: 1px solid #dbc900;
     background-color: #fefee7;
@@ -133,17 +152,9 @@ p, li {
     font-family: "Times New Roman" !important;
     font-size: 15px !important;
     /* padding: 0px 7px 0px 7px; */
-    padding: 0px 5px;
-    margin-left: 10px;
+    padding: 0px 5px 1px;
+    margin: 4px 3px;
     border-radius: 1000px;
-}
-
-.px {
-    color: red;
-}
-
-.px { /* Apagar depois */
-    display: none;
 }
 
 </style>
@@ -155,28 +166,44 @@ p, li {
     <p>A menos que seja especificado o contrário, por padrão, as fontes a seguir apresentam as seguintes características:</p>
 
     <ul>
-        <li>Custo: Grátis;</li>
         <li>Edição: Não permitida;</li>
-        <li>Compartilhamento direto com os membros de uma equipe: Não permitido.</li>
+        <li>Compartilhamento direto com os membros de uma equipe: Não permitido;</li>
+        <li>Compatibilidade: Windows e Mac.</li>
     </ul>
 
-    <p>Times New Roman</p>
-    <p>Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <h2>Grátis</h2>
 
-    <p class="fontName _73A5E77">Star Next <span class="bad">Incompatível com mobile</span><span class="bad">Nºs 3, 5, e 9 quase idênticos</span></p>
-    <p class="_73A5E77" style="font-size: 14px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <ol>
+<!--         <li>
+            <p class="fontName">Times New Roman</p>
+            <p>Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+        </li> -->
+        <li>
+            <p class="fontName Rektec" style="font-size: 58px; margin-top: 20px; margin-bottom: 20px;">Rektec</p>
+            <p class="Rektec" style="font-size: 24px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"><span class="good">Edição Permitida</span><span class="bad">Muito grande</span></div>
+        </li>
+        <li>
+            <p class="fontName HTish_smooth" style="font-size: 21px;">HighTech...Ish - Smooth</p>
+            <p class="HTish_smooth" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"><span class="good">Edição Permitida</span></div>
+        </li>
+        <li>
+            <p class="fontName HTish_blocky" style="font-size: 21px;">HighTech...Ish - Blocky</p>
+            <p class="HTish_blocky" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"><span class="good">Edição permitida</span></div>
+        </li>
+    </ol>
 
-    <p class="fontName _2015_Cruiser">2015 Cruiser <span class="good">Edição Permitida</span><span class="moreOrLess">Nºs 3 e 9 parecidos</span><span class="moreOrLess">Caracteres maiúsculos e minúsculos iguais</span><span class="moreOrLess">Parênteses e colchetes idênticos</span></p>
-    <p class="_2015_Cruiser" style="font-size: 15px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <h2>Pagas</h2>
 
-    <p class="fontName p1" style="font-size: 58px; margin-top: 20px; margin-bottom: 20px;">Rektec <span class="good">Edição Permitida</span><span class="bad">Muito grande</span></p>
-    <p class="p1" style="font-size: 24px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-
-    <p class="fontName HTish_smooth" style="font-size: 21px;">HighTech...Ish - Smooth <span class="good">Edição Permitida</span></p>
-    <p class="HTish_smooth" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-
-    <p class="fontName HTish_blocky" style="font-size: 21px;">HighTech...Ish - Blocky <span class="good">Edição permitida</span></p>
-    <p class="HTish_blocky" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <ol>
+        <li>
+            <p class="fontName _2015_Cruiser">2015 Cruiser <span class="price">20 $</span></p>
+            <p class="_2015_Cruiser" style="font-size: 15px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"><!-- <span class="good">Edição Permitida</span> --><span class="good">Inclui negrito, itálico, e negrito-itálico</span><span class="moreOrLess">Nºs 3 e 9 parecidos</span><span class="moreOrLess">Sem caracteres de nºs ordinais</span><span class="moreOrLess">'( )' e '[ ]' idênticos</span><span class="moreOrLess">'&' irreconhecível</span><span class="moreOrLess">'@' irreconhecível</span><span class="bad">Maiúsculas e minúsculas iguais</span></div>
+        </li>
+    </ol>
 
 <!-- 
     <p class="p">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
