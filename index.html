@@ -17,33 +17,25 @@
 
 p.p1 { font-family: Rektec; }
 
-@font-face { font-family: "Procv2i"; src: url("Procv2i.ttf"); }
-
-p.p3 { font-family: Procv2i; }
-
-@font-face { font-family: "Procv2supi"; src: url("Procv2supi.ttf"); }
-
-p.p4 { font-family: Procv2supi; }
-
-@font-face { font-family: "pulseriflelas"; src: url("pulseriflelas.ttf"); }
-
-p.p5 { font-family: pulseriflelas; }
-
 @font-face { font-family: "_73A5E77"; src: url("_73A5E77.ttf"); }
 
-p.p7 { font-family: _73A5E77; }
+p._73A5E77 { font-family: _73A5E77; }
 
 @font-face { font-family: "2015_Cruiser"; src: url("2015_Cruiser.otf"); }
 
-p.p10 { font-family: '2015_Cruiser'; }
+p._2015_Cruiser { font-family: '2015_Cruiser'; }
 
 @font-face { font-family: "HTish_smooth"; src: url("HTish_smooth.otf"); }
 
-p.p2 { font-family: HTish_smooth; }
+p.HTish_smooth { font-family: HTish_smooth; }
 
 @font-face { font-family: "HTish_blocky"; src: url("HTish_blocky.otf"); }
 
-p.p12 { font-family: HTish_blocky; }
+p.HTish_blocky { font-family: HTish_blocky; }
+
+@font-face { font-family: "HTish_pixelated"; src: url("HTish_pixelated.otf"); }
+
+p.HTish_pixelated { font-family: HTish_pixelated; }
 
 @font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
 
@@ -96,13 +88,54 @@ p.p { font-family: Futuristic; }
 
 
 
-p {
+h1 {
+    font-family: "Times New Roman";
+}
+
+p, li {
+    font-family: "Times New Roman";
     font-size: 19px;
     /* font-style: italic;
     font-weight: bold;/*  */
+    line-height: 1.5;
 }
 
-p.p { font-family: "Times New Roman"; }
+.fontName {
+    display: flex;
+    align-items: center;
+}
+
+.good {
+    color: hsl(120, 100%, 40%);
+    border: 1px solid hsl(120, 100%, 40%);
+    background-color: hsl(120, 100%, 97%);
+}
+
+.moreOrLess {
+    color: hsl(120, 100%, 40%);
+    border: 1px solid hsl(120, 100%, 40%);
+    background-color: hsl(120, 100%, 97%);
+
+    color: #d6c100;
+    border: 1px solid #dbc900;
+    background-color: #fefee7;
+}
+
+.bad {
+    color: red;
+    border: 1px solid red;
+    background-color: hsl(0, 100%, 98%);
+}
+
+.good, .moreOrLess, .bad {
+    display: inline-block;
+    font-family: "Times New Roman" !important;
+    font-size: 15px !important;
+    /* padding: 0px 7px 0px 7px; */
+    padding: 0px 5px;
+    margin-left: 10px;
+    border-radius: 1000px;
+}
 
 .px {
     color: red;
@@ -116,35 +149,37 @@ p.p { font-family: "Times New Roman"; }
 </head>
 <body>
 
-    <p class="p">Times New Roman</p>
-    <p class="p">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <h1>Fontes</h1>
 
-    <p class="p3">Procyon Italic</p>
-    <p class="p3" style="font-size: 16px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <p>A menos que seja especificado o contrário, por padrão, as fontes a seguir apresentam as seguintes características:</p>
 
-    <p class="p4">Procyon Super Italic</p>
-    <p class="p4" style="font-size: 16px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <ul>
+        <li>Custo: Grátis;</li>
+        <li>Edição: Não permitida;</li>
+        <li>Compartilhamento direto com os membros de uma equipe: Não permitido.</li>
+    </ul>
 
-    <p class="p5">Pulse Rifle Laser</p>
-    <p class="p5" style="font-size: 16px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <p>Times New Roman</p>
+    <p>Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
-    <p class="p7">Star Next</p>
-    <p class="p7" style="font-size: 14px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <p class="fontName _73A5E77">Star Next <span class="bad">Incompatível com mobile</span><span class="bad">Nºs 3, 5, e 9 quase idênticos</span></p>
+    <p class="_73A5E77" style="font-size: 14px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
-    <p class="p10">2015 Cruiser</p>
-    <p class="p10" style="font-size: 15px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <p class="fontName _2015_Cruiser">2015 Cruiser <span class="good">Edição Permitida</span><span class="moreOrLess">Parênteses e colchetes idênticos</span></p>
+    <p class="_2015_Cruiser" style="font-size: 15px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
-    <p class="p1" style="font-size: 58px; margin-top: 20px; margin-bottom: 20px;">Rektec</p>
+    <p class="fontName p1" style="font-size: 58px; margin-top: 20px; margin-bottom: 20px;">Rektec <span class="good">Edição Permitida</span><span class="bad">Muito grande</span></p>
     <p class="p1" style="font-size: 24px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
-    <p class="p2" style="font-size: 21px;">HighTech...Ish - Smooth</p>
-    <p class="p2" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <p class="fontName HTish_smooth" style="font-size: 21px;">HighTech...Ish - Smooth <span class="good">Edição Permitida</span></p>
+    <p class="HTish_smooth" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
-    <p class="p12" style="font-size: 21px;">HighTech...Ish - Blocky</p>
-    <p class="p12" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+    <p class="fontName HTish_blocky" style="font-size: 21px;">HighTech...Ish - Blocky <span class="good">Edição permitida</span></p>
+    <p class="HTish_blocky" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
-    <p class="p">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 <!-- 
+    <p class="p">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+
     <p class="p">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
 
     <p class="p">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
