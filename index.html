@@ -15,71 +15,103 @@
 
 @font-face { font-family: "Rektec"; src: url("Rektec.otf"); }
 
-p.Rektec { font-family: Rektec; }
+.Rektec { font-family: Rektec; }
 
 @font-face { font-family: "2015_Cruiser"; src: url("2015_Cruiser.otf"); }
 
-p._2015_Cruiser { font-family: '2015_Cruiser'; }
+._2015_Cruiser { font-family: '2015_Cruiser'; }
 
 @font-face { font-family: "HTish_smooth"; src: url("HTish_smooth.otf"); }
 
-p.HTish_smooth { font-family: HTish_smooth; }
+.HTish_smooth { font-family: HTish_smooth; }
 
 @font-face { font-family: "HTish_blocky"; src: url("HTish_blocky.otf"); }
 
-p.HTish_blocky { font-family: HTish_blocky; }
+.HTish_blocky { font-family: HTish_blocky; }
 
 @font-face { font-family: "HTish_pixelated"; src: url("HTish_pixelated.otf"); }
 
-p.HTish_pixelated { font-family: HTish_pixelated; }
+.HTish_pixelated { font-family: HTish_pixelated; }
 
 @font-face { font-family: "cyber_boldBook"; src: url("Cyber-BoldBook.ttf"); }
 
-p.cyber_boldBook { font-family: cyber_boldBook; }
+.cyber_boldBook { font-family: cyber_boldBook; }
 
 @font-face { font-family: "Medabots"; src: url("Medabots.otf"); }
 
-p.Medabots { font-family: Medabots; }
+.Medabots { font-family: Medabots; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "Medabots_Italic"; src: url("Medabots_Italic.otf"); }
 
-p.p { font-family: Futuristic; }
+.Medabots_Italic { font-family: Medabots_Italic; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "Micron"; src: url("Micron.otf"); }
 
-p.p { font-family: Futuristic; }
+.Micron { font-family: Micron; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "Eurocorp"; src: url("Eurocorp.ttf"); }
 
-p.p { font-family: Futuristic; }
+.Eurocorp { font-family: Eurocorp; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
 
-@font-face { font-family: "Futuristic"; src: url("futuristic.ttf"); }
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
 
-p.p { font-family: Futuristic; }
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
+
+@font-face { font-family: "__Font__"; src: url("__Font__.ttf"); }
+
+.__Font__ { font-family: __Font__; }
 
 
 
@@ -91,7 +123,7 @@ body {
     font-size: 19px;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     text-align: center;
     text-decoration: underline;
 }
@@ -106,10 +138,21 @@ ul, ol {
     padding-left: 17px;
 }
 
-.fontName {
+a {
+    color: blue;
+}
+
+.nameAndPrice {
+    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.fontName {
+    font-size: 48px;
 }
 
 .price {
@@ -129,15 +172,23 @@ ul, ol {
     content: ')';
 }
 
+/* .lorem {
+    display: none;
+} */
+
+.evaluation {
+    display: none;
+}
+
 .good {
-    color: hsl(120, 100%, 40%);
-    border: 1px solid hsl(120, 100%, 40%);
+    color: hsl(120, 100%, 38%);
+    border: 1px solid hsl(120, 100%, 38%);
     background-color: hsl(120, 100%, 97%);
 }
 
 .moreOrLess {
-    color: #d6c100;
-    border: 1px solid #dbc900;
+    color: hsl(54, 100%, 40%);
+    border: 1px solid hsl(55, 100%, 41%);
     background-color: #fefee7;
 }
 
@@ -171,172 +222,121 @@ ul, ol {
         <li>Compatibilidade: Windows e Mac.</li>
     </ul>
 
-    <h2>Grátis</h2>
+    <h2>Diversos Autores</h2>
+
+    <h3>Grátis</h3>
 
     <ol>
-<!--         <li>
-            <p class="fontName">Times New Roman</p>
-            <p>Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-        </li> -->
+<!--         
         <li>
-            <p class="fontName Rektec" style="font-size: 58px; margin-top: 20px; margin-bottom: 20px;">Rektec</p>
+            <p class="nameAndPrice"><span class="fontName">Times New Roman</span></p>
+            <p>Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+        </li> 
+        <li>
+            <p class="nameAndPrice"><span class="fontName __Font__">__Font__</span></p>
+            <p class="lorem __Font__" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+-->
+        <li>
+            <p class="nameAndPrice"><span class="fontName Rektec" style="font-size: 58px; margin-top: 20px; margin-bottom: 20px;">Rektec</span></p>
             <p class="lorem Rektec" style="font-size: 24px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
             <div class="evaluation"><span class="good">Pode editar</span><span class="bad">Muito grande</span></div>
         </li>
         <li>
-            <p class="fontName HTish_smooth" style="font-size: 21px;">HighTech...Ish - Smooth</p>
+            <p class="nameAndPrice"><span class="fontName HTish_smooth">HighTech...Ish - Smooth</span></p>
             <p class="lorem HTish_smooth" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
             <div class="evaluation"><span class="good">Pode editar</span></div>
         </li>
         <li>
-            <p class="fontName HTish_blocky" style="font-size: 21px;">HighTech...Ish - Blocky</p>
+            <p class="nameAndPrice"><span class="fontName HTish_blocky">HighTech...Ish - Blocky</span></p>
             <p class="lorem HTish_blocky" style="font-size: 21px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
             <div class="evaluation"><span class="good">Pode editar</span></div>
         </li>
     </ol>
 
-    <h2>Pagas</h2>
+    <hr>
+
+    <h3>Pagas</h3>
 
     <ol>
+<!-- 
         <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <p class="nameAndPrice"><span class="fontName __Font__">__Font__</span><span class="price">? $</span></p>
+            <p class="lorem __Font__" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
             <div class="evaluation"></div>
         </li>
+-->
         <li>
-            <p class="fontName _2015_Cruiser">2015 Cruiser<span class="price">20 $</span></p>
+            <p class="nameAndPrice"><span class="fontName _2015_Cruiser">2015 Cruiser</span><span class="price">20 $</span></p>
             <p class="lorem _2015_Cruiser" style="font-size: 15px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
             <div class="evaluation"><span class="good">Pode editar</span><span class="good">Pode compartilhar com a equipe</span><span class="good">Inclui negrito, itálico, e negrito-itálico</span><span class="good">OpenType</span><span class="moreOrLess">Nºs 3 e 9 parecidos</span><span class="moreOrLess">Sem caracteres de nºs ordinais</span><span class="moreOrLess">'( )' e '[ ]' idênticos</span><span class="moreOrLess">'&' irreconhecível</span><span class="moreOrLess">'@' irreconhecível</span><span class="bad">Maiúsculas e minúsculas iguais</span></div>
         </li>
         <li>
-            <p class="fontName cyber_boldBook">Cyber<span class="price">? $</span></p>
+            <p class="nameAndPrice"><span class="fontName cyber_boldBook">Cyber</span><span class="price">? $</span></p>
             <p class="lorem cyber_boldBook" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
             <div class="evaluation"></div>
         </li>
-        <li>
-            <p class="fontName Medabots">Medabots<span class="price">? $</span></p>
-            <p class="lorem Medabots" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-<!--         <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li>
-        <li>
-            <p class="fontName ?">?<span class="price">? $</span></p>
-            <p class="lorem ?" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
-            <div class="evaluation"></div>
-        </li> -->
     </ol>
 
-    <p>Times New Roman</p>
-    <p class="cyber_boldBook">Tec OP</p>
+    <hr>
+
+    <h2>Autores Específicos</h2>
+
+    <h3><a href="https://www.pixelsagas.com/">Pixel Sagas</a></h3>
+
+    <h4>Grátis</h4>
+
+    <ol>
+<!-- 
+        <li>
+            <p class="nameAndPrice"><span class="fontName __Font__">__Font__</span></p>
+            <p class="lorem __Font__" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+ -->
+        <li>
+            <p class="nameAndPrice"><span class="fontName Medabots">Medabots</span></p>
+            <p class="lorem Medabots" style="font-size: 20px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+        <li>
+            <p class="nameAndPrice"><span class="fontName Medabots_Italic">Medabots Italic</span></p>
+            <p class="lorem Medabots_Italic" style="font-size: 20px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+    </ol>
+
+    <hr>
+
+    <h4>Pagos</h4>
+
+    <ol>
+<!--         
+        <li>
+            <p class="nameAndPrice"><span class="fontName __Font__">__Font__</span><span class="price">? $</span></p>
+            <p class="lorem __Font__" style="font-size: 19px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+-->
+         <li>
+            <p class="nameAndPrice"><span class="fontName Micron">Micron</span><span class="price">10 $</span></p>
+            <p class="lorem Micron" style="font-size: 17px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+        <li>
+            <p class="nameAndPrice"><span class="fontName Eurocorp">Eurocorp</span><span class="price">10 $</span></p>
+            <p class="lorem Eurocorp" style="font-size: 20px;">Os parâmetros 2 e 3 definem as coordenadas do canto superior esquerdo da área que você deseja recortar da imagem carregada, em relação ao canto superior esquerdo da própria imagem. Nada à esquerda do primeiro parâmetro ou acima do segundo será desenhado. <br><br> 0123456789 abcdefghijklmn opqrstuvwxyz ABCDEFGHIJKLMN OPQRSTUVWXYZ áãàâ éê í óõô ú ªº -/:;()[]{}$&@“".,?!'`#%*+=_\|~&lt;>•</p>
+            <div class="evaluation"></div>
+        </li>
+    </ol>
+
+
+
+
+
+    <p>Os parâmetros 2 e 3 definem as coordenadas ...</p>
+    <p class="cyber_boldBook">Tec OP - Cyber</p>
 
 <!-- <script src="script.js"></script> -->
 <script> 
