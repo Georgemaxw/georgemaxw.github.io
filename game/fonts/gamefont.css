@@ -1,6 +1,6 @@
 @font-face {
     font-family: GameFont;
-    src: url("mac-palatino.ttc");
+    src: url("Myfont-Regular.otf"); /* mac-palatino.ttc */
 }
 
 .IIV::-webkit-media-controls-play-button,
